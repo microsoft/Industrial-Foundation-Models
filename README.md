@@ -21,7 +21,7 @@ To advance towards IFMs, we have taken a concrete step by developing enhanced LL
 
 We have released model checkpoints based on LLaMA 2, which have been trained using GTL on 300+ tabular datasets and 1,000+ different tasks. These GTL-enhanced LLMs have demonstrated remarkable generalization capabilities, effectively handling unseen data and tasks with impressive accuracy and efficiency.
 
-Below, we have provided detailed specifications for you to either initiate a quick trial or comprehensively reproduce our journey.
+Below, we have provided detailed specifications for users to either initiate a quick trial or comprehensively reproduce our journey.
 
 <div align=center> <img src="docs/figures/GTL.png" width = 95%/> </div>
 
@@ -127,6 +127,12 @@ bash scripts/reproduce/pretrain.sh $LLAMA_MODEL_PATH $DATABASE_PATH $OUTPUT_PATH
 Managing and utilizing checkpoints efficiently is crucial for iterative model improvement and deployment. Here's how you can handle checkpoints within our framework:
 - **FSDP Checkpoint**: Our model checkpoints are based on Fully Sharded Data Parallel (FSDP) for optimized distributed training. You can reload a checkpoint by specifying the `--reload_ckpt_folder` flag.
 - **Conversion to HuggingFace Model Format**: If you need to convert an FSDP-sharded model checkpoint into a HuggingFace format, run the script: `scripts/manage_ckpt/convert_fsdp_ckpt_to_hf_diff.py`. Afterwards, you can reload the checkpoint in HuggingFace format by using the `--model_path` flag.
+
+## Acknowledgements
+
+We sincerely acknowledge the following repositories, which inspire and facilitate the code development of this project.
+- [meta-llama/llama-recipes](https://github.com/meta-llama/llama-recipes)
+- [huggingface/transformers](https://github.com/huggingface/transformers)
 
 ## Citation 🌟
 
