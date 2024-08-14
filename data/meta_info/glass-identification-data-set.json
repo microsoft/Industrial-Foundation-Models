@@ -1,0 +1,196 @@
+{
+    "basic_info": {
+        "row_num": 214,
+        "col_num": 11,
+        "label_candidates": [
+            "Type of glass",
+            "RI",
+            "Na",
+            "Mg",
+            "Al",
+            "Si",
+            "K",
+            "Ca",
+            "Ba",
+            "Fe"
+        ],
+        "valid_feature_num": 10,
+        "num_features": [
+            "RI",
+            "Na",
+            "Mg",
+            "Al",
+            "Si",
+            "K",
+            "Ca",
+            "Ba",
+            "Fe"
+        ],
+        "cat_features": [
+            "Type of glass"
+        ],
+        "other_features": [],
+        "tags": [
+            "earth and nature",
+            "beginner",
+            "intermediate",
+            "classification",
+            "tabular",
+            "public safety"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/danushkumarv/glass-identification-data-set"
+    },
+    "feature_info": {
+        "Id": {
+            "description": "Unique identifier for each observation",
+            "type": "useless"
+        },
+        "RI": {
+            "description": "Refractive index of the glass",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "Na": {
+            "description": "Sodium (unit: weight percent in corresponding oxide, as are attributes 4-10)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Mg": {
+            "description": "Magnesium (unit: weight percent in corresponding oxide)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Al": {
+            "description": "Aluminium (unit: weight percent in corresponding oxide)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Si": {
+            "description": "Silicon (unit: weight percent in corresponding oxide)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "K": {
+            "description": "Potassium (unit: weight percent in corresponding oxide)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Ca": {
+            "description": "Calcium (unit: weight percent in corresponding oxide)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Ba": {
+            "description": "Barium (unit: weight percent in corresponding oxide)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Fe": {
+            "description": "Iron (unit: weight percent in corresponding oxide)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Type of glass": {
+            "description": "Glass type (class attribute) -- 1 building_windows_float_processed, 2 building_windows_non_float_processed, 3 vehicle_windows_float_processed, 4 vehicle_windows_non_float_processed (none in this database), 5 containers, 6 tableware, 7 headlamps",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Building windows float processed",
+                "2": "Building windows non-float processed",
+                "3": "Vehicle windows float processed",
+                "5": "Containers",
+                "6": "Tableware",
+                "7": "Headlamps"
+            }
+        }
+    },
+    "task_info": {
+        "Type of glass": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in material science and glass identification.",
+                "task_prompt": "Based on the features of the glass, please predict the type of glass.",
+                "answer_prompt": "Building windows float processed[0], Building windows non-float processed[1], Vehicle windows float processed[2], Containers[3], Tableware[4], or Headlamps[5]?"
+            },
+            "class_num": 6,
+            "class_value_dict": {
+                "1": "Building windows float processed",
+                "2": "Building windows non-float processed",
+                "3": "Vehicle windows float processed",
+                "5": "Containers",
+                "6": "Tableware",
+                "7": "Headlamps"
+            },
+            "class_index_dict": {
+                "1": 0,
+                "2": 1,
+                "3": 2,
+                "5": 3,
+                "6": 4,
+                "7": 5
+            }
+        },
+        "RI": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in material science and glass identification.",
+                "task_prompt": "Based on the features of the glass, please predict the refractive index (RI)."
+            }
+        },
+        "Na": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in material science and glass identification.",
+                "task_prompt": "Based on the features of the glass, please predict the Sodium (Na) content."
+            }
+        },
+        "Mg": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in material science and glass identification.",
+                "task_prompt": "Based on the features of the glass, please predict the Magnesium (Mg) content."
+            }
+        },
+        "Al": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in material science and glass identification.",
+                "task_prompt": "Based on the features of the glass, please predict the Aluminium (Al) content."
+            }
+        },
+        "Si": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in material science and glass identification.",
+                "task_prompt": "Based on the features of the glass, please predict the Silicon (Si) content."
+            }
+        },
+        "K": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in material science and glass identification.",
+                "task_prompt": "Based on the features of the glass, please predict the Potassium (K) content."
+            }
+        },
+        "Ca": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in material science and glass identification.",
+                "task_prompt": "Based on the features of the glass, please predict the Calcium (Ca) content."
+            }
+        },
+        "Ba": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in material science and glass identification.",
+                "task_prompt": "Based on the features of the glass, please predict the Barium (Ba) content."
+            }
+        },
+        "Fe": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in material science and glass identification.",
+                "task_prompt": "Based on the features of the glass, please predict the Iron (Fe) content."
+            }
+        }
+    }
+}

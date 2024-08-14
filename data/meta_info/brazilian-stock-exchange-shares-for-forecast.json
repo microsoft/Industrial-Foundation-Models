@@ -1,0 +1,109 @@
+{
+    "basic_info": {
+        "row_num": 29905,
+        "col_num": 7,
+        "label_candidates": [
+            "Close",
+            "High",
+            "Low",
+            "Open"
+        ],
+        "valid_feature_num": 7,
+        "num_features": [
+            "Open",
+            "High",
+            "Low",
+            "Volume",
+            "Close"
+        ],
+        "cat_features": [
+            "Stock Name"
+        ],
+        "other_features": [
+            "Date"
+        ],
+        "tags": [
+            "business",
+            "finance",
+            "exploratory data analysis",
+            "time series analysis",
+            "regression",
+            "investing"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/marcosgois07/brazilian-stock-exchange-shares-for-forecast"
+    },
+    "feature_info": {
+        "Date": {
+            "description": "The date of the stock data, formatted as YYYY-MM-DD",
+            "type": "other"
+        },
+        "Open": {
+            "description": "The opening price of the stock for the given date",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "High": {
+            "description": "The highest price of the stock for the given date",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Low": {
+            "description": "The lowest price of the stock for the given date",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Close": {
+            "description": "The closing price of the stock for the given date",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Volume": {
+            "description": "The number of shares traded in the stock for the given date",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Stock Name": {
+            "description": "The ticker symbol for the stock",
+            "type": "categorical",
+            "value_dict": {
+                "PETR4.SA": "Ticker symbol for Petrobras, a Brazilian multinational corporation in the petroleum industry.",
+                "MGLU3.SA": "Ticker symbol for Magazine Luiza, a Brazilian retail company.",
+                "ABEV3.SA": "Ticker symbol for Ambev, a Brazilian brewing company.",
+                "BBDC4.SA": "Ticker symbol for Bradesco, a Brazilian banking and financial services company.",
+                "ITUB4.SA": "Ticker symbol for Ita\u00fa Unibanco, a Brazilian bank.",
+                "RAIZ4.SA": "Ticker symbol for Raia Drogasil, a Brazilian drugstore company.",
+                "VALE3.SA": "Ticker symbol for Vale, a Brazilian multinational corporation in the metals and mining industry."
+            }
+        }
+    },
+    "task_info": {
+        "Close": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in stock market analysis.",
+                "task_prompt": "Based on the features of the stock market data, please predict the closing price."
+            }
+        },
+        "High": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in stock market analysis.",
+                "task_prompt": "Based on the features of the stock market data, please predict the highest price."
+            }
+        },
+        "Low": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in stock market analysis.",
+                "task_prompt": "Based on the features of the stock market data, please predict the lowest price."
+            }
+        },
+        "Open": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in stock market analysis.",
+                "task_prompt": "Based on the features of the stock market data, please predict the opening price."
+            }
+        }
+    }
+}

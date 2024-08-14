@@ -1,0 +1,168 @@
+{
+    "basic_info": {
+        "row_num": 138779,
+        "col_num": 17,
+        "label_candidates": [
+            "Electric Range",
+            "Base MSRP",
+            "Electric Vehicle Type",
+            "Model Year"
+        ],
+        "valid_feature_num": 16,
+        "num_features": [
+            "Model Year",
+            "Electric Range",
+            "Base MSRP"
+        ],
+        "cat_features": [
+            "VIN (1-10)",
+            "County",
+            "City",
+            "State",
+            "Postal Code",
+            "Make",
+            "Model",
+            "Clean Alternative Fuel Vehicle (CAFV) Eligibility",
+            "Legislative District",
+            "Electric Utility",
+            "2020 Census Tract",
+            "Electric Vehicle Type"
+        ],
+        "other_features": [
+            "Vehicle Location"
+        ],
+        "tags": [
+            "data analytics",
+            "classification",
+            "clustering",
+            "deep learning",
+            "k-means"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/venkatsairo4899/ev-population-data"
+    },
+    "feature_info": {
+        "VIN (1-10)": {
+            "description": "The first 10 characters of the Vehicle Identification Number (VIN)",
+            "type": "categorical"
+        },
+        "County": {
+            "description": "The county where the vehicle is registered",
+            "type": "categorical"
+        },
+        "City": {
+            "description": "The city where the vehicle is registered",
+            "type": "categorical"
+        },
+        "State": {
+            "description": "The state where the vehicle is registered",
+            "type": "categorical"
+        },
+        "Postal Code": {
+            "description": "The postal code of the area where the vehicle is registered",
+            "type": "categorical"
+        },
+        "Model Year": {
+            "description": "The year that the model of the vehicle was produced",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Make": {
+            "description": "The manufacturer of the vehicle",
+            "type": "categorical"
+        },
+        "Model": {
+            "description": "The specific model of the vehicle",
+            "type": "categorical"
+        },
+        "Electric Vehicle Type": {
+            "description": "The type of electric vehicle (e.g., battery electric vehicle, plug-in hybrid)",
+            "type": "categorical",
+            "value_dict": {
+                "Battery Electric Vehicle (BEV)": "The vehicle is powered solely by its battery and electric drive train",
+                "Plug-in Hybrid Electric Vehicle (PHEV)": "The vehicle can switch between electric and conventional fuel sources"
+            }
+        },
+        "Clean Alternative Fuel Vehicle (CAFV) Eligibility": {
+            "description": "Whether the vehicle is eligible for the Clean Alternative Fuel Vehicle program",
+            "type": "categorical",
+            "value_dict": {
+                "Clean Alternative Fuel Vehicle Eligible": "The vehicle is eligible for the Clean Alternative Fuel Vehicle program",
+                "Not eligible due to low battery range": "The vehicle is not eligible for the Clean Alternative Fuel Vehicle program due to its low battery range",
+                "Eligibility unknown as battery range has not been researched": "It is unknown whether the vehicle is eligible for the Clean Alternative Fuel Vehicle program because its battery range has not been researched"
+            }
+        },
+        "Electric Range": {
+            "description": "The maximum distance the vehicle can travel on electric power alone, in miles",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Base MSRP": {
+            "description": "The Manufacturer\u2019s Suggested Retail Price when the vehicle was new",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Legislative District": {
+            "description": "The legislative district where the vehicle is registered",
+            "type": "categorical"
+        },
+        "DOL Vehicle ID": {
+            "description": "The ID of the vehicle in the Department of Licensing system",
+            "type": "useless"
+        },
+        "Vehicle Location": {
+            "description": "The location (latitude, longitude) of the vehicle",
+            "type": "other"
+        },
+        "Electric Utility": {
+            "description": "The electric utility company that supplies power to the vehicle",
+            "type": "categorical"
+        },
+        "2020 Census Tract": {
+            "description": "The census tract number from the 2020 Census where the vehicle is registered",
+            "type": "categorical"
+        }
+    },
+    "task_info": {
+        "Electric Range": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in electric vehicle data analysis.",
+                "task_prompt": "Based on the features of the electric vehicle, please predict the electric range.",
+                "answer_prompt": "The predicted electric range is: ."
+            }
+        },
+        "Base MSRP": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in electric vehicle data analysis.",
+                "task_prompt": "Based on the features of the electric vehicle, please predict the base MSRP.",
+                "answer_prompt": "The predicted base MSRP is: ."
+            }
+        },
+        "Electric Vehicle Type": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in electric vehicle data analysis.",
+                "task_prompt": "Based on the features of the electric vehicle, please predict the electric vehicle type.",
+                "answer_prompt": "Is it a Battery Electric Vehicle (BEV)[0] or a Plug-in Hybrid Electric Vehicle (PHEV)[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "Battery Electric Vehicle (BEV)": "The vehicle is powered solely by its battery and electric drive train",
+                "Plug-in Hybrid Electric Vehicle (PHEV)": "The vehicle can switch between electric and conventional fuel sources"
+            },
+            "class_index_dict": {
+                "Battery Electric Vehicle (BEV)": 0,
+                "Plug-in Hybrid Electric Vehicle (PHEV)": 1
+            }
+        },
+        "Model Year": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in electric vehicle data analysis.",
+                "task_prompt": "Based on the features of the electric vehicle, please predict the model year.",
+                "answer_prompt": "The predicted model year is: ."
+            }
+        }
+    }
+}

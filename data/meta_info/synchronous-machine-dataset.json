@@ -1,0 +1,82 @@
+{
+    "basic_info": {
+        "row_num": 557,
+        "col_num": 5,
+        "label_candidates": [
+            "I_f",
+            "d_if",
+            "e_PF"
+        ],
+        "valid_feature_num": 5,
+        "num_features": [
+            "I_y",
+            "PF",
+            "e_PF",
+            "d_if",
+            "I_f"
+        ],
+        "cat_features": [],
+        "other_features": [],
+        "tags": [
+            "engineering",
+            "linear regression",
+            "regression",
+            "electricity",
+            "oil and gas"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/fedesoriano/synchronous-machine-dataset"
+    },
+    "feature_info": {
+        "I_y": {
+            "description": "Current of the synchronous machine in amperes (A)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "PF": {
+            "description": "Power factor of the synchronous machine, a dimensionless number between 0 and 1",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "e_PF": {
+            "description": "Error in power factor of the synchronous machine, a dimensionless number between 0 and 1",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "d_if": {
+            "description": "Direct axis transient reactance in per unit (pu)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "I_f": {
+            "description": "Field current of the synchronous machine in amperes (A)",
+            "type": "numerical",
+            "decimal": 3
+        }
+    },
+    "task_info": {
+        "I_f": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in power system analysis.",
+                "task_prompt": "Based on the features of the synchronous machine, please predict the field current (I_f).",
+                "answer_prompt": "The predicted field current (I_f) is __."
+            }
+        },
+        "d_if": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in power system analysis.",
+                "task_prompt": "Based on the features of the synchronous machine, please predict the rotor magnetic flux (d_if).",
+                "answer_prompt": "The predicted rotor magnetic flux (d_if) is __."
+            }
+        },
+        "e_PF": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in power system analysis.",
+                "task_prompt": "Based on the features of the synchronous machine, please predict the reactive power factor (e_PF).",
+                "answer_prompt": "The predicted reactive power factor (e_PF) is __."
+            }
+        }
+    }
+}

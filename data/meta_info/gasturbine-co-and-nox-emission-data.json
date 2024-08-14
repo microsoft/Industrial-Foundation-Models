@@ -1,0 +1,118 @@
+{
+    "basic_info": {
+        "row_num": 36733,
+        "col_num": 12,
+        "label_candidates": [
+            "TEY",
+            "CO",
+            "NOX"
+        ],
+        "valid_feature_num": 11,
+        "num_features": [
+            "AT",
+            "AP",
+            "AH",
+            "AFDP",
+            "GTEP",
+            "TIT",
+            "TAT",
+            "CDP",
+            "CO",
+            "NOX",
+            "TEY"
+        ],
+        "cat_features": [],
+        "other_features": [],
+        "tags": [
+            "energy"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/muniryadi/gasturbine-co-and-nox-emission-data"
+    },
+    "feature_info": {
+        "Unnamed: 0": {
+            "description": "Index column, row identifier.",
+            "type": "useless"
+        },
+        "AT": {
+            "description": "Ambient Temperature in Celsius",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "AP": {
+            "description": "Ambient Pressure in millibar",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "AH": {
+            "description": "Ambient Humidity in percentage",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "AFDP": {
+            "description": "Fan Discharge Pressure in millibar",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "GTEP": {
+            "description": "Gas Turbine Exhaust Pressure in millibar",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "TIT": {
+            "description": "Turbine Inlet Temperature in Celsius",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "TAT": {
+            "description": "Turbine After Temperature in Celsius",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "TEY": {
+            "description": "Turbine Energy Yield in MWh",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "CDP": {
+            "description": "Compressor Discharge Pressure in millibar",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "CO": {
+            "description": "Carbon Monoxide Emissions in mg/m3",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "NOX": {
+            "description": "Nitrogen Oxides Emissions in ppb",
+            "type": "numerical",
+            "decimal": 3
+        }
+    },
+    "task_info": {
+        "TEY": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in power plant emission analysis.",
+                "task_prompt": "Based on the features of the gas turbine, please predict the total energy yield (TEY).",
+                "answer_prompt": "The total energy yield (TEY) is predicted to be: ."
+            }
+        },
+        "CO": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in power plant emission analysis.",
+                "task_prompt": "Based on the features of the gas turbine, please predict the CO emission.",
+                "answer_prompt": "The CO emission is predicted to be: ."
+            }
+        },
+        "NOX": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in power plant emission analysis.",
+                "task_prompt": "Based on the features of the gas turbine, please predict the NOX emission.",
+                "answer_prompt": "The NOX emission is predicted to be: ."
+            }
+        }
+    }
+}

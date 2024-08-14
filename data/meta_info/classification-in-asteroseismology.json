@@ -1,0 +1,95 @@
+{
+    "basic_info": {
+        "row_num": 1001,
+        "col_num": 4,
+        "label_candidates": [
+            "POP",
+            "numax",
+            "Dnu",
+            "epsilon"
+        ],
+        "valid_feature_num": 4,
+        "num_features": [
+            "Dnu",
+            "numax",
+            "epsilon"
+        ],
+        "cat_features": [
+            "POP"
+        ],
+        "other_features": [],
+        "tags": [
+            "earth and nature",
+            "physical science",
+            "astronomy",
+            "physics",
+            "classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/fernandolima23/classification-in-asteroseismology"
+    },
+    "feature_info": {
+        "POP": {
+            "description": "Population classification of the star",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Star belongs to population 1",
+                "0": "Star belongs to population 0"
+            }
+        },
+        "Dnu": {
+            "description": "Frequency separation of the star (microHz)",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "numax": {
+            "description": "Frequency of maximum power of the star (microHz)",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "epsilon": {
+            "description": "Epsilon, a dimensionless quantity related to the star",
+            "type": "numerical",
+            "decimal": 3
+        }
+    },
+    "task_info": {
+        "POP": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in astronomy.",
+                "task_prompt": "Based on the features of the star, please predict the population to which it belongs.",
+                "answer_prompt": "Star belongs to population 1[1] or Star belongs to population 0[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "Star belongs to population 1",
+                "0": "Star belongs to population 0"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        },
+        "numax": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in astronomy.",
+                "task_prompt": "Based on the features of the star, please predict the numax value."
+            }
+        },
+        "Dnu": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in astronomy.",
+                "task_prompt": "Based on the features of the star, please predict the Dnu value."
+            }
+        },
+        "epsilon": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in astronomy.",
+                "task_prompt": "Based on the features of the star, please predict the epsilon value."
+            }
+        }
+    }
+}

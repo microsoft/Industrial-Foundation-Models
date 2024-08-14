@@ -1,0 +1,214 @@
+{
+    "basic_info": {
+        "row_num": 19158,
+        "col_num": 14,
+        "label_candidates": [
+            "target",
+            "city_development_index",
+            "education_level",
+            "training_hours"
+        ],
+        "valid_feature_num": 13,
+        "num_features": [
+            "city_development_index",
+            "training_hours"
+        ],
+        "cat_features": [
+            "city",
+            "gender",
+            "relevent_experience",
+            "enrolled_university",
+            "education_level",
+            "major_discipline",
+            "experience",
+            "company_size",
+            "company_type",
+            "last_new_job",
+            "target"
+        ],
+        "other_features": [],
+        "tags": [
+            "business",
+            "education",
+            "intermediate",
+            "tabular",
+            "binary classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/arashnic/hr-analytics-job-change-of-data-scientists"
+    },
+    "feature_info": {
+        "enrollee_id": {
+            "description": "Unique identifier for each candidate",
+            "type": "useless"
+        },
+        "city": {
+            "description": "City code where the candidate is located",
+            "type": "categorical"
+        },
+        "city_development_index": {
+            "description": "Index showing the development level of the city",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "gender": {
+            "description": "Gender of the candidate",
+            "type": "categorical",
+            "value_dict": {
+                "Male": "Candidate is male",
+                "Female": "Candidate is female",
+                "Other": "Candidate identifies as a gender not listed"
+            }
+        },
+        "relevent_experience": {
+            "description": "Whether the candidate has relevant experience",
+            "type": "categorical",
+            "value_dict": {
+                "Has relevent experience": "Candidate has relevant experience",
+                "No relevent experience": "Candidate does not have relevant experience"
+            }
+        },
+        "enrolled_university": {
+            "description": "Type of university course enrolled",
+            "type": "categorical",
+            "value_dict": {
+                "no_enrollment": "Not enrolled",
+                "Full time course": "Full time",
+                "Part time course": "Part time"
+            }
+        },
+        "education_level": {
+            "description": "Highest education level of candidate",
+            "type": "categorical",
+            "value_dict": {
+                "Graduate": "Candidate has a graduate level education",
+                "Masters": "Candidate has a masters level education",
+                "High School": "Candidate has a high school level education",
+                "Phd": "Candidate has a PhD level education",
+                "Primary School": "Candidate has a primary school level education"
+            }
+        },
+        "major_discipline": {
+            "description": "Discipline of the candidate",
+            "type": "categorical",
+            "value_dict": {
+                "STEM": "Candidate has a major in Science, Technology, Engineering, or Mathematics",
+                "Business Degree": "Candidate has a business degree",
+                "Arts": "Candidate has an arts degree",
+                "Humanities": "Candidate has a humanities degree",
+                "No Major": "Candidate does not have a major",
+                "Other": "Candidate has a major not listed"
+            }
+        },
+        "experience": {
+            "description": "Work experience of the candidate in years",
+            "type": "categorical"
+        },
+        "company_size": {
+            "description": "Size of the company where candidate is working",
+            "type": "categorical",
+            "value_dict": {
+                "50-99": "Company size is between 50 and 99 employees",
+                "<10": "Company size is less than 10 employees",
+                "10000+": "Company size is more than 10,000 employees",
+                "5000-9999": "Company size is between 5,000 and 9,999 employees",
+                "1000-4999": "Company size is between 1,000 and 4,999 employees",
+                "10/49": "Company size is between 10 and 49 employees",
+                "100-500": "Company size is between 100 and 500 employees",
+                "500-999": "Company size is between 500 and 999 employees"
+            }
+        },
+        "company_type": {
+            "description": "Type of company where candidate is working",
+            "type": "categorical",
+            "value_dict": {
+                "Pvt Ltd": "Company is a private limited company",
+                "Funded Startup": "Company is a funded startup",
+                "Early Stage Startup": "Company is an early stage startup",
+                "Other": "Company type is not listed",
+                "Public Sector": "Company is in the public sector",
+                "NGO": "Company is a non-governmental organization"
+            }
+        },
+        "last_new_job": {
+            "description": "Difference in years between previous job and current job",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Candidate changed job a year ago",
+                ">4": "Candidate changed job more than 4 years ago",
+                "never": "Candidate has never changed job",
+                "4": "Candidate changed job 4 years ago",
+                "3": "Candidate changed job 3 years ago",
+                "2": "Candidate changed job 2 years ago"
+            }
+        },
+        "training_hours": {
+            "description": "Number of training hours completed by the candidate",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "target": {
+            "description": "Whether the candidate is looking for a job change or not (1: Yes, 0: No)",
+            "type": "categorical",
+            "value_dict": {
+                "1.0": "Candidate is looking for a job change",
+                "0.0": "Candidate is not looking for a job change"
+            }
+        }
+    },
+    "task_info": {
+        "target": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in HR analytics.",
+                "task_prompt": "Based on the features of the job candidate, please predict if the candidate is looking for a job change.",
+                "answer_prompt": "Candidate is looking for a job change[1] or Candidate is not looking for a job change[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1.0": "Candidate is looking for a job change",
+                "0.0": "Candidate is not looking for a job change"
+            },
+            "class_index_dict": {
+                "1.0": 1,
+                "0.0": 0
+            }
+        },
+        "city_development_index": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in urban development.",
+                "task_prompt": "Based on the features of the job candidate, please predict the city development index."
+            }
+        },
+        "education_level": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in education analytics.",
+                "task_prompt": "Based on the features of the job candidate, please predict the education level of the candidate.",
+                "answer_prompt": "Graduate[0], Masters[1], High School[2], Phd[3], or Primary School[4]?"
+            },
+            "class_num": 5,
+            "class_value_dict": {
+                "Graduate": "Candidate has a graduate level education",
+                "Masters": "Candidate has a masters level education",
+                "High School": "Candidate has a high school level education",
+                "Phd": "Candidate has a PhD level education",
+                "Primary School": "Candidate has a primary school level education"
+            },
+            "class_index_dict": {
+                "Graduate": 0,
+                "Masters": 1,
+                "High School": 2,
+                "Phd": 3,
+                "Primary School": 4
+            }
+        },
+        "training_hours": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in HR analytics.",
+                "task_prompt": "Based on the features of the job candidate, please predict the training hours of the candidate."
+            }
+        }
+    }
+}

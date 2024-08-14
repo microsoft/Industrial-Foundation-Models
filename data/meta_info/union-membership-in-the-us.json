@@ -1,0 +1,140 @@
+{
+    "basic_info": {
+        "row_num": 10200,
+        "col_num": 11,
+        "label_candidates": [
+            "members",
+            "p_members",
+            "p_covered",
+            "employment",
+            "covered"
+        ],
+        "valid_feature_num": 11,
+        "num_features": [
+            "observations",
+            "employment",
+            "members",
+            "covered",
+            "p_covered",
+            "year",
+            "p_members"
+        ],
+        "cat_features": [
+            "state_census_code",
+            "state",
+            "sector",
+            "state_abbreviation"
+        ],
+        "other_features": [],
+        "tags": [
+            "united states",
+            "people",
+            "people and society",
+            "business",
+            "economics"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/joebeachcapital/union-membership-in-the-us"
+    },
+    "feature_info": {
+        "state_census_code": {
+            "description": "Code assigned by the Census Bureau to each state",
+            "type": "categorical"
+        },
+        "state": {
+            "description": "Name of the state",
+            "type": "categorical"
+        },
+        "sector": {
+            "description": "Specific sector of the economy",
+            "type": "categorical",
+            "value_dict": {
+                "Priv. Construction": "Data related to the private construction sector",
+                "Priv. Manufacturing": "Data related to the private manufacturing sector",
+                "Private": "Data related to the private sector",
+                "Public": "Data related to the public sector",
+                "Total": "Data related to all sectors combined"
+            }
+        },
+        "observations": {
+            "description": "Number of observations made",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "employment": {
+            "description": "Number of people employed",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "members": {
+            "description": "Number of union members",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "covered": {
+            "description": "Number of people covered by a union contract",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "p_members": {
+            "description": "Percentage of employees that are union members",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "p_covered": {
+            "description": "Percentage of employees covered by a union contract",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "state_abbreviation": {
+            "description": "Abbreviation of the state name",
+            "type": "categorical"
+        },
+        "year": {
+            "description": "Year of the observation",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "members": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in labor economics.",
+                "task_prompt": "Based on the features of the union membership dataset, please predict the number of union members.",
+                "answer_prompt": "The predicted number of union members is: ."
+            }
+        },
+        "p_members": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in labor economics.",
+                "task_prompt": "Based on the features of the union membership dataset, please predict the percentage of union members.",
+                "answer_prompt": "The predicted percentage of union members is: ."
+            }
+        },
+        "p_covered": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in labor economics.",
+                "task_prompt": "Based on the features of the union membership dataset, please predict the percentage of workers covered by a union contract.",
+                "answer_prompt": "The predicted percentage of workers covered by a union contract is: ."
+            }
+        },
+        "employment": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in labor economics.",
+                "task_prompt": "Based on the features of the union membership dataset, please predict the employment level.",
+                "answer_prompt": "The predicted employment level is: ."
+            }
+        },
+        "covered": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in labor economics.",
+                "task_prompt": "Based on the features of the union membership dataset, please predict the number of workers covered by a union contract.",
+                "answer_prompt": "The predicted number of workers covered by a union contract is: ."
+            }
+        }
+    }
+}

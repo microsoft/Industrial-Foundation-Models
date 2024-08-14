@@ -1,0 +1,348 @@
+{
+    "basic_info": {
+        "row_num": 3000,
+        "col_num": 26,
+        "label_candidates": [
+            "Current Employee Rating",
+            "Performance Score",
+            "EmployeeStatus",
+            "PayZone",
+            "EmployeeType",
+            "TerminationType"
+        ],
+        "valid_feature_num": 25,
+        "num_features": [
+            "Current Employee Rating"
+        ],
+        "cat_features": [
+            "FirstName",
+            "LastName",
+            "Title",
+            "Supervisor",
+            "ADEmail",
+            "BusinessUnit",
+            "EmployeeStatus",
+            "EmployeeType",
+            "PayZone",
+            "EmployeeClassificationType",
+            "TerminationType",
+            "TerminationDescription",
+            "DepartmentType",
+            "Division",
+            "State",
+            "JobFunctionDescription",
+            "GenderCode",
+            "LocationCode",
+            "RaceDesc",
+            "MaritalDesc",
+            "Performance Score"
+        ],
+        "other_features": [
+            "StartDate",
+            "ExitDate",
+            "DOB"
+        ],
+        "tags": [
+            "universities and colleges",
+            "employment",
+            "intermediate",
+            "advanced",
+            "data analytics"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/ravindrasinghrana/employeedataset"
+    },
+    "feature_info": {
+        "EmpID": {
+            "description": "Unique identifier for each employee",
+            "type": "useless"
+        },
+        "FirstName": {
+            "description": "First name of the employee",
+            "type": "categorical"
+        },
+        "LastName": {
+            "description": "Last name of the employee",
+            "type": "categorical"
+        },
+        "StartDate": {
+            "description": "Start date of the employee in the company",
+            "type": "other"
+        },
+        "ExitDate": {
+            "description": "Exit date of the employee from the company",
+            "type": "other"
+        },
+        "Title": {
+            "description": "Job title of the employee",
+            "type": "categorical"
+        },
+        "Supervisor": {
+            "description": "Supervisor of the employee",
+            "type": "categorical"
+        },
+        "ADEmail": {
+            "description": "Email of the employee",
+            "type": "categorical"
+        },
+        "BusinessUnit": {
+            "description": "Business unit where the employee works",
+            "type": "categorical",
+            "value_dict": {
+                "CCDR": "Employee belongs to CCDR business unit",
+                "EW": "Employee belongs to EW business unit",
+                "PL": "Employee belongs to PL business unit",
+                "TNS": "Employee belongs to TNS business unit",
+                "BPC": "Employee belongs to BPC business unit",
+                "WBL": "Employee belongs to WBL business unit",
+                "NEL": "Employee belongs to NEL business unit",
+                "SVG": "Employee belongs to SVG business unit",
+                "MSC": "Employee belongs to MSC business unit",
+                "PYZ": "Employee belongs to PYZ business unit"
+            }
+        },
+        "EmployeeStatus": {
+            "description": "Current status of the employee",
+            "type": "categorical",
+            "value_dict": {
+                "Active": "Employee is currently active",
+                "Future Start": "Employee will start in the future",
+                "Voluntarily Terminated": "Employee has voluntarily left the company",
+                "Leave of Absence": "Employee is currently on leave of absence",
+                "Terminated for Cause": "Employee was terminated for a cause"
+            }
+        },
+        "EmployeeType": {
+            "description": "Type of the employee (Full-time, Part-time, etc.)",
+            "type": "categorical",
+            "value_dict": {
+                "Contract": "Employee is on a contract",
+                "Full-Time": "Employee is full-time",
+                "Part-Time": "Employee is part-time"
+            }
+        },
+        "PayZone": {
+            "description": "Pay zone of the employee",
+            "type": "categorical",
+            "value_dict": {
+                "Zone C": "Employee belongs to pay zone C",
+                "Zone A": "Employee belongs to pay zone A",
+                "Zone B": "Employee belongs to pay zone B"
+            }
+        },
+        "EmployeeClassificationType": {
+            "description": "Classification type of the employee",
+            "type": "categorical",
+            "value_dict": {
+                "Temporary": "Employee is temporary",
+                "Part-Time": "Employee is part-time",
+                "Full-Time": "Employee is full-time"
+            }
+        },
+        "TerminationType": {
+            "description": "Type of termination if the employee has left the company",
+            "type": "categorical",
+            "value_dict": {
+                "Unk": "Termination type is unknown",
+                "Involuntary": "Employee was involuntarily terminated",
+                "Resignation": "Employee resigned",
+                "Retirement": "Employee retired",
+                "Voluntary": "Employee voluntarily left"
+            }
+        },
+        "TerminationDescription": {
+            "description": "Description of termination if the employee has left the company",
+            "type": "categorical"
+        },
+        "DepartmentType": {
+            "description": "Department type where the employee works",
+            "type": "categorical",
+            "value_dict": {
+                "Production       ": "Employee works in the production department",
+                "Sales": "Employee works in the sales department",
+                "IT/IS": "Employee works in the IT/IS department",
+                "Executive Office": "Employee works in the executive office",
+                "Software Engineering": "Employee works in the software engineering department",
+                "Admin Offices": "Employee works in the admin offices"
+            }
+        },
+        "Division": {
+            "description": "Division where the employee works",
+            "type": "categorical"
+        },
+        "DOB": {
+            "description": "Date of birth of the employee",
+            "type": "other"
+        },
+        "State": {
+            "description": "State where the employee is located",
+            "type": "categorical"
+        },
+        "JobFunctionDescription": {
+            "description": "Description of the job function of the employee",
+            "type": "categorical"
+        },
+        "GenderCode": {
+            "description": "Gender of the employee",
+            "type": "categorical",
+            "value_dict": {
+                "Female": "Employee is female",
+                "Male": "Employee is male"
+            }
+        },
+        "LocationCode": {
+            "description": "Location code of the employee",
+            "type": "categorical"
+        },
+        "RaceDesc": {
+            "description": "Race of the employee",
+            "type": "categorical",
+            "value_dict": {
+                "White": "Employee is of White race",
+                "Hispanic": "Employee is of Hispanic race",
+                "Other": "Employee is of Other race",
+                "Black": "Employee is of Black race",
+                "Asian": "Employee is of Asian race"
+            }
+        },
+        "MaritalDesc": {
+            "description": "Marital status of the employee",
+            "type": "categorical",
+            "value_dict": {
+                "Widowed": "Employee is widowed",
+                "Single": "Employee is single",
+                "Married": "Employee is married",
+                "Divorced": "Employee is divorced"
+            }
+        },
+        "Performance Score": {
+            "description": "Performance score of the employee",
+            "type": "categorical",
+            "value_dict": {
+                "Fully Meets": "Employee fully meets the performance expectations",
+                "Exceeds": "Employee exceeds the performance expectations",
+                "Needs Improvement": "Employee needs improvement in performance",
+                "PIP": "Employee is under Performance Improvement Plan"
+            }
+        },
+        "Current Employee Rating": {
+            "description": "Current rating of the employee",
+            "type": "numerical",
+            "decimal": 1
+        }
+    },
+    "task_info": {
+        "Current Employee Rating": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in human resources analytics.",
+                "task_prompt": "Based on the employee data, please predict the current employee rating.",
+                "answer_prompt": "The predicted rating is {rating}."
+            }
+        },
+        "Performance Score": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in human resources analytics.",
+                "task_prompt": "Based on the employee data, please predict the performance score.",
+                "answer_prompt": "Is the performance score Fully Meets[0], Exceeds[1], Needs Improvement[2], or PIP[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "Fully Meets": "Employee fully meets the performance expectations",
+                "Exceeds": "Employee exceeds the performance expectations",
+                "Needs Improvement": "Employee needs improvement in performance",
+                "PIP": "Employee is under Performance Improvement Plan"
+            },
+            "class_index_dict": {
+                "Fully Meets": 0,
+                "Exceeds": 1,
+                "Needs Improvement": 2,
+                "PIP": 3
+            }
+        },
+        "EmployeeStatus": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in human resources analytics.",
+                "task_prompt": "Based on the employee data, please predict the employee status.",
+                "answer_prompt": "Is the employee status Active[0], Future Start[1], Voluntarily Terminated[2], Leave of Absence[3], or Terminated for Cause[4]?"
+            },
+            "class_num": 5,
+            "class_value_dict": {
+                "Active": "Employee is currently active",
+                "Future Start": "Employee will start in the future",
+                "Voluntarily Terminated": "Employee has voluntarily left the company",
+                "Leave of Absence": "Employee is currently on leave of absence",
+                "Terminated for Cause": "Employee was terminated for a cause"
+            },
+            "class_index_dict": {
+                "Active": 0,
+                "Future Start": 1,
+                "Voluntarily Terminated": 2,
+                "Leave of Absence": 3,
+                "Terminated for Cause": 4
+            }
+        },
+        "PayZone": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in human resources analytics.",
+                "task_prompt": "Based on the employee data, please predict the pay zone.",
+                "answer_prompt": "Is the pay zone Zone C[0], Zone A[1], or Zone B[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "Zone C": "Employee belongs to pay zone C",
+                "Zone A": "Employee belongs to pay zone A",
+                "Zone B": "Employee belongs to pay zone B"
+            },
+            "class_index_dict": {
+                "Zone C": 0,
+                "Zone A": 1,
+                "Zone B": 2
+            }
+        },
+        "EmployeeType": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in human resources analytics.",
+                "task_prompt": "Based on the employee data, please predict the employee type.",
+                "answer_prompt": "Is the employee type Contract[0], Full-Time[1], or Part-Time[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "Contract": "Employee is on a contract",
+                "Full-Time": "Employee is full-time",
+                "Part-Time": "Employee is part-time"
+            },
+            "class_index_dict": {
+                "Contract": 0,
+                "Full-Time": 1,
+                "Part-Time": 2
+            }
+        },
+        "TerminationType": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in human resources analytics.",
+                "task_prompt": "Based on the employee data, please predict the termination type.",
+                "answer_prompt": "Is the termination type Unk[0], Involuntary[1], Resignation[2], Retirement[3], or Voluntary[4]?"
+            },
+            "class_num": 5,
+            "class_value_dict": {
+                "Unk": "Termination type is unknown",
+                "Involuntary": "Employee was involuntarily terminated",
+                "Resignation": "Employee resigned",
+                "Retirement": "Employee retired",
+                "Voluntary": "Employee voluntarily left"
+            },
+            "class_index_dict": {
+                "Unk": 0,
+                "Involuntary": 1,
+                "Resignation": 2,
+                "Retirement": 3,
+                "Voluntary": 4
+            }
+        }
+    }
+}

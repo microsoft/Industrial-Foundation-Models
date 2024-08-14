@@ -1,0 +1,168 @@
+{
+    "basic_info": {
+        "row_num": 2000,
+        "col_num": 18,
+        "label_candidates": [
+            "popularity",
+            "danceability",
+            "energy",
+            "valence"
+        ],
+        "valid_feature_num": 18,
+        "num_features": [
+            "duration_ms",
+            "danceability",
+            "energy",
+            "loudness",
+            "speechiness",
+            "acousticness",
+            "instrumentalness",
+            "liveness",
+            "valence",
+            "tempo",
+            "popularity"
+        ],
+        "cat_features": [
+            "artist",
+            "song",
+            "explicit",
+            "year",
+            "key",
+            "mode",
+            "genre"
+        ],
+        "other_features": [],
+        "tags": [
+            "music",
+            "multiclass classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/paradisejoy/top-hits-spotify-from-20002019"
+    },
+    "feature_info": {
+        "artist": {
+            "description": "The name of the artist or group that performed the song",
+            "type": "categorical"
+        },
+        "song": {
+            "description": "The title of the song",
+            "type": "categorical"
+        },
+        "duration_ms": {
+            "description": "The duration of the song in milliseconds",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "explicit": {
+            "description": "Whether the song contains explicit content (1 = yes, 0 = no)",
+            "type": "categorical",
+            "value_dict": {
+                "False": "The song does not contain explicit content",
+                "True": "The song contains explicit content"
+            }
+        },
+        "year": {
+            "description": "The year the song was released",
+            "type": "categorical"
+        },
+        "popularity": {
+            "description": "The popularity of the song on Spotify (0-100)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "danceability": {
+            "description": "Danceability of the song based on a combination of musical elements (0.0-1.0)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "energy": {
+            "description": "A measure of intensity and activity of the song (0.0-1.0)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "key": {
+            "description": "The key the track is in. Integers map to pitches using standard Pitch Class notation",
+            "type": "categorical"
+        },
+        "loudness": {
+            "description": "The overall loudness of the song in decibels (dB)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "mode": {
+            "description": "The modality of the song (1 = major, 0 = minor)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The song is in a minor key",
+                "1": "The song is in a major key"
+            }
+        },
+        "speechiness": {
+            "description": "The presence of spoken words in the song (0.0-1.0)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "acousticness": {
+            "description": "A confidence measure of whether the song is acoustic (0.0-1.0)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "instrumentalness": {
+            "description": "Predicts whether a track contains no vocals (0.0-1.0)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "liveness": {
+            "description": "Detects the presence of an audience in the recording of the song (0.0-1.0)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "valence": {
+            "description": "A measure of musical positiveness conveyed by a song (0.0-1.0)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "tempo": {
+            "description": "The overall estimated tempo of the song in beats per minute (BPM)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "genre": {
+            "description": "The genre(s) of the song",
+            "type": "categorical"
+        }
+    },
+    "task_info": {
+        "popularity": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in music data analysis.",
+                "task_prompt": "Based on the features of the song, please predict the popularity score.",
+                "answer_prompt": "The popularity score is {popularity}."
+            }
+        },
+        "danceability": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in music data analysis.",
+                "task_prompt": "Based on the features of the song, please predict the danceability score.",
+                "answer_prompt": "The danceability score is {danceability}."
+            }
+        },
+        "energy": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in music data analysis.",
+                "task_prompt": "Based on the features of the song, please predict the energy score.",
+                "answer_prompt": "The energy score is {energy}."
+            }
+        },
+        "valence": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in music data analysis.",
+                "task_prompt": "Based on the features of the song, please predict the valence score.",
+                "answer_prompt": "The valence score is {valence}."
+            }
+        }
+    }
+}

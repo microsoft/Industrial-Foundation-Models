@@ -1,0 +1,281 @@
+{
+    "basic_info": {
+        "row_num": 124517,
+        "col_num": 19,
+        "label_candidates": [
+            "average_score",
+            "nps_score",
+            "paywall_paid",
+            "job",
+            "tutor",
+            "os",
+            "is_big_city"
+        ],
+        "valid_feature_num": 17,
+        "num_features": [
+            "average_score",
+            "nps_score"
+        ],
+        "cat_features": [
+            "os",
+            "tutor",
+            "job",
+            "task_class",
+            "homework_done",
+            "paywall_paid",
+            "school_name",
+            "desktop_enter",
+            "add_homework_done",
+            "region",
+            "is_big_city"
+        ],
+        "other_features": [
+            "first_trial_appointment_date",
+            "first_payment_date",
+            "call_date",
+            "first_visit_date"
+        ],
+        "tags": [
+            "people",
+            "education",
+            "beginner",
+            "tabular",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/podsyp/edtech-students-achievements"
+    },
+    "feature_info": {
+        "client_id": {
+            "description": "Unique identifier for each client",
+            "type": "useless"
+        },
+        "user_id": {
+            "description": "Unique identifier for each user",
+            "type": "useless"
+        },
+        "first_trial_appointment_date": {
+            "description": "Date of the first trial appointment for the user",
+            "type": "other"
+        },
+        "first_payment_date": {
+            "description": "Date of the first payment made by the user",
+            "type": "other"
+        },
+        "os": {
+            "description": "Operating system used by the user",
+            "type": "categorical",
+            "value_dict": {
+                "Android": "User is using Android operating system",
+                "Windows": "User is using Windows operating system",
+                "iOS": "User is using iOS operating system",
+                "Mac OS": "User is using Mac OS operating system",
+                "Linux": "User is using Linux operating system",
+                "Ubuntu": "User is using Ubuntu operating system",
+                "Solaris": "User is using Solaris operating system"
+            }
+        },
+        "tutor": {
+            "description": "Tutor assigned to the user",
+            "type": "categorical",
+            "value_dict": {
+                "I am doing now": "The user is currently doing the tutoring",
+                "No": "The user is not doing the tutoring",
+                "Earlier": "The user was doing the tutoring earlier"
+            }
+        },
+        "job": {
+            "description": "Job of the user",
+            "type": "categorical",
+            "value_dict": {
+                "IT": "User works in the IT industry",
+                "Finance": "User works in the Finance industry",
+                "Medicine": "User works in the Medicine industry",
+                "Education": "User works in the Education industry",
+                "Science": "User works in the Science industry"
+            }
+        },
+        "task_class": {
+            "description": "Class of the task assigned to the user",
+            "type": "categorical"
+        },
+        "average_score": {
+            "description": "Average score of the user",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "homework_done": {
+            "description": "Whether the user has completed the homework or not",
+            "type": "categorical"
+        },
+        "paywall_paid": {
+            "description": "Whether the user has paid for the paywall or not",
+            "type": "categorical",
+            "value_dict": {
+                "False": "User has not paid for the paywall",
+                "True": "User has paid for the paywall"
+            }
+        },
+        "school_name": {
+            "description": "Name of the school of the user",
+            "type": "categorical"
+        },
+        "desktop_enter": {
+            "description": "Whether the user has entered the desktop version or not",
+            "type": "categorical",
+            "value_dict": {
+                "True": "User has entered the desktop version",
+                "False": "User has not entered the desktop version"
+            }
+        },
+        "nps_score": {
+            "description": "Net Promoter Score of the user",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "add_homework_done": {
+            "description": "Additional homework done by the user",
+            "type": "categorical"
+        },
+        "call_date": {
+            "description": "Date of the call made to the user",
+            "type": "other"
+        },
+        "first_visit_date": {
+            "description": "Date of the first visit of the user",
+            "type": "other"
+        },
+        "region": {
+            "description": "Region of the user",
+            "type": "categorical"
+        },
+        "is_big_city": {
+            "description": "Whether the user lives in a big city or not",
+            "type": "categorical",
+            "value_dict": {
+                "True": "User lives in a big city",
+                "False": "User does not live in a big city"
+            }
+        }
+    },
+    "task_info": {
+        "average_score": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing student performance data.",
+                "task_prompt": "Based on the features of the student, please predict the average score.",
+                "answer_prompt": "The predicted average score is __."
+            }
+        },
+        "nps_score": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing student performance data.",
+                "task_prompt": "Based on the features of the student, please predict the NPS score.",
+                "answer_prompt": "The predicted NPS score is __."
+            }
+        },
+        "paywall_paid": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing user behavior data.",
+                "task_prompt": "Based on the features of the user, please predict whether the user has paid for the paywall.",
+                "answer_prompt": "Yes, the user has paid for the paywall[1] or No, the user has not paid for the paywall[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "False": "User has not paid for the paywall",
+                "True": "User has paid for the paywall"
+            },
+            "class_index_dict": {
+                "False": 0,
+                "True": 1
+            }
+        },
+        "job": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing user demographic data.",
+                "task_prompt": "Based on the features of the user, please predict the industry in which the user works.",
+                "answer_prompt": "IT[0], Finance[1], Medicine[2], Education[3], or Science[4]?"
+            },
+            "class_num": 5,
+            "class_value_dict": {
+                "IT": "User works in the IT industry",
+                "Finance": "User works in the Finance industry",
+                "Medicine": "User works in the Medicine industry",
+                "Education": "User works in the Education industry",
+                "Science": "User works in the Science industry"
+            },
+            "class_index_dict": {
+                "IT": 0,
+                "Finance": 1,
+                "Medicine": 2,
+                "Education": 3,
+                "Science": 4
+            }
+        },
+        "tutor": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing user behavior data.",
+                "task_prompt": "Based on the features of the user, please predict the user's tutoring status.",
+                "answer_prompt": "Currently doing the tutoring[0], Not doing the tutoring[1], or Was doing the tutoring earlier[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "I am doing now": "The user is currently doing the tutoring",
+                "No": "The user is not doing the tutoring",
+                "Earlier": "The user was doing the tutoring earlier"
+            },
+            "class_index_dict": {
+                "I am doing now": 0,
+                "No": 1,
+                "Earlier": 2
+            }
+        },
+        "os": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing user behavior data.",
+                "task_prompt": "Based on the features of the user, please predict the operating system the user is using.",
+                "answer_prompt": "Android[0], Windows[1], iOS[2], Mac OS[3], Linux[4], Ubuntu[5], or Solaris[6]?"
+            },
+            "class_num": 7,
+            "class_value_dict": {
+                "Android": "User is using Android operating system",
+                "Windows": "User is using Windows operating system",
+                "iOS": "User is using iOS operating system",
+                "Mac OS": "User is using Mac OS operating system",
+                "Linux": "User is using Linux operating system",
+                "Ubuntu": "User is using Ubuntu operating system",
+                "Solaris": "User is using Solaris operating system"
+            },
+            "class_index_dict": {
+                "Android": 0,
+                "Windows": 1,
+                "iOS": 2,
+                "Mac OS": 3,
+                "Linux": 4,
+                "Ubuntu": 5,
+                "Solaris": 6
+            }
+        },
+        "is_big_city": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing user demographic data.",
+                "task_prompt": "Based on the features of the user, please predict whether the user lives in a big city.",
+                "answer_prompt": "Yes, the user lives in a big city[1] or No, the user does not live in a big city[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "True": "User lives in a big city",
+                "False": "User does not live in a big city"
+            },
+            "class_index_dict": {
+                "True": 1,
+                "False": 0
+            }
+        }
+    }
+}

@@ -1,0 +1,167 @@
+{
+    "basic_info": {
+        "row_num": 400,
+        "col_num": 9,
+        "label_candidates": [
+            "Chance of Admit ",
+            "CGPA",
+            "University Rating",
+            "GRE Score",
+            "TOEFL Score"
+        ],
+        "valid_feature_num": 8,
+        "num_features": [
+            "GRE Score",
+            "TOEFL Score",
+            "CGPA",
+            "Chance of Admit "
+        ],
+        "cat_features": [
+            "University Rating",
+            "SOP",
+            "LOR ",
+            "Research"
+        ],
+        "other_features": [],
+        "tags": [
+            "data visualization",
+            "linear regression",
+            "tabular",
+            "regression",
+            "standardized testing"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/akshaydattatraykhare/data-for-admission-in-the-university"
+    },
+    "feature_info": {
+        "Serial No.": {
+            "description": "The unique identifier for each student.",
+            "type": "useless"
+        },
+        "GRE Score": {
+            "description": "Graduate Record Examinations score of the student, ranging from 260 to 340.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "TOEFL Score": {
+            "description": "Test of English as a Foreign Language score of the student, ranging from 0 to 120.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "University Rating": {
+            "description": "Rating of the university applied by the student, ranging from 1 to 5.",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The university applied by the student has the lowest rating.",
+                "2": "The university applied by the student has a low rating.",
+                "3": "The university applied by the student has a medium rating.",
+                "4": "The university applied by the student has a high rating.",
+                "5": "The university applied by the student has the highest rating."
+            }
+        },
+        "SOP": {
+            "description": "Statement of Purpose strength, rated from 1 (lowest) to 5 (highest).",
+            "type": "categorical",
+            "value_dict": {
+                "1.0": "The Statement of Purpose is very weak.",
+                "1.5": "The Statement of Purpose is weak.",
+                "2.0": "The Statement of Purpose is below average.",
+                "2.5": "The Statement of Purpose is average.",
+                "3.0": "The Statement of Purpose is above average.",
+                "3.5": "The Statement of Purpose is good.",
+                "4.0": "The Statement of Purpose is very good.",
+                "4.5": "The Statement of Purpose is excellent.",
+                "5.0": "The Statement of Purpose is outstanding."
+            }
+        },
+        "LOR ": {
+            "description": "Letter of Recommendation strength, rated from 1 (lowest) to 5 (highest).",
+            "type": "categorical",
+            "value_dict": {
+                "1.0": "The Letter of Recommendation is very weak.",
+                "1.5": "The Letter of Recommendation is weak.",
+                "2.0": "The Letter of Recommendation is below average.",
+                "2.5": "The Letter of Recommendation is average.",
+                "3.0": "The Letter of Recommendation is above average.",
+                "3.5": "The Letter of Recommendation is good.",
+                "4.0": "The Letter of Recommendation is very good.",
+                "4.5": "The Letter of Recommendation is excellent.",
+                "5.0": "The Letter of Recommendation is outstanding."
+            }
+        },
+        "CGPA": {
+            "description": "Cumulative Grade Point Average of the student, ranging from 0 to 10.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Research": {
+            "description": "Whether the student has research experience or not, represented as binary (0: No, 1: Yes).",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The student does not have research experience.",
+                "1": "The student has research experience."
+            }
+        },
+        "Chance of Admit ": {
+            "description": "The probability of the student being admitted to the university, ranging from 0 to 1.",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "Chance of Admit ": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in university admission predictions.",
+                "task_prompt": "Based on the student's GRE score, TOEFL score, university rating, SOP, LOR, CGPA, and research experience, please predict the chance of admission.",
+                "answer_prompt": "Please input a number between 0 and 1 to represent the chance of admission."
+            }
+        },
+        "CGPA": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in academic performance predictions.",
+                "task_prompt": "Based on the student's GRE score, TOEFL score, university rating, SOP, LOR, research experience, and chance of admission, please predict the CGPA.",
+                "answer_prompt": "Please input a number between 0 and 10 to represent the CGPA."
+            }
+        },
+        "University Rating": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in university evaluation.",
+                "task_prompt": "Based on the student's GRE score, TOEFL score, SOP, LOR, CGPA, research experience, and chance of admission, please categorize the university rating.",
+                "answer_prompt": "Is the university applied by the student has the highest rating[4], high rating[3], medium rating[2], low rating[1] or the lowest rating[0]?"
+            },
+            "class_num": 5,
+            "class_value_dict": {
+                "1": "The university applied by the student has the lowest rating.",
+                "2": "The university applied by the student has a low rating.",
+                "3": "The university applied by the student has a medium rating.",
+                "4": "The university applied by the student has a high rating.",
+                "5": "The university applied by the student has the highest rating."
+            },
+            "class_index_dict": {
+                "1": 0,
+                "2": 1,
+                "3": 2,
+                "4": 3,
+                "5": 4
+            }
+        },
+        "GRE Score": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in standardized testing predictions.",
+                "task_prompt": "Based on the student's TOEFL score, university rating, SOP, LOR, CGPA, research experience, and chance of admission, please predict the GRE score.",
+                "answer_prompt": "Please input a number between 260 and 340 to represent the GRE score."
+            }
+        },
+        "TOEFL Score": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in language proficiency predictions.",
+                "task_prompt": "Based on the student's GRE score, university rating, SOP, LOR, CGPA, research experience, and chance of admission, please predict the TOEFL score.",
+                "answer_prompt": "Please input a number between 0 and 120 to represent the TOEFL score."
+            }
+        }
+    }
+}

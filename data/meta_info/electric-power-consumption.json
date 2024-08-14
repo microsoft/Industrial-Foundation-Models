@@ -1,0 +1,121 @@
+{
+    "basic_info": {
+        "row_num": 52416,
+        "col_num": 9,
+        "label_candidates": [
+            "PowerConsumption_Zone1",
+            "PowerConsumption_Zone2",
+            "PowerConsumption_Zone3",
+            "GeneralDiffuseFlows",
+            "DiffuseFlows"
+        ],
+        "valid_feature_num": 9,
+        "num_features": [
+            "Temperature",
+            "Humidity",
+            "WindSpeed",
+            "GeneralDiffuseFlows",
+            "DiffuseFlows",
+            "PowerConsumption_Zone2",
+            "PowerConsumption_Zone3",
+            "PowerConsumption_Zone1"
+        ],
+        "cat_features": [],
+        "other_features": [
+            "Datetime"
+        ],
+        "tags": [
+            "energy",
+            "electricity"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/fedesoriano/electric-power-consumption"
+    },
+    "feature_info": {
+        "Datetime": {
+            "description": "The date and time at which the data was recorded, in the format of MM/DD/YYYY HH:MM",
+            "type": "other"
+        },
+        "Temperature": {
+            "description": "The temperature value recorded at the given datetime, in degrees Celsius",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Humidity": {
+            "description": "The humidity level recorded at the given datetime, in percentage (%)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "WindSpeed": {
+            "description": "The wind speed recorded at the given datetime, in meters per second (m/s)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "GeneralDiffuseFlows": {
+            "description": "The general diffuse flows recorded at the given datetime, unit not specified",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "DiffuseFlows": {
+            "description": "The diffuse flows recorded at the given datetime, unit not specified",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "PowerConsumption_Zone1": {
+            "description": "The power consumption in Zone 1 at the given datetime, in kilowatt-hours (kWh)",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "PowerConsumption_Zone2": {
+            "description": "The power consumption in Zone 2 at the given datetime, in kilowatt-hours (kWh)",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "PowerConsumption_Zone3": {
+            "description": "The power consumption in Zone 3 at the given datetime, in kilowatt-hours (kWh)",
+            "type": "numerical",
+            "decimal": 5
+        }
+    },
+    "task_info": {
+        "PowerConsumption_Zone1": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in energy consumption analysis.",
+                "task_prompt": "Based on the features of the weather conditions and solar radiation, please predict the power consumption in Zone 1.",
+                "answer_prompt": "The predicted power consumption in Zone 1 is _______ (kWh)."
+            }
+        },
+        "PowerConsumption_Zone2": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in energy consumption analysis.",
+                "task_prompt": "Based on the features of the weather conditions and solar radiation, please predict the power consumption in Zone 2.",
+                "answer_prompt": "The predicted power consumption in Zone 2 is _______ (kWh)."
+            }
+        },
+        "PowerConsumption_Zone3": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in energy consumption analysis.",
+                "task_prompt": "Based on the features of the weather conditions and solar radiation, please predict the power consumption in Zone 3.",
+                "answer_prompt": "The predicted power consumption in Zone 3 is _______ (kWh)."
+            }
+        },
+        "GeneralDiffuseFlows": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in solar radiation analysis.",
+                "task_prompt": "Based on the features of the weather conditions, please predict the general diffuse flows.",
+                "answer_prompt": "The predicted general diffuse flows are _______ (W/m\u00b2)."
+            }
+        },
+        "DiffuseFlows": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in solar radiation analysis.",
+                "task_prompt": "Based on the features of the weather conditions, please predict the diffuse flows.",
+                "answer_prompt": "The predicted diffuse flows are _______ (W/m\u00b2)."
+            }
+        }
+    }
+}

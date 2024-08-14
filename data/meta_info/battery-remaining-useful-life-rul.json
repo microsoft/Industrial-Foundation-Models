@@ -1,0 +1,105 @@
+{
+    "basic_info": {
+        "row_num": 15064,
+        "col_num": 9,
+        "label_candidates": [
+            "RUL",
+            "Discharge Time (s)",
+            "Charging time (s)"
+        ],
+        "valid_feature_num": 9,
+        "num_features": [
+            "Cycle_Index",
+            "Discharge Time (s)",
+            "Decrement 3.6-3.4V (s)",
+            "Max. Voltage Dischar. (V)",
+            "Min. Voltage Charg. (V)",
+            "Time at 4.15V (s)",
+            "Time constant current (s)",
+            "Charging time (s)",
+            "RUL"
+        ],
+        "cat_features": [],
+        "other_features": [],
+        "tags": [
+            "energy",
+            "automobiles and vehicles",
+            "linear regression",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/ignaciovinuales/battery-remaining-useful-life-rul"
+    },
+    "feature_info": {
+        "Cycle_Index": {
+            "description": "Index of the cycle",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Discharge Time (s)": {
+            "description": "Time taken to discharge the battery in seconds",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Decrement 3.6-3.4V (s)": {
+            "description": "Time taken for the voltage to decrease from 3.6V to 3.4V in seconds",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Max. Voltage Dischar. (V)": {
+            "description": "Maximum voltage during discharge in Volts",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Min. Voltage Charg. (V)": {
+            "description": "Minimum voltage during charging in Volts",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Time at 4.15V (s)": {
+            "description": "Time spent at 4.15V in seconds",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Time constant current (s)": {
+            "description": "Time at which the current remains constant in seconds",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Charging time (s)": {
+            "description": "Time taken to charge the battery in seconds",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "RUL": {
+            "description": "Remaining useful life of the battery",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "RUL": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in battery life prediction.",
+                "task_prompt": "Based on the features of the battery discharge and charge cycles, please predict the remaining useful life (RUL).",
+                "answer_prompt": "The remaining useful life is {RUL} cycles."
+            }
+        },
+        "Discharge Time (s)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in battery discharge analysis.",
+                "task_prompt": "Based on the features of the battery discharge and charge cycles, please predict the discharge time.",
+                "answer_prompt": "The discharge time is {Discharge Time (s)} seconds."
+            }
+        },
+        "Charging time (s)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in battery charge analysis.",
+                "task_prompt": "Based on the features of the battery discharge and charge cycles, please predict the charging time.",
+                "answer_prompt": "The charging time is {Charging time (s)} seconds."
+            }
+        }
+    }
+}

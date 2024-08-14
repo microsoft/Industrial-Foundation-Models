@@ -1,0 +1,189 @@
+{
+    "basic_info": {
+        "row_num": 205,
+        "col_num": 16,
+        "label_candidates": [
+            "Total_crimes",
+            "Serious",
+            "Huge_damage",
+            "Theft",
+            "Fraud_scam",
+            "Drugs",
+            "Weapons"
+        ],
+        "valid_feature_num": 16,
+        "num_features": [
+            "Serious",
+            "Huge_damage",
+            "Ecological",
+            "Terrorism",
+            "Extremism",
+            "Murder",
+            "Harm_to_health",
+            "Rape",
+            "Theft",
+            "Vehicle_theft",
+            "Fraud_scam",
+            "Hooligan",
+            "Drugs",
+            "Weapons",
+            "Total_crimes"
+        ],
+        "cat_features": [
+            "month"
+        ],
+        "other_features": [],
+        "tags": [
+            "russia",
+            "crime",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/tsarkov90/crime-in-russia-20032020"
+    },
+    "feature_info": {
+        "month": {
+            "description": "The month and year when the crimes occurred, in the format MM.YYYY.",
+            "type": "categorical",
+            "value_dict": {
+                "01.01.2003": "The crimes occurred in January 2003",
+                "01.02.2003": "The crimes occurred in February 2003",
+                "01.03.2003": "The crimes occurred in March 2003",
+                "01.04.2003": "The crimes occurred in April 2003",
+                "01.05.2003": "The crimes occurred in May 2003"
+            }
+        },
+        "Total_crimes": {
+            "description": "The total number of crimes reported in that month.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Serious": {
+            "description": "The number of serious crimes reported in that month.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Huge_damage": {
+            "description": "The number of crimes that caused huge damage reported in that month.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Ecological": {
+            "description": "The number of ecological crimes reported in that month.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Terrorism": {
+            "description": "The number of terrorism-related crimes reported in that month.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Extremism": {
+            "description": "The number of extremism-related crimes reported in that month.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Murder": {
+            "description": "The number of murders reported in that month.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Harm_to_health": {
+            "description": "The number of crimes causing harm to health reported in that month.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Rape": {
+            "description": "The number of rapes reported in that month.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Theft": {
+            "description": "The number of thefts reported in that month.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Vehicle_theft": {
+            "description": "The number of vehicle thefts reported in that month.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Fraud_scam": {
+            "description": "The number of frauds or scams reported in that month.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Hooligan": {
+            "description": "The number of hooliganism incidents reported in that month.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Drugs": {
+            "description": "The number of drug-related crimes reported in that month.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Weapons": {
+            "description": "The number of weapon-related crimes reported in that month.",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "Total_crimes": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in crime statistics analysis.",
+                "task_prompt": "Based on the features of the crime data in Russia, please predict the total number of crimes.",
+                "answer_prompt": "The predicted total number of crimes is {prediction}."
+            }
+        },
+        "Serious": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in crime statistics analysis.",
+                "task_prompt": "Based on the features of the crime data in Russia, please predict the number of serious crimes.",
+                "answer_prompt": "The predicted number of serious crimes is {prediction}."
+            }
+        },
+        "Huge_damage": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in crime statistics analysis.",
+                "task_prompt": "Based on the features of the crime data in Russia, please predict the number of crimes causing huge damage.",
+                "answer_prompt": "The predicted number of crimes causing huge damage is {prediction}."
+            }
+        },
+        "Theft": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in crime statistics analysis.",
+                "task_prompt": "Based on the features of the crime data in Russia, please predict the number of thefts.",
+                "answer_prompt": "The predicted number of thefts is {prediction}."
+            }
+        },
+        "Fraud_scam": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in crime statistics analysis.",
+                "task_prompt": "Based on the features of the crime data in Russia, please predict the number of fraud and scam cases.",
+                "answer_prompt": "The predicted number of fraud and scam cases is {prediction}."
+            }
+        },
+        "Drugs": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in crime statistics analysis.",
+                "task_prompt": "Based on the features of the crime data in Russia, please predict the number of drug-related crimes.",
+                "answer_prompt": "The predicted number of drug-related crimes is {prediction}."
+            }
+        },
+        "Weapons": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in crime statistics analysis.",
+                "task_prompt": "Based on the features of the crime data in Russia, please predict the number of weapons-related crimes.",
+                "answer_prompt": "The predicted number of weapons-related crimes is {prediction}."
+            }
+        }
+    }
+}

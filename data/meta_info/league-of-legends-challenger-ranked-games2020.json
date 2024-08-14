@@ -1,0 +1,467 @@
+{
+    "basic_info": {
+        "row_num": 199925,
+        "col_num": 50,
+        "label_candidates": [
+            "blueWins",
+            "redWins",
+            "blueTotalGold",
+            "redTotalGold",
+            "blueKills",
+            "redKills",
+            "gameDuraton",
+            "blueTotalLevel",
+            "redTotalLevel",
+            "blueChampionDamageDealt",
+            "redChampionDamageDealt"
+        ],
+        "valid_feature_num": 49,
+        "num_features": [
+            "gameDuraton",
+            "blueDragonKills",
+            "blueBaronKills",
+            "blueTowerKills",
+            "blueInhibitorKills",
+            "blueWardPlaced",
+            "blueWardkills",
+            "blueKills",
+            "blueDeath",
+            "blueAssist",
+            "blueChampionDamageDealt",
+            "blueTotalGold",
+            "blueTotalMinionKills",
+            "blueTotalLevel",
+            "blueAvgLevel",
+            "blueJungleMinionKills",
+            "blueKillingSpree",
+            "blueTotalHeal",
+            "blueObjectDamageDealt",
+            "redDragonKills",
+            "redBaronKills",
+            "redTowerKills",
+            "redInhibitorKills",
+            "redWardPlaced",
+            "redWardkills",
+            "redKills",
+            "redDeath",
+            "redAssist",
+            "redChampionDamageDealt",
+            "redTotalGold",
+            "redTotalMinionKills",
+            "redTotalLevel",
+            "redAvgLevel",
+            "redJungleMinionKills",
+            "redKillingSpree",
+            "redTotalHeal",
+            "redObjectDamageDealt"
+        ],
+        "cat_features": [
+            "blueFirstBlood",
+            "blueFirstTower",
+            "blueFirstBaron",
+            "blueFirstDragon",
+            "blueFirstInhibitor",
+            "redWins",
+            "redFirstBlood",
+            "redFirstTower",
+            "redFirstBaron",
+            "redFirstDragon",
+            "redFirstInhibitor",
+            "blueWins"
+        ],
+        "other_features": [],
+        "tags": [
+            "arts and entertainment",
+            "games",
+            "video games",
+            "online communities"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/gyejr95/league-of-legends-challenger-ranked-games2020"
+    },
+    "feature_info": {
+        "gameId": {
+            "description": "Unique identifier for each game",
+            "type": "useless"
+        },
+        "gameDuraton": {
+            "description": "Duration of the game in seconds",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "blueWins": {
+            "description": "Whether the blue team won the game (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Blue team did not win the game",
+                "1": "Blue team won the game"
+            }
+        },
+        "blueFirstBlood": {
+            "description": "Whether the blue team got the first kill (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Blue team got the first kill",
+                "0": "Blue team did not get the first kill"
+            }
+        },
+        "blueFirstTower": {
+            "description": "Whether the blue team destroyed the first tower (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Blue team did not destroy the first tower",
+                "1": "Blue team destroyed the first tower"
+            }
+        },
+        "blueFirstBaron": {
+            "description": "Whether the blue team killed the first Baron Nashor (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Blue team did not kill the first Baron Nashor",
+                "1": "Blue team killed the first Baron Nashor"
+            }
+        },
+        "blueFirstDragon": {
+            "description": "Whether the blue team killed the first dragon (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Blue team did not kill the first dragon",
+                "1": "Blue team killed the first dragon"
+            }
+        },
+        "blueFirstInhibitor": {
+            "description": "Whether the blue team destroyed the first inhibitor (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Blue team did not destroy the first inhibitor",
+                "1": "Blue team destroyed the first inhibitor"
+            }
+        },
+        "blueDragonKills": {
+            "description": "Total number of dragons killed by the blue team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "blueBaronKills": {
+            "description": "Total number of Baron Nashors killed by the blue team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "blueTowerKills": {
+            "description": "Total number of towers destroyed by the blue team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "blueInhibitorKills": {
+            "description": "Total number of inhibitors destroyed by the blue team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "blueWardPlaced": {
+            "description": "Total number of wards placed by the blue team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "blueWardkills": {
+            "description": "Total number of enemy wards destroyed by the blue team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "blueKills": {
+            "description": "Total number of kills made by the blue team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "blueDeath": {
+            "description": "Total number of deaths of the blue team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "blueAssist": {
+            "description": "Total number of assists made by the blue team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "blueChampionDamageDealt": {
+            "description": "Total damage dealt to champions by the blue team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "blueTotalGold": {
+            "description": "Total gold earned by the blue team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "blueTotalMinionKills": {
+            "description": "Total number of minions killed by the blue team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "blueTotalLevel": {
+            "description": "Total level reached by the blue team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "blueAvgLevel": {
+            "description": "Average level of the blue team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "blueJungleMinionKills": {
+            "description": "Total number of jungle minions killed by the blue team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "blueKillingSpree": {
+            "description": "Total number of killing sprees by the blue team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "blueTotalHeal": {
+            "description": "Total amount of healing done by the blue team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "blueObjectDamageDealt": {
+            "description": "Total damage to objectives dealt by the blue team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "redWins": {
+            "description": "Whether the red team won the game (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Red team won the game",
+                "0": "Red team did not win the game"
+            }
+        },
+        "redFirstBlood": {
+            "description": "Whether the red team got the first kill (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Red team did not get the first kill",
+                "1": "Red team got the first kill"
+            }
+        },
+        "redFirstTower": {
+            "description": "Whether the red team destroyed the first tower (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Red team destroyed the first tower",
+                "0": "Red team did not destroy the first tower"
+            }
+        },
+        "redFirstBaron": {
+            "description": "Whether the red team killed the first Baron Nashor (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Red team did not kill the first Baron Nashor",
+                "1": "Red team killed the first Baron Nashor"
+            }
+        },
+        "redFirstDragon": {
+            "description": "Whether the red team killed the first dragon (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Red team killed the first dragon",
+                "0": "Red team did not kill the first dragon"
+            }
+        },
+        "redFirstInhibitor": {
+            "description": "Whether the red team destroyed the first inhibitor (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Red team destroyed the first inhibitor",
+                "0": "Red team did not destroy the first inhibitor"
+            }
+        },
+        "redDragonKills": {
+            "description": "Total number of dragons killed by the red team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "redBaronKills": {
+            "description": "Total number of Baron Nashors killed by the red team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "redTowerKills": {
+            "description": "Total number of towers destroyed by the red team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "redInhibitorKills": {
+            "description": "Total number of inhibitors destroyed by the red team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "redWardPlaced": {
+            "description": "Total number of wards placed by the red team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "redWardkills": {
+            "description": "Total number of enemy wards destroyed by the red team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "redKills": {
+            "description": "Total number of kills made by the red team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "redDeath": {
+            "description": "Total number of deaths of the red team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "redAssist": {
+            "description": "Total number of assists made by the red team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "redChampionDamageDealt": {
+            "description": "Total damage dealt to champions by the red team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "redTotalGold": {
+            "description": "Total gold earned by the red team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "redTotalMinionKills": {
+            "description": "Total number of minions killed by the red team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "redTotalLevel": {
+            "description": "Total level reached by the red team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "redAvgLevel": {
+            "description": "Average level of the red team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "redJungleMinionKills": {
+            "description": "Total number of jungle minions killed by the red team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "redKillingSpree": {
+            "description": "Total number of killing sprees by the red team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "redTotalHeal": {
+            "description": "Total amount of healing done by the red team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "redObjectDamageDealt": {
+            "description": "Total damage to objectives dealt by the red team",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "blueWins": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing League of Legends game data.",
+                "task_prompt": "Based on the features of the game, please predict if the Blue team won.",
+                "answer_prompt": "Blue team won the game[1] or Blue team did not win the game[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "Blue team did not win the game",
+                "1": "Blue team won the game"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "redWins": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing League of Legends game data.",
+                "task_prompt": "Based on the features of the game, please predict if the Red team won.",
+                "answer_prompt": "Red team won the game[1] or Red team did not win the game[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "Red team won the game",
+                "0": "Red team did not win the game"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        },
+        "blueTotalGold": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing League of Legends game data.",
+                "task_prompt": "Based on the features of the game, please predict the total gold earned by the Blue team."
+            }
+        },
+        "redTotalGold": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing League of Legends game data.",
+                "task_prompt": "Based on the features of the game, please predict the total gold earned by the Red team."
+            }
+        },
+        "blueKills": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing League of Legends game data.",
+                "task_prompt": "Based on the features of the game, please predict the number of kills by the Blue team."
+            }
+        },
+        "redKills": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing League of Legends game data.",
+                "task_prompt": "Based on the features of the game, please predict the number of kills by the Red team."
+            }
+        },
+        "gameDuraton": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing League of Legends game data.",
+                "task_prompt": "Based on the features of the game, please predict the duration of the game."
+            }
+        },
+        "blueTotalLevel": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing League of Legends game data.",
+                "task_prompt": "Based on the features of the game, please predict the total level of the Blue team."
+            }
+        },
+        "redTotalLevel": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing League of Legends game data.",
+                "task_prompt": "Based on the features of the game, please predict the total level of the Red team."
+            }
+        },
+        "blueChampionDamageDealt": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing League of Legends game data.",
+                "task_prompt": "Based on the features of the game, please predict the damage dealt by the Blue team champions."
+            }
+        },
+        "redChampionDamageDealt": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing League of Legends game data.",
+                "task_prompt": "Based on the features of the game, please predict the damage dealt by the Red team champions."
+            }
+        }
+    }
+}

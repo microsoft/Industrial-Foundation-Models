@@ -1,0 +1,128 @@
+{
+    "basic_info": {
+        "row_num": 768,
+        "col_num": 9,
+        "label_candidates": [
+            "Outcome",
+            "Glucose",
+            "BMI",
+            "Age"
+        ],
+        "valid_feature_num": 10,
+        "num_features": [
+            "Pregnancies",
+            "Glucose",
+            "BloodPressure",
+            "SkinThickness",
+            "Insulin",
+            "BMI",
+            "DiabetesPedigreeFunction",
+            "Age"
+        ],
+        "cat_features": [
+            "Outcome"
+        ],
+        "other_features": [],
+        "tags": [
+            "categorical",
+            "beginner",
+            "classification",
+            "decision tree",
+            "diabetes"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/pritsheta/diabetes-dataset"
+    },
+    "feature_info": {
+        "Pregnancies": {
+            "description": "Number of times pregnant",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Glucose": {
+            "description": "Plasma glucose concentration a 2 hours in an oral glucose tolerance test (mg/dL)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "BloodPressure": {
+            "description": "Diastolic blood pressure (mm Hg)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "SkinThickness": {
+            "description": "Triceps skin fold thickness (mm)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Insulin": {
+            "description": "2-Hour serum insulin (mu U/ml)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "BMI": {
+            "description": "Body mass index (weight in kg/(height in m)^2)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "DiabetesPedigreeFunction": {
+            "description": "Diabetes pedigree function (a function which scores likelihood of diabetes based on family history)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Age": {
+            "description": "Age (years)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Outcome": {
+            "description": "Class variable (0 or 1) where 0 indicates that the patient does not have diabetes and 1 indicates that the patient has diabetes",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The patient has diabetes",
+                "0": "The patient does not have diabetes"
+            }
+        }
+    },
+    "task_info": {
+        "Outcome": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnosis.",
+                "task_prompt": "Based on the health features of the patient, please predict if the patient has diabetes.",
+                "answer_prompt": "Does the patient have diabetes? Yes[1] or No[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "The patient has diabetes",
+                "0": "The patient does not have diabetes"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        },
+        "Glucose": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnosis.",
+                "task_prompt": "Based on the health features of the patient, please predict the glucose level.",
+                "answer_prompt": "What is the predicted glucose level?"
+            }
+        },
+        "BMI": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnosis.",
+                "task_prompt": "Based on the health features of the patient, please predict the Body Mass Index (BMI).",
+                "answer_prompt": "What is the predicted BMI?"
+            }
+        },
+        "Age": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnosis.",
+                "task_prompt": "Based on the health features of the patient, please predict the age.",
+                "answer_prompt": "What is the predicted age?"
+            }
+        }
+    }
+}

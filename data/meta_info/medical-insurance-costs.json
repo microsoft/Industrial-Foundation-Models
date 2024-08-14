@@ -1,0 +1,115 @@
+{
+    "basic_info": {
+        "row_num": 1338,
+        "col_num": 7,
+        "label_candidates": [
+            "charges",
+            "smoker",
+            "bmi"
+        ],
+        "valid_feature_num": 7,
+        "num_features": [
+            "age",
+            "bmi",
+            "children",
+            "charges"
+        ],
+        "cat_features": [
+            "sex",
+            "smoker",
+            "region"
+        ],
+        "other_features": [],
+        "tags": [
+            "healthcare",
+            "medicine",
+            "regression",
+            "insurance",
+            "health conditions"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/joebeachcapital/medical-insurance-costs"
+    },
+    "feature_info": {
+        "age": {
+            "description": "The age of the primary beneficiary (excluding those above 64 years, since they are generally covered by the government).",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "sex": {
+            "description": "The gender of the primary beneficiary (male or female).",
+            "type": "categorical",
+            "value_dict": {
+                "female": "The primary beneficiary is female.",
+                "male": "The primary beneficiary is male."
+            }
+        },
+        "bmi": {
+            "description": "Body mass index, providing an understanding of the body, weights that are relatively high or low relative to height, objective index of body weight (kg / m ^ 2) using the ratio of height to weight, ideally 18.5 to 24.9.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "children": {
+            "description": "Number of children covered by health insurance / number of dependents.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "smoker": {
+            "description": "Whether the beneficiary is a smoker or not.",
+            "type": "categorical",
+            "value_dict": {
+                "yes": "The primary beneficiary is a smoker.",
+                "no": "The primary beneficiary is not a smoker."
+            }
+        },
+        "region": {
+            "description": "The beneficiary's residential area in the US (northeast, southeast, southwest, northwest).",
+            "type": "categorical",
+            "value_dict": {
+                "southwest": "The primary beneficiary resides in the southwest region of the US.",
+                "southeast": "The primary beneficiary resides in the southeast region of the US.",
+                "northwest": "The primary beneficiary resides in the northwest region of the US.",
+                "northeast": "The primary beneficiary resides in the northeast region of the US."
+            }
+        },
+        "charges": {
+            "description": "Individual medical costs billed by health insurance in USD.",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "charges": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical insurance cost estimation.",
+                "task_prompt": "Based on the features of the primary beneficiary, including age, sex, bmi, number of children, smoking status, and region, please predict the medical insurance charges.",
+                "answer_prompt": "The estimated medical insurance charges are __."
+            }
+        },
+        "smoker": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in identifying smoking habits based on personal information.",
+                "task_prompt": "Based on the features of the primary beneficiary, including age, sex, bmi, number of children, region, and charges, please predict whether the primary beneficiary is a smoker.",
+                "answer_prompt": "The primary beneficiary is a smoker[1] or not a smoker[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "yes": "The primary beneficiary is a smoker.",
+                "no": "The primary beneficiary is not a smoker."
+            },
+            "class_index_dict": {
+                "yes": 1,
+                "no": 0
+            }
+        },
+        "bmi": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in predicting body mass index (BMI).",
+                "task_prompt": "Based on the features of the primary beneficiary, including age, sex, number of children, smoking status, region, and charges, please predict the BMI.",
+                "answer_prompt": "The estimated BMI is __."
+            }
+        }
+    }
+}

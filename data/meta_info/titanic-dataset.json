@@ -1,0 +1,196 @@
+{
+    "basic_info": {
+        "row_num": 891,
+        "col_num": 12,
+        "label_candidates": [
+            "Survived",
+            "Pclass",
+            "Age",
+            "SibSp",
+            "Parch",
+            "Fare",
+            "Embarked"
+        ],
+        "valid_feature_num": 9,
+        "num_features": [
+            "Age",
+            "SibSp",
+            "Parch",
+            "Fare"
+        ],
+        "cat_features": [
+            "Pclass",
+            "Sex",
+            "Embarked",
+            "Survived"
+        ],
+        "other_features": [
+            "Cabin"
+        ],
+        "tags": [
+            "natural disasters",
+            "beginner",
+            "classification",
+            "tabular",
+            "binary classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/yasserh/titanic-dataset"
+    },
+    "feature_info": {
+        "PassengerId": {
+            "description": "Unique identifier for each passenger",
+            "type": "useless"
+        },
+        "Survived": {
+            "description": "Survival status (0 = No, 1 = Yes)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Did not survive",
+                "1": "Survived"
+            }
+        },
+        "Pclass": {
+            "description": "Ticket class (1 = 1st, 2 = 2nd, 3 = 3rd)",
+            "type": "categorical",
+            "value_dict": {
+                "3": "3rd class ticket",
+                "1": "1st class ticket",
+                "2": "2nd class ticket"
+            }
+        },
+        "Name": {
+            "description": "Name of the passenger",
+            "type": "useless"
+        },
+        "Sex": {
+            "description": "Sex of the passenger",
+            "type": "categorical",
+            "value_dict": {
+                "male": "Male",
+                "female": "Female"
+            }
+        },
+        "Age": {
+            "description": "Age of the passenger in years",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "SibSp": {
+            "description": "Number of siblings / spouses aboard the Titanic",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Parch": {
+            "description": "Number of parents / children aboard the Titanic",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Ticket": {
+            "description": "Ticket number",
+            "type": "useless"
+        },
+        "Fare": {
+            "description": "Passenger fare",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Cabin": {
+            "description": "Cabin number",
+            "type": "other"
+        },
+        "Embarked": {
+            "description": "Port of Embarkation (C = Cherbourg, Q = Queenstown, S = Southampton)",
+            "type": "categorical",
+            "value_dict": {
+                "S": "Embarked from Southampton",
+                "C": "Embarked from Cherbourg",
+                "Q": "Embarked from Queenstown"
+            }
+        }
+    },
+    "task_info": {
+        "Survived": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in survival prediction.",
+                "task_prompt": "Based on the features of the Titanic passengers, please predict the survival status.",
+                "answer_prompt": "Did not survive[0] or survived[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "Did not survive",
+                "1": "Survived"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "Pclass": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in socio-economic class prediction.",
+                "task_prompt": "Based on the features of the Titanic passengers, please predict the ticket class.",
+                "answer_prompt": "3rd class ticket[0], 1st class ticket[1] or 2nd class ticket[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "3": "3rd class ticket",
+                "1": "1st class ticket",
+                "2": "2nd class ticket"
+            },
+            "class_index_dict": {
+                "3": 0,
+                "1": 1,
+                "2": 2
+            }
+        },
+        "Age": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in age prediction.",
+                "task_prompt": "Based on the features of the Titanic passengers, please predict the age."
+            }
+        },
+        "SibSp": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in family relationship prediction.",
+                "task_prompt": "Based on the features of the Titanic passengers, please predict the number of siblings/spouses aboard."
+            }
+        },
+        "Parch": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in family relationship prediction.",
+                "task_prompt": "Based on the features of the Titanic passengers, please predict the number of parents/children aboard."
+            }
+        },
+        "Fare": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in fare prediction.",
+                "task_prompt": "Based on the features of the Titanic passengers, please predict the fare."
+            }
+        },
+        "Embarked": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in embarkation port prediction.",
+                "task_prompt": "Based on the features of the Titanic passengers, please predict the embarkation port.",
+                "answer_prompt": "Embarked from Southampton[0], Embarked from Cherbourg[1] or Embarked from Queenstown[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "S": "Embarked from Southampton",
+                "C": "Embarked from Cherbourg",
+                "Q": "Embarked from Queenstown"
+            },
+            "class_index_dict": {
+                "S": 0,
+                "C": 1,
+                "Q": 2
+            }
+        }
+    }
+}

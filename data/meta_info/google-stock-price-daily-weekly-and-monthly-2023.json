@@ -1,0 +1,112 @@
+{
+    "basic_info": {
+        "row_num": 3150,
+        "col_num": 7,
+        "label_candidates": [
+            "Close",
+            "Adj Close",
+            "High",
+            "Low",
+            "Price"
+        ],
+        "valid_feature_num": 7,
+        "num_features": [
+            "Price",
+            "High",
+            "Low",
+            "Volume",
+            "Adj Close",
+            "Close"
+        ],
+        "cat_features": [
+            "Date"
+        ],
+        "other_features": [],
+        "tags": [
+            "business",
+            "finance",
+            "time series analysis",
+            "investing",
+            "news"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/r1shabhgupta/google-stock-price-daily-weekly-and-monthly-2023"
+    },
+    "feature_info": {
+        "Date": {
+            "description": "The date of the stock data, in the format YYYY-MM-DD.",
+            "type": "categorical"
+        },
+        "Price": {
+            "description": "The opening price of the stock for the day, in USD.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "High": {
+            "description": "The highest price of the stock for the day, in USD.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Low": {
+            "description": "The lowest price of the stock for the day, in USD.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Close": {
+            "description": "The closing price of the stock for the day, in USD.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Volume": {
+            "description": "The number of shares traded during the day.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Adj Close": {
+            "description": "The closing price of the stock for the day, adjusted for dividends and splits, in USD.",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "Close": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an assistant that predicts stock market prices.",
+                "task_prompt": "Based on the features of the Google stock data, please predict the closing price.",
+                "answer_prompt": "The predicted closing price is ______."
+            }
+        },
+        "Adj Close": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an assistant that predicts stock market prices.",
+                "task_prompt": "Based on the features of the Google stock data, please predict the adjusted closing price.",
+                "answer_prompt": "The predicted adjusted closing price is ______."
+            }
+        },
+        "High": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an assistant that predicts stock market prices.",
+                "task_prompt": "Based on the features of the Google stock data, please predict the highest price of the day.",
+                "answer_prompt": "The predicted highest price of the day is ______."
+            }
+        },
+        "Low": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an assistant that predicts stock market prices.",
+                "task_prompt": "Based on the features of the Google stock data, please predict the lowest price of the day.",
+                "answer_prompt": "The predicted lowest price of the day is ______."
+            }
+        },
+        "Price": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an assistant that predicts stock market prices.",
+                "task_prompt": "Based on the features of the Google stock data, please predict the opening price.",
+                "answer_prompt": "The predicted opening price is ______."
+            }
+        }
+    }
+}

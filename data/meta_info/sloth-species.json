@@ -1,0 +1,118 @@
+{
+    "basic_info": {
+        "row_num": 5000,
+        "col_num": 7,
+        "label_candidates": [
+            "endangered",
+            "weight_kg",
+            "size_cm"
+        ],
+        "valid_feature_num": 7,
+        "num_features": [
+            "claw_length_cm",
+            "size_cm",
+            "tail_length_cm",
+            "weight_kg"
+        ],
+        "cat_features": [
+            "specie",
+            "sub_specie",
+            "endangered"
+        ],
+        "other_features": [],
+        "tags": [
+            "animals",
+            "beginner",
+            "intermediate",
+            "data visualization",
+            "classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/bertiemackie/sloth-species"
+    },
+    "feature_info": {
+        "claw_length_cm": {
+            "description": "The length of the sloth's claw in centimeters",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "endangered": {
+            "description": "The endangered status of the sloth specie",
+            "type": "categorical",
+            "value_dict": {
+                "critically_endangered": "The specie is facing an extremely high risk of extinction in the wild.",
+                "vulnerable": "The specie is considered to be facing a high risk of extinction in the wild.",
+                "least_concern": "The specie is widespread and abundant."
+            }
+        },
+        "size_cm": {
+            "description": "The size of the sloth in centimeters",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "specie": {
+            "description": "The specie of the sloth",
+            "type": "categorical",
+            "value_dict": {
+                "three_toed": "The sloth is a member of the three-toed sloth family.",
+                "two_toed": "The sloth is a member of the two-toed sloth family."
+            }
+        },
+        "sub_specie": {
+            "description": "The sub-specie of the sloth",
+            "type": "categorical",
+            "value_dict": {
+                "Pygmy three-toed sloth": "The sloth is a member of the Pygmy three-toed sloth sub-specie.",
+                "Maned three-toed sloth": "The sloth is a member of the Maned three-toed sloth sub-specie.",
+                "Pale-throated sloth": "The sloth is a member of the Pale-throated sloth sub-specie.",
+                "Brown-throated sloth": "The sloth is a member of the Brown-throated sloth sub-specie.",
+                "Linnaeus\u2019s two-toed sloth": "The sloth is a member of the Linnaeus\u2019s two-toed sloth sub-specie.",
+                "Hoffman\u2019s two-toed sloth": "The sloth is a member of the Hoffman\u2019s two-toed sloth sub-specie."
+            }
+        },
+        "tail_length_cm": {
+            "description": "The length of the sloth's tail in centimeters",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "weight_kg": {
+            "description": "The weight of the sloth in kilograms",
+            "type": "numerical",
+            "decimal": 3
+        }
+    },
+    "task_info": {
+        "endangered": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in animal conservation.",
+                "task_prompt": "Based on the features of the sloth species, please predict the endangerment status.",
+                "answer_prompt": "Critically endangered[0], vulnerable[1], or least concern[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "critically_endangered": "The specie is facing an extremely high risk of extinction in the wild.",
+                "vulnerable": "The specie is considered to be facing a high risk of extinction in the wild.",
+                "least_concern": "The specie is widespread and abundant."
+            },
+            "class_index_dict": {
+                "critically_endangered": 0,
+                "vulnerable": 1,
+                "least_concern": 2
+            }
+        },
+        "weight_kg": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in zoology.",
+                "task_prompt": "Based on the features of the sloth species, please predict the weight in kilograms."
+            }
+        },
+        "size_cm": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in zoology.",
+                "task_prompt": "Based on the features of the sloth species, please predict the size in centimeters."
+            }
+        }
+    }
+}

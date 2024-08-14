@@ -1,0 +1,180 @@
+{
+    "basic_info": {
+        "row_num": 32561,
+        "col_num": 15,
+        "label_candidates": [
+            "salary",
+            "education-num",
+            "hours-per-week"
+        ],
+        "valid_feature_num": 15,
+        "num_features": [
+            "age",
+            "fnlwgt",
+            "education-num",
+            "capital-gain",
+            "capital-loss",
+            "hours-per-week"
+        ],
+        "cat_features": [
+            "workclass",
+            "education",
+            "marital-status",
+            "occupation",
+            "relationship",
+            "race",
+            "sex",
+            "native-country",
+            "salary"
+        ],
+        "other_features": [],
+        "tags": [
+            "bigquery"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/aemyjutt/salary-binary-classifier"
+    },
+    "feature_info": {
+        "age": {
+            "description": "The age of the individual in years",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "workclass": {
+            "description": "The type of employer the individual has (e.g., government, military, private, etc.)",
+            "type": "categorical",
+            "value_dict": {
+                " State-gov": "Working for the state government",
+                " Self-emp-not-inc": "Self employed but not incorporated",
+                " Private": "Working for a private employer",
+                " Federal-gov": "Working for the federal government",
+                " Local-gov": "Working for the local government",
+                " ?": "Workclass is unknown",
+                " Self-emp-inc": "Self employed and incorporated",
+                " Without-pay": "Working without pay",
+                " Never-worked": "Never had a job"
+            }
+        },
+        "fnlwgt": {
+            "description": "Final weight. The number of units in the target population that the responding unit represents",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "education": {
+            "description": "The highest level of education achieved by the individual",
+            "type": "categorical"
+        },
+        "education-num": {
+            "description": "The highest level of education achieved in numerical form",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "marital-status": {
+            "description": "Marital status of the individual",
+            "type": "categorical",
+            "value_dict": {
+                " Never-married": "Never been married",
+                " Married-civ-spouse": "Married to a civilian spouse",
+                " Divorced": "Divorced",
+                " Married-spouse-absent": "Married but spouse is absent",
+                " Separated": "Separated",
+                " Married-AF-spouse": "Married to a spouse in the Armed Forces",
+                " Widowed": "Widowed"
+            }
+        },
+        "occupation": {
+            "description": "The general type of occupation of the individual",
+            "type": "categorical"
+        },
+        "relationship": {
+            "description": "Represents what this individual is relative to others. For example an individual could be a Husband. Each individual only has one relationship attribute",
+            "type": "categorical",
+            "value_dict": {
+                " Not-in-family": "Not in a family",
+                " Husband": "Is a husband",
+                " Wife": "Is a wife",
+                " Own-child": "Is a child of the individual",
+                " Unmarried": "Unmarried",
+                " Other-relative": "Is a relative other than child, husband or wife"
+            }
+        },
+        "race": {
+            "description": "Race of the individual",
+            "type": "categorical",
+            "value_dict": {
+                " White": "White",
+                " Black": "Black",
+                " Asian-Pac-Islander": "Asian Pacific Islander",
+                " Amer-Indian-Eskimo": "American Indian or Eskimo",
+                " Other": "Other race"
+            }
+        },
+        "sex": {
+            "description": "The biological sex of the individual",
+            "type": "categorical",
+            "value_dict": {
+                " Male": "Male",
+                " Female": "Female"
+            }
+        },
+        "capital-gain": {
+            "description": "Capital gains for the individual",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "capital-loss": {
+            "description": "Capital loss for the individual",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "hours-per-week": {
+            "description": "The number of hours the individual works per week",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "native-country": {
+            "description": "Country of origin of the individual",
+            "type": "categorical"
+        },
+        "salary": {
+            "description": "Whether the person makes more than 50K a year",
+            "type": "categorical",
+            "value_dict": {
+                " <=50K": "Earning 50K or less",
+                " >50K": "Earning more than 50K"
+            }
+        }
+    },
+    "task_info": {
+        "salary": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in employment and salary prediction.",
+                "task_prompt": "Based on the socio-demographic features of the individual, please predict the salary range.",
+                "answer_prompt": "Earning 50K or less[0] or Earning more than 50K[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                " <=50K": "Earning 50K or less",
+                " >50K": "Earning more than 50K"
+            },
+            "class_index_dict": {
+                " <=50K": 0,
+                " >50K": 1
+            }
+        },
+        "education-num": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in education level prediction.",
+                "task_prompt": "Based on the socio-demographic features of the individual, please predict the number of education years."
+            }
+        },
+        "hours-per-week": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in work hours prediction.",
+                "task_prompt": "Based on the socio-demographic features of the individual, please predict the work hours per week."
+            }
+        }
+    }
+}

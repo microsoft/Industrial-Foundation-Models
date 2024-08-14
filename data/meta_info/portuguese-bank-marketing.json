@@ -1,0 +1,269 @@
+{
+    "basic_info": {
+        "row_num": 45211,
+        "col_num": 17,
+        "label_candidates": [
+            "Subscription",
+            "Marital Status",
+            "Education",
+            "Credit",
+            "Housing Loan",
+            "Personal Loan"
+        ],
+        "valid_feature_num": 17,
+        "num_features": [
+            "Age",
+            "Balance (euros)",
+            "Last Contact Day",
+            "Last Contact Duration",
+            "Campaign",
+            "Pdays",
+            "Previous"
+        ],
+        "cat_features": [
+            "Job",
+            "Marital Status",
+            "Education",
+            "Credit",
+            "Housing Loan",
+            "Personal Loan",
+            "Contact",
+            "Last Contact Month",
+            "Poutcome",
+            "Subscription"
+        ],
+        "other_features": [],
+        "tags": [
+            "banking",
+            "classification",
+            "clustering",
+            "tabular"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/aakashverma8900/portuguese-bank-marketing"
+    },
+    "feature_info": {
+        "Age": {
+            "description": "The age of the customer",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Job": {
+            "description": "Type of job of the customer",
+            "type": "categorical"
+        },
+        "Marital Status": {
+            "description": "Marital status of the customer",
+            "type": "categorical",
+            "value_dict": {
+                "married": "The customer is married",
+                "single": "The customer is single",
+                "divorced": "The customer is divorced"
+            }
+        },
+        "Education": {
+            "description": "Education level of the customer",
+            "type": "categorical",
+            "value_dict": {
+                "tertiary": "The customer has a tertiary education",
+                "secondary": "The customer has a secondary education",
+                "unknown": "The education level of the customer is unknown",
+                "primary": "The customer has a primary education"
+            }
+        },
+        "Credit": {
+            "description": "Whether the customer has credit in default",
+            "type": "categorical",
+            "value_dict": {
+                "no": "The customer does not have credit in default",
+                "yes": "The customer has credit in default"
+            }
+        },
+        "Balance (euros)": {
+            "description": "Average yearly balance, in euros",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Housing Loan": {
+            "description": "Whether the customer has a housing loan",
+            "type": "categorical",
+            "value_dict": {
+                "yes": "The customer has a housing loan",
+                "no": "The customer does not have a housing loan"
+            }
+        },
+        "Personal Loan": {
+            "description": "Whether the customer has a personal loan",
+            "type": "categorical",
+            "value_dict": {
+                "no": "The customer does not have a personal loan",
+                "yes": "The customer has a personal loan"
+            }
+        },
+        "Contact": {
+            "description": "Contact communication type",
+            "type": "categorical",
+            "value_dict": {
+                "unknown": "The contact communication type is unknown",
+                "cellular": "The contact communication type is cellular",
+                "telephone": "The contact communication type is telephone"
+            }
+        },
+        "Last Contact Day": {
+            "description": "Last contact day of the month",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Last Contact Month": {
+            "description": "Last contact month of year",
+            "type": "categorical"
+        },
+        "Last Contact Duration": {
+            "description": "Last contact duration, in seconds",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Campaign": {
+            "description": "Number of contacts performed during this campaign and for this client",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Pdays": {
+            "description": "Number of days that passed by after the client was last contacted from a previous campaign",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Previous": {
+            "description": "Number of contacts performed before this campaign and for this client",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Poutcome": {
+            "description": "Outcome of the previous marketing campaign",
+            "type": "categorical",
+            "value_dict": {
+                "unknown": "The outcome of the previous marketing campaign is unknown",
+                "failure": "The outcome of the previous marketing campaign was a failure",
+                "other": "The outcome of the previous marketing campaign is other",
+                "success": "The outcome of the previous marketing campaign was a success"
+            }
+        },
+        "Subscription": {
+            "description": "Has the client subscribed a term deposit? (1: not subscribed, 2: subscribed)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The customer has not subscribed to a term deposit",
+                "2": "The customer has subscribed to a term deposit"
+            }
+        }
+    },
+    "task_info": {
+        "Subscription": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in banking and finance.",
+                "task_prompt": "Based on the features of the customer, please predict if the customer has subscribed to a term deposit.",
+                "answer_prompt": "Subscribed[1] or not subscribed[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "The customer has not subscribed to a term deposit",
+                "2": "The customer has subscribed to a term deposit"
+            },
+            "class_index_dict": {
+                "1": 0,
+                "2": 1
+            }
+        },
+        "Marital Status": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an assistant specializing in demographic analysis.",
+                "task_prompt": "Based on the features of the customer, please predict the marital status of the customer.",
+                "answer_prompt": "Married[0], single[1], or divorced[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "married": "The customer is married",
+                "single": "The customer is single",
+                "divorced": "The customer is divorced"
+            },
+            "class_index_dict": {
+                "married": 0,
+                "single": 1,
+                "divorced": 2
+            }
+        },
+        "Education": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an assistant specializing in education analysis.",
+                "task_prompt": "Based on the features of the customer, please predict the education level of the customer.",
+                "answer_prompt": "Tertiary[0], secondary[1], unknown[2], or primary[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "tertiary": "The customer has a tertiary education",
+                "secondary": "The customer has a secondary education",
+                "unknown": "The education level of the customer is unknown",
+                "primary": "The customer has a primary education"
+            },
+            "class_index_dict": {
+                "tertiary": 0,
+                "secondary": 1,
+                "unknown": 2,
+                "primary": 3
+            }
+        },
+        "Credit": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an assistant specializing in credit analysis.",
+                "task_prompt": "Based on the features of the customer, please predict if the customer has credit in default.",
+                "answer_prompt": "Does not have credit[0] or has credit[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "no": "The customer does not have credit in default",
+                "yes": "The customer has credit in default"
+            },
+            "class_index_dict": {
+                "no": 0,
+                "yes": 1
+            }
+        },
+        "Housing Loan": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an assistant specializing in loan analysis.",
+                "task_prompt": "Based on the features of the customer, please predict if the customer has a housing loan.",
+                "answer_prompt": "Has a housing loan[0] or does not have a housing loan[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "yes": "The customer has a housing loan",
+                "no": "The customer does not have a housing loan"
+            },
+            "class_index_dict": {
+                "yes": 0,
+                "no": 1
+            }
+        },
+        "Personal Loan": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an assistant specializing in loan analysis.",
+                "task_prompt": "Based on the features of the customer, please predict if the customer has a personal loan.",
+                "answer_prompt": "Does not have a personal loan[0] or has a personal loan[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "no": "The customer does not have a personal loan",
+                "yes": "The customer has a personal loan"
+            },
+            "class_index_dict": {
+                "no": 0,
+                "yes": 1
+            }
+        }
+    }
+}

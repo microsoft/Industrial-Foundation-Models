@@ -1,0 +1,175 @@
+{
+    "basic_info": {
+        "row_num": 515,
+        "col_num": 17,
+        "label_candidates": [
+            "calories",
+            "total_fat",
+            "sodium",
+            "protein"
+        ],
+        "valid_feature_num": 17,
+        "num_features": [
+            "calories",
+            "cal_fat",
+            "total_fat",
+            "sat_fat",
+            "trans_fat",
+            "cholesterol",
+            "sodium",
+            "total_carb",
+            "fiber",
+            "sugar",
+            "protein",
+            "vit_a",
+            "vit_c",
+            "calcium"
+        ],
+        "cat_features": [
+            "item",
+            "salad",
+            "restaurant"
+        ],
+        "other_features": [],
+        "tags": [
+            "nutrition",
+            "health",
+            "beginner",
+            "intermediate",
+            "classification",
+            "food"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/ulrikthygepedersen/fastfood-nutrition"
+    },
+    "feature_info": {
+        "restaurant": {
+            "description": "The name of the fast food restaurant",
+            "type": "categorical",
+            "value_dict": {
+                "Mcdonalds": "The fast food restaurant is Mcdonalds",
+                "Chick Fil-A": "The fast food restaurant is Chick Fil-A",
+                "Sonic": "The fast food restaurant is Sonic",
+                "Arbys": "The fast food restaurant is Arbys",
+                "Burger King": "The fast food restaurant is Burger King",
+                "Dairy Queen": "The fast food restaurant is Dairy Queen",
+                "Subway": "The fast food restaurant is Subway",
+                "Taco Bell": "The fast food restaurant is Taco Bell"
+            }
+        },
+        "item": {
+            "description": "The name of the food item",
+            "type": "categorical"
+        },
+        "calories": {
+            "description": "The amount of calories in the food item (in kcal)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "cal_fat": {
+            "description": "The amount of calories from fat in the food item (in kcal)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "total_fat": {
+            "description": "The total amount of fat in the food item (in g)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "sat_fat": {
+            "description": "The amount of saturated fat in the food item (in g)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "trans_fat": {
+            "description": "The amount of trans fat in the food item (in g)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "cholesterol": {
+            "description": "The amount of cholesterol in the food item (in mg)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "sodium": {
+            "description": "The amount of sodium in the food item (in mg)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "total_carb": {
+            "description": "The total amount of carbohydrates in the food item (in g)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "fiber": {
+            "description": "The amount of dietary fiber in the food item (in g)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "sugar": {
+            "description": "The amount of sugar in the food item (in g)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "protein": {
+            "description": "The amount of protein in the food item (in g)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "vit_a": {
+            "description": "The amount of vitamin A in the food item (in % daily value)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "vit_c": {
+            "description": "The amount of vitamin C in the food item (in % daily value)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "calcium": {
+            "description": "The amount of calcium in the food item (in % daily value)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "salad": {
+            "description": "The category of the food item (salad or other)",
+            "type": "categorical",
+            "value_dict": {
+                "Other": "The food item is not a salad"
+            }
+        }
+    },
+    "task_info": {
+        "calories": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in nutritional analysis.",
+                "task_prompt": "Based on the features of the fast food item, please predict the calorie content.",
+                "answer_prompt": "The predicted calorie content is ____."
+            }
+        },
+        "total_fat": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in nutritional analysis.",
+                "task_prompt": "Based on the features of the fast food item, please predict the total fat content.",
+                "answer_prompt": "The predicted total fat content is ____."
+            }
+        },
+        "sodium": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in nutritional analysis.",
+                "task_prompt": "Based on the features of the fast food item, please predict the sodium content.",
+                "answer_prompt": "The predicted sodium content is ____."
+            }
+        },
+        "protein": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in nutritional analysis.",
+                "task_prompt": "Based on the features of the fast food item, please predict the protein content.",
+                "answer_prompt": "The predicted protein content is ____."
+            }
+        }
+    }
+}

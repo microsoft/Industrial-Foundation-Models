@@ -1,0 +1,334 @@
+{
+    "basic_info": {
+        "row_num": 129880,
+        "col_num": 22,
+        "label_candidates": [
+            "satisfaction",
+            "Customer Type",
+            "Type of Travel",
+            "Class",
+            "Seat comfort",
+            "Inflight entertainment",
+            "Online support",
+            "Ease of Online booking",
+            "On-board service",
+            "Leg room service",
+            "Baggage handling",
+            "Checkin service",
+            "Cleanliness",
+            "Online boarding"
+        ],
+        "valid_feature_num": 22,
+        "num_features": [
+            "Age",
+            "Flight Distance",
+            "Seat comfort",
+            "Departure/Arrival time convenient",
+            "Food and drink",
+            "Gate location",
+            "Inflight wifi service",
+            "Inflight entertainment",
+            "Online support",
+            "Ease of Online booking",
+            "On-board service",
+            "Leg room service",
+            "Baggage handling",
+            "Checkin service",
+            "Cleanliness",
+            "Online boarding",
+            "Departure Delay in Minutes",
+            "Arrival Delay in Minutes"
+        ],
+        "cat_features": [
+            "Customer Type",
+            "Type of Travel",
+            "Class",
+            "satisfaction"
+        ],
+        "other_features": [],
+        "tags": [
+            "aviation",
+            "logistic regression",
+            "decision tree",
+            "tabular"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/yakhyojon/customer-satisfaction-in-airline"
+    },
+    "feature_info": {
+        "satisfaction": {
+            "description": "The satisfaction level of the customer with the airline service",
+            "type": "categorical",
+            "value_dict": {
+                "satisfied": "The customer is satisfied with the airline service",
+                "dissatisfied": "The customer is dissatisfied with the airline service"
+            }
+        },
+        "Customer Type": {
+            "description": "Type of customer (e.g., loyal, disloyal)",
+            "type": "categorical",
+            "value_dict": {
+                "Loyal Customer": "The customer is loyal to the airline",
+                "disloyal Customer": "The customer is not loyal to the airline"
+            }
+        },
+        "Age": {
+            "description": "Age of the customer",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Type of Travel": {
+            "description": "Purpose of travel (e.g., personal, business)",
+            "type": "categorical",
+            "value_dict": {
+                "Personal Travel": "The travel is for personal reasons",
+                "Business travel": "The travel is for business reasons"
+            }
+        },
+        "Class": {
+            "description": "Class of travel (e.g., business, economy)",
+            "type": "categorical",
+            "value_dict": {
+                "Eco": "The customer traveled in economy class",
+                "Business": "The customer traveled in business class",
+                "Eco Plus": "The customer traveled in economy plus class"
+            }
+        },
+        "Flight Distance": {
+            "description": "The flight distance in miles",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Seat comfort": {
+            "description": "Rating of the seat comfort",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Departure/Arrival time convenient": {
+            "description": "Rating of the convenience of departure/arrival time",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Food and drink": {
+            "description": "Rating of the food and drink",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Gate location": {
+            "description": "Rating of the gate location",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Inflight wifi service": {
+            "description": "Rating of the inflight wifi service",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Inflight entertainment": {
+            "description": "Rating of the inflight entertainment",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Online support": {
+            "description": "Rating of the online support",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Ease of Online booking": {
+            "description": "Rating of the ease of online booking",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "On-board service": {
+            "description": "Rating of the on-board service",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Leg room service": {
+            "description": "Rating of the leg room service",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Baggage handling": {
+            "description": "Rating of the baggage handling",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Checkin service": {
+            "description": "Rating of the checkin service",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Cleanliness": {
+            "description": "Rating of the cleanliness",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Online boarding": {
+            "description": "Rating of the online boarding",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Departure Delay in Minutes": {
+            "description": "Duration of departure delay in minutes",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Arrival Delay in Minutes": {
+            "description": "Duration of arrival delay in minutes",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "satisfaction": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in customer satisfaction analysis.",
+                "task_prompt": "Based on the features of the customer and their experience with the airline, please predict the customer satisfaction.",
+                "answer_prompt": "Satisfied[0] or Dissatisfied[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "satisfied": "The customer is satisfied with the airline service",
+                "dissatisfied": "The customer is dissatisfied with the airline service"
+            },
+            "class_index_dict": {
+                "satisfied": 0,
+                "dissatisfied": 1
+            }
+        },
+        "Customer Type": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in customer behavior analysis.",
+                "task_prompt": "Based on the features of the customer and their experience with the airline, please predict the customer type.",
+                "answer_prompt": "Loyal Customer[0] or Disloyal Customer[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "Loyal Customer": "The customer is loyal to the airline",
+                "Disloyal Customer": "The customer is not loyal to the airline"
+            },
+            "class_index_dict": {
+                "Loyal Customer": 0,
+                "Disloyal Customer": 1
+            }
+        },
+        "Type of Travel": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in travel behavior analysis.",
+                "task_prompt": "Based on the features of the customer and their experience with the airline, please predict the type of travel.",
+                "answer_prompt": "Personal Travel[0] or Business Travel[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "Personal Travel": "The travel is for personal reasons",
+                "Business travel": "The travel is for business reasons"
+            },
+            "class_index_dict": {
+                "Personal Travel": 0,
+                "Business travel": 1
+            }
+        },
+        "Class": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in travel class preference analysis.",
+                "task_prompt": "Based on the features of the customer and their experience with the airline, please predict the travel class.",
+                "answer_prompt": "Eco[0], Business[1] or Eco Plus[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "Eco": "The customer traveled in economy class",
+                "Business": "The customer traveled in business class",
+                "Eco Plus": "The customer traveled in economy plus class"
+            },
+            "class_index_dict": {
+                "Eco": 0,
+                "Business": 1,
+                "Eco Plus": 2
+            }
+        },
+        "Seat comfort": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in airline service analysis.",
+                "task_prompt": "Based on the features of the customer and their experience with the airline, please predict the seat comfort rating.",
+                "answer_prompt": "Please enter a number representing the seat comfort rating."
+            }
+        },
+        "Inflight entertainment": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in airline service analysis.",
+                "task_prompt": "Based on the features of the customer and their experience with the airline, please predict the inflight entertainment rating.",
+                "answer_prompt": "Please enter a number representing the inflight entertainment rating."
+            }
+        },
+        "Online support": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in customer support analysis.",
+                "task_prompt": "Based on the features of the customer and their experience with the airline, please predict the online support rating.",
+                "answer_prompt": "Please enter a number representing the online support rating."
+            }
+        },
+        "Ease of Online booking": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in online booking analysis.",
+                "task_prompt": "Based on the features of the customer and their experience with the airline, please predict the ease of online booking rating.",
+                "answer_prompt": "Please enter a number representing the ease of online booking rating."
+            }
+        },
+        "On-board service": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in airline service analysis.",
+                "task_prompt": "Based on the features of the customer and their experience with the airline, please predict the on-board service rating.",
+                "answer_prompt": "Please enter a number representing the on-board service rating."
+            }
+        },
+        "Leg room service": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in airline service analysis.",
+                "task_prompt": "Based on the features of the customer and their experience with the airline, please predict the leg room service rating.",
+                "answer_prompt": "Please enter a number representing the leg room service rating."
+            }
+        },
+        "Baggage handling": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in airline service analysis.",
+                "task_prompt": "Based on the features of the customer and their experience with the airline, please predict the baggage handling rating.",
+                "answer_prompt": "Please enter a number representing the baggage handling rating."
+            }
+        },
+        "Checkin service": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in airline service analysis.",
+                "task_prompt": "Based on the features of the customer and their experience with the airline, please predict the checkin service rating.",
+                "answer_prompt": "Please enter a number representing the checkin service rating."
+            }
+        },
+        "Cleanliness": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in airline service analysis.",
+                "task_prompt": "Based on the features of the customer and their experience with the airline, please predict the cleanliness rating.",
+                "answer_prompt": "Please enter a number representing the cleanliness rating."
+            }
+        },
+        "Online boarding": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in online boarding analysis.",
+                "task_prompt": "Based on the features of the customer and their experience with the airline, please predict the online boarding rating.",
+                "answer_prompt": "Please enter a number representing the online boarding rating."
+            }
+        }
+    }
+}

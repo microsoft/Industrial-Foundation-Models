@@ -1,0 +1,63 @@
+{
+    "basic_info": {
+        "row_num": 10735,
+        "col_num": 3,
+        "label_candidates": [
+            "Label"
+        ],
+        "valid_feature_num": 3,
+        "num_features": [],
+        "cat_features": [
+            "Link",
+            "Label"
+        ],
+        "other_features": [
+            "Text"
+        ],
+        "tags": [
+            "data cleaning",
+            "classification",
+            "text",
+            "news",
+            "ukrainian"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/zepopo/ukrainian-fake-and-true-news"
+    },
+    "feature_info": {
+        "Link": {
+            "description": "The URL of the news article",
+            "type": "categorical"
+        },
+        "Text": {
+            "description": "The text content of the news article",
+            "type": "other"
+        },
+        "Label": {
+            "description": "The label indicating whether the news is true or fake",
+            "type": "categorical",
+            "value_dict": {
+                "True": "The news is true",
+                "False": "The news is fake"
+            }
+        }
+    },
+    "task_info": {
+        "Label": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in news analysis.",
+                "task_prompt": "Based on the link and text of the news, please predict whether the news is true or fake.",
+                "answer_prompt": "True[0] or Fake[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "True": "The news is true",
+                "False": "The news is fake"
+            },
+            "class_index_dict": {
+                "True": 0,
+                "False": 1
+            }
+        }
+    }
+}

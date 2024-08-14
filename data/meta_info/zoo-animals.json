@@ -1,0 +1,492 @@
+{
+    "basic_info": {
+        "row_num": 101,
+        "col_num": 18,
+        "label_candidates": [
+            "type",
+            "hair",
+            "feathers",
+            "eggs",
+            "milk",
+            "airborne",
+            "aquatic",
+            "predator",
+            "toothed",
+            "backbone",
+            "breathes",
+            "venomous",
+            "fins",
+            "legs",
+            "tail",
+            "domestic",
+            "catsize"
+        ],
+        "valid_feature_num": 18,
+        "num_features": [
+            "legs"
+        ],
+        "cat_features": [
+            "animal",
+            "hair",
+            "feathers",
+            "eggs",
+            "milk",
+            "airborne",
+            "aquatic",
+            "predator",
+            "toothed",
+            "backbone",
+            "breathes",
+            "venomous",
+            "fins",
+            "tail",
+            "domestic",
+            "catsize",
+            "type"
+        ],
+        "other_features": [],
+        "tags": [
+            "animals",
+            "beginner",
+            "intermediate",
+            "classification",
+            "multilabel classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/ulrikthygepedersen/zoo-animals"
+    },
+    "feature_info": {
+        "animal": {
+            "description": "The name of the animal",
+            "type": "categorical"
+        },
+        "hair": {
+            "description": "Indicates whether the animal has hair or not",
+            "type": "categorical",
+            "value_dict": {
+                "b'true'": "The animal has hair",
+                "b'false'": "The animal does not have hair"
+            }
+        },
+        "feathers": {
+            "description": "Indicates whether the animal has feathers or not",
+            "type": "categorical",
+            "value_dict": {
+                "b'false'": "The animal does not have feathers",
+                "b'true'": "The animal has feathers"
+            }
+        },
+        "eggs": {
+            "description": "Indicates whether the animal lays eggs or not",
+            "type": "categorical",
+            "value_dict": {
+                "b'false'": "The animal does not lay eggs",
+                "b'true'": "The animal lays eggs"
+            }
+        },
+        "milk": {
+            "description": "Indicates whether the animal produces milk or not",
+            "type": "categorical",
+            "value_dict": {
+                "b'true'": "The animal produces milk",
+                "b'false'": "The animal does not produce milk"
+            }
+        },
+        "airborne": {
+            "description": "Indicates whether the animal can fly or not",
+            "type": "categorical",
+            "value_dict": {
+                "b'false'": "The animal cannot fly",
+                "b'true'": "The animal can fly"
+            }
+        },
+        "aquatic": {
+            "description": "Indicates whether the animal lives in water or not",
+            "type": "categorical",
+            "value_dict": {
+                "b'false'": "The animal does not live in water",
+                "b'true'": "The animal lives in water"
+            }
+        },
+        "predator": {
+            "description": "Indicates whether the animal is a predator or not",
+            "type": "categorical",
+            "value_dict": {
+                "b'true'": "The animal is a predator",
+                "b'false'": "The animal is not a predator"
+            }
+        },
+        "toothed": {
+            "description": "Indicates whether the animal has teeth or not",
+            "type": "categorical",
+            "value_dict": {
+                "b'true'": "The animal has teeth",
+                "b'false'": "The animal does not have teeth"
+            }
+        },
+        "backbone": {
+            "description": "Indicates whether the animal has a backbone or not",
+            "type": "categorical",
+            "value_dict": {
+                "b'true'": "The animal has a backbone",
+                "b'false'": "The animal does not have a backbone"
+            }
+        },
+        "breathes": {
+            "description": "Indicates whether the animal breathes or not",
+            "type": "categorical",
+            "value_dict": {
+                "b'true'": "The animal breathes",
+                "b'false'": "The animal does not breathe"
+            }
+        },
+        "venomous": {
+            "description": "Indicates whether the animal is venomous or not",
+            "type": "categorical",
+            "value_dict": {
+                "b'false'": "The animal is not venomous",
+                "b'true'": "The animal is venomous"
+            }
+        },
+        "fins": {
+            "description": "Indicates whether the animal has fins or not",
+            "type": "categorical",
+            "value_dict": {
+                "b'false'": "The animal does not have fins",
+                "b'true'": "The animal has fins"
+            }
+        },
+        "legs": {
+            "description": "The number of legs the animal has",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "tail": {
+            "description": "Indicates whether the animal has a tail or not",
+            "type": "categorical",
+            "value_dict": {
+                "b'false'": "The animal does not have a tail",
+                "b'true'": "The animal has a tail"
+            }
+        },
+        "domestic": {
+            "description": "Indicates whether the animal is domesticated or not",
+            "type": "categorical",
+            "value_dict": {
+                "b'false'": "The animal is not domesticated",
+                "b'true'": "The animal is domesticated"
+            }
+        },
+        "catsize": {
+            "description": "Indicates whether the animal is the size of a cat or larger",
+            "type": "categorical",
+            "value_dict": {
+                "b'true'": "The animal is the size of a cat or larger",
+                "b'false'": "The animal is smaller than a cat"
+            }
+        },
+        "type": {
+            "description": "The type of the animal",
+            "type": "categorical",
+            "value_dict": {
+                "b'mammal'": "The animal is a mammal",
+                "b'fish'": "The animal is a fish",
+                "b'bird'": "The animal is a bird",
+                "b'invertebrate'": "The animal is an invertebrate",
+                "b'insect'": "The animal is an insect",
+                "b'amphibian'": "The animal is an amphibian",
+                "b'reptile'": "The animal is a reptile"
+            }
+        }
+    },
+    "task_info": {
+        "type": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in animal classification.",
+                "task_prompt": "Based on the features of the animal, please predict the type.",
+                "answer_prompt": "Mammal[0], Fish[1], Bird[2], Invertebrate[3], Insect[4], Amphibian[5], Reptile[6]?"
+            },
+            "class_num": 7,
+            "class_value_dict": {
+                "b'mammal'": "The animal is a mammal",
+                "b'fish'": "The animal is a fish",
+                "b'bird'": "The animal is a bird",
+                "b'invertebrate'": "The animal is an invertebrate",
+                "b'insect'": "The animal is an insect",
+                "b'amphibian'": "The animal is an amphibian",
+                "b'reptile'": "The animal is a reptile"
+            },
+            "class_index_dict": {
+                "b'mammal'": 0,
+                "b'fish'": 1,
+                "b'bird'": 2,
+                "b'invertebrate'": 3,
+                "b'insect'": 4,
+                "b'amphibian'": 5,
+                "b'reptile'": 6
+            }
+        },
+        "hair": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in animal characteristics.",
+                "task_prompt": "Based on the features of the animal, please predict if it has hair.",
+                "answer_prompt": "Yes[0] or No[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "b'true'": "The animal has hair",
+                "b'false'": "The animal does not have hair"
+            },
+            "class_index_dict": {
+                "b'true'": 0,
+                "b'false'": 1
+            }
+        },
+        "feathers": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in animal characteristics.",
+                "task_prompt": "Based on the features of the animal, please predict if it has feathers.",
+                "answer_prompt": "Yes[0] or No[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "b'false'": "The animal does not have feathers",
+                "b'true'": "The animal has feathers"
+            },
+            "class_index_dict": {
+                "b'true'": 0,
+                "b'false'": 1
+            }
+        },
+        "eggs": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in animal reproduction.",
+                "task_prompt": "Based on the features of the animal, please predict if it lays eggs.",
+                "answer_prompt": "Yes[0] or No[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "b'false'": "The animal does not lay eggs",
+                "b'true'": "The animal lays eggs"
+            },
+            "class_index_dict": {
+                "b'true'": 0,
+                "b'false'": 1
+            }
+        },
+        "milk": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in animal characteristics.",
+                "task_prompt": "Based on the features of the animal, please predict if it produces milk.",
+                "answer_prompt": "Yes[0] or No[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "b'true'": "The animal produces milk",
+                "b'false'": "The animal does not produce milk"
+            },
+            "class_index_dict": {
+                "b'true'": 0,
+                "b'false'": 1
+            }
+        },
+        "airborne": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in animal characteristics.",
+                "task_prompt": "Based on the features of the animal, please predict if it can fly.",
+                "answer_prompt": "Yes[0] or No[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "b'false'": "The animal cannot fly",
+                "b'true'": "The animal can fly"
+            },
+            "class_index_dict": {
+                "b'true'": 0,
+                "b'false'": 1
+            }
+        },
+        "aquatic": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in animal habitats.",
+                "task_prompt": "Based on the features of the animal, please predict if it lives in water.",
+                "answer_prompt": "Yes[0] or No[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "b'false'": "The animal does not live in water",
+                "b'true'": "The animal lives in water"
+            },
+            "class_index_dict": {
+                "b'true'": 0,
+                "b'false'": 1
+            }
+        },
+        "predator": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in animal behavior.",
+                "task_prompt": "Based on the features of the animal, please predict if it is a predator.",
+                "answer_prompt": "Yes[0] or No[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "b'true'": "The animal is a predator",
+                "b'false'": "The animal is not a predator"
+            },
+            "class_index_dict": {
+                "b'true'": 0,
+                "b'false'": 1
+            }
+        },
+        "toothed": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in animal characteristics.",
+                "task_prompt": "Based on the features of the animal, please predict if it has teeth.",
+                "answer_prompt": "Yes[0] or No[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "b'true'": "The animal has teeth",
+                "b'false'": "The animal does not have teeth"
+            },
+            "class_index_dict": {
+                "b'true'": 0,
+                "b'false'": 1
+            }
+        },
+        "backbone": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in animal anatomy.",
+                "task_prompt": "Based on the features of the animal, please predict if it has a backbone.",
+                "answer_prompt": "Yes[0] or No[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "b'true'": "The animal has a backbone",
+                "b'false'": "The animal does not have a backbone"
+            },
+            "class_index_dict": {
+                "b'true'": 0,
+                "b'false'": 1
+            }
+        },
+        "breathes": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in animal physiology.",
+                "task_prompt": "Based on the features of the animal, please predict if it breathes.",
+                "answer_prompt": "Yes[0] or No[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "b'true'": "The animal breathes",
+                "b'false'": "The animal does not breathe"
+            },
+            "class_index_dict": {
+                "b'true'": 0,
+                "b'false'": 1
+            }
+        },
+        "venomous": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in animal characteristics.",
+                "task_prompt": "Based on the features of the animal, please predict if it is venomous.",
+                "answer_prompt": "Yes[0] or No[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "b'false'": "The animal is not venomous",
+                "b'true'": "The animal is venomous"
+            },
+            "class_index_dict": {
+                "b'true'": 0,
+                "b'false'": 1
+            }
+        },
+        "fins": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in animal characteristics.",
+                "task_prompt": "Based on the features of the animal, please predict if it has fins.",
+                "answer_prompt": "Yes[0] or No[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "b'false'": "The animal does not have fins",
+                "b'true'": "The animal has fins"
+            },
+            "class_index_dict": {
+                "b'true'": 0,
+                "b'false'": 1
+            }
+        },
+        "legs": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in animal anatomy.",
+                "task_prompt": "Based on the features of the animal, please predict the number of legs it has."
+            }
+        },
+        "tail": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in animal characteristics.",
+                "task_prompt": "Based on the features of the animal, please predict if it has a tail.",
+                "answer_prompt": "Yes[0] or No[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "b'false'": "The animal does not have a tail",
+                "b'true'": "The animal has a tail"
+            },
+            "class_index_dict": {
+                "b'true'": 0,
+                "b'false'": 1
+            }
+        },
+        "domestic": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in animal behavior.",
+                "task_prompt": "Based on the features of the animal, please predict if it is domesticated.",
+                "answer_prompt": "Yes[0] or No[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "b'false'": "The animal is not domesticated",
+                "b'true'": "The animal is domesticated"
+            },
+            "class_index_dict": {
+                "b'true'": 0,
+                "b'false'": 1
+            }
+        },
+        "catsize": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in animal size estimation.",
+                "task_prompt": "Based on the features of the animal, please predict if it is the size of a cat or larger.",
+                "answer_prompt": "Yes[0] or No[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "b'true'": "The animal is the size of a cat or larger",
+                "b'false'": "The animal is smaller than a cat"
+            },
+            "class_index_dict": {
+                "b'true'": 0,
+                "b'false'": 1
+            }
+        }
+    }
+}

@@ -1,0 +1,208 @@
+{
+    "basic_info": {
+        "row_num": 4684,
+        "col_num": 14,
+        "label_candidates": [
+            "category",
+            "wind",
+            "pressure",
+            "status"
+        ],
+        "valid_feature_num": 13,
+        "num_features": [
+            "year",
+            "day",
+            "hour",
+            "lat",
+            "long",
+            "wind",
+            "pressure",
+            "tropicalstorm_force_diameter",
+            "hurricane_force_diameter"
+        ],
+        "cat_features": [
+            "name",
+            "month",
+            "status",
+            "category"
+        ],
+        "other_features": [],
+        "tags": [
+            "earth and nature",
+            "earth science",
+            "environment",
+            "natural disasters",
+            "weather and climate"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/utkarshx27/noaa-atlantic-hurricane-database"
+    },
+    "feature_info": {
+        "Unnamed: 0": {
+            "description": "Auto-generated index or ID",
+            "type": "useless"
+        },
+        "name": {
+            "description": "Name of the hurricane",
+            "type": "categorical"
+        },
+        "year": {
+            "description": "Year of the hurricane",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "month": {
+            "description": "Month of the hurricane",
+            "type": "categorical",
+            "value_dict": {
+                "1": "January",
+                "4": "April",
+                "5": "May",
+                "6": "June",
+                "7": "July",
+                "8": "August",
+                "9": "September",
+                "10": "October",
+                "11": "November",
+                "12": "December"
+            }
+        },
+        "day": {
+            "description": "Day of the hurricane",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "hour": {
+            "description": "Hour of the hurricane",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "lat": {
+            "description": "Latitude of the hurricane",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "long": {
+            "description": "Longitude of the hurricane",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "status": {
+            "description": "Current status of the hurricane",
+            "type": "categorical",
+            "value_dict": {
+                "tropical depression": "The hurricane is currently a tropical depression",
+                "tropical storm": "The hurricane is currently a tropical storm",
+                "extratropical": "The hurricane has become extratropical",
+                "hurricane": "The hurricane is currently a hurricane",
+                "subtropical storm": "The hurricane is currently a subtropical storm",
+                "subtropical depression": "The hurricane is currently a subtropical depression",
+                "disturbance": "The hurricane is currently causing disturbances",
+                "other low": "The hurricane is currently at a low level",
+                "tropical wave": "The hurricane is currently a tropical wave"
+            }
+        },
+        "category": {
+            "description": "Category of the hurricane based on the Saffir-Simpson Hurricane Wind Scale",
+            "type": "categorical",
+            "value_dict": {
+                "1.0": "Category 1 hurricane",
+                "2.0": "Category 2 hurricane",
+                "3.0": "Category 3 hurricane",
+                "4.0": "Category 4 hurricane",
+                "5.0": "Category 5 hurricane"
+            }
+        },
+        "wind": {
+            "description": "Wind speed of the hurricane in knots",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "pressure": {
+            "description": "Atmospheric pressure at the center of the hurricane in millibars",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "tropicalstorm_force_diameter": {
+            "description": "Diameter of the area affected by tropical storm force winds in nautical miles",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "hurricane_force_diameter": {
+            "description": "Diameter of the area affected by hurricane force winds in nautical miles",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "category": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in meteorology.",
+                "task_prompt": "Based on the features of the hurricane, please predict the category of the hurricane.",
+                "answer_prompt": "Category 1 hurricane[0], Category 2 hurricane[1], Category 3 hurricane[2], Category 4 hurricane[3], Category 5 hurricane[4]?"
+            },
+            "class_num": 5,
+            "class_value_dict": {
+                "1.0": "Category 1 hurricane",
+                "2.0": "Category 2 hurricane",
+                "3.0": "Category 3 hurricane",
+                "4.0": "Category 4 hurricane",
+                "5.0": "Category 5 hurricane"
+            },
+            "class_index_dict": {
+                "1.0": 0,
+                "2.0": 1,
+                "3.0": 2,
+                "4.0": 3,
+                "5.0": 4
+            }
+        },
+        "wind": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in meteorology.",
+                "task_prompt": "Based on the features of the hurricane, please predict the wind speed.",
+                "answer_prompt": "What is the wind speed?"
+            }
+        },
+        "pressure": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in meteorology.",
+                "task_prompt": "Based on the features of the hurricane, please predict the atmospheric pressure.",
+                "answer_prompt": "What is the atmospheric pressure?"
+            }
+        },
+        "status": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in meteorology.",
+                "task_prompt": "Based on the features of the hurricane, please predict the status of the hurricane.",
+                "answer_prompt": "Tropical depression[0], Tropical storm[1], Extratropical[2], Hurricane[3], Subtropical storm[4], Subtropical depression[5], Disturbance[6], Other low[7], Tropical wave[8]?"
+            },
+            "class_num": 9,
+            "class_value_dict": {
+                "tropical depression": "The hurricane is currently a tropical depression",
+                "tropical storm": "The hurricane is currently a tropical storm",
+                "extratropical": "The hurricane has become extratropical",
+                "hurricane": "The hurricane is currently a hurricane",
+                "subtropical storm": "The hurricane is currently a subtropical storm",
+                "subtropical depression": "The hurricane is currently a subtropical depression",
+                "disturbance": "The hurricane is currently causing disturbances",
+                "other low": "The hurricane is currently at a low level",
+                "tropical wave": "The hurricane is currently a tropical wave"
+            },
+            "class_index_dict": {
+                "tropical depression": 0,
+                "tropical storm": 1,
+                "extratropical": 2,
+                "hurricane": 3,
+                "subtropical storm": 4,
+                "subtropical depression": 5,
+                "disturbance": 6,
+                "other low": 7,
+                "tropical wave": 8
+            }
+        }
+    }
+}

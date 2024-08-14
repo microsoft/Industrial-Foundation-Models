@@ -1,0 +1,300 @@
+{
+    "basic_info": {
+        "row_num": 400,
+        "col_num": 24,
+        "label_candidates": [
+            "Type",
+            "Age",
+            "Duration",
+            "Frequency",
+            "Intensity"
+        ],
+        "valid_feature_num": 24,
+        "num_features": [
+            "Age",
+            "Duration",
+            "Frequency",
+            "Intensity"
+        ],
+        "cat_features": [
+            "Location",
+            "Character",
+            "Nausea",
+            "Vomit",
+            "Phonophobia",
+            "Photophobia",
+            "Visual",
+            "Sensory",
+            "Dysphasia",
+            "Dysarthria",
+            "Vertigo",
+            "Tinnitus",
+            "Hypoacusis",
+            "Diplopia",
+            "Defect",
+            "Ataxia",
+            "Conscience",
+            "Paresthesia",
+            "DPF",
+            "Type"
+        ],
+        "other_features": [],
+        "tags": [
+            "categorical",
+            "health",
+            "beginner",
+            "intermediate",
+            "classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/weinoose/migraine-classification"
+    },
+    "feature_info": {
+        "Age": {
+            "description": "Age of the patient in years",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Duration": {
+            "description": "Duration of the migraine episode in hours",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Frequency": {
+            "description": "Frequency of the migraine episodes",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Location": {
+            "description": "Location of the headache",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Location 1 of the headache",
+                "2": "Location 2 of the headache",
+                "0": "No specific location of the headache"
+            }
+        },
+        "Character": {
+            "description": "Character of the headache",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Character 1 of the headache",
+                "2": "Character 2 of the headache",
+                "0": "No specific character of the headache"
+            }
+        },
+        "Intensity": {
+            "description": "Intensity of the headache",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Nausea": {
+            "description": "Presence of nausea (1 if present, 0 otherwise)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Presence of nausea",
+                "0": "Absence of nausea"
+            }
+        },
+        "Vomit": {
+            "description": "Presence of vomiting (1 if present, 0 otherwise)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Absence of vomiting",
+                "1": "Presence of vomiting"
+            }
+        },
+        "Phonophobia": {
+            "description": "Presence of phonophobia (1 if present, 0 otherwise)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Presence of phonophobia",
+                "0": "Absence of phonophobia"
+            }
+        },
+        "Photophobia": {
+            "description": "Presence of photophobia (1 if present, 0 otherwise)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Presence of photophobia",
+                "0": "Absence of photophobia"
+            }
+        },
+        "Visual": {
+            "description": "Presence of visual disturbances (1 if present, 0 otherwise)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Presence of visual disturbance type 1",
+                "2": "Presence of visual disturbance type 2",
+                "4": "Presence of visual disturbance type 4",
+                "0": "Absence of visual disturbances",
+                "3": "Presence of visual disturbance type 3"
+            }
+        },
+        "Sensory": {
+            "description": "Presence of sensory disturbances (1 if present, 0 otherwise)",
+            "type": "categorical",
+            "value_dict": {
+                "2": "Presence of sensory disturbance type 2",
+                "1": "Presence of sensory disturbance type 1",
+                "0": "Absence of sensory disturbances"
+            }
+        },
+        "Dysphasia": {
+            "description": "Presence of dysphasia (1 if present, 0 otherwise)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Absence of dysphasia",
+                "1": "Presence of dysphasia"
+            }
+        },
+        "Dysarthria": {
+            "description": "Presence of dysarthria (1 if present, 0 otherwise)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Absence of dysarthria",
+                "1": "Presence of dysarthria"
+            }
+        },
+        "Vertigo": {
+            "description": "Presence of vertigo (1 if present, 0 otherwise)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Absence of vertigo",
+                "1": "Presence of vertigo"
+            }
+        },
+        "Tinnitus": {
+            "description": "Presence of tinnitus (1 if present, 0 otherwise)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Absence of tinnitus",
+                "1": "Presence of tinnitus"
+            }
+        },
+        "Hypoacusis": {
+            "description": "Presence of hypoacusis (1 if present, 0 otherwise)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Absence of hypoacusis",
+                "1": "Presence of hypoacusis"
+            }
+        },
+        "Diplopia": {
+            "description": "Presence of diplopia (1 if present, 0 otherwise)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Absence of diplopia",
+                "1": "Presence of diplopia"
+            }
+        },
+        "Defect": {
+            "description": "Presence of defect (1 if present, 0 otherwise)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Absence of defect",
+                "1": "Presence of defect"
+            }
+        },
+        "Ataxia": {
+            "description": "Presence of ataxia (1 if present, 0 otherwise)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Absence of ataxia"
+            }
+        },
+        "Conscience": {
+            "description": "Presence of conscience disturbances (1 if present, 0 otherwise)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Absence of conscience disturbances",
+                "1": "Presence of conscience disturbances"
+            }
+        },
+        "Paresthesia": {
+            "description": "Presence of paresthesia (1 if present, 0 otherwise)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Absence of paresthesia",
+                "1": "Presence of paresthesia"
+            }
+        },
+        "DPF": {
+            "description": "Presence of DPF (1 if present, 0 otherwise)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Absence of DPF",
+                "1": "Presence of DPF"
+            }
+        },
+        "Type": {
+            "description": "Type of the migraine",
+            "type": "categorical",
+            "value_dict": {
+                "Typical aura with migraine": "Migraine with typical aura",
+                "Migraine without aura": "Migraine without any aura",
+                "Basilar-type aura": "Migraine with basilar-type aura",
+                "Sporadic hemiplegic migraine": "Sporadic form of hemiplegic migraine",
+                "Familial hemiplegic migraine": "Familial form of hemiplegic migraine",
+                "Other": "Other types of migraine",
+                "Typical aura without migraine": "Presence of typical aura without any migraine"
+            }
+        }
+    },
+    "task_info": {
+        "Type": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnosis.",
+                "task_prompt": "Based on the symptoms and characteristics of the patient, please predict the type of migraine.",
+                "answer_prompt": "Migraine with typical aura[0], Migraine without any aura[1], Migraine with basilar-type aura[2], Sporadic form of hemiplegic migraine[3], Familial form of hemiplegic migraine[4], Other types of migraine[5], Presence of typical aura without any migraine[6]?"
+            },
+            "class_num": 7,
+            "class_value_dict": {
+                "Typical aura with migraine": "Migraine with typical aura",
+                "Migraine without aura": "Migraine without any aura",
+                "Basilar-type aura": "Migraine with basilar-type aura",
+                "Sporadic hemiplegic migraine": "Sporadic form of hemiplegic migraine",
+                "Familial hemiplegic migraine": "Familial form of hemiplegic migraine",
+                "Other": "Other types of migraine",
+                "Typical aura without migraine": "Presence of typical aura without any migraine"
+            },
+            "class_index_dict": {
+                "Typical aura with migraine": 0,
+                "Migraine without aura": 1,
+                "Basilar-type aura": 2,
+                "Sporadic hemiplegic migraine": 3,
+                "Familial hemiplegic migraine": 4,
+                "Other": 5,
+                "Typical aura without migraine": 6
+            }
+        },
+        "Age": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnosis.",
+                "task_prompt": "Based on the symptoms and characteristics of the patient, please predict the age of the patient."
+            }
+        },
+        "Duration": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnosis.",
+                "task_prompt": "Based on the symptoms and characteristics of the patient, please predict the duration of the migraine."
+            }
+        },
+        "Frequency": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnosis.",
+                "task_prompt": "Based on the symptoms and characteristics of the patient, please predict the frequency of the migraine."
+            }
+        },
+        "Intensity": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnosis.",
+                "task_prompt": "Based on the symptoms and characteristics of the patient, please predict the intensity of the migraine."
+            }
+        }
+    }
+}

@@ -1,0 +1,244 @@
+{
+    "basic_info": {
+        "row_num": 28820,
+        "col_num": 23,
+        "label_candidates": [
+            "DEP_DELAY",
+            "TAXI_OUT",
+            "CRS_ELAPSED_TIME",
+            "DISTANCE",
+            "CRS_DEP_M",
+            "DEP_TIME_M",
+            "CRS_ARR_M"
+        ],
+        "valid_feature_num": 23,
+        "num_features": [
+            "CRS_ELAPSED_TIME",
+            "DISTANCE",
+            "CRS_DEP_M",
+            "DEP_TIME_M",
+            "CRS_ARR_M",
+            "Temperature",
+            "Dew Point",
+            "Humidity",
+            "Wind Speed",
+            "Wind Gust",
+            "Pressure",
+            "sch_dep",
+            "sch_arr",
+            "TAXI_OUT",
+            "DEP_DELAY"
+        ],
+        "cat_features": [
+            "MONTH",
+            "DAY_OF_MONTH",
+            "DAY_OF_WEEK",
+            "OP_UNIQUE_CARRIER",
+            "TAIL_NUM",
+            "DEST",
+            "Wind",
+            "Condition"
+        ],
+        "other_features": [],
+        "tags": [
+            "united states",
+            "aviation",
+            "intermediate",
+            "tabular",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/deepankurk/flight-take-off-data-jfk-airport"
+    },
+    "feature_info": {
+        "MONTH": {
+            "description": "Month of the year when the flight took off",
+            "type": "categorical",
+            "value_dict": {
+                "11": "November",
+                "12": "December",
+                "1": "January"
+            }
+        },
+        "DAY_OF_MONTH": {
+            "description": "Day of the month when the flight took off",
+            "type": "categorical"
+        },
+        "DAY_OF_WEEK": {
+            "description": "Day of the week when the flight took off",
+            "type": "categorical",
+            "value_dict": {
+                "5": "Friday",
+                "6": "Saturday",
+                "7": "Sunday",
+                "1": "Monday",
+                "2": "Tuesday",
+                "3": "Wednesday",
+                "4": "Thursday"
+            }
+        },
+        "OP_UNIQUE_CARRIER": {
+            "description": "Unique identifier of the airline operator",
+            "type": "categorical",
+            "value_dict": {
+                "B6": "JetBlue Airways",
+                "DL": "Delta Air Lines",
+                "AA": "American Airlines",
+                "AS": "Alaska Airlines",
+                "MQ": "Envoy Air",
+                "9E": "Endeavor Air",
+                "YX": "Republic Airways",
+                "HA": "Hawaiian Airlines",
+                "OO": "SkyWest Airlines"
+            }
+        },
+        "TAIL_NUM": {
+            "description": "Tail number of the aircraft",
+            "type": "categorical"
+        },
+        "DEST": {
+            "description": "Destination of the flight",
+            "type": "categorical"
+        },
+        "DEP_DELAY": {
+            "description": "Delay in departure of the flight in minutes",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "CRS_ELAPSED_TIME": {
+            "description": "Scheduled flight time in minutes",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "DISTANCE": {
+            "description": "Distance of the flight in miles",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "CRS_DEP_M": {
+            "description": "Scheduled departure time in minutes",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "DEP_TIME_M": {
+            "description": "Actual departure time in minutes",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "CRS_ARR_M": {
+            "description": "Scheduled arrival time in minutes",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Temperature": {
+            "description": "Temperature at the time of flight take-off in Fahrenheit",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Dew Point": {
+            "description": "Dew point at the time of flight take-off in Fahrenheit",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Humidity": {
+            "description": "Humidity at the time of flight take-off in percentage",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Wind": {
+            "description": "Wind direction at the time of flight take-off",
+            "type": "categorical"
+        },
+        "Wind Speed": {
+            "description": "Wind speed at the time of flight take-off in mph",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Wind Gust": {
+            "description": "Wind gust at the time of flight take-off in mph",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Pressure": {
+            "description": "Atmospheric pressure at the time of flight take-off in inches",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Condition": {
+            "description": "Weather condition at the time of flight take-off",
+            "type": "categorical"
+        },
+        "sch_dep": {
+            "description": "Scheduled departure time in hours",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "sch_arr": {
+            "description": "Scheduled arrival time in hours",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "TAXI_OUT": {
+            "description": "The time duration elapsed between departure from the origin airport gate and wheels off",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "DEP_DELAY": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in flight delay prediction.",
+                "task_prompt": "Based on the features of the flight, please predict the departure delay.",
+                "answer_prompt": "The departure delay in minutes is: ."
+            }
+        },
+        "TAXI_OUT": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in predicting taxi out time in aviation.",
+                "task_prompt": "Based on the features of the flight, please predict the taxi out time.",
+                "answer_prompt": "The taxi out time in minutes is: ."
+            }
+        },
+        "CRS_ELAPSED_TIME": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in flight duration prediction.",
+                "task_prompt": "Based on the features of the flight, please predict the elapsed time of the flight.",
+                "answer_prompt": "The elapsed time of the flight in minutes is: ."
+            }
+        },
+        "DISTANCE": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in flight distance prediction.",
+                "task_prompt": "Based on the features of the flight, please predict the flight distance.",
+                "answer_prompt": "The flight distance in miles is: ."
+            }
+        },
+        "CRS_DEP_M": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in predicting flight schedules.",
+                "task_prompt": "Based on the features of the flight, please predict the scheduled departure time.",
+                "answer_prompt": "The scheduled departure time in minutes past midnight is: ."
+            }
+        },
+        "DEP_TIME_M": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in predicting flight schedules.",
+                "task_prompt": "Based on the features of the flight, please predict the actual departure time.",
+                "answer_prompt": "The actual departure time in minutes past midnight is: ."
+            }
+        },
+        "CRS_ARR_M": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in predicting flight schedules.",
+                "task_prompt": "Based on the features of the flight, please predict the scheduled arrival time.",
+                "answer_prompt": "The scheduled arrival time in minutes past midnight is: ."
+            }
+        }
+    }
+}

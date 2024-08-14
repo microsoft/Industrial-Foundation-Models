@@ -1,0 +1,556 @@
+{
+    "basic_info": {
+        "row_num": 24624,
+        "col_num": 44,
+        "label_candidates": [
+            "FPS",
+            "GpuFP32Performance",
+            "CpuFrequency",
+            "GpuBoostClock",
+            "CpuTurboClock",
+            "GpuBaseClock",
+            "CpuBaseClock",
+            "GpuTextureRate",
+            "GpuPixelRate",
+            "GpuBandwidth",
+            "GpuMemorySize",
+            "CpuTDP",
+            "GpuNumberOfROPs",
+            "GpuNumberOfShadingUnits",
+            "GpuNumberOfTMUs",
+            "CpuNumberOfTransistors",
+            "GpuNumberOfTransistors",
+            "CpuNumberOfCores",
+            "CpuNumberOfThreads",
+            "GpuNumberOfComputeUnits",
+            "GpuNumberOfExecutionUnits"
+        ],
+        "valid_feature_num": 44,
+        "num_features": [
+            "CpuNumberOfCores",
+            "CpuNumberOfThreads",
+            "CpuBaseClock",
+            "CpuCacheL1",
+            "CpuCacheL2",
+            "CpuCacheL3",
+            "CpuDieSize",
+            "CpuFrequency",
+            "CpuMultiplier",
+            "CpuProcessSize",
+            "CpuTDP",
+            "CpuNumberOfTransistors",
+            "CpuTurboClock",
+            "GpuBandwidth",
+            "GpuBaseClock",
+            "GpuBoostClock",
+            "GpuNumberOfComputeUnits",
+            "GpuDieSize",
+            "GpuNumberOfExecutionUnits",
+            "GpuFP32Performance",
+            "GpuMemoryBus",
+            "GpuMemorySize",
+            "GpuPixelRate",
+            "GpuProcessSize",
+            "GpuNumberOfROPs",
+            "GpuNumberOfShadingUnits",
+            "GpuNumberOfTMUs",
+            "GpuTextureRate",
+            "GpuNumberOfTransistors",
+            "FPS"
+        ],
+        "cat_features": [
+            "CpuName",
+            "CpuMultiplierUnlocked",
+            "GpuName",
+            "GpuArchitecture",
+            "GpuBus.interface",
+            "GpuDirectX",
+            "GpuMemoryType",
+            "GpuOpenCL",
+            "GpuOpenGL",
+            "GpuShaderModel",
+            "GpuVulkan",
+            "GameName",
+            "GameResolution",
+            "GameSetting"
+        ],
+        "other_features": [],
+        "tags": [
+            "video games",
+            "beginner",
+            "advanced",
+            "tabular",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/ulrikthygepedersen/fps-benchmark"
+    },
+    "feature_info": {
+        "CpuName": {
+            "description": "The name of the CPU",
+            "type": "categorical"
+        },
+        "CpuNumberOfCores": {
+            "description": "The number of cores in the CPU",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "CpuNumberOfThreads": {
+            "description": "The number of threads in the CPU",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "CpuBaseClock": {
+            "description": "The base clock speed of the CPU (in GHz)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "CpuCacheL1": {
+            "description": "The size of the Level 1 cache of the CPU (in KB)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "CpuCacheL2": {
+            "description": "The size of the Level 2 cache of the CPU (in KB)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "CpuCacheL3": {
+            "description": "The size of the Level 3 cache of the CPU (in KB)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "CpuDieSize": {
+            "description": "The die size of the CPU (in mm\u00b2)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "CpuFrequency": {
+            "description": "The frequency of the CPU (in GHz)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "CpuMultiplier": {
+            "description": "The multiplier of the CPU",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "CpuMultiplierUnlocked": {
+            "description": "Whether the multiplier of the CPU is unlocked (1 for yes, 0 for no)",
+            "type": "categorical",
+            "value_dict": {
+                "b'1'": "The CPU multiplier is unlocked",
+                "b'0'": "The CPU multiplier is locked"
+            }
+        },
+        "CpuProcessSize": {
+            "description": "The process size of the CPU (in nm)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "CpuTDP": {
+            "description": "The Thermal Design Power of the CPU (in W)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "CpuNumberOfTransistors": {
+            "description": "The number of transistors in the CPU (in millions)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "CpuTurboClock": {
+            "description": "The turbo clock speed of the CPU (in GHz)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "GpuName": {
+            "description": "The name of the GPU",
+            "type": "categorical"
+        },
+        "GpuArchitecture": {
+            "description": "The architecture of the GPU",
+            "type": "categorical",
+            "value_dict": {
+                "b'Turing'": "The GPU architecture is Turing",
+                "b'Pascal'": "The GPU architecture is Pascal",
+                "b'Maxwell 2.0'": "The GPU architecture is Maxwell 2.0",
+                "b'RDNA 1.0'": "The GPU architecture is RDNA 1.0",
+                "b'GCN 5.0'": "The GPU architecture is GCN 5.0",
+                "b'GCN 4.0'": "The GPU architecture is GCN 4.0"
+            }
+        },
+        "GpuBandwidth": {
+            "description": "The bandwidth of the GPU (in GB/s)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "GpuBaseClock": {
+            "description": "The base clock speed of the GPU (in MHz)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "GpuBoostClock": {
+            "description": "The boost clock speed of the GPU (in MHz)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "GpuBus.interface": {
+            "description": "The bus interface of the GPU",
+            "type": "categorical",
+            "value_dict": {
+                "b'PCIe 3.0 x16'": "The GPU bus interface is PCIe 3.0 x16",
+                "b'PCIe 4.0 x16'": "The GPU bus interface is PCIe 4.0 x16"
+            }
+        },
+        "GpuNumberOfComputeUnits": {
+            "description": "The number of compute units in the GPU",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "GpuDieSize": {
+            "description": "The die size of the GPU (in mm\u00b2)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "GpuDirectX": {
+            "description": "The version of DirectX supported by the GPU",
+            "type": "categorical",
+            "value_dict": {
+                "b'12 Ultimate'": "The GPU supports DirectX 12 Ultimate",
+                "b'12'": "The GPU supports DirectX 12"
+            }
+        },
+        "GpuNumberOfExecutionUnits": {
+            "description": "The number of execution units in the GPU",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "GpuFP32Performance": {
+            "description": "The FP32 performance of the GPU (in GFLOPS)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "GpuMemoryBus": {
+            "description": "The memory bus width of the GPU (in bits)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "GpuMemorySize": {
+            "description": "The memory size of the GPU (in MB)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "GpuMemoryType": {
+            "description": "The type of memory used by the GPU",
+            "type": "categorical",
+            "value_dict": {
+                "b'GDDR6'": "The GPU uses GDDR6 memory",
+                "b'GDDR5X'": "The GPU uses GDDR5X memory",
+                "b'GDDR5'": "The GPU uses GDDR5 memory",
+                "b'HBM2'": "The GPU uses HBM2 memory"
+            }
+        },
+        "GpuOpenCL": {
+            "description": "The version of OpenCL supported by the GPU",
+            "type": "categorical",
+            "value_dict": {
+                "b'2'": "The GPU supports OpenCL 2",
+                "b'1.2'": "The GPU supports OpenCL 1.2"
+            }
+        },
+        "GpuOpenGL": {
+            "description": "The version of OpenGL supported by the GPU",
+            "type": "categorical",
+            "value_dict": {
+                "b'4.6'": "The GPU supports OpenGL 4.6"
+            }
+        },
+        "GpuPixelRate": {
+            "description": "The pixel rate of the GPU (in GPixel/s)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "GpuProcessSize": {
+            "description": "The process size of the GPU (in nm)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "GpuNumberOfROPs": {
+            "description": "The number of Render Output Units in the GPU",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "GpuShaderModel": {
+            "description": "The shader model supported by the GPU",
+            "type": "categorical",
+            "value_dict": {
+                "b'6.5'": "The GPU supports Shader Model 6.5",
+                "b'6.4'": "The GPU supports Shader Model 6.4"
+            }
+        },
+        "GpuNumberOfShadingUnits": {
+            "description": "The number of shading units in the GPU",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "GpuNumberOfTMUs": {
+            "description": "The number of Texture Mapping Units in the GPU",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "GpuTextureRate": {
+            "description": "The texture rate of the GPU (in GTexel/s)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "GpuNumberOfTransistors": {
+            "description": "The number of transistors in the GPU (in millions)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "GpuVulkan": {
+            "description": "The version of Vulkan supported by the GPU",
+            "type": "categorical",
+            "value_dict": {
+                "b'1.2.131'": "The GPU supports Vulkan 1.2.131",
+                "b'1.1.126'": "The GPU supports Vulkan 1.1.126",
+                "b'1.1.125'": "The GPU supports Vulkan 1.1.125"
+            }
+        },
+        "GameName": {
+            "description": "The name of the game for which the FPS is measured",
+            "type": "categorical"
+        },
+        "GameResolution": {
+            "description": "The resolution at which the game is played",
+            "type": "categorical",
+            "value_dict": {
+                "1080.0": "The game is played at a resolution of 1080p"
+            }
+        },
+        "GameSetting": {
+            "description": "The setting at which the game is played (low, med, high)",
+            "type": "categorical",
+            "value_dict": {
+                "b'med'": "The game is played at medium settings",
+                "b'max'": "The game is played at maximum settings"
+            }
+        },
+        "FPS": {
+            "description": "The frames per second achieved in the game",
+            "type": "numerical",
+            "decimal": 1
+        }
+    },
+    "task_info": {
+        "FPS": {
+            "task_type": "regression",
+            "class_index_dict": {},
+            "class_value_dict": {},
+            "prompt": {
+                "role_prompt": "You are an expert in computer hardware and gaming performance.",
+                "task_prompt": "Based on the features of the computer hardware and game settings, please predict the FPS (frames per second).",
+                "answer_prompt": "The predicted FPS is [{FPS}]."
+            }
+        },
+        "GpuFP32Performance": {
+            "task_type": "regression",
+            "class_index_dict": {},
+            "class_value_dict": {},
+            "prompt": {
+                "role_prompt": "You are an expert in computer hardware and gaming performance.",
+                "task_prompt": "Based on the features of the computer hardware and game settings, please predict the GPU FP32 performance.",
+                "answer_prompt": "The predicted GPU FP32 performance is [{GpuFP32Performance}]."
+            }
+        },
+        "CpuFrequency": {
+            "task_type": "regression",
+            "class_index_dict": {},
+            "class_value_dict": {},
+            "prompt": {
+                "role_prompt": "You are an expert in computer hardware and gaming performance.",
+                "task_prompt": "Based on the features of the computer hardware and game settings, please predict the CPU frequency.",
+                "answer_prompt": "The predicted CPU frequency is [{CpuFrequency}]."
+            }
+        },
+        "GpuBoostClock": {
+            "task_type": "regression",
+            "class_index_dict": {},
+            "class_value_dict": {},
+            "prompt": {
+                "role_prompt": "You are an expert in computer hardware and gaming performance.",
+                "task_prompt": "Based on the features of the computer hardware and game settings, please predict the GPU boost clock.",
+                "answer_prompt": "The predicted GPU boost clock is [{GpuBoostClock}]."
+            }
+        },
+        "CpuTurboClock": {
+            "task_type": "regression",
+            "class_index_dict": {},
+            "class_value_dict": {},
+            "prompt": {
+                "role_prompt": "You are an expert in computer hardware and gaming performance.",
+                "task_prompt": "Based on the features of the computer hardware and game settings, please predict the CPU turbo clock.",
+                "answer_prompt": "The predicted CPU turbo clock is [{CpuTurboClock}]."
+            }
+        },
+        "GpuBaseClock": {
+            "task_type": "regression",
+            "class_index_dict": {},
+            "class_value_dict": {},
+            "prompt": {
+                "role_prompt": "You are an expert in computer hardware and gaming performance.",
+                "task_prompt": "Based on the features of the computer hardware and game settings, please predict the GPU base clock.",
+                "answer_prompt": "The predicted GPU base clock is [{GpuBaseClock}]."
+            }
+        },
+        "CpuBaseClock": {
+            "task_type": "regression",
+            "class_index_dict": {},
+            "class_value_dict": {},
+            "prompt": {
+                "role_prompt": "You are an expert in computer hardware and gaming performance.",
+                "task_prompt": "Based on the features of the computer hardware and game settings, please predict the CPU base clock.",
+                "answer_prompt": "The predicted CPU base clock is [{CpuBaseClock}]."
+            }
+        },
+        "GpuTextureRate": {
+            "task_type": "regression",
+            "class_index_dict": {},
+            "class_value_dict": {},
+            "prompt": {
+                "role_prompt": "You are an expert in computer hardware and gaming performance.",
+                "task_prompt": "Based on the features of the computer hardware and game settings, please predict the GPU texture rate.",
+                "answer_prompt": "The predicted GPU texture rate is [{GpuTextureRate}]."
+            }
+        },
+        "GpuPixelRate": {
+            "task_type": "regression",
+            "class_index_dict": {},
+            "class_value_dict": {},
+            "prompt": {
+                "role_prompt": "You are an expert in computer hardware and gaming performance.",
+                "task_prompt": "Based on the features of the computer hardware and game settings, please predict the GPU pixel rate.",
+                "answer_prompt": "The predicted GPU pixel rate is [{GpuPixelRate}]."
+            }
+        },
+        "GpuBandwidth": {
+            "task_type": "regression",
+            "class_index_dict": {},
+            "class_value_dict": {},
+            "prompt": {
+                "role_prompt": "You are an expert in computer hardware and gaming performance.",
+                "task_prompt": "Based on the features of the computer hardware and game settings, please predict the GPU bandwidth.",
+                "answer_prompt": "The predicted GPU bandwidth is [{GpuBandwidth}]."
+            }
+        },
+        "GpuMemorySize": {
+            "task_type": "regression",
+            "class_index_dict": {},
+            "class_value_dict": {},
+            "prompt": {
+                "role_prompt": "You are an expert in computer hardware and gaming performance.",
+                "task_prompt": "Based on the features of the computer hardware and game settings, please predict the GPU memory size.",
+                "answer_prompt": "The predicted GPU memory size is [{GpuMemorySize}]."
+            }
+        },
+        "CpuTDP": {
+            "task_type": "regression",
+            "class_index_dict": {},
+            "class_value_dict": {},
+            "prompt": {
+                "role_prompt": "You are an expert in computer hardware and gaming performance.",
+                "task_prompt": "Based on the features of the computer hardware and game settings, please predict the CPU TDP (Thermal Design Power).",
+                "answer_prompt": "The predicted CPU TDP is [{CpuTDP}]."
+            }
+        },
+        "GpuNumberOfROPs": {
+            "task_type": "regression",
+            "class_index_dict": {},
+            "class_value_dict": {},
+            "prompt": {
+                "role_prompt": "You are an expert in computer hardware and gaming performance.",
+                "task_prompt": "Based on the features of the computer hardware and game settings, please predict the number of ROPs (Raster Operations Pipelines) in the GPU.",
+                "answer_prompt": "The predicted number of ROPs in the GPU is [{GpuNumberOfROPs}]."
+            }
+        },
+        "GpuNumberOfShadingUnits": {
+            "task_type": "regression",
+            "class_index_dict": {},
+            "class_value_dict": {},
+            "prompt": {
+                "role_prompt": "You are an expert in computer hardware and gaming performance.",
+                "task_prompt": "Based on the features of the computer hardware and game settings, please predict the number of shading units in the GPU.",
+                "answer_prompt": "The predicted number of shading units in the GPU is [{GpuNumberOfShadingUnits}]."
+            }
+        },
+        "GpuNumberOfTMUs": {
+            "task_type": "regression",
+            "class_index_dict": {},
+            "class_value_dict": {},
+            "prompt": {
+                "role_prompt": "You are an expert in computer hardware and gaming performance.",
+                "task_prompt": "Based on the features of the computer hardware and game settings, please predict the number of TMUs (Texture Mapping Units) in the GPU.",
+                "answer_prompt": "The predicted number of TMUs in the GPU is [{GpuNumberOfTMUs}]."
+            }
+        },
+        "CpuNumberOfTransistors": {
+            "task_type": "regression",
+            "class_index_dict": {},
+            "class_value_dict": {},
+            "prompt": {
+                "role_prompt": "You are an expert in computer hardware and gaming performance.",
+                "task_prompt": "Based on the features of the computer hardware and game settings, please predict the number of transistors in the CPU.",
+                "answer_prompt": "The predicted number of transistors in the CPU is [{CpuNumberOfTransistors}]."
+            }
+        },
+        "GpuNumberOfTransistors": {
+            "task_type": "regression",
+            "class_index_dict": {},
+            "class_value_dict": {},
+            "prompt": {
+                "role_prompt": "You are an expert in computer hardware and gaming performance.",
+                "task_prompt": "Based on the features of the computer hardware and game settings, please predict the number of transistors in the GPU.",
+                "answer_prompt": "The predicted number of transistors in the GPU is [{GpuNumberOfTransistors}]."
+            }
+        },
+        "CpuNumberOfCores": {
+            "task_type": "regression",
+            "class_index_dict": {},
+            "class_value_dict": {},
+            "prompt": {
+                "role_prompt": "You are an expert in computer hardware and gaming performance.",
+                "task_prompt": "Based on the features of the computer hardware and game settings, please predict the number of cores in the CPU.",
+                "answer_prompt": "The predicted number of cores in the CPU is [{CpuNumberOfCores}]."
+            }
+        },
+        "CpuNumberOfThreads": {
+            "task_type": "regression",
+            "class_index_dict": {},
+            "class_value_dict": {},
+            "prompt": {
+                "role_prompt": "You are an expert in computer hardware and gaming performance.",
+                "task_prompt": "Based on the features of the computer hardware and game settings, please predict the number of threads in the CPU.",
+                "answer_prompt": "The predicted number of threads in the CPU is [{CpuNumberOfThreads}]."
+            }
+        },
+        "GpuNumberOfComputeUnits": {
+            "task_type": "regression",
+            "class_index_dict": {},
+            "class_value_dict": {},
+            "prompt": {
+                "role_prompt": "You are an expert in computer hardware and gaming performance.",
+                "task_prompt": "Based on the features of the computer hardware and game settings, please predict the number of compute units in the GPU.",
+                "answer_prompt": "The predicted number of compute units in the GPU is [{GpuNumberOfComputeUnits}]."
+            }
+        },
+        "GpuNumberOfExecutionUnits": {
+            "task_type": "regression",
+            "class_index_dict": {},
+            "class_value_dict": {},
+            "prompt": {
+                "role_prompt": "You are an expert in computer hardware and gaming performance.",
+                "task_prompt": "Based on the features of the computer hardware and game settings, please predict the number of execution units in the GPU.",
+                "answer_prompt": "The predicted number of execution units in the GPU is [{GpuNumberOfExecutionUnits}]."
+            }
+        }
+    }
+}

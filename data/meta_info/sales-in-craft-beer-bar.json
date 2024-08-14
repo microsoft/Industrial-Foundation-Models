@@ -1,0 +1,162 @@
+{
+    "basic_info": {
+        "row_num": 50070,
+        "col_num": 15,
+        "label_candidates": [
+            "Sale_amount",
+            "Profit",
+            "Discount_amount",
+            "Percentage_markup",
+            "Discount_percentage"
+        ],
+        "valid_feature_num": 15,
+        "num_features": [
+            "Retail_price",
+            "Size",
+            "ABV",
+            "Amount",
+            "Sale_amount",
+            "Discount_amount",
+            "Percentage_markup",
+            "Discount_percentage",
+            "Profit"
+        ],
+        "cat_features": [
+            "Product_code",
+            "Vendor_code",
+            "Name",
+            "Base_unit",
+            "Country_of_Origin"
+        ],
+        "other_features": [
+            "Date_and_time_of_unloading"
+        ],
+        "tags": [
+            "alcohol",
+            "tabular",
+            "text",
+            "regression",
+            "food"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/podsyp/sales-in-craft-beer-bar"
+    },
+    "feature_info": {
+        "Product_code": {
+            "description": "Unique identifier for each product",
+            "type": "categorical"
+        },
+        "Vendor_code": {
+            "description": "Unique identifier for each vendor",
+            "type": "categorical"
+        },
+        "Name": {
+            "description": "Name of the product",
+            "type": "categorical"
+        },
+        "Retail_price": {
+            "description": "Retail price of the product",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Base_unit": {
+            "description": "Unit of measurement for the product",
+            "type": "categorical",
+            "value_dict": {
+                "Pieces": "The product is sold in pieces",
+                "Liters": "The product is sold in liters",
+                "100g": "The product is sold in units of 100 grams",
+                "Kilogram": "The product is sold in kilograms"
+            }
+        },
+        "Country_of_Origin": {
+            "description": "Country where the product originates from",
+            "type": "categorical"
+        },
+        "Size": {
+            "description": "Size of the product",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "ABV": {
+            "description": "Alcohol By Volume (ABV) of the product",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Date_and_time_of_unloading": {
+            "description": "Date and time when the product was unloaded",
+            "type": "other"
+        },
+        "Amount": {
+            "description": "Quantity of the product sold",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Sale_amount": {
+            "description": "Total sales amount of the product",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Discount_amount": {
+            "description": "Discount amount on the product",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Profit": {
+            "description": "Profit made from the sale of the product",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Percentage_markup": {
+            "description": "Percentage markup on the product",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Discount_percentage": {
+            "description": "Discount percentage on the product",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "Sale_amount": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sales forecasting.",
+                "task_prompt": "Based on the features of the product, please predict the sale amount.",
+                "answer_prompt": "The predicted sale amount is ______."
+            }
+        },
+        "Profit": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in profit prediction.",
+                "task_prompt": "Based on the features of the product, please predict the profit.",
+                "answer_prompt": "The predicted profit is ______."
+            }
+        },
+        "Discount_amount": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in discount analysis.",
+                "task_prompt": "Based on the features of the product, please predict the discount amount.",
+                "answer_prompt": "The predicted discount amount is ______."
+            }
+        },
+        "Percentage_markup": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in pricing strategy.",
+                "task_prompt": "Based on the features of the product, please predict the percentage markup.",
+                "answer_prompt": "The predicted percentage markup is ______."
+            }
+        },
+        "Discount_percentage": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in discount strategy.",
+                "task_prompt": "Based on the features of the product, please predict the discount percentage.",
+                "answer_prompt": "The predicted discount percentage is ______."
+            }
+        }
+    }
+}

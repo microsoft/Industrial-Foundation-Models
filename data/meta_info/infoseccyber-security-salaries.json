@@ -1,0 +1,164 @@
+{
+    "basic_info": {
+        "row_num": 1349,
+        "col_num": 11,
+        "label_candidates": [
+            "salary_in_usd",
+            "salary",
+            "experience_level",
+            "employment_type"
+        ],
+        "valid_feature_num": 11,
+        "num_features": [
+            "work_year",
+            "salary",
+            "remote_ratio",
+            "salary_in_usd"
+        ],
+        "cat_features": [
+            "experience_level",
+            "employment_type",
+            "job_title",
+            "salary_currency",
+            "employee_residence",
+            "company_location",
+            "company_size"
+        ],
+        "other_features": [],
+        "tags": [
+            "science and technology",
+            "computer science",
+            "internet",
+            "classification",
+            "jobs and career"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/whenamancodes/infoseccyber-security-salaries"
+    },
+    "feature_info": {
+        "work_year": {
+            "description": "The year the work was done",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "experience_level": {
+            "description": "The level of experience of the employee",
+            "type": "categorical",
+            "value_dict": {
+                "EN": "Entry level",
+                "SE": "Senior level",
+                "MI": "Mid level",
+                "EX": "Expert level"
+            }
+        },
+        "employment_type": {
+            "description": "The type of employment (full time, part time, etc.)",
+            "type": "categorical",
+            "value_dict": {
+                "FT": "Full time",
+                "PT": "Part time",
+                "CT": "Contract",
+                "FL": "Freelance"
+            }
+        },
+        "job_title": {
+            "description": "The job title of the employee",
+            "type": "categorical"
+        },
+        "salary": {
+            "description": "The salary of the employee in the original currency",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "salary_currency": {
+            "description": "The original currency of the salary",
+            "type": "categorical"
+        },
+        "salary_in_usd": {
+            "description": "The salary of the employee converted to USD",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "employee_residence": {
+            "description": "The residence of the employee",
+            "type": "categorical"
+        },
+        "remote_ratio": {
+            "description": "The ratio of remote work",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "company_location": {
+            "description": "The location of the company",
+            "type": "categorical"
+        },
+        "company_size": {
+            "description": "The size of the company",
+            "type": "categorical",
+            "value_dict": {
+                "S": "Small",
+                "M": "Medium",
+                "L": "Large"
+            }
+        }
+    },
+    "task_info": {
+        "salary_in_usd": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in job salary prediction.",
+                "task_prompt": "Based on the features of the job, please predict the salary in USD.",
+                "answer_prompt": "The predicted salary in USD is __."
+            }
+        },
+        "salary": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in job salary prediction.",
+                "task_prompt": "Based on the features of the job, please predict the salary.",
+                "answer_prompt": "The predicted salary is __."
+            }
+        },
+        "experience_level": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in job categorization.",
+                "task_prompt": "Based on the features of the job, please classify the experience level.",
+                "answer_prompt": "Entry level[0], Mid level[1], Senior level[2], or Expert level[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "EN": "Entry level",
+                "MI": "Mid level",
+                "SE": "Senior level",
+                "EX": "Expert level"
+            },
+            "class_index_dict": {
+                "EN": 0,
+                "MI": 1,
+                "SE": 2,
+                "EX": 3
+            }
+        },
+        "employment_type": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in job categorization.",
+                "task_prompt": "Based on the features of the job, please classify the employment type.",
+                "answer_prompt": "Full time[0], Part time[1], Contract[2], or Freelance[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "FT": "Full time",
+                "PT": "Part time",
+                "CT": "Contract",
+                "FL": "Freelance"
+            },
+            "class_index_dict": {
+                "FT": 0,
+                "PT": 1,
+                "CT": 2,
+                "FL": 3
+            }
+        }
+    }
+}

@@ -1,0 +1,147 @@
+{
+    "basic_info": {
+        "row_num": 29451,
+        "col_num": 12,
+        "label_candidates": [
+            "TARGET(PRICE_IN_LACS)",
+            "SQUARE_FT",
+            "BHK_NO."
+        ],
+        "valid_feature_num": 12,
+        "num_features": [
+            "BHK_NO.",
+            "SQUARE_FT",
+            "LONGITUDE",
+            "LATITUDE",
+            "TARGET(PRICE_IN_LACS)"
+        ],
+        "cat_features": [
+            "POSTED_BY",
+            "UNDER_CONSTRUCTION",
+            "RERA",
+            "BHK_OR_RK",
+            "READY_TO_MOVE",
+            "RESALE"
+        ],
+        "other_features": [
+            "ADDRESS"
+        ],
+        "tags": [
+            "earth and nature",
+            "housing",
+            "real estate",
+            "deep learning",
+            "linear regression",
+            "neural networks",
+            "regression",
+            "social issues and advocacy"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/ishandutta/machine-hack-housing-price-prediction"
+    },
+    "feature_info": {
+        "POSTED_BY": {
+            "description": "The type of person who posted the ad (Owner, Dealer)",
+            "type": "categorical",
+            "value_dict": {
+                "Owner": "The ad was posted by the owner of the property",
+                "Dealer": "The ad was posted by a dealer",
+                "Builder": "The ad was posted by a builder"
+            }
+        },
+        "UNDER_CONSTRUCTION": {
+            "description": "Whether the property is under construction (0 means no, 1 means yes)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The property is not under construction",
+                "1": "The property is under construction"
+            }
+        },
+        "RERA": {
+            "description": "Whether the property is RERA approved (0 means no, 1 means yes)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The property is not RERA approved",
+                "1": "The property is RERA approved"
+            }
+        },
+        "BHK_NO.": {
+            "description": "Number of bedrooms in the property",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "BHK_OR_RK": {
+            "description": "Type of property (BHK or RK)",
+            "type": "categorical",
+            "value_dict": {
+                "BHK": "The property is a BHK",
+                "RK": "The property is a RK"
+            }
+        },
+        "SQUARE_FT": {
+            "description": "Area of the property in square feet",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "READY_TO_MOVE": {
+            "description": "Whether the property is ready to move in (0 means no, 1 means yes)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The property is ready to move in",
+                "0": "The property is not ready to move in"
+            }
+        },
+        "RESALE": {
+            "description": "Whether the property is for resale (0 means no, 1 means yes)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The property is for resale",
+                "0": "The property is not for resale"
+            }
+        },
+        "ADDRESS": {
+            "description": "Address of the property",
+            "type": "other"
+        },
+        "LONGITUDE": {
+            "description": "Longitude of the property location",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "LATITUDE": {
+            "description": "Latitude of the property location",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "TARGET(PRICE_IN_LACS)": {
+            "description": "Target price of the property in lakhs",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "TARGET(PRICE_IN_LACS)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate price prediction.",
+                "task_prompt": "Based on the features of the property, please predict the price in lacs.",
+                "answer_prompt": "The predicted price in lacs is ____."
+            }
+        },
+        "SQUARE_FT": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate analysis.",
+                "task_prompt": "Based on the features of the property, please predict the square footage.",
+                "answer_prompt": "The predicted square footage is ____."
+            }
+        },
+        "BHK_NO.": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate analysis.",
+                "task_prompt": "Based on the features of the property, please predict the number of bedrooms.",
+                "answer_prompt": "The predicted number of bedrooms is ____."
+            }
+        }
+    }
+}

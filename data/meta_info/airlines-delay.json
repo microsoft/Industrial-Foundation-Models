@@ -1,0 +1,145 @@
+{
+    "basic_info": {
+        "row_num": 539382,
+        "col_num": 8,
+        "label_candidates": [
+            "Time",
+            "Length",
+            "Class",
+            "DayOfWeek"
+        ],
+        "valid_feature_num": 8,
+        "num_features": [
+            "Time",
+            "Length"
+        ],
+        "cat_features": [
+            "Flight",
+            "Airline",
+            "AirportFrom",
+            "AirportTo",
+            "DayOfWeek",
+            "Class"
+        ],
+        "other_features": [],
+        "tags": [
+            "beginner",
+            "advanced",
+            "classification",
+            "random forest",
+            "binary classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/ulrikthygepedersen/airlines-delay"
+    },
+    "feature_info": {
+        "Flight": {
+            "description": "The flight number of the airline",
+            "type": "categorical"
+        },
+        "Time": {
+            "description": "Time of flight in minutes",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Length": {
+            "description": "Length of flight in minutes",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Airline": {
+            "description": "Airline company identifier",
+            "type": "categorical"
+        },
+        "AirportFrom": {
+            "description": "Airport from where the flight departed",
+            "type": "categorical"
+        },
+        "AirportTo": {
+            "description": "Destination airport of the flight",
+            "type": "categorical"
+        },
+        "DayOfWeek": {
+            "description": "Day of the week when the flight took place, represented as numbers from 1 (Monday) to 7 (Sunday)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Monday",
+                "2": "Tuesday",
+                "3": "Wednesday",
+                "4": "Thursday",
+                "5": "Friday",
+                "6": "Saturday",
+                "7": "Sunday"
+            }
+        },
+        "Class": {
+            "description": "Class of the flight, represented as a binary value (0 or 1)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Class 0 of the flight",
+                "1": "Class 1 of the flight"
+            }
+        }
+    },
+    "task_info": {
+        "Time": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in flight delay prediction.",
+                "task_prompt": "Based on the features of the flight, please predict the flight time.",
+                "answer_prompt": "The flight time is."
+            }
+        },
+        "Length": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in flight delay prediction.",
+                "task_prompt": "Based on the features of the flight, please predict the flight length.",
+                "answer_prompt": "The flight length is."
+            }
+        },
+        "Class": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in flight delay prediction.",
+                "task_prompt": "Based on the features of the flight, please predict the flight class.",
+                "answer_prompt": "Class 0 of the flight[0] or Class 1 of the flight[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "Class 0 of the flight",
+                "1": "Class 1 of the flight"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "DayOfWeek": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in flight delay prediction.",
+                "task_prompt": "Based on the features of the flight, please predict the day of the week of the flight.",
+                "answer_prompt": "Monday[0], Tuesday[1], Wednesday[2], Thursday[3], Friday[4], Saturday[5], or Sunday[6]?"
+            },
+            "class_num": 7,
+            "class_value_dict": {
+                "1": "Monday",
+                "2": "Tuesday",
+                "3": "Wednesday",
+                "4": "Thursday",
+                "5": "Friday",
+                "6": "Saturday",
+                "7": "Sunday"
+            },
+            "class_index_dict": {
+                "Monday": 0,
+                "Tuesday": 1,
+                "Wednesday": 2,
+                "Thursday": 3,
+                "Friday": 4,
+                "Saturday": 5,
+                "Sunday": 6
+            }
+        }
+    }
+}

@@ -1,0 +1,478 @@
+{
+    "basic_info": {
+        "row_num": 569,
+        "col_num": 33,
+        "label_candidates": [
+            "diagnosis",
+            "radius_mean",
+            "texture_mean",
+            "perimeter_mean",
+            "area_mean",
+            "smoothness_mean",
+            "compactness_mean",
+            "concavity_mean",
+            "concave points_mean",
+            "symmetry_mean",
+            "fractal_dimension_mean",
+            "radius_se",
+            "texture_se",
+            "perimeter_se",
+            "area_se",
+            "smoothness_se",
+            "compactness_se",
+            "concavity_se",
+            "concave points_se",
+            "symmetry_se",
+            "fractal_dimension_se",
+            "radius_worst",
+            "texture_worst",
+            "perimeter_worst",
+            "area_worst",
+            "smoothness_worst",
+            "compactness_worst",
+            "concavity_worst",
+            "concave points_worst",
+            "symmetry_worst",
+            "fractal_dimension_worst"
+        ],
+        "valid_feature_num": 31,
+        "num_features": [
+            "radius_mean",
+            "texture_mean",
+            "perimeter_mean",
+            "area_mean",
+            "smoothness_mean",
+            "compactness_mean",
+            "concavity_mean",
+            "concave points_mean",
+            "symmetry_mean",
+            "fractal_dimension_mean",
+            "radius_se",
+            "texture_se",
+            "perimeter_se",
+            "area_se",
+            "smoothness_se",
+            "compactness_se",
+            "concavity_se",
+            "concave points_se",
+            "symmetry_se",
+            "fractal_dimension_se",
+            "radius_worst",
+            "texture_worst",
+            "perimeter_worst",
+            "area_worst",
+            "smoothness_worst",
+            "compactness_worst",
+            "concavity_worst",
+            "concave points_worst",
+            "symmetry_worst",
+            "fractal_dimension_worst"
+        ],
+        "cat_features": [
+            "diagnosis"
+        ],
+        "other_features": [],
+        "tags": [
+            "medicine",
+            "cancer"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/imtkaggleteam/breast-cancer"
+    },
+    "feature_info": {
+        "id": {
+            "description": "Identification number",
+            "type": "useless"
+        },
+        "diagnosis": {
+            "description": "Diagnosis of breast tissues (M = malignant, B = benign)",
+            "type": "categorical",
+            "value_dict": {
+                "M": "Malignant diagnosis",
+                "B": "Benign diagnosis"
+            }
+        },
+        "radius_mean": {
+            "description": "Mean of distances from center to points on the perimeter",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "texture_mean": {
+            "description": "Standard deviation of gray-scale values",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "perimeter_mean": {
+            "description": "Mean size of the core tumor",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "area_mean": {
+            "description": "Mean area of the tumor",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "smoothness_mean": {
+            "description": "Mean of local variation in radius lengths",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "compactness_mean": {
+            "description": "Mean of perimeter^2 / area - 1.0",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "concavity_mean": {
+            "description": "Mean of severity of concave portions of the contour",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "concave points_mean": {
+            "description": "Mean for number of concave portions of the contour",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "symmetry_mean": {
+            "description": "Mean symmetry",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "fractal_dimension_mean": {
+            "description": "Mean fractal dimension (\"coastline approximation\" - 1)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "radius_se": {
+            "description": "Standard error for the mean of distances from center to points on the perimeter",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "texture_se": {
+            "description": "Standard error for standard deviation of gray-scale values",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "perimeter_se": {
+            "description": "Standard error for the mean size of the core tumor",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "area_se": {
+            "description": "Standard error for the mean area of the tumor",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "smoothness_se": {
+            "description": "Standard error for local variation in radius lengths",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "compactness_se": {
+            "description": "Standard error for perimeter^2 / area - 1.0",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "concavity_se": {
+            "description": "Standard error for severity of concave portions of the contour",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "concave points_se": {
+            "description": "Standard error for number of concave portions of the contour",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "symmetry_se": {
+            "description": "Standard error for symmetry",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "fractal_dimension_se": {
+            "description": "Standard error for fractal dimension (\"coastline approximation\" - 1)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "radius_worst": {
+            "description": "Worst or largest mean value for mean of distances from center to points on the perimeter",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "texture_worst": {
+            "description": "Worst or largest mean value for standard deviation of gray-scale values",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "perimeter_worst": {
+            "description": "Worst or largest mean value for mean size of the core tumor",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "area_worst": {
+            "description": "Worst or largest mean value for mean area of the tumor",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "smoothness_worst": {
+            "description": "Worst or largest mean value for local variation in radius lengths",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "compactness_worst": {
+            "description": "Worst or largest mean value for perimeter^2 / area - 1.0",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "concavity_worst": {
+            "description": "Worst or largest mean value for severity of concave portions of the contour",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "concave points_worst": {
+            "description": "Worst or largest mean value for number of concave portions of the contour",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "symmetry_worst": {
+            "description": "Worst or largest mean value for symmetry",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "fractal_dimension_worst": {
+            "description": "Worst or largest mean value for fractal dimension (\"coastline approximation\" - 1)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Unnamed: 32": {
+            "description": "Unidentified data column",
+            "type": "useless"
+        }
+    },
+    "task_info": {
+        "diagnosis": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnostics.",
+                "task_prompt": "Based on the features of the breast cancer cells, please predict the diagnosis.",
+                "answer_prompt": "Malignant[0] or Benign[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "M": "Malignant diagnosis",
+                "B": "Benign diagnosis"
+            },
+            "class_index_dict": {
+                "M": 0,
+                "B": 1
+            }
+        },
+        "radius_mean": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnostics.",
+                "task_prompt": "Based on the features of the breast cancer cells, please predict the mean radius."
+            }
+        },
+        "texture_mean": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnostics.",
+                "task_prompt": "Based on the features of the breast cancer cells, please predict the mean texture."
+            }
+        },
+        "perimeter_mean": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnostics.",
+                "task_prompt": "Based on the features of the breast cancer cells, please predict the mean perimeter."
+            }
+        },
+        "area_mean": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnostics.",
+                "task_prompt": "Based on the features of the breast cancer cells, please predict the mean area."
+            }
+        },
+        "smoothness_mean": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnostics.",
+                "task_prompt": "Based on the features of the breast cancer cells, please predict the mean smoothness."
+            }
+        },
+        "compactness_mean": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnostics.",
+                "task_prompt": "Based on the features of the breast cancer cells, please predict the mean compactness."
+            }
+        },
+        "concavity_mean": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnostics.",
+                "task_prompt": "Based on the features of the breast cancer cells, please predict the mean concavity."
+            }
+        },
+        "concave points_mean": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnostics.",
+                "task_prompt": "Based on the features of the breast cancer cells, please predict the mean of concave points."
+            }
+        },
+        "symmetry_mean": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnostics.",
+                "task_prompt": "Based on the features of the breast cancer cells, please predict the mean symmetry."
+            }
+        },
+        "fractal_dimension_mean": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnostics.",
+                "task_prompt": "Based on the features of the breast cancer cells, please predict the mean fractal dimension."
+            }
+        },
+        "radius_se": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnostics.",
+                "task_prompt": "Based on the features of the breast cancer cells, please predict the radius standard error."
+            }
+        },
+        "texture_se": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnostics.",
+                "task_prompt": "Based on the features of the breast cancer cells, please predict the texture standard error."
+            }
+        },
+        "perimeter_se": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnostics.",
+                "task_prompt": "Based on the features of the breast cancer cells, please predict the perimeter standard error."
+            }
+        },
+        "area_se": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnostics.",
+                "task_prompt": "Based on the features of the breast cancer cells, please predict the area standard error."
+            }
+        },
+        "smoothness_se": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnostics.",
+                "task_prompt": "Based on the features of the breast cancer cells, please predict the smoothness standard error."
+            }
+        },
+        "compactness_se": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnostics.",
+                "task_prompt": "Based on the features of the breast cancer cells, please predict the compactness standard error."
+            }
+        },
+        "concavity_se": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnostics.",
+                "task_prompt": "Based on the features of the breast cancer cells, please predict the concavity standard error."
+            }
+        },
+        "concave points_se": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnostics.",
+                "task_prompt": "Based on the features of the breast cancer cells, please predict the standard error of concave points."
+            }
+        },
+        "symmetry_se": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnostics.",
+                "task_prompt": "Based on the features of the breast cancer cells, please predict the symmetry standard error."
+            }
+        },
+        "fractal_dimension_se": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnostics.",
+                "task_prompt": "Based on the features of the breast cancer cells, please predict the fractal dimension standard error."
+            }
+        },
+        "radius_worst": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnostics.",
+                "task_prompt": "Based on the features of the breast cancer cells, please predict the worst radius."
+            }
+        },
+        "texture_worst": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnostics.",
+                "task_prompt": "Based on the features of the breast cancer cells, please predict the worst texture."
+            }
+        },
+        "perimeter_worst": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnostics.",
+                "task_prompt": "Based on the features of the breast cancer cells, please predict the worst perimeter."
+            }
+        },
+        "area_worst": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnostics.",
+                "task_prompt": "Based on the features of the breast cancer cells, please predict the worst area."
+            }
+        },
+        "smoothness_worst": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnostics.",
+                "task_prompt": "Based on the features of the breast cancer cells, please predict the worst smoothness."
+            }
+        },
+        "compactness_worst": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnostics.",
+                "task_prompt": "Based on the features of the breast cancer cells, please predict the worst compactness."
+            }
+        },
+        "concavity_worst": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnostics.",
+                "task_prompt": "Based on the features of the breast cancer cells, please predict the worst concavity."
+            }
+        },
+        "concave points_worst": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnostics.",
+                "task_prompt": "Based on the features of the breast cancer cells, please predict the worst of concave points."
+            }
+        },
+        "symmetry_worst": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnostics.",
+                "task_prompt": "Based on the features of the breast cancer cells, please predict the worst symmetry."
+            }
+        },
+        "fractal_dimension_worst": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnostics.",
+                "task_prompt": "Based on the features of the breast cancer cells, please predict the worst fractal dimension."
+            }
+        }
+    }
+}

@@ -1,0 +1,140 @@
+{
+    "basic_info": {
+        "row_num": 17890,
+        "col_num": 14,
+        "label_candidates": [
+            "price",
+            "size_sq_ft",
+            "bedrooms"
+        ],
+        "valid_feature_num": 14,
+        "num_features": [
+            "size_sq_ft",
+            "bedrooms",
+            "latitude",
+            "longitude",
+            "closest_mtero_station_km",
+            "AP_dist_km",
+            "Aiims_dist_km",
+            "NDRLW_dist_km",
+            "price"
+        ],
+        "cat_features": [
+            "propertyType",
+            "localityName",
+            "suburbName",
+            "cityName",
+            "companyName"
+        ],
+        "other_features": [],
+        "tags": [
+            "housing",
+            "real estate",
+            "geospatial analysis",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/andynath/new-delhi-rental-listings"
+    },
+    "feature_info": {
+        "size_sq_ft": {
+            "description": "The size of the property in square feet",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "propertyType": {
+            "description": "The type of the property, such as Apartment, Independent Floor, etc.",
+            "type": "categorical",
+            "value_dict": {
+                "Independent Floor": "The property is an independent floor in a building",
+                "Apartment": "The property is an apartment in a building",
+                "Independent House": "The property is an independent house",
+                "Villa": "The property is a villa"
+            }
+        },
+        "bedrooms": {
+            "description": "The number of bedrooms in the property",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "latitude": {
+            "description": "The latitude coordinate of the property location",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "longitude": {
+            "description": "The longitude coordinate of the property location",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "localityName": {
+            "description": "The name of the locality where the property is located",
+            "type": "categorical"
+        },
+        "suburbName": {
+            "description": "The name of the suburb where the property is located",
+            "type": "categorical"
+        },
+        "cityName": {
+            "description": "The name of the city where the property is located",
+            "type": "categorical",
+            "value_dict": {
+                "Delhi": "The property is located in the city of Delhi"
+            }
+        },
+        "price": {
+            "description": "The rental price of the property",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "companyName": {
+            "description": "The name of the company that lists the property",
+            "type": "categorical"
+        },
+        "closest_mtero_station_km": {
+            "description": "The distance to the closest metro station in kilometers",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "AP_dist_km": {
+            "description": "The distance to the nearest airport in kilometers",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Aiims_dist_km": {
+            "description": "The distance to the All India Institute of Medical Sciences (AIIMS) in kilometers",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "NDRLW_dist_km": {
+            "description": "The distance to the New Delhi Railway Station in kilometers",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "price": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate price prediction.",
+                "task_prompt": "Based on the features of the rental listing, please predict the price.",
+                "answer_prompt": "The predicted price is."
+            }
+        },
+        "size_sq_ft": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate size estimation.",
+                "task_prompt": "Based on the features of the rental listing, please estimate the size in square feet.",
+                "answer_prompt": "The estimated size in square feet is."
+            }
+        },
+        "bedrooms": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate bedroom count prediction.",
+                "task_prompt": "Based on the features of the rental listing, please predict the number of bedrooms.",
+                "answer_prompt": "The predicted number of bedrooms is."
+            }
+        }
+    }
+}

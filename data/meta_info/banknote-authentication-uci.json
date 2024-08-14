@@ -1,0 +1,112 @@
+{
+    "basic_info": {
+        "row_num": 1372,
+        "col_num": 5,
+        "label_candidates": [
+            "class",
+            "variance",
+            "skewness",
+            "curtosis",
+            "entropy"
+        ],
+        "valid_feature_num": 5,
+        "num_features": [
+            "variance",
+            "skewness",
+            "curtosis",
+            "entropy"
+        ],
+        "cat_features": [
+            "class"
+        ],
+        "other_features": [],
+        "tags": [
+            "universities and colleges",
+            "banking",
+            "classification",
+            "currencies and foreign exchange"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/shantanuss/banknote-authentication-uci"
+    },
+    "feature_info": {
+        "variance": {
+            "description": "Variance of Wavelet Transformed image (continuous)",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "skewness": {
+            "description": "Skewness of Wavelet Transformed image (continuous)",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "curtosis": {
+            "description": "Curtosis of Wavelet Transformed image (continuous)",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "entropy": {
+            "description": "Entropy of Wavelet Transformed image (continuous)",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "class": {
+            "description": "Class (0 for authentic, 1 for inauthentic)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "This value represents an authentic banknote.",
+                "1": "This value represents an inauthentic banknote."
+            }
+        }
+    },
+    "task_info": {
+        "class": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in banknote authentication.",
+                "task_prompt": "Based on the features of the banknote, please predict if the banknote is authentic or inauthentic.",
+                "answer_prompt": "Authentic[0] or Inauthentic[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "This value represents an authentic banknote.",
+                "1": "This value represents an inauthentic banknote."
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "variance": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in banknote analysis.",
+                "task_prompt": "Based on the features of the banknote, please predict the variance.",
+                "answer_prompt": "What is the variance value?"
+            }
+        },
+        "skewness": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in banknote analysis.",
+                "task_prompt": "Based on the features of the banknote, please predict the skewness.",
+                "answer_prompt": "What is the skewness value?"
+            }
+        },
+        "curtosis": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in banknote analysis.",
+                "task_prompt": "Based on the features of the banknote, please predict the curtosis.",
+                "answer_prompt": "What is the curtosis value?"
+            }
+        },
+        "entropy": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in banknote analysis.",
+                "task_prompt": "Based on the features of the banknote, please predict the entropy.",
+                "answer_prompt": "What is the entropy value?"
+            }
+        }
+    }
+}

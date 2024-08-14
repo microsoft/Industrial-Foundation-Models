@@ -1,0 +1,106 @@
+{
+    "basic_info": {
+        "row_num": 15000,
+        "col_num": 9,
+        "label_candidates": [
+            "x",
+            "y",
+            "z"
+        ],
+        "valid_feature_num": 9,
+        "num_features": [
+            "q1",
+            "q2",
+            "q3",
+            "q4",
+            "q5",
+            "q6",
+            "x",
+            "y",
+            "z"
+        ],
+        "cat_features": [],
+        "other_features": [],
+        "tags": [
+            "robotics",
+            "engineering",
+            "beginner",
+            "intermediate",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/sandibaressiegota/robot-kinematics-dataset"
+    },
+    "feature_info": {
+        "q1": {
+            "description": "Joint angle 1 of the robot (in radians)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "q2": {
+            "description": "Joint angle 2 of the robot (in radians)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "q3": {
+            "description": "Joint angle 3 of the robot (in radians)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "q4": {
+            "description": "Joint angle 4 of the robot (in radians)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "q5": {
+            "description": "Joint angle 5 of the robot (in radians)",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "q6": {
+            "description": "Joint angle 6 of the robot (in radians)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "x": {
+            "description": "X-coordinate of the end effector position (in meters)",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "y": {
+            "description": "Y-coordinate of the end effector position (in meters)",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "z": {
+            "description": "Z-coordinate of the end effector position (in meters)",
+            "type": "numerical",
+            "decimal": 3
+        }
+    },
+    "task_info": {
+        "x": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in robot kinematics.",
+                "task_prompt": "Based on the joint angles q1, q2, q3, q4, q5, and q6, please predict the x-coordinate of the robot end-effector.",
+                "answer_prompt": "The predicted x-coordinate of the robot end-effector is: ."
+            }
+        },
+        "y": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in robot kinematics.",
+                "task_prompt": "Based on the joint angles q1, q2, q3, q4, q5, and q6, please predict the y-coordinate of the robot end-effector.",
+                "answer_prompt": "The predicted y-coordinate of the robot end-effector is: ."
+            }
+        },
+        "z": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in robot kinematics.",
+                "task_prompt": "Based on the joint angles q1, q2, q3, q4, q5, and q6, please predict the z-coordinate of the robot end-effector.",
+                "answer_prompt": "The predicted z-coordinate of the robot end-effector is: ."
+            }
+        }
+    }
+}

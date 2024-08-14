@@ -1,0 +1,113 @@
+{
+    "basic_info": {
+        "row_num": 76690,
+        "col_num": 9,
+        "label_candidates": [
+            "Price",
+            "Year",
+            "Mileage(kms)"
+        ],
+        "valid_feature_num": 9,
+        "num_features": [
+            "Engine Capacity(CC)",
+            "Mileage(kms)",
+            "Year",
+            "Price"
+        ],
+        "cat_features": [
+            "Make",
+            "Name",
+            "Transmission",
+            "Engine Type",
+            "City"
+        ],
+        "other_features": [],
+        "tags": [
+            "cities and urban areas",
+            "business",
+            "beginner",
+            "intermediate",
+            "linear regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/ebrahimhaquebhatti/75000-used-cars-dataset-with-specifications"
+    },
+    "feature_info": {
+        "Make": {
+            "description": "The brand of the car",
+            "type": "categorical"
+        },
+        "Name": {
+            "description": "The model name of the car",
+            "type": "categorical"
+        },
+        "Transmission": {
+            "description": "The type of transmission the car uses",
+            "type": "categorical",
+            "value_dict": {
+                "Automatic": "The car has an automatic transmission",
+                "Manual": "The car has a manual transmission"
+            }
+        },
+        "Engine Type": {
+            "description": "The type of engine the car has",
+            "type": "categorical",
+            "value_dict": {
+                "Petrol": "The car runs on petrol",
+                "CNG": "The car runs on compressed natural gas (CNG)",
+                "Hybrid": "The car is a hybrid, meaning it can run on more than one type of fuel",
+                "Diesel": "The car runs on diesel",
+                "LPG": "The car runs on liquefied petroleum gas (LPG)"
+            }
+        },
+        "Engine Capacity(CC)": {
+            "description": "The capacity of the car engine in cubic centimeters (CC)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Mileage(kms)": {
+            "description": "The total distance that the car has traveled in kilometers (kms)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "City": {
+            "description": "The city where the car is located",
+            "type": "categorical"
+        },
+        "Year": {
+            "description": "The manufacturing year of the car",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Price": {
+            "description": "The price of the car in local currency",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "Price": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in used car pricing.",
+                "task_prompt": "Based on the specifications and features of a used car, please predict its price.",
+                "answer_prompt": "The predicted price of the used car is."
+            }
+        },
+        "Year": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in used car valuation.",
+                "task_prompt": "Based on the characteristics and condition of a used car, please predict its manufacturing year.",
+                "answer_prompt": "The predicted manufacturing year of the used car is."
+            }
+        },
+        "Mileage(kms)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in automotive evaluation.",
+                "task_prompt": "Based on the specifications and features of a used car, please predict its mileage.",
+                "answer_prompt": "The predicted mileage of the used car in kilometers is."
+            }
+        }
+    }
+}

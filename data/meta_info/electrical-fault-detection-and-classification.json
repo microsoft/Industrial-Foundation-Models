@@ -1,0 +1,170 @@
+{
+    "basic_info": {
+        "row_num": 7861,
+        "col_num": 10,
+        "label_candidates": [
+            "G",
+            "C",
+            "B",
+            "A"
+        ],
+        "valid_feature_num": 10,
+        "num_features": [
+            "Ia",
+            "Ib",
+            "Ic",
+            "Va",
+            "Vb",
+            "Vc"
+        ],
+        "cat_features": [
+            "G",
+            "C",
+            "B",
+            "A"
+        ],
+        "other_features": [],
+        "tags": [
+            "categorical",
+            "earth and nature",
+            "electronics",
+            "intermediate",
+            "classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/esathyaprakash/electrical-fault-detection-and-classification"
+    },
+    "feature_info": {
+        "G": {
+            "description": "Fault indicator for ground fault",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Indicates a ground fault",
+                "0": "Indicates no ground fault"
+            }
+        },
+        "C": {
+            "description": "Fault indicator for fault in phase C",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Indicates no fault in phase C",
+                "1": "Indicates a fault in phase C"
+            }
+        },
+        "B": {
+            "description": "Fault indicator for fault in phase B",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Indicates no fault in phase B",
+                "1": "Indicates a fault in phase B"
+            }
+        },
+        "A": {
+            "description": "Fault indicator for fault in phase A",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Indicates a fault in phase A",
+                "0": "Indicates no fault in phase A"
+            }
+        },
+        "Ia": {
+            "description": "Current in phase A (in Amperes)",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Ib": {
+            "description": "Current in phase B (in Amperes)",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Ic": {
+            "description": "Current in phase C (in Amperes)",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Va": {
+            "description": "Voltage in phase A (in Volts)",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Vb": {
+            "description": "Voltage in phase B (in Volts)",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Vc": {
+            "description": "Voltage in phase C (in Volts)",
+            "type": "numerical",
+            "decimal": 6
+        }
+    },
+    "task_info": {
+        "G": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in electrical fault detection and classification.",
+                "task_prompt": "Based on the features of the electrical system, please predict if there is a ground fault.",
+                "answer_prompt": "Indicates a ground fault[1] or Indicates no ground fault[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "Indicates a ground fault",
+                "0": "Indicates no ground fault"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        },
+        "C": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in electrical fault detection and classification.",
+                "task_prompt": "Based on the features of the electrical system, please predict if there is a fault in phase C.",
+                "answer_prompt": "Indicates a fault in phase C[1] or Indicates no fault in phase C[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "Indicates no fault in phase C",
+                "1": "Indicates a fault in phase C"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "B": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in electrical fault detection and classification.",
+                "task_prompt": "Based on the features of the electrical system, please predict if there is a fault in phase B.",
+                "answer_prompt": "Indicates a fault in phase B[1] or Indicates no fault in phase B[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "Indicates no fault in phase B",
+                "1": "Indicates a fault in phase B"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "A": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in electrical fault detection and classification.",
+                "task_prompt": "Based on the features of the electrical system, please predict if there is a fault in phase A.",
+                "answer_prompt": "Indicates a fault in phase A[1] or Indicates no fault in phase A[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "Indicates a fault in phase A",
+                "0": "Indicates no fault in phase A"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        }
+    }
+}

@@ -1,0 +1,94 @@
+{
+    "basic_info": {
+        "row_num": 398,
+        "col_num": 7,
+        "label_candidates": [
+            "Prediction"
+        ],
+        "valid_feature_num": 7,
+        "num_features": [],
+        "cat_features": [
+            "Food Product",
+            "Main Ingredient",
+            "Sweetener",
+            "Fat/Oil",
+            "Seasoning",
+            "Allergens",
+            "Prediction"
+        ],
+        "other_features": [],
+        "tags": [
+            "health",
+            "computer science",
+            "exploratory data analysis",
+            "classification",
+            "food",
+            "health conditions"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/uom190346a/food-ingredients-and-allergens"
+    },
+    "feature_info": {
+        "Food Product": {
+            "description": "The name of the food product.",
+            "type": "categorical"
+        },
+        "Main Ingredient": {
+            "description": "The main ingredient used in the food product.",
+            "type": "categorical"
+        },
+        "Sweetener": {
+            "description": "The type of sweetener used in the food product.",
+            "type": "categorical",
+            "value_dict": {
+                "Sugar": "The food product is sweetened with sugar.",
+                "Honey": "The food product is sweetened with honey.",
+                "Brown sugar": "The food product is sweetened with brown sugar.",
+                "Mayonnaise": "The food product is sweetened with mayonnaise.",
+                "Rice vinegar": "The food product is sweetened with rice vinegar.",
+                "Cocoa butter": "The food product is sweetened with cocoa butter.",
+                "Caramel": "The food product is sweetened with caramel.",
+                "Tamarind": "The food product is sweetened with tamarind.",
+                "Marshmallows": "The food product is sweetened with marshmallows."
+            }
+        },
+        "Fat/Oil": {
+            "description": "The type of fat or oil used in the food product.",
+            "type": "categorical"
+        },
+        "Seasoning": {
+            "description": "The type of seasoning used in the food product.",
+            "type": "categorical"
+        },
+        "Allergens": {
+            "description": "Potential allergens present in the food product.",
+            "type": "categorical"
+        },
+        "Prediction": {
+            "description": "Prediction if the food product contains allergens or not.",
+            "type": "categorical",
+            "value_dict": {
+                "Contains": "The food product contains allergens.",
+                "Does not contain": "The food product does not contain allergens."
+            }
+        }
+    },
+    "task_info": {
+        "Prediction": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in food allergen detection.",
+                "task_prompt": "Based on the features of the food product, please predict if it contains allergens.",
+                "answer_prompt": "Contains[1] or does not contain[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "Contains": "The food product contains allergens.",
+                "Does not contain": "The food product does not contain allergens."
+            },
+            "class_index_dict": {
+                "Contains": 1,
+                "Does not contain": 0
+            }
+        }
+    }
+}

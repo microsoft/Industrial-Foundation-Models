@@ -1,0 +1,214 @@
+{
+    "basic_info": {
+        "row_num": 70000,
+        "col_num": 14,
+        "label_candidates": [
+            "cardio",
+            "age",
+            "cholesterol",
+            "gluc",
+            "active"
+        ],
+        "valid_feature_num": 12,
+        "num_features": [
+            "age",
+            "height",
+            "weight",
+            "ap_hi",
+            "ap_lo"
+        ],
+        "cat_features": [
+            "gender",
+            "cholesterol",
+            "gluc",
+            "smoke",
+            "alco",
+            "active",
+            "cardio"
+        ],
+        "other_features": [],
+        "tags": [
+            "health and fitness",
+            "public health",
+            "genetics",
+            "health",
+            "heart conditions"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/thedevastator/exploring-risk-factors-for-cardiovascular-diseas"
+    },
+    "feature_info": {
+        "index": {
+            "description": "Row index",
+            "type": "useless"
+        },
+        "id": {
+            "description": "Unique identifier for each patient",
+            "type": "useless"
+        },
+        "age": {
+            "description": "Age of the patient in days",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "gender": {
+            "description": "Gender of the patient (1: female, 2: male)",
+            "type": "categorical",
+            "value_dict": {
+                "2": "Male",
+                "1": "Female"
+            }
+        },
+        "height": {
+            "description": "Height of the patient in cm",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "weight": {
+            "description": "Weight of the patient in kg",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "ap_hi": {
+            "description": "Systolic blood pressure",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "ap_lo": {
+            "description": "Diastolic blood pressure",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "cholesterol": {
+            "description": "Cholesterol level (1: normal, 2: above normal, 3: well above normal)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Normal",
+                "3": "Well above normal",
+                "2": "Above normal"
+            }
+        },
+        "gluc": {
+            "description": "Glucose level (1: normal, 2: above normal, 3: well above normal)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Normal",
+                "2": "Above normal",
+                "3": "Well above normal"
+            }
+        },
+        "smoke": {
+            "description": "Whether the patient smokes or not (0: no, 1: yes)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Non-smoker",
+                "1": "Smoker"
+            }
+        },
+        "alco": {
+            "description": "Alcohol intake (0: no, 1: yes)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Non-alcoholic",
+                "1": "Alcoholic"
+            }
+        },
+        "active": {
+            "description": "Physical activity (0: no, 1: yes)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Physically active",
+                "0": "Not physically active"
+            }
+        },
+        "cardio": {
+            "description": "Presence or absence of cardiovascular disease (0: no, 1: yes)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "No cardiovascular disease",
+                "1": "Cardiovascular disease present"
+            }
+        }
+    },
+    "task_info": {
+        "cardio": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in cardiovascular disease prediction.",
+                "task_prompt": "Based on the health indicators of the patient, please predict the probability of cardiovascular disease.",
+                "answer_prompt": "No cardiovascular disease[0] or Cardiovascular disease present[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "No cardiovascular disease",
+                "1": "Cardiovascular disease present"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "age": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in age prediction.",
+                "task_prompt": "Based on the health indicators of the patient, please predict the age.",
+                "answer_prompt": "What is the age of the patient?"
+            }
+        },
+        "cholesterol": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in health indicator analysis.",
+                "task_prompt": "Based on the health indicators of the patient, please predict the cholesterol level.",
+                "answer_prompt": "Normal[0], Above normal[1], or Well above normal[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "1": "Normal",
+                "3": "Well above normal",
+                "2": "Above normal"
+            },
+            "class_index_dict": {
+                "1": 0,
+                "2": 1,
+                "3": 2
+            }
+        },
+        "gluc": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in health indicator analysis.",
+                "task_prompt": "Based on the health indicators of the patient, please predict the glucose level.",
+                "answer_prompt": "Normal[0], Above normal[1], or Well above normal[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "1": "Normal",
+                "2": "Above normal",
+                "3": "Well above normal"
+            },
+            "class_index_dict": {
+                "1": 0,
+                "2": 1,
+                "3": 2
+            }
+        },
+        "active": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in lifestyle prediction.",
+                "task_prompt": "Based on the health indicators of the patient, please predict the physical activity level.",
+                "answer_prompt": "Not physically active[0] or Physically active[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "Physically active",
+                "0": "Not physically active"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        }
+    }
+}

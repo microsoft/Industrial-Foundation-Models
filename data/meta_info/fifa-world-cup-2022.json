@@ -1,0 +1,341 @@
+{
+    "basic_info": {
+        "row_num": 23921,
+        "col_num": 25,
+        "label_candidates": [
+            "home_team_score",
+            "away_team_score",
+            "home_team_result",
+            "home_team_fifa_rank",
+            "away_team_fifa_rank",
+            "home_team_total_fifa_points",
+            "away_team_total_fifa_points",
+            "home_team_goalkeeper_score",
+            "away_team_goalkeeper_score",
+            "home_team_mean_defense_score",
+            "away_team_mean_defense_score",
+            "home_team_mean_offense_score",
+            "away_team_mean_offense_score",
+            "home_team_mean_midfield_score",
+            "away_team_mean_midfield_score"
+        ],
+        "valid_feature_num": 25,
+        "num_features": [
+            "home_team_fifa_rank",
+            "away_team_fifa_rank",
+            "home_team_total_fifa_points",
+            "away_team_total_fifa_points",
+            "home_team_score",
+            "away_team_score",
+            "home_team_goalkeeper_score",
+            "away_team_goalkeeper_score",
+            "home_team_mean_defense_score",
+            "home_team_mean_offense_score",
+            "home_team_mean_midfield_score",
+            "away_team_mean_defense_score",
+            "away_team_mean_offense_score",
+            "away_team_mean_midfield_score"
+        ],
+        "cat_features": [
+            "home_team",
+            "away_team",
+            "home_team_continent",
+            "away_team_continent",
+            "tournament",
+            "city",
+            "country",
+            "neutral_location",
+            "shoot_out",
+            "home_team_result"
+        ],
+        "other_features": [
+            "date"
+        ],
+        "tags": [
+            "football",
+            "sports",
+            "exploratory data analysis",
+            "data visualization",
+            "classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/brenda89/fifa-world-cup-2022"
+    },
+    "feature_info": {
+        "date": {
+            "description": "The date of the match",
+            "type": "other"
+        },
+        "home_team": {
+            "description": "The name of the home team",
+            "type": "categorical"
+        },
+        "away_team": {
+            "description": "The name of the away team",
+            "type": "categorical"
+        },
+        "home_team_continent": {
+            "description": "The continent of the home team",
+            "type": "categorical",
+            "value_dict": {
+                "South America": "The home team is from South America",
+                "Africa": "The home team is from Africa",
+                "Europe": "The home team is from Europe",
+                "Oceania": "The home team is from Oceania",
+                "Asia": "The home team is from Asia",
+                "North America": "The home team is from North America"
+            }
+        },
+        "away_team_continent": {
+            "description": "The continent of the away team",
+            "type": "categorical",
+            "value_dict": {
+                "South America": "The away team is from South America",
+                "North America": "The away team is from North America",
+                "Africa": "The away team is from Africa",
+                "Europe": "The away team is from Europe",
+                "Asia": "The away team is from Asia",
+                "Oceania": "The away team is from Oceania"
+            }
+        },
+        "home_team_fifa_rank": {
+            "description": "FIFA ranking of the home team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "away_team_fifa_rank": {
+            "description": "FIFA ranking of the away team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "home_team_total_fifa_points": {
+            "description": "Total FIFA points of the home team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "away_team_total_fifa_points": {
+            "description": "Total FIFA points of the away team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "home_team_score": {
+            "description": "Score of the home team in the match",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "away_team_score": {
+            "description": "Score of the away team in the match",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "tournament": {
+            "description": "Name of the tournament",
+            "type": "categorical"
+        },
+        "city": {
+            "description": "City where the match took place",
+            "type": "categorical"
+        },
+        "country": {
+            "description": "Country where the match took place",
+            "type": "categorical"
+        },
+        "neutral_location": {
+            "description": "Whether the match took place at a neutral location",
+            "type": "categorical",
+            "value_dict": {
+                "False": "The match did not take place at a neutral location",
+                "True": "The match took place at a neutral location"
+            }
+        },
+        "shoot_out": {
+            "description": "Whether the match went to a shoot out",
+            "type": "categorical",
+            "value_dict": {
+                "No": "The match did not go to a shoot out",
+                "Yes": "The match went to a shoot out"
+            }
+        },
+        "home_team_result": {
+            "description": "Result of the match for the home team (win, lose, draw)",
+            "type": "categorical",
+            "value_dict": {
+                "Win": "The home team won the match",
+                "Draw": "The match was a draw",
+                "Lose": "The home team lost the match"
+            }
+        },
+        "home_team_goalkeeper_score": {
+            "description": "Score of the home team goalkeeper",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "away_team_goalkeeper_score": {
+            "description": "Score of the away team goalkeeper",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "home_team_mean_defense_score": {
+            "description": "Average defense score of the home team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "home_team_mean_offense_score": {
+            "description": "Average offense score of the home team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "home_team_mean_midfield_score": {
+            "description": "Average midfield score of the home team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "away_team_mean_defense_score": {
+            "description": "Average defense score of the away team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "away_team_mean_offense_score": {
+            "description": "Average offense score of the away team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "away_team_mean_midfield_score": {
+            "description": "Average midfield score of the away team",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "home_team_score": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sports analytics.",
+                "task_prompt": "Based on the features of the home team, please predict the score.",
+                "answer_prompt": "The predicted score is."
+            }
+        },
+        "away_team_score": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sports analytics.",
+                "task_prompt": "Based on the features of the away team, please predict the score.",
+                "answer_prompt": "The predicted score is."
+            }
+        },
+        "home_team_result": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in sports analytics.",
+                "task_prompt": "Based on the features of the home team, please predict the result of the match.",
+                "answer_prompt": "The home team won the match[0], The match was a draw[1], The home team lost the match[2]."
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "Win": "The home team won the match",
+                "Draw": "The match was a draw",
+                "Lose": "The home team lost the match"
+            },
+            "class_index_dict": {
+                "Win": 0,
+                "Draw": 1,
+                "Lose": 2
+            }
+        },
+        "home_team_fifa_rank": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sports analytics.",
+                "task_prompt": "Based on the features of the home team, please predict the FIFA rank.",
+                "answer_prompt": "The predicted FIFA rank is."
+            }
+        },
+        "away_team_fifa_rank": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sports analytics.",
+                "task_prompt": "Based on the features of the away team, please predict the FIFA rank.",
+                "answer_prompt": "The predicted FIFA rank is."
+            }
+        },
+        "home_team_total_fifa_points": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sports analytics.",
+                "task_prompt": "Based on the features of the home team, please predict the total FIFA points.",
+                "answer_prompt": "The predicted total FIFA points are."
+            }
+        },
+        "away_team_total_fifa_points": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sports analytics.",
+                "task_prompt": "Based on the features of the away team, please predict the total FIFA points.",
+                "answer_prompt": "The predicted total FIFA points are."
+            }
+        },
+        "home_team_goalkeeper_score": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sports analytics.",
+                "task_prompt": "Based on the features of the home team, please predict the goalkeeper score.",
+                "answer_prompt": "The predicted goalkeeper score is."
+            }
+        },
+        "away_team_goalkeeper_score": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sports analytics.",
+                "task_prompt": "Based on the features of the away team, please predict the goalkeeper score.",
+                "answer_prompt": "The predicted goalkeeper score is."
+            }
+        },
+        "home_team_mean_defense_score": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sports analytics.",
+                "task_prompt": "Based on the features of the home team, please predict the mean defense score.",
+                "answer_prompt": "The predicted mean defense score is."
+            }
+        },
+        "away_team_mean_defense_score": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sports analytics.",
+                "task_prompt": "Based on the features of the away team, please predict the mean defense score.",
+                "answer_prompt": "The predicted mean defense score is."
+            }
+        },
+        "home_team_mean_offense_score": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sports analytics.",
+                "task_prompt": "Based on the features of the home team, please predict the mean offense score.",
+                "answer_prompt": "The predicted mean offense score is."
+            }
+        },
+        "away_team_mean_offense_score": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sports analytics.",
+                "task_prompt": "Based on the features of the away team, please predict the mean offense score.",
+                "answer_prompt": "The predicted mean offense score is."
+            }
+        },
+        "home_team_mean_midfield_score": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sports analytics.",
+                "task_prompt": "Based on the features of the home team, please predict the mean midfield score.",
+                "answer_prompt": "The predicted mean midfield score is."
+            }
+        },
+        "away_team_mean_midfield_score": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sports analytics.",
+                "task_prompt": "Based on the features of the away team, please predict the mean midfield score.",
+                "answer_prompt": "The predicted mean midfield score is."
+            }
+        }
+    }
+}

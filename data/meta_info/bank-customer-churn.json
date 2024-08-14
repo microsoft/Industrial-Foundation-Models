@@ -1,0 +1,190 @@
+{
+    "basic_info": {
+        "row_num": 10000,
+        "col_num": 18,
+        "label_candidates": [
+            "Exited",
+            "Satisfaction Score",
+            "Point Earned"
+        ],
+        "valid_feature_num": 16,
+        "num_features": [
+            "CreditScore",
+            "Age",
+            "Tenure",
+            "Balance",
+            "NumOfProducts",
+            "EstimatedSalary",
+            "Satisfaction Score",
+            "Point Earned"
+        ],
+        "cat_features": [
+            "Surname",
+            "Geography",
+            "Gender",
+            "HasCrCard",
+            "IsActiveMember",
+            "Complain",
+            "Card Type",
+            "Exited"
+        ],
+        "other_features": [],
+        "tags": [
+            "banking",
+            "exploratory data analysis",
+            "data visualization",
+            "data analytics",
+            "classification",
+            "binary classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/radheshyamkollipara/bank-customer-churn"
+    },
+    "feature_info": {
+        "RowNumber": {
+            "description": "The index of the record in the dataset",
+            "type": "useless"
+        },
+        "CustomerId": {
+            "description": "Unique identifier for each customer",
+            "type": "useless"
+        },
+        "Surname": {
+            "description": "Last name of the customer",
+            "type": "categorical"
+        },
+        "CreditScore": {
+            "description": "A measure of the customer\u2019s creditworthiness",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Geography": {
+            "description": "The geographical location of the customer",
+            "type": "categorical",
+            "value_dict": {
+                "France": "The customer is from France",
+                "Spain": "The customer is from Spain",
+                "Germany": "The customer is from Germany"
+            }
+        },
+        "Gender": {
+            "description": "The gender of the customer",
+            "type": "categorical",
+            "value_dict": {
+                "Female": "The customer is female",
+                "Male": "The customer is male"
+            }
+        },
+        "Age": {
+            "description": "The age of the customer",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Tenure": {
+            "description": "Number of years the customer has been with the bank",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Balance": {
+            "description": "The current balance in the customer\u2019s account",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "NumOfProducts": {
+            "description": "Number of products the customer has",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "HasCrCard": {
+            "description": "Whether the customer has a credit card or not",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The customer has a credit card",
+                "0": "The customer does not have a credit card"
+            }
+        },
+        "IsActiveMember": {
+            "description": "Whether the customer is an active member or not",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The customer is an active member",
+                "0": "The customer is not an active member"
+            }
+        },
+        "EstimatedSalary": {
+            "description": "The estimated salary of the customer",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Exited": {
+            "description": "Whether the customer has exited the bank or not",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The customer has exited the bank",
+                "0": "The customer has not exited the bank"
+            }
+        },
+        "Complain": {
+            "description": "Whether the customer has made any complaints or not",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The customer has made a complaint",
+                "0": "The customer has not made a complaint"
+            }
+        },
+        "Satisfaction Score": {
+            "description": "The satisfaction score given by the customer",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Card Type": {
+            "description": "The type of card the customer has",
+            "type": "categorical",
+            "value_dict": {
+                "DIAMOND": "The customer has a Diamond card",
+                "GOLD": "The customer has a Gold card",
+                "SILVER": "The customer has a Silver card",
+                "PLATINUM": "The customer has a Platinum card"
+            }
+        },
+        "Point Earned": {
+            "description": "The points earned by the customer",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "Exited": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in customer behavior analysis.",
+                "task_prompt": "Based on the features of the customer, please predict if the customer has exited the bank.",
+                "answer_prompt": "Has exited the bank[1] or has not exited the bank[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "The customer has exited the bank",
+                "0": "The customer has not exited the bank"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        },
+        "Satisfaction Score": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in customer satisfaction analysis.",
+                "task_prompt": "Based on the features of the customer, please predict the satisfaction score of the customer.",
+                "answer_prompt": "What is the satisfaction score?"
+            }
+        },
+        "Point Earned": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in customer loyalty program analysis.",
+                "task_prompt": "Based on the features of the customer, please predict the points earned by the customer.",
+                "answer_prompt": "How many points has the customer earned?"
+            }
+        }
+    }
+}

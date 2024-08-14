@@ -1,0 +1,129 @@
+{
+    "basic_info": {
+        "row_num": 29451,
+        "col_num": 12,
+        "label_candidates": [
+            "TARGET(PRICE_IN_LACS)",
+            "SQUARE_FT",
+            "BHK_NO."
+        ],
+        "valid_feature_num": 12,
+        "num_features": [
+            "UNDER_CONSTRUCTION",
+            "RERA",
+            "BHK_NO.",
+            "SQUARE_FT",
+            "READY_TO_MOVE",
+            "RESALE",
+            "LONGITUDE",
+            "LATITUDE",
+            "TARGET(PRICE_IN_LACS)"
+        ],
+        "cat_features": [
+            "POSTED_BY",
+            "BHK_OR_RK"
+        ],
+        "other_features": [
+            "ADDRESS"
+        ],
+        "tags": [
+            "religion and belief systems",
+            "real estate"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/akash14/house-price-dataset"
+    },
+    "feature_info": {
+        "POSTED_BY": {
+            "description": "The person who posted the listing. It can be the owner, a dealer or a builder.",
+            "type": "categorical",
+            "value_dict": {
+                "Owner": "The house listing was posted by the owner.",
+                "Dealer": "The house listing was posted by a dealer.",
+                "Builder": "The house listing was posted by a builder."
+            }
+        },
+        "UNDER_CONSTRUCTION": {
+            "description": "Indicates whether the house is under construction. 0 means not under construction and 1 means under construction.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "RERA": {
+            "description": "Indicates whether the house is RERA approved. 0 means not approved and 1 means approved.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "BHK_NO.": {
+            "description": "The number of bedrooms in the house.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "BHK_OR_RK": {
+            "description": "Type of the house. It can be a bedroom-hall-kitchen (BHK) or a room-kitchen (RK).",
+            "type": "categorical",
+            "value_dict": {
+                "BHK": "The house is a Bedroom-Hall-Kitchen type.",
+                "RK": "The house is a Room-Kitchen type."
+            }
+        },
+        "SQUARE_FT": {
+            "description": "The area of the house in square feet.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "READY_TO_MOVE": {
+            "description": "Indicates whether the house is ready to move in. 0 means not ready and 1 means ready.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "RESALE": {
+            "description": "Indicates whether the house is for resale. 0 means not for resale and 1 means for resale.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "ADDRESS": {
+            "description": "The address of the house.",
+            "type": "other"
+        },
+        "LONGITUDE": {
+            "description": "The geographical longitude of the house.",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "LATITUDE": {
+            "description": "The geographical latitude of the house.",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "TARGET(PRICE_IN_LACS)": {
+            "description": "The price of the house in lacs.",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "TARGET(PRICE_IN_LACS)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate market analysis.",
+                "task_prompt": "Based on the features of the property, please predict the target price in lacs.",
+                "answer_prompt": "The target price in lacs is."
+            }
+        },
+        "SQUARE_FT": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in property size estimation.",
+                "task_prompt": "Based on the features of the property, please predict the square footage.",
+                "answer_prompt": "The square footage is."
+            }
+        },
+        "BHK_NO.": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in property type analysis.",
+                "task_prompt": "Based on the features of the property, please predict the number of bedrooms.",
+                "answer_prompt": "The number of bedrooms is."
+            }
+        }
+    }
+}

@@ -1,0 +1,142 @@
+{
+    "basic_info": {
+        "row_num": 663,
+        "col_num": 8,
+        "label_candidates": [
+            "Action_needed",
+            "Action",
+            "Question"
+        ],
+        "valid_feature_num": 7,
+        "num_features": [],
+        "cat_features": [
+            "Category",
+            "Question",
+            "Subcategory",
+            "Action",
+            "Time",
+            "Action_needed"
+        ],
+        "other_features": [
+            "Sentence"
+        ],
+        "tags": [
+            "nlp",
+            "categorical",
+            "tabular",
+            "multiclass classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/bouweceunen/smart-home-commands-dataset"
+    },
+    "feature_info": {
+        "Number": {
+            "description": "The unique identifier of the smart home command.",
+            "type": "useless"
+        },
+        "Category": {
+            "description": "The category of the device that the command is intended for.",
+            "type": "categorical"
+        },
+        "Action_needed": {
+            "description": "Indicates whether an action is required in response to the command.",
+            "type": "categorical",
+            "value_dict": {
+                "1": "An action is required in response to the command.",
+                "0": "No action is required in response to the command."
+            }
+        },
+        "Question": {
+            "description": "Indicates whether the command is in the form of a question.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The command is not in the form of a question.",
+                "1": "The command is in the form of a question."
+            }
+        },
+        "Subcategory": {
+            "description": "The subcategory of the device that the command is intended for.",
+            "type": "categorical"
+        },
+        "Action": {
+            "description": "The specific action that the command is instructing the device to perform.",
+            "type": "categorical",
+            "value_dict": {
+                "on": "The command is instructing the device to turn on.",
+                "none": "The command does not specify a specific action for the device.",
+                "off": "The command is instructing the device to turn off.",
+                "open": "The command is instructing the device to open.",
+                "down": "The command is instructing the device to go down.",
+                "up": "The command is instructing the device to go up."
+            }
+        },
+        "Time": {
+            "description": "The time at which the command should be carried out.",
+            "type": "categorical"
+        },
+        "Sentence": {
+            "description": "The full text of the smart home command.",
+            "type": "other"
+        }
+    },
+    "task_info": {
+        "Action_needed": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in natural language processing and smart home commands.",
+                "task_prompt": "Based on the content of the smart home command, please predict whether an action is required in response to the command.",
+                "answer_prompt": "An action is required[1] or no action is required[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "An action is required in response to the command.",
+                "0": "No action is required in response to the command."
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        },
+        "Action": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in natural language processing and smart home commands.",
+                "task_prompt": "Based on the content of the smart home command, please predict the specific action for the device.",
+                "answer_prompt": "Turn on[0], no specific action[1], turn off[2], open[3], go down[4], or go up[5]?"
+            },
+            "class_num": 6,
+            "class_value_dict": {
+                "on": "The command is instructing the device to turn on.",
+                "none": "The command does not specify a specific action for the device.",
+                "off": "The command is instructing the device to turn off.",
+                "open": "The command is instructing the device to open.",
+                "down": "The command is instructing the device to go down.",
+                "up": "The command is instructing the device to go up."
+            },
+            "class_index_dict": {
+                "on": 0,
+                "none": 1,
+                "off": 2,
+                "open": 3,
+                "down": 4,
+                "up": 5
+            }
+        },
+        "Question": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in natural language processing and smart home commands.",
+                "task_prompt": "Based on the content of the smart home command, please predict whether the command is in the form of a question.",
+                "answer_prompt": "The command is not a question[0] or the command is a question[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "The command is not in the form of a question.",
+                "1": "The command is in the form of a question."
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        }
+    }
+}

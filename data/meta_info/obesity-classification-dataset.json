@@ -1,0 +1,114 @@
+{
+    "basic_info": {
+        "row_num": 108,
+        "col_num": 7,
+        "label_candidates": [
+            "Label",
+            "BMI",
+            "Weight"
+        ],
+        "valid_feature_num": 6,
+        "num_features": [
+            "Age",
+            "Height",
+            "Weight",
+            "BMI"
+        ],
+        "cat_features": [
+            "Gender",
+            "Label"
+        ],
+        "other_features": [],
+        "tags": [
+            "health and fitness",
+            "healthcare",
+            "public health",
+            "health",
+            "health conditions"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/sujithmandala/obesity-classification-dataset"
+    },
+    "feature_info": {
+        "ID": {
+            "description": "Unique identifier for each record in the dataset.",
+            "type": "useless"
+        },
+        "Age": {
+            "description": "Age of the individual in years.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Gender": {
+            "description": "Gender of the individual (Male/Female).",
+            "type": "categorical",
+            "value_dict": {
+                "Male": "The individual is male.",
+                "Female": "The individual is female."
+            }
+        },
+        "Height": {
+            "description": "Height of the individual in centimeters.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Weight": {
+            "description": "Weight of the individual in kilograms.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "BMI": {
+            "description": "Body Mass Index of the individual, calculated as Weight (kg) / Height (m)^2.",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Label": {
+            "description": "Classification label indicating the obesity level of the individual (Normal Weight, Overweight, Underweight, Obese).",
+            "type": "categorical",
+            "value_dict": {
+                "Normal Weight": "The individual has a normal weight according to their BMI.",
+                "Overweight": "The individual is overweight according to their BMI.",
+                "Underweight": "The individual is underweight according to their BMI.",
+                "Obese": "The individual is obese according to their BMI."
+            }
+        }
+    },
+    "task_info": {
+        "Label": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in health and fitness.",
+                "task_prompt": "Based on the age, gender, height, weight, and BMI of the individual, please predict the weight category.",
+                "answer_prompt": "Underweight[0], Normal Weight[1], Overweight[2], or Obese[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "Normal Weight": "The individual has a normal weight according to their BMI.",
+                "Overweight": "The individual is overweight according to their BMI.",
+                "Underweight": "The individual is underweight according to their BMI.",
+                "Obese": "The individual is obese according to their BMI."
+            },
+            "class_index_dict": {
+                "Underweight": 0,
+                "Normal Weight": 1,
+                "Overweight": 2,
+                "Obese": 3
+            }
+        },
+        "BMI": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health and fitness.",
+                "task_prompt": "Based on the age, gender, height, and weight of the individual, please predict the BMI.",
+                "answer_prompt": "What is the predicted BMI?"
+            }
+        },
+        "Weight": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health and fitness.",
+                "task_prompt": "Based on the age, gender, height, and BMI of the individual, please predict the weight.",
+                "answer_prompt": "What is the predicted weight?"
+            }
+        }
+    }
+}

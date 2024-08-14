@@ -1,0 +1,203 @@
+{
+    "basic_info": {
+        "row_num": 9254,
+        "col_num": 11,
+        "label_candidates": [
+            "class",
+            "comb. class",
+            "other class"
+        ],
+        "valid_feature_num": 10,
+        "num_features": [
+            "number",
+            "cpm",
+            "mis",
+            "misr",
+            "omega"
+        ],
+        "cat_features": [
+            "sup",
+            "dir",
+            "comb. class",
+            "other class",
+            "class"
+        ],
+        "other_features": [],
+        "tags": [
+            "earth and nature",
+            "science and technology",
+            "electronics",
+            "engineering",
+            "classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/heitornunes/mechanical-analysis"
+    },
+    "feature_info": {
+        "instance": {
+            "description": "Identifier for the instance",
+            "type": "useless"
+        },
+        "number": {
+            "description": "Sequential number",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "sup": {
+            "description": "Supervision level of the mechanical process",
+            "type": "categorical",
+            "value_dict": {
+                "3": "Supervision level 3",
+                "2": "Supervision level 2",
+                "1": "Supervision level 1",
+                "4": "Supervision level 4",
+                "0": "No supervision"
+            }
+        },
+        "cpm": {
+            "description": "Counts per minute, a measure of the speed of the mechanical process",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "mis": {
+            "description": "Number of misfires in the mechanical process",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "misr": {
+            "description": "Misfire rate in the mechanical process",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "dir": {
+            "description": "Direction of the mechanical process",
+            "type": "categorical",
+            "value_dict": {
+                "ao": "Direction: AO",
+                "aa": "Direction: AA",
+                "vo": "Direction: VO",
+                "va": "Direction: VA",
+                "io": "Direction: IO",
+                "ia": "Direction: IA",
+                "ma": "Direction: MA",
+                "av": "Direction: AV",
+                "vv": "Direction: VV",
+                "iv": "Direction: IV"
+            }
+        },
+        "omega": {
+            "description": "Angular velocity of the mechanical process in rad/s",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "class": {
+            "description": "Class label for the mechanical process",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Class 1",
+                "4": "Class 4",
+                "5": "Class 5",
+                "2": "Class 2",
+                "3": "Class 3",
+                "6": "Class 6"
+            }
+        },
+        "comb. class": {
+            "description": "Combined class label for the mechanical process",
+            "type": "categorical",
+            "value_dict": {
+                "7.0": "Combined Class 7",
+                "8.0": "Combined Class 8",
+                "10.0": "Combined Class 10",
+                "9.0": "Combined Class 9"
+            }
+        },
+        "other class": {
+            "description": "Alternative class label for the mechanical process",
+            "type": "categorical",
+            "value_dict": {
+                "5.0": "Other Class 5",
+                "2.0": "Other Class 2",
+                "3.0": "Other Class 3",
+                "8.0": "Other Class 8",
+                "7.0": "Other Class 7",
+                "9.0": "Other Class 9",
+                "4.0": "Other Class 4"
+            }
+        }
+    },
+    "task_info": {
+        "class": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in mechanical analysis.",
+                "task_prompt": "Based on the features of the mechanical components, please predict the class.",
+                "answer_prompt": "Class 1[0], Class 2[1], Class 3[2], Class 4[3], Class 5[4], Class 6[5]?"
+            },
+            "class_num": 6,
+            "class_value_dict": {
+                "1": "Class 1",
+                "4": "Class 4",
+                "5": "Class 5",
+                "2": "Class 2",
+                "3": "Class 3",
+                "6": "Class 6"
+            },
+            "class_index_dict": {
+                "1": 0,
+                "4": 1,
+                "5": 2,
+                "2": 3,
+                "3": 4,
+                "6": 5
+            }
+        },
+        "comb. class": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in mechanical analysis.",
+                "task_prompt": "Based on the features of the mechanical components, please predict the combined class.",
+                "answer_prompt": "Combined Class 7[0], Combined Class 8[1], Combined Class 9[2], Combined Class 10[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "7.0": "Combined Class 7",
+                "8.0": "Combined Class 8",
+                "10.0": "Combined Class 10",
+                "9.0": "Combined Class 9"
+            },
+            "class_index_dict": {
+                "7.0": 0,
+                "8.0": 1,
+                "10.0": 2,
+                "9.0": 3
+            }
+        },
+        "other class": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in mechanical analysis.",
+                "task_prompt": "Based on the features of the mechanical components, please predict the other class.",
+                "answer_prompt": "Other Class 2[0], Other Class 3[1], Other Class 4[2], Other Class 5[3], Other Class 7[4], Other Class 8[5], Other Class 9[6]?"
+            },
+            "class_num": 7,
+            "class_value_dict": {
+                "5.0": "Other Class 5",
+                "2.0": "Other Class 2",
+                "3.0": "Other Class 3",
+                "8.0": "Other Class 8",
+                "7.0": "Other Class 7",
+                "9.0": "Other Class 9",
+                "4.0": "Other Class 4"
+            },
+            "class_index_dict": {
+                "5.0": 0,
+                "2.0": 1,
+                "3.0": 2,
+                "8.0": 3,
+                "7.0": 4,
+                "9.0": 5,
+                "4.0": 6
+            }
+        }
+    }
+}

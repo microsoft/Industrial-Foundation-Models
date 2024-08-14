@@ -1,0 +1,342 @@
+{
+    "basic_info": {
+        "row_num": 19917,
+        "col_num": 45,
+        "label_candidates": [
+            "percent_helpful",
+            "views",
+            "num_votes",
+            "is_expert"
+        ],
+        "valid_feature_num": 45,
+        "num_features": [
+            "character_count",
+            "word_count",
+            "method_count",
+            "mean_method_size",
+            "mean_paragraph_size",
+            "size_largest_method",
+            "size_shortest_method",
+            "std_method_size",
+            "step_count",
+            "mean_steps_per_method",
+            "introduction_size",
+            "summary_size",
+            "references_count",
+            "references_count_per_text_length",
+            "references_count_per_method",
+            "image_count",
+            "image_count_per_method",
+            "num_votes",
+            "views",
+            "co_authors",
+            "warnings",
+            "tips",
+            "to_be_verb",
+            "aux_verb",
+            "conjunction",
+            "pronoun",
+            "preposition",
+            "nominalization",
+            "sentence_beginning_pronoun",
+            "sentence_beginning_interrogative",
+            "sentence_beginning_article",
+            "sentence_beginning_subordination",
+            "sentence_beginning_conjunction",
+            "sentence_beginning_preposition",
+            "Kincaid",
+            "ARI",
+            "Coleman_Liau",
+            "FleschReadingEase",
+            "GunningFogIndex",
+            "LIX",
+            "SMOGIndex",
+            "RIX",
+            "DaleChallIndex",
+            "percent_helpful"
+        ],
+        "cat_features": [
+            "is_expert"
+        ],
+        "other_features": [],
+        "tags": [
+            "text",
+            "tabular",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/aniketsharma00411/wikihow-features"
+    },
+    "feature_info": {
+        "character_count": {
+            "description": "The count of characters in the text",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "word_count": {
+            "description": "The count of words in the text",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "method_count": {
+            "description": "The count of methods used in the text",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "mean_method_size": {
+            "description": "The average size of methods used in the text",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "mean_paragraph_size": {
+            "description": "The average size of paragraphs in the text",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "size_largest_method": {
+            "description": "The size of the largest method used in the text",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "size_shortest_method": {
+            "description": "The size of the shortest method used in the text",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "std_method_size": {
+            "description": "The standard deviation of the size of methods used in the text",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "step_count": {
+            "description": "The count of steps in the text",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "mean_steps_per_method": {
+            "description": "The average number of steps per method in the text",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "introduction_size": {
+            "description": "The size of the introduction in the text",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "summary_size": {
+            "description": "The size of the summary in the text",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "references_count": {
+            "description": "The count of references in the text",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "references_count_per_text_length": {
+            "description": "The count of references per text length",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "references_count_per_method": {
+            "description": "The count of references per method",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "image_count": {
+            "description": "The count of images in the text",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "image_count_per_method": {
+            "description": "The count of images per method",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "num_votes": {
+            "description": "The number of votes the text received",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "is_expert": {
+            "description": "Whether the author is an expert or not (1 for expert, 0 for not expert)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The author is an expert",
+                "0": "The author is not an expert"
+            }
+        },
+        "views": {
+            "description": "The number of views the text received",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "co_authors": {
+            "description": "The number of co-authors of the text",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "warnings": {
+            "description": "The number of warnings in the text",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "tips": {
+            "description": "The number of tips in the text",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "to_be_verb": {
+            "description": "The count of \"to be\" verbs in the text",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "aux_verb": {
+            "description": "The count of auxiliary verbs in the text",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "conjunction": {
+            "description": "The count of conjunctions in the text",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "pronoun": {
+            "description": "The count of pronouns in the text",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "preposition": {
+            "description": "The count of prepositions in the text",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "nominalization": {
+            "description": "The count of nominalizations in the text",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "sentence_beginning_pronoun": {
+            "description": "The count of sentences beginning with a pronoun",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "sentence_beginning_interrogative": {
+            "description": "The count of sentences beginning with an interrogative word",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "sentence_beginning_article": {
+            "description": "The count of sentences beginning with an article",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "sentence_beginning_subordination": {
+            "description": "The count of sentences beginning with a subordination",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "sentence_beginning_conjunction": {
+            "description": "The count of sentences beginning with a conjunction",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "sentence_beginning_preposition": {
+            "description": "The count of sentences beginning with a preposition",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Kincaid": {
+            "description": "The Kincaid readability score of the text",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "ARI": {
+            "description": "The Automated Readability Index of the text",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Coleman_Liau": {
+            "description": "The Coleman Liau index of the text",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "FleschReadingEase": {
+            "description": "The Flesch Reading Ease score of the text",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "GunningFogIndex": {
+            "description": "The Gunning Fog Index of the text",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "LIX": {
+            "description": "The LIX readability score of the text",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "SMOGIndex": {
+            "description": "The SMOG Index of the text",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "RIX": {
+            "description": "The RIX readability score of the text",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "DaleChallIndex": {
+            "description": "The Dale Chall Readability score of the text",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "percent_helpful": {
+            "description": "The percentage of helpful votes the text received",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "percent_helpful": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in text analysis and prediction.",
+                "task_prompt": "Based on the features of the text, please predict the helpfulness percentage of the text.",
+                "answer_prompt": "The predicted helpfulness percentage of the text is [%]."
+            }
+        },
+        "views": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in text analysis and prediction.",
+                "task_prompt": "Based on the features of the text, please predict the number of views the text will receive.",
+                "answer_prompt": "The predicted number of views for the text is [%]."
+            }
+        },
+        "num_votes": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in text analysis and prediction.",
+                "task_prompt": "Based on the features of the text, please predict the number of votes the text will receive.",
+                "answer_prompt": "The predicted number of votes for the text is [%]."
+            }
+        },
+        "is_expert": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in text analysis and prediction.",
+                "task_prompt": "Based on the features of the text, please predict whether the author is an expert or not.",
+                "answer_prompt": "The author is an expert[1] or not an expert[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "The author is an expert",
+                "0": "The author is not an expert"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        }
+    }
+}

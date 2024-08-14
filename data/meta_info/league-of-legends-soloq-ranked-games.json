@@ -1,0 +1,535 @@
+{
+    "basic_info": {
+        "row_num": 242572,
+        "col_num": 59,
+        "label_candidates": [
+            "hasWon",
+            "kills",
+            "deaths",
+            "assists",
+            "gameDuration"
+        ],
+        "valid_feature_num": 58,
+        "num_features": [
+            "gameDuration",
+            "frame",
+            "goldDiff",
+            "expDiff",
+            "champLevelDiff",
+            "killedFireDrake",
+            "killedWaterDrake",
+            "killedAirDrake",
+            "killedEarthDrake",
+            "killedElderDrake",
+            "lostFireDrake",
+            "lostWaterDrake",
+            "lostAirDrake",
+            "lostEarthDrake",
+            "lostElderDrake",
+            "killedBaronNashor",
+            "lostBaronNashor",
+            "killedRiftHerald",
+            "lostRiftHerald",
+            "kills",
+            "deaths",
+            "assists",
+            "wardsPlaced",
+            "wardsDestroyed",
+            "wardsLost"
+        ],
+        "cat_features": [
+            "isFirstTower",
+            "isFirstBlood",
+            "destroyedTopInhibitor",
+            "destroyedMidInhibitor",
+            "destroyedBotInhibitor",
+            "lostTopInhibitor",
+            "lostMidInhibitor",
+            "lostBotInhibitor",
+            "destroyedTopNexusTurret",
+            "destroyedMidNexusTurret",
+            "destroyedBotNexusTurret",
+            "lostTopNexusTurret",
+            "lostMidNexusTurret",
+            "lostBotNexusTurret",
+            "destroyedTopBaseTurret",
+            "destroyedMidBaseTurret",
+            "destroyedBotBaseTurret",
+            "lostTopBaseTurret",
+            "lostMidBaseTurret",
+            "lostBotBaseTurret",
+            "destroyedTopInnerTurret",
+            "destroyedMidInnerTurret",
+            "destroyedBotInnerTurret",
+            "lostTopInnerTurret",
+            "lostMidInnerTurret",
+            "lostBotInnerTurret",
+            "destroyedTopOuterTurret",
+            "destroyedMidOuterTurret",
+            "destroyedBotOuterTurret",
+            "lostTopOuterTurret",
+            "lostMidOuterTurret",
+            "lostBotOuterTurret",
+            "hasWon"
+        ],
+        "other_features": [],
+        "tags": [
+            "video games"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/bobbyscience/league-of-legends-soloq-ranked-games"
+    },
+    "feature_info": {
+        "gameId": {
+            "description": "Unique identifier for each game",
+            "type": "useless"
+        },
+        "gameDuration": {
+            "description": "Duration of the game in milliseconds",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "hasWon": {
+            "description": "Indicates whether the game was won (1) or lost (0)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The game was won",
+                "0": "The game was lost"
+            }
+        },
+        "frame": {
+            "description": "Snapshot of the game at a particular time",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "goldDiff": {
+            "description": "Difference in gold between teams",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "expDiff": {
+            "description": "Difference in experience points between teams",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "champLevelDiff": {
+            "description": "Difference in champion levels between teams",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "isFirstTower": {
+            "description": "Indicates whether the team was the first to destroy a tower (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The team was not the first to destroy a tower",
+                "1": "The team was the first to destroy a tower"
+            }
+        },
+        "isFirstBlood": {
+            "description": "Indicates whether the team was the first to kill an enemy champion (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The team was the first to kill an enemy champion",
+                "0": "The team was not the first to kill an enemy champion"
+            }
+        },
+        "killedFireDrake": {
+            "description": "Number of Fire Drakes (dragons) killed by the team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "killedWaterDrake": {
+            "description": "Number of Water Drakes (dragons) killed by the team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "killedAirDrake": {
+            "description": "Number of Air Drakes (dragons) killed by the team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "killedEarthDrake": {
+            "description": "Number of Earth Drakes (dragons) killed by the team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "killedElderDrake": {
+            "description": "Number of Elder Drakes (dragons) killed by the team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "lostFireDrake": {
+            "description": "Number of Fire Drakes (dragons) lost by the team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "lostWaterDrake": {
+            "description": "Number of Water Drakes (dragons) lost by the team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "lostAirDrake": {
+            "description": "Number of Air Drakes (dragons) lost by the team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "lostEarthDrake": {
+            "description": "Number of Earth Drakes (dragons) lost by the team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "lostElderDrake": {
+            "description": "Number of Elder Drakes (dragons) lost by the team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "killedBaronNashor": {
+            "description": "Number of Baron Nashor killed by the team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "lostBaronNashor": {
+            "description": "Number of Baron Nashor lost by the team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "killedRiftHerald": {
+            "description": "Number of Rift Herald killed by the team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "lostRiftHerald": {
+            "description": "Number of Rift Herald lost by the team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "destroyedTopInhibitor": {
+            "description": "Indicates if the team destroyed the top inhibitor (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The team did not destroy the top inhibitor",
+                "1": "The team destroyed the top inhibitor once",
+                "2": "The team destroyed the top inhibitor twice",
+                "3": "The team destroyed the top inhibitor three times"
+            }
+        },
+        "destroyedMidInhibitor": {
+            "description": "Indicates if the team destroyed the mid inhibitor (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The team did not destroy the mid inhibitor",
+                "1": "The team destroyed the mid inhibitor once",
+                "2": "The team destroyed the mid inhibitor twice",
+                "3": "The team destroyed the mid inhibitor three times"
+            }
+        },
+        "destroyedBotInhibitor": {
+            "description": "Indicates if the team destroyed the bot inhibitor (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The team did not destroy the bot inhibitor",
+                "1": "The team destroyed the bot inhibitor once",
+                "2": "The team destroyed the bot inhibitor twice",
+                "3": "The team destroyed the bot inhibitor three times",
+                "4": "The team destroyed the bot inhibitor four times"
+            }
+        },
+        "lostTopInhibitor": {
+            "description": "Indicates if the team lost the top inhibitor (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The team did not lose the top inhibitor",
+                "1": "The team lost the top inhibitor once",
+                "2": "The team lost the top inhibitor twice",
+                "3": "The team lost the top inhibitor three times"
+            }
+        },
+        "lostMidInhibitor": {
+            "description": "Indicates if the team lost the mid inhibitor (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The team did not lose the mid inhibitor",
+                "1": "The team lost the mid inhibitor once",
+                "2": "The team lost the mid inhibitor twice",
+                "3": "The team lost the mid inhibitor three times"
+            }
+        },
+        "lostBotInhibitor": {
+            "description": "Indicates if the team lost the bot inhibitor (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The team did not lose the bot inhibitor",
+                "1": "The team lost the bot inhibitor once",
+                "2": "The team lost the bot inhibitor twice",
+                "3": "The team lost the bot inhibitor three times",
+                "4": "The team lost the bot inhibitor four times"
+            }
+        },
+        "destroyedTopNexusTurret": {
+            "description": "Indicates if the team destroyed the top nexus turret (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The team did not destroy the top nexus turret",
+                "1": "The team destroyed the top nexus turret"
+            }
+        },
+        "destroyedMidNexusTurret": {
+            "description": "Indicates if the team destroyed the mid nexus turret (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The team did not destroy the mid nexus turret",
+                "1": "The team destroyed the mid nexus turret"
+            }
+        },
+        "destroyedBotNexusTurret": {
+            "description": "Indicates if the team destroyed the bot nexus turret (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The team did not destroy the bot nexus turret",
+                "1": "The team destroyed the bot nexus turret"
+            }
+        },
+        "lostTopNexusTurret": {
+            "description": "Indicates if the team lost the top nexus turret (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The team did not lose the top nexus turret",
+                "1": "The team lost the top nexus turret"
+            }
+        },
+        "lostMidNexusTurret": {
+            "description": "Indicates if the team lost the mid nexus turret (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The team did not lose the mid nexus turret",
+                "1": "The team lost the mid nexus turret"
+            }
+        },
+        "lostBotNexusTurret": {
+            "description": "Indicates if the team lost the bot nexus turret (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The team did not lose the bot nexus turret",
+                "1": "The team lost the bot nexus turret"
+            }
+        },
+        "destroyedTopBaseTurret": {
+            "description": "Indicates if the team destroyed the top base turret (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The team did not destroy the top base turret"
+            }
+        },
+        "destroyedMidBaseTurret": {
+            "description": "Indicates if the team destroyed the mid base turret (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The team did not destroy the mid base turret"
+            }
+        },
+        "destroyedBotBaseTurret": {
+            "description": "Indicates if the team destroyed the bot base turret (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The team did not destroy the bot base turret",
+                "1": "The team destroyed the bot base turret once",
+                "2": "The team destroyed the bot base turret twice"
+            }
+        },
+        "lostTopBaseTurret": {
+            "description": "Indicates if the team lost the top base turret (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The team did not lose the top base turret"
+            }
+        },
+        "lostMidBaseTurret": {
+            "description": "Indicates if the team lost the mid base turret (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The team did not lose the mid base turret"
+            }
+        },
+        "lostBotBaseTurret": {
+            "description": "Indicates if the team lost the bot base turret (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The team did not lose the bot base turret",
+                "2": "The team lost the bot base turret twice",
+                "1": "The team lost the bot base turret once"
+            }
+        },
+        "destroyedTopInnerTurret": {
+            "description": "Indicates if the team destroyed the top inner turret (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The team did not destroy the top inner turret",
+                "1": "The team destroyed the top inner turret"
+            }
+        },
+        "destroyedMidInnerTurret": {
+            "description": "Indicates if the team destroyed the mid inner turret (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The team did not destroy the mid inner turret",
+                "1": "The team destroyed the mid inner turret"
+            }
+        },
+        "destroyedBotInnerTurret": {
+            "description": "Indicates if the team destroyed the bot inner turret (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The team did not destroy the bot inner turret",
+                "1": "The team destroyed the bot inner turret"
+            }
+        },
+        "lostTopInnerTurret": {
+            "description": "Indicates if the team lost the top inner turret (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The team did not lose the top inner turret",
+                "1": "The team lost the top inner turret"
+            }
+        },
+        "lostMidInnerTurret": {
+            "description": "Indicates if the team lost the mid inner turret (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The team did not lose the mid inner turret",
+                "1": "The team lost the mid inner turret"
+            }
+        },
+        "lostBotInnerTurret": {
+            "description": "Indicates if the team lost the bot inner turret (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The team did not lose the bot inner turret",
+                "1": "The team lost the bot inner turret"
+            }
+        },
+        "destroyedTopOuterTurret": {
+            "description": "Indicates if the team destroyed the top outer turret (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The team did not destroy the top outer turret",
+                "1": "The team destroyed the top outer turret"
+            }
+        },
+        "destroyedMidOuterTurret": {
+            "description": "Indicates if the team destroyed the mid outer turret (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The team did not destroy the mid outer turret",
+                "1": "The team destroyed the mid outer turret"
+            }
+        },
+        "destroyedBotOuterTurret": {
+            "description": "Indicates if the team destroyed the bot outer turret (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The team did not destroy the bot outer turret",
+                "1": "The team destroyed the bot outer turret"
+            }
+        },
+        "lostTopOuterTurret": {
+            "description": "Indicates if the team lost the top outer turret (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The team did not lose the top outer turret",
+                "1": "The team lost the top outer turret"
+            }
+        },
+        "lostMidOuterTurret": {
+            "description": "Indicates if the team lost the mid outer turret (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The team did not lose the mid outer turret",
+                "1": "The team lost the mid outer turret"
+            }
+        },
+        "lostBotOuterTurret": {
+            "description": "Indicates if the team lost the bot outer turret (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The team did not lose the bot outer turret",
+                "1": "The team lost the bot outer turret"
+            }
+        },
+        "kills": {
+            "description": "Number of enemy champions killed by the team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "deaths": {
+            "description": "Number of times the team members were killed",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "assists": {
+            "description": "Number of assists the team made",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "wardsPlaced": {
+            "description": "Number of wards placed by the team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "wardsDestroyed": {
+            "description": "Number of enemy wards destroyed by the team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "wardsLost": {
+            "description": "Number of wards lost by the team",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "hasWon": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing game data from League of Legends.",
+                "task_prompt": "Based on the features of the game, please predict if the game was won or lost.",
+                "answer_prompt": "Won[1] or Lost[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "The game was won",
+                "0": "The game was lost"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        },
+        "kills": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing game data from League of Legends.",
+                "task_prompt": "Based on the features of the game, please predict the number of kills."
+            }
+        },
+        "deaths": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing game data from League of Legends.",
+                "task_prompt": "Based on the features of the game, please predict the number of deaths."
+            }
+        },
+        "assists": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing game data from League of Legends.",
+                "task_prompt": "Based on the features of the game, please predict the number of assists."
+            }
+        },
+        "gameDuration": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing game data from League of Legends.",
+                "task_prompt": "Based on the features of the game, please predict the duration of the game."
+            }
+        }
+    }
+}

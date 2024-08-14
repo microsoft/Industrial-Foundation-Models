@@ -1,0 +1,235 @@
+{
+    "basic_info": {
+        "row_num": 696,
+        "col_num": 25,
+        "label_candidates": [
+            "quality",
+            "calories_kcal",
+            "fats_g",
+            "protein_g",
+            "sugar_g"
+        ],
+        "valid_feature_num": 25,
+        "num_features": [
+            "size",
+            "calories_kcal",
+            "fats_g",
+            "sod_mg",
+            "carb_g",
+            "fiber_g",
+            "sugar_g",
+            "protein_g",
+            "vitA_g",
+            "calcium_mg",
+            "thiamin_mg",
+            "zinc_mg",
+            "potassium_mg",
+            "magnesium_mg",
+            "vitE_mg",
+            "vitK_mcg",
+            "vitC_mg",
+            "vitB6_mg",
+            "copper_mg",
+            "carotene_mg",
+            "carotene_mcg",
+            "cryptoxanthin_mcg",
+            "lycopene_mcg",
+            "cholesterol_mg"
+        ],
+        "cat_features": [
+            "quality"
+        ],
+        "other_features": [],
+        "tags": [
+            "exploratory data analysis",
+            "data cleaning",
+            "data visualization",
+            "feature engineering",
+            "food"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/shroukgomaa/babies-food-ingredients"
+    },
+    "feature_info": {
+        "size": {
+            "description": "Size of the food portion in unspecified unit",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "calories_kcal": {
+            "description": "Energy content of the food in kilocalories (kcal)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "fats_g": {
+            "description": "Fat content of the food in grams (g)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "sod_mg": {
+            "description": "Sodium content of the food in milligrams (mg)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "carb_g": {
+            "description": "Carbohydrate content of the food in grams (g)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "fiber_g": {
+            "description": "Dietary fiber content of the food in grams (g)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "sugar_g": {
+            "description": "Sugar content of the food in grams (g)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "protein_g": {
+            "description": "Protein content of the food in grams (g)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "vitA_g": {
+            "description": "Vitamin A content of the food in grams (g)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "calcium_mg": {
+            "description": "Calcium content of the food in milligrams (mg)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "thiamin_mg": {
+            "description": "Thiamin (Vitamin B1) content of the food in milligrams (mg)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "zinc_mg": {
+            "description": "Zinc content of the food in milligrams (mg)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "potassium_mg": {
+            "description": "Potassium content of the food in milligrams (mg)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "magnesium_mg": {
+            "description": "Magnesium content of the food in milligrams (mg)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "vitE_mg": {
+            "description": "Vitamin E content of the food in milligrams (mg)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "vitK_mcg": {
+            "description": "Vitamin K content of the food in micrograms (mcg)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "vitC_mg": {
+            "description": "Vitamin C content of the food in milligrams (mg)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "vitB6_mg": {
+            "description": "Vitamin B6 content of the food in milligrams (mg)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "copper_mg": {
+            "description": "Copper content of the food in milligrams (mg)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "carotene_mg": {
+            "description": "Carotene content of the food in milligrams (mg)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "carotene_mcg": {
+            "description": "Carotene content of the food in micrograms (mcg)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "cryptoxanthin_mcg": {
+            "description": "Cryptoxanthin content of the food in micrograms (mcg)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "lycopene_mcg": {
+            "description": "Lycopene content of the food in micrograms (mcg)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "cholesterol_mg": {
+            "description": "Cholesterol content of the food in milligrams (mg)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "quality": {
+            "description": "Quality rating of the food",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Quality rating 1",
+                "0": "Quality rating 0",
+                "3": "Quality rating 3",
+                "2": "Quality rating 2"
+            }
+        }
+    },
+    "task_info": {
+        "quality": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in food nutrition.",
+                "task_prompt": "Based on the nutritional information of the baby food, please predict the quality rating.",
+                "answer_prompt": "Quality rating 1[0], Quality rating 0[1], Quality rating 3[2], Quality rating 2[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "1": "Quality rating 1",
+                "0": "Quality rating 0",
+                "3": "Quality rating 3",
+                "2": "Quality rating 2"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0,
+                "3": 3,
+                "2": 2
+            }
+        },
+        "calories_kcal": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in food nutrition.",
+                "task_prompt": "Based on the nutritional information of the baby food, please predict the caloric value (in kcal)."
+            }
+        },
+        "fats_g": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in food nutrition.",
+                "task_prompt": "Based on the nutritional information of the baby food, please predict the fat content (in grams)."
+            }
+        },
+        "protein_g": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in food nutrition.",
+                "task_prompt": "Based on the nutritional information of the baby food, please predict the protein content (in grams)."
+            }
+        },
+        "sugar_g": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in food nutrition.",
+                "task_prompt": "Based on the nutritional information of the baby food, please predict the sugar content (in grams)."
+            }
+        }
+    }
+}

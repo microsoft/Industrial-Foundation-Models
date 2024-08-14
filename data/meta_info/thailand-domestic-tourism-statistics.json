@@ -1,0 +1,175 @@
+{
+    "basic_info": {
+        "row_num": 30800,
+        "col_num": 7,
+        "label_candidates": [
+            "value",
+            "variable",
+            "region_eng",
+            "region_thai"
+        ],
+        "valid_feature_num": 7,
+        "num_features": [
+            "value"
+        ],
+        "cat_features": [
+            "province_thai",
+            "province_eng",
+            "region_thai",
+            "region_eng",
+            "variable"
+        ],
+        "other_features": [
+            "date"
+        ],
+        "tags": [
+            "time series analysis",
+            "tabular",
+            "regression",
+            "travel",
+            "english",
+            "thai"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/thaweewatboy/thailand-domestic-tourism-statistics"
+    },
+    "feature_info": {
+        "date": {
+            "description": "The date when the data was recorded. It is in the format of YYYY-MM-DD.",
+            "type": "other"
+        },
+        "province_thai": {
+            "description": "The name of the province in Thailand where the data was recorded, in Thai language.",
+            "type": "categorical"
+        },
+        "province_eng": {
+            "description": "The name of the province in Thailand where the data was recorded, in English language.",
+            "type": "categorical"
+        },
+        "region_thai": {
+            "description": "The name of the region in Thailand where the province belongs to, in Thai language.",
+            "type": "categorical",
+            "value_dict": {
+                "\u0e20\u0e32\u0e04\u0e01\u0e25\u0e32\u0e07": "Central region of Thailand",
+                "\u0e20\u0e32\u0e04\u0e15\u0e30\u0e27\u0e31\u0e19\u0e2d\u0e2d\u0e01": "Eastern region of Thailand",
+                "\u0e20\u0e32\u0e04\u0e43\u0e15\u0e49": "Southern region of Thailand",
+                "\u0e20\u0e32\u0e04\u0e40\u0e2b\u0e19\u0e37\u0e2d": "Northern region of Thailand",
+                "\u0e20\u0e32\u0e04\u0e15\u0e30\u0e27\u0e31\u0e19\u0e2d\u0e2d\u0e01\u0e40\u0e09\u0e35\u0e22\u0e07\u0e40\u0e2b\u0e19\u0e37\u0e2d": "Northeastern region of Thailand"
+            }
+        },
+        "region_eng": {
+            "description": "The name of the region in Thailand where the province belongs to, in English language.",
+            "type": "categorical",
+            "value_dict": {
+                "central": "Central region of Thailand",
+                "east": "Eastern region of Thailand",
+                "south": "Southern region of Thailand",
+                "north": "Northern region of Thailand",
+                "east_northeast": "Northeastern region of Thailand"
+            }
+        },
+        "variable": {
+            "description": "The type of tourism statistic being recorded. For example, \"occupancy_rate\".",
+            "type": "categorical",
+            "value_dict": {
+                "occupancy_rate": "The percentage of occupied tourist accommodations",
+                "no_tourist_occupied": "The number of tourists occupying accommodations",
+                "no_tourist_all": "The total number of tourists",
+                "no_tourist_thai": "The number of Thai tourists",
+                "no_tourist_foreign": "The number of foreign tourists",
+                "net_profit_all": "The net profit from all tourists",
+                "net_profit_thai": "The net profit from Thai tourists",
+                "net_profit_foreign": "The net profit from foreign tourists"
+            }
+        },
+        "value": {
+            "description": "The recorded value for the given variable. The unit depends on the variable. For example, for \"occupancy_rate\", the unit is percentage.",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "value": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in tourism statistics.",
+                "task_prompt": "Based on the date, province, and region of Thailand, please predict the tourism statistic value.",
+                "answer_prompt": "The predicted value is: ."
+            }
+        },
+        "variable": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in tourism statistics.",
+                "task_prompt": "Based on the date, province, and region of Thailand, please predict the type of tourism statistic.",
+                "answer_prompt": "Is the type of tourism statistic occupancy_rate[0], no_tourist_occupied[1], no_tourist_all[2], no_tourist_thai[3], no_tourist_foreign[4], net_profit_all[5], net_profit_thai[6], or net_profit_foreign[7]?"
+            },
+            "class_num": 8,
+            "class_value_dict": {
+                "occupancy_rate": "The percentage of occupied tourist accommodations",
+                "no_tourist_occupied": "The number of tourists occupying accommodations",
+                "no_tourist_all": "The total number of tourists",
+                "no_tourist_thai": "The number of Thai tourists",
+                "no_tourist_foreign": "The number of foreign tourists",
+                "net_profit_all": "The net profit from all tourists",
+                "net_profit_thai": "The net profit from Thai tourists",
+                "net_profit_foreign": "The net profit from foreign tourists"
+            },
+            "class_index_dict": {
+                "occupancy_rate": 0,
+                "no_tourist_occupied": 1,
+                "no_tourist_all": 2,
+                "no_tourist_thai": 3,
+                "no_tourist_foreign": 4,
+                "net_profit_all": 5,
+                "net_profit_thai": 6,
+                "net_profit_foreign": 7
+            }
+        },
+        "region_eng": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in tourism statistics.",
+                "task_prompt": "Based on the date, province, and tourism statistics of Thailand, please predict the region in English.",
+                "answer_prompt": "Is the region central[0], east[1], south[2], north[3], or east_northeast[4]?"
+            },
+            "class_num": 5,
+            "class_value_dict": {
+                "central": "Central region of Thailand",
+                "east": "Eastern region of Thailand",
+                "south": "Southern region of Thailand",
+                "north": "Northern region of Thailand",
+                "east_northeast": "Northeastern region of Thailand"
+            },
+            "class_index_dict": {
+                "central": 0,
+                "east": 1,
+                "south": 2,
+                "north": 3,
+                "east_northeast": 4
+            }
+        },
+        "region_thai": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in tourism statistics.",
+                "task_prompt": "Based on the date, province, and tourism statistics of Thailand, please predict the region in Thai.",
+                "answer_prompt": "Is the region \u0e20\u0e32\u0e04\u0e01\u0e25\u0e32\u0e07[0], \u0e20\u0e32\u0e04\u0e15\u0e30\u0e27\u0e31\u0e19\u0e2d\u0e2d\u0e01[1], \u0e20\u0e32\u0e04\u0e43\u0e15\u0e49[2], \u0e20\u0e32\u0e04\u0e40\u0e2b\u0e19\u0e37\u0e2d[3], or \u0e20\u0e32\u0e04\u0e15\u0e30\u0e27\u0e31\u0e19\u0e2d\u0e2d\u0e01\u0e40\u0e09\u0e35\u0e22\u0e07\u0e40\u0e2b\u0e19\u0e37\u0e2d[4]?"
+            },
+            "class_num": 5,
+            "class_value_dict": {
+                "\u0e20\u0e32\u0e04\u0e01\u0e25\u0e32\u0e07": "Central region of Thailand",
+                "\u0e20\u0e32\u0e04\u0e15\u0e30\u0e27\u0e31\u0e19\u0e2d\u0e2d\u0e01": "Eastern region of Thailand",
+                "\u0e20\u0e32\u0e04\u0e43\u0e15\u0e49": "Southern region of Thailand",
+                "\u0e20\u0e32\u0e04\u0e40\u0e2b\u0e19\u0e37\u0e2d": "Northern region of Thailand",
+                "\u0e20\u0e32\u0e04\u0e15\u0e30\u0e27\u0e31\u0e19\u0e2d\u0e2d\u0e01\u0e40\u0e09\u0e35\u0e22\u0e07\u0e40\u0e2b\u0e19\u0e37\u0e2d": "Northeastern region of Thailand"
+            },
+            "class_index_dict": {
+                "\u0e20\u0e32\u0e04\u0e01\u0e25\u0e32\u0e07": 0,
+                "\u0e20\u0e32\u0e04\u0e15\u0e30\u0e27\u0e31\u0e19\u0e2d\u0e2d\u0e01": 1,
+                "\u0e20\u0e32\u0e04\u0e43\u0e15\u0e49": 2,
+                "\u0e20\u0e32\u0e04\u0e40\u0e2b\u0e19\u0e37\u0e2d": 3,
+                "\u0e20\u0e32\u0e04\u0e15\u0e30\u0e27\u0e31\u0e19\u0e2d\u0e2d\u0e01\u0e40\u0e09\u0e35\u0e22\u0e07\u0e40\u0e2b\u0e19\u0e37\u0e2d": 4
+            }
+        }
+    }
+}

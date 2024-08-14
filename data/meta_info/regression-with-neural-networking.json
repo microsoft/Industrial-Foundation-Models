@@ -1,0 +1,108 @@
+{
+    "basic_info": {
+        "row_num": 1030,
+        "col_num": 9,
+        "label_candidates": [
+            "Strength",
+            "Age",
+            "Cement"
+        ],
+        "valid_feature_num": 9,
+        "num_features": [
+            "Cement",
+            "Blast Furnace Slag",
+            "Fly Ash",
+            "Water",
+            "Superplasticizer",
+            "Coarse Aggregate",
+            "Fine Aggregate",
+            "Age",
+            "Strength"
+        ],
+        "cat_features": [],
+        "other_features": [],
+        "tags": [
+            "business",
+            "computer science",
+            "deep learning",
+            "linear regression",
+            "neural networks",
+            "regression",
+            "keras"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/prathamtripathi/regression-with-neural-networking"
+    },
+    "feature_info": {
+        "Cement": {
+            "description": "The amount of cement used in the concrete mixture, in kilograms.",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Blast Furnace Slag": {
+            "description": "The amount of blast furnace slag used in the concrete mixture, in kilograms.",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Fly Ash": {
+            "description": "The amount of fly ash used in the concrete mixture, in kilograms.",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Water": {
+            "description": "The amount of water used in the concrete mixture, in kilograms.",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Superplasticizer": {
+            "description": "The amount of superplasticizer used in the concrete mixture, in kilograms.",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Coarse Aggregate": {
+            "description": "The amount of coarse aggregate used in the concrete mixture, in kilograms.",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Fine Aggregate": {
+            "description": "The amount of fine aggregate used in the concrete mixture, in kilograms.",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Age": {
+            "description": "The age of the concrete, in days.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Strength": {
+            "description": "The compressive strength of the concrete, in MegaPascals.",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "Strength": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in civil engineering and material science.",
+                "task_prompt": "Based on the composition and age of the concrete, please predict its compressive strength.",
+                "answer_prompt": "The predicted compressive strength of the concrete is __."
+            }
+        },
+        "Age": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in civil engineering and material science.",
+                "task_prompt": "Based on the composition and strength of the concrete, please predict its age.",
+                "answer_prompt": "The predicted age of the concrete is __."
+            }
+        },
+        "Cement": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in civil engineering and material science.",
+                "task_prompt": "Based on the other components and strength of the concrete, please predict the amount of cement used.",
+                "answer_prompt": "The predicted amount of cement used in the concrete is __."
+            }
+        }
+    }
+}

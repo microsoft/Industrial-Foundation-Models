@@ -1,0 +1,78 @@
+{
+    "basic_info": {
+        "row_num": 21641,
+        "col_num": 5,
+        "label_candidates": [
+            "topic"
+        ],
+        "valid_feature_num": 4,
+        "num_features": [],
+        "cat_features": [
+            "heading",
+            "body",
+            "topic"
+        ],
+        "other_features": [
+            "date"
+        ],
+        "tags": [
+            "social science",
+            "news"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/sudalairajkumar/telugu-nlp"
+    },
+    "feature_info": {
+        "SNo": {
+            "description": "Unique identifier for each entry",
+            "type": "useless"
+        },
+        "date": {
+            "description": "Date of the news article",
+            "type": "other"
+        },
+        "heading": {
+            "description": "Heading of the news article",
+            "type": "categorical"
+        },
+        "body": {
+            "description": "Body text of the news article",
+            "type": "categorical"
+        },
+        "topic": {
+            "description": "Topic category of the news article",
+            "type": "categorical",
+            "value_dict": {
+                "entertainment": "The news article is related to entertainment",
+                "nation": "The news article is related to national news",
+                "business": "The news article is related to business",
+                "editorial": "The news article is an editorial piece",
+                "sports": "The news article is related to sports"
+            }
+        }
+    },
+    "task_info": {
+        "topic": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in news categorization.",
+                "task_prompt": "Based on the features of the news article, please predict the category of the news.",
+                "answer_prompt": "The news article is related to entertainment[0], national news[1], business[2], editorial piece[3] or sports[4]?"
+            },
+            "class_num": 5,
+            "class_value_dict": {
+                "entertainment": "The news article is related to entertainment",
+                "nation": "The news article is related to national news",
+                "business": "The news article is related to business",
+                "editorial": "The news article is an editorial piece",
+                "sports": "The news article is related to sports"
+            },
+            "class_index_dict": {
+                "entertainment": 0,
+                "nation": 1,
+                "business": 2,
+                "editorial": 3,
+                "sports": 4
+            }
+        }
+    }
+}

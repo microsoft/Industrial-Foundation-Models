@@ -1,0 +1,105 @@
+{
+    "basic_info": {
+        "row_num": 1342,
+        "col_num": 6,
+        "label_candidates": [
+            "mosquito_Indicator",
+            "rain(mm)",
+            "mean_T(\u2103)",
+            "min_T(\u2103)",
+            "max_T(\u2103)"
+        ],
+        "valid_feature_num": 6,
+        "num_features": [
+            "rain(mm)",
+            "mean_T(\u2103)",
+            "min_T(\u2103)",
+            "max_T(\u2103)",
+            "mosquito_Indicator"
+        ],
+        "cat_features": [],
+        "other_features": [
+            "date"
+        ],
+        "tags": [
+            "atmospheric science",
+            "exploratory data analysis",
+            "linear regression",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/kukuroo3/mosquito-indicator-in-seoul-korea"
+    },
+    "feature_info": {
+        "date": {
+            "description": "The date when the data was recorded",
+            "type": "other"
+        },
+        "mosquito_Indicator": {
+            "description": "Indicator of mosquito activity",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "rain(mm)": {
+            "description": "Amount of rainfall in millimeters",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "mean_T(\u2103)": {
+            "description": "Mean temperature in degrees Celsius",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "min_T(\u2103)": {
+            "description": "Minimum temperature in degrees Celsius",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "max_T(\u2103)": {
+            "description": "Maximum temperature in degrees Celsius",
+            "type": "numerical",
+            "decimal": 1
+        }
+    },
+    "task_info": {
+        "mosquito_Indicator": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in mosquito population prediction.",
+                "task_prompt": "Based on the date and weather conditions in Seoul, Korea, please predict the mosquito indicator.",
+                "answer_prompt": "The predicted mosquito indicator is __."
+            }
+        },
+        "rain(mm)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in meteorology.",
+                "task_prompt": "Based on the date and temperature conditions in Seoul, Korea, please predict the amount of rain (in mm).",
+                "answer_prompt": "The predicted amount of rain is __ mm."
+            }
+        },
+        "mean_T(\u2103)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in meteorology.",
+                "task_prompt": "Based on the date, rainfall, and min/max temperature data for Seoul, Korea, please predict the mean temperature.",
+                "answer_prompt": "The predicted mean temperature is __ \u2103."
+            }
+        },
+        "min_T(\u2103)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in meteorology.",
+                "task_prompt": "Based on the date, rainfall, and mean/max temperature data for Seoul, Korea, please predict the minimum temperature.",
+                "answer_prompt": "The predicted minimum temperature is __ \u2103."
+            }
+        },
+        "max_T(\u2103)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in meteorology.",
+                "task_prompt": "Based on the date, rainfall, and mean/min temperature data for Seoul, Korea, please predict the maximum temperature.",
+                "answer_prompt": "The predicted maximum temperature is __ \u2103."
+            }
+        }
+    }
+}

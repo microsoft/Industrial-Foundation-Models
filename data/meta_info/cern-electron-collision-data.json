@@ -1,0 +1,172 @@
+{
+    "basic_info": {
+        "row_num": 100000,
+        "col_num": 19,
+        "label_candidates": [
+            "M",
+            "E1",
+            "E2"
+        ],
+        "valid_feature_num": 19,
+        "num_features": [
+            "E1",
+            "px1 ",
+            "py1",
+            "pz1",
+            "pt1",
+            "eta1",
+            "phi1",
+            "E2",
+            "px2",
+            "py2",
+            "pz2",
+            "pt2",
+            "eta2",
+            "phi2",
+            "M"
+        ],
+        "cat_features": [
+            "Run",
+            "Event",
+            "Q1",
+            "Q2"
+        ],
+        "other_features": [],
+        "tags": [
+            "earth and nature",
+            "physical science",
+            "physics",
+            "science and technology",
+            "computer science",
+            "data analytics"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/fedesoriano/cern-electron-collision-data"
+    },
+    "feature_info": {
+        "Run": {
+            "description": "Run number, representing a specific period of data taking",
+            "type": "categorical"
+        },
+        "Event": {
+            "description": "Event number, representing a specific collision event",
+            "type": "categorical"
+        },
+        "E1": {
+            "description": "Energy of electron 1",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "px1 ": {
+            "description": "Momentum of electron 1 in the x direction",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "py1": {
+            "description": "Momentum of electron 1 in the y direction",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "pz1": {
+            "description": "Momentum of electron 1 in the z direction",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "pt1": {
+            "description": "Transverse momentum of electron 1",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "eta1": {
+            "description": "Pseudorapidity of electron 1",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "phi1": {
+            "description": "Azimuthal angle of electron 1",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "Q1": {
+            "description": "Charge of electron 1",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Electron 1 has positive charge",
+                "-1": "Electron 1 has negative charge"
+            }
+        },
+        "E2": {
+            "description": "Energy of electron 2",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "px2": {
+            "description": "Momentum of electron 2 in the x direction",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "py2": {
+            "description": "Momentum of electron 2 in the y direction",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "pz2": {
+            "description": "Momentum of electron 2 in the z direction",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "pt2": {
+            "description": "Transverse momentum of electron 2",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "eta2": {
+            "description": "Pseudorapidity of electron 2",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "phi2": {
+            "description": "Azimuthal angle of electron 2",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "Q2": {
+            "description": "Charge of electron 2",
+            "type": "categorical",
+            "value_dict": {
+                "-1": "Electron 2 has negative charge",
+                "1": "Electron 2 has positive charge"
+            }
+        },
+        "M": {
+            "description": "Invariant mass of the two electron system",
+            "type": "numerical",
+            "decimal": 5
+        }
+    },
+    "task_info": {
+        "M": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in particle physics.",
+                "task_prompt": "Based on the features of the electron collision event, please predict the invariant mass of the two electrons.",
+                "answer_prompt": "The invariant mass of the two electrons is {M}."
+            }
+        },
+        "E1": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in particle physics.",
+                "task_prompt": "Based on the features of the electron collision event, please predict the energy of the first electron.",
+                "answer_prompt": "The energy of the first electron is {E1}."
+            }
+        },
+        "E2": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in particle physics.",
+                "task_prompt": "Based on the features of the electron collision event, please predict the energy of the second electron.",
+                "answer_prompt": "The energy of the second electron is {E2}."
+            }
+        }
+    }
+}

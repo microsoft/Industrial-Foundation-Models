@@ -1,0 +1,308 @@
+{
+    "basic_info": {
+        "row_num": 1044,
+        "col_num": 33,
+        "label_candidates": [
+            "G3",
+            "G2",
+            "G1",
+            "health",
+            "absences"
+        ],
+        "valid_feature_num": 23,
+        "num_features": [
+            "age",
+            "failures",
+            "absences",
+            "G1",
+            "G2",
+            "G3"
+        ],
+        "cat_features": [
+            "school",
+            "sex",
+            "address",
+            "famsize",
+            "Pstatus",
+            "Mjob",
+            "Fjob",
+            "reason",
+            "guardian",
+            "schoolsup",
+            "famsup",
+            "paid",
+            "activities",
+            "nursery",
+            "higher",
+            "internet",
+            "romantic"
+        ],
+        "other_features": [],
+        "tags": [
+            "education",
+            "computer science",
+            "data visualization",
+            "classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/whenamancodes/alcohol-effects-on-study"
+    },
+    "feature_info": {
+        "school": {
+            "description": "Student's school (GP - Gabriel Pereira or MS - Mousinho da Silveira)",
+            "type": "categorical",
+            "value_dict": {
+                "GP": "Gabriel Pereira",
+                "MS": "Mousinho da Silveira"
+            }
+        },
+        "sex": {
+            "description": "Student's sex (F - female or M - male)",
+            "type": "categorical",
+            "value_dict": {
+                "F": "Female",
+                "M": "Male"
+            }
+        },
+        "age": {
+            "description": "Student's age (from 15 to 22)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "address": {
+            "description": "Student's home address type (U - urban or R - rural)",
+            "type": "categorical",
+            "value_dict": {
+                "U": "Urban",
+                "R": "Rural"
+            }
+        },
+        "famsize": {
+            "description": "Family size (LE3 - less or equal to 3 or GT3 - greater than 3)",
+            "type": "categorical",
+            "value_dict": {
+                "GT3": "Greater than 3",
+                "LE3": "Less or equal to 3"
+            }
+        },
+        "Pstatus": {
+            "description": "Parent's cohabitation status (T - living together or A - apart)",
+            "type": "categorical",
+            "value_dict": {
+                "A": "Apart",
+                "T": "Together"
+            }
+        },
+        "Medu": {
+            "description": "Mother's education (0 - none, 1 - primary education (4th grade), 2 \u2013 5th to 9th grade, 3 \u2013 secondary education or 4 \u2013 higher education)",
+            "type": "ordinal"
+        },
+        "Fedu": {
+            "description": "Father's education (0 - none, 1 - primary education (4th grade), 2 \u2013 5th to 9th grade, 3 \u2013 secondary education or 4 \u2013 higher education)",
+            "type": "ordinal"
+        },
+        "Mjob": {
+            "description": "Mother's job (teacher, health care related, civil services, at home or other)",
+            "type": "categorical",
+            "value_dict": {
+                "at_home": "Mother at home",
+                "health": "Mother in health care",
+                "other": "Mother in other job",
+                "services": "Mother in civil services",
+                "teacher": "Mother is a teacher"
+            }
+        },
+        "Fjob": {
+            "description": "Father's job (teacher, health care related, civil services, at home or other)",
+            "type": "categorical",
+            "value_dict": {
+                "teacher": "Father is a teacher",
+                "other": "Father in other job",
+                "services": "Father in civil services",
+                "health": "Father in health care",
+                "at_home": "Father at home"
+            }
+        },
+        "reason": {
+            "description": "Reason to choose this school (close to home, school reputation, course preference or other)",
+            "type": "categorical",
+            "value_dict": {
+                "course": "Course preference",
+                "other": "Other reasons",
+                "home": "Close to home",
+                "reputation": "School reputation"
+            }
+        },
+        "guardian": {
+            "description": "Student's guardian (mother, father or other)",
+            "type": "categorical",
+            "value_dict": {
+                "mother": "Mother",
+                "father": "Father",
+                "other": "Other"
+            }
+        },
+        "traveltime": {
+            "description": "Home to school travel time (1 - <15 min., 2 - 15 to 30 min., 3 - 30 min. to 1 hour, or 4 - >1 hour)",
+            "type": "ordinal"
+        },
+        "studytime": {
+            "description": "Weekly study time (1 - <2 hours, 2 - 2 to 5 hours, 3 - 5 to 10 hours, or 4 - >10 hours)",
+            "type": "ordinal"
+        },
+        "failures": {
+            "description": "Number of past class failures (n if 1<=n<3, else 4)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "schoolsup": {
+            "description": "Extra educational support (yes or no)",
+            "type": "categorical",
+            "value_dict": {
+                "yes": "Receives extra educational support",
+                "no": "Does not receive extra educational support"
+            }
+        },
+        "famsup": {
+            "description": "Family educational support (yes or no)",
+            "type": "categorical",
+            "value_dict": {
+                "no": "Does not receive family educational support",
+                "yes": "Receives family educational support"
+            }
+        },
+        "paid": {
+            "description": "Extra paid classes within the course subject (Math or Portuguese) (yes or no)",
+            "type": "categorical",
+            "value_dict": {
+                "no": "Does not have extra paid classes",
+                "yes": "Has extra paid classes"
+            }
+        },
+        "activities": {
+            "description": "Extra-curricular activities (yes or no)",
+            "type": "categorical",
+            "value_dict": {
+                "no": "Does not participate in extra-curricular activities",
+                "yes": "Participates in extra-curricular activities"
+            }
+        },
+        "nursery": {
+            "description": "Attended nursery school (yes or no)",
+            "type": "categorical",
+            "value_dict": {
+                "yes": "Attended nursery school",
+                "no": "Did not attend nursery school"
+            }
+        },
+        "higher": {
+            "description": "Wants to take higher education (yes or no)",
+            "type": "categorical",
+            "value_dict": {
+                "yes": "Wants to take higher education",
+                "no": "Does not want to take higher education"
+            }
+        },
+        "internet": {
+            "description": "Internet access at home (yes or no)",
+            "type": "categorical",
+            "value_dict": {
+                "no": "Does not have internet access at home",
+                "yes": "Has internet access at home"
+            }
+        },
+        "romantic": {
+            "description": "With a romantic relationship (yes or no)",
+            "type": "categorical",
+            "value_dict": {
+                "no": "Not in a romantic relationship",
+                "yes": "In a romantic relationship"
+            }
+        },
+        "famrel": {
+            "description": "Quality of family relationships (from 1 - very bad to 5 - excellent)",
+            "type": "ordinal"
+        },
+        "freetime": {
+            "description": "Free time after school (from 1 - very low to 5 - very high)",
+            "type": "ordinal"
+        },
+        "goout": {
+            "description": "Going out with friends (from 1 - very low to 5 - very high)",
+            "type": "ordinal"
+        },
+        "Dalc": {
+            "description": "Workday alcohol consumption (from 1 - very low to 5 - very high)",
+            "type": "ordinal"
+        },
+        "Walc": {
+            "description": "Weekend alcohol consumption (from 1 - very low to 5 - very high)",
+            "type": "ordinal"
+        },
+        "health": {
+            "description": "Current health status (from 1 - very bad to 5 - very good)",
+            "type": "ordinal"
+        },
+        "absences": {
+            "description": "Number of school absences (from 0 to 93)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "G1": {
+            "description": "First period grade (from 0 to 20)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "G2": {
+            "description": "Second period grade (from 0 to 20)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "G3": {
+            "description": "Final grade (from 0 to 20, output target)",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "G3": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in student performance prediction.",
+                "task_prompt": "Based on the features of the student lifestyle and study habits, please predict the final grade (G3) of the student.",
+                "answer_prompt": "The final grade (G3) is predicted to be {G3}."
+            }
+        },
+        "G2": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in student performance prediction.",
+                "task_prompt": "Based on the features of the student lifestyle and study habits, please predict the second period grade (G2) of the student.",
+                "answer_prompt": "The second period grade (G2) is predicted to be {G2}."
+            }
+        },
+        "G1": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in student performance prediction.",
+                "task_prompt": "Based on the features of the student lifestyle and study habits, please predict the first period grade (G1) of the student.",
+                "answer_prompt": "The first period grade (G1) is predicted to be {G1}."
+            }
+        },
+        "health": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in student health prediction.",
+                "task_prompt": "Based on the features of the student lifestyle and study habits, please predict the health status of the student.",
+                "answer_prompt": "The health status is predicted to be {health}."
+            }
+        },
+        "absences": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in student attendance prediction.",
+                "task_prompt": "Based on the features of the student lifestyle and study habits, please predict the number of absences of the student.",
+                "answer_prompt": "The number of absences is predicted to be {absences}."
+            }
+        }
+    }
+}

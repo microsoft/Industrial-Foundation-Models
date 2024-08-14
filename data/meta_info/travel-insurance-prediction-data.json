@@ -1,0 +1,152 @@
+{
+    "basic_info": {
+        "row_num": 1987,
+        "col_num": 9,
+        "label_candidates": [
+            "TravelInsurance",
+            "ChronicDiseases",
+            "FrequentFlyer"
+        ],
+        "valid_feature_num": 9,
+        "num_features": [
+            "Age",
+            "AnnualIncome",
+            "FamilyMembers"
+        ],
+        "cat_features": [
+            "Employment Type",
+            "GraduateOrNot",
+            "ChronicDiseases",
+            "FrequentFlyer",
+            "EverTravelledAbroad",
+            "TravelInsurance"
+        ],
+        "other_features": [],
+        "tags": [
+            "business",
+            "classification",
+            "tabular",
+            "insurance",
+            "travel"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/tejashvi14/travel-insurance-prediction-data"
+    },
+    "feature_info": {
+        "Age": {
+            "description": "The age of the insurance buyer",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Employment Type": {
+            "description": "The employment type of the insurance buyer, either Government Sector or Private Sector/Self Employed",
+            "type": "categorical",
+            "value_dict": {
+                "Government Sector": "The insurance buyer is employed in the government sector",
+                "Private Sector/Self Employed": "The insurance buyer is employed in the private sector or is self-employed"
+            }
+        },
+        "GraduateOrNot": {
+            "description": "Whether the insurance buyer is a graduate or not",
+            "type": "categorical",
+            "value_dict": {
+                "Yes": "The insurance buyer is a graduate",
+                "No": "The insurance buyer is not a graduate"
+            }
+        },
+        "AnnualIncome": {
+            "description": "The annual income of the insurance buyer",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "FamilyMembers": {
+            "description": "The number of family members of the insurance buyer",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "ChronicDiseases": {
+            "description": "Whether the insurance buyer has chronic diseases or not",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The insurance buyer has chronic diseases",
+                "0": "The insurance buyer does not have chronic diseases"
+            }
+        },
+        "FrequentFlyer": {
+            "description": "Whether the insurance buyer is a frequent flyer or not",
+            "type": "categorical",
+            "value_dict": {
+                "No": "The insurance buyer is not a frequent flyer",
+                "Yes": "The insurance buyer is a frequent flyer"
+            }
+        },
+        "EverTravelledAbroad": {
+            "description": "Whether the insurance buyer has ever travelled abroad or not",
+            "type": "categorical",
+            "value_dict": {
+                "No": "The insurance buyer has never travelled abroad",
+                "Yes": "The insurance buyer has travelled abroad"
+            }
+        },
+        "TravelInsurance": {
+            "description": "Whether the insurance buyer has travel insurance or not",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The insurance buyer does not have travel insurance",
+                "1": "The insurance buyer has travel insurance"
+            }
+        }
+    },
+    "task_info": {
+        "TravelInsurance": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in insurance prediction.",
+                "task_prompt": "Based on the features of the insurance buyer, please predict if the buyer has travel insurance.",
+                "answer_prompt": "Has travel insurance[1] or does not have travel insurance[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "The insurance buyer does not have travel insurance",
+                "1": "The insurance buyer has travel insurance"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "ChronicDiseases": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in health prediction.",
+                "task_prompt": "Based on the features of the insurance buyer, please predict if the buyer has chronic diseases.",
+                "answer_prompt": "Has chronic diseases[1] or does not have chronic diseases[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "The insurance buyer does not have chronic diseases",
+                "1": "The insurance buyer has chronic diseases"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "FrequentFlyer": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in travel behavior prediction.",
+                "task_prompt": "Based on the features of the insurance buyer, please predict if the buyer is a frequent flyer.",
+                "answer_prompt": "Is a frequent flyer[1] or is not a frequent flyer[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "No": "The insurance buyer is not a frequent flyer",
+                "Yes": "The insurance buyer is a frequent flyer"
+            },
+            "class_index_dict": {
+                "No": 0,
+                "Yes": 1
+            }
+        }
+    }
+}

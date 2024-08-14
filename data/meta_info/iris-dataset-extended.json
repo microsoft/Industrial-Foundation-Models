@@ -1,0 +1,350 @@
+{
+    "basic_info": {
+        "row_num": 1200,
+        "col_num": 21,
+        "label_candidates": [
+            "species",
+            "elevation",
+            "soil_type",
+            "sepal_length",
+            "sepal_width",
+            "petal_length",
+            "petal_width",
+            "sepal_area",
+            "petal_area",
+            "sepal_aspect_ratio",
+            "petal_aspect_ratio",
+            "sepal_to_petal_length_ratio",
+            "sepal_to_petal_width_ratio",
+            "sepal_petal_length_diff",
+            "sepal_petal_width_diff",
+            "petal_curvature_mm",
+            "petal_texture_trichomes_per_mm2",
+            "leaf_area_cm2",
+            "sepal_area_sqrt",
+            "petal_area_sqrt",
+            "area_ratios"
+        ],
+        "valid_feature_num": 21,
+        "num_features": [
+            "elevation",
+            "sepal_length",
+            "sepal_width",
+            "petal_length",
+            "petal_width",
+            "sepal_area",
+            "petal_area",
+            "sepal_aspect_ratio",
+            "petal_aspect_ratio",
+            "sepal_to_petal_length_ratio",
+            "sepal_to_petal_width_ratio",
+            "sepal_petal_length_diff",
+            "sepal_petal_width_diff",
+            "petal_curvature_mm",
+            "petal_texture_trichomes_per_mm2",
+            "leaf_area_cm2",
+            "sepal_area_sqrt",
+            "petal_area_sqrt",
+            "area_ratios"
+        ],
+        "cat_features": [
+            "soil_type",
+            "species"
+        ],
+        "other_features": [],
+        "tags": [
+            "earth and nature",
+            "biology",
+            "online communities"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/samybaladram/iris-dataset-extended"
+    },
+    "feature_info": {
+        "species": {
+            "description": "The species of the Iris flower",
+            "type": "categorical",
+            "value_dict": {
+                "setosa": "Setosa is a species of Iris flower",
+                "versicolor": "Versicolor is a species of Iris flower",
+                "virginica": "Virginica is a species of Iris flower"
+            }
+        },
+        "elevation": {
+            "description": "The elevation of the location where the flower was found (in meters)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "soil_type": {
+            "description": "The type of soil where the flower was found",
+            "type": "categorical",
+            "value_dict": {
+                "sandy": "Sandy soil type",
+                "clay": "Clay soil type",
+                "loamy": "Loamy soil type"
+            }
+        },
+        "sepal_length": {
+            "description": "The length of the sepal of the flower (in cm)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "sepal_width": {
+            "description": "The width of the sepal of the flower (in cm)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "petal_length": {
+            "description": "The length of the petal of the flower (in cm)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "petal_width": {
+            "description": "The width of the petal of the flower (in cm)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "sepal_area": {
+            "description": "The area of the sepal of the flower (in square cm)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "petal_area": {
+            "description": "The area of the petal of the flower (in square cm)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "sepal_aspect_ratio": {
+            "description": "The aspect ratio of the sepal (length/width)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "petal_aspect_ratio": {
+            "description": "The aspect ratio of the petal (length/width)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "sepal_to_petal_length_ratio": {
+            "description": "The ratio of the sepal length to the petal length",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "sepal_to_petal_width_ratio": {
+            "description": "The ratio of the sepal width to the petal width",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "sepal_petal_length_diff": {
+            "description": "The difference between the sepal length and the petal length",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "sepal_petal_width_diff": {
+            "description": "The difference between the sepal width and the petal width",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "petal_curvature_mm": {
+            "description": "The curvature of the petal (in mm)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "petal_texture_trichomes_per_mm2": {
+            "description": "The texture of the petal measured as the number of trichomes per square millimeter",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "leaf_area_cm2": {
+            "description": "The area of the leaf (in square cm)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "sepal_area_sqrt": {
+            "description": "The square root of the sepal area",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "petal_area_sqrt": {
+            "description": "The square root of the petal area",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "area_ratios": {
+            "description": "The ratio of different areas of the flower",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "species": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in botany.",
+                "task_prompt": "Based on the features of the Iris flower, please predict the species.",
+                "answer_prompt": "Setosa[0], Versicolor[1] or Virginica[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "setosa": "Setosa is a species of Iris flower",
+                "versicolor": "Versicolor is a species of Iris flower",
+                "virginica": "Virginica is a species of Iris flower"
+            },
+            "class_index_dict": {
+                "setosa": 0,
+                "versicolor": 1,
+                "virginica": 2
+            }
+        },
+        "elevation": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in geography.",
+                "task_prompt": "Based on the features of the Iris flower, please predict the elevation."
+            }
+        },
+        "soil_type": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in soil science.",
+                "task_prompt": "Based on the features of the Iris flower, please predict the soil type.",
+                "answer_prompt": "Sandy[0], Clay[1] or Loamy[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "sandy": "Sandy soil type",
+                "clay": "Clay soil type",
+                "loamy": "Loamy soil type"
+            },
+            "class_index_dict": {
+                "sandy": 0,
+                "clay": 1,
+                "loamy": 2
+            }
+        },
+        "sepal_length": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in botany.",
+                "task_prompt": "Based on the features of the Iris flower, please predict the sepal length."
+            }
+        },
+        "sepal_width": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in botany.",
+                "task_prompt": "Based on the features of the Iris flower, please predict the sepal width."
+            }
+        },
+        "petal_length": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in botany.",
+                "task_prompt": "Based on the features of the Iris flower, please predict the petal length."
+            }
+        },
+        "petal_width": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in botany.",
+                "task_prompt": "Based on the features of the Iris flower, please predict the petal width."
+            }
+        },
+        "sepal_area": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in botany.",
+                "task_prompt": "Based on the features of the Iris flower, please predict the sepal area."
+            }
+        },
+        "petal_area": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in botany.",
+                "task_prompt": "Based on the features of the Iris flower, please predict the petal area."
+            }
+        },
+        "sepal_aspect_ratio": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in botany.",
+                "task_prompt": "Based on the features of the Iris flower, please predict the sepal aspect ratio."
+            }
+        },
+        "petal_aspect_ratio": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in botany.",
+                "task_prompt": "Based on the features of the Iris flower, please predict the petal aspect ratio."
+            }
+        },
+        "sepal_to_petal_length_ratio": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in botany.",
+                "task_prompt": "Based on the features of the Iris flower, please predict the sepal to petal length ratio."
+            }
+        },
+        "sepal_to_petal_width_ratio": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in botany.",
+                "task_prompt": "Based on the features of the Iris flower, please predict the sepal to petal width ratio."
+            }
+        },
+        "sepal_petal_length_diff": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in botany.",
+                "task_prompt": "Based on the features of the Iris flower, please predict the sepal petal length difference."
+            }
+        },
+        "sepal_petal_width_diff": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in botany.",
+                "task_prompt": "Based on the features of the Iris flower, please predict the sepal petal width difference."
+            }
+        },
+        "petal_curvature_mm": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in botany.",
+                "task_prompt": "Based on the features of the Iris flower, please predict the petal curvature in millimeters."
+            }
+        },
+        "petal_texture_trichomes_per_mm2": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in botany.",
+                "task_prompt": "Based on the features of the Iris flower, please predict the petal texture trichomes per square millimeter."
+            }
+        },
+        "leaf_area_cm2": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in botany.",
+                "task_prompt": "Based on the features of the Iris flower, please predict the leaf area in square centimeters."
+            }
+        },
+        "sepal_area_sqrt": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in botany.",
+                "task_prompt": "Based on the features of the Iris flower, please predict the square root of the sepal area."
+            }
+        },
+        "petal_area_sqrt": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in botany.",
+                "task_prompt": "Based on the features of the Iris flower, please predict the square root of the petal area."
+            }
+        },
+        "area_ratios": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in botany.",
+                "task_prompt": "Based on the features of the Iris flower, please predict the area ratios."
+            }
+        }
+    }
+}

@@ -1,0 +1,184 @@
+{
+    "basic_info": {
+        "row_num": 25000,
+        "col_num": 15,
+        "label_candidates": [
+            "income",
+            "education.num",
+            "hours.per.week"
+        ],
+        "valid_feature_num": 15,
+        "num_features": [
+            "age",
+            "fnlwgt",
+            "education.num",
+            "capital.gain",
+            "capital.loss",
+            "hours.per.week"
+        ],
+        "cat_features": [
+            "workclass",
+            "education",
+            "marital.status",
+            "occupation",
+            "relationship",
+            "race",
+            "sex",
+            "native.country",
+            "income"
+        ],
+        "other_features": [],
+        "tags": [
+            "united states",
+            "categorical",
+            "business",
+            "classification",
+            "english"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/amirhosseinmirzaie/americancitizenincome"
+    },
+    "feature_info": {
+        "age": {
+            "description": "The age of the individual in years",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "workclass": {
+            "description": "The type of employer the individual has (e.g., government, military, private, etc.)",
+            "type": "categorical",
+            "value_dict": {
+                "Self-emp-not-inc": "Self-employed but not incorporated",
+                "Private": "Working for a private company",
+                "?": "Information is not available",
+                "Local-gov": "Working for a local government",
+                "Self-emp-inc": "Self-employed and incorporated",
+                "State-gov": "Working for a state government",
+                "Federal-gov": "Working for the federal government",
+                "Without-pay": "Not working and not being paid",
+                "Never-worked": "Never had a job"
+            }
+        },
+        "fnlwgt": {
+            "description": "Final weight. In other words, this is the number of people the census believes the entry represents",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "education": {
+            "description": "The highest level of education achieved by the individual",
+            "type": "categorical"
+        },
+        "education.num": {
+            "description": "The highest level of education achieved in numerical form",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "marital.status": {
+            "description": "Marital status of the individual",
+            "type": "categorical",
+            "value_dict": {
+                "Married-civ-spouse": "Married to a civilian spouse",
+                "Divorced": "Legally separated",
+                "Widowed": "Lost their spouse",
+                "Never-married": "Never been married",
+                "Separated": "Living apart from their spouse",
+                "Married-spouse-absent": "Married but their spouse is not present",
+                "Married-AF-spouse": "Married to a spouse in the Armed Forces"
+            }
+        },
+        "occupation": {
+            "description": "The general type of occupation of the individual",
+            "type": "categorical"
+        },
+        "relationship": {
+            "description": "Indicates family relationship status (e.g., husband, wife)",
+            "type": "categorical",
+            "value_dict": {
+                "Husband": "Male head of the household",
+                "Not-in-family": "Not living with family",
+                "Wife": "Female head of the household",
+                "Other-relative": "Non-immediate family member",
+                "Own-child": "Biological/adopted child of the individual",
+                "Unmarried": "Not married"
+            }
+        },
+        "race": {
+            "description": "Race of the individual",
+            "type": "categorical",
+            "value_dict": {
+                "White": "Belongs to White race",
+                "Black": "Belongs to Black race",
+                "Asian-Pac-Islander": "Belongs to Asian or Pacific Islander race",
+                "Other": "Belongs to other race",
+                "Amer-Indian-Eskimo": "Belongs to American Indian or Eskimo race"
+            }
+        },
+        "sex": {
+            "description": "The biological sex of the individual",
+            "type": "categorical",
+            "value_dict": {
+                "Male": "Identifies as Male",
+                "Female": "Identifies as Female"
+            }
+        },
+        "capital.gain": {
+            "description": "Monetary Capital Gains",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "capital.loss": {
+            "description": "Monetary Capital Losses",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "hours.per.week": {
+            "description": "Number of hours worked per week",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "native.country": {
+            "description": "Country of origin of the individual",
+            "type": "categorical"
+        },
+        "income": {
+            "description": "Income bracket of the individual",
+            "type": "categorical",
+            "value_dict": {
+                ">50K": "Income is more than 50K per year",
+                "<=50K": "Income is 50K or less per year"
+            }
+        }
+    },
+    "task_info": {
+        "income": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing demographic and socio-economic data.",
+                "task_prompt": "Based on the demographic and socio-economic features of the individual, please predict the income level.",
+                "answer_prompt": "Income is more than 50K per year[0] or Income is 50K or less per year[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                ">50K": "Income is more than 50K per year",
+                "<=50K": "Income is 50K or less per year"
+            },
+            "class_index_dict": {
+                ">50K": 0,
+                "<=50K": 1
+            }
+        },
+        "education.num": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing demographic and socio-economic data.",
+                "task_prompt": "Based on the demographic and socio-economic features of the individual, please predict the number of years of education completed."
+            }
+        },
+        "hours.per.week": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing demographic and socio-economic data.",
+                "task_prompt": "Based on the demographic and socio-economic features of the individual, please predict the number of hours worked per week."
+            }
+        }
+    }
+}

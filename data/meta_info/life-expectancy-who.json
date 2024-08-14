@@ -1,0 +1,219 @@
+{
+    "basic_info": {
+        "row_num": 2928,
+        "col_num": 22,
+        "label_candidates": [
+            "Life expectancy ",
+            "Adult Mortality",
+            "Schooling",
+            "Income composition of resources",
+            "Alcohol",
+            "Total expenditure",
+            "GDP"
+        ],
+        "valid_feature_num": 22,
+        "num_features": [
+            "Year",
+            "Adult Mortality",
+            "infant deaths",
+            "Alcohol",
+            "percentage expenditure",
+            "Hepatitis B",
+            "Measles ",
+            " BMI ",
+            "under-five deaths ",
+            "Polio",
+            "Total expenditure",
+            "Diphtheria ",
+            " HIV/AIDS",
+            "GDP",
+            "Population",
+            " thinness  1-19 years",
+            " thinness 5-9 years",
+            "Income composition of resources",
+            "Schooling",
+            "Life expectancy "
+        ],
+        "cat_features": [
+            "Country",
+            "Status"
+        ],
+        "other_features": [],
+        "tags": [
+            "social science"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/vikramamin/life-expectancy-who"
+    },
+    "feature_info": {
+        "Country": {
+            "description": "Name of the country",
+            "type": "categorical"
+        },
+        "Year": {
+            "description": "Year of the data entry",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Status": {
+            "description": "Development status of the country (Developed or Developing)",
+            "type": "categorical",
+            "value_dict": {
+                "Developing": "The country is classified as developing based on socio-economic factors",
+                "Developed": "The country is classified as developed based on socio-economic factors"
+            }
+        },
+        "Life expectancy ": {
+            "description": "The average number of years a newborn is expected to live, assuming that current mortality rates remain constant throughout their lifetime",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Adult Mortality": {
+            "description": "Adult mortality rate, probability of dying between 15 and 60 years per 1000 population",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "infant deaths": {
+            "description": "Number of infant deaths per 1000 population",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Alcohol": {
+            "description": "Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "percentage expenditure": {
+            "description": "Expenditure on health as a percentage of Gross Domestic Product per capita",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Hepatitis B": {
+            "description": "Hepatitis B (HepB) immunization coverage among 1-year-olds (%)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Measles ": {
+            "description": "Number of reported cases per 1000 population",
+            "type": "numerical",
+            "decimal": 0
+        },
+        " BMI ": {
+            "description": "Average Body Mass Index of entire population",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "under-five deaths ": {
+            "description": "Number of deaths under five years of age per 1000 population",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Polio": {
+            "description": "Polio (Pol3) immunization coverage among 1-year-olds (%)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Total expenditure": {
+            "description": "General government expenditure on health as a percentage of total government expenditure (%)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Diphtheria ": {
+            "description": "Diphtheria tetanus toxoid and pertussis (DTP3) immunization coverage among 1-year-olds (%)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        " HIV/AIDS": {
+            "description": "Deaths per 1 000 live births HIV/AIDS (0-4 years)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "GDP": {
+            "description": "Gross Domestic Product per capita (in USD)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Population": {
+            "description": "Population of the country",
+            "type": "numerical",
+            "decimal": 0
+        },
+        " thinness  1-19 years": {
+            "description": "Prevalence of thinness among children and adolescents for Age 10 to 19 (%)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        " thinness 5-9 years": {
+            "description": "Prevalence of thinness among children for Age 5 to 9 (%)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Income composition of resources": {
+            "description": "Human Development Index in terms of income composition of resources (index ranging from 0 to 1)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Schooling": {
+            "description": "Number of years of Schooling",
+            "type": "numerical",
+            "decimal": 1
+        }
+    },
+    "task_info": {
+        "Life expectancy ": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in public health analytics.",
+                "task_prompt": "Based on the features of the country demographics and health indicators, please predict the life expectancy.",
+                "answer_prompt": "The predicted life expectancy is {answer} years."
+            }
+        },
+        "Adult Mortality": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in public health analytics.",
+                "task_prompt": "Based on the features of the country demographics and health indicators, please predict the adult mortality rate.",
+                "answer_prompt": "The predicted adult mortality rate is {answer}."
+            }
+        },
+        "Schooling": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in educational analytics.",
+                "task_prompt": "Based on the features of the country demographics and health indicators, please predict the average years of schooling.",
+                "answer_prompt": "The predicted average years of schooling is {answer} years."
+            }
+        },
+        "Income composition of resources": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in economic analytics.",
+                "task_prompt": "Based on the features of the country demographics and health indicators, please predict the income composition of resources.",
+                "answer_prompt": "The predicted income composition of resources is {answer}."
+            }
+        },
+        "Alcohol": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in public health analytics.",
+                "task_prompt": "Based on the features of the country demographics and health indicators, please predict the alcohol consumption per capita.",
+                "answer_prompt": "The predicted alcohol consumption per capita is {answer} liters."
+            }
+        },
+        "Total expenditure": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in economic analytics.",
+                "task_prompt": "Based on the features of the country demographics and health indicators, please predict the total health expenditure.",
+                "answer_prompt": "The predicted total health expenditure is {answer}."
+            }
+        },
+        "GDP": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in economic analytics.",
+                "task_prompt": "Based on the features of the country demographics and health indicators, please predict the Gross Domestic Product (GDP).",
+                "answer_prompt": "The predicted Gross Domestic Product (GDP) is {answer}."
+            }
+        }
+    }
+}

@@ -1,0 +1,113 @@
+{
+    "basic_info": {
+        "row_num": 1882,
+        "col_num": 5,
+        "label_candidates": [
+            "Value",
+            "Value_Classification",
+            "BTC_Closing",
+            "BTC_Volume"
+        ],
+        "valid_feature_num": 5,
+        "num_features": [
+            "Value",
+            "BTC_Closing",
+            "BTC_Volume"
+        ],
+        "cat_features": [
+            "Value_Classification"
+        ],
+        "other_features": [
+            "Date"
+        ],
+        "tags": [
+            "finance",
+            "time series analysis",
+            "linear regression",
+            "currencies and foreign exchange",
+            "pytorch"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/adilbhatti/bitcoin-and-fear-and-greed"
+    },
+    "feature_info": {
+        "Date": {
+            "description": "The date when the data was recorded",
+            "type": "other"
+        },
+        "Value": {
+            "description": "The value of the Fear & Greed index on the corresponding date, which ranges from 0 to 100, where 0 means \"Extreme Fear\" and 100 means \"Extreme Greed\"",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Value_Classification": {
+            "description": "The classification of the Fear & Greed index value, which can be \"Extreme Fear\", \"Fear\", \"Neutral\", \"Greed\", or \"Extreme Greed\"",
+            "type": "categorical",
+            "value_dict": {
+                "Fear": "The Fear & Greed index value is between 26 and 50, indicating a state of fear in the market",
+                "Extreme Fear": "The Fear & Greed index value is 25 or less, indicating a state of extreme fear in the market",
+                "Neutral": "The Fear & Greed index value is between 51 and 75, indicating a neutral state in the market",
+                "Greed": "The Fear & Greed index value is between 76 and 100, indicating a state of greed in the market",
+                "Extreme Greed": "The Fear & Greed index value is 100, indicating a state of extreme greed in the market"
+            }
+        },
+        "BTC_Closing": {
+            "description": "The closing price of Bitcoin on the corresponding date in USD",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "BTC_Volume": {
+            "description": "The trading volume of Bitcoin on the corresponding date in USD",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "Value": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in financial market analysis.",
+                "task_prompt": "Based on the date, please predict the Fear & Greed index value.",
+                "answer_prompt": "The Fear & Greed index value is."
+            }
+        },
+        "Value_Classification": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in financial market analysis.",
+                "task_prompt": "Based on the date, please predict the Fear & Greed index classification.",
+                "answer_prompt": "Extreme Fear[0], Fear[1], Neutral[2], Greed[3], Extreme Greed[4]?"
+            },
+            "class_num": 5,
+            "class_value_dict": {
+                "Fear": "The Fear & Greed index value is between 26 and 50, indicating a state of fear in the market",
+                "Extreme Fear": "The Fear & Greed index value is 25 or less, indicating a state of extreme fear in the market",
+                "Neutral": "The Fear & Greed index value is between 51 and 75, indicating a neutral state in the market",
+                "Greed": "The Fear & Greed index value is between 76 and 100, indicating a state of greed in the market",
+                "Extreme Greed": "The Fear & Greed index value is 100, indicating a state of extreme greed in the market"
+            },
+            "class_index_dict": {
+                "Extreme Fear": 0,
+                "Fear": 1,
+                "Neutral": 2,
+                "Greed": 3,
+                "Extreme Greed": 4
+            }
+        },
+        "BTC_Closing": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in financial market analysis.",
+                "task_prompt": "Based on the date, please predict the closing price of Bitcoin.",
+                "answer_prompt": "The closing price of Bitcoin is."
+            }
+        },
+        "BTC_Volume": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in financial market analysis.",
+                "task_prompt": "Based on the date, please predict the trading volume of Bitcoin.",
+                "answer_prompt": "The trading volume of Bitcoin is."
+            }
+        }
+    }
+}

@@ -1,0 +1,93 @@
+{
+    "basic_info": {
+        "row_num": 90,
+        "col_num": 6,
+        "label_candidates": [
+            "C",
+            "Q",
+            "PF",
+            "LF"
+        ],
+        "valid_feature_num": 5,
+        "num_features": [
+            "T",
+            "C",
+            "Q",
+            "PF",
+            "LF"
+        ],
+        "cat_features": [],
+        "other_features": [],
+        "tags": [
+            "statistical analysis",
+            "tabular",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/sandhyakrishnan02/paneldata"
+    },
+    "feature_info": {
+        "I": {
+            "description": "Identifier for the individual or entity",
+            "type": "useless"
+        },
+        "T": {
+            "description": "Time period or sequence number",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "C": {
+            "description": "Value of variable C (unit not specified)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Q": {
+            "description": "Value of variable Q (unit not specified)",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "PF": {
+            "description": "Value of variable PF (unit not specified)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "LF": {
+            "description": "Value of variable LF (unit not specified)",
+            "type": "numerical",
+            "decimal": 6
+        }
+    },
+    "task_info": {
+        "C": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in economic panel data analysis.",
+                "task_prompt": "Based on the given economic indicators, please predict the consumption expenditure (C).",
+                "answer_prompt": "The predicted consumption expenditure (C) is ______."
+            }
+        },
+        "Q": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in economic panel data analysis.",
+                "task_prompt": "Based on the given economic indicators, please predict the real output (Q).",
+                "answer_prompt": "The predicted real output (Q) is ______."
+            }
+        },
+        "PF": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in economic panel data analysis.",
+                "task_prompt": "Based on the given economic indicators, please predict the price deflator (PF).",
+                "answer_prompt": "The predicted price deflator (PF) is ______."
+            }
+        },
+        "LF": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in economic panel data analysis.",
+                "task_prompt": "Based on the given economic indicators, please predict the labor force (LF).",
+                "answer_prompt": "The predicted labor force (LF) is ______."
+            }
+        }
+    }
+}

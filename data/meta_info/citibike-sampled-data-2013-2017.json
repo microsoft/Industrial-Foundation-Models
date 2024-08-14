@@ -1,0 +1,205 @@
+{
+    "basic_info": {
+        "row_num": 1802,
+        "col_num": 18,
+        "label_candidates": [
+            "num_bikes_available",
+            "num_docks_available",
+            "is_renting",
+            "is_returning"
+        ],
+        "valid_feature_num": 18,
+        "num_features": [
+            "latitude",
+            "longitude",
+            "capacity",
+            "num_bikes_available",
+            "num_bikes_disabled",
+            "num_docks_available",
+            "num_docks_disabled"
+        ],
+        "cat_features": [
+            "station_id_int",
+            "name",
+            "short_name",
+            "region_id",
+            "rental_methods",
+            "eightd_has_key_dispenser",
+            "is_installed",
+            "is_returning",
+            "eightd_has_available_keys",
+            "is_renting"
+        ],
+        "other_features": [
+            "last_reported"
+        ],
+        "tags": [
+            "transportation",
+            "cycling",
+            "data visualization",
+            "classification",
+            "bigquery",
+            "travel"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/fatihb/citibike-sampled-data-2013-2017"
+    },
+    "feature_info": {
+        "station_id_int": {
+            "description": "Unique identifier for each bike station",
+            "type": "categorical"
+        },
+        "name": {
+            "description": "Name of the bike station",
+            "type": "categorical"
+        },
+        "short_name": {
+            "description": "Shortened name for the bike station",
+            "type": "categorical"
+        },
+        "latitude": {
+            "description": "Geographical latitude of the bike station",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "longitude": {
+            "description": "Geographical longitude of the bike station",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "region_id": {
+            "description": "Identifier for the region where the bike station is located",
+            "type": "categorical",
+            "value_dict": {
+                "71": "Region with ID 71",
+                "0": "Region with ID 0",
+                "70": "Region with ID 70"
+            }
+        },
+        "rental_methods": {
+            "description": "Methods by which bikes can be rented at this station",
+            "type": "categorical",
+            "value_dict": {
+                "KEY, CREDITCARD": "Bikes can be rented using a key or a credit card"
+            }
+        },
+        "capacity": {
+            "description": "Total number of bikes the station can hold",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "eightd_has_key_dispenser": {
+            "description": "Indicates if the station has a key dispenser for 8D keys",
+            "type": "categorical",
+            "value_dict": {
+                "False": "The station does not have a key dispenser for 8D keys"
+            }
+        },
+        "num_bikes_available": {
+            "description": "Number of bikes available at the station at the time of reporting",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "num_bikes_disabled": {
+            "description": "Number of disabled bikes at the station at the time of reporting",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "num_docks_available": {
+            "description": "Number of docks available at the station at the time of reporting",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "num_docks_disabled": {
+            "description": "Number of disabled docks at the station at the time of reporting",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "is_installed": {
+            "description": "Indicates if the station is installed",
+            "type": "categorical",
+            "value_dict": {
+                "True": "The station is installed",
+                "False": "The station is not installed"
+            }
+        },
+        "is_renting": {
+            "description": "Indicates if the station is currently renting bikes",
+            "type": "categorical",
+            "value_dict": {
+                "True": "The station is currently renting bikes",
+                "False": "The station is not currently renting bikes"
+            }
+        },
+        "is_returning": {
+            "description": "Indicates if the station is currently accepting returned bikes",
+            "type": "categorical",
+            "value_dict": {
+                "True": "The station is currently accepting returned bikes",
+                "False": "The station is not currently accepting returned bikes"
+            }
+        },
+        "eightd_has_available_keys": {
+            "description": "Indicates if the station has available 8D keys",
+            "type": "categorical",
+            "value_dict": {
+                "False": "The station does not have available 8D keys"
+            }
+        },
+        "last_reported": {
+            "description": "The last time the station status was reported, in UTC",
+            "type": "other"
+        }
+    },
+    "task_info": {
+        "num_bikes_available": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in bike sharing data analysis.",
+                "task_prompt": "Based on the features of the bike station, please predict the number of bikes available.",
+                "answer_prompt": "The number of bikes available is."
+            }
+        },
+        "num_docks_available": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in bike sharing data analysis.",
+                "task_prompt": "Based on the features of the bike station, please predict the number of docks available.",
+                "answer_prompt": "The number of docks available is."
+            }
+        },
+        "is_renting": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in bike sharing data analysis.",
+                "task_prompt": "Based on the features of the bike station, please predict if the station is currently renting bikes.",
+                "answer_prompt": "The station is currently renting bikes[1] or not currently renting bikes[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "True": "The station is currently renting bikes",
+                "False": "The station is not currently renting bikes"
+            },
+            "class_index_dict": {
+                "True": 1,
+                "False": 0
+            }
+        },
+        "is_returning": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in bike sharing data analysis.",
+                "task_prompt": "Based on the features of the bike station, please predict if the station is currently accepting returned bikes.",
+                "answer_prompt": "The station is currently accepting returned bikes[1] or not currently accepting returned bikes[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "True": "The station is currently accepting returned bikes",
+                "False": "The station is not currently accepting returned bikes"
+            },
+            "class_index_dict": {
+                "True": 1,
+                "False": 0
+            }
+        }
+    }
+}

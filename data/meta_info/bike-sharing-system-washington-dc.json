@@ -1,0 +1,141 @@
+{
+    "basic_info": {
+        "row_num": 10886,
+        "col_num": 12,
+        "label_candidates": [
+            "count",
+            "registered",
+            "casual"
+        ],
+        "valid_feature_num": 12,
+        "num_features": [
+            "temp",
+            "atemp",
+            "humidity",
+            "windspeed",
+            "casual",
+            "registered",
+            "count"
+        ],
+        "cat_features": [
+            "season",
+            "holiday",
+            "workingday",
+            "weather"
+        ],
+        "other_features": [
+            "datetime"
+        ],
+        "tags": [
+            "cycling",
+            "beginner",
+            "data analytics",
+            "regression",
+            "retail and shopping"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/itssuru/bike-sharing-system-washington-dc"
+    },
+    "feature_info": {
+        "datetime": {
+            "description": "The date and hour of the bike rental in the format of \"yyyy-mm-dd hh:00:00\"",
+            "type": "other"
+        },
+        "season": {
+            "description": "The season when the bike was rented. It is an encoded value where 1 = spring, 2 = summer, 3 = fall, 4 = winter",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The season is spring",
+                "2": "The season is summer",
+                "3": "The season is fall",
+                "4": "The season is winter"
+            }
+        },
+        "holiday": {
+            "description": "Whether the day was a holiday or not. It is a binary value where 0 = not a holiday, 1 = holiday",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The day is not a holiday",
+                "1": "The day is a holiday"
+            }
+        },
+        "workingday": {
+            "description": "Whether the day was a working day or not. It is a binary value where 0 = not a working day, 1 = working day",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The day is not a working day",
+                "1": "The day is a working day"
+            }
+        },
+        "weather": {
+            "description": "The weather condition when the bike was rented. It is an encoded value where 1 = Clear, Few clouds, Partly cloudy, Partly cloudy; 2 = Mist + Cloudy, Mist + Broken clouds, Mist + Few clouds, Mist; 3 = Light Snow, Light Rain + Thunderstorm + Scattered clouds, Light Rain + Scattered clouds; 4 = Heavy Rain + Ice Pallets + Thunderstorm + Mist, Snow + Fog",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Clear, Few clouds, Partly cloudy, Partly cloudy",
+                "2": "Mist + Cloudy, Mist + Broken clouds, Mist + Few clouds, Mist",
+                "3": "Light Snow, Light Rain + Thunderstorm + Scattered clouds, Light Rain + Scattered clouds",
+                "4": "Heavy Rain + Ice Pallets + Thunderstorm + Mist, Snow + Fog"
+            }
+        },
+        "temp": {
+            "description": "The temperature in Celsius when the bike was rented",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "atemp": {
+            "description": "The \"feels like\" temperature in Celsius when the bike was rented",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "humidity": {
+            "description": "The humidity level when the bike was rented, represented as a percentage",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "windspeed": {
+            "description": "The wind speed when the bike was rented",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "casual": {
+            "description": "The number of non-registered user bike rentals initiated",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "registered": {
+            "description": "The number of registered user bike rentals initiated",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "count": {
+            "description": "The total number of bike rentals (casual + registered)",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "count": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in bike sharing system data analysis.",
+                "task_prompt": "Based on the features of the bike sharing data, please predict the total count of bike rentals.",
+                "answer_prompt": "The predicted count of bike rentals is {}."
+            }
+        },
+        "registered": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in bike sharing system data analysis.",
+                "task_prompt": "Based on the features of the bike sharing data, please predict the count of registered bike rentals.",
+                "answer_prompt": "The predicted count of registered bike rentals is {}."
+            }
+        },
+        "casual": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in bike sharing system data analysis.",
+                "task_prompt": "Based on the features of the bike sharing data, please predict the count of casual bike rentals.",
+                "answer_prompt": "The predicted count of casual bike rentals is {}."
+            }
+        }
+    }
+}

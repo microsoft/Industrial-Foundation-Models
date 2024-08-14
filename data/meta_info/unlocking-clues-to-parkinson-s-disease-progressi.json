@@ -1,0 +1,217 @@
+{
+    "basic_info": {
+        "row_num": 5875,
+        "col_num": 23,
+        "label_candidates": [
+            "motor_UPDRS",
+            "total_UPDRS",
+            "age",
+            "sex",
+            "test_time"
+        ],
+        "valid_feature_num": 22,
+        "num_features": [
+            "age",
+            "test_time",
+            "motor_UPDRS",
+            "Jitter(%)",
+            "Jitter(Abs)",
+            "Jitter:RAP",
+            "Jitter:PPQ5",
+            "Jitter:DDP",
+            "Shimmer",
+            "Shimmer(dB)",
+            "Shimmer:APQ3",
+            "Shimmer:APQ5",
+            "Shimmer:APQ11",
+            "Shimmer:DDA",
+            "NHR",
+            "HNR",
+            "RPDE",
+            "DFA",
+            "PPE",
+            "total_UPDRS"
+        ],
+        "cat_features": [
+            "subject#",
+            "sex"
+        ],
+        "other_features": [],
+        "tags": [
+            "healthcare",
+            "neuroscience",
+            "earth science",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/thedevastator/unlocking-clues-to-parkinson-s-disease-progressi"
+    },
+    "feature_info": {
+        "index": {
+            "description": "Row index",
+            "type": "useless"
+        },
+        "subject#": {
+            "description": "Identifier for the subject",
+            "type": "categorical"
+        },
+        "age": {
+            "description": "Age of the subject in years",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "sex": {
+            "description": "Gender of the subject (0 for male, 1 for female)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Male",
+                "1": "Female"
+            }
+        },
+        "test_time": {
+            "description": "Time of the test",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "motor_UPDRS": {
+            "description": "Motor UPDRS score, a measure of Parkinson\u2019s disease symptoms",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "total_UPDRS": {
+            "description": "Total UPDRS score, a comprehensive measure of Parkinson\u2019s disease symptoms",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Jitter(%)": {
+            "description": "Jitter in voice signals, measured in percentage",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "Jitter(Abs)": {
+            "description": "Absolute Jitter in voice signals",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "Jitter:RAP": {
+            "description": "Relative Amplitude Perturbation, a measure of jitter",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "Jitter:PPQ5": {
+            "description": "Five-point Period Perturbation Quotient, a measure of jitter",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "Jitter:DDP": {
+            "description": "Average absolute difference of differences between cycles, a measure of jitter",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "Shimmer": {
+            "description": "Shimmer in voice signals",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "Shimmer(dB)": {
+            "description": "Shimmer in voice signals, measured in decibels",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Shimmer:APQ3": {
+            "description": "Three-point Amplitude Perturbation Quotient, a measure of shimmer",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "Shimmer:APQ5": {
+            "description": "Five-point Amplitude Perturbation Quotient, a measure of shimmer",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "Shimmer:APQ11": {
+            "description": "Eleven-point Amplitude Perturbation Quotient, a measure of shimmer",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "Shimmer:DDA": {
+            "description": "Average absolute differences between amplitude of consecutive periods, a measure of shimmer",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "NHR": {
+            "description": "Noise-to-Harmonics Ratio, a measure of voice quality",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "HNR": {
+            "description": "Harmonics-to-Noise Ratio, a measure of voice quality",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "RPDE": {
+            "description": "Recurrence Period Density Entropy, a measure of voice disorder",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "DFA": {
+            "description": "Detrended Fluctuation Analysis, a measure of voice disorder",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "PPE": {
+            "description": "Pitch Period Entropy, a measure of voice disorder",
+            "type": "numerical",
+            "decimal": 5
+        }
+    },
+    "task_info": {
+        "motor_UPDRS": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in Parkinson\u2019s Disease progression analysis.",
+                "task_prompt": "Based on the features of the patient, please predict the motor UPDRS score.",
+                "answer_prompt": "The predicted motor UPDRS score is."
+            }
+        },
+        "total_UPDRS": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in Parkinson\u2019s Disease progression analysis.",
+                "task_prompt": "Based on the features of the patient, please predict the total UPDRS score.",
+                "answer_prompt": "The predicted total UPDRS score is."
+            }
+        },
+        "age": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in demographic analysis.",
+                "task_prompt": "Based on the features of the patient, please predict the age of the patient.",
+                "answer_prompt": "The predicted age of the patient is."
+            }
+        },
+        "sex": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in demographic analysis.",
+                "task_prompt": "Based on the features of the patient, please predict the sex of the patient.",
+                "answer_prompt": "Male[0] or Female[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "Male",
+                "1": "Female"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "test_time": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in Parkinson\u2019s Disease progression analysis.",
+                "task_prompt": "Based on the features of the patient, please predict the test time.",
+                "answer_prompt": "The predicted test time is."
+            }
+        }
+    }
+}

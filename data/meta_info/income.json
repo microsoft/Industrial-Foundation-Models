@@ -1,0 +1,165 @@
+{
+    "basic_info": {
+        "row_num": 43957,
+        "col_num": 15,
+        "label_candidates": [
+            "income_>50K"
+        ],
+        "valid_feature_num": 15,
+        "num_features": [
+            "age",
+            "fnlwgt",
+            "educational-num",
+            "capital-gain",
+            "capital-loss",
+            "hours-per-week"
+        ],
+        "cat_features": [
+            "workclass",
+            "education",
+            "marital-status",
+            "occupation",
+            "relationship",
+            "race",
+            "gender",
+            "native-country",
+            "income_>50K"
+        ],
+        "other_features": [],
+        "tags": [
+            "income",
+            "finance",
+            "binary classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/mastmustu/income"
+    },
+    "feature_info": {
+        "age": {
+            "description": "The age of the individual",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "workclass": {
+            "description": "The type of employer the individual has (ex: private, self-employed, government)",
+            "type": "categorical",
+            "value_dict": {
+                "Private": "Individual works for a private employer",
+                "State-gov": "Individual works for the state government",
+                "Self-emp-not-inc": "Individual is self-employed but not incorporated",
+                "Federal-gov": "Individual works for the federal government",
+                "Local-gov": "Individual works for the local government",
+                "Self-emp-inc": "Individual is self-employed and incorporated",
+                "Never-worked": "Individual has never worked",
+                "Without-pay": "Individual works without pay"
+            }
+        },
+        "fnlwgt": {
+            "description": "Final weight. The number of units in the target population that the responding unit represents",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "education": {
+            "description": "The highest level of education achieved by the individual",
+            "type": "categorical"
+        },
+        "educational-num": {
+            "description": "The highest level of education achieved in numerical form",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "marital-status": {
+            "description": "Marital status of the individual",
+            "type": "categorical",
+            "value_dict": {
+                "Divorced": "Individual is divorced",
+                "Never-married": "Individual has never been married",
+                "Married-civ-spouse": "Individual is married to a civilian spouse",
+                "Widowed": "Individual is widowed",
+                "Separated": "Individual is separated",
+                "Married-spouse-absent": "Individual is married but spouse is absent",
+                "Married-AF-spouse": "Individual is married to an Armed Forces spouse"
+            }
+        },
+        "occupation": {
+            "description": "The general category of the individual\u2019s employment",
+            "type": "categorical"
+        },
+        "relationship": {
+            "description": "What this individual is relative to others. For example, husband, wife",
+            "type": "categorical",
+            "value_dict": {
+                "Not-in-family": "Individual is not in a family",
+                "Own-child": "Individual is a child",
+                "Husband": "Individual is a husband",
+                "Wife": "Individual is a wife",
+                "Unmarried": "Individual is unmarried",
+                "Other-relative": "Individual is a relative other than child or spouse"
+            }
+        },
+        "race": {
+            "description": "Race of the individual",
+            "type": "categorical",
+            "value_dict": {
+                "White": "Individual is White",
+                "Black": "Individual is Black",
+                "Asian-Pac-Islander": "Individual is Asian or Pacific Islander",
+                "Other": "Individual is of other race",
+                "Amer-Indian-Eskimo": "Individual is American Indian or Eskimo"
+            }
+        },
+        "gender": {
+            "description": "Biological sex of the individual",
+            "type": "categorical",
+            "value_dict": {
+                "Male": "Individual is Male",
+                "Female": "Individual is Female"
+            }
+        },
+        "capital-gain": {
+            "description": "Monetary capital gains",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "capital-loss": {
+            "description": "Monetary capital losses",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "hours-per-week": {
+            "description": "The number of hours the individual works per week",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "native-country": {
+            "description": "Country of origin for the individual",
+            "type": "categorical"
+        },
+        "income_>50K": {
+            "description": "Whether the person makes more than 50,000 a year",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Individual earns more than 50,000 a year",
+                "0": "Individual earns 50,000 a year or less"
+            }
+        }
+    },
+    "task_info": {
+        "income_>50K": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in financial and demographic data analysis.",
+                "task_prompt": "Based on the demographic and financial features of the individual, please predict if the individual earns more than 50,000 a year.",
+                "answer_prompt": "Does the individual earn more than 50,000 a year? Yes[1] or No[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "Individual earns more than 50,000 a year",
+                "0": "Individual earns 50,000 a year or less"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        }
+    }
+}

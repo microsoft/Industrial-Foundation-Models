@@ -1,0 +1,99 @@
+{
+    "basic_info": {
+        "row_num": 9550,
+        "col_num": 5,
+        "label_candidates": [
+            "Count",
+            "Outcome of Incident"
+        ],
+        "valid_feature_num": 5,
+        "num_features": [
+            "Count"
+        ],
+        "cat_features": [
+            "Million Plus Cities",
+            "Cause category",
+            "Cause Subcategory",
+            "Outcome of Incident"
+        ],
+        "other_features": [],
+        "tags": [
+            "india",
+            "transportation",
+            "data visualization",
+            "travel"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/rachit239/road-accident-data-2020-india"
+    },
+    "feature_info": {
+        "Million Plus Cities": {
+            "description": "Name of the city with a population over a million in India",
+            "type": "categorical"
+        },
+        "Cause category": {
+            "description": "The broad category of the cause leading to the road accident",
+            "type": "categorical",
+            "value_dict": {
+                "Traffic Control": "The accident was caused due to issues with traffic control",
+                "Junction": "The accident occurred at a junction",
+                "Traffic Violation": "The accident was caused by a traffic violation",
+                "Road Features": "The accident was caused due to features of the road",
+                "Impacting Vehicle/Object": "The accident was caused by an impacting vehicle or object",
+                "Weather": "The accident was caused due to weather conditions"
+            }
+        },
+        "Cause Subcategory": {
+            "description": "The specific sub-category of the cause leading to the road accident",
+            "type": "categorical"
+        },
+        "Outcome of Incident": {
+            "description": "The outcome of the road accident, such as injuries or fatalities",
+            "type": "categorical",
+            "value_dict": {
+                "Greviously Injured": "The accident resulted in grievous injuries",
+                "Minor Injury": "The accident resulted in minor injuries",
+                "Persons Killed": "The accident resulted in death(s)",
+                "Total Injured": "The total number of people injured in the accident",
+                "Total number of Accidents": "The total number of accidents"
+            }
+        },
+        "Count": {
+            "description": "The number of incidents corresponding to the specific cause and outcome",
+            "type": "numerical",
+            "decimal": 1
+        }
+    },
+    "task_info": {
+        "Count": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in traffic accident analysis.",
+                "task_prompt": "Based on the features of the traffic accident in the city, please predict the count of the accident.",
+                "answer_prompt": "The predicted count of the accident is: ."
+            }
+        },
+        "Outcome of Incident": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in traffic accident analysis.",
+                "task_prompt": "Based on the features of the traffic accident in the city, please predict the outcome of the incident.",
+                "answer_prompt": "The accident resulted in grievous injuries[0], minor injuries[1], death(s)[2], total number of people injured[3], total number of accidents[4]."
+            },
+            "class_num": 5,
+            "class_value_dict": {
+                "Greviously Injured": "The accident resulted in grievous injuries",
+                "Minor Injury": "The accident resulted in minor injuries",
+                "Persons Killed": "The accident resulted in death(s)",
+                "Total Injured": "The total number of people injured in the accident",
+                "Total number of Accidents": "The total number of accidents"
+            },
+            "class_index_dict": {
+                "Greviously Injured": 0,
+                "Minor Injury": 1,
+                "Persons Killed": 2,
+                "Total Injured": 3,
+                "Total number of Accidents": 4
+            }
+        }
+    }
+}

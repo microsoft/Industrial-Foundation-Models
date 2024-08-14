@@ -1,0 +1,112 @@
+{
+    "basic_info": {
+        "row_num": 19191,
+        "col_num": 7,
+        "label_candidates": [
+            "Close",
+            "Adj Close",
+            "High",
+            "Low",
+            "Open"
+        ],
+        "valid_feature_num": 7,
+        "num_features": [
+            "Open",
+            "High",
+            "Low",
+            "Adj Close",
+            "Volume",
+            "Close"
+        ],
+        "cat_features": [
+            "Date"
+        ],
+        "other_features": [],
+        "tags": [
+            "finance",
+            "time series analysis",
+            "regression",
+            "investing",
+            "currencies and foreign exchange"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/kapturovalexander/bitcoin-and-other-14-most-significant-cryptos"
+    },
+    "feature_info": {
+        "Date": {
+            "description": "The date of the recorded cryptocurrency data.",
+            "type": "categorical"
+        },
+        "Open": {
+            "description": "The opening price of the cryptocurrency at the start of the trading day (likely in USD).",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "High": {
+            "description": "The highest price of the cryptocurrency during the trading day (likely in USD).",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Low": {
+            "description": "The lowest price of the cryptocurrency during the trading day (likely in USD).",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Close": {
+            "description": "The closing price of the cryptocurrency at the end of the trading day (likely in USD).",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Adj Close": {
+            "description": "The adjusted closing price of the cryptocurrency at the end of the trading day. This price accounts for any corporate actions that might have occurred (likely in USD).",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Volume": {
+            "description": "The number of shares or contracts traded in the cryptocurrency during the trading day.",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "Close": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in financial market analysis.",
+                "task_prompt": "Based on the historical data of the cryptocurrency market, please predict the closing price.",
+                "answer_prompt": "The predicted closing price is:."
+            }
+        },
+        "Adj Close": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in financial market analysis.",
+                "task_prompt": "Based on the historical data of the cryptocurrency market, please predict the adjusted closing price.",
+                "answer_prompt": "The predicted adjusted closing price is:."
+            }
+        },
+        "High": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in financial market analysis.",
+                "task_prompt": "Based on the historical data of the cryptocurrency market, please predict the highest price.",
+                "answer_prompt": "The predicted highest price is:."
+            }
+        },
+        "Low": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in financial market analysis.",
+                "task_prompt": "Based on the historical data of the cryptocurrency market, please predict the lowest price.",
+                "answer_prompt": "The predicted lowest price is:."
+            }
+        },
+        "Open": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in financial market analysis.",
+                "task_prompt": "Based on the historical data of the cryptocurrency market, please predict the opening price.",
+                "answer_prompt": "The predicted opening price is:."
+            }
+        }
+    }
+}

@@ -1,0 +1,184 @@
+{
+    "basic_info": {
+        "row_num": 569,
+        "col_num": 18,
+        "label_candidates": [
+            "Price",
+            "Popularity_Rank",
+            "Processor Score (cpubenchmark.net)"
+        ],
+        "valid_feature_num": 18,
+        "num_features": [
+            "Popularity_Rank",
+            "Processor Score (cpubenchmark.net)",
+            "RAM Capacity (in GB)",
+            "SSD (in GB)",
+            "HDD (in GB)",
+            "Display (in cm)",
+            "Price"
+        ],
+        "cat_features": [
+            "Laptop_Name",
+            "ASUS",
+            "DELL",
+            "HP",
+            "Lenovo",
+            "Other brand",
+            "Processor",
+            "Other OS",
+            "Windows 10",
+            "Windows 11",
+            "Touchscreen"
+        ],
+        "other_features": [],
+        "tags": [
+            "india",
+            "beginner",
+            "e-commerce services"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/arindamsingh/flipkart-india-laptops-under-75000"
+    },
+    "feature_info": {
+        "Laptop_Name": {
+            "description": "The name of the laptop model",
+            "type": "categorical"
+        },
+        "Popularity_Rank": {
+            "description": "The popularity rank of the laptop",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "ASUS": {
+            "description": "Whether the laptop is of ASUS brand (1 for Yes, 0 for No)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The laptop is not of ASUS brand",
+                "1": "The laptop is of ASUS brand"
+            }
+        },
+        "DELL": {
+            "description": "Whether the laptop is of DELL brand (1 for Yes, 0 for No)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The laptop is not of DELL brand",
+                "1": "The laptop is of DELL brand"
+            }
+        },
+        "HP": {
+            "description": "Whether the laptop is of HP brand (1 for Yes, 0 for No)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The laptop is not of HP brand",
+                "1": "The laptop is of HP brand"
+            }
+        },
+        "Lenovo": {
+            "description": "Whether the laptop is of Lenovo brand (1 for Yes, 0 for No)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The laptop is of Lenovo brand",
+                "0": "The laptop is not of Lenovo brand"
+            }
+        },
+        "Other brand": {
+            "description": "Whether the laptop is of any other brand not listed (1 for Yes, 0 for No)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The laptop is not of other brand",
+                "1": "The laptop is of other brand"
+            }
+        },
+        "Processor": {
+            "description": "The type of processor used in the laptop",
+            "type": "categorical"
+        },
+        "Processor Score (cpubenchmark.net)": {
+            "description": "The score of the laptop processor according to cpubenchmark.net",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "RAM Capacity (in GB)": {
+            "description": "The capacity of the laptop RAM in Gigabytes",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Other OS": {
+            "description": "Whether the laptop uses an operating system other than Windows 10 or 11 (1 for Yes, 0 for No)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The laptop does not use an operating system other than Windows 10 or 11",
+                "1": "The laptop uses an operating system other than Windows 10 or 11"
+            }
+        },
+        "Windows 10": {
+            "description": "Whether the laptop uses Windows 10 as its operating system (1 for Yes, 0 for No)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The laptop does not use Windows 10 as its operating system",
+                "1": "The laptop uses Windows 10 as its operating system"
+            }
+        },
+        "Windows 11": {
+            "description": "Whether the laptop uses Windows 11 as its operating system (1 for Yes, 0 for No)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The laptop uses Windows 11 as its operating system",
+                "0": "The laptop does not use Windows 11 as its operating system"
+            }
+        },
+        "SSD (in GB)": {
+            "description": "The capacity of the laptop SSD in Gigabytes",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "HDD (in GB)": {
+            "description": "The capacity of the laptop HDD in Gigabytes",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Display (in cm)": {
+            "description": "The size of the laptop display in centimeters",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Touchscreen": {
+            "description": "Whether the laptop has a touchscreen feature (1 for Yes, 0 for No)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The laptop does not have a touchscreen feature",
+                "1": "The laptop has a touchscreen feature"
+            }
+        },
+        "Price": {
+            "description": "The price of the laptop in Indian Rupees",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "Price": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in laptop pricing.",
+                "task_prompt": "Based on the features of the laptop, please predict the price.",
+                "answer_prompt": "The predicted price of the laptop is: ."
+            }
+        },
+        "Popularity_Rank": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in laptop popularity analysis.",
+                "task_prompt": "Based on the features of the laptop, please predict the popularity rank.",
+                "answer_prompt": "The predicted popularity rank of the laptop is: ."
+            }
+        },
+        "Processor Score (cpubenchmark.net)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in laptop performance analysis.",
+                "task_prompt": "Based on the features of the laptop, please predict the processor score.",
+                "answer_prompt": "The predicted processor score of the laptop is: ."
+            }
+        }
+    }
+}

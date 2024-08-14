@@ -1,0 +1,141 @@
+{
+    "basic_info": {
+        "row_num": 64,
+        "col_num": 12,
+        "label_candidates": [
+            "Total_Sold",
+            "Critic_Score",
+            "User_Score"
+        ],
+        "valid_feature_num": 12,
+        "num_features": [
+            "Year",
+            "Critic_Score",
+            "User_Score",
+            "Total_Sold"
+        ],
+        "cat_features": [
+            "Name",
+            "Genre",
+            "Publisher",
+            "Developer",
+            "MultiPlayer",
+            "Free_To_Play",
+            "Versions",
+            "ESRB_Rating"
+        ],
+        "other_features": [],
+        "tags": [
+            "games",
+            "video games",
+            "classification",
+            "logistic regression",
+            "ratings and reviews"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/heitornunes/igns-best-game-of-all-time-bracket"
+    },
+    "feature_info": {
+        "Name": {
+            "description": "The name of the video game",
+            "type": "categorical"
+        },
+        "Genre": {
+            "description": "The genre of the video game",
+            "type": "categorical"
+        },
+        "Publisher": {
+            "description": "The publisher of the video game",
+            "type": "categorical"
+        },
+        "Developer": {
+            "description": "The company that developed the video game",
+            "type": "categorical"
+        },
+        "MultiPlayer": {
+            "description": "Whether the game has a multiplayer mode or not",
+            "type": "categorical",
+            "value_dict": {
+                "True": "The game has a multiplayer mode",
+                "False": "The game does not have a multiplayer mode"
+            }
+        },
+        "Free_To_Play": {
+            "description": "Whether the game is free to play or not",
+            "type": "categorical",
+            "value_dict": {
+                "False": "The game is not free to play",
+                "True": "The game is free to play"
+            }
+        },
+        "Versions": {
+            "description": "The versions of the game that are available",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The game has 1 version",
+                "3": "The game has 3 versions",
+                "6": "The game has 6 versions",
+                "5": "The game has 5 versions",
+                "4": "The game has 4 versions",
+                "2": "The game has 2 versions",
+                "8": "The game has 8 versions",
+                "11": "The game has 11 versions",
+                "9": "The game has 9 versions"
+            }
+        },
+        "ESRB_Rating": {
+            "description": "The Entertainment Software Rating Board (ESRB) rating of the game",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The game has an ESRB rating of 1 (Everyone)",
+                "2": "The game has an ESRB rating of 2 (Everyone 10+)",
+                "3": "The game has an ESRB rating of 3 (Teen)"
+            }
+        },
+        "Year": {
+            "description": "The year the game was released",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Critic_Score": {
+            "description": "The score given to the game by critics, on a scale of 0-10",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "User_Score": {
+            "description": "The score given to the game by users, on a scale of 0-10",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Total_Sold": {
+            "description": "The total number of copies of the game sold, in millions",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "Total_Sold": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in video game sales analysis.",
+                "task_prompt": "Based on the features of the video game, please predict the total sales.",
+                "answer_prompt": "The total sales of the video game is expected to be {total_sales} million copies."
+            }
+        },
+        "Critic_Score": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in video game critique.",
+                "task_prompt": "Based on the features of the video game, please predict the critic score.",
+                "answer_prompt": "The critic score of the video game is expected to be {critic_score}."
+            }
+        },
+        "User_Score": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in user rating analysis.",
+                "task_prompt": "Based on the features of the video game, please predict the user score.",
+                "answer_prompt": "The user score of the video game is expected to be {user_score}."
+            }
+        }
+    }
+}

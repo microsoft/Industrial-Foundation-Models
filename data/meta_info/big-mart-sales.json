@@ -1,0 +1,139 @@
+{
+    "basic_info": {
+        "row_num": 8523,
+        "col_num": 12,
+        "label_candidates": [
+            "OutletSales",
+            "MRP",
+            "Weight"
+        ],
+        "valid_feature_num": 10,
+        "num_features": [
+            "Weight",
+            "ProductVisibility",
+            "MRP",
+            "EstablishmentYear",
+            "OutletSales"
+        ],
+        "cat_features": [
+            "FatContent",
+            "ProductType",
+            "OutletSize",
+            "LocationType",
+            "OutletType"
+        ],
+        "other_features": [],
+        "tags": [
+            "business",
+            "exploratory data analysis",
+            "data analytics",
+            "classification",
+            "retail and shopping"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/akashdeepkuila/big-mart-sales"
+    },
+    "feature_info": {
+        "ProductID": {
+            "description": "The unique identifier for each product",
+            "type": "useless"
+        },
+        "Weight": {
+            "description": "The weight of the product",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "FatContent": {
+            "description": "The fat content of the product, categorized as Low Fat or Regular",
+            "type": "categorical",
+            "value_dict": {
+                "Low Fat": "The product has low fat content",
+                "Regular": "The product has regular fat content",
+                "low fat": "The product has low fat content",
+                "LF": "The product has low fat content",
+                "reg": "The product has regular fat content"
+            }
+        },
+        "ProductVisibility": {
+            "description": "The percentage of total display area of all products in a store allocated to the particular product",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "ProductType": {
+            "description": "The category to which the product belongs",
+            "type": "categorical"
+        },
+        "MRP": {
+            "description": "Maximum Retail Price (list price) of the product",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "OutletID": {
+            "description": "The unique identifier for each outlet",
+            "type": "useless"
+        },
+        "EstablishmentYear": {
+            "description": "The year in which store was established",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "OutletSize": {
+            "description": "The size of the store in terms of ground area covered",
+            "type": "categorical",
+            "value_dict": {
+                "Medium": "The outlet size is medium",
+                "High": "The outlet size is high",
+                "Small": "The outlet size is small"
+            }
+        },
+        "LocationType": {
+            "description": "The type of city in which the store is located",
+            "type": "categorical",
+            "value_dict": {
+                "Tier 1": "The outlet is located in a Tier 1 city",
+                "Tier 3": "The outlet is located in a Tier 3 city",
+                "Tier 2": "The outlet is located in a Tier 2 city"
+            }
+        },
+        "OutletType": {
+            "description": "Whether the outlet is just a grocery store or some sort of supermarket",
+            "type": "categorical",
+            "value_dict": {
+                "Supermarket Type1": "The outlet is a type 1 supermarket",
+                "Supermarket Type2": "The outlet is a type 2 supermarket",
+                "Grocery Store": "The outlet is a grocery store",
+                "Supermarket Type3": "The outlet is a type 3 supermarket"
+            }
+        },
+        "OutletSales": {
+            "description": "Sales of the product in the particular store",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "OutletSales": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sales prediction.",
+                "task_prompt": "Based on the features of the product and outlet, please predict the sales of the outlet.",
+                "answer_prompt": "The predicted sales of the outlet is [number]."
+            }
+        },
+        "MRP": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in price estimation.",
+                "task_prompt": "Based on the features of the product and outlet, please estimate the Maximum Retail Price (MRP) of the product.",
+                "answer_prompt": "The estimated Maximum Retail Price (MRP) of the product is [number]."
+            }
+        },
+        "Weight": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in weight estimation.",
+                "task_prompt": "Based on the features of the product and outlet, please estimate the weight of the product.",
+                "answer_prompt": "The estimated weight of the product is [number]."
+            }
+        }
+    }
+}

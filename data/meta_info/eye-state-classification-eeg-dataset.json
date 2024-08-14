@@ -1,0 +1,137 @@
+{
+    "basic_info": {
+        "row_num": 14980,
+        "col_num": 15,
+        "label_candidates": [
+            "eyeDetection"
+        ],
+        "valid_feature_num": 15,
+        "num_features": [
+            "AF3",
+            "F7",
+            "F3",
+            "FC5",
+            "T7",
+            "P7",
+            "O1",
+            "O2",
+            "P8",
+            "T8",
+            "FC6",
+            "F4",
+            "F8",
+            "AF4"
+        ],
+        "cat_features": [
+            "eyeDetection"
+        ],
+        "other_features": [],
+        "tags": [
+            "biology",
+            "health",
+            "classification",
+            "binary classification",
+            "eyes and vision"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/robikscube/eye-state-classification-eeg-dataset"
+    },
+    "feature_info": {
+        "AF3": {
+            "description": "EEG signal from the AF3 electrode",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "F7": {
+            "description": "EEG signal from the F7 electrode",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "F3": {
+            "description": "EEG signal from the F3 electrode",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "FC5": {
+            "description": "EEG signal from the FC5 electrode",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "T7": {
+            "description": "EEG signal from the T7 electrode",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "P7": {
+            "description": "EEG signal from the P7 electrode",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "O1": {
+            "description": "EEG signal from the O1 electrode",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "O2": {
+            "description": "EEG signal from the O2 electrode",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "P8": {
+            "description": "EEG signal from the P8 electrode",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "T8": {
+            "description": "EEG signal from the T8 electrode",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "FC6": {
+            "description": "EEG signal from the FC6 electrode",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "F4": {
+            "description": "EEG signal from the F4 electrode",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "F8": {
+            "description": "EEG signal from the F8 electrode",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "AF4": {
+            "description": "EEG signal from the AF4 electrode",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "eyeDetection": {
+            "description": "Binary label for eye state. 1 indicates the eye is open and 0 indicates the eye is closed.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The eye is closed",
+                "1": "The eye is open"
+            }
+        }
+    },
+    "task_info": {
+        "eyeDetection": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing EEG data.",
+                "task_prompt": "Based on the EEG readings, please predict the state of the eye.",
+                "answer_prompt": "The eye is closed[0] or The eye is open[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "The eye is closed",
+                "1": "The eye is open"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        }
+    }
+}

@@ -1,0 +1,112 @@
+{
+    "basic_info": {
+        "row_num": 21120,
+        "col_num": 7,
+        "label_candidates": [
+            "Close",
+            "Adj Close",
+            "High",
+            "Low",
+            "Open"
+        ],
+        "valid_feature_num": 7,
+        "num_features": [
+            "Open",
+            "High",
+            "Low",
+            "Adj Close",
+            "Volume",
+            "Close"
+        ],
+        "cat_features": [
+            "Date"
+        ],
+        "other_features": [],
+        "tags": [
+            "business",
+            "finance",
+            "tabular",
+            "regression",
+            "investing"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/kapturovalexander/hp-lenovo-acer-asus-samsung-companies-share-prices"
+    },
+    "feature_info": {
+        "Date": {
+            "description": "The date of the recorded share price",
+            "type": "categorical"
+        },
+        "Open": {
+            "description": "The opening share price for the day",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "High": {
+            "description": "The highest recorded share price for the day",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Low": {
+            "description": "The lowest recorded share price for the day",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Close": {
+            "description": "The closing share price for the day",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Adj Close": {
+            "description": "The adjusted closing share price for the day, accounting for any corporate actions",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Volume": {
+            "description": "The number of shares traded during the day",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "Close": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in stock market analysis.",
+                "task_prompt": "Based on the features of the stock market data, please predict the closing price.",
+                "answer_prompt": "The predicted closing price is ______."
+            }
+        },
+        "Adj Close": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in stock market analysis.",
+                "task_prompt": "Based on the features of the stock market data, please predict the adjusted closing price.",
+                "answer_prompt": "The predicted adjusted closing price is ______."
+            }
+        },
+        "High": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in stock market analysis.",
+                "task_prompt": "Based on the features of the stock market data, please predict the highest price.",
+                "answer_prompt": "The predicted highest price is ______."
+            }
+        },
+        "Low": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in stock market analysis.",
+                "task_prompt": "Based on the features of the stock market data, please predict the lowest price.",
+                "answer_prompt": "The predicted lowest price is ______."
+            }
+        },
+        "Open": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in stock market analysis.",
+                "task_prompt": "Based on the features of the stock market data, please predict the opening price.",
+                "answer_prompt": "The predicted opening price is ______."
+            }
+        }
+    }
+}

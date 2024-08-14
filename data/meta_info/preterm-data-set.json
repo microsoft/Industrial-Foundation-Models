@@ -1,0 +1,128 @@
+{
+    "basic_info": {
+        "row_num": 58,
+        "col_num": 6,
+        "label_candidates": [
+            "Pre-term",
+            "Count Contraction",
+            "lenght of contraction",
+            "STD",
+            "Entropy",
+            "Contraction times"
+        ],
+        "valid_feature_num": 6,
+        "num_features": [
+            "Count Contraction",
+            "lenght of contraction",
+            "STD",
+            "Entropy",
+            "Contraction times"
+        ],
+        "cat_features": [
+            "Pre-term"
+        ],
+        "other_features": [],
+        "tags": [
+            "healthcare",
+            "physics",
+            "tabular",
+            "binary classification",
+            "health conditions"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/ahmadalijamali/preterm-data-set"
+    },
+    "feature_info": {
+        "Count Contraction": {
+            "description": "The total number of contractions",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "lenght of contraction": {
+            "description": "The length of the contraction in milliseconds",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "STD": {
+            "description": "Standard deviation of the contraction",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Entropy": {
+            "description": "Entropy of the contraction",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Contraction times": {
+            "description": "The number of times contraction occurred",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Pre-term": {
+            "description": "Indicates if the birth was preterm (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The birth was preterm",
+                "0": "The birth was not preterm"
+            }
+        }
+    },
+    "task_info": {
+        "Pre-term": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical data analysis.",
+                "task_prompt": "Based on the contraction data of the pregnant women, please predict if the birth was preterm.",
+                "answer_prompt": "The birth was preterm[1] or not[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "The birth was preterm",
+                "0": "The birth was not preterm"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        },
+        "Count Contraction": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical data analysis.",
+                "task_prompt": "Based on the contraction data of the pregnant women, please predict the count of contractions.",
+                "answer_prompt": "What is the count of contractions?"
+            }
+        },
+        "lenght of contraction": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical data analysis.",
+                "task_prompt": "Based on the contraction data of the pregnant women, please predict the length of contractions.",
+                "answer_prompt": "What is the length of contractions?"
+            }
+        },
+        "STD": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical data analysis.",
+                "task_prompt": "Based on the contraction data of the pregnant women, please predict the standard deviation of contractions.",
+                "answer_prompt": "What is the standard deviation of contractions?"
+            }
+        },
+        "Entropy": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical data analysis.",
+                "task_prompt": "Based on the contraction data of the pregnant women, please predict the entropy of contractions.",
+                "answer_prompt": "What is the entropy of contractions?"
+            }
+        },
+        "Contraction times": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical data analysis.",
+                "task_prompt": "Based on the contraction data of the pregnant women, please predict the contraction times.",
+                "answer_prompt": "What are the contraction times?"
+            }
+        }
+    }
+}

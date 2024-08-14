@@ -1,0 +1,132 @@
+{
+    "basic_info": {
+        "row_num": 8927,
+        "col_num": 10,
+        "label_candidates": [
+            "diskMark",
+            "rank",
+            "price",
+            "driveValue",
+            "priceperGB"
+        ],
+        "valid_feature_num": 10,
+        "num_features": [
+            "diskCapacity",
+            "diskMark",
+            "rank",
+            "price",
+            "driveValue",
+            "priceperGB",
+            "testDate",
+            "samples"
+        ],
+        "cat_features": [
+            "driveName",
+            "type"
+        ],
+        "other_features": [],
+        "tags": [
+            "computer science",
+            "model comparison",
+            "regression",
+            "ratings and reviews"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/alanjo/ssd-and-hdd-benchmarks"
+    },
+    "feature_info": {
+        "driveName": {
+            "description": "The name of the drive",
+            "type": "categorical"
+        },
+        "type": {
+            "description": "The type of the drive (SSD or HDD)",
+            "type": "categorical",
+            "value_dict": {
+                "SSD": "Solid State Drive",
+                "HDD": "Hard Disk Drive"
+            }
+        },
+        "diskCapacity": {
+            "description": "The capacity of the disk in GB",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "diskMark": {
+            "description": "The benchmark score of the disk",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "rank": {
+            "description": "The rank of the drive based on the benchmark score",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "price": {
+            "description": "The price of the drive in USD",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "driveValue": {
+            "description": "The value of the drive calculated as diskMark/price",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "priceperGB": {
+            "description": "The price per GB of the drive in USD/GB",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "testDate": {
+            "description": "The year when the drive was tested",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "samples": {
+            "description": "The number of samples tested for the drive",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "diskMark": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in computer hardware performance prediction.",
+                "task_prompt": "Based on the features of the hard drive, please predict the diskMark.",
+                "answer_prompt": "The predicted diskMark is."
+            }
+        },
+        "rank": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in computer hardware performance prediction.",
+                "task_prompt": "Based on the features of the hard drive, please predict the rank.",
+                "answer_prompt": "The predicted rank is."
+            }
+        },
+        "price": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in computer hardware pricing prediction.",
+                "task_prompt": "Based on the features of the hard drive, please predict the price.",
+                "answer_prompt": "The predicted price is."
+            }
+        },
+        "driveValue": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in computer hardware value prediction.",
+                "task_prompt": "Based on the features of the hard drive, please predict the driveValue.",
+                "answer_prompt": "The predicted driveValue is."
+            }
+        },
+        "priceperGB": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in computer hardware pricing prediction.",
+                "task_prompt": "Based on the features of the hard drive, please predict the price per GB.",
+                "answer_prompt": "The predicted price per GB is."
+            }
+        }
+    }
+}

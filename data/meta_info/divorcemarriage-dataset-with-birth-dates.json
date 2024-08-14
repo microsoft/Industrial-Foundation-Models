@@ -1,0 +1,341 @@
+{
+    "basic_info": {
+        "row_num": 2072,
+        "col_num": 41,
+        "label_candidates": [
+            "Num_Hijos",
+            "Custodia",
+            "Matri_A\u221a\u00b1os",
+            "Matri_Meses",
+            "ElIngreso",
+            "EllaIngreso"
+        ],
+        "valid_feature_num": 41,
+        "num_features": [
+            "Edad",
+            "ElIngreso",
+            "Edad2",
+            "EllaIngreso",
+            "Matri_A\u221a\u00b1os",
+            "Matri_Meses",
+            "Num_Hijos"
+        ],
+        "cat_features": [
+            "Tipo",
+            "Nacionalidad",
+            "LocNaci_Do",
+            "MpioNaci_Do",
+            "EFedNaci_Do",
+            "PaisNaci_Do",
+            "MpioHab_Do",
+            "EFedHab_Do",
+            "PaisHab_Do",
+            "Ocupaci\u221a\u2265n_Do",
+            "LocHabi_Do",
+            "Nacionalidad2",
+            "LocNaci_Da",
+            "MpioNaci_Da",
+            "EFedNaci_Da",
+            "PaisNaci_Da",
+            "LocHabi_Da",
+            "MpioHab_Da",
+            "EFedHab_Da",
+            "PaisHab_Da",
+            "Ocupaci\u221a\u2265n_Da",
+            "Localidad",
+            "Municipio",
+            "Entidad Federativa",
+            "ElEscolaridad",
+            "ElTrabajo",
+            "EllaEscolaridad",
+            "EllaTrabajo",
+            "Custodia"
+        ],
+        "other_features": [
+            "Fecha de Registro",
+            "F_Naci_Do",
+            "F_Naci_Da",
+            "Fecha de Registro 2",
+            "Fecha"
+        ],
+        "tags": [
+            "astronomy",
+            "people",
+            "religion and belief systems",
+            "social science"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/aagghh/divorcemarriage-dataset-with-birth-dates"
+    },
+    "feature_info": {
+        "Fecha de Registro": {
+            "description": "Date of registration",
+            "type": "other"
+        },
+        "Tipo": {
+            "description": "Type of divorce",
+            "type": "categorical",
+            "value_dict": {
+                "Necesario": "Necessary type of divorce",
+                "Voluntario": "Voluntary type of divorce"
+            }
+        },
+        "Nacionalidad": {
+            "description": "Nationality of the first person",
+            "type": "categorical"
+        },
+        "F_Naci_Do": {
+            "description": "Birth date of the first person",
+            "type": "other"
+        },
+        "LocNaci_Do": {
+            "description": "Birth location of the first person",
+            "type": "categorical"
+        },
+        "MpioNaci_Do": {
+            "description": "Municipality of birth of the first person",
+            "type": "categorical"
+        },
+        "EFedNaci_Do": {
+            "description": "Federation of birth of the first person",
+            "type": "categorical"
+        },
+        "PaisNaci_Do": {
+            "description": "Country of birth of the first person",
+            "type": "categorical"
+        },
+        "Edad": {
+            "description": "Age of the first person",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "MpioHab_Do": {
+            "description": "Municipality of residence of the first person",
+            "type": "categorical"
+        },
+        "EFedHab_Do": {
+            "description": "Federation of residence of the first person",
+            "type": "categorical"
+        },
+        "PaisHab_Do": {
+            "description": "Country of residence of the first person",
+            "type": "categorical",
+            "value_dict": {
+                "MEXICO": "Residing in Mexico",
+                "ESTADOS UNIDOS DE AMERICA": "Residing in United States of America",
+                "ESPA\u221a\u00ebA": "Residing in Spain",
+                "AUSTRALIA": "Residing in Australia",
+                "PUERTO RICO": "Residing in Puerto Rico"
+            }
+        },
+        "ElIngreso": {
+            "description": "Income of the first person",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Ocupaci\u221a\u2265n_Do": {
+            "description": "Occupation of the first person",
+            "type": "categorical"
+        },
+        "LocHabi_Do": {
+            "description": "Location of residence of the first person",
+            "type": "categorical"
+        },
+        "Nacionalidad2": {
+            "description": "Nationality of the second person",
+            "type": "categorical"
+        },
+        "F_Naci_Da": {
+            "description": "Birth date of the second person",
+            "type": "other"
+        },
+        "Fecha de Registro 2": {
+            "description": "Second date of registration",
+            "type": "other"
+        },
+        "LocNaci_Da": {
+            "description": "Birth location of the second person",
+            "type": "categorical"
+        },
+        "MpioNaci_Da": {
+            "description": "Municipality of birth of the second person",
+            "type": "categorical"
+        },
+        "EFedNaci_Da": {
+            "description": "Federation of birth of the second person",
+            "type": "categorical"
+        },
+        "PaisNaci_Da": {
+            "description": "Country of birth of the second person",
+            "type": "categorical"
+        },
+        "Edad2": {
+            "description": "Age of the second person",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "LocHabi_Da": {
+            "description": "Location of residence of the second person",
+            "type": "categorical"
+        },
+        "MpioHab_Da": {
+            "description": "Municipality of residence of the second person",
+            "type": "categorical"
+        },
+        "EFedHab_Da": {
+            "description": "Federation of residence of the second person",
+            "type": "categorical"
+        },
+        "PaisHab_Da": {
+            "description": "Country of residence of the second person",
+            "type": "categorical",
+            "value_dict": {
+                "MEXICO": "Residing in Mexico",
+                "ESTADOS UNIDOS": "Residing in United States",
+                "ESPA\u221a\u00ebA": "Residing in Spain",
+                "FRANCIA": "Residing in France"
+            }
+        },
+        "Ocupaci\u221a\u2265n_Da": {
+            "description": "Occupation of the second person",
+            "type": "categorical"
+        },
+        "EllaIngreso": {
+            "description": "Income of the second person",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Fecha": {
+            "description": "Date of the event",
+            "type": "other"
+        },
+        "Localidad": {
+            "description": "Locality of the event",
+            "type": "categorical"
+        },
+        "Municipio": {
+            "description": "Municipality of the event",
+            "type": "categorical"
+        },
+        "Entidad Federativa": {
+            "description": "Federative entity of the event",
+            "type": "categorical"
+        },
+        "ElEscolaridad": {
+            "description": "Education level of the first person",
+            "type": "categorical",
+            "value_dict": {
+                "SECUNDARIA": "Has secondary education",
+                "PREPARATORIA": "Has preparatory education",
+                "PROFESIONAL": "Has professional education",
+                "PRIMARIA": "Has primary education",
+                "OTRO": "Has other type of education",
+                "SIN ESCOLARIDAD": "Without education"
+            }
+        },
+        "ElTrabajo": {
+            "description": "Work status of the first person",
+            "type": "categorical"
+        },
+        "EllaEscolaridad": {
+            "description": "Education level of the second person",
+            "type": "categorical",
+            "value_dict": {
+                "SECUNDARIA": "Has secondary education",
+                "PREPARATORIA": "Has preparatory education",
+                "PROFESIONAL": "Has professional education",
+                "PRIMARIA": "Has primary education",
+                "OTRO": "Has other type of education",
+                "SIN ESCOLARIDAD": "Without education"
+            }
+        },
+        "EllaTrabajo": {
+            "description": "Work status of the second person",
+            "type": "categorical"
+        },
+        "Matri_A\u221a\u00b1os": {
+            "description": "Years of marriage",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Matri_Meses": {
+            "description": "Months of marriage",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Num_Hijos": {
+            "description": "Number of children",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Custodia": {
+            "description": "Custody of the children",
+            "type": "categorical",
+            "value_dict": {
+                "MADRE": "Mother has custody",
+                "PADRE": "Father has custody",
+                "OTRO": "Other has custody"
+            }
+        }
+    },
+    "task_info": {
+        "Num_Hijos": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in demographic analysis.",
+                "task_prompt": "Based on the demographic and socio-economic features of the couple, please predict the number of children they have.",
+                "answer_prompt": "The number of children is."
+            }
+        },
+        "Custodia": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in family law.",
+                "task_prompt": "Based on the demographic and socio-economic features of the couple, please predict who has custody of the children after the divorce.",
+                "answer_prompt": "Mother has custody[0], Father has custody[1], or Other has custody[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "MADRE": "Mother has custody",
+                "PADRE": "Father has custody",
+                "OTRO": "Other has custody"
+            },
+            "class_index_dict": {
+                "MADRE": 0,
+                "PADRE": 1,
+                "OTRO": 2
+            }
+        },
+        "Matri_A\u221a\u00b1os": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in demographic analysis.",
+                "task_prompt": "Based on the demographic and socio-economic features of the couple, please predict the number of years they have been married.",
+                "answer_prompt": "The number of years married is."
+            }
+        },
+        "Matri_Meses": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in demographic analysis.",
+                "task_prompt": "Based on the demographic and socio-economic features of the couple, please predict the number of months they have been married.",
+                "answer_prompt": "The number of months married is."
+            }
+        },
+        "ElIngreso": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in economic analysis.",
+                "task_prompt": "Based on the demographic and socio-economic features of the couple, please predict the husband's income.",
+                "answer_prompt": "The husband's income is."
+            }
+        },
+        "EllaIngreso": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in economic analysis.",
+                "task_prompt": "Based on the demographic and socio-economic features of the couple, please predict the wife's income.",
+                "answer_prompt": "The wife's income is."
+            }
+        }
+    }
+}

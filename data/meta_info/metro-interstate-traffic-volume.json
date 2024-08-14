@@ -1,0 +1,122 @@
+{
+    "basic_info": {
+        "row_num": 48204,
+        "col_num": 9,
+        "label_candidates": [
+            "traffic_volume",
+            "temp",
+            "rain_1h",
+            "snow_1h",
+            "clouds_all"
+        ],
+        "valid_feature_num": 9,
+        "num_features": [
+            "temp",
+            "rain_1h",
+            "snow_1h",
+            "clouds_all",
+            "traffic_volume"
+        ],
+        "cat_features": [
+            "holiday",
+            "weather_main",
+            "weather_description"
+        ],
+        "other_features": [
+            "date_time"
+        ],
+        "tags": [
+            "education",
+            "computer science",
+            "transportation",
+            "tabular",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/anshtanwar/metro-interstate-traffic-volume"
+    },
+    "feature_info": {
+        "traffic_volume": {
+            "description": "Hourly I-94 ATR 301 reported westbound traffic volume",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "holiday": {
+            "description": "US National Holidays plus regional holiday, Minnesota State Fair",
+            "type": "categorical"
+        },
+        "temp": {
+            "description": "Average temperature in kelvin",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "rain_1h": {
+            "description": "Amount in mm of rain that occurred in the hour",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "snow_1h": {
+            "description": "Amount in mm of snow that occurred in the hour",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "clouds_all": {
+            "description": "Percentage of cloud cover",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "weather_main": {
+            "description": "Short textual description of the current weather",
+            "type": "categorical"
+        },
+        "weather_description": {
+            "description": "Longer textual description of the current weather",
+            "type": "categorical"
+        },
+        "date_time": {
+            "description": "Hour of the data collected in local CST time",
+            "type": "other"
+        }
+    },
+    "task_info": {
+        "traffic_volume": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in traffic volume prediction.",
+                "task_prompt": "Based on the weather conditions and date and time, please predict the traffic volume.",
+                "answer_prompt": "The predicted traffic volume is: ."
+            }
+        },
+        "temp": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in temperature prediction.",
+                "task_prompt": "Based on the traffic volume, weather conditions and date and time, please predict the temperature.",
+                "answer_prompt": "The predicted temperature is: ."
+            }
+        },
+        "rain_1h": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in rainfall prediction.",
+                "task_prompt": "Based on the traffic volume, temperature, weather conditions and date and time, please predict the rainfall in the next hour.",
+                "answer_prompt": "The predicted rainfall in the next hour is: ."
+            }
+        },
+        "snow_1h": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in snowfall prediction.",
+                "task_prompt": "Based on the traffic volume, temperature, weather conditions and date and time, please predict the snowfall in the next hour.",
+                "answer_prompt": "The predicted snowfall in the next hour is: ."
+            }
+        },
+        "clouds_all": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in cloud coverage prediction.",
+                "task_prompt": "Based on the traffic volume, temperature, weather conditions and date and time, please predict the cloud coverage.",
+                "answer_prompt": "The predicted cloud coverage is: ."
+            }
+        }
+    }
+}

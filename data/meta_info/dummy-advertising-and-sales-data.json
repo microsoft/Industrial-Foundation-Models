@@ -1,0 +1,95 @@
+{
+    "basic_info": {
+        "row_num": 4566,
+        "col_num": 5,
+        "label_candidates": [
+            "Sales",
+            "TV",
+            "Radio",
+            "Social Media"
+        ],
+        "valid_feature_num": 5,
+        "num_features": [
+            "TV",
+            "Radio",
+            "Social Media",
+            "Sales"
+        ],
+        "cat_features": [
+            "Influencer"
+        ],
+        "other_features": [],
+        "tags": [
+            "business",
+            "marketing",
+            "linear regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/harrimansaragih/dummy-advertising-and-sales-data"
+    },
+    "feature_info": {
+        "TV": {
+            "description": "Advertising budget spent on TV, presumably in a certain unit like thousands of dollars",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Radio": {
+            "description": "Advertising budget spent on radio, presumably in a certain unit like thousands of dollars",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Social Media": {
+            "description": "Advertising budget spent on social media, presumably in a certain unit like thousands of dollars",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Influencer": {
+            "description": "The level of influencer involved in the advertising campaign, such as Mega or Micro",
+            "type": "categorical",
+            "value_dict": {
+                "Mega": "Influencer with a very large following or impact",
+                "Micro": "Influencer with a relatively small following or impact",
+                "Nano": "Influencer with a minimal following or impact",
+                "Macro": "Influencer with a moderate following or impact"
+            }
+        },
+        "Sales": {
+            "description": "The sales amount generated, presumably in a certain unit like thousands of dollars",
+            "type": "numerical",
+            "decimal": 6
+        }
+    },
+    "task_info": {
+        "Sales": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sales prediction.",
+                "task_prompt": "Based on the advertising data including TV, Radio, Social Media and Influencer, please predict the sales.",
+                "answer_prompt": "The sales is expected to be around."
+            }
+        },
+        "TV": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in advertising analysis.",
+                "task_prompt": "Based on the sales and the advertising data including Radio, Social Media and Influencer, please predict the TV advertising budget.",
+                "answer_prompt": "The TV advertising budget is expected to be around."
+            }
+        },
+        "Radio": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in advertising analysis.",
+                "task_prompt": "Based on the sales and the advertising data including TV, Social Media and Influencer, please predict the Radio advertising budget.",
+                "answer_prompt": "The Radio advertising budget is expected to be around."
+            }
+        },
+        "Social Media": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in advertising analysis.",
+                "task_prompt": "Based on the sales and the advertising data including TV, Radio and Influencer, please predict the Social Media advertising budget.",
+                "answer_prompt": "The Social Media advertising budget is expected to be around."
+            }
+        }
+    }
+}

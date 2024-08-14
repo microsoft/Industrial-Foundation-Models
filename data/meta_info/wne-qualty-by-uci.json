@@ -1,0 +1,122 @@
+{
+    "basic_info": {
+        "row_num": 6497,
+        "col_num": 12,
+        "label_candidates": [
+            "quality",
+            "alcohol",
+            "pH"
+        ],
+        "valid_feature_num": 12,
+        "num_features": [
+            "fixed acidity",
+            "volatile acidity",
+            "citric acid",
+            "residual sugar",
+            "chlorides",
+            "free sulfur dioxide",
+            "total sulfur dioxide",
+            "density",
+            "pH",
+            "sulphates",
+            "alcohol",
+            "quality"
+        ],
+        "cat_features": [],
+        "other_features": [],
+        "tags": [
+            "alcohol",
+            "business",
+            "classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/huseyinelci/wne-qualty-by-uci"
+    },
+    "feature_info": {
+        "fixed acidity": {
+            "description": "The amount of fixed acids present in the wine (g/dm^3)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "volatile acidity": {
+            "description": "The amount of acetic acid in the wine, which at too high of levels can lead to an unpleasant, vinegar taste (g/dm^3)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "citric acid": {
+            "description": "Found in small quantities, citric acid can add freshness and flavor to wines (g/dm^3)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "residual sugar": {
+            "description": "The amount of sugar remaining after fermentation stops, it\u2019s rare to find wines with less than 1 gram/liter and wines with greater than 45 grams/liter are considered sweet (g/dm^3)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "chlorides": {
+            "description": "The amount of salt in the wine (g/dm^3)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "free sulfur dioxide": {
+            "description": "The free form of SO2 exists in equilibrium between molecular SO2 (as a dissolved gas) and bisulfite ion; it prevents microbial growth and the oxidation of wine (mg/dm^3)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "total sulfur dioxide": {
+            "description": "Amount of free and bound forms of S02; in low concentrations, SO2 is mostly undetectable in wine, but at free SO2 concentrations over 50 ppm, SO2 becomes evident in the nose and taste of wine (mg/dm^3)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "density": {
+            "description": "The density of the wine, which can provide some information about the alcohol content and the amount of residual sugar (g/cm^3)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "pH": {
+            "description": "Describes the level of acidity or basicity in the wine on a scale from 0 (very acidic) to 14 (very basic); most wines are between 3-4 on the pH scale",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "sulphates": {
+            "description": "Wine additive which can contribute to sulfur dioxide gas (S02) levels, wich acts as an antimicrobial and antioxidant (g/dm^3)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "alcohol": {
+            "description": "The percent alcohol content of the wine",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "quality": {
+            "description": "The quality of the wine, rated on a scale from 0 (very poor) to 10 (very excellent)",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "quality": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in wine quality assessment.",
+                "task_prompt": "Based on the physicochemical properties of the wine, please predict the quality score.",
+                "answer_prompt": "The quality score of the wine is:."
+            }
+        },
+        "alcohol": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in wine chemistry.",
+                "task_prompt": "Based on the physicochemical properties of the wine, please predict the alcohol content.",
+                "answer_prompt": "The alcohol content of the wine is:."
+            }
+        },
+        "pH": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in wine chemistry.",
+                "task_prompt": "Based on the physicochemical properties of the wine, please predict the pH value.",
+                "answer_prompt": "The pH value of the wine is:."
+            }
+        }
+    }
+}

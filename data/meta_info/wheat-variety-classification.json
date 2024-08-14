@@ -1,0 +1,153 @@
+{
+    "basic_info": {
+        "row_num": 210,
+        "col_num": 8,
+        "label_candidates": [
+            "category",
+            "area",
+            "perimeter",
+            "compactness",
+            "length",
+            "width",
+            "groove length",
+            "asymmetry coefficient"
+        ],
+        "valid_feature_num": 8,
+        "num_features": [
+            "area",
+            "perimeter",
+            "compactness",
+            "length",
+            "width",
+            "asymmetry coefficient",
+            "groove length"
+        ],
+        "cat_features": [
+            "category"
+        ],
+        "other_features": [],
+        "tags": [
+            "categorical",
+            "agriculture",
+            "beginner",
+            "exploratory data analysis"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/sudhanshu2198/wheat-variety-classification"
+    },
+    "feature_info": {
+        "area": {
+            "description": "The area of the wheat kernel, likely measured in square millimeters (mm^2)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "perimeter": {
+            "description": "The perimeter of the wheat kernel, likely measured in millimeters (mm)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "compactness": {
+            "description": "The compactness of the wheat kernel, calculated as 4*pi*area/perimeter^2",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "length": {
+            "description": "The length of the wheat kernel, likely measured in millimeters (mm)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "width": {
+            "description": "The width of the wheat kernel, likely measured in millimeters (mm)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "asymmetry coefficient": {
+            "description": "The asymmetry coefficient of the wheat kernel, a dimensionless number representing the degree of asymmetry",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "groove length": {
+            "description": "The length of the kernel groove, likely measured in millimeters (mm)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "category": {
+            "description": "The category of the wheat variety, represented as a numerical value. Each unique numerical value represents a different variety",
+            "type": "categorical",
+            "value_dict": {
+                "1.0": "Represents the first variety of wheat",
+                "2.0": "Represents the second variety of wheat",
+                "3.0": "Represents the third variety of wheat"
+            }
+        }
+    },
+    "task_info": {
+        "category": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in agriculture and crop classification.",
+                "task_prompt": "Based on the physical features of the wheat grain, please predict the variety of the wheat.",
+                "answer_prompt": "Is it the first[0], second[1] or third[2] variety of wheat?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "1.0": "Represents the first variety of wheat",
+                "2.0": "Represents the second variety of wheat",
+                "3.0": "Represents the third variety of wheat"
+            },
+            "class_index_dict": {
+                "1.0": 0,
+                "2.0": 1,
+                "3.0": 2
+            }
+        },
+        "area": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in agriculture and crop measurements.",
+                "task_prompt": "Based on the other features of the wheat grain, please predict the area of the wheat grain."
+            }
+        },
+        "perimeter": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in agriculture and crop measurements.",
+                "task_prompt": "Based on the other features of the wheat grain, please predict the perimeter of the wheat grain."
+            }
+        },
+        "compactness": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in agriculture and crop measurements.",
+                "task_prompt": "Based on the other features of the wheat grain, please predict the compactness of the wheat grain."
+            }
+        },
+        "length": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in agriculture and crop measurements.",
+                "task_prompt": "Based on the other features of the wheat grain, please predict the length of the wheat grain."
+            }
+        },
+        "width": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in agriculture and crop measurements.",
+                "task_prompt": "Based on the other features of the wheat grain, please predict the width of the wheat grain."
+            }
+        },
+        "groove length": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in agriculture and crop measurements.",
+                "task_prompt": "Based on the other features of the wheat grain, please predict the groove length of the wheat grain."
+            }
+        },
+        "asymmetry coefficient": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in agriculture and crop measurements.",
+                "task_prompt": "Based on the other features of the wheat grain, please predict the asymmetry coefficient of the wheat grain."
+            }
+        }
+    }
+}

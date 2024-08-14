@@ -1,0 +1,160 @@
+{
+    "basic_info": {
+        "row_num": 70000,
+        "col_num": 17,
+        "label_candidates": [
+            "class",
+            "redshift"
+        ],
+        "valid_feature_num": 15,
+        "num_features": [
+            "ra",
+            "dec",
+            "psfMag_u",
+            "psfMag_g",
+            "psfMag_r",
+            "psfMag_i",
+            "psfMag_z",
+            "redshift",
+            "mjd"
+        ],
+        "cat_features": [
+            "run",
+            "camcol",
+            "field",
+            "plate",
+            "fiberid",
+            "class"
+        ],
+        "other_features": [],
+        "tags": [
+            "astronomy",
+            "business",
+            "classification",
+            "random forest",
+            "logistic regression",
+            "svm"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/rockdeldiablo/sloan-digital-sky-survey-dr16-70k"
+    },
+    "feature_info": {
+        "objid": {
+            "description": "Unique identifier for each object in the dataset",
+            "type": "useless"
+        },
+        "ra": {
+            "description": "Right Ascension of the celestial object (in degrees)",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "dec": {
+            "description": "Declination of the celestial object (in degrees)",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "psfMag_u": {
+            "description": "Point Spread Function magnitude in u-band",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "psfMag_g": {
+            "description": "Point Spread Function magnitude in g-band",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "psfMag_r": {
+            "description": "Point Spread Function magnitude in r-band",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "psfMag_i": {
+            "description": "Point Spread Function magnitude in i-band",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "psfMag_z": {
+            "description": "Point Spread Function magnitude in z-band",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "run": {
+            "description": "Specific scan number",
+            "type": "categorical"
+        },
+        "rerun": {
+            "description": "Reprocessing run number",
+            "type": "useless"
+        },
+        "camcol": {
+            "description": "Camera column (1-6) during the run",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Camera column 1 during the run",
+                "2": "Camera column 2 during the run",
+                "3": "Camera column 3 during the run",
+                "4": "Camera column 4 during the run",
+                "5": "Camera column 5 during the run",
+                "6": "Camera column 6 during the run"
+            }
+        },
+        "field": {
+            "description": "Field number within the run",
+            "type": "categorical"
+        },
+        "class": {
+            "description": "Object class (Star, Galaxy, QSO)",
+            "type": "categorical",
+            "value_dict": {
+                "GALAXY": "The object is a galaxy",
+                "STAR": "The object is a star",
+                "QSO": "The object is a Quasi-Stellar Object (QSO)"
+            }
+        },
+        "redshift": {
+            "description": "Redshift of the celestial object",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "plate": {
+            "description": "Plate number",
+            "type": "categorical"
+        },
+        "mjd": {
+            "description": "Modified Julian Date of observation",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "fiberid": {
+            "description": "Fiber ID",
+            "type": "categorical"
+        }
+    },
+    "task_info": {
+        "class": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in astrophysics.",
+                "task_prompt": "Based on the features of the celestial bodies, please classify the type of the object.",
+                "answer_prompt": "Is it a Galaxy[0], Star[1] or Quasi-Stellar Object (QSO)[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "GALAXY": "The object is a galaxy",
+                "STAR": "The object is a star",
+                "QSO": "The object is a Quasi-Stellar Object (QSO)"
+            },
+            "class_index_dict": {
+                "GALAXY": 0,
+                "STAR": 1,
+                "QSO": 2
+            }
+        },
+        "redshift": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in astrophysics.",
+                "task_prompt": "Based on the features of the celestial bodies, please predict the redshift."
+            }
+        }
+    }
+}

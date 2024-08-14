@@ -1,0 +1,254 @@
+{
+    "basic_info": {
+        "row_num": 3743,
+        "col_num": 17,
+        "label_candidates": [
+            "ASD_traits",
+            "Family_mem_with_ASD",
+            "Sex",
+            "Age_Years",
+            "Jaundice"
+        ],
+        "valid_feature_num": 17,
+        "num_features": [
+            "A10_Autism_Spectrum_Quotient",
+            "Age_Years"
+        ],
+        "cat_features": [
+            "A1",
+            "A2",
+            "A3",
+            "A4",
+            "A5",
+            "A6",
+            "A7",
+            "A8",
+            "A9",
+            "Sex",
+            "Ethnicity",
+            "Jaundice",
+            "Family_mem_with_ASD",
+            "Who_completed_the_test",
+            "ASD_traits"
+        ],
+        "other_features": [],
+        "tags": [
+            "global",
+            "mental health",
+            "healthcare",
+            "categorical",
+            "tabular"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/afarinbargrizan/asd-final"
+    },
+    "feature_info": {
+        "A1": {
+            "description": "Question 1 response in the Autism Spectrum Quotient (AQ-10) test",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The participant answered \"yes\" to question 1",
+                "0": "The participant answered \"no\" to question 1"
+            }
+        },
+        "A2": {
+            "description": "Question 2 response in the AQ-10 test",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The participant answered \"yes\" to question 2",
+                "0": "The participant answered \"no\" to question 2"
+            }
+        },
+        "A3": {
+            "description": "Question 3 response in the AQ-10 test",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The participant answered \"yes\" to question 3",
+                "0": "The participant answered \"no\" to question 3"
+            }
+        },
+        "A4": {
+            "description": "Question 4 response in the AQ-10 test",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The participant answered \"yes\" to question 4",
+                "0": "The participant answered \"no\" to question 4"
+            }
+        },
+        "A5": {
+            "description": "Question 5 response in the AQ-10 test",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The participant answered \"no\" to question 5",
+                "1": "The participant answered \"yes\" to question 5"
+            }
+        },
+        "A6": {
+            "description": "Question 6 response in the AQ-10 test",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The participant answered \"no\" to question 6",
+                "1": "The participant answered \"yes\" to question 6"
+            }
+        },
+        "A7": {
+            "description": "Question 7 response in the AQ-10 test",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The participant answered \"yes\" to question 7",
+                "0": "The participant answered \"no\" to question 7"
+            }
+        },
+        "A8": {
+            "description": "Question 8 response in the AQ-10 test",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The participant answered \"yes\" to question 8",
+                "0": "The participant answered \"no\" to question 8"
+            }
+        },
+        "A9": {
+            "description": "Question 9 response in the AQ-10 test",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The participant answered \"no\" to question 9",
+                "1": "The participant answered \"yes\" to question 9"
+            }
+        },
+        "A10_Autism_Spectrum_Quotient": {
+            "description": "Total score of the AQ-10 test",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Age_Years": {
+            "description": "Age of the participant in years",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Sex": {
+            "description": "Sex of the participant",
+            "type": "categorical",
+            "value_dict": {
+                "F": "The participant is female",
+                "M": "The participant is male"
+            }
+        },
+        "Ethnicity": {
+            "description": "Ethnicity of the participant",
+            "type": "categorical"
+        },
+        "Jaundice": {
+            "description": "Whether the participant had jaundice as a baby",
+            "type": "categorical",
+            "value_dict": {
+                "No": "The participant did not have jaundice as a baby",
+                "Yes": "The participant had jaundice as a baby"
+            }
+        },
+        "Family_mem_with_ASD": {
+            "description": "Whether the participant has a family member with Autism Spectrum Disorder (ASD)",
+            "type": "categorical",
+            "value_dict": {
+                "No": "The participant does not have a family member with ASD",
+                "Yes": "The participant has a family member with ASD"
+            }
+        },
+        "Who_completed_the_test": {
+            "description": "Who completed the AQ-10 test",
+            "type": "categorical",
+            "value_dict": {
+                "Self": "The participant completed the test themselves",
+                "Parent": "A parent of the participant completed the test",
+                "Family Member": "A family member of the participant completed the test",
+                "Relative": "A relative of the participant completed the test",
+                "Others": "Someone else completed the test",
+                "Health Care Professional": "A health care professional completed the test",
+                "School and NGO": "A school or NGO completed the test"
+            }
+        },
+        "ASD_traits": {
+            "description": "Whether the participant has traits of ASD",
+            "type": "categorical",
+            "value_dict": {
+                "No": "The participant does not have traits of ASD",
+                "Yes": "The participant has traits of ASD"
+            }
+        }
+    },
+    "task_info": {
+        "ASD_traits": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in predicting Autism Spectrum Disorder traits.",
+                "task_prompt": "Based on the features of the participant, please predict if the participant has traits of ASD.",
+                "answer_prompt": "No[0] or Yes[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "No": "The participant does not have traits of ASD",
+                "Yes": "The participant has traits of ASD"
+            },
+            "class_index_dict": {
+                "No": 0,
+                "Yes": 1
+            }
+        },
+        "Family_mem_with_ASD": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in predicting Autism Spectrum Disorder in family members.",
+                "task_prompt": "Based on the features of the participant, please predict if the participant has a family member with ASD.",
+                "answer_prompt": "No[0] or Yes[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "No": "The participant does not have a family member with ASD",
+                "Yes": "The participant has a family member with ASD"
+            },
+            "class_index_dict": {
+                "No": 0,
+                "Yes": 1
+            }
+        },
+        "Sex": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in predicting gender.",
+                "task_prompt": "Based on the features of the participant, please predict the gender of the participant.",
+                "answer_prompt": "Female[0] or Male[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "F": "The participant is female",
+                "M": "The participant is male"
+            },
+            "class_index_dict": {
+                "F": 0,
+                "M": 1
+            }
+        },
+        "Age_Years": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in predicting age.",
+                "task_prompt": "Based on the features of the participant, please predict the age of the participant."
+            }
+        },
+        "Jaundice": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in predicting the history of jaundice.",
+                "task_prompt": "Based on the features of the participant, please predict if the participant had jaundice as a baby.",
+                "answer_prompt": "No[0] or Yes[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "No": "The participant did not have jaundice as a baby",
+                "Yes": "The participant had jaundice as a baby"
+            },
+            "class_index_dict": {
+                "No": 0,
+                "Yes": 1
+            }
+        }
+    }
+}

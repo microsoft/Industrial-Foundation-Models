@@ -1,0 +1,174 @@
+{
+    "basic_info": {
+        "row_num": 3550,
+        "col_num": 11,
+        "label_candidates": [
+            "rings",
+            "length",
+            "diameter",
+            "height",
+            "whole-weight",
+            "shucked-weight",
+            "viscera-weight",
+            "shell-weight"
+        ],
+        "valid_feature_num": 11,
+        "num_features": [
+            "length",
+            "diameter",
+            "height",
+            "whole-weight",
+            "shucked-weight",
+            "viscera-weight",
+            "shell-weight",
+            "rings"
+        ],
+        "cat_features": [
+            "sex_F",
+            "sex_I",
+            "sex_M"
+        ],
+        "other_features": [],
+        "tags": [
+            "earth and nature",
+            "animals",
+            "beginner",
+            "tabular",
+            "regression",
+            "sklearn"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/sandeepmajumdar/abalone-age-prediction"
+    },
+    "feature_info": {
+        "length": {
+            "description": "Length of abalone (in mm)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "diameter": {
+            "description": "Diameter of abalone (in mm)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "height": {
+            "description": "Height of abalone (in mm)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "whole-weight": {
+            "description": "Whole weight of abalone (in grams)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "shucked-weight": {
+            "description": "Weight of abalone meat (in grams)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "viscera-weight": {
+            "description": "Gut weight of abalone (after bleeding) (in grams)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "shell-weight": {
+            "description": "Weight of abalone after being dried (in grams)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "sex_F": {
+            "description": "Abalone is female (1 if true, 0 otherwise)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Abalone is not female",
+                "1": "Abalone is female"
+            }
+        },
+        "sex_I": {
+            "description": "Abalone is infant (1 if true, 0 otherwise)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Abalone is not an infant",
+                "1": "Abalone is an infant"
+            }
+        },
+        "sex_M": {
+            "description": "Abalone is male (1 if true, 0 otherwise)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Abalone is male",
+                "0": "Abalone is not male"
+            }
+        },
+        "rings": {
+            "description": "Number of rings in abalone (indicating age)",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "rings": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in marine biology.",
+                "task_prompt": "Based on the features of the abalone, please predict the number of rings.",
+                "answer_prompt": "The number of rings is {rings}."
+            }
+        },
+        "length": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in marine biology.",
+                "task_prompt": "Based on the features of the abalone, please predict the length.",
+                "answer_prompt": "The length of the abalone is {length}."
+            }
+        },
+        "diameter": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in marine biology.",
+                "task_prompt": "Based on the features of the abalone, please predict the diameter.",
+                "answer_prompt": "The diameter of the abalone is {diameter}."
+            }
+        },
+        "height": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in marine biology.",
+                "task_prompt": "Based on the features of the abalone, please predict the height.",
+                "answer_prompt": "The height of the abalone is {height}."
+            }
+        },
+        "whole-weight": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in marine biology.",
+                "task_prompt": "Based on the features of the abalone, please predict the whole weight.",
+                "answer_prompt": "The whole weight of the abalone is {whole-weight}."
+            }
+        },
+        "shucked-weight": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in marine biology.",
+                "task_prompt": "Based on the features of the abalone, please predict the shucked weight.",
+                "answer_prompt": "The shucked weight of the abalone is {shucked-weight}."
+            }
+        },
+        "viscera-weight": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in marine biology.",
+                "task_prompt": "Based on the features of the abalone, please predict the viscera weight.",
+                "answer_prompt": "The viscera weight of the abalone is {viscera-weight}."
+            }
+        },
+        "shell-weight": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in marine biology.",
+                "task_prompt": "Based on the features of the abalone, please predict the shell weight.",
+                "answer_prompt": "The shell weight of the abalone is {shell-weight}."
+            }
+        }
+    }
+}

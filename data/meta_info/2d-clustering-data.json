@@ -1,0 +1,67 @@
+{
+    "basic_info": {
+        "row_num": 336,
+        "col_num": 3,
+        "label_candidates": [
+            "color"
+        ],
+        "valid_feature_num": 3,
+        "num_features": [
+            "x",
+            "y"
+        ],
+        "cat_features": [
+            "color"
+        ],
+        "other_features": [],
+        "tags": [
+            "beginner",
+            "classification",
+            "clustering",
+            "tabular"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/samuelcortinhas/2d-clustering-data"
+    },
+    "feature_info": {
+        "x": {
+            "description": "The x-coordinate of the data point",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "y": {
+            "description": "The y-coordinate of the data point",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "color": {
+            "description": "The cluster of the data point",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Cluster 0",
+                "1": "Cluster 1",
+                "2": "Cluster 2"
+            }
+        }
+    },
+    "task_info": {
+        "color": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in clustering analysis.",
+                "task_prompt": "Based on the x and y coordinates, please predict the color cluster.",
+                "answer_prompt": "Cluster 0[0], cluster 1[1] or cluster 2[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "0": "Cluster 0",
+                "1": "Cluster 1",
+                "2": "Cluster 2"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1,
+                "2": 2
+            }
+        }
+    }
+}

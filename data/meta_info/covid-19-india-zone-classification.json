@@ -1,0 +1,67 @@
+{
+    "basic_info": {
+        "row_num": 733,
+        "col_num": 4,
+        "label_candidates": [
+            "Zone"
+        ],
+        "valid_feature_num": 3,
+        "num_features": [],
+        "cat_features": [
+            "District",
+            "State",
+            "Zone"
+        ],
+        "other_features": [],
+        "tags": [
+            "india",
+            "business",
+            "covid19"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/soham1024/covid-19-india-zone-classification"
+    },
+    "feature_info": {
+        "S.no": {
+            "description": "The unique identifier of each record.",
+            "type": "useless"
+        },
+        "District": {
+            "description": "The district name in India.",
+            "type": "categorical"
+        },
+        "State": {
+            "description": "The state name in India that the district belongs to.",
+            "type": "categorical"
+        },
+        "Zone": {
+            "description": "The COVID-19 zone classification of the district (Red Zone, Green Zone).",
+            "type": "categorical",
+            "value_dict": {
+                "Red Zone": "The district is currently experiencing a high number of COVID-19 cases.",
+                "Green Zone": "The district is currently experiencing a low number of COVID-19 cases.",
+                "Orange Zone": "The district is currently experiencing a moderate number of COVID-19 cases."
+            }
+        }
+    },
+    "task_info": {
+        "Zone": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in public health data analysis.",
+                "task_prompt": "Based on the features of the district and state in India, please predict the COVID-19 zone classification.",
+                "answer_prompt": "Red Zone[0], Green Zone[1], or Orange Zone[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "Red Zone": "The district is currently experiencing a high number of COVID-19 cases.",
+                "Green Zone": "The district is currently experiencing a low number of COVID-19 cases.",
+                "Orange Zone": "The district is currently experiencing a moderate number of COVID-19 cases."
+            },
+            "class_index_dict": {
+                "Red Zone": 0,
+                "Green Zone": 1,
+                "Orange Zone": 2
+            }
+        }
+    }
+}

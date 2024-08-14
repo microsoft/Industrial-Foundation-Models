@@ -1,0 +1,185 @@
+{
+    "basic_info": {
+        "row_num": 1723,
+        "col_num": 14,
+        "label_candidates": [
+            "bad_client_target",
+            "is_client",
+            "credit_amount"
+        ],
+        "valid_feature_num": 14,
+        "num_features": [
+            "credit_amount",
+            "credit_term",
+            "age",
+            "income"
+        ],
+        "cat_features": [
+            "month",
+            "sex",
+            "education",
+            "product_type",
+            "having_children_flg",
+            "region",
+            "family_status",
+            "phone_operator",
+            "is_client",
+            "bad_client_target"
+        ],
+        "other_features": [],
+        "tags": [
+            "business",
+            "finance",
+            "banking",
+            "classification",
+            "tabular"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/podsyp/is-this-a-good-customer"
+    },
+    "feature_info": {
+        "month": {
+            "description": "The month when the credit was given",
+            "type": "categorical"
+        },
+        "credit_amount": {
+            "description": "The amount of credit provided to the customer",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "credit_term": {
+            "description": "The term for which the credit is provided",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "age": {
+            "description": "The age of the customer",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "sex": {
+            "description": "The gender of the customer",
+            "type": "categorical",
+            "value_dict": {
+                "male": "The customer is male",
+                "female": "The customer is female"
+            }
+        },
+        "education": {
+            "description": "The education level of the customer",
+            "type": "categorical",
+            "value_dict": {
+                "Secondary special education": "The customer has a secondary special education",
+                "Higher education": "The customer has a higher education",
+                "Incomplete higher education": "The customer has an incomplete higher education",
+                "Secondary education": "The customer has a secondary education",
+                "Incomplete secondary education": "The customer has an incomplete secondary education",
+                "PhD degree": "The customer has a PhD degree"
+            }
+        },
+        "product_type": {
+            "description": "The type of product for which the credit is provided",
+            "type": "categorical"
+        },
+        "having_children_flg": {
+            "description": "Flag indicating whether the customer has children or not",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The customer does not have children",
+                "1": "The customer has children"
+            }
+        },
+        "region": {
+            "description": "The region where the customer resides",
+            "type": "categorical",
+            "value_dict": {
+                "2": "The customer resides in region 2",
+                "0": "The customer resides in region 0",
+                "1": "The customer resides in region 1"
+            }
+        },
+        "income": {
+            "description": "The income of the customer",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "family_status": {
+            "description": "The family status of the customer",
+            "type": "categorical",
+            "value_dict": {
+                "Another": "The customer has another family status",
+                "Unmarried": "The customer is unmarried",
+                "Married": "The customer is married"
+            }
+        },
+        "phone_operator": {
+            "description": "The phone operator of the customer",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The customer uses phone operator 0",
+                "3": "The customer uses phone operator 3",
+                "2": "The customer uses phone operator 2",
+                "1": "The customer uses phone operator 1",
+                "4": "The customer uses phone operator 4"
+            }
+        },
+        "is_client": {
+            "description": "Flag indicating whether the person is a client or not",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The person is not a client",
+                "1": "The person is a client"
+            }
+        },
+        "bad_client_target": {
+            "description": "Target variable indicating whether the client is bad or not",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The client is not bad",
+                "1": "The client is bad"
+            }
+        }
+    },
+    "task_info": {
+        "bad_client_target": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in financial risk analysis.",
+                "task_prompt": "Based on the features of the client, please predict if the client is bad.",
+                "answer_prompt": "The client is bad[1] or not bad[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "The client is not bad",
+                "1": "The client is bad"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "is_client": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in customer relationship management.",
+                "task_prompt": "Based on the features of the person, please predict if the person is a client.",
+                "answer_prompt": "The person is a client[1] or not a client[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "The person is not a client",
+                "1": "The person is a client"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "credit_amount": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in credit risk analysis.",
+                "task_prompt": "Based on the features of the client, please predict the credit amount."
+            }
+        }
+    }
+}

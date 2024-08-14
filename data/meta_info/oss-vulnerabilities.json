@@ -1,0 +1,95 @@
+{
+    "basic_info": {
+        "row_num": 168800,
+        "col_num": 7,
+        "label_candidates": [
+            "status"
+        ],
+        "valid_feature_num": 7,
+        "num_features": [],
+        "cat_features": [
+            "cve_id",
+            "cwe_id",
+            "cpe_id",
+            "status"
+        ],
+        "other_features": [
+            "description",
+            "created_at",
+            "modified_at"
+        ],
+        "tags": [
+            "categorical",
+            "software",
+            "beginner",
+            "classification",
+            "text"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/japkeeratsingh/oss-vulnerabilities"
+    },
+    "feature_info": {
+        "cve_id": {
+            "description": "The ID of the Common Vulnerabilities and Exposures (CVE) item, which is a unique identifier for publicly known cybersecurity vulnerabilities.",
+            "type": "categorical"
+        },
+        "cwe_id": {
+            "description": "The ID of the Common Weakness Enumeration (CWE) item, which is a community-developed list of software and hardware weakness types.",
+            "type": "categorical"
+        },
+        "cpe_id": {
+            "description": "The ID of the Common Platform Enumeration (CPE) item, which is a structured naming scheme for information technology systems, software, and packages.",
+            "type": "categorical"
+        },
+        "description": {
+            "description": "The description of the vulnerability.",
+            "type": "other"
+        },
+        "status": {
+            "description": "The status of the vulnerability, indicating whether it is resolved or not.",
+            "type": "categorical",
+            "value_dict": {
+                "Modified": "The vulnerability has been modified after initial analysis.",
+                "Analyzed": "The vulnerability has been analyzed and confirmed.",
+                "Rejected": "The vulnerability has been rejected and is not considered a valid vulnerability.",
+                "Undergoing Analysis": "The vulnerability is currently being analyzed.",
+                "Deferred": "The analysis of the vulnerability has been deferred.",
+                "Awaiting Analysis": "The vulnerability is waiting to be analyzed."
+            }
+        },
+        "created_at": {
+            "description": "The date and time when the vulnerability was first created in the dataset.",
+            "type": "other"
+        },
+        "modified_at": {
+            "description": "The date and time when the vulnerability was last modified in the dataset.",
+            "type": "other"
+        }
+    },
+    "task_info": {
+        "status": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in cybersecurity.",
+                "task_prompt": "Based on the features of the vulnerability, such as its ID, description, and creation and modification dates, please predict the status of the vulnerability.",
+                "answer_prompt": "Is the status Modified[0], Analyzed[1], Rejected[2], Undergoing Analysis[3], Deferred[4], or Awaiting Analysis[5]?"
+            },
+            "class_num": 6,
+            "class_value_dict": {
+                "Modified": "The vulnerability has been modified after initial analysis.",
+                "Analyzed": "The vulnerability has been analyzed and confirmed.",
+                "Rejected": "The vulnerability has been rejected and is not considered a valid vulnerability.",
+                "Undergoing Analysis": "The vulnerability is currently being analyzed.",
+                "Deferred": "The analysis of the vulnerability has been deferred.",
+                "Awaiting Analysis": "The vulnerability is waiting to be analyzed."
+            },
+            "class_index_dict": {
+                "Modified": 0,
+                "Analyzed": 1,
+                "Rejected": 2,
+                "Undergoing Analysis": 3,
+                "Deferred": 4,
+                "Awaiting Analysis": 5
+            }
+        }
+    }
+}

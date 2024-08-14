@@ -1,0 +1,136 @@
+{
+    "basic_info": {
+        "row_num": 3652,
+        "col_num": 8,
+        "label_candidates": [
+            "tavg",
+            "tmax",
+            "tmin",
+            "prcp",
+            "wspd",
+            "pres",
+            "wdir"
+        ],
+        "valid_feature_num": 8,
+        "num_features": [
+            "tmin",
+            "tmax",
+            "prcp",
+            "wdir",
+            "wspd",
+            "pres",
+            "tavg"
+        ],
+        "cat_features": [
+            "time"
+        ],
+        "other_features": [],
+        "tags": [
+            "united states",
+            "weather and climate",
+            "beginner",
+            "tabular",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/swaroopmeher/boston-weather-2013-2023"
+    },
+    "feature_info": {
+        "time": {
+            "description": "The date of the weather record, in the format of YYYY-MM-DD",
+            "type": "categorical"
+        },
+        "tavg": {
+            "description": "The average temperature of the day, in degrees Celsius",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "tmin": {
+            "description": "The minimum temperature of the day, in degrees Celsius",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "tmax": {
+            "description": "The maximum temperature of the day, in degrees Celsius",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "prcp": {
+            "description": "The amount of precipitation recorded for the day, in millimeters",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "wdir": {
+            "description": "The wind direction recorded for the day, in degrees (from 0 to 360)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "wspd": {
+            "description": "The wind speed recorded for the day, in kilometers per hour",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "pres": {
+            "description": "The atmospheric pressure recorded for the day, in millibars",
+            "type": "numerical",
+            "decimal": 1
+        }
+    },
+    "task_info": {
+        "tavg": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in weather forecasting.",
+                "task_prompt": "Based on the Boston weather data, please predict the average temperature.",
+                "answer_prompt": "The average temperature is {tavg} degree celsius."
+            }
+        },
+        "tmax": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in weather forecasting.",
+                "task_prompt": "Based on the Boston weather data, please predict the maximum temperature.",
+                "answer_prompt": "The maximum temperature is {tmax} degree celsius."
+            }
+        },
+        "tmin": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in weather forecasting.",
+                "task_prompt": "Based on the Boston weather data, please predict the minimum temperature.",
+                "answer_prompt": "The minimum temperature is {tmin} degree celsius."
+            }
+        },
+        "prcp": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in weather forecasting.",
+                "task_prompt": "Based on the Boston weather data, please predict the precipitation.",
+                "answer_prompt": "The precipitation is {prcp} mm."
+            }
+        },
+        "wspd": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in weather forecasting.",
+                "task_prompt": "Based on the Boston weather data, please predict the wind speed.",
+                "answer_prompt": "The wind speed is {wspd} m/s."
+            }
+        },
+        "pres": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in weather forecasting.",
+                "task_prompt": "Based on the Boston weather data, please predict the atmospheric pressure.",
+                "answer_prompt": "The atmospheric pressure is {pres} hPa."
+            }
+        },
+        "wdir": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in weather forecasting.",
+                "task_prompt": "Based on the Boston weather data, please predict the wind direction.",
+                "answer_prompt": "The wind direction is {wdir} degrees from north."
+            }
+        }
+    }
+}

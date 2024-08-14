@@ -1,0 +1,166 @@
+{
+    "basic_info": {
+        "row_num": 517,
+        "col_num": 13,
+        "label_candidates": [
+            "area",
+            "temp",
+            "RH",
+            "wind"
+        ],
+        "valid_feature_num": 13,
+        "num_features": [
+            "FFMC",
+            "DMC",
+            "DC",
+            "ISI",
+            "temp",
+            "RH",
+            "wind",
+            "rain",
+            "area"
+        ],
+        "cat_features": [
+            "X",
+            "Y",
+            "month",
+            "day"
+        ],
+        "other_features": [],
+        "tags": [
+            "religion and belief systems",
+            "beginner",
+            "exploratory data analysis",
+            "data visualization",
+            "feature engineering",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/sumitm004/forest-fire-area"
+    },
+    "feature_info": {
+        "X": {
+            "description": "X-axis spatial coordinate within the Montesinho park map: 1 to 9",
+            "type": "categorical",
+            "value_dict": {
+                "7": "Spatial coordinate on X-axis is 7",
+                "8": "Spatial coordinate on X-axis is 8",
+                "6": "Spatial coordinate on X-axis is 6",
+                "5": "Spatial coordinate on X-axis is 5",
+                "4": "Spatial coordinate on X-axis is 4",
+                "2": "Spatial coordinate on X-axis is 2",
+                "9": "Spatial coordinate on X-axis is 9",
+                "1": "Spatial coordinate on X-axis is 1",
+                "3": "Spatial coordinate on X-axis is 3"
+            }
+        },
+        "Y": {
+            "description": "Y-axis spatial coordinate within the Montesinho park map: 2 to 9",
+            "type": "categorical",
+            "value_dict": {
+                "5": "Spatial coordinate on Y-axis is 5",
+                "4": "Spatial coordinate on Y-axis is 4",
+                "6": "Spatial coordinate on Y-axis is 6",
+                "3": "Spatial coordinate on Y-axis is 3",
+                "2": "Spatial coordinate on Y-axis is 2",
+                "9": "Spatial coordinate on Y-axis is 9",
+                "8": "Spatial coordinate on Y-axis is 8"
+            }
+        },
+        "month": {
+            "description": "Month of the year: \"jan\" to \"dec\"",
+            "type": "categorical"
+        },
+        "day": {
+            "description": "Day of the week: \"mon\" to \"sun\"",
+            "type": "categorical",
+            "value_dict": {
+                "fri": "Day of the week is Friday",
+                "tue": "Day of the week is Tuesday",
+                "sat": "Day of the week is Saturday",
+                "sun": "Day of the week is Sunday",
+                "mon": "Day of the week is Monday",
+                "wed": "Day of the week is Wednesday",
+                "thu": "Day of the week is Thursday"
+            }
+        },
+        "FFMC": {
+            "description": "Fine Fuel Moisture Code index from the FWI system: 18.7 to 96.20",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "DMC": {
+            "description": "Duff Moisture Code index from the FWI system: 1.1 to 291.3",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "DC": {
+            "description": "Drought Code index from the FWI system: 7.9 to 860.6",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "ISI": {
+            "description": "Initial Spread Index from the FWI system: 0.0 to 56.10",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "temp": {
+            "description": "Temperature in Celsius degrees: 2.2 to 33.30",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "RH": {
+            "description": "Relative humidity in %: 15.0 to 100",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "wind": {
+            "description": "Wind speed in km/h: 0.40 to 9.40",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "rain": {
+            "description": "Outside rain in mm/m2 : 0.0 to 6.4",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "area": {
+            "description": "The burned area of the forest (in ha): 0.00 to 1090.84 ",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "area": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in forest fire prediction.",
+                "task_prompt": "Based on the features of the forest conditions, please predict the burned area of forest.",
+                "answer_prompt": "The burned area of the forest is {area}."
+            }
+        },
+        "temp": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in weather forecasting.",
+                "task_prompt": "Based on the features of the forest conditions, please predict the temperature.",
+                "answer_prompt": "The temperature is {temp}."
+            }
+        },
+        "RH": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in weather forecasting.",
+                "task_prompt": "Based on the features of the forest conditions, please predict the relative humidity.",
+                "answer_prompt": "The relative humidity is {RH}."
+            }
+        },
+        "wind": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in weather forecasting.",
+                "task_prompt": "Based on the features of the forest conditions, please predict the wind speed.",
+                "answer_prompt": "The wind speed is {wind}."
+            }
+        }
+    }
+}

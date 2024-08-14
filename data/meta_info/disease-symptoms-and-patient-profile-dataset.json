@@ -1,0 +1,195 @@
+{
+    "basic_info": {
+        "row_num": 349,
+        "col_num": 10,
+        "label_candidates": [
+            "Outcome Variable",
+            "Age",
+            "Gender",
+            "Blood Pressure",
+            "Cholesterol Level"
+        ],
+        "valid_feature_num": 10,
+        "num_features": [
+            "Age"
+        ],
+        "cat_features": [
+            "Disease",
+            "Fever",
+            "Cough",
+            "Fatigue",
+            "Difficulty Breathing",
+            "Gender",
+            "Blood Pressure",
+            "Cholesterol Level",
+            "Outcome Variable"
+        ],
+        "other_features": [],
+        "tags": [
+            "medicine",
+            "computer science",
+            "exploratory data analysis",
+            "classification",
+            "health conditions"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/uom190346a/disease-symptoms-and-patient-profile-dataset"
+    },
+    "feature_info": {
+        "Disease": {
+            "description": "Type of disease the patient is diagnosed with",
+            "type": "categorical"
+        },
+        "Fever": {
+            "description": "Whether the patient has a fever or not",
+            "type": "categorical",
+            "value_dict": {
+                "Yes": "The patient has a fever",
+                "No": "The patient does not have a fever"
+            }
+        },
+        "Cough": {
+            "description": "Whether the patient has a cough or not",
+            "type": "categorical",
+            "value_dict": {
+                "No": "The patient does not have a cough",
+                "Yes": "The patient has a cough"
+            }
+        },
+        "Fatigue": {
+            "description": "Whether the patient feels fatigue or not",
+            "type": "categorical",
+            "value_dict": {
+                "Yes": "The patient feels fatigue",
+                "No": "The patient does not feel fatigue"
+            }
+        },
+        "Difficulty Breathing": {
+            "description": "Whether the patient has difficulty breathing or not",
+            "type": "categorical",
+            "value_dict": {
+                "Yes": "The patient has difficulty breathing",
+                "No": "The patient does not have difficulty breathing"
+            }
+        },
+        "Age": {
+            "description": "Age of the patient in years",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Gender": {
+            "description": "Gender of the patient",
+            "type": "categorical",
+            "value_dict": {
+                "Female": "The patient is female",
+                "Male": "The patient is male"
+            }
+        },
+        "Blood Pressure": {
+            "description": "Blood pressure level of the patient",
+            "type": "categorical",
+            "value_dict": {
+                "Low": "The patient has low blood pressure",
+                "Normal": "The patient has normal blood pressure",
+                "High": "The patient has high blood pressure"
+            }
+        },
+        "Cholesterol Level": {
+            "description": "Cholesterol level of the patient",
+            "type": "categorical",
+            "value_dict": {
+                "Normal": "The patient has normal cholesterol level",
+                "Low": "The patient has low cholesterol level",
+                "High": "The patient has high cholesterol level"
+            }
+        },
+        "Outcome Variable": {
+            "description": "Outcome of the disease, whether positive or negative",
+            "type": "categorical",
+            "value_dict": {
+                "Positive": "The outcome of the disease is positive",
+                "Negative": "The outcome of the disease is negative"
+            }
+        }
+    },
+    "task_info": {
+        "Outcome Variable": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnosis.",
+                "task_prompt": "Based on the symptoms and patient profile, please predict the outcome of the disease.",
+                "answer_prompt": "Positive[0] or Negative[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "Positive": "The outcome of the disease is positive",
+                "Negative": "The outcome of the disease is negative"
+            },
+            "class_index_dict": {
+                "Positive": 0,
+                "Negative": 1
+            }
+        },
+        "Age": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical analysis.",
+                "task_prompt": "Based on the symptoms and patient profile, please predict the age of the patient."
+            }
+        },
+        "Gender": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical analysis.",
+                "task_prompt": "Based on the symptoms and patient profile, please predict the gender of the patient.",
+                "answer_prompt": "Female[0] or Male[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "Female": "The patient is female",
+                "Male": "The patient is male"
+            },
+            "class_index_dict": {
+                "Female": 0,
+                "Male": 1
+            }
+        },
+        "Blood Pressure": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical analysis.",
+                "task_prompt": "Based on the symptoms and patient profile, please predict the blood pressure of the patient.",
+                "answer_prompt": "Low[0], Normal[1] or High[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "Low": "The patient has low blood pressure",
+                "Normal": "The patient has normal blood pressure",
+                "High": "The patient has high blood pressure"
+            },
+            "class_index_dict": {
+                "Low": 0,
+                "Normal": 1,
+                "High": 2
+            }
+        },
+        "Cholesterol Level": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical analysis.",
+                "task_prompt": "Based on the symptoms and patient profile, please predict the cholesterol level of the patient.",
+                "answer_prompt": "Low[0], Normal[1] or High[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "Normal": "The patient has normal cholesterol level",
+                "Low": "The patient has low cholesterol level",
+                "High": "The patient has high cholesterol level"
+            },
+            "class_index_dict": {
+                "Low": 0,
+                "Normal": 1,
+                "High": 2
+            }
+        }
+    }
+}

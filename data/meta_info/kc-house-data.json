@@ -1,0 +1,199 @@
+{
+    "basic_info": {
+        "row_num": 21613,
+        "col_num": 21,
+        "label_candidates": [
+            "price",
+            "sqft_living",
+            "bedrooms",
+            "bathrooms"
+        ],
+        "valid_feature_num": 20,
+        "num_features": [
+            "bedrooms",
+            "bathrooms",
+            "sqft_living",
+            "sqft_lot",
+            "floors",
+            "sqft_above",
+            "sqft_basement",
+            "yr_built",
+            "yr_renovated",
+            "lat",
+            "long",
+            "sqft_living15",
+            "sqft_lot15",
+            "price"
+        ],
+        "cat_features": [
+            "waterfront",
+            "view",
+            "condition",
+            "grade",
+            "zipcode"
+        ],
+        "other_features": [
+            "date"
+        ],
+        "tags": [
+            "housing",
+            "beginner",
+            "classification",
+            "clustering",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/astronautelvis/kc-house-data"
+    },
+    "feature_info": {
+        "id": {
+            "description": "Unique identifier for each house",
+            "type": "useless"
+        },
+        "date": {
+            "description": "Date the house was sold",
+            "type": "other"
+        },
+        "price": {
+            "description": "Sale price of the house in dollars",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "bedrooms": {
+            "description": "Number of bedrooms in the house",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "bathrooms": {
+            "description": "Number of bathrooms in the house",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "sqft_living": {
+            "description": "Living room area in square feet",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "sqft_lot": {
+            "description": "Lot area in square feet",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "floors": {
+            "description": "Number of floors in the house",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "waterfront": {
+            "description": "Whether the house has a view to a waterfront",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The house does not have a view to a waterfront",
+                "1": "The house has a view to a waterfront"
+            }
+        },
+        "view": {
+            "description": "Quality of the house view",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The house has no view",
+                "1": "The house has poor view",
+                "2": "The house has average view",
+                "3": "The house has good view",
+                "4": "The house has excellent view"
+            }
+        },
+        "condition": {
+            "description": "Condition of the house",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The house is in poor condition",
+                "2": "The house is in fair condition",
+                "3": "The house is in average condition",
+                "4": "The house is in good condition",
+                "5": "The house is in excellent condition"
+            }
+        },
+        "grade": {
+            "description": "Grade given to the housing unit, based on King County grading system",
+            "type": "categorical"
+        },
+        "sqft_above": {
+            "description": "Area of house excluding basement in square feet",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "sqft_basement": {
+            "description": "Area of the basement in square feet",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "yr_built": {
+            "description": "Year the house was initially built",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "yr_renovated": {
+            "description": "Year the house was last renovated",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "zipcode": {
+            "description": "Zip code area where the house is located",
+            "type": "categorical"
+        },
+        "lat": {
+            "description": "Latitude coordinate of the house",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "long": {
+            "description": "Longitude coordinate of the house",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "sqft_living15": {
+            "description": "The square footage of interior housing living space for the nearest 15 neighbors",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "sqft_lot15": {
+            "description": "The square footage of the land lots of the nearest 15 neighbors",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "price": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are a real estate analyst.",
+                "task_prompt": "Based on the features of the house, please predict the price.",
+                "answer_prompt": "The predicted price is."
+            }
+        },
+        "sqft_living": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are a real estate analyst.",
+                "task_prompt": "Based on the features of the house, please predict the square footage of the living area.",
+                "answer_prompt": "The predicted square footage of the living area is."
+            }
+        },
+        "bedrooms": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are a real estate analyst.",
+                "task_prompt": "Based on the features of the house, please predict the number of bedrooms.",
+                "answer_prompt": "The predicted number of bedrooms is."
+            }
+        },
+        "bathrooms": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are a real estate analyst.",
+                "task_prompt": "Based on the features of the house, please predict the number of bathrooms.",
+                "answer_prompt": "The predicted number of bathrooms is."
+            }
+        }
+    }
+}

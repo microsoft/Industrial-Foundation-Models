@@ -1,0 +1,129 @@
+{
+    "basic_info": {
+        "row_num": 4177,
+        "col_num": 10,
+        "label_candidates": [
+            "age",
+            "rings",
+            "sex"
+        ],
+        "valid_feature_num": 10,
+        "num_features": [
+            "length",
+            "diameter",
+            "height",
+            "whole_wt",
+            "shucked_wt",
+            "viscera_wt",
+            "shell_wt",
+            "rings",
+            "age"
+        ],
+        "cat_features": [
+            "sex"
+        ],
+        "other_features": [],
+        "tags": [
+            "earth and nature",
+            "intermediate",
+            "exploratory data analysis",
+            "linear regression",
+            "tabular",
+            "fish and aquaria"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/devzohaib/estimating-the-age-of-abalone-at-a-seafood-farm"
+    },
+    "feature_info": {
+        "sex": {
+            "description": "Sex of the abalone (M: Male, F: Female, I: Infant)",
+            "type": "categorical",
+            "value_dict": {
+                "M": "Male abalone",
+                "F": "Female abalone",
+                "I": "Infant abalone"
+            }
+        },
+        "length": {
+            "description": "Longest shell measurement (in mm)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "diameter": {
+            "description": "Perpendicular to length (in mm)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "height": {
+            "description": "With meat in shell (in mm)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "whole_wt": {
+            "description": "Whole weight of the abalone (in grams)",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "shucked_wt": {
+            "description": "Weight of the meat (in grams)",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "viscera_wt": {
+            "description": "Gut weight (after bleeding) (in grams)",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "shell_wt": {
+            "description": "Weight of the shell after being dried (in grams)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "rings": {
+            "description": "Number of rings (directly related to age)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "age": {
+            "description": "Age of the abalone (in years)",
+            "type": "numerical",
+            "decimal": 1
+        }
+    },
+    "task_info": {
+        "age": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in marine biology.",
+                "task_prompt": "Based on the physical characteristics of the abalone, please predict its age.",
+                "answer_prompt": "The age of the abalone is."
+            }
+        },
+        "rings": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in marine biology.",
+                "task_prompt": "Based on the physical characteristics of the abalone, please predict the number of rings.",
+                "answer_prompt": "The number of rings of the abalone is."
+            }
+        },
+        "sex": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in marine biology.",
+                "task_prompt": "Based on the physical characteristics of the abalone, please predict its sex.",
+                "answer_prompt": "Is the abalone a Male abalone[0], Female abalone[1], or Infant abalone[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "M": "Male abalone",
+                "F": "Female abalone",
+                "I": "Infant abalone"
+            },
+            "class_index_dict": {
+                "M": 0,
+                "F": 1,
+                "I": 2
+            }
+        }
+    }
+}

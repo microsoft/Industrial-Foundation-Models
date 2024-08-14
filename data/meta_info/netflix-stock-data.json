@@ -1,0 +1,112 @@
+{
+    "basic_info": {
+        "row_num": 4581,
+        "col_num": 7,
+        "label_candidates": [
+            "Close",
+            "Adj Close",
+            "High",
+            "Low",
+            "Open"
+        ],
+        "valid_feature_num": 7,
+        "num_features": [
+            "Open",
+            "High",
+            "Low",
+            "Adj Close",
+            "Volume",
+            "Close"
+        ],
+        "cat_features": [
+            "Date"
+        ],
+        "other_features": [],
+        "tags": [
+            "movies and tv shows",
+            "business",
+            "linear regression",
+            "tabular",
+            "online communities"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/aayushmishra1512/netflix-stock-data"
+    },
+    "feature_info": {
+        "Date": {
+            "description": "The date of the stock data, in the format of YYYY-MM-DD.",
+            "type": "categorical"
+        },
+        "Open": {
+            "description": "The opening price of the Netflix stock on the given date, in USD.",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "High": {
+            "description": "The highest price of the Netflix stock on the given date, in USD.",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Low": {
+            "description": "The lowest price of the Netflix stock on the given date, in USD.",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Close": {
+            "description": "The closing price of the Netflix stock on the given date, in USD.",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Adj Close": {
+            "description": "The adjusted closing price of the Netflix stock on the given date, in USD. This price is adjusted for things like dividends, stock splits, and new stock offerings.",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Volume": {
+            "description": "The number of shares of the Netflix stock that were traded on the given date.",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "Close": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in stock market analysis.",
+                "task_prompt": "Based on the features of the Netflix stock data, please predict the closing price.",
+                "answer_prompt": "The predicted closing price is _______."
+            }
+        },
+        "Adj Close": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in stock market analysis.",
+                "task_prompt": "Based on the features of the Netflix stock data, please predict the adjusted closing price.",
+                "answer_prompt": "The predicted adjusted closing price is _______."
+            }
+        },
+        "High": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in stock market analysis.",
+                "task_prompt": "Based on the features of the Netflix stock data, please predict the highest price.",
+                "answer_prompt": "The predicted highest price is _______."
+            }
+        },
+        "Low": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in stock market analysis.",
+                "task_prompt": "Based on the features of the Netflix stock data, please predict the lowest price.",
+                "answer_prompt": "The predicted lowest price is _______."
+            }
+        },
+        "Open": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in stock market analysis.",
+                "task_prompt": "Based on the features of the Netflix stock data, please predict the opening price.",
+                "answer_prompt": "The predicted opening price is _______."
+            }
+        }
+    }
+}

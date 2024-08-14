@@ -1,0 +1,215 @@
+{
+    "basic_info": {
+        "row_num": 24000,
+        "col_num": 17,
+        "label_candidates": [
+            "is_potentially_hazardous_asteroid",
+            "orbit_class_type",
+            "absolute_magnitude_h",
+            "kilometers_estimated_diameter_min",
+            "kilometers_estimated_diameter_max",
+            "perihelion_distance",
+            "aphelion_distance"
+        ],
+        "valid_feature_num": 15,
+        "num_features": [
+            "absolute_magnitude_h",
+            "kilometers_estimated_diameter_min",
+            "kilometers_estimated_diameter_max",
+            "perihelion_distance",
+            "aphelion_distance"
+        ],
+        "cat_features": [
+            "name",
+            "name_limited",
+            "designation",
+            "is_sentry_object",
+            "orbit_id",
+            "orbit_class_type",
+            "orbit_class_description",
+            "is_potentially_hazardous_asteroid"
+        ],
+        "other_features": [
+            "first_observation_date",
+            "last_observation_date"
+        ],
+        "tags": [
+            "earth and nature",
+            "astronomy",
+            "intermediate",
+            "classification",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/adityaramachandran27/nasa-near-earth-objects-information"
+    },
+    "feature_info": {
+        "id": {
+            "description": "Unique identifier for each Near-Earth Object",
+            "type": "useless"
+        },
+        "neo_reference_id": {
+            "description": "Reference ID for each Near-Earth Object",
+            "type": "useless"
+        },
+        "name": {
+            "description": "Name of the Near-Earth Object",
+            "type": "categorical"
+        },
+        "name_limited": {
+            "description": "Limited version of the name of the Near-Earth Object",
+            "type": "categorical"
+        },
+        "designation": {
+            "description": "Designation of the Near-Earth Object",
+            "type": "categorical"
+        },
+        "absolute_magnitude_h": {
+            "description": "Absolute magnitude of the Near-Earth Object",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "is_potentially_hazardous_asteroid": {
+            "description": "Boolean indicating if the Near-Earth Object is potentially hazardous",
+            "type": "categorical",
+            "value_dict": {
+                "True": "The Near-Earth Object is potentially hazardous",
+                "False": "The Near-Earth Object is not potentially hazardous"
+            }
+        },
+        "is_sentry_object": {
+            "description": "Boolean indicating if the Near-Earth Object is a sentry object",
+            "type": "categorical",
+            "value_dict": {
+                "False": "The Near-Earth Object is not a sentry object",
+                "True": "The Near-Earth Object is a sentry object"
+            }
+        },
+        "kilometers_estimated_diameter_min": {
+            "description": "Estimated minimum diameter of the Near-Earth Object in kilometers",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "kilometers_estimated_diameter_max": {
+            "description": "Estimated maximum diameter of the Near-Earth Object in kilometers",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "orbit_id": {
+            "description": "Orbit ID of the Near-Earth Object",
+            "type": "categorical"
+        },
+        "orbit_class_type": {
+            "description": "Orbit class type of the Near-Earth Object",
+            "type": "categorical",
+            "value_dict": {
+                "APO": "Near-Earth Object orbits similar to that of 1862 Apollo",
+                "AMO": "Near-Earth Object orbits similar to that of 1221 Amor",
+                "ATE": "Near-Earth Object orbits similar to that of 2062 Aten",
+                "IEO": "Near-Earth Object orbits contained entirely within the orbit of the Earth - Interior Earth Object"
+            }
+        },
+        "perihelion_distance": {
+            "description": "Perihelion distance of the Near-Earth Object",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "aphelion_distance": {
+            "description": "Aphelion distance of the Near-Earth Object",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "first_observation_date": {
+            "description": "Date of the first observation of the Near-Earth Object",
+            "type": "other"
+        },
+        "last_observation_date": {
+            "description": "Date of the last observation of the Near-Earth Object",
+            "type": "other"
+        },
+        "orbit_class_description": {
+            "description": "Description of the orbit class of the Near-Earth Object",
+            "type": "categorical",
+            "value_dict": {
+                "Near-Earth asteroid orbits which cross the Earth\u2019s orbit similar to that of 1862 Apollo": "Description of Near-Earth Object orbits similar to that of 1862 Apollo",
+                "Near-Earth asteroid orbits similar to that of 1221 Amor": "Description of Near-Earth Object orbits similar to that of 1221 Amor",
+                "Near-Earth asteroid orbits similar to that of 2062 Aten": "Description of Near-Earth Object orbits similar to that of 2062 Aten",
+                "An asteroid orbit contained entirely within the orbit of the Earth - Interior Earth Object": "Description of Near-Earth Object orbits contained entirely within the orbit of the Earth - Interior Earth Object"
+            }
+        }
+    },
+    "task_info": {
+        "is_potentially_hazardous_asteroid": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in astronomical data analysis.",
+                "task_prompt": "Based on the features of the Near-Earth Object, please predict if it is potentially hazardous.",
+                "answer_prompt": "The Near-Earth Object is potentially hazardous[1] or not potentially hazardous[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "True": "The Near-Earth Object is potentially hazardous",
+                "False": "The Near-Earth Object is not potentially hazardous"
+            },
+            "class_index_dict": {
+                "True": 1,
+                "False": 0
+            }
+        },
+        "orbit_class_type": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in astronomical data analysis.",
+                "task_prompt": "Based on the features of the Near-Earth Object, please predict its orbit class.",
+                "answer_prompt": "1862 Apollo[0], 1221 Amor[1], 2062 Aten[2] or Interior Earth Object[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "APO": "Near-Earth Object orbits similar to that of 1862 Apollo",
+                "AMO": "Near-Earth Object orbits similar to that of 1221 Amor",
+                "ATE": "Near-Earth Object orbits similar to that of 2062 Aten",
+                "IEO": "Near-Earth Object orbits contained entirely within the orbit of the Earth - Interior Earth Object"
+            },
+            "class_index_dict": {
+                "APO": 0,
+                "AMO": 1,
+                "ATE": 2,
+                "IEO": 3
+            }
+        },
+        "absolute_magnitude_h": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in astronomical data analysis.",
+                "task_prompt": "Based on the features of the Near-Earth Object, please predict its absolute magnitude."
+            }
+        },
+        "kilometers_estimated_diameter_min": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in astronomical data analysis.",
+                "task_prompt": "Based on the features of the Near-Earth Object, please predict its minimum estimated diameter in kilometers."
+            }
+        },
+        "kilometers_estimated_diameter_max": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in astronomical data analysis.",
+                "task_prompt": "Based on the features of the Near-Earth Object, please predict its maximum estimated diameter in kilometers."
+            }
+        },
+        "perihelion_distance": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in astronomical data analysis.",
+                "task_prompt": "Based on the features of the Near-Earth Object, please predict its perihelion distance."
+            }
+        },
+        "aphelion_distance": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in astronomical data analysis.",
+                "task_prompt": "Based on the features of the Near-Earth Object, please predict its aphelion distance."
+            }
+        }
+    }
+}

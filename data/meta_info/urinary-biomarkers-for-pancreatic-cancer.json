@@ -1,0 +1,182 @@
+{
+    "basic_info": {
+        "row_num": 590,
+        "col_num": 14,
+        "label_candidates": [
+            "diagnosis",
+            "stage"
+        ],
+        "valid_feature_num": 13,
+        "num_features": [
+            "age",
+            "plasma_CA19_9",
+            "creatinine",
+            "LYVE1",
+            "REG1B",
+            "TFF1",
+            "REG1A"
+        ],
+        "cat_features": [
+            "patient_cohort",
+            "sample_origin",
+            "sex",
+            "stage",
+            "benign_sample_diagnosis",
+            "diagnosis"
+        ],
+        "other_features": [],
+        "tags": [
+            "biology",
+            "medicine",
+            "beginner",
+            "binary classification",
+            "health conditions",
+            "cancer"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/johnjdavisiv/urinary-biomarkers-for-pancreatic-cancer"
+    },
+    "feature_info": {
+        "sample_id": {
+            "description": "The unique identifier for each sample",
+            "type": "useless"
+        },
+        "patient_cohort": {
+            "description": "The group that the patient belongs to",
+            "type": "categorical",
+            "value_dict": {
+                "Cohort1": "Patients belonging to the first cohort",
+                "Cohort2": "Patients belonging to the second cohort"
+            }
+        },
+        "sample_origin": {
+            "description": "The origin of the sample",
+            "type": "categorical",
+            "value_dict": {
+                "BPTB": "Sample originated from Biliary Pancreatic Tissue Biopsy",
+                "LIV": "Sample originated from Liver",
+                "ESP": "Sample originated from Esophagus",
+                "UCL": "Sample originated from Unknown Clinical Location"
+            }
+        },
+        "age": {
+            "description": "The age of the patient",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "sex": {
+            "description": "The gender of the patient",
+            "type": "categorical",
+            "value_dict": {
+                "F": "Female",
+                "M": "Male"
+            }
+        },
+        "diagnosis": {
+            "description": "The diagnosis of the patient",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Diagnosis category 1",
+                "2": "Diagnosis category 2",
+                "3": "Diagnosis category 3"
+            }
+        },
+        "stage": {
+            "description": "The stage of the disease",
+            "type": "categorical",
+            "value_dict": {
+                "I": "Stage I of disease",
+                "IA": "Stage IA of disease",
+                "IB": "Stage IB of disease",
+                "II": "Stage II of disease",
+                "IIA": "Stage IIA of disease",
+                "IIB": "Stage IIB of disease",
+                "III": "Stage III of disease",
+                "IV": "Stage IV of disease"
+            }
+        },
+        "benign_sample_diagnosis": {
+            "description": "The diagnosis of the benign sample",
+            "type": "categorical"
+        },
+        "plasma_CA19_9": {
+            "description": "The level of plasma CA19-9 in the sample",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "creatinine": {
+            "description": "The level of creatinine in the sample",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "LYVE1": {
+            "description": "The level of LYVE1 in the sample",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "REG1B": {
+            "description": "The level of REG1B in the sample",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "TFF1": {
+            "description": "The level of TFF1 in the sample",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "REG1A": {
+            "description": "The level of REG1A in the sample",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "diagnosis": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnostics.",
+                "task_prompt": "Based on the features of the patient samples, please predict the diagnosis category.",
+                "answer_prompt": "Diagnosis category 1[0], Diagnosis category 2[1], or Diagnosis category 3[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "1": "Diagnosis category 1",
+                "2": "Diagnosis category 2",
+                "3": "Diagnosis category 3"
+            },
+            "class_index_dict": {
+                "1": 0,
+                "2": 1,
+                "3": 2
+            }
+        },
+        "stage": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnostics.",
+                "task_prompt": "Based on the features of the patient samples, please predict the stage of disease.",
+                "answer_prompt": "Stage I[0], Stage IA[1], Stage IB[2], Stage II[3], Stage IIA[4], Stage IIB[5], Stage III[6], or Stage IV[7]?"
+            },
+            "class_num": 8,
+            "class_value_dict": {
+                "I": "Stage I of disease",
+                "IA": "Stage IA of disease",
+                "IB": "Stage IB of disease",
+                "II": "Stage II of disease",
+                "IIA": "Stage IIA of disease",
+                "IIB": "Stage IIB of disease",
+                "III": "Stage III of disease",
+                "IV": "Stage IV of disease"
+            },
+            "class_index_dict": {
+                "I": 0,
+                "IA": 1,
+                "IB": 2,
+                "II": 3,
+                "IIA": 4,
+                "IIB": 5,
+                "III": 6,
+                "IV": 7
+            }
+        }
+    }
+}

@@ -1,0 +1,626 @@
+{
+    "basic_info": {
+        "row_num": 1345,
+        "col_num": 65,
+        "label_candidates": [
+            "FTR",
+            "HTHG",
+            "HTAG",
+            "HTR",
+            "HS",
+            "AS",
+            "HST",
+            "AST",
+            "HF",
+            "AF",
+            "HC",
+            "AC",
+            "HY",
+            "AY",
+            "HR",
+            "AR",
+            "HxG",
+            "AxG",
+            "HxA",
+            "AxA",
+            "HxPTS",
+            "AxPTS"
+        ],
+        "valid_feature_num": 65,
+        "num_features": [
+            "HTOa",
+            "ATOa",
+            "HTAt",
+            "ATAt",
+            "HTMid",
+            "ATMid",
+            "HTDef",
+            "ATDef",
+            "HomeSquad",
+            "AwaySquad",
+            "HomeAvgAge",
+            "AwayAvgAge",
+            "HomeMV",
+            "AwayMV",
+            "FTHG",
+            "FTAG",
+            "HTHG",
+            "HTAG",
+            "HS",
+            "AS",
+            "HST",
+            "AST",
+            "HF",
+            "AF",
+            "HC",
+            "AC",
+            "HY",
+            "AY",
+            "HR",
+            "AR",
+            "HxG",
+            "AxG",
+            "HxA",
+            "AxA",
+            "HxPTS",
+            "AxPTS",
+            "HPPDA",
+            "APPDA",
+            "B365H",
+            "B365D",
+            "B365A",
+            "BWH",
+            "BWD",
+            "BWA",
+            "IWH",
+            "IWD",
+            "IWA",
+            "PSH",
+            "PSD",
+            "PSA",
+            "WHH",
+            "WHD",
+            "WHA",
+            "VCH",
+            "VCD",
+            "VCA",
+            "PSCH",
+            "PSCD",
+            "PSCA"
+        ],
+        "cat_features": [
+            "Div",
+            "HomeTeam",
+            "AwayTeam",
+            "HTR",
+            "FTR"
+        ],
+        "other_features": [
+            "Date"
+        ],
+        "tags": [
+            "football",
+            "sports",
+            "classification",
+            "tabular",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/ferrariboy4k/top5leagues"
+    },
+    "feature_info": {
+        "Div": {
+            "description": "League Division",
+            "type": "categorical",
+            "value_dict": {
+                "D1": "Division 1",
+                "E0": "Division E0",
+                "F1": "Division F1"
+            }
+        },
+        "Date": {
+            "description": "Date of the match",
+            "type": "other"
+        },
+        "HomeTeam": {
+            "description": "Home team name",
+            "type": "categorical"
+        },
+        "AwayTeam": {
+            "description": "Away team name",
+            "type": "categorical"
+        },
+        "HTOa": {
+            "description": "Home team overall attack strength",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "ATOa": {
+            "description": "Away team overall attack strength",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "HTAt": {
+            "description": "Home team attack strength",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "ATAt": {
+            "description": "Away team attack strength",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "HTMid": {
+            "description": "Home team midfield strength",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "ATMid": {
+            "description": "Away team midfield strength",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "HTDef": {
+            "description": "Home team defense strength",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "ATDef": {
+            "description": "Away team defense strength",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "HomeSquad": {
+            "description": "Number of players in home team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "AwaySquad": {
+            "description": "Number of players in away team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "HomeAvgAge": {
+            "description": "Average age of home team players",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "AwayAvgAge": {
+            "description": "Average age of away team players",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "HomeMV": {
+            "description": "Market value of home team",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "AwayMV": {
+            "description": "Market value of away team",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "FTHG": {
+            "description": "Full time home team goals",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "FTAG": {
+            "description": "Full time away team goals",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "FTR": {
+            "description": "Full time result",
+            "type": "categorical",
+            "value_dict": {
+                "H": "Home team win",
+                "A": "Away team win",
+                "D": "Draw"
+            }
+        },
+        "HTHG": {
+            "description": "Half time home team goals",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "HTAG": {
+            "description": "Half time away team goals",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "HTR": {
+            "description": "Half time result",
+            "type": "categorical",
+            "value_dict": {
+                "H": "Home team leading at half time",
+                "A": "Away team leading at half time",
+                "D": "Draw at half time"
+            }
+        },
+        "HS": {
+            "description": "Home team shots",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "AS": {
+            "description": "Away team shots",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "HST": {
+            "description": "Home team shots on target",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "AST": {
+            "description": "Away team shots on target",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "HF": {
+            "description": "Home team fouls",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "AF": {
+            "description": "Away team fouls",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "HC": {
+            "description": "Home team corners",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "AC": {
+            "description": "Away team corners",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "HY": {
+            "description": "Home team yellow cards",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "AY": {
+            "description": "Away team yellow cards",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "HR": {
+            "description": "Home team red cards",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "AR": {
+            "description": "Away team red cards",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "HxG": {
+            "description": "Home team expected goals",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "AxG": {
+            "description": "Away team expected goals",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "HxA": {
+            "description": "Home team expected assists",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "AxA": {
+            "description": "Away team expected assists",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "HxPTS": {
+            "description": "Home team expected points",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "AxPTS": {
+            "description": "Away team expected points",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "HPPDA": {
+            "description": "Home team passes per defensive action",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "APPDA": {
+            "description": "Away team passes per defensive action",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "B365H": {
+            "description": "Bet365 home win odds",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "B365D": {
+            "description": "Bet365 draw odds",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "B365A": {
+            "description": "Bet365 away win odds",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "BWH": {
+            "description": "BW home win odds",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "BWD": {
+            "description": "BW draw odds",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "BWA": {
+            "description": "BW away win odds",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "IWH": {
+            "description": "IW home win odds",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "IWD": {
+            "description": "IW draw odds",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "IWA": {
+            "description": "IW away win odds",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "PSH": {
+            "description": "PS home win odds",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "PSD": {
+            "description": "PS draw odds",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "PSA": {
+            "description": "PS away win odds",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "WHH": {
+            "description": "WH home win odds",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "WHD": {
+            "description": "WH draw odds",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "WHA": {
+            "description": "WH away win odds",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "VCH": {
+            "description": "VC home win odds",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "VCD": {
+            "description": "VC draw odds",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "VCA": {
+            "description": "VC away win odds",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "PSCH": {
+            "description": "PSC home win odds",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "PSCD": {
+            "description": "PSC draw odds",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "PSCA": {
+            "description": "PSC away win odds",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "FTR": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in football match prediction.",
+                "task_prompt": "Based on the features of the football match, please predict the full time result.",
+                "answer_prompt": "Home team win[0], Away team win[1] or Draw[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "H": "Home team win",
+                "A": "Away team win",
+                "D": "Draw"
+            },
+            "class_index_dict": {
+                "H": 0,
+                "A": 1,
+                "D": 2
+            }
+        },
+        "HTHG": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in football match prediction.",
+                "task_prompt": "Based on the features of the football match, please predict the home team half time goals."
+            }
+        },
+        "HTAG": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in football match prediction.",
+                "task_prompt": "Based on the features of the football match, please predict the away team half time goals."
+            }
+        },
+        "HTR": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in football match prediction.",
+                "task_prompt": "Based on the features of the football match, please predict the half time result.",
+                "answer_prompt": "Home team leading at half time[0], Away team leading at half time[1], Draw at half time[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "H": "Home team leading at half time",
+                "A": "Away team leading at half time",
+                "D": "Draw at half time"
+            },
+            "class_index_dict": {
+                "H": 0,
+                "A": 1,
+                "D": 2
+            }
+        },
+        "HS": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in football match prediction.",
+                "task_prompt": "Based on the features of the football match, please predict the home team shots."
+            }
+        },
+        "AS": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in football match prediction.",
+                "task_prompt": "Based on the features of the football match, please predict the away team shots."
+            }
+        },
+        "HST": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in football match prediction.",
+                "task_prompt": "Based on the features of the football match, please predict the home team shots on target."
+            }
+        },
+        "AST": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in football match prediction.",
+                "task_prompt": "Based on the features of the football match, please predict the away team shots on target."
+            }
+        },
+        "HF": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in football match prediction.",
+                "task_prompt": "Based on the features of the football match, please predict the home team fouls."
+            }
+        },
+        "AF": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in football match prediction.",
+                "task_prompt": "Based on the features of the football match, please predict the away team fouls."
+            }
+        },
+        "HC": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in football match prediction.",
+                "task_prompt": "Based on the features of the football match, please predict the home team corners."
+            }
+        },
+        "AC": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in football match prediction.",
+                "task_prompt": "Based on the features of the football match, please predict the away team corners."
+            }
+        },
+        "HY": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in football match prediction.",
+                "task_prompt": "Based on the features of the football match, please predict the home team yellow cards."
+            }
+        },
+        "AY": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in football match prediction.",
+                "task_prompt": "Based on the features of the football match, please predict the away team yellow cards."
+            }
+        },
+        "HR": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in football match prediction.",
+                "task_prompt": "Based on the features of the football match, please predict the home team red cards."
+            }
+        },
+        "AR": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in football match prediction.",
+                "task_prompt": "Based on the features of the football match, please predict the away team red cards."
+            }
+        },
+        "HxG": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in football match prediction.",
+                "task_prompt": "Based on the features of the football match, please predict the home team expected goals."
+            }
+        },
+        "AxG": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in football match prediction.",
+                "task_prompt": "Based on the features of the football match, please predict the away team expected goals."
+            }
+        },
+        "HxA": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in football match prediction.",
+                "task_prompt": "Based on the features of the football match, please predict the home team expected assists."
+            }
+        },
+        "AxA": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in football match prediction.",
+                "task_prompt": "Based on the features of the football match, please predict the away team expected assists."
+            }
+        },
+        "HxPTS": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in football match prediction.",
+                "task_prompt": "Based on the features of the football match, please predict the home team expected points."
+            }
+        },
+        "AxPTS": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in football match prediction.",
+                "task_prompt": "Based on the features of the football match, please predict the away team expected points."
+            }
+        }
+    }
+}

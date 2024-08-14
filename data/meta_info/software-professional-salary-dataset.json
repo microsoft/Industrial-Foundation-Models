@@ -1,0 +1,106 @@
+{
+    "basic_info": {
+        "row_num": 22770,
+        "col_num": 8,
+        "label_candidates": [
+            "Salary",
+            "Rating"
+        ],
+        "valid_feature_num": 8,
+        "num_features": [
+            "Rating",
+            "Salaries Reported",
+            "Salary"
+        ],
+        "cat_features": [
+            "Company Name",
+            "Job Title",
+            "Location",
+            "Employment Status",
+            "Job Roles"
+        ],
+        "other_features": [],
+        "tags": [
+            "employment",
+            "income",
+            "computer science",
+            "programming",
+            "classification",
+            "jobs and career"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/whenamancodes/software-professional-salary-dataset"
+    },
+    "feature_info": {
+        "Rating": {
+            "description": "The rating of the company provided by the employees.",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Company Name": {
+            "description": "The name of the company where the software professional works.",
+            "type": "categorical"
+        },
+        "Job Title": {
+            "description": "The job title of the software professional.",
+            "type": "categorical"
+        },
+        "Salary": {
+            "description": "The salary of the software professional in INR.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Salaries Reported": {
+            "description": "The number of salary reports received for the specific job role in the company.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Location": {
+            "description": "The location where the software professional works.",
+            "type": "categorical",
+            "value_dict": {
+                "Bangalore": "The software professional works in Bangalore.",
+                "Chennai": "The software professional works in Chennai.",
+                "Hyderabad": "The software professional works in Hyderabad.",
+                "New Delhi": "The software professional works in New Delhi.",
+                "Pune": "The software professional works in Pune.",
+                "Jaipur": "The software professional works in Jaipur.",
+                "Kerala": "The software professional works in Kerala.",
+                "Kolkata": "The software professional works in Kolkata.",
+                "Madhya Pradesh": "The software professional works in Madhya Pradesh.",
+                "Mumbai": "The software professional works in Mumbai."
+            }
+        },
+        "Employment Status": {
+            "description": "The employment status of the software professional (e.g., Full Time, Part Time).",
+            "type": "categorical",
+            "value_dict": {
+                "Full Time": "The software professional is a full-time employee.",
+                "Intern": "The software professional is an intern.",
+                "Contractor": "The software professional is a contractor.",
+                "Trainee": "The software professional is a trainee."
+            }
+        },
+        "Job Roles": {
+            "description": "The specific role of the software professional in the company.",
+            "type": "categorical"
+        }
+    },
+    "task_info": {
+        "Salary": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in job salary prediction.",
+                "task_prompt": "Based on the features of the job, such as company name, job title, location, and employment status, please predict the salary.",
+                "answer_prompt": "The predicted salary is: ."
+            }
+        },
+        "Rating": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in company rating prediction.",
+                "task_prompt": "Based on the features of the job, such as company name, job title, salary, and location, please predict the company rating.",
+                "answer_prompt": "The predicted company rating is: ."
+            }
+        }
+    }
+}

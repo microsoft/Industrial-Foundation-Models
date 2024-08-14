@@ -1,0 +1,140 @@
+{
+    "basic_info": {
+        "row_num": 6574,
+        "col_num": 9,
+        "label_candidates": [
+            "WIND",
+            "RAIN",
+            "T.MAX",
+            "T.MIN",
+            "T.MIN.G"
+        ],
+        "valid_feature_num": 9,
+        "num_features": [
+            "RAIN",
+            "T.MAX",
+            "T.MIN",
+            "T.MIN.G",
+            "WIND"
+        ],
+        "cat_features": [
+            "IND",
+            "IND.1",
+            "IND.2"
+        ],
+        "other_features": [
+            "DATE"
+        ],
+        "tags": [
+            "earth and nature",
+            "environment",
+            "weather and climate",
+            "energy",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/fedesoriano/wind-speed-prediction-dataset"
+    },
+    "feature_info": {
+        "DATE": {
+            "description": "The date of the record, ranging from 1961-01-01 onwards.",
+            "type": "other"
+        },
+        "WIND": {
+            "description": "Wind speed of the day in km/h.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "IND": {
+            "description": "Indicator variable for missing wind speed data. 0 means data is present, other values indicate missing data.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Data for wind speed is present",
+                "1": "Data for wind speed is missing",
+                "4": "Data for wind speed is missing"
+            }
+        },
+        "RAIN": {
+            "description": "Amount of rainfall in mm.",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "IND.1": {
+            "description": "Indicator variable for missing rainfall data. 0 means data is present, other values indicate missing data.",
+            "type": "categorical",
+            "value_dict": {
+                "0.0": "Data for rainfall is present",
+                "2.0": "Data for rainfall is missing",
+                "1.0": "Data for rainfall is missing",
+                "4.0": "Data for rainfall is missing"
+            }
+        },
+        "T.MAX": {
+            "description": "Maximum temperature of the day in degrees Celsius.",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "IND.2": {
+            "description": "Indicator variable for missing maximum temperature data. 0 means data is present, other values indicate missing data.",
+            "type": "categorical",
+            "value_dict": {
+                "0.0": "Data for maximum temperature is present",
+                "1.0": "Data for maximum temperature is missing",
+                "2.0": "Data for maximum temperature is missing",
+                "4.0": "Data for maximum temperature is missing",
+                "3.0": "Data for maximum temperature is missing"
+            }
+        },
+        "T.MIN": {
+            "description": "Minimum temperature of the day in degrees Celsius.",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "T.MIN.G": {
+            "description": "Ground minimum temperature of the day in degrees Celsius.",
+            "type": "numerical",
+            "decimal": 1
+        }
+    },
+    "task_info": {
+        "WIND": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in meteorology.",
+                "task_prompt": "Based on the provided weather data, please predict the wind speed.",
+                "answer_prompt": "The predicted wind speed is."
+            }
+        },
+        "RAIN": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in meteorology.",
+                "task_prompt": "Based on the provided weather data, please predict the amount of rain.",
+                "answer_prompt": "The predicted amount of rain is."
+            }
+        },
+        "T.MAX": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in meteorology.",
+                "task_prompt": "Based on the provided weather data, please predict the maximum temperature.",
+                "answer_prompt": "The predicted maximum temperature is."
+            }
+        },
+        "T.MIN": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in meteorology.",
+                "task_prompt": "Based on the provided weather data, please predict the minimum temperature.",
+                "answer_prompt": "The predicted minimum temperature is."
+            }
+        },
+        "T.MIN.G": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in meteorology.",
+                "task_prompt": "Based on the provided weather data, please predict the ground minimum temperature.",
+                "answer_prompt": "The predicted ground minimum temperature is."
+            }
+        }
+    }
+}

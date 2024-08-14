@@ -1,0 +1,219 @@
+{
+    "basic_info": {
+        "row_num": 2111,
+        "col_num": 17,
+        "label_candidates": [
+            "NObeyesdad",
+            "Weight",
+            "Height",
+            "Age"
+        ],
+        "valid_feature_num": 17,
+        "num_features": [
+            "Age",
+            "Height",
+            "Weight",
+            "FCVC",
+            "NCP",
+            "CH2O",
+            "FAF",
+            "TUE"
+        ],
+        "cat_features": [
+            "Gender",
+            "family_history_with_overweight",
+            "FAVC",
+            "CAEC",
+            "SMOKE",
+            "SCC",
+            "CALC",
+            "MTRANS",
+            "NObeyesdad"
+        ],
+        "other_features": [],
+        "tags": [
+            "classification",
+            "clustering",
+            "regression",
+            "health conditions",
+            "heart conditions"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/aravindpcoder/obesity-or-cvd-risk-classifyregressorcluster"
+    },
+    "feature_info": {
+        "Gender": {
+            "description": "Gender of the individual",
+            "type": "categorical",
+            "value_dict": {
+                "Female": "The individual is female",
+                "Male": "The individual is male"
+            }
+        },
+        "Age": {
+            "description": "Age of the individual in years",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Height": {
+            "description": "Height of the individual in meters",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Weight": {
+            "description": "Weight of the individual in kilograms",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "family_history_with_overweight": {
+            "description": "Does the individual have a family history of overweight?",
+            "type": "categorical",
+            "value_dict": {
+                "yes": "The individual has a family history of overweight",
+                "no": "The individual does not have a family history of overweight"
+            }
+        },
+        "FAVC": {
+            "description": "Does the individual frequently consume high caloric food?",
+            "type": "categorical",
+            "value_dict": {
+                "no": "The individual does not frequently consume high caloric food",
+                "yes": "The individual frequently consumes high caloric food"
+            }
+        },
+        "FCVC": {
+            "description": "Frequency of consumption of vegetables in the individual's diet",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "NCP": {
+            "description": "Number of main meals the individual has in a day",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "CAEC": {
+            "description": "Consumption of food between meals for the individual",
+            "type": "categorical",
+            "value_dict": {
+                "Sometimes": "The individual sometimes consumes food between meals",
+                "Frequently": "The individual frequently consumes food between meals",
+                "Always": "The individual always consumes food between meals",
+                "no": "The individual does not consume food between meals"
+            }
+        },
+        "SMOKE": {
+            "description": "Does the individual smoke?",
+            "type": "categorical",
+            "value_dict": {
+                "no": "The individual does not smoke",
+                "yes": "The individual smokes"
+            }
+        },
+        "CH2O": {
+            "description": "Daily water consumption of the individual in liters",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "SCC": {
+            "description": "Does the individual monitor calorie consumption daily?",
+            "type": "categorical",
+            "value_dict": {
+                "no": "The individual does not monitor calorie consumption daily",
+                "yes": "The individual monitors calorie consumption daily"
+            }
+        },
+        "FAF": {
+            "description": "Frequency of physical activity for the individual in a week",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "TUE": {
+            "description": "Time using technology devices by the individual in a day",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "CALC": {
+            "description": "Frequency of alcohol consumption for the individual",
+            "type": "categorical",
+            "value_dict": {
+                "no": "The individual does not consume alcohol",
+                "Sometimes": "The individual sometimes consumes alcohol",
+                "Frequently": "The individual frequently consumes alcohol",
+                "Always": "The individual always consumes alcohol"
+            }
+        },
+        "MTRANS": {
+            "description": "Individual's primary mode of transportation",
+            "type": "categorical",
+            "value_dict": {
+                "Public_Transportation": "The individual primarily uses public transportation",
+                "Walking": "The individual primarily walks",
+                "Automobile": "The individual primarily uses an automobile",
+                "Motorbike": "The individual primarily uses a motorbike",
+                "Bike": "The individual primarily uses a bike"
+            }
+        },
+        "NObeyesdad": {
+            "description": "Obesity level of the individual",
+            "type": "categorical",
+            "value_dict": {
+                "Normal_Weight": "The individual has normal weight",
+                "Overweight_Level_I": "The individual is in Overweight Level I",
+                "Overweight_Level_II": "The individual is in Overweight Level II",
+                "Obesity_Type_I": "The individual is in Obesity Type I",
+                "Insufficient_Weight": "The individual has insufficient weight",
+                "Obesity_Type_II": "The individual is in Obesity Type II",
+                "Obesity_Type_III": "The individual is in Obesity Type III"
+            }
+        }
+    },
+    "task_info": {
+        "NObeyesdad": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in health and fitness.",
+                "task_prompt": "Based on the features of the individual, please predict the obesity level.",
+                "answer_prompt": "Normal Weight[0], Overweight Level I[1], Overweight Level II[2], Obesity Type I[3], Insufficient Weight[4], Obesity Type II[5], Obesity Type III[6]?"
+            },
+            "class_num": 7,
+            "class_value_dict": {
+                "Normal_Weight": "The individual has normal weight",
+                "Overweight_Level_I": "The individual is in Overweight Level I",
+                "Overweight_Level_II": "The individual is in Overweight Level II",
+                "Obesity_Type_I": "The individual is in Obesity Type I",
+                "Insufficient_Weight": "The individual has insufficient weight",
+                "Obesity_Type_II": "The individual is in Obesity Type II",
+                "Obesity_Type_III": "The individual is in Obesity Type III"
+            },
+            "class_index_dict": {
+                "Normal_Weight": 0,
+                "Overweight_Level_I": 1,
+                "Overweight_Level_II": 2,
+                "Obesity_Type_I": 3,
+                "Insufficient_Weight": 4,
+                "Obesity_Type_II": 5,
+                "Obesity_Type_III": 6
+            }
+        },
+        "Weight": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health and fitness.",
+                "task_prompt": "Based on the features of the individual, please predict the weight."
+            }
+        },
+        "Height": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health and fitness.",
+                "task_prompt": "Based on the features of the individual, please predict the height."
+            }
+        },
+        "Age": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health and fitness.",
+                "task_prompt": "Based on the features of the individual, please predict the age."
+            }
+        }
+    }
+}

@@ -1,0 +1,161 @@
+{
+    "basic_info": {
+        "row_num": 792,
+        "col_num": 13,
+        "label_candidates": [
+            "happiness_score",
+            "cpi_score",
+            "gdp_per_capita",
+            "health",
+            "freedom"
+        ],
+        "valid_feature_num": 13,
+        "num_features": [
+            "gdp_per_capita",
+            "family",
+            "health",
+            "freedom",
+            "generosity",
+            "government_trust",
+            "dystopia_residual",
+            "social_support",
+            "cpi_score",
+            "happiness_score"
+        ],
+        "cat_features": [
+            "Country",
+            "continent",
+            "Year"
+        ],
+        "other_features": [],
+        "tags": [
+            "psychology",
+            "data visualization",
+            "data analytics",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/eliasturk/world-happiness-based-on-cpi-20152020"
+    },
+    "feature_info": {
+        "Country": {
+            "description": "The name of the country.",
+            "type": "categorical"
+        },
+        "happiness_score": {
+            "description": "The happiness score of the country, measured on a scale.",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "gdp_per_capita": {
+            "description": "The Gross Domestic Product per capita of the country.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "family": {
+            "description": "The measure of family support in the country.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "health": {
+            "description": "The measure of health level in the country.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "freedom": {
+            "description": "The measure of freedom level in the country.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "generosity": {
+            "description": "The measure of generosity level in the country.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "government_trust": {
+            "description": "The measure of trust in government in the country.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "dystopia_residual": {
+            "description": "The Dystopia Residual metric of the country.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "continent": {
+            "description": "The continent where the country is located.",
+            "type": "categorical",
+            "value_dict": {
+                "Europe": "The country is located in Europe.",
+                "North America": "The country is located in North America.",
+                "Australia": "The country is located in Australia.",
+                "Asia": "The country is located in Asia.",
+                "South America": "The country is located in South America.",
+                "Africa": "The country is located in Africa."
+            }
+        },
+        "Year": {
+            "description": "The year of the record.",
+            "type": "categorical",
+            "value_dict": {
+                "2015": "The record is for the year 2015.",
+                "2016": "The record is for the year 2016.",
+                "2017": "The record is for the year 2017.",
+                "2018": "The record is for the year 2018.",
+                "2019": "The record is for the year 2019.",
+                "2020": "The record is for the year 2020."
+            }
+        },
+        "social_support": {
+            "description": "The measure of social support in the country.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "cpi_score": {
+            "description": "The Corruption Perceptions Index (CPI) score of the country.",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "happiness_score": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing World Happiness data.",
+                "task_prompt": "Based on the features of a country, please predict the happiness score.",
+                "answer_prompt": "The predicted happiness score is."
+            }
+        },
+        "cpi_score": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing World Happiness data.",
+                "task_prompt": "Based on the features of a country, please predict the CPI score.",
+                "answer_prompt": "The predicted CPI score is."
+            }
+        },
+        "gdp_per_capita": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing World Happiness data.",
+                "task_prompt": "Based on the features of a country, please predict the GDP per capita.",
+                "answer_prompt": "The predicted GDP per capita is."
+            }
+        },
+        "health": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing World Happiness data.",
+                "task_prompt": "Based on the features of a country, please predict the health index.",
+                "answer_prompt": "The predicted health index is."
+            }
+        },
+        "freedom": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing World Happiness data.",
+                "task_prompt": "Based on the features of a country, please predict the freedom index.",
+                "answer_prompt": "The predicted freedom index is."
+            }
+        }
+    }
+}

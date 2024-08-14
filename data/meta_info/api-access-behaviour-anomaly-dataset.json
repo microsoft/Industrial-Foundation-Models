@@ -1,0 +1,140 @@
+{
+    "basic_info": {
+        "row_num": 34423,
+        "col_num": 12,
+        "label_candidates": [
+            "behavior_type",
+            "num_sessions"
+        ],
+        "valid_feature_num": 11,
+        "num_features": [
+            "inter_api_access_duration(sec)",
+            "api_access_uniqueness",
+            "sequence_length(count)",
+            "vsession_duration(min)",
+            "num_sessions",
+            "num_users",
+            "num_unique_apis"
+        ],
+        "cat_features": [
+            "ip_type",
+            "behavior",
+            "source",
+            "behavior_type"
+        ],
+        "other_features": [],
+        "tags": [
+            "websites",
+            "categorical",
+            "artificial intelligence",
+            "computer science",
+            "programming",
+            "classification",
+            "social networks"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/tangodelta/api-access-behaviour-anomaly-dataset"
+    },
+    "feature_info": {
+        "_id": {
+            "description": "Unique identifier for each record",
+            "type": "useless"
+        },
+        "inter_api_access_duration(sec)": {
+            "description": "The duration between API accesses in seconds",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "api_access_uniqueness": {
+            "description": "The uniqueness of API access",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "sequence_length(count)": {
+            "description": "The count of sequence length",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "vsession_duration(min)": {
+            "description": "The duration of the virtual session in minutes",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "ip_type": {
+            "description": "Type of the IP address",
+            "type": "categorical",
+            "value_dict": {
+                "default": "The default type of IP",
+                "private_ip": "A private IP address type",
+                "datacenter": "The IP address is from a datacenter",
+                "google_bot": "The IP address is from a Google bot"
+            }
+        },
+        "behavior": {
+            "description": "Behavior of the user",
+            "type": "categorical"
+        },
+        "behavior_type": {
+            "description": "Type of the user behavior",
+            "type": "categorical",
+            "value_dict": {
+                "outlier": "The behavior is considered as an outlier",
+                "bot": "The behavior is considered as coming from a bot",
+                "normal": "The behavior is considered as normal",
+                "attack": "The behavior is considered as an attack"
+            }
+        },
+        "num_sessions": {
+            "description": "Number of sessions",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "num_users": {
+            "description": "Number of users",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "num_unique_apis": {
+            "description": "Number of unique APIs",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "source": {
+            "description": "Source from which the data was collected",
+            "type": "categorical",
+            "value_dict": {
+                "E": "The source of the data is E",
+                "F": "The source of the data is F"
+            }
+        }
+    },
+    "task_info": {
+        "behavior_type": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in API access behavior analysis.",
+                "task_prompt": "Based on the features of the API access behavior, please predict the type of the behavior.",
+                "answer_prompt": "Is the behavior considered as an outlier[0], bot[1], normal[2] or attack[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "outlier": "The behavior is considered as an outlier",
+                "bot": "The behavior is considered as coming from a bot",
+                "normal": "The behavior is considered as normal",
+                "attack": "The behavior is considered as an attack"
+            },
+            "class_index_dict": {
+                "outlier": 0,
+                "bot": 1,
+                "normal": 2,
+                "attack": 3
+            }
+        },
+        "num_sessions": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in API access behavior analysis.",
+                "task_prompt": "Based on the features of the API access behavior, please predict the number of sessions."
+            }
+        }
+    }
+}

@@ -1,0 +1,107 @@
+{
+    "basic_info": {
+        "row_num": 43194,
+        "col_num": 7,
+        "label_candidates": [
+            "TargetClass",
+            "Amag",
+            "Vmag"
+        ],
+        "valid_feature_num": 7,
+        "num_features": [
+            "Vmag",
+            "Plx",
+            "e_Plx",
+            "B-V",
+            "Amag"
+        ],
+        "cat_features": [
+            "SpType",
+            "TargetClass"
+        ],
+        "other_features": [],
+        "tags": [
+            "arts and entertainment",
+            "music",
+            "astronomy",
+            "physics",
+            "artificial intelligence",
+            "classification",
+            "deep learning",
+            "online communities"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/vinesmsuic/star-categorization-giants-and-dwarfs"
+    },
+    "feature_info": {
+        "Vmag": {
+            "description": "Visual magnitude of the star",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Plx": {
+            "description": "Parallax of the star (measured in milliarcseconds)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "e_Plx": {
+            "description": "Standard error of the star's parallax (measured in milliarcseconds)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "B-V": {
+            "description": "Color index of the star, which is a measure of the star's temperature and is calculated by subtracting the star's B-band magnitude from its V-band magnitude",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "SpType": {
+            "description": "Spectral type of the star, which is a classification scheme for stars based on their spectral characteristics",
+            "type": "categorical"
+        },
+        "Amag": {
+            "description": "Absolute magnitude of the star",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "TargetClass": {
+            "description": "Target class of the star, where 0 represents a giant star and 1 represents a dwarf star",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The star is a giant star",
+                "1": "The star is a dwarf star"
+            }
+        }
+    },
+    "task_info": {
+        "TargetClass": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in Astronomy.",
+                "task_prompt": "Based on the features of the star, please predict the type of the star.",
+                "answer_prompt": "The star is a giant star[0] or The star is a dwarf star[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "The star is a giant star",
+                "1": "The star is a dwarf star"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "Amag": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in Astronomy.",
+                "task_prompt": "Based on the features of the star, please predict the Absolute magnitude (Amag) of the star."
+            }
+        },
+        "Vmag": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in Astronomy.",
+                "task_prompt": "Based on the features of the star, please predict the Visual magnitude (Vmag) of the star."
+            }
+        }
+    }
+}

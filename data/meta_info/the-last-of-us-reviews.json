@@ -1,0 +1,135 @@
+{
+    "basic_info": {
+        "row_num": 5078,
+        "col_num": 10,
+        "label_candidates": [
+            "score",
+            "type_review",
+            "platform"
+        ],
+        "valid_feature_num": 9,
+        "num_features": [
+            "views",
+            "votes",
+            "score"
+        ],
+        "cat_features": [
+            "type_review",
+            "platform",
+            "language",
+            "split"
+        ],
+        "other_features": [
+            "review",
+            "date"
+        ],
+        "tags": [
+            "video games",
+            "nlp",
+            "text mining",
+            "text"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/lazaro97/the-last-of-us-reviews"
+    },
+    "feature_info": {
+        "id": {
+            "description": "Unique identifier of the reviewer",
+            "type": "useless"
+        },
+        "review": {
+            "description": "Text of the review written by the user",
+            "type": "other"
+        },
+        "type_review": {
+            "description": "Type of the review (e.g., user review, critic review)",
+            "type": "categorical",
+            "value_dict": {
+                "expanded": "Review written in a detailed and comprehensive manner",
+                "normal": "Standard user review"
+            }
+        },
+        "platform": {
+            "description": "Platform on which the user played the game",
+            "type": "categorical",
+            "value_dict": {
+                "ps3": "The game was played on PlayStation 3",
+                "ps4": "The game was played on PlayStation 4"
+            }
+        },
+        "date": {
+            "description": "Date when the review was written",
+            "type": "other"
+        },
+        "language": {
+            "description": "Language in which the review was written",
+            "type": "categorical"
+        },
+        "views": {
+            "description": "Number of views the review has received",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "votes": {
+            "description": "Number of votes the review has received",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "score": {
+            "description": "Score given by the user to the game",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "split": {
+            "description": "Indicates if the record is for training or testing",
+            "type": "categorical",
+            "value_dict": {
+                "test": "This record is used for testing purposes",
+                "train": "This record is used for training purposes"
+            }
+        }
+    },
+    "task_info": {
+        "score": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in video game reviews analysis.",
+                "task_prompt": "Based on the review features, please predict the score.",
+                "answer_prompt": "What is the predicted score?"
+            }
+        },
+        "type_review": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in video game reviews analysis.",
+                "task_prompt": "Based on the review features, please predict the type of review.",
+                "answer_prompt": "Is it a detailed and comprehensive review[0] or a standard user review[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "expanded": "Review written in a detailed and comprehensive manner",
+                "normal": "Standard user review"
+            },
+            "class_index_dict": {
+                "expanded": 0,
+                "normal": 1
+            }
+        },
+        "platform": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in video game reviews analysis.",
+                "task_prompt": "Based on the review features, please predict the platform the game was played on.",
+                "answer_prompt": "Was the game played on PlayStation 3[0] or PlayStation 4[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "ps3": "The game was played on PlayStation 3",
+                "ps4": "The game was played on PlayStation 4"
+            },
+            "class_index_dict": {
+                "ps3": 0,
+                "ps4": 1
+            }
+        }
+    }
+}

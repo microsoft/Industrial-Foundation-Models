@@ -1,0 +1,129 @@
+{
+    "basic_info": {
+        "row_num": 361370,
+        "col_num": 7,
+        "label_candidates": [
+            "value",
+            "sex",
+            "isced11"
+        ],
+        "valid_feature_num": 7,
+        "num_features": [
+            "date",
+            "value"
+        ],
+        "cat_features": [
+            "sex",
+            "age",
+            "isced11",
+            "geography"
+        ],
+        "other_features": [
+            "unit"
+        ],
+        "tags": [
+            "europe",
+            "education",
+            "social science",
+            "demographics",
+            "tabular"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/gpreda/population-by-education-level-in-europe"
+    },
+    "feature_info": {
+        "unit": {
+            "description": "The unit of measurement for the population value, represented in thousands (THS)",
+            "type": "other"
+        },
+        "sex": {
+            "description": "The gender of the population group, either male (M) or female (F)",
+            "type": "categorical",
+            "value_dict": {
+                "F": "Represents female population",
+                "M": "Represents male population",
+                "T": "Represents total population (both male and female)"
+            }
+        },
+        "age": {
+            "description": "The age range of the population group",
+            "type": "categorical"
+        },
+        "isced11": {
+            "description": "The International Standard Classification of Education (ISCED) 2011 levels",
+            "type": "categorical",
+            "value_dict": {
+                "ED0-2": "Represents population with education level of pre-primary to lower secondary education",
+                "ED3_4": "Represents population with education level of upper secondary to post-secondary non-tertiary education",
+                "ED5-8": "Represents population with education level of short-cycle tertiary education to doctoral or equivalent level",
+                "NRP": "Represents population with no response to education level",
+                "TOTAL": "Represents total population regardless of education level"
+            }
+        },
+        "geography": {
+            "description": "The geographical area in Europe represented by its country code",
+            "type": "categorical"
+        },
+        "date": {
+            "description": "The year when the data was collected",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "value": {
+            "description": "The population value in the specified unit, age group, ISCED level, and geographical area",
+            "type": "numerical",
+            "decimal": 1
+        }
+    },
+    "task_info": {
+        "value": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in population statistics.",
+                "task_prompt": "Based on the demographic features, please predict the population value in thousands.",
+                "answer_prompt": "The population value in thousands is: ."
+            }
+        },
+        "sex": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in demographic analysis.",
+                "task_prompt": "Based on the demographic and geographical features, please predict the sex of the population.",
+                "answer_prompt": "The sex of the population is female[0], male[1] or total[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "F": "Represents female population",
+                "M": "Represents male population",
+                "T": "Represents total population (both male and female)"
+            },
+            "class_index_dict": {
+                "F": 0,
+                "M": 1,
+                "T": 2
+            }
+        },
+        "isced11": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in education level analysis.",
+                "task_prompt": "Based on the demographic and geographical features, please predict the education level of the population.",
+                "answer_prompt": "The education level of the population is pre-primary to lower secondary education[0], upper secondary to post-secondary non-tertiary education[1], short-cycle tertiary education to doctoral or equivalent level[2], no response to education level[3] or total population regardless of education level[4]?"
+            },
+            "class_num": 5,
+            "class_value_dict": {
+                "ED0-2": "Represents population with education level of pre-primary to lower secondary education",
+                "ED3_4": "Represents population with education level of upper secondary to post-secondary non-tertiary education",
+                "ED5-8": "Represents population with education level of short-cycle tertiary education to doctoral or equivalent level",
+                "NRP": "Represents population with no response to education level",
+                "TOTAL": "Represents total population regardless of education level"
+            },
+            "class_index_dict": {
+                "ED0-2": 0,
+                "ED3_4": 1,
+                "ED5-8": 2,
+                "NRP": 3,
+                "TOTAL": 4
+            }
+        }
+    }
+}

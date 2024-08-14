@@ -1,0 +1,109 @@
+{
+    "basic_info": {
+        "row_num": 920,
+        "col_num": 10,
+        "label_candidates": [
+            "reviewer rating",
+            "is_verified"
+        ],
+        "valid_feature_num": 9,
+        "num_features": [
+            "reviewer rating"
+        ],
+        "cat_features": [
+            "book name",
+            "review title",
+            "reviewer",
+            "review description",
+            "is_verified",
+            "ASIN"
+        ],
+        "other_features": [
+            "date",
+            "timestamp"
+        ],
+        "tags": [
+            "literature",
+            "education",
+            "computer science",
+            "nlp",
+            "data visualization",
+            "classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/anshtanwar/top-200-trending-books-with-reviews"
+    },
+    "feature_info": {
+        "Sno": {
+            "description": "Serial number of the book review",
+            "type": "useless"
+        },
+        "book name": {
+            "description": "Name of the book",
+            "type": "categorical"
+        },
+        "review title": {
+            "description": "Title of the review",
+            "type": "categorical"
+        },
+        "reviewer": {
+            "description": "Name of the person who reviewed the book",
+            "type": "categorical"
+        },
+        "reviewer rating": {
+            "description": "Rating given by the reviewer on a scale of 1 to 5",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "review description": {
+            "description": "Detailed review description",
+            "type": "categorical"
+        },
+        "is_verified": {
+            "description": "Whether the reviewer is a verified purchaser or not",
+            "type": "categorical",
+            "value_dict": {
+                "True": "The reviewer is a verified purchaser",
+                "False": "The reviewer is not a verified purchaser"
+            }
+        },
+        "date": {
+            "description": "Date of the review",
+            "type": "other"
+        },
+        "timestamp": {
+            "description": "Timestamp of the review",
+            "type": "other"
+        },
+        "ASIN": {
+            "description": "Amazon Standard Identification Number of the book",
+            "type": "categorical"
+        }
+    },
+    "task_info": {
+        "reviewer rating": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing book reviews.",
+                "task_prompt": "Based on the features of the book review, please predict the reviewer rating.",
+                "answer_prompt": "The reviewer rating is a numeric value between 1 and 5."
+            }
+        },
+        "is_verified": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing book reviews.",
+                "task_prompt": "Based on the features of the book review, please predict if the reviewer is a verified purchaser.",
+                "answer_prompt": "Yes[1], the reviewer is a verified purchaser or No[0], the reviewer is not a verified purchaser."
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "True": "The reviewer is a verified purchaser",
+                "False": "The reviewer is not a verified purchaser"
+            },
+            "class_index_dict": {
+                "True": 1,
+                "False": 0
+            }
+        }
+    }
+}

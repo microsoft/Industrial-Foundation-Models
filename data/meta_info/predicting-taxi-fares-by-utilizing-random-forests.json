@@ -1,0 +1,169 @@
+{
+    "basic_info": {
+        "row_num": 49999,
+        "col_num": 14,
+        "label_candidates": [
+            "trip_time_in_secs",
+            "trip_distance",
+            "passenger_count",
+            "rate_code"
+        ],
+        "valid_feature_num": 14,
+        "num_features": [
+            "passenger_count",
+            "trip_distance",
+            "pickup_longitude",
+            "pickup_latitude",
+            "dropoff_longitude",
+            "dropoff_latitude",
+            "trip_time_in_secs"
+        ],
+        "cat_features": [
+            "medallion",
+            "hack_license",
+            "vendor_id",
+            "rate_code",
+            "store_and_fwd_flag"
+        ],
+        "other_features": [
+            "pickup_datetime",
+            "dropoff_datetime"
+        ],
+        "tags": [
+            "travel"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/venessagreen/predicting-taxi-fares-by-utilizing-random-forests"
+    },
+    "feature_info": {
+        "medallion": {
+            "description": "A unique identifier for the taxi medallion",
+            "type": "categorical"
+        },
+        "hack_license": {
+            "description": "A unique identifier for the taxi driver",
+            "type": "categorical"
+        },
+        "vendor_id": {
+            "description": "A code indicating the provider associated with the trip record",
+            "type": "categorical",
+            "value_dict": {
+                "VTS": "Vendor is VeriFone Transporation System",
+                "CMT": "Vendor is Creative Mobile Technologies"
+            }
+        },
+        "rate_code": {
+            "description": "The final rate code in effect at the end of the trip",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Standard rate",
+                "3": "Newark",
+                "2": "JFK",
+                "5": "Negotiated fare",
+                "4": "Nassau or Westchester",
+                "0": "Not defined"
+            }
+        },
+        "store_and_fwd_flag": {
+            "description": "This flag indicates whether the trip record was held in vehicle memory before sending to the vendor",
+            "type": "categorical",
+            "value_dict": {
+                "N": "The trip data was not held in vehicle memory before sending",
+                "Y": "The trip data was held in vehicle memory before sending"
+            }
+        },
+        "pickup_datetime": {
+            "description": "The date and time when the meter was engaged",
+            "type": "other"
+        },
+        "dropoff_datetime": {
+            "description": "The date and time when the meter was disengaged",
+            "type": "other"
+        },
+        "passenger_count": {
+            "description": "The number of passengers in the vehicle",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "trip_time_in_secs": {
+            "description": "Duration of the trip in seconds",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "trip_distance": {
+            "description": "Distance of the trip in miles",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "pickup_longitude": {
+            "description": "Longitude coordinate of the pickup location",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "pickup_latitude": {
+            "description": "Latitude coordinate of the pickup location",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "dropoff_longitude": {
+            "description": "Longitude coordinate of the dropoff location",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "dropoff_latitude": {
+            "description": "Latitude coordinate of the dropoff location",
+            "type": "numerical",
+            "decimal": 6
+        }
+    },
+    "task_info": {
+        "trip_time_in_secs": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in predicting taxi trip times.",
+                "task_prompt": "Based on the features of the taxi trip, please predict the trip time in seconds.",
+                "answer_prompt": "The trip time in seconds is."
+            }
+        },
+        "trip_distance": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in predicting taxi trip distances.",
+                "task_prompt": "Based on the features of the taxi trip, please predict the trip distance.",
+                "answer_prompt": "The trip distance is."
+            }
+        },
+        "passenger_count": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in predicting taxi passenger counts.",
+                "task_prompt": "Based on the features of the taxi trip, please predict the number of passengers.",
+                "answer_prompt": "The number of passengers is."
+            }
+        },
+        "rate_code": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in predicting taxi rate codes.",
+                "task_prompt": "Based on the features of the taxi trip, please predict the rate code.",
+                "answer_prompt": "Standard rate[0], Newark[1], JFK[2], Negotiated fare[3], Nassau or Westchester[4], Not defined[5]?"
+            },
+            "class_num": 6,
+            "class_value_dict": {
+                "1": "Standard rate",
+                "3": "Newark",
+                "2": "JFK",
+                "5": "Negotiated fare",
+                "4": "Nassau or Westchester",
+                "0": "Not defined"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "3": 3,
+                "2": 2,
+                "5": 5,
+                "4": 4,
+                "0": 0
+            }
+        }
+    }
+}

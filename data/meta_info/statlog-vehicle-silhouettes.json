@@ -1,0 +1,223 @@
+{
+    "basic_info": {
+        "row_num": 846,
+        "col_num": 19,
+        "label_candidates": [
+            "target",
+            "COMPACTNESS",
+            "CIRCULARITY",
+            "DISTANCE CIRCULARITY",
+            "RADIUS RATIO",
+            "SCATTER RATIO",
+            "ELONGATEDNESS",
+            "HOLLOWS RATIO"
+        ],
+        "valid_feature_num": 19,
+        "num_features": [
+            "COMPACTNESS",
+            "CIRCULARITY",
+            "DISTANCE CIRCULARITY",
+            "RADIUS RATIO",
+            "PR AXIS ASPECT RATIO",
+            "MAX LENGTH ASPECT RATIO",
+            "SCATTER RATIO",
+            "ELONGATEDNESS",
+            "PR AXISRECTANGULAR",
+            "LENGTHRECTANGULAR",
+            "MAJORVARIANCE",
+            "MINORVARIANCE",
+            "GYRATIONRADIUS",
+            "MAJORSKEWNESS",
+            "MINORSKEWNESS",
+            "MINORKURTOSIS",
+            "MAJORKURTOSIS",
+            "HOLLOWS RATIO"
+        ],
+        "cat_features": [
+            "target"
+        ],
+        "other_features": [],
+        "tags": [
+            "automobiles and vehicles",
+            "beginner",
+            "logistic regression",
+            "tabular",
+            "multiclass classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/patriciabrezeanu/statlog-vehicle-silhouettes"
+    },
+    "feature_info": {
+        "COMPACTNESS": {
+            "description": "Represents the compactness of the vehicle, measured by the ratio of the bounding box to the pixels within the silhouette",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "CIRCULARITY": {
+            "description": "Represents the circularity of the vehicle, measured by the ratio of the area of the silhouette to the square of the perimeter",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "DISTANCE CIRCULARITY": {
+            "description": "Represents the distance circularity of the vehicle, measured by the ratio of the distance between the center of the bounding box and the furthest pixel within the silhouette to the circularity",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "RADIUS RATIO": {
+            "description": "Represents the radius ratio of the vehicle, measured by the ratio of the minor axis to the major axis of the best fitting ellipse",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "PR AXIS ASPECT RATIO": {
+            "description": "Represents the aspect ratio of the vehicle along the principal axis",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "MAX LENGTH ASPECT RATIO": {
+            "description": "Represents the maximum length aspect ratio of the vehicle, measured by the ratio of the length along the major axis to the length along the minor axis",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "SCATTER RATIO": {
+            "description": "Represents the scatter ratio of the vehicle, measured by the variance of the silhouette projection along the major axis",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "ELONGATEDNESS": {
+            "description": "Represents the elongatedness of the vehicle, measured by the ratio of the area of the silhouette to the square of the major axis length",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "PR AXISRECTANGULAR": {
+            "description": "Represents the rectangularity of the vehicle along the principal axis, measured by the ratio of the area of the silhouette to the area of the bounding box",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "LENGTHRECTANGULAR": {
+            "description": "Represents the rectangularity of the vehicle along the length, measured by the ratio of the area of the silhouette to the area of the bounding box",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "MAJORVARIANCE": {
+            "description": "Represents the variance of the silhouette projection along the major axis",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "MINORVARIANCE": {
+            "description": "Represents the variance of the silhouette projection along the minor axis",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "GYRATIONRADIUS": {
+            "description": "Represents the gyration radius of the vehicle, measured by the square root of the mean square distance of the silhouette pixels from the center of gravity",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "MAJORSKEWNESS": {
+            "description": "Represents the skewness of the silhouette projection along the major axis",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "MINORSKEWNESS": {
+            "description": "Represents the skewness of the silhouette projection along the minor axis",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "MINORKURTOSIS": {
+            "description": "Represents the kurtosis of the silhouette projection along the minor axis",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "MAJORKURTOSIS": {
+            "description": "Represents the kurtosis of the silhouette projection along the major axis",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "HOLLOWS RATIO": {
+            "description": "Represents the ratio of the area of the vehicle\u2019s hollows to the area of the silhouette",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "target": {
+            "description": "Represents the class of the vehicle, with 0 being OPEL, 1 being SAAB, 2 being a bus, and 3 being a van",
+            "type": "categorical",
+            "value_dict": {
+                "1": "OPEL",
+                "2": "SAAB",
+                "3": "BUS",
+                "4": "Van"
+            }
+        }
+    },
+    "task_info": {
+        "target": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in vehicle classification.",
+                "task_prompt": "Based on the features of the vehicle, please classify the type of vehicle.",
+                "answer_prompt": "OPEL[0], SAAB[1], BUS[2] or Van[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "1": "OPEL",
+                "2": "SAAB",
+                "3": "BUS",
+                "4": "Van"
+            },
+            "class_index_dict": {
+                "1": 0,
+                "2": 1,
+                "3": 2,
+                "4": 3
+            }
+        },
+        "COMPACTNESS": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in vehicle analysis.",
+                "task_prompt": "Based on the features of the vehicle, please predict the compactness of the vehicle."
+            }
+        },
+        "CIRCULARITY": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in vehicle analysis.",
+                "task_prompt": "Based on the features of the vehicle, please predict the circularity of the vehicle."
+            }
+        },
+        "DISTANCE CIRCULARITY": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in vehicle analysis.",
+                "task_prompt": "Based on the features of the vehicle, please predict the distance circularity of the vehicle."
+            }
+        },
+        "RADIUS RATIO": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in vehicle analysis.",
+                "task_prompt": "Based on the features of the vehicle, please predict the radius ratio of the vehicle."
+            }
+        },
+        "SCATTER RATIO": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in vehicle analysis.",
+                "task_prompt": "Based on the features of the vehicle, please predict the scatter ratio of the vehicle."
+            }
+        },
+        "ELONGATEDNESS": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in vehicle analysis.",
+                "task_prompt": "Based on the features of the vehicle, please predict the elongatedness of the vehicle."
+            }
+        },
+        "HOLLOWS RATIO": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in vehicle analysis.",
+                "task_prompt": "Based on the features of the vehicle, please predict the hollows ratio of the vehicle."
+            }
+        }
+    }
+}

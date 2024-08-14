@@ -1,0 +1,159 @@
+{
+    "basic_info": {
+        "row_num": 1523,
+        "col_num": 6,
+        "label_candidates": [
+            "Working",
+            "Administrative_situation",
+            "Studies"
+        ],
+        "valid_feature_num": 6,
+        "num_features": [],
+        "cat_features": [
+            "Gender",
+            "Age",
+            "Studies",
+            "Nationality",
+            "Administrative_situation",
+            "Working"
+        ],
+        "other_features": [],
+        "tags": [
+            "europe",
+            "categorical",
+            "employment",
+            "demographics",
+            "binary classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/rober2598/immigration-madrid-2021"
+    },
+    "feature_info": {
+        "Gender": {
+            "description": "The gender of the individual. Possible values: \"Women\", \"Men\".",
+            "type": "categorical",
+            "value_dict": {
+                "Women": "The individual is a woman.",
+                "Men": "The individual is a man."
+            }
+        },
+        "Age": {
+            "description": "The age group of the individual. Possible values include ranges such as \"18-30\", \"51-65\".",
+            "type": "categorical",
+            "value_dict": {
+                "51-65": "The individual is between 51 and 65 years old.",
+                "18-30": "The individual is between 18 and 30 years old.",
+                "31-50": "The individual is between 31 and 50 years old.",
+                "4-17": "The individual is between 4 and 17 years old.",
+                " + 65": "The individual is older than 65."
+            }
+        },
+        "Studies": {
+            "description": "The level of education of the individual.",
+            "type": "categorical",
+            "value_dict": {
+                "College": "The individual has a college-level education.",
+                "Pre-college": "The individual has completed education up to the pre-college level.",
+                "High-school": "The individual has a high school-level education.",
+                "No_studies": "The individual has not completed any formal education.",
+                "Elementary_school": "The individual has an elementary school-level education.",
+                "Vocational_training": "The individual has completed vocational training.",
+                "Unknown": "The education level of the individual is unknown."
+            }
+        },
+        "Nationality": {
+            "description": "The nationality of the individual.",
+            "type": "categorical"
+        },
+        "Administrative_situation": {
+            "description": "The administrative situation of the individual, which may include their legal status or type of residency.",
+            "type": "categorical",
+            "value_dict": {
+                "Community": "The individual is part of the community.",
+                "ART": "The individual is under the ART administrative situation.",
+                "Refugee": "The individual is a refugee.",
+                "Community_familiar": "The individual is part of a familiar community.",
+                "Irregular": "The individual has an irregular administrative situation.",
+                "Student": "The individual is a student."
+            }
+        },
+        "Working": {
+            "description": "Whether the individual is currently working or not. Possible values: \"Yes\", \"No\".",
+            "type": "categorical",
+            "value_dict": {
+                "No": "The individual is not currently working.",
+                "Yes": "The individual is currently working."
+            }
+        }
+    },
+    "task_info": {
+        "Working": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in labor market analysis.",
+                "task_prompt": "Based on the demographic and educational features of the individual, please predict if the individual is currently working.",
+                "answer_prompt": "Not working[0] or working[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "No": "The individual is not currently working.",
+                "Yes": "The individual is currently working."
+            },
+            "class_index_dict": {
+                "No": 0,
+                "Yes": 1
+            }
+        },
+        "Administrative_situation": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in immigration policy.",
+                "task_prompt": "Based on the demographic and educational features of the individual, please predict the administrative situation of the individual.",
+                "answer_prompt": "Community[0], ART[1], Refugee[2], Community_familiar[3], Irregular[4], or Student[5]?"
+            },
+            "class_num": 6,
+            "class_value_dict": {
+                "Community": "The individual is part of the community.",
+                "ART": "The individual is under the ART administrative situation.",
+                "Refugee": "The individual is a refugee.",
+                "Community_familiar": "The individual is part of a familiar community.",
+                "Irregular": "The individual has an irregular administrative situation.",
+                "Student": "The individual is a student."
+            },
+            "class_index_dict": {
+                "Community": 0,
+                "ART": 1,
+                "Refugee": 2,
+                "Community_familiar": 3,
+                "Irregular": 4,
+                "Student": 5
+            }
+        },
+        "Studies": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in educational analysis.",
+                "task_prompt": "Based on the demographic features of the individual, please predict the highest level of education the individual has completed.",
+                "answer_prompt": "College[0], Pre-college[1], High-school[2], No studies[3], Elementary school[4], Vocational training[5], or Unknown[6]?"
+            },
+            "class_num": 7,
+            "class_value_dict": {
+                "College": "The individual has a college-level education.",
+                "Pre-college": "The individual has completed education up to the pre-college level.",
+                "High-school": "The individual has a high school-level education.",
+                "No_studies": "The individual has not completed any formal education.",
+                "Elementary_school": "The individual has an elementary school-level education.",
+                "Vocational_training": "The individual has completed vocational training.",
+                "Unknown": "The education level of the individual is unknown."
+            },
+            "class_index_dict": {
+                "College": 0,
+                "Pre-college": 1,
+                "High-school": 2,
+                "No_studies": 3,
+                "Elementary_school": 4,
+                "Vocational_training": 5,
+                "Unknown": 6
+            }
+        }
+    }
+}

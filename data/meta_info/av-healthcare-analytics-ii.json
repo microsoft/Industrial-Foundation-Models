@@ -1,0 +1,221 @@
+{
+    "basic_info": {
+        "row_num": 318438,
+        "col_num": 18,
+        "label_candidates": [
+            "Severity of Illness",
+            "Type of Admission"
+        ],
+        "valid_feature_num": 16,
+        "num_features": [
+            "Available Extra Rooms in Hospital",
+            "Visitors with Patient",
+            "Admission_Deposit"
+        ],
+        "cat_features": [
+            "Hospital_code",
+            "Hospital_type_code",
+            "City_Code_Hospital",
+            "Hospital_region_code",
+            "Department",
+            "Ward_Type",
+            "Ward_Facility_Code",
+            "Bed Grade",
+            "City_Code_Patient",
+            "Type of Admission",
+            "Severity of Illness",
+            "Age",
+            "Stay"
+        ],
+        "other_features": [],
+        "tags": [
+            "health",
+            "beginner",
+            "exploratory data analysis",
+            "multiclass classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/nehaprabhavalkar/av-healthcare-analytics-ii"
+    },
+    "feature_info": {
+        "case_id": {
+            "description": "Unique identifier for each case",
+            "type": "useless"
+        },
+        "Hospital_code": {
+            "description": "Unique code for each hospital",
+            "type": "categorical"
+        },
+        "Hospital_type_code": {
+            "description": "Type of the hospital categorized by codes",
+            "type": "categorical",
+            "value_dict": {
+                "c": "Hospital type code c",
+                "e": "Hospital type code e",
+                "b": "Hospital type code b",
+                "a": "Hospital type code a",
+                "f": "Hospital type code f",
+                "d": "Hospital type code d",
+                "g": "Hospital type code g"
+            }
+        },
+        "City_Code_Hospital": {
+            "description": "City code where the hospital is located",
+            "type": "categorical"
+        },
+        "Hospital_region_code": {
+            "description": "Region code where the hospital is located",
+            "type": "categorical",
+            "value_dict": {
+                "Z": "Hospital region code Z",
+                "X": "Hospital region code X",
+                "Y": "Hospital region code Y"
+            }
+        },
+        "Available Extra Rooms in Hospital": {
+            "description": "Number of extra rooms available in the hospital",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Department": {
+            "description": "Department in the hospital",
+            "type": "categorical",
+            "value_dict": {
+                "radiotherapy": "Radiotherapy department",
+                "anesthesia": "Anesthesia department",
+                "gynecology": "Gynecology department",
+                "TB & Chest disease": "TB & Chest disease department",
+                "surgery": "Surgery department"
+            }
+        },
+        "Ward_Type": {
+            "description": "Type of the ward in the hospital",
+            "type": "categorical",
+            "value_dict": {
+                "R": "Ward type R",
+                "S": "Ward type S",
+                "Q": "Ward type Q",
+                "P": "Ward type P",
+                "T": "Ward type T",
+                "U": "Ward type U"
+            }
+        },
+        "Ward_Facility_Code": {
+            "description": "Facility code for the ward in the hospital",
+            "type": "categorical",
+            "value_dict": {
+                "F": "Ward facility code F",
+                "E": "Ward facility code E",
+                "D": "Ward facility code D",
+                "B": "Ward facility code B",
+                "A": "Ward facility code A",
+                "C": "Ward facility code C"
+            }
+        },
+        "Bed Grade": {
+            "description": "Grade of the bed in the hospital",
+            "type": "categorical",
+            "value_dict": {
+                "2.0": "Bed grade 2",
+                "3.0": "Bed grade 3",
+                "4.0": "Bed grade 4",
+                "1.0": "Bed grade 1"
+            }
+        },
+        "patientid": {
+            "description": "Unique identifier for each patient",
+            "type": "useless"
+        },
+        "City_Code_Patient": {
+            "description": "City code of the patient",
+            "type": "categorical"
+        },
+        "Type of Admission": {
+            "description": "Type of admission for the patient (e.g., emergency, urgent, trauma)",
+            "type": "categorical",
+            "value_dict": {
+                "Emergency": "Emergency admission",
+                "Trauma": "Trauma admission",
+                "Urgent": "Urgent admission"
+            }
+        },
+        "Severity of Illness": {
+            "description": "Level of severity of the illness diagnosed",
+            "type": "categorical",
+            "value_dict": {
+                "Extreme": "Extreme severity of illness",
+                "Moderate": "Moderate severity of illness",
+                "Minor": "Minor severity of illness"
+            }
+        },
+        "Visitors with Patient": {
+            "description": "Number of visitors with the patient",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Age": {
+            "description": "Age of the patient",
+            "type": "categorical",
+            "value_dict": {
+                "51-60": "Age between 51 and 60",
+                "71-80": "Age between 71 and 80",
+                "31-40": "Age between 31 and 40",
+                "41-50": "Age between 41 and 50",
+                "81-90": "Age between 81 and 90",
+                "61-70": "Age between 61 and 70",
+                "21-30": "Age between 21 and 30",
+                "11-20": "Age between 11 and 20",
+                "0-10": "Age between 0 and 10",
+                "91-100": "Age between 91 and 100"
+            }
+        },
+        "Admission_Deposit": {
+            "description": "Deposit amount at the time of admission",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Stay": {
+            "description": "Duration of stay of the patient in the hospital",
+            "type": "categorical"
+        }
+    },
+    "task_info": {
+        "Severity of Illness": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in healthcare analytics.",
+                "task_prompt": "Based on the features of the patient and hospital, please predict the severity of the patient's illness.",
+                "answer_prompt": "Extreme[0], Moderate[1], or Minor[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "Extreme": "Extreme severity of illness",
+                "Moderate": "Moderate severity of illness",
+                "Minor": "Minor severity of illness"
+            },
+            "class_index_dict": {
+                "Extreme": 0,
+                "Moderate": 1,
+                "Minor": 2
+            }
+        },
+        "Type of Admission": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in healthcare analytics.",
+                "task_prompt": "Based on the features of the patient and hospital, please predict the type of admission for the patient.",
+                "answer_prompt": "Emergency[0], Trauma[1], or Urgent[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "Emergency": "Emergency admission",
+                "Trauma": "Trauma admission",
+                "Urgent": "Urgent admission"
+            },
+            "class_index_dict": {
+                "Emergency": 0,
+                "Trauma": 1,
+                "Urgent": 2
+            }
+        }
+    }
+}

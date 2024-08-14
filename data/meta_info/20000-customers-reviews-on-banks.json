@@ -1,0 +1,114 @@
+{
+    "basic_info": {
+        "row_num": 19271,
+        "col_num": 7,
+        "label_candidates": [
+            "star",
+            "like",
+            "bank"
+        ],
+        "valid_feature_num": 7,
+        "num_features": [
+            "like",
+            "star"
+        ],
+        "cat_features": [
+            "author",
+            "location",
+            "bank"
+        ],
+        "other_features": [
+            "date",
+            "text"
+        ],
+        "tags": [
+            "people",
+            "banking",
+            "internet",
+            "text"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/trainingdatapro/20000-customers-reviews-on-banks"
+    },
+    "feature_info": {
+        "author": {
+            "description": "The name of the person who wrote the review.",
+            "type": "categorical",
+            "value_dict": {
+                "Kyle": "Kyle is an author of a review.",
+                "Julicia": "Julicia is an author of a review.",
+                "Karen": "Karen is an author of a review.",
+                "Brent": "Brent is an author of a review.",
+                "Sharon": "Sharon is an author of a review."
+            }
+        },
+        "date": {
+            "description": "The date when the review was written.",
+            "type": "other"
+        },
+        "location": {
+            "description": "The location of the author.",
+            "type": "categorical",
+            "value_dict": {
+                "Magnolia, TX": "The author is from Magnolia, TX.",
+                "Columbus, GA": "The author is from Columbus, GA.",
+                "Marrero, LA": "The author is from Marrero, LA.",
+                "Moultrie, GA": "The author is from Moultrie, GA.",
+                "Burnham, IL": "The author is from Burnham, IL."
+            }
+        },
+        "bank": {
+            "description": "The bank that the review is about.",
+            "type": "categorical",
+            "value_dict": {
+                "merrick_bank": "The review is about Merrick Bank."
+            }
+        },
+        "star": {
+            "description": "The star rating given by the author, ranging from 1 to 5.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "text": {
+            "description": "The text of the review written by the author.",
+            "type": "other"
+        },
+        "like": {
+            "description": "The number of likes received by the review. NaN means no likes.",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "star": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in financial data analysis.",
+                "task_prompt": "Based on the features of the customer review, please predict the star rating.",
+                "answer_prompt": "The predicted star rating is _."
+            }
+        },
+        "like": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sentiment analysis.",
+                "task_prompt": "Based on the features of the customer review, please predict the number of likes.",
+                "answer_prompt": "The predicted number of likes is _."
+            }
+        },
+        "bank": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in text classification.",
+                "task_prompt": "Based on the features of the customer review, please predict which bank the review is about.",
+                "answer_prompt": "The review is about Merrick Bank[0]."
+            },
+            "class_num": 1,
+            "class_value_dict": {
+                "merrick_bank": "The review is about Merrick Bank."
+            },
+            "class_index_dict": {
+                "merrick_bank": 0
+            }
+        }
+    }
+}

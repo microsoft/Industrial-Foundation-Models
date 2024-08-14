@@ -1,0 +1,158 @@
+{
+    "basic_info": {
+        "row_num": 1273,
+        "col_num": 13,
+        "label_candidates": [
+            "Price",
+            "Ram",
+            "Weight"
+        ],
+        "valid_feature_num": 13,
+        "num_features": [
+            "Ram",
+            "Weight",
+            "Ppi",
+            "HDD",
+            "SSD",
+            "Price"
+        ],
+        "cat_features": [
+            "Company",
+            "TypeName",
+            "TouchScreen",
+            "Ips",
+            "Cpu_brand",
+            "Gpu_brand",
+            "Os"
+        ],
+        "other_features": [],
+        "tags": [
+            "computer science",
+            "intermediate",
+            "data cleaning",
+            "feature engineering",
+            "random forest",
+            "seaborn"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/gyanprakashkushwaha/laptop-price-prediction-cleaned-dataset"
+    },
+    "feature_info": {
+        "Company": {
+            "description": "The manufacturer of the laptop.",
+            "type": "categorical"
+        },
+        "TypeName": {
+            "description": "The type of the laptop.",
+            "type": "categorical",
+            "value_dict": {
+                "Ultrabook": "A high-end lightweight laptop.",
+                "Notebook": "A standard laptop.",
+                "Netbook": "A small, lightweight, low-power laptop.",
+                "Gaming": "A laptop designed for gaming.",
+                "2 in 1 Convertible": "A laptop that can be converted into a tablet.",
+                "Workstation": "A high-performance laptop designed for professional use."
+            }
+        },
+        "Ram": {
+            "description": "The amount of RAM in the laptop (in GB).",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Weight": {
+            "description": "The weight of the laptop (in kg).",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Price": {
+            "description": "The price of the laptop.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "TouchScreen": {
+            "description": "Whether the laptop has a touchscreen (1 for yes, 0 for no).",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The laptop does not have a touchscreen.",
+                "1": "The laptop has a touchscreen."
+            }
+        },
+        "Ips": {
+            "description": "Whether the laptop has an IPS display (1 for yes, 0 for no).",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The laptop has an IPS display.",
+                "0": "The laptop does not have an IPS display."
+            }
+        },
+        "Ppi": {
+            "description": "The pixel density of the laptop's screen (in pixels per inch).",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Cpu_brand": {
+            "description": "The brand of the laptop's CPU.",
+            "type": "categorical",
+            "value_dict": {
+                "Intel Core i5": "The laptop has an Intel Core i5 processor.",
+                "Intel Core i7": "The laptop has an Intel Core i7 processor.",
+                "AMD Processor": "The laptop has an AMD processor.",
+                "Intel Core i3": "The laptop has an Intel Core i3 processor.",
+                "Other Intel Processor": "The laptop has another type of Intel processor."
+            }
+        },
+        "HDD": {
+            "description": "The size of the laptop's hard disk drive (in GB).",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "SSD": {
+            "description": "The size of the laptop's solid state drive (in GB).",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Gpu_brand": {
+            "description": "The brand of the laptop's GPU.",
+            "type": "categorical",
+            "value_dict": {
+                "Intel": "The laptop has an Intel GPU.",
+                "AMD": "The laptop has an AMD GPU.",
+                "Nvidia": "The laptop has a Nvidia GPU."
+            }
+        },
+        "Os": {
+            "description": "The operating system of the laptop.",
+            "type": "categorical",
+            "value_dict": {
+                "Mac": "The laptop runs on MacOS.",
+                "Others": "The laptop runs on another operating system.",
+                "Windows": "The laptop runs on Windows."
+            }
+        }
+    },
+    "task_info": {
+        "Price": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in laptop price prediction.",
+                "task_prompt": "Based on the features of the laptop, please predict the price.",
+                "answer_prompt": "The predicted price of the laptop is."
+            }
+        },
+        "Ram": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in laptop specification prediction.",
+                "task_prompt": "Based on the features of the laptop, please predict the RAM size.",
+                "answer_prompt": "The predicted RAM size of the laptop is."
+            }
+        },
+        "Weight": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in laptop specification prediction.",
+                "task_prompt": "Based on the features of the laptop, please predict the weight.",
+                "answer_prompt": "The predicted weight of the laptop is."
+            }
+        }
+    }
+}

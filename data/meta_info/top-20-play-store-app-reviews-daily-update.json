@@ -1,0 +1,76 @@
+{
+    "basic_info": {
+        "row_num": 200000,
+        "col_num": 4,
+        "label_candidates": [
+            "score",
+            "app"
+        ],
+        "valid_feature_num": 3,
+        "num_features": [
+            "score"
+        ],
+        "cat_features": [
+            "app"
+        ],
+        "other_features": [
+            "content"
+        ],
+        "tags": [
+            "mobile and wireless",
+            "tabular",
+            "text",
+            "multiclass classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/odins0n/top-20-play-store-app-reviews-daily-update"
+    },
+    "feature_info": {
+        "reviewId": {
+            "description": "The unique identifier for each review.",
+            "type": "useless"
+        },
+        "content": {
+            "description": "The content of the review.",
+            "type": "other"
+        },
+        "score": {
+            "description": "The score given by the user, usually a number between 1 and 5.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "app": {
+            "description": "The name of the app that the review is for.",
+            "type": "categorical",
+            "value_dict": {
+                "Facebook": "Reviews for the app Facebook."
+            }
+        }
+    },
+    "task_info": {
+        "score": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing app reviews.",
+                "task_prompt": "Based on the content of the review, please predict the score.",
+                "answer_prompt": "The score is a number between 1 and 5."
+            }
+        },
+        "app": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing app reviews.",
+                "task_prompt": "Based on the content and score of the review, please predict the app.",
+                "answer_prompt": "Is this a review for the app Facebook[0] or other app[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "Facebook": "Reviews for the app Facebook.",
+                "Other": "Reviews for other apps."
+            },
+            "class_index_dict": {
+                "Facebook": 0,
+                "Other": 1
+            }
+        }
+    }
+}

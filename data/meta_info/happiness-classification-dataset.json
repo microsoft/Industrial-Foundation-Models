@@ -1,0 +1,171 @@
+{
+    "basic_info": {
+        "row_num": 143,
+        "col_num": 7,
+        "label_candidates": [
+            "happy",
+            "\u00ebvents",
+            "streetquality"
+        ],
+        "valid_feature_num": 7,
+        "num_features": [],
+        "cat_features": [
+            "infoavail",
+            "housecost",
+            "schoolquality",
+            "policetrust",
+            "streetquality",
+            "\u00ebvents",
+            "happy"
+        ],
+        "other_features": [],
+        "tags": [
+            "mental health",
+            "people and society",
+            "beginner",
+            "exploratory data analysis",
+            "binary classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/priyanshusethi/happiness-classification-dataset"
+    },
+    "feature_info": {
+        "infoavail": {
+            "description": "Availability of information, likely a rating from 1-5",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Lowest level of information availability",
+                "3": "Medium level of information availability",
+                "4": "High level of information availability",
+                "5": "Highest level of information availability"
+            }
+        },
+        "housecost": {
+            "description": "Cost of housing, likely a rating from 1-5",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Lowest cost of housing",
+                "2": "Low cost of housing",
+                "3": "Medium cost of housing",
+                "4": "High cost of housing",
+                "5": "Highest cost of housing"
+            }
+        },
+        "schoolquality": {
+            "description": "Quality of schools, likely a rating from 1-5",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Lowest quality of schools",
+                "2": "Low quality of schools",
+                "3": "Medium quality of schools",
+                "4": "High quality of schools",
+                "5": "Highest quality of schools"
+            }
+        },
+        "policetrust": {
+            "description": "Level of trust in police, likely a rating from 1-5",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Lowest level of trust in police",
+                "2": "Low level of trust in police",
+                "3": "Medium level of trust in police",
+                "4": "High level of trust in police",
+                "5": "Highest level of trust in police"
+            }
+        },
+        "streetquality": {
+            "description": "Quality of streets, likely a rating from 1-5",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Lowest quality of streets",
+                "2": "Low quality of streets",
+                "3": "Medium quality of streets",
+                "4": "High quality of streets",
+                "5": "Highest quality of streets"
+            }
+        },
+        "\u00ebvents": {
+            "description": "Events, likely a rating from 1-5",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Lowest rating for events",
+                "2": "Low rating for events",
+                "3": "Medium rating for events",
+                "4": "High rating for events",
+                "5": "Highest rating for events"
+            }
+        },
+        "happy": {
+            "description": "Happiness level, binary classification with 0 for unhappy and 1 for happy",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Unhappy",
+                "1": "Happy"
+            }
+        }
+    },
+    "task_info": {
+        "happy": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in social science and data analysis.",
+                "task_prompt": "Based on the features of the living conditions, please predict the happiness level of the residents.",
+                "answer_prompt": "Unhappy[0] or Happy[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "Unhappy",
+                "1": "Happy"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "\u00ebvents": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in social science and data analysis.",
+                "task_prompt": "Based on the features of the living conditions, please predict the rating for events in the area.",
+                "answer_prompt": "Lowest rating for events[0], Low rating for events[1], Medium rating for events[2], High rating for events[3], or Highest rating for events[4]?"
+            },
+            "class_num": 5,
+            "class_value_dict": {
+                "1": "Lowest rating for events",
+                "2": "Low rating for events",
+                "3": "Medium rating for events",
+                "4": "High rating for events",
+                "5": "Highest rating for events"
+            },
+            "class_index_dict": {
+                "1": 0,
+                "2": 1,
+                "3": 2,
+                "4": 3,
+                "5": 4
+            }
+        },
+        "streetquality": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in urban planning and data analysis.",
+                "task_prompt": "Based on the features of the living conditions, please predict the quality of streets in the area.",
+                "answer_prompt": "Lowest quality of streets[0], Low quality of streets[1], Medium quality of streets[2], High quality of streets[3], or Highest quality of streets[4]?"
+            },
+            "class_num": 5,
+            "class_value_dict": {
+                "1": "Lowest quality of streets",
+                "2": "Low quality of streets",
+                "3": "Medium quality of streets",
+                "4": "High quality of streets",
+                "5": "Highest quality of streets"
+            },
+            "class_index_dict": {
+                "1": 0,
+                "2": 1,
+                "3": 2,
+                "4": 3,
+                "5": 4
+            }
+        }
+    }
+}

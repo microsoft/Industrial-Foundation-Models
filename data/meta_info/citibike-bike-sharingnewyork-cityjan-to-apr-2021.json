@@ -1,0 +1,162 @@
+{
+    "basic_info": {
+        "row_num": 393312,
+        "col_num": 15,
+        "label_candidates": [
+            "tripduration",
+            "usertype",
+            "gender"
+        ],
+        "valid_feature_num": 14,
+        "num_features": [
+            "tripduration",
+            "start station latitude",
+            "start station longitude",
+            "end station latitude",
+            "end station longitude",
+            "birth year"
+        ],
+        "cat_features": [
+            "start station id",
+            "start station name",
+            "end station id",
+            "end station name",
+            "gender",
+            "usertype"
+        ],
+        "other_features": [
+            "starttime",
+            "stoptime"
+        ],
+        "tags": [
+            "cities and urban areas",
+            "categorical",
+            "tabular",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/vineethakkinapalli/citibike-bike-sharingnewyork-cityjan-to-apr-2021"
+    },
+    "feature_info": {
+        "tripduration": {
+            "description": "The duration of the trip in seconds",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "starttime": {
+            "description": "The start time of the trip",
+            "type": "other"
+        },
+        "stoptime": {
+            "description": "The stop time of the trip",
+            "type": "other"
+        },
+        "start station id": {
+            "description": "The ID of the start station",
+            "type": "categorical"
+        },
+        "start station name": {
+            "description": "The name of the start station",
+            "type": "categorical"
+        },
+        "start station latitude": {
+            "description": "The latitude of the start station",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "start station longitude": {
+            "description": "The longitude of the start station",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "end station id": {
+            "description": "The ID of the end station",
+            "type": "categorical"
+        },
+        "end station name": {
+            "description": "The name of the end station",
+            "type": "categorical"
+        },
+        "end station latitude": {
+            "description": "The latitude of the end station",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "end station longitude": {
+            "description": "The longitude of the end station",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "bikeid": {
+            "description": "The ID of the bike used for the trip",
+            "type": "useless"
+        },
+        "usertype": {
+            "description": "The type of the user, e.g., Customer or Subscriber",
+            "type": "categorical",
+            "value_dict": {
+                "Customer": "The user has a one-time or short-term pass",
+                "Subscriber": "The user has an annual membership"
+            }
+        },
+        "birth year": {
+            "description": "The birth year of the user",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "gender": {
+            "description": "The gender of the user, represented as 0 (unknown), 1 (male), 2 (female)",
+            "type": "categorical",
+            "value_dict": {
+                "2": "The user is female",
+                "1": "The user is male",
+                "0": "The gender of the user is unknown"
+            }
+        }
+    },
+    "task_info": {
+        "tripduration": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in bike sharing systems.",
+                "task_prompt": "Based on the features of the bike trips, please predict the trip duration.",
+                "answer_prompt": "The trip duration is in seconds."
+            }
+        },
+        "usertype": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in bike sharing systems.",
+                "task_prompt": "Based on the features of the bike trips, please classify the user type.",
+                "answer_prompt": "Customer[0] or Subscriber[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "Customer": "The user has a one-time or short-term pass",
+                "Subscriber": "The user has an annual membership"
+            },
+            "class_index_dict": {
+                "Customer": 0,
+                "Subscriber": 1
+            }
+        },
+        "gender": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in bike sharing systems.",
+                "task_prompt": "Based on the features of the bike trips, please classify the gender of the user.",
+                "answer_prompt": "Female[0], Male[1] or Unknown[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "2": "The user is female",
+                "1": "The user is male",
+                "0": "The gender of the user is unknown"
+            },
+            "class_index_dict": {
+                "2": 2,
+                "1": 1,
+                "0": 0
+            }
+        }
+    }
+}

@@ -1,0 +1,125 @@
+{
+    "basic_info": {
+        "row_num": 792,
+        "col_num": 9,
+        "label_candidates": [
+            "price (eur)",
+            "year",
+            "mileage (kms)"
+        ],
+        "valid_feature_num": 9,
+        "num_features": [
+            "year",
+            "mileage (kms)",
+            "price (eur)"
+        ],
+        "cat_features": [
+            "brand",
+            "model",
+            "engine",
+            "fuel",
+            "gearbox",
+            "location"
+        ],
+        "other_features": [],
+        "tags": [
+            "automobiles and vehicles",
+            "classification",
+            "clustering",
+            "tabular",
+            "regression",
+            "english"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/erenakbulut/user-car-prices-barcelona-2022"
+    },
+    "feature_info": {
+        "brand": {
+            "description": "The brand of the car",
+            "type": "categorical"
+        },
+        "model": {
+            "description": "The specific model of the car",
+            "type": "categorical"
+        },
+        "price (eur)": {
+            "description": "The price of the car in euros",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "engine": {
+            "description": "The engine type of the car",
+            "type": "categorical"
+        },
+        "year": {
+            "description": "The year the car was manufactured",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "mileage (kms)": {
+            "description": "The total distance the car has traveled in kilometers",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "fuel": {
+            "description": "The type of fuel the car uses",
+            "type": "categorical",
+            "value_dict": {
+                "Gasolina": "The car uses gasoline as fuel",
+                "Di\u00e9sel": "The car uses diesel as fuel",
+                "H\u00edbrido": "The car is a hybrid and can use both gasoline and electricity as fuel",
+                "GLP": "The car uses Liquefied Petroleum Gas as fuel",
+                "El\u00e9ctrico": "The car is electric"
+            }
+        },
+        "gearbox": {
+            "description": "The type of gearbox the car has",
+            "type": "categorical",
+            "value_dict": {
+                "Manual": "The car has a manual gearbox",
+                "Automatica": "The car has an automatic gearbox"
+            }
+        },
+        "location": {
+            "description": "The location where the car is being sold",
+            "type": "categorical",
+            "value_dict": {
+                "Granollers": "The car is being sold in Granollers",
+                "Viladecans": "The car is being sold in Viladecans",
+                "Sabadell 1": "The car is being sold in Sabadell 1",
+                "Gav\u00e1": "The car is being sold in Gav\u00e1",
+                "Matar\u00f3": "The car is being sold in Matar\u00f3",
+                "Sabadell 2": "The car is being sold in Sabadell 2",
+                "Esplugas": "The car is being sold in Esplugas",
+                "Hospitalet": "The car is being sold in Hospitalet",
+                "Badalona": "The car is being sold in Badalona",
+                "Sabadell 3": "The car is being sold in Sabadell 3"
+            }
+        }
+    },
+    "task_info": {
+        "price (eur)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in car price prediction.",
+                "task_prompt": "Based on the brand, model, engine, year, mileage, fuel type, gearbox, and location of the car, please predict the price in euros.",
+                "answer_prompt": "The predicted price is ____ euros."
+            }
+        },
+        "year": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in predicting the manufacturing year of cars.",
+                "task_prompt": "Based on the brand, model, price, engine, mileage, fuel type, gearbox, and location of the car, please predict the manufacturing year.",
+                "answer_prompt": "The predicted manufacturing year is ____."
+            }
+        },
+        "mileage (kms)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in predicting the mileage of cars.",
+                "task_prompt": "Based on the brand, model, price, engine, year, fuel type, gearbox, and location of the car, please predict the mileage in kilometers.",
+                "answer_prompt": "The predicted mileage is ____ kilometers."
+            }
+        }
+    }
+}

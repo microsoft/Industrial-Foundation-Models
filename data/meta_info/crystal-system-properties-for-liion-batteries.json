@@ -1,0 +1,145 @@
+{
+    "basic_info": {
+        "row_num": 339,
+        "col_num": 11,
+        "label_candidates": [
+            "Crystal System",
+            "Formation Energy (eV)",
+            "E Above Hull (eV)",
+            "Band Gap (eV)",
+            "Density (gm/cc)"
+        ],
+        "valid_feature_num": 10,
+        "num_features": [
+            "Formation Energy (eV)",
+            "E Above Hull (eV)",
+            "Band Gap (eV)",
+            "Nsites",
+            "Density (gm/cc)",
+            "Volume"
+        ],
+        "cat_features": [
+            "Formula",
+            "Spacegroup",
+            "Has Bandstructure",
+            "Crystal System"
+        ],
+        "other_features": [],
+        "tags": [
+            "earth and nature",
+            "business",
+            "classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/divyansh22/crystal-system-properties-for-liion-batteries"
+    },
+    "feature_info": {
+        "Materials Id": {
+            "description": "The unique identifier for each material",
+            "type": "useless"
+        },
+        "Formula": {
+            "description": "Chemical formula of the material",
+            "type": "categorical"
+        },
+        "Spacegroup": {
+            "description": "The space group of the material",
+            "type": "categorical"
+        },
+        "Formation Energy (eV)": {
+            "description": "The formation energy of the material in electron volts (eV)",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "E Above Hull (eV)": {
+            "description": "The energy above the convex hull in electron volts (eV)",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "Band Gap (eV)": {
+            "description": "The energy band gap of the material in electron volts (eV)",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "Nsites": {
+            "description": "The number of sites in the material",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Density (gm/cc)": {
+            "description": "The density of the material in grams per cubic centimeter (gm/cc)",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "Volume": {
+            "description": "The volume of the material",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Has Bandstructure": {
+            "description": "Boolean value indicating whether the material has a band structure or not",
+            "type": "categorical",
+            "value_dict": {
+                "True": "The material has a band structure",
+                "False": "The material does not have a band structure"
+            }
+        },
+        "Crystal System": {
+            "description": "The crystal system of the material",
+            "type": "categorical",
+            "value_dict": {
+                "monoclinic": "The crystal system of the material is monoclinic",
+                "orthorhombic": "The crystal system of the material is orthorhombic",
+                "triclinic": "The crystal system of the material is triclinic"
+            }
+        }
+    },
+    "task_info": {
+        "Crystal System": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in material science.",
+                "task_prompt": "Based on the properties of the material, please predict the crystal system.",
+                "answer_prompt": "Monoclinic[0], Orthorhombic[1], or Triclinic[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "monoclinic": "The crystal system of the material is monoclinic",
+                "orthorhombic": "The crystal system of the material is orthorhombic",
+                "triclinic": "The crystal system of the material is triclinic"
+            },
+            "class_index_dict": {
+                "monoclinic": 0,
+                "orthorhombic": 1,
+                "triclinic": 2
+            }
+        },
+        "Formation Energy (eV)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in material science.",
+                "task_prompt": "Based on the properties of the material, please predict the formation energy in eV."
+            }
+        },
+        "E Above Hull (eV)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in material science.",
+                "task_prompt": "Based on the properties of the material, please predict the energy above hull in eV."
+            }
+        },
+        "Band Gap (eV)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in material science.",
+                "task_prompt": "Based on the properties of the material, please predict the band gap in eV."
+            }
+        },
+        "Density (gm/cc)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in material science.",
+                "task_prompt": "Based on the properties of the material, please predict the density in gm/cc."
+            }
+        }
+    }
+}

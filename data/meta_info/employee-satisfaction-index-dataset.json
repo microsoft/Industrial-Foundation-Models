@@ -1,0 +1,165 @@
+{
+    "basic_info": {
+        "row_num": 500,
+        "col_num": 13,
+        "label_candidates": [
+            "satisfied",
+            "salary",
+            "rating"
+        ],
+        "valid_feature_num": 12,
+        "num_features": [
+            "age",
+            "rating",
+            "awards",
+            "certifications",
+            "salary"
+        ],
+        "cat_features": [
+            "Dept",
+            "location",
+            "education",
+            "recruitment_type",
+            "job_level",
+            "onsite",
+            "satisfied"
+        ],
+        "other_features": [],
+        "tags": [
+            "employment",
+            "business",
+            "software",
+            "classification",
+            "jobs and career"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/mohamedharris/employee-satisfaction-index-dataset"
+    },
+    "feature_info": {
+        "emp_id": {
+            "description": "The unique identifier of the employee",
+            "type": "useless"
+        },
+        "age": {
+            "description": "The age of the employee",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Dept": {
+            "description": "The department where the employee works",
+            "type": "categorical",
+            "value_dict": {
+                "HR": "Employee works in Human Resources department",
+                "Technology": "Employee works in Technology department",
+                "Sales": "Employee works in Sales department",
+                "Purchasing": "Employee works in Purchasing department",
+                "Marketing": "Employee works in Marketing department"
+            }
+        },
+        "location": {
+            "description": "The location where the employee works",
+            "type": "categorical",
+            "value_dict": {
+                "Suburb": "Employee works in a suburban location",
+                "City": "Employee works in a city location"
+            }
+        },
+        "education": {
+            "description": "The highest education level of the employee",
+            "type": "categorical",
+            "value_dict": {
+                "PG": "Employee has postgraduate education",
+                "UG": "Employee has undergraduate education"
+            }
+        },
+        "recruitment_type": {
+            "description": "The type of recruitment through which the employee was hired",
+            "type": "categorical",
+            "value_dict": {
+                "Referral": "Employee was recruited through referral",
+                "Walk-in": "Employee was a walk-in applicant",
+                "On-Campus": "Employee was hired through on-campus recruitment",
+                "Recruitment Agency": "Employee was recruited through a recruitment agency"
+            }
+        },
+        "job_level": {
+            "description": "The level of the job position of the employee",
+            "type": "categorical",
+            "value_dict": {
+                "5": "Employee is at job level 5",
+                "3": "Employee is at job level 3",
+                "4": "Employee is at job level 4",
+                "2": "Employee is at job level 2",
+                "1": "Employee is at job level 1"
+            }
+        },
+        "rating": {
+            "description": "The performance rating of the employee",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "onsite": {
+            "description": "Whether the employee works on site or not",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Employee does not work on site",
+                "1": "Employee works on site"
+            }
+        },
+        "awards": {
+            "description": "The number of awards the employee has received",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "certifications": {
+            "description": "The number of certifications the employee has",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "salary": {
+            "description": "The salary of the employee",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "satisfied": {
+            "description": "Whether the employee is satisfied or not",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Employee is satisfied",
+                "0": "Employee is not satisfied"
+            }
+        }
+    },
+    "task_info": {
+        "satisfied": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in human resource analytics.",
+                "task_prompt": "Based on the features of the employee, please predict the satisfaction level.",
+                "answer_prompt": "Employee is satisfied[1] or Employee is not satisfied[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "Employee is satisfied",
+                "0": "Employee is not satisfied"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        },
+        "salary": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in salary prediction.",
+                "task_prompt": "Based on the features of the employee, please predict the salary."
+            }
+        },
+        "rating": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in employee performance analysis.",
+                "task_prompt": "Based on the features of the employee, please predict the rating."
+            }
+        }
+    }
+}

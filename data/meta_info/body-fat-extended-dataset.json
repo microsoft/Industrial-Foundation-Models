@@ -1,0 +1,156 @@
+{
+    "basic_info": {
+        "row_num": 436,
+        "col_num": 16,
+        "label_candidates": [
+            "BodyFat",
+            "Weight",
+            "Abdomen"
+        ],
+        "valid_feature_num": 16,
+        "num_features": [
+            "Age",
+            "Weight",
+            "Height",
+            "Neck",
+            "Chest",
+            "Abdomen",
+            "Hip",
+            "Thigh",
+            "Knee",
+            "Ankle",
+            "Biceps",
+            "Forearm",
+            "Wrist",
+            "BodyFat"
+        ],
+        "cat_features": [
+            "Original",
+            "Sex"
+        ],
+        "other_features": [],
+        "tags": [
+            "exercise",
+            "healthcare",
+            "public health",
+            "health",
+            "regression",
+            "health conditions"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/simonezappatini/body-fat-extended-dataset"
+    },
+    "feature_info": {
+        "BodyFat": {
+            "description": "Percentage of body fat",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Original": {
+            "description": "Indicates if the record is from the original dataset (Y) or if it was generated (N)",
+            "type": "categorical",
+            "value_dict": {
+                "Y": "The record is from the original dataset",
+                "N": "The record was generated"
+            }
+        },
+        "Sex": {
+            "description": "Gender of the individual (M for male, F for female)",
+            "type": "categorical",
+            "value_dict": {
+                "M": "The individual is male",
+                "F": "The individual is female"
+            }
+        },
+        "Age": {
+            "description": "Age of the individual in years",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Weight": {
+            "description": "Weight of the individual in kilograms",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Height": {
+            "description": "Height of the individual in centimeters",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Neck": {
+            "description": "Circumference of the neck in centimeters",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Chest": {
+            "description": "Circumference of the chest in centimeters",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Abdomen": {
+            "description": "Circumference of the abdomen in centimeters",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Hip": {
+            "description": "Circumference of the hip in centimeters",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Thigh": {
+            "description": "Circumference of the thigh in centimeters",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Knee": {
+            "description": "Circumference of the knee in centimeters",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Ankle": {
+            "description": "Circumference of the ankle in centimeters",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Biceps": {
+            "description": "Circumference of the biceps in centimeters",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Forearm": {
+            "description": "Circumference of the forearm in centimeters",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Wrist": {
+            "description": "Circumference of the wrist in centimeters",
+            "type": "numerical",
+            "decimal": 1
+        }
+    },
+    "task_info": {
+        "BodyFat": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health and fitness.",
+                "task_prompt": "Based on the physical features of the individual, please predict the body fat percentage.",
+                "answer_prompt": "The body fat percentage is expected to be a numerical value."
+            }
+        },
+        "Weight": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health and fitness.",
+                "task_prompt": "Based on the physical features and age of the individual, please predict the weight.",
+                "answer_prompt": "The weight is expected to be a numerical value in kilograms."
+            }
+        },
+        "Abdomen": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health and fitness.",
+                "task_prompt": "Based on the physical features and age of the individual, please predict the abdomen circumference.",
+                "answer_prompt": "The abdomen circumference is expected to be a numerical value in centimeters."
+            }
+        }
+    }
+}

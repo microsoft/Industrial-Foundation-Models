@@ -1,0 +1,105 @@
+{
+    "basic_info": {
+        "row_num": 293392,
+        "col_num": 7,
+        "label_candidates": [
+            "rating",
+            "score",
+            "is_free"
+        ],
+        "valid_feature_num": 6,
+        "num_features": [
+            "rating",
+            "reviews",
+            "score"
+        ],
+        "cat_features": [
+            "languages",
+            "is_free"
+        ],
+        "other_features": [
+            "summary"
+        ],
+        "tags": [
+            "games",
+            "nlp",
+            "text mining",
+            "classification",
+            "text",
+            "multilabel classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/sagol79/stemmed-description-tokens-and-application-genres"
+    },
+    "feature_info": {
+        "id": {
+            "description": "Unique identifier for each application",
+            "type": "useless"
+        },
+        "summary": {
+            "description": "Stemmed description tokens of the application",
+            "type": "other"
+        },
+        "rating": {
+            "description": "User rating of the application",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "reviews": {
+            "description": "Number of reviews for the application",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "score": {
+            "description": "Score of the application based on certain criteria",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "languages": {
+            "description": "Languages supported by the application",
+            "type": "categorical"
+        },
+        "is_free": {
+            "description": "Indicates whether the application is free or not",
+            "type": "categorical",
+            "value_dict": {
+                "False": "The application is not free",
+                "True": "The application is free"
+            }
+        }
+    },
+    "task_info": {
+        "rating": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analysing application data.",
+                "task_prompt": "Based on the features of the application, please predict the rating.",
+                "answer_prompt": "The predicted rating is:."
+            }
+        },
+        "score": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analysing application data.",
+                "task_prompt": "Based on the features of the application, please predict the score.",
+                "answer_prompt": "The predicted score is:."
+            }
+        },
+        "is_free": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in analysing application data.",
+                "task_prompt": "Based on the features of the application, please predict if the application is free.",
+                "answer_prompt": "The application is not free[0] or the application is free[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "False": "The application is not free",
+                "True": "The application is free"
+            },
+            "class_index_dict": {
+                "False": 0,
+                "True": 1
+            }
+        }
+    }
+}

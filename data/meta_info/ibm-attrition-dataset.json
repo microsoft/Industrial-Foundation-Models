@@ -1,0 +1,205 @@
+{
+    "basic_info": {
+        "row_num": 1470,
+        "col_num": 13,
+        "label_candidates": [
+            "Attrition",
+            "JobSatisfaction",
+            "WorkLifeBalance"
+        ],
+        "valid_feature_num": 13,
+        "num_features": [
+            "Age",
+            "DistanceFromHome",
+            "MonthlyIncome",
+            "NumCompaniesWorked",
+            "YearsAtCompany"
+        ],
+        "cat_features": [
+            "Department",
+            "Education",
+            "EducationField",
+            "EnvironmentSatisfaction",
+            "JobSatisfaction",
+            "MaritalStatus",
+            "WorkLifeBalance",
+            "Attrition"
+        ],
+        "other_features": [],
+        "tags": [
+            "employment",
+            "beginner",
+            "classification",
+            "tabular",
+            "binary classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/yasserh/ibm-attrition-dataset"
+    },
+    "feature_info": {
+        "Age": {
+            "description": "The age of the employee.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Attrition": {
+            "description": "Whether the employee left the company or not (Yes, No).",
+            "type": "categorical",
+            "value_dict": {
+                "Yes": "The employee left the company.",
+                "No": "The employee stayed at the company."
+            }
+        },
+        "Department": {
+            "description": "The department in which the employee works.",
+            "type": "categorical",
+            "value_dict": {
+                "Sales": "The employee works in the Sales department.",
+                "Research & Development": "The employee works in the Research & Development department.",
+                "Human Resources": "The employee works in the Human Resources department."
+            }
+        },
+        "DistanceFromHome": {
+            "description": "The distance from work to home (in miles).",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Education": {
+            "description": "The level of education of the employee.",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Below College",
+                "2": "College",
+                "3": "Bachelor",
+                "4": "Master",
+                "5": "Doctor"
+            }
+        },
+        "EducationField": {
+            "description": "The field of study of the employee.",
+            "type": "categorical",
+            "value_dict": {
+                "Life Sciences": "The employee studied in the field of Life Sciences.",
+                "Other": "The employee studied in a field not listed here.",
+                "Medical": "The employee studied in the Medical field.",
+                "Marketing": "The employee studied in the field of Marketing.",
+                "Technical Degree": "The employee has a Technical Degree.",
+                "Human Resources": "The employee studied in the field of Human Resources."
+            }
+        },
+        "EnvironmentSatisfaction": {
+            "description": "The level of satisfaction with the work environment.",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Low",
+                "2": "Medium",
+                "3": "High",
+                "4": "Very High"
+            }
+        },
+        "JobSatisfaction": {
+            "description": "The level of satisfaction with the job.",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Low",
+                "2": "Medium",
+                "3": "High",
+                "4": "Very High"
+            }
+        },
+        "MaritalStatus": {
+            "description": "The marital status of the employee.",
+            "type": "categorical",
+            "value_dict": {
+                "Single": "The employee is not married.",
+                "Married": "The employee is married.",
+                "Divorced": "The employee is divorced."
+            }
+        },
+        "MonthlyIncome": {
+            "description": "The monthly income of the employee (in dollars).",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "NumCompaniesWorked": {
+            "description": "The number of companies the employee has worked for.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "WorkLifeBalance": {
+            "description": "The level of work-life balance.",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Bad",
+                "2": "Good",
+                "3": "Better",
+                "4": "Best"
+            }
+        },
+        "YearsAtCompany": {
+            "description": "The number of years the employee has worked at the company.",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "Attrition": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in employee retention analysis.",
+                "task_prompt": "Based on the features of the employee, please predict if the employee left or stayed at the company.",
+                "answer_prompt": "Left the company[0] or stayed at the company[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "Yes": "The employee left the company.",
+                "No": "The employee stayed at the company."
+            },
+            "class_index_dict": {
+                "Yes": 0,
+                "No": 1
+            }
+        },
+        "JobSatisfaction": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in job satisfaction analysis.",
+                "task_prompt": "Based on the features of the employee, please predict the level of job satisfaction.",
+                "answer_prompt": "Low[0], Medium[1], High[2] or Very High[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "1": "Low",
+                "2": "Medium",
+                "3": "High",
+                "4": "Very High"
+            },
+            "class_index_dict": {
+                "1": 0,
+                "2": 1,
+                "3": 2,
+                "4": 3
+            }
+        },
+        "WorkLifeBalance": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in work-life balance analysis.",
+                "task_prompt": "Based on the features of the employee, please predict the work-life balance.",
+                "answer_prompt": "Bad[0], Good[1], Better[2] or Best[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "1": "Bad",
+                "2": "Good",
+                "3": "Better",
+                "4": "Best"
+            },
+            "class_index_dict": {
+                "1": 0,
+                "2": 1,
+                "3": 2,
+                "4": 3
+            }
+        }
+    }
+}

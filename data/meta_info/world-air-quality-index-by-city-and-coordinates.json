@@ -1,0 +1,180 @@
+{
+    "basic_info": {
+        "row_num": 16695,
+        "col_num": 14,
+        "label_candidates": [
+            "AQI Value",
+            "CO AQI Value",
+            "Ozone AQI Value",
+            "NO2 AQI Value",
+            "PM2.5 AQI Value"
+        ],
+        "valid_feature_num": 14,
+        "num_features": [
+            "AQI Value",
+            "CO AQI Value",
+            "Ozone AQI Value",
+            "NO2 AQI Value",
+            "PM2.5 AQI Value",
+            "lat",
+            "lng"
+        ],
+        "cat_features": [
+            "Country",
+            "City",
+            "CO AQI Category",
+            "Ozone AQI Category",
+            "NO2 AQI Category",
+            "PM2.5 AQI Category",
+            "AQI Category"
+        ],
+        "other_features": [],
+        "tags": [
+            "pollution",
+            "beginner",
+            "intermediate",
+            "classification",
+            "tabular"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/adityaramachandran27/world-air-quality-index-by-city-and-coordinates"
+    },
+    "feature_info": {
+        "Country": {
+            "description": "The country where the air quality index is measured.",
+            "type": "categorical"
+        },
+        "City": {
+            "description": "The city where the air quality index is measured.",
+            "type": "categorical"
+        },
+        "AQI Value": {
+            "description": "The overall Air Quality Index value.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "AQI Category": {
+            "description": "The category of the overall Air Quality Index.",
+            "type": "categorical",
+            "value_dict": {
+                "Moderate": "AQI is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution.",
+                "Good": "Air quality is considered satisfactory, and air pollution poses little or no risk.",
+                "Unhealthy": "Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects.",
+                "Very Unhealthy": "Health warnings of emergency conditions. The entire population is more likely to be affected.",
+                "Unhealthy for Sensitive Groups": "Members of sensitive groups may experience health effects. The general public is not likely to be affected.",
+                "Hazardous": "Health alert: everyone may experience more serious health effects."
+            }
+        },
+        "CO AQI Value": {
+            "description": "The Air Quality Index value for Carbon Monoxide (CO).",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "CO AQI Category": {
+            "description": "The category of the Air Quality Index for Carbon Monoxide (CO).",
+            "type": "categorical",
+            "value_dict": {
+                "Good": "Air quality is considered satisfactory for Carbon Monoxide, and air pollution poses little or no risk.",
+                "Unhealthy for Sensitive Groups": "Members of sensitive groups may experience health effects from Carbon Monoxide. The general public is not likely to be affected.",
+                "Moderate": "AQI is acceptable for Carbon Monoxide; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution."
+            }
+        },
+        "Ozone AQI Value": {
+            "description": "The Air Quality Index value for Ozone (O3).",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Ozone AQI Category": {
+            "description": "The category of the Air Quality Index for Ozone (O3).",
+            "type": "categorical",
+            "value_dict": {
+                "Good": "Air quality is considered satisfactory for Ozone, and air pollution poses little or no risk.",
+                "Moderate": "AQI is acceptable for Ozone; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution.",
+                "Unhealthy": "Everyone may begin to experience health effects from Ozone; members of sensitive groups may experience more serious health effects.",
+                "Very Unhealthy": "Health warnings of emergency conditions for Ozone. The entire population is more likely to be affected.",
+                "Unhealthy for Sensitive Groups": "Members of sensitive groups may experience health effects from Ozone. The general public is not likely to be affected."
+            }
+        },
+        "NO2 AQI Value": {
+            "description": "The Air Quality Index value for Nitrogen Dioxide (NO2).",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "NO2 AQI Category": {
+            "description": "The category of the Air Quality Index for Nitrogen Dioxide (NO2).",
+            "type": "categorical",
+            "value_dict": {
+                "Good": "Air quality is considered satisfactory for Nitrogen Dioxide, and air pollution poses little or no risk.",
+                "Moderate": "AQI is acceptable for Nitrogen Dioxide; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution."
+            }
+        },
+        "PM2.5 AQI Value": {
+            "description": "The Air Quality Index value for Particulate Matter (PM2.5).",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "PM2.5 AQI Category": {
+            "description": "The category of the Air Quality Index for Particulate Matter (PM2.5).",
+            "type": "categorical",
+            "value_dict": {
+                "Moderate": "AQI is acceptable for Particulate Matter (PM2.5); however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution.",
+                "Good": "Air quality is considered satisfactory for Particulate Matter (PM2.5), and air pollution poses little or no risk.",
+                "Unhealthy": "Everyone may begin to experience health effects from Particulate Matter (PM2.5); members of sensitive groups may experience more serious health effects.",
+                "Very Unhealthy": "Health warnings of emergency conditions for Particulate Matter (PM2.5). The entire population is more likely to be affected.",
+                "Unhealthy for Sensitive Groups": "Members of sensitive groups may experience health effects from Particulate Matter (PM2.5). The general public is not likely to be affected.",
+                "Hazardous": "Health alert for Particulate Matter (PM2.5): everyone may experience more serious health effects."
+            }
+        },
+        "lat": {
+            "description": "The latitude of the city where the air quality index is measured.",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "lng": {
+            "description": "The longitude of the city where the air quality index is measured.",
+            "type": "numerical",
+            "decimal": 4
+        }
+    },
+    "task_info": {
+        "AQI Value": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in environmental science.",
+                "task_prompt": "Based on the features of the air quality, please predict the AQI Value.",
+                "answer_prompt": "The predicted AQI Value is {AQI Value}."
+            }
+        },
+        "CO AQI Value": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in environmental science.",
+                "task_prompt": "Based on the features of the air quality, please predict the CO AQI Value.",
+                "answer_prompt": "The predicted CO AQI Value is {CO AQI Value}."
+            }
+        },
+        "Ozone AQI Value": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in environmental science.",
+                "task_prompt": "Based on the features of the air quality, please predict the Ozone AQI Value.",
+                "answer_prompt": "The predicted Ozone AQI Value is {Ozone AQI Value}."
+            }
+        },
+        "NO2 AQI Value": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in environmental science.",
+                "task_prompt": "Based on the features of the air quality, please predict the NO2 AQI Value.",
+                "answer_prompt": "The predicted NO2 AQI Value is {NO2 AQI Value}."
+            }
+        },
+        "PM2.5 AQI Value": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in environmental science.",
+                "task_prompt": "Based on the features of the air quality, please predict the PM2.5 AQI Value.",
+                "answer_prompt": "The predicted PM2.5 AQI Value is {PM2.5 AQI Value}."
+            }
+        }
+    }
+}

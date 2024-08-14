@@ -1,0 +1,107 @@
+{
+    "basic_info": {
+        "row_num": 700,
+        "col_num": 3,
+        "label_candidates": [
+            "success",
+            "treatment",
+            "stone_size"
+        ],
+        "valid_feature_num": 3,
+        "num_features": [],
+        "cat_features": [
+            "treatment",
+            "stone_size",
+            "success"
+        ],
+        "other_features": [],
+        "tags": [
+            "history",
+            "education",
+            "health",
+            "medicine",
+            "regression",
+            "health conditions"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/utkarshxy/kidney-stone-data"
+    },
+    "feature_info": {
+        "treatment": {
+            "description": "The type of treatment received by the patient for kidney stones. It is categorized as either type A or type B.",
+            "type": "categorical",
+            "value_dict": {
+                "B": "Type B treatment for kidney stones",
+                "A": "Type A treatment for kidney stones"
+            }
+        },
+        "stone_size": {
+            "description": "The size of the kidney stone. It is categorized as either large or small.",
+            "type": "categorical",
+            "value_dict": {
+                "large": "The kidney stone is large in size",
+                "small": "The kidney stone is small in size"
+            }
+        },
+        "success": {
+            "description": "The outcome of the treatment, indicated as success (1) or failure (0).",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The treatment was successful",
+                "0": "The treatment was not successful"
+            }
+        }
+    },
+    "task_info": {
+        "success": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical data analysis.",
+                "task_prompt": "Based on the treatment type and the size of the kidney stone, please predict the success of the treatment.",
+                "answer_prompt": "Was the treatment successful (1) or not successful (0)?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "The treatment was successful",
+                "0": "The treatment was not successful"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        },
+        "treatment": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical data analysis.",
+                "task_prompt": "Based on the success of the treatment and the size of the kidney stone, please predict the type of treatment.",
+                "answer_prompt": "Was the treatment type A (1) or type B (0)?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "B": "Type B treatment for kidney stones",
+                "A": "Type A treatment for kidney stones"
+            },
+            "class_index_dict": {
+                "B": 0,
+                "A": 1
+            }
+        },
+        "stone_size": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical data analysis.",
+                "task_prompt": "Based on the success of the treatment and the type of treatment, please predict the size of the kidney stone.",
+                "answer_prompt": "Was the kidney stone large (1) or small (0)?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "large": "The kidney stone is large in size",
+                "small": "The kidney stone is small in size"
+            },
+            "class_index_dict": {
+                "large": 0,
+                "small": 1
+            }
+        }
+    }
+}

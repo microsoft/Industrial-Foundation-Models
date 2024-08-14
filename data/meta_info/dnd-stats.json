@@ -1,0 +1,200 @@
+{
+    "basic_info": {
+        "row_num": 10000,
+        "col_num": 10,
+        "label_candidates": [
+            "race",
+            "height",
+            "weight",
+            "speed",
+            "strength",
+            "dexterity",
+            "constitution",
+            "intelligence",
+            "wisdom",
+            "charisma"
+        ],
+        "valid_feature_num": 10,
+        "num_features": [
+            "height",
+            "weight",
+            "speed",
+            "strength",
+            "dexterity",
+            "constitution",
+            "intelligence",
+            "wisdom",
+            "charisma"
+        ],
+        "cat_features": [
+            "race"
+        ],
+        "other_features": [],
+        "tags": [
+            "board games",
+            "beginner",
+            "classification",
+            "clustering",
+            "tabular"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/andrewabeles/dnd-stats"
+    },
+    "feature_info": {
+        "race": {
+            "description": "The race of the character in the Dungeons & Dragons game",
+            "type": "categorical",
+            "value_dict": {
+                "dragonborn": "A race of draconic creatures",
+                "dwarf": "A race of short and stout folk known for their skill in warfare and ability to withstand physical and magical punishment",
+                "elf": "A race of graceful warriors and wizards, known for their long lives and resistance to sleep magic",
+                "gnome": "A race of small and eccentric individuals, known for their affinity to magic and inventive spirit",
+                "half.elf": "A race of individuals with a mix of human and elven blood, known for their adaptability and versatility",
+                "half.orc": "A race of individuals with a mix of human and orc blood, known for their physical strength and intimidating presence",
+                "halfling": "A race of small, agile individuals, known for their luck and courageous spirit",
+                "human": "The most common race, known for their versatility and ambition",
+                "tiefling": "A race of individuals with demonic ancestry, known for their self-reliance and magical affinity"
+            }
+        },
+        "height": {
+            "description": "The height of the character in inches",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "weight": {
+            "description": "The weight of the character in pounds",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "speed": {
+            "description": "The speed of the character in feet per round",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "strength": {
+            "description": "The strength score of the character, a measure of physical power",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "dexterity": {
+            "description": "The dexterity score of the character, a measure of agility",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "constitution": {
+            "description": "The constitution score of the character, a measure of health and stamina",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "intelligence": {
+            "description": "The intelligence score of the character, a measure of mental acuity",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "wisdom": {
+            "description": "The wisdom score of the character, a measure of perception and insight",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "charisma": {
+            "description": "The charisma score of the character, a measure of force of personality",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "race": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in fantasy role-playing games.",
+                "task_prompt": "Based on the physical and ability features of the character, please predict the race.",
+                "answer_prompt": "dragonborn[0], dwarf[1], elf[2], gnome[3], half.elf[4], half.orc[5], halfling[6], human[7], tiefling[8]."
+            },
+            "class_num": 9,
+            "class_value_dict": {
+                "dragonborn": "A race of draconic creatures",
+                "dwarf": "A race of short and stout folk known for their skill in warfare and ability to withstand physical and magical punishment",
+                "elf": "A race of graceful warriors and wizards, known for their long lives and resistance to sleep magic",
+                "gnome": "A race of small and eccentric individuals, known for their affinity to magic and inventive spirit",
+                "half.elf": "A race of individuals with a mix of human and elven blood, known for their adaptability and versatility",
+                "half.orc": "A race of individuals with a mix of human and orc blood, known for their physical strength and intimidating presence",
+                "halfling": "A race of small, agile individuals, known for their luck and courageous spirit",
+                "human": "The most common race, known for their versatility and ambition",
+                "tiefling": "A race of individuals with demonic ancestry, known for their self-reliance and magical affinity"
+            },
+            "class_index_dict": {
+                "dragonborn": 0,
+                "dwarf": 1,
+                "elf": 2,
+                "gnome": 3,
+                "half.elf": 4,
+                "half.orc": 5,
+                "halfling": 6,
+                "human": 7,
+                "tiefling": 8
+            }
+        },
+        "height": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in fantasy role-playing games.",
+                "task_prompt": "Based on the race and ability features of the character, please predict the height."
+            }
+        },
+        "weight": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in fantasy role-playing games.",
+                "task_prompt": "Based on the race and ability features of the character, please predict the weight."
+            }
+        },
+        "speed": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in fantasy role-playing games.",
+                "task_prompt": "Based on the race and physical features of the character, please predict the speed."
+            }
+        },
+        "strength": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in fantasy role-playing games.",
+                "task_prompt": "Based on the race and physical features of the character, please predict the strength."
+            }
+        },
+        "dexterity": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in fantasy role-playing games.",
+                "task_prompt": "Based on the race and physical features of the character, please predict the dexterity."
+            }
+        },
+        "constitution": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in fantasy role-playing games.",
+                "task_prompt": "Based on the race and physical features of the character, please predict the constitution."
+            }
+        },
+        "intelligence": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in fantasy role-playing games.",
+                "task_prompt": "Based on the race and physical features of the character, please predict the intelligence."
+            }
+        },
+        "wisdom": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in fantasy role-playing games.",
+                "task_prompt": "Based on the race and physical features of the character, please predict the wisdom."
+            }
+        },
+        "charisma": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in fantasy role-playing games.",
+                "task_prompt": "Based on the race and physical features of the character, please predict the charisma."
+            }
+        }
+    }
+}

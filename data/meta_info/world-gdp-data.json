@@ -1,0 +1,67 @@
+{
+    "basic_info": {
+        "row_num": 13365,
+        "col_num": 4,
+        "label_candidates": [
+            "value",
+            "year"
+        ],
+        "valid_feature_num": 4,
+        "num_features": [
+            "year",
+            "value"
+        ],
+        "cat_features": [
+            "country_name",
+            "country_code"
+        ],
+        "other_features": [],
+        "tags": [
+            "global",
+            "business",
+            "economics",
+            "intermediate",
+            "data analytics",
+            "tabular"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/sazidthe1/world-gdp-data"
+    },
+    "feature_info": {
+        "country_name": {
+            "description": "The name of the country",
+            "type": "categorical"
+        },
+        "country_code": {
+            "description": "The ISO country code",
+            "type": "categorical"
+        },
+        "year": {
+            "description": "The year of the record",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "value": {
+            "description": "The GDP value of the country in the specific year",
+            "type": "numerical",
+            "decimal": 1
+        }
+    },
+    "task_info": {
+        "value": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in economic data analysis.",
+                "task_prompt": "Based on the country and year, please predict the GDP value.",
+                "answer_prompt": "The predicted GDP value is."
+            }
+        },
+        "year": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in economic data analysis.",
+                "task_prompt": "Based on the GDP value and country, please predict the year.",
+                "answer_prompt": "The predicted year is."
+            }
+        }
+    }
+}

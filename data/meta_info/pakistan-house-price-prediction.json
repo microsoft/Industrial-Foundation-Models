@@ -1,0 +1,204 @@
+{
+    "basic_info": {
+        "row_num": 168446,
+        "col_num": 17,
+        "label_candidates": [
+            "price",
+            "Total_Area",
+            "bedrooms",
+            "baths",
+            "property_type"
+        ],
+        "valid_feature_num": 14,
+        "num_features": [
+            "latitude",
+            "longitude",
+            "baths",
+            "bedrooms",
+            "Total_Area",
+            "price"
+        ],
+        "cat_features": [
+            "property_type",
+            "location",
+            "city",
+            "province_name",
+            "purpose",
+            "agency",
+            "agent"
+        ],
+        "other_features": [
+            "date_added"
+        ],
+        "tags": [
+            "housing",
+            "business",
+            "real estate",
+            "tabular",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/ebrahimhaquebhatti/pakistan-house-price-prediction"
+    },
+    "feature_info": {
+        "property_id": {
+            "description": "The unique identifier for each property",
+            "type": "useless"
+        },
+        "location_id": {
+            "description": "The unique identifier for each location",
+            "type": "useless"
+        },
+        "page_url": {
+            "description": "The URL of the property listing",
+            "type": "useless"
+        },
+        "property_type": {
+            "description": "The type of the property (e.g., house, apartment, etc.)",
+            "type": "categorical",
+            "value_dict": {
+                "Flat": "The property is a flat",
+                "House": "The property is a house",
+                "Penthouse": "The property is a penthouse",
+                "Farm House": "The property is a farm house",
+                "Lower Portion": "The property is the lower portion of a house",
+                "Upper Portion": "The property is the upper portion of a house",
+                "Room": "The property is a single room"
+            }
+        },
+        "price": {
+            "description": "The price of the property in local currency",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "location": {
+            "description": "The specific location of the property",
+            "type": "categorical"
+        },
+        "city": {
+            "description": "The city where the property is located",
+            "type": "categorical",
+            "value_dict": {
+                "Islamabad": "The property is located in Islamabad",
+                "Lahore": "The property is located in Lahore",
+                "Faisalabad": "The property is located in Faisalabad",
+                "Rawalpindi": "The property is located in Rawalpindi",
+                "Karachi": "The property is located in Karachi"
+            }
+        },
+        "province_name": {
+            "description": "The province where the property is located",
+            "type": "categorical",
+            "value_dict": {
+                "Islamabad Capital": "The property is located in the capital province of Islamabad",
+                "Punjab": "The property is located in the province of Punjab",
+                "Sindh": "The property is located in the province of Sindh"
+            }
+        },
+        "latitude": {
+            "description": "The latitude coordinate of the property",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "longitude": {
+            "description": "The longitude coordinate of the property",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "baths": {
+            "description": "The number of bathrooms in the property",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "purpose": {
+            "description": "The purpose of the property (e.g., for rent, for sale, etc.)",
+            "type": "categorical",
+            "value_dict": {
+                "For Sale": "The property is for sale",
+                "For Rent": "The property is for rent"
+            }
+        },
+        "bedrooms": {
+            "description": "The number of bedrooms in the property",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "date_added": {
+            "description": "The date when the property was added to the listing",
+            "type": "other"
+        },
+        "agency": {
+            "description": "The agency that listed the property",
+            "type": "categorical"
+        },
+        "agent": {
+            "description": "The agent who listed the property",
+            "type": "categorical"
+        },
+        "Total_Area": {
+            "description": "The total area of the property in square units",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "price": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate data analysis.",
+                "task_prompt": "Based on the features of the property, please predict the price.",
+                "answer_prompt": "The predicted price is."
+            }
+        },
+        "Total_Area": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate data analysis.",
+                "task_prompt": "Based on the features of the property, please predict the total area.",
+                "answer_prompt": "The predicted total area is."
+            }
+        },
+        "bedrooms": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate data analysis.",
+                "task_prompt": "Based on the features of the property, please predict the number of bedrooms.",
+                "answer_prompt": "The predicted number of bedrooms is."
+            }
+        },
+        "baths": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate data analysis.",
+                "task_prompt": "Based on the features of the property, please predict the number of bathrooms.",
+                "answer_prompt": "The predicted number of bathrooms is."
+            }
+        },
+        "property_type": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate data analysis.",
+                "task_prompt": "Based on the features of the property, please classify the property type.",
+                "answer_prompt": "The property is a flat[0], house[1], penthouse[2], farm house[3], lower portion[4], upper portion[5] or room[6]?"
+            },
+            "class_num": 7,
+            "class_value_dict": {
+                "Flat": "The property is a flat",
+                "House": "The property is a house",
+                "Penthouse": "The property is a penthouse",
+                "Farm House": "The property is a farm house",
+                "Lower Portion": "The property is the lower portion of a house",
+                "Upper Portion": "The property is the upper portion of a house",
+                "Room": "The property is a single room"
+            },
+            "class_index_dict": {
+                "Flat": 0,
+                "House": 1,
+                "Penthouse": 2,
+                "Farm House": 3,
+                "Lower Portion": 4,
+                "Upper Portion": 5,
+                "Room": 6
+            }
+        }
+    }
+}

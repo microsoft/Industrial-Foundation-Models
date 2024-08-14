@@ -1,0 +1,91 @@
+{
+    "basic_info": {
+        "row_num": 465660,
+        "col_num": 8,
+        "label_candidates": [
+            "rating",
+            "thumbsUpCount"
+        ],
+        "valid_feature_num": 8,
+        "num_features": [
+            "thumbsUpCount",
+            "rating"
+        ],
+        "cat_features": [
+            "App",
+            "appVersion"
+        ],
+        "other_features": [
+            "review_date",
+            "review_description",
+            "developer_response",
+            "developer_response_date"
+        ],
+        "tags": [
+            "exploratory data analysis",
+            "nlp",
+            "multiclass classification",
+            "restaurants",
+            "ratings and reviews"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/saloni1712/zomato-and-swiggy-play-store-reviews"
+    },
+    "feature_info": {
+        "App": {
+            "description": "The name of the app that the review is for",
+            "type": "categorical",
+            "value_dict": {
+                "Swiggy": "The review is for the app Swiggy",
+                "Zomato": "The review is for the app Zomato"
+            }
+        },
+        "review_date": {
+            "description": "The date and time when the review was posted",
+            "type": "other"
+        },
+        "review_description": {
+            "description": "The text content of the review",
+            "type": "other"
+        },
+        "rating": {
+            "description": "The rating given by the user, presumably on a scale from 1 to 5",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "thumbsUpCount": {
+            "description": "The number of thumbs-up reactions the review received from other users",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "developer_response": {
+            "description": "The response from the app developer to the review",
+            "type": "other"
+        },
+        "developer_response_date": {
+            "description": "The date and time when the developer responded to the review",
+            "type": "other"
+        },
+        "appVersion": {
+            "description": "The version of the app that the review was for",
+            "type": "categorical"
+        }
+    },
+    "task_info": {
+        "rating": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analysing app reviews.",
+                "task_prompt": "Based on the review description, app, review date, developer response, developer response date, and app version, please predict the rating.",
+                "answer_prompt": "The predicted rating is: ."
+            }
+        },
+        "thumbsUpCount": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analysing app reviews.",
+                "task_prompt": "Based on the review description, app, review date, developer response, developer response date, and app version, please predict the thumbs up count.",
+                "answer_prompt": "The predicted thumbs up count is: ."
+            }
+        }
+    }
+}

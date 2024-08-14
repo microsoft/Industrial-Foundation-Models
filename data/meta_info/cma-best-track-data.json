@@ -1,0 +1,140 @@
+{
+    "basic_info": {
+        "row_num": 71705,
+        "col_num": 13,
+        "label_candidates": [
+            "Maximum Wind Speed",
+            "Minimum Central Pressure",
+            "Average Wind Speed"
+        ],
+        "valid_feature_num": 12,
+        "num_features": [
+            "Number of Hours between Paths per Line",
+            "Latitude",
+            "Longitude",
+            "Minimum Central Pressure",
+            "Maximum Wind Speed",
+            "Average Wind Speed"
+        ],
+        "cat_features": [
+            "Tropical Cyclone Number",
+            "Tropical Cyclone End Record",
+            "Name",
+            "Grade"
+        ],
+        "other_features": [
+            "Chinese Tropical Cyclone Data",
+            "Time"
+        ],
+        "tags": [
+            "natural disasters",
+            "weather and climate",
+            "data visualization",
+            "time series analysis",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/chriszhengao/cma-best-track-data"
+    },
+    "feature_info": {
+        "International Number ID": {
+            "description": "Unique identifier for each cyclone",
+            "type": "useless"
+        },
+        "Tropical Cyclone Number": {
+            "description": "Number assigned to the tropical cyclone",
+            "type": "categorical"
+        },
+        "Chinese Tropical Cyclone Data": {
+            "description": "Data related to the tropical cyclone as per Chinese meteorological agency",
+            "type": "other"
+        },
+        "Tropical Cyclone End Record": {
+            "description": "Record indicating the end of the tropical cyclone",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Cyclone is not at the end",
+                "1": "Cyclone is at the end",
+                "2": "Cyclone is transitioning to the end",
+                "3": "Unknown status of the cyclone"
+            }
+        },
+        "Number of Hours between Paths per Line": {
+            "description": "Number of hours between each recorded path of the cyclone",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Name": {
+            "description": "Name of the tropical cyclone",
+            "type": "categorical"
+        },
+        "Time": {
+            "description": "Time of the recorded data",
+            "type": "other"
+        },
+        "Grade": {
+            "description": "Grade or category of the tropical cyclone",
+            "type": "categorical",
+            "value_dict": {
+                "0": "No cyclone",
+                "1": "Tropical depression",
+                "2": "Tropical storm",
+                "3": "Severe tropical storm",
+                "4": "Typhoon",
+                "5": "Severe typhoon",
+                "6": "Super typhoon",
+                "9": "Unknown grade"
+            }
+        },
+        "Latitude": {
+            "description": "Latitude at which the cyclone data was recorded",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Longitude": {
+            "description": "Longitude at which the cyclone data was recorded",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Minimum Central Pressure": {
+            "description": "Minimum pressure recorded at the center of the cyclone, measured in hPa (hectopascal)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Maximum Wind Speed": {
+            "description": "Maximum wind speed recorded during the cyclone, measured in knots",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Average Wind Speed": {
+            "description": "Average wind speed during the cyclone, measured in knots",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "Maximum Wind Speed": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in meteorology.",
+                "task_prompt": "Based on the features of the tropical cyclone, please predict the maximum wind speed.",
+                "answer_prompt": "The maximum wind speed is."
+            }
+        },
+        "Minimum Central Pressure": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in meteorology.",
+                "task_prompt": "Based on the features of the tropical cyclone, please predict the minimum central pressure.",
+                "answer_prompt": "The minimum central pressure is."
+            }
+        },
+        "Average Wind Speed": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in meteorology.",
+                "task_prompt": "Based on the features of the tropical cyclone, please predict the average wind speed.",
+                "answer_prompt": "The average wind speed is."
+            }
+        }
+    }
+}

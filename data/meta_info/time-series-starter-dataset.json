@@ -1,0 +1,91 @@
+{
+    "basic_info": {
+        "row_num": 64,
+        "col_num": 5,
+        "label_candidates": [
+            "Revenue",
+            "Sales_quantity",
+            "Average_cost",
+            "The_average_annual_payroll_of_the_region"
+        ],
+        "valid_feature_num": 5,
+        "num_features": [
+            "Sales_quantity",
+            "Average_cost",
+            "The_average_annual_payroll_of_the_region",
+            "Revenue"
+        ],
+        "cat_features": [
+            "Period"
+        ],
+        "other_features": [],
+        "tags": [
+            "business",
+            "tabular",
+            "regression",
+            "investing",
+            "denoising"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/podsyp/time-series-starter-dataset"
+    },
+    "feature_info": {
+        "Period": {
+            "description": "The time period of the data record, in the format of DD.MM.YYYY",
+            "type": "categorical"
+        },
+        "Revenue": {
+            "description": "The revenue generated in the corresponding period",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Sales_quantity": {
+            "description": "The quantity of sales in the corresponding period",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Average_cost": {
+            "description": "The average cost of the product/service in the corresponding period",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "The_average_annual_payroll_of_the_region": {
+            "description": "The average annual payroll of the region for the corresponding period",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "Revenue": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in financial forecasting.",
+                "task_prompt": "Based on the given period, sales quantity, average cost, and the average annual payroll of the region, please predict the revenue.",
+                "answer_prompt": "The predicted revenue is."
+            }
+        },
+        "Sales_quantity": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sales forecasting.",
+                "task_prompt": "Based on the given period, revenue, average cost, and the average annual payroll of the region, please predict the sales quantity.",
+                "answer_prompt": "The predicted sales quantity is."
+            }
+        },
+        "Average_cost": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in cost analysis.",
+                "task_prompt": "Based on the given period, sales quantity, revenue, and the average annual payroll of the region, please predict the average cost.",
+                "answer_prompt": "The predicted average cost is."
+            }
+        },
+        "The_average_annual_payroll_of_the_region": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in regional economics.",
+                "task_prompt": "Based on the given period, sales quantity, average cost, and revenue, please predict the average annual payroll of the region.",
+                "answer_prompt": "The predicted average annual payroll of the region is."
+            }
+        }
+    }
+}

@@ -1,0 +1,144 @@
+{
+    "basic_info": {
+        "row_num": 5001,
+        "col_num": 8,
+        "label_candidates": [
+            "gender",
+            "long_hair",
+            "lips_thin"
+        ],
+        "valid_feature_num": 8,
+        "num_features": [
+            "forehead_width_cm",
+            "forehead_height_cm"
+        ],
+        "cat_features": [
+            "long_hair",
+            "nose_wide",
+            "nose_long",
+            "lips_thin",
+            "distance_nose_to_lip_long",
+            "gender"
+        ],
+        "other_features": [],
+        "tags": [
+            "earth and nature",
+            "education",
+            "computer science"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/elakiricoder/gender-classification-dataset"
+    },
+    "feature_info": {
+        "long_hair": {
+            "description": "Indicates whether the individual has long hair or not (1 for long hair, 0 for not long hair)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The individual has long hair",
+                "0": "The individual does not have long hair"
+            }
+        },
+        "forehead_width_cm": {
+            "description": "Width of the individual's forehead in centimeters",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "forehead_height_cm": {
+            "description": "Height of the individual's forehead in centimeters",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "nose_wide": {
+            "description": "Indicates whether the individual has a wide nose or not (1 for wide nose, 0 for not wide nose)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The individual has a wide nose",
+                "0": "The individual does not have a wide nose"
+            }
+        },
+        "nose_long": {
+            "description": "Indicates whether the individual has a long nose or not (1 for long nose, 0 for not long nose)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The individual has a long nose",
+                "0": "The individual does not have a long nose"
+            }
+        },
+        "lips_thin": {
+            "description": "Indicates whether the individual has thin lips or not (1 for thin lips, 0 for not thin lips)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The individual has thin lips",
+                "0": "The individual does not have thin lips"
+            }
+        },
+        "distance_nose_to_lip_long": {
+            "description": "Indicates whether the distance from nose to lip is long or not (1 for long distance, 0 for not long distance)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The distance from the nose to the lip of the individual is long",
+                "0": "The distance from the nose to the lip of the individual is not long"
+            }
+        },
+        "gender": {
+            "description": "Gender of the individual (Male or Female)",
+            "type": "categorical",
+            "value_dict": {
+                "Male": "The individual is Male",
+                "Female": "The individual is Female"
+            }
+        }
+    },
+    "task_info": {
+        "gender": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in gender recognition based on facial features.",
+                "task_prompt": "Based on the facial features of the individual, please predict the gender.",
+                "answer_prompt": "Male[0] or Female[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "Male": "The individual is Male",
+                "Female": "The individual is Female"
+            },
+            "class_index_dict": {
+                "Male": 0,
+                "Female": 1
+            }
+        },
+        "long_hair": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in recognizing hair length based on facial features.",
+                "task_prompt": "Based on the facial features of the individual, please predict if the individual has long hair.",
+                "answer_prompt": "Yes[1] or No[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "The individual has long hair",
+                "0": "The individual does not have long hair"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        },
+        "lips_thin": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in recognizing lip thickness based on facial features.",
+                "task_prompt": "Based on the facial features of the individual, please predict if the individual has thin lips.",
+                "answer_prompt": "Yes[1] or No[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "The individual has thin lips",
+                "0": "The individual does not have thin lips"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        }
+    }
+}

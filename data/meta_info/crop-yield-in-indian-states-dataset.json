@@ -1,0 +1,118 @@
+{
+    "basic_info": {
+        "row_num": 19689,
+        "col_num": 10,
+        "label_candidates": [
+            "Yield",
+            "Production",
+            "Area"
+        ],
+        "valid_feature_num": 10,
+        "num_features": [
+            "Crop_Year",
+            "Area",
+            "Production",
+            "Annual_Rainfall",
+            "Fertilizer",
+            "Pesticide",
+            "Yield"
+        ],
+        "cat_features": [
+            "Crop",
+            "Season",
+            "State"
+        ],
+        "other_features": [],
+        "tags": [
+            "india",
+            "categorical",
+            "agriculture",
+            "data analytics",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/akshatgupta7/crop-yield-in-indian-states-dataset"
+    },
+    "feature_info": {
+        "Crop": {
+            "description": "The type of crop",
+            "type": "categorical"
+        },
+        "Crop_Year": {
+            "description": "The year of crop production",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Season": {
+            "description": "The season in which the crop was grown",
+            "type": "categorical",
+            "value_dict": {
+                "Whole Year ": "The crop is grown throughout the year",
+                "Kharif     ": "The crop is grown during the monsoon season (June to October)",
+                "Rabi       ": "The crop is grown during the winter season (October to March)",
+                "Autumn     ": "The crop is grown during the autumn season (September to November)",
+                "Summer     ": "The crop is grown during the summer season (March to June)",
+                "Winter     ": "The crop is grown during the winter season (December to February)"
+            }
+        },
+        "State": {
+            "description": "The state in India where the crop was grown",
+            "type": "categorical"
+        },
+        "Area": {
+            "description": "The area used for cultivation of the crop (in hectares)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Production": {
+            "description": "The amount of crop produced (in tons)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Annual_Rainfall": {
+            "description": "The annual rainfall received in the area (in mm)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Fertilizer": {
+            "description": "The amount of fertilizer used for the crop (in kg)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Pesticide": {
+            "description": "The amount of pesticide used for the crop (in kg)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Yield": {
+            "description": "The yield of the crop (in tons per hectare)",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "Yield": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in agricultural analysis.",
+                "task_prompt": "Based on the features of the crop, season, state, area, production, annual rainfall, fertilizer and pesticide usage, please predict the yield.",
+                "answer_prompt": "The predicted yield is."
+            }
+        },
+        "Production": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in agricultural analysis.",
+                "task_prompt": "Based on the features of the crop, season, state, area, yield, annual rainfall, fertilizer and pesticide usage, please predict the production.",
+                "answer_prompt": "The predicted production is."
+            }
+        },
+        "Area": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in agricultural analysis.",
+                "task_prompt": "Based on the features of the crop, season, state, production, yield, annual rainfall, fertilizer and pesticide usage, please predict the area.",
+                "answer_prompt": "The predicted area is."
+            }
+        }
+    }
+}

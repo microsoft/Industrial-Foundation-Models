@@ -1,0 +1,99 @@
+{
+    "basic_info": {
+        "row_num": 14997,
+        "col_num": 8,
+        "label_candidates": [
+            "Pressure",
+            "Wind Speed",
+            "SiR34"
+        ],
+        "valid_feature_num": 8,
+        "num_features": [
+            "Latitude",
+            "Longitude",
+            "Pressure",
+            "SiR34",
+            "Wind Speed"
+        ],
+        "cat_features": [
+            "Cyclone Number",
+            "SATSer"
+        ],
+        "other_features": [
+            "Time"
+        ],
+        "tags": [
+            "natural disasters",
+            "weather and climate",
+            "time series analysis",
+            "text",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/chriszhengao/tropical-cyclone-size-in-the-northwestern-pacific"
+    },
+    "feature_info": {
+        "Cyclone Number": {
+            "description": "Unique identifier for each cyclone",
+            "type": "categorical"
+        },
+        "Time": {
+            "description": "Timestamp of the recorded data",
+            "type": "other"
+        },
+        "Latitude": {
+            "description": "Latitude of the cyclone center",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Longitude": {
+            "description": "Longitude of the cyclone center",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Pressure": {
+            "description": "Atmospheric pressure at the cyclone center in hPa",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Wind Speed": {
+            "description": "Wind speed in the cyclone in knots",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "SiR34": {
+            "description": "Radius of 34-knot winds (a measure of cyclone size) in nautical miles",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "SATSer": {
+            "description": "Satellite series that provided the data",
+            "type": "categorical"
+        }
+    },
+    "task_info": {
+        "Pressure": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in meteorology.",
+                "task_prompt": "Based on the features of the tropical cyclone, please predict the pressure.",
+                "answer_prompt": "The predicted pressure is: ."
+            }
+        },
+        "Wind Speed": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in meteorology.",
+                "task_prompt": "Based on the features of the tropical cyclone, please predict the wind speed.",
+                "answer_prompt": "The predicted wind speed is: ."
+            }
+        },
+        "SiR34": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in meteorology.",
+                "task_prompt": "Based on the features of the tropical cyclone, please predict the SiR34.",
+                "answer_prompt": "The predicted SiR34 is: ."
+            }
+        }
+    }
+}

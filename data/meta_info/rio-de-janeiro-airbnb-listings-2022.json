@@ -1,0 +1,165 @@
+{
+    "basic_info": {
+        "row_num": 28301,
+        "col_num": 16,
+        "label_candidates": [
+            "price",
+            "number_of_reviews",
+            "reviews_per_month",
+            "availability_365",
+            "number_of_reviews_ltm"
+        ],
+        "valid_feature_num": 14,
+        "num_features": [
+            "latitude",
+            "longitude",
+            "minimum_nights",
+            "number_of_reviews",
+            "reviews_per_month",
+            "calculated_host_listings_count",
+            "availability_365",
+            "number_of_reviews_ltm",
+            "price"
+        ],
+        "cat_features": [
+            "host_name",
+            "neighbourhood",
+            "room_type"
+        ],
+        "other_features": [
+            "name",
+            "last_review"
+        ],
+        "tags": [
+            "cities and urban areas",
+            "brazil",
+            "linear regression",
+            "hotels and accommodations",
+            "english"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/liamarguedas/rio-de-janeiro-airbnb-listings-2022"
+    },
+    "feature_info": {
+        "id": {
+            "description": "Unique identifier for the listing",
+            "type": "useless"
+        },
+        "name": {
+            "description": "Name of the listing",
+            "type": "other"
+        },
+        "host_id": {
+            "description": "Unique identifier for the host",
+            "type": "useless"
+        },
+        "host_name": {
+            "description": "Name of the host",
+            "type": "categorical"
+        },
+        "neighbourhood": {
+            "description": "Neighbourhood where the listing is located",
+            "type": "categorical"
+        },
+        "latitude": {
+            "description": "Latitude coordinate of the listing",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "longitude": {
+            "description": "Longitude coordinate of the listing",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "room_type": {
+            "description": "Type of room (e.g., Entire home/apt, Private room, Shared room)",
+            "type": "categorical",
+            "value_dict": {
+                "Entire home/apt": "The entire home or apartment is listed for rent",
+                "Private room": "A private room within the property is listed for rent",
+                "Hotel room": "A hotel room is listed for rent",
+                "Shared room": "A shared room within the property is listed for rent"
+            }
+        },
+        "price": {
+            "description": "Price per night for the listing in local currency",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "minimum_nights": {
+            "description": "Minimum number of nights a guest can book the listing",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "number_of_reviews": {
+            "description": "Total number of reviews the listing has received",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "last_review": {
+            "description": "Date of the last review",
+            "type": "other"
+        },
+        "reviews_per_month": {
+            "description": "Average number of reviews the listing receives per month",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "calculated_host_listings_count": {
+            "description": "Number of listings the host has on Airbnb",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "availability_365": {
+            "description": "Number of days the listing is available for booking in the next 365 days",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "number_of_reviews_ltm": {
+            "description": "Number of reviews the listing has received in the last twelve months",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "price": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate and hospitality industry.",
+                "task_prompt": "Based on the features of the Airbnb listing, please predict the price per night.",
+                "answer_prompt": "The price per night is."
+            }
+        },
+        "number_of_reviews": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in customer behavior analysis.",
+                "task_prompt": "Based on the features of the Airbnb listing, please predict the number of reviews.",
+                "answer_prompt": "The number of reviews is."
+            }
+        },
+        "reviews_per_month": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in customer behavior analysis.",
+                "task_prompt": "Based on the features of the Airbnb listing, please predict the reviews per month.",
+                "answer_prompt": "The reviews per month is."
+            }
+        },
+        "availability_365": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in hospitality industry.",
+                "task_prompt": "Based on the features of the Airbnb listing, please predict the availability in the next 365 days.",
+                "answer_prompt": "The availability in the next 365 days is."
+            }
+        },
+        "number_of_reviews_ltm": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in customer behavior analysis.",
+                "task_prompt": "Based on the features of the Airbnb listing, please predict the number of reviews in the last twelve months.",
+                "answer_prompt": "The number of reviews in the last twelve months is."
+            }
+        }
+    }
+}

@@ -1,0 +1,318 @@
+{
+    "basic_info": {
+        "row_num": 100000,
+        "col_num": 43,
+        "label_candidates": [
+            "class",
+            "redshift"
+        ],
+        "valid_feature_num": 41,
+        "num_features": [
+            "ra",
+            "dec",
+            "u",
+            "g",
+            "r",
+            "i",
+            "z",
+            "mjd",
+            "petroRad_u",
+            "petroRad_g",
+            "petroRad_i",
+            "petroRad_r",
+            "petroRad_z",
+            "petroFlux_u",
+            "petroFlux_g",
+            "petroFlux_i",
+            "petroFlux_r",
+            "petroFlux_z",
+            "petroR50_u",
+            "petroR50_g",
+            "petroR50_i",
+            "petroR50_r",
+            "petroR50_z",
+            "psfMag_u",
+            "psfMag_r",
+            "psfMag_g",
+            "psfMag_i",
+            "psfMag_z",
+            "expAB_u",
+            "expAB_g",
+            "expAB_r",
+            "expAB_i",
+            "expAB_z",
+            "redshift"
+        ],
+        "cat_features": [
+            "run",
+            "rerun",
+            "camcol",
+            "field",
+            "plate",
+            "fiberid",
+            "class"
+        ],
+        "other_features": [],
+        "tags": [
+            "earth and nature",
+            "astronomy",
+            "physics",
+            "classification",
+            "tabular",
+            "multiclass classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/diraf0/sloan-digital-sky-survey-dr18"
+    },
+    "feature_info": {
+        "objid": {
+            "description": "Object Identifier",
+            "type": "useless"
+        },
+        "specobjid": {
+            "description": "Spectroscopic Object Identifier",
+            "type": "useless"
+        },
+        "ra": {
+            "description": "Right Ascension (unit: degree)",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "dec": {
+            "description": "Declination (unit: degree)",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "u": {
+            "description": "Response in u band (unit: magnitude)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "g": {
+            "description": "Response in g band (unit: magnitude)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "r": {
+            "description": "Response in r band (unit: magnitude)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "i": {
+            "description": "Response in i band (unit: magnitude)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "z": {
+            "description": "Response in z band (unit: magnitude)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "run": {
+            "description": "Run Number",
+            "type": "categorical"
+        },
+        "rerun": {
+            "description": "Rerun Number",
+            "type": "categorical",
+            "value_dict": {
+                "301": "Rerun number 301"
+            }
+        },
+        "camcol": {
+            "description": "Camera column",
+            "type": "categorical",
+            "value_dict": {
+                "5": "Camera column 5",
+                "6": "Camera column 6",
+                "1": "Camera column 1",
+                "2": "Camera column 2",
+                "4": "Camera column 4",
+                "3": "Camera column 3"
+            }
+        },
+        "field": {
+            "description": "Field number",
+            "type": "categorical"
+        },
+        "plate": {
+            "description": "Plate number",
+            "type": "categorical"
+        },
+        "mjd": {
+            "description": "Modified Julian Date of observation",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "fiberid": {
+            "description": "Fiber ID",
+            "type": "categorical"
+        },
+        "petroRad_u": {
+            "description": "Petrosian radius in u band (unit: arcsec)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "petroRad_g": {
+            "description": "Petrosian radius in g band (unit: arcsec)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "petroRad_i": {
+            "description": "Petrosian radius in i band (unit: arcsec)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "petroRad_r": {
+            "description": "Petrosian radius in r band (unit: arcsec)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "petroRad_z": {
+            "description": "Petrosian radius in z band (unit: arcsec)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "petroFlux_u": {
+            "description": "Petrosian flux in u band",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "petroFlux_g": {
+            "description": "Petrosian flux in g band",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "petroFlux_i": {
+            "description": "Petrosian flux in i band",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "petroFlux_r": {
+            "description": "Petrosian flux in r band",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "petroFlux_z": {
+            "description": "Petrosian flux in z band",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "petroR50_u": {
+            "description": "Radius containing 50% of petrosian flux in u band (unit: arcsec)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "petroR50_g": {
+            "description": "Radius containing 50% of petrosian flux in g band (unit: arcsec)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "petroR50_i": {
+            "description": "Radius containing 50% of petrosian flux in i band (unit: arcsec)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "petroR50_r": {
+            "description": "Radius containing 50% of petrosian flux in r band (unit: arcsec)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "petroR50_z": {
+            "description": "Radius containing 50% of petrosian flux in z band (unit: arcsec)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "psfMag_u": {
+            "description": "Point Spread Function magnitude in u band",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "psfMag_r": {
+            "description": "Point Spread Function magnitude in r band",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "psfMag_g": {
+            "description": "Point Spread Function magnitude in g band",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "psfMag_i": {
+            "description": "Point Spread Function magnitude in i band",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "psfMag_z": {
+            "description": "Point Spread Function magnitude in z band",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "expAB_u": {
+            "description": "Exponential scale length in u band (unit: arcsec)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "expAB_g": {
+            "description": "Exponential scale length in g band (unit: arcsec)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "expAB_r": {
+            "description": "Exponential scale length in r band (unit: arcsec)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "expAB_i": {
+            "description": "Exponential scale length in i band (unit: arcsec)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "expAB_z": {
+            "description": "Exponential scale length in z band (unit: arcsec)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "redshift": {
+            "description": "Redshift",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "class": {
+            "description": "Object class (e.g. star, galaxy)",
+            "type": "categorical",
+            "value_dict": {
+                "GALAXY": "Classified as Galaxy",
+                "STAR": "Classified as Star",
+                "QSO": "Classified as Quasar"
+            }
+        }
+    },
+    "task_info": {
+        "class": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in astronomical data analysis.",
+                "task_prompt": "Based on the features of the celestial object, please predict the class of the object.",
+                "answer_prompt": "Is it a Galaxy[0], Star[1], or Quasar[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "GALAXY": "Classified as Galaxy",
+                "STAR": "Classified as Star",
+                "QSO": "Classified as Quasar"
+            },
+            "class_index_dict": {
+                "GALAXY": 0,
+                "STAR": 1,
+                "QSO": 2
+            }
+        },
+        "redshift": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in astronomical data analysis.",
+                "task_prompt": "Based on the features of the celestial object, please predict the redshift of the object."
+            }
+        }
+    }
+}

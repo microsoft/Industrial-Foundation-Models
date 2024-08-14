@@ -1,0 +1,162 @@
+{
+    "basic_info": {
+        "row_num": 6205,
+        "col_num": 15,
+        "label_candidates": [
+            "Close",
+            "VWAP",
+            "High",
+            "Low",
+            "Last"
+        ],
+        "valid_feature_num": 14,
+        "num_features": [
+            "Prev Close",
+            "Open",
+            "High",
+            "Low",
+            "Last",
+            "VWAP",
+            "Volume",
+            "Turnover",
+            "Trades",
+            "Deliverable Volume",
+            "%Deliverble",
+            "Close"
+        ],
+        "cat_features": [
+            "Series"
+        ],
+        "other_features": [
+            "Date"
+        ],
+        "tags": [
+            "economics",
+            "beginner",
+            "time series analysis",
+            "linear regression",
+            "tabular",
+            "investing"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/notshrirang/reliance-stock-price-dataset"
+    },
+    "feature_info": {
+        "Date": {
+            "description": "The date of the recorded stock data",
+            "type": "other"
+        },
+        "Symbol": {
+            "description": "The stock symbol, in this case, it is for Reliance Industries",
+            "type": "useless"
+        },
+        "Series": {
+            "description": "The series of the stock",
+            "type": "categorical",
+            "value_dict": {
+                "EQ": "EQ represents the Equity segment of the stock"
+            }
+        },
+        "Prev Close": {
+            "description": "The closing price of the stock on the previous day, in INR",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Open": {
+            "description": "The opening price of the stock on the given date, in INR",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "High": {
+            "description": "The highest price of the stock on the given date, in INR",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Low": {
+            "description": "The lowest price of the stock on the given date, in INR",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Last": {
+            "description": "The last traded price of the stock on the given date, in INR",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Close": {
+            "description": "The closing price of the stock on the given date, in INR",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "VWAP": {
+            "description": "Volume Weighted Average Price of the stock on the given date, in INR",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Volume": {
+            "description": "The number of shares traded on the given date",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Turnover": {
+            "description": "The total turnover of the traded shares on the given date, in INR",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Trades": {
+            "description": "The number of trades executed on the given date",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Deliverable Volume": {
+            "description": "The number of shares which were actually delivered on the given date",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "%Deliverble": {
+            "description": "The percentage of the deliverable volume to the traded volume",
+            "type": "numerical",
+            "decimal": 4
+        }
+    },
+    "task_info": {
+        "Close": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in stock price prediction.",
+                "task_prompt": "Based on the historical stock data of Reliance Industries, please predict the closing price.",
+                "answer_prompt": "The predicted closing price is __."
+            }
+        },
+        "VWAP": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in stock price prediction.",
+                "task_prompt": "Based on the historical stock data of Reliance Industries, please predict the Volume Weighted Average Price (VWAP).",
+                "answer_prompt": "The predicted VWAP is __."
+            }
+        },
+        "High": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in stock price prediction.",
+                "task_prompt": "Based on the historical stock data of Reliance Industries, please predict the highest price.",
+                "answer_prompt": "The predicted highest price is __."
+            }
+        },
+        "Low": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in stock price prediction.",
+                "task_prompt": "Based on the historical stock data of Reliance Industries, please predict the lowest price.",
+                "answer_prompt": "The predicted lowest price is __."
+            }
+        },
+        "Last": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in stock price prediction.",
+                "task_prompt": "Based on the historical stock data of Reliance Industries, please predict the last traded price.",
+                "answer_prompt": "The predicted last traded price is __."
+            }
+        }
+    }
+}

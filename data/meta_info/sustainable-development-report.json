@@ -1,0 +1,216 @@
+{
+    "basic_info": {
+        "row_num": 166,
+        "col_num": 23,
+        "label_candidates": [
+            "overall_score",
+            "sdg_index_score",
+            "region"
+        ],
+        "valid_feature_num": 23,
+        "num_features": [
+            "year",
+            "sdg_index_score",
+            "goal_1_score",
+            "goal_2_score",
+            "goal_3_score",
+            "goal_4_score",
+            "goal_5_score",
+            "goal_6_score",
+            "goal_7_score",
+            "goal_8_score",
+            "goal_9_score",
+            "goal_10_score",
+            "goal_11_score",
+            "goal_12_score",
+            "goal_13_score",
+            "goal_14_score",
+            "goal_15_score",
+            "goal_16_score",
+            "goal_17_score",
+            "overall_score"
+        ],
+        "cat_features": [
+            "country_code",
+            "country",
+            "region"
+        ],
+        "other_features": [],
+        "tags": [
+            "environment",
+            "social science",
+            "international relations",
+            "geospatial analysis",
+            "tabular"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/sazidthe1/sustainable-development-report"
+    },
+    "feature_info": {
+        "country_code": {
+            "description": "The ISO country code",
+            "type": "categorical"
+        },
+        "country": {
+            "description": "The name of the country",
+            "type": "categorical"
+        },
+        "year": {
+            "description": "The year of the report",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "sdg_index_score": {
+            "description": "The sustainable development goal index score",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "goal_1_score": {
+            "description": "Score for Goal 1: No Poverty",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "goal_2_score": {
+            "description": "Score for Goal 2: Zero Hunger",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "goal_3_score": {
+            "description": "Score for Goal 3: Good Health and Well-being",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "goal_4_score": {
+            "description": "Score for Goal 4: Quality Education",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "goal_5_score": {
+            "description": "Score for Goal 5: Gender Equality",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "goal_6_score": {
+            "description": "Score for Goal 6: Clean Water and Sanitation",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "goal_7_score": {
+            "description": "Score for Goal 7: Affordable and Clean Energy",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "goal_8_score": {
+            "description": "Score for Goal 8: Decent Work and Economic Growth",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "goal_9_score": {
+            "description": "Score for Goal 9: Industry, Innovation and Infrastructure",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "goal_10_score": {
+            "description": "Score for Goal 10: Reduced Inequalities",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "goal_11_score": {
+            "description": "Score for Goal 11: Sustainable Cities and Communities",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "goal_12_score": {
+            "description": "Score for Goal 12: Responsible Consumption and Production",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "goal_13_score": {
+            "description": "Score for Goal 13: Climate Action",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "goal_14_score": {
+            "description": "Score for Goal 14: Life Below Water",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "goal_15_score": {
+            "description": "Score for Goal 15: Life on Land",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "goal_16_score": {
+            "description": "Score for Goal 16: Peace, Justice and Strong Institutions",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "goal_17_score": {
+            "description": "Score for Goal 17: Partnerships for the Goals",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "region": {
+            "description": "The region where the country is located",
+            "type": "categorical",
+            "value_dict": {
+                "OECD": "Countries that are members of the Organisation for Economic Co-operation and Development",
+                "E. Europe & C. Asia": "Countries located in Eastern Europe and Central Asia",
+                "LAC": "Countries located in Latin America and the Caribbean",
+                "East & South Asia": "Countries located in Eastern and Southern Asia",
+                "Oceania": "Countries located in the Oceania region",
+                "MENA": "Countries located in the Middle East and North Africa",
+                "Sub-Saharan Africa": "Countries located in Sub-Saharan Africa"
+            }
+        },
+        "overall_score": {
+            "description": "The overall score of the country for all the goals",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "overall_score": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sustainable development analysis.",
+                "task_prompt": "Based on the features of the country and its sustainable development goals scores, please predict the overall score.",
+                "answer_prompt": "The predicted overall score is."
+            }
+        },
+        "sdg_index_score": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sustainable development analysis.",
+                "task_prompt": "Based on the features of the country and its sustainable development goals scores, please predict the sustainable development goals index score.",
+                "answer_prompt": "The predicted sustainable development goals index score is."
+            }
+        },
+        "region": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in geographical analysis.",
+                "task_prompt": "Based on the features of the country and its sustainable development goals scores, please classify the region of the country.",
+                "answer_prompt": "The region of the country is OECD[0], E. Europe & C. Asia[1], LAC[2], East & South Asia[3], Oceania[4], MENA[5], or Sub-Saharan Africa[6]?"
+            },
+            "class_num": 7,
+            "class_value_dict": {
+                "OECD": "Countries that are members of the Organisation for Economic Co-operation and Development",
+                "E. Europe & C. Asia": "Countries located in Eastern Europe and Central Asia",
+                "LAC": "Countries located in Latin America and the Caribbean",
+                "East & South Asia": "Countries located in Eastern and Southern Asia",
+                "Oceania": "Countries located in the Oceania region",
+                "MENA": "Countries located in the Middle East and North Africa",
+                "Sub-Saharan Africa": "Countries located in Sub-Saharan Africa"
+            },
+            "class_index_dict": {
+                "OECD": 0,
+                "E. Europe & C. Asia": 1,
+                "LAC": 2,
+                "East & South Asia": 3,
+                "Oceania": 4,
+                "MENA": 5,
+                "Sub-Saharan Africa": 6
+            }
+        }
+    }
+}

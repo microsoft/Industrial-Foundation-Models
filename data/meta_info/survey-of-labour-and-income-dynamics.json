@@ -1,0 +1,94 @@
+{
+    "basic_info": {
+        "row_num": 4147,
+        "col_num": 6,
+        "label_candidates": [
+            "wages",
+            "education",
+            "age"
+        ],
+        "valid_feature_num": 5,
+        "num_features": [
+            "education",
+            "age",
+            "wages"
+        ],
+        "cat_features": [
+            "sex",
+            "language"
+        ],
+        "other_features": [],
+        "tags": [
+            "employment",
+            "income",
+            "business",
+            "survey analysis",
+            "jobs and career"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/utkarshx27/survey-of-labour-and-income-dynamics"
+    },
+    "feature_info": {
+        "Unnamed: 0": {
+            "description": "An auto-incremented index or ID, which seems to be used for identification purpose.",
+            "type": "useless"
+        },
+        "wages": {
+            "description": "The wage of the individual in the survey, presumably in dollars per hour.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "education": {
+            "description": "The education level of the individual in the survey, presumably in years of education.",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "age": {
+            "description": "The age of the individual in the survey, in years.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "sex": {
+            "description": "The gender of the individual in the survey, either Male or Female.",
+            "type": "categorical",
+            "value_dict": {
+                "Male": "The individual identified as Male.",
+                "Female": "The individual identified as Female."
+            }
+        },
+        "language": {
+            "description": "The primary language spoken by the individual in the survey.",
+            "type": "categorical",
+            "value_dict": {
+                "English": "The individual primarily speaks English.",
+                "Other": "The individual primarily speaks a language other than English or French.",
+                "French": "The individual primarily speaks French."
+            }
+        }
+    },
+    "task_info": {
+        "wages": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in labor and income dynamics.",
+                "task_prompt": "Based on the features of the individual, such as education, age, sex, and language, please predict the wages.",
+                "answer_prompt": "The predicted wages is _______."
+            }
+        },
+        "education": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in labor and income dynamics.",
+                "task_prompt": "Based on the features of the individual, such as wages, age, sex, and language, please predict the years of education.",
+                "answer_prompt": "The predicted years of education is _______."
+            }
+        },
+        "age": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in labor and income dynamics.",
+                "task_prompt": "Based on the features of the individual, such as wages, education, sex, and language, please predict the age.",
+                "answer_prompt": "The predicted age is _______."
+            }
+        }
+    }
+}

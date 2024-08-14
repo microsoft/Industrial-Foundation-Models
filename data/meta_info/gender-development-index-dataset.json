@@ -1,0 +1,324 @@
+{
+    "basic_info": {
+        "row_num": 191,
+        "col_num": 39,
+        "label_candidates": [
+            "Gender Development Index (2021)",
+            "HDI Rank (2021)",
+            "Gender Development Index (2020)",
+            "Gender Development Index (2019)",
+            "Gender Development Index (2018)"
+        ],
+        "valid_feature_num": 39,
+        "num_features": [
+            "Gender Development Index (1990)",
+            "Gender Development Index (1991)",
+            "Gender Development Index (1992)",
+            "Gender Development Index (1993)",
+            "Gender Development Index (1994)",
+            "Gender Development Index (1995)",
+            "Gender Development Index (1996)",
+            "Gender Development Index (1997)",
+            "Gender Development Index (1998)",
+            "Gender Development Index (1999)",
+            "Gender Development Index (2000)",
+            "Gender Development Index (2001)",
+            "Gender Development Index (2002)",
+            "Gender Development Index (2003)",
+            "Gender Development Index (2004)",
+            "Gender Development Index (2005)",
+            "Gender Development Index (2006)",
+            "Gender Development Index (2007)",
+            "Gender Development Index (2008)",
+            "Gender Development Index (2009)",
+            "Gender Development Index (2010)",
+            "Gender Development Index (2011)",
+            "Gender Development Index (2012)",
+            "Gender Development Index (2013)",
+            "Gender Development Index (2014)",
+            "Gender Development Index (2015)",
+            "Gender Development Index (2016)",
+            "Gender Development Index (2017)",
+            "Gender Development Index (2018)",
+            "Gender Development Index (2019)",
+            "Gender Development Index (2020)",
+            "Gender Development Index (2021)",
+            "HDI Rank (2021)"
+        ],
+        "cat_features": [
+            "ISO3",
+            "Country",
+            "Continent",
+            "Hemisphere",
+            "Human Development Groups",
+            "UNDP Developing Regions"
+        ],
+        "other_features": [],
+        "tags": [
+            "gender",
+            "exploratory data analysis",
+            "data analytics",
+            "classification",
+            "tabular"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/iamsouravbanerjee/gender-development-index-dataset"
+    },
+    "feature_info": {
+        "ISO3": {
+            "description": "Three-letter country codes defined in ISO 3166-1",
+            "type": "categorical"
+        },
+        "Country": {
+            "description": "Name of the country",
+            "type": "categorical"
+        },
+        "Continent": {
+            "description": "Continent where the country is located",
+            "type": "categorical",
+            "value_dict": {
+                "Asia": "Countries located in the Asian continent",
+                "Africa": "Countries located in the African continent",
+                "Europe": "Countries located in the European continent",
+                "America": "Countries located in the American continent",
+                "Oceania": "Countries located in the Oceania continent"
+            }
+        },
+        "Hemisphere": {
+            "description": "Hemisphere where the country is located",
+            "type": "categorical",
+            "value_dict": {
+                "Northern Hemisphere": "Countries located in the Northern Hemisphere",
+                "Southern Hemisphere": "Countries located in the Southern Hemisphere"
+            }
+        },
+        "Human Development Groups": {
+            "description": "Group categorization based on human development index",
+            "type": "categorical",
+            "value_dict": {
+                "Low": "Countries categorized as having low human development",
+                "Medium": "Countries categorized as having medium human development",
+                "High": "Countries categorized as having high human development",
+                "Very High": "Countries categorized as having very high human development"
+            }
+        },
+        "UNDP Developing Regions": {
+            "description": "UNDP categorization of developing regions",
+            "type": "categorical",
+            "value_dict": {
+                "SA": "South Asia",
+                "SSA": "Sub-Saharan Africa",
+                "ECA": "Europe and Central Asia",
+                "AS": "Arab States",
+                "LAC": "Latin America and the Caribbean",
+                "EAP": "East Asia and the Pacific"
+            }
+        },
+        "HDI Rank (2021)": {
+            "description": "Ranking of the country based on the Human Development Index in 2021",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Gender Development Index (1990)": {
+            "description": "Gender Development Index of the country in 1990",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Gender Development Index (1991)": {
+            "description": "Gender Development Index of the country in 1991",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Gender Development Index (1992)": {
+            "description": "Gender Development Index of the country in 1992",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Gender Development Index (1993)": {
+            "description": "Gender Development Index of the country in 1993",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Gender Development Index (1994)": {
+            "description": "Gender Development Index of the country in 1994",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Gender Development Index (1995)": {
+            "description": "Gender Development Index of the country in 1995",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Gender Development Index (1996)": {
+            "description": "Gender Development Index of the country in 1996",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Gender Development Index (1997)": {
+            "description": "Gender Development Index of the country in 1997",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Gender Development Index (1998)": {
+            "description": "Gender Development Index of the country in 1998",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Gender Development Index (1999)": {
+            "description": "Gender Development Index of the country in 1999",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Gender Development Index (2000)": {
+            "description": "Gender Development Index of the country in 2000",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Gender Development Index (2001)": {
+            "description": "Gender Development Index of the country in 2001",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Gender Development Index (2002)": {
+            "description": "Gender Development Index of the country in 2002",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Gender Development Index (2003)": {
+            "description": "Gender Development Index of the country in 2003",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Gender Development Index (2004)": {
+            "description": "Gender Development Index of the country in 2004",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Gender Development Index (2005)": {
+            "description": "Gender Development Index of the country in 2005",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Gender Development Index (2006)": {
+            "description": "Gender Development Index of the country in 2006",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Gender Development Index (2007)": {
+            "description": "Gender Development Index of the country in 2007",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Gender Development Index (2008)": {
+            "description": "Gender Development Index of the country in 2008",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Gender Development Index (2009)": {
+            "description": "Gender Development Index of the country in 2009",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Gender Development Index (2010)": {
+            "description": "Gender Development Index of the country in 2010",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Gender Development Index (2011)": {
+            "description": "Gender Development Index of the country in 2011",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Gender Development Index (2012)": {
+            "description": "Gender Development Index of the country in 2012",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Gender Development Index (2013)": {
+            "description": "Gender Development Index of the country in 2013",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Gender Development Index (2014)": {
+            "description": "Gender Development Index of the country in 2014",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Gender Development Index (2015)": {
+            "description": "Gender Development Index of the country in 2015",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Gender Development Index (2016)": {
+            "description": "Gender Development Index of the country in 2016",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Gender Development Index (2017)": {
+            "description": "Gender Development Index of the country in 2017",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Gender Development Index (2018)": {
+            "description": "Gender Development Index of the country in 2018",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Gender Development Index (2019)": {
+            "description": "Gender Development Index of the country in 2019",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Gender Development Index (2020)": {
+            "description": "Gender Development Index of the country in 2020",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Gender Development Index (2021)": {
+            "description": "Gender Development Index of the country in 2021",
+            "type": "numerical",
+            "decimal": 3
+        }
+    },
+    "task_info": {
+        "Gender Development Index (2021)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in gender development analysis.",
+                "task_prompt": "Based on the features of the country, please predict the Gender Development Index for 2021.",
+                "answer_prompt": "The predicted Gender Development Index for 2021 is {answer}."
+            }
+        },
+        "HDI Rank (2021)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in human development analysis.",
+                "task_prompt": "Based on the features of the country, please predict the Human Development Index Rank for 2021.",
+                "answer_prompt": "The predicted Human Development Index Rank for 2021 is {answer}."
+            }
+        },
+        "Gender Development Index (2020)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in gender development analysis.",
+                "task_prompt": "Based on the features of the country, please predict the Gender Development Index for 2020.",
+                "answer_prompt": "The predicted Gender Development Index for 2020 is {answer}."
+            }
+        },
+        "Gender Development Index (2019)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in gender development analysis.",
+                "task_prompt": "Based on the features of the country, please predict the Gender Development Index for 2019.",
+                "answer_prompt": "The predicted Gender Development Index for 2019 is {answer}."
+            }
+        },
+        "Gender Development Index (2018)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in gender development analysis.",
+                "task_prompt": "Based on the features of the country, please predict the Gender Development Index for 2018.",
+                "answer_prompt": "The predicted Gender Development Index for 2018 is {answer}."
+            }
+        }
+    }
+}

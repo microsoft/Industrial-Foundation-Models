@@ -1,0 +1,578 @@
+{
+    "basic_info": {
+        "row_num": 38568,
+        "col_num": 80,
+        "label_candidates": [
+            "rent_mean",
+            "hi_mean",
+            "family_mean",
+            "hc_mortgage_mean",
+            "hc_mean",
+            "pct_own",
+            "married",
+            "divorced"
+        ],
+        "valid_feature_num": 78,
+        "num_features": [
+            "lat",
+            "lng",
+            "ALand",
+            "AWater",
+            "pop",
+            "male_pop",
+            "female_pop",
+            "rent_median",
+            "rent_stdev",
+            "rent_sample_weight",
+            "rent_samples",
+            "rent_gt_10",
+            "rent_gt_15",
+            "rent_gt_20",
+            "rent_gt_25",
+            "rent_gt_30",
+            "rent_gt_35",
+            "rent_gt_40",
+            "rent_gt_50",
+            "universe_samples",
+            "used_samples",
+            "hi_mean",
+            "hi_median",
+            "hi_stdev",
+            "hi_sample_weight",
+            "hi_samples",
+            "family_mean",
+            "family_median",
+            "family_stdev",
+            "family_sample_weight",
+            "family_samples",
+            "hc_mortgage_mean",
+            "hc_mortgage_median",
+            "hc_mortgage_stdev",
+            "hc_mortgage_sample_weight",
+            "hc_mortgage_samples",
+            "hc_mean",
+            "hc_median",
+            "hc_stdev",
+            "hc_samples",
+            "hc_sample_weight",
+            "home_equity_second_mortgage",
+            "second_mortgage",
+            "home_equity",
+            "debt",
+            "second_mortgage_cdf",
+            "home_equity_cdf",
+            "debt_cdf",
+            "hs_degree",
+            "hs_degree_male",
+            "hs_degree_female",
+            "male_age_mean",
+            "male_age_median",
+            "male_age_stdev",
+            "male_age_sample_weight",
+            "male_age_samples",
+            "female_age_mean",
+            "female_age_median",
+            "female_age_stdev",
+            "female_age_sample_weight",
+            "female_age_samples",
+            "pct_own",
+            "married",
+            "married_snp",
+            "separated",
+            "divorced",
+            "rent_mean"
+        ],
+        "cat_features": [
+            "SUMLEVEL",
+            "COUNTYID",
+            "STATEID",
+            "state",
+            "state_ab",
+            "city",
+            "place",
+            "type",
+            "primary",
+            "zip_code",
+            "area_code"
+        ],
+        "other_features": [],
+        "tags": [
+            "asia",
+            "real estate",
+            "intermediate",
+            "tabular",
+            "regression",
+            "investing"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/deependraverma13/real-estate-banking-ai-capstone-project"
+    },
+    "feature_info": {
+        "UID": {
+            "description": "Unique Identifier",
+            "type": "useless"
+        },
+        "BLOCKID": {
+            "description": "Block Identifier, likely related to geographical location",
+            "type": "useless"
+        },
+        "SUMLEVEL": {
+            "description": "Summary Level (geographical)",
+            "type": "categorical",
+            "value_dict": {
+                "140": "This value represents a geographic level of census tract."
+            }
+        },
+        "COUNTYID": {
+            "description": "Identifier for the county",
+            "type": "categorical"
+        },
+        "STATEID": {
+            "description": "Identifier for the state",
+            "type": "categorical"
+        },
+        "state": {
+            "description": "State name",
+            "type": "categorical"
+        },
+        "state_ab": {
+            "description": "State abbreviation",
+            "type": "categorical"
+        },
+        "city": {
+            "description": "City name",
+            "type": "categorical"
+        },
+        "place": {
+            "description": "Place name",
+            "type": "categorical"
+        },
+        "type": {
+            "description": "Type of the place",
+            "type": "categorical",
+            "value_dict": {
+                "CDP": "Census-designated place",
+                "City": "City",
+                "Borough": "Borough",
+                "Town": "Town",
+                "Village": "Village",
+                "Urban": "Urban area"
+            }
+        },
+        "primary": {
+            "description": "Primary place (city) of the area",
+            "type": "categorical",
+            "value_dict": {
+                "tract": "The primary area is a tract."
+            }
+        },
+        "zip_code": {
+            "description": "Postal code",
+            "type": "categorical"
+        },
+        "area_code": {
+            "description": "Area code for phone numbers",
+            "type": "categorical"
+        },
+        "lat": {
+            "description": "Latitude of the location",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "lng": {
+            "description": "Longitude of the location",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "ALand": {
+            "description": "Land area in square meters",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "AWater": {
+            "description": "Water area in square meters",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "pop": {
+            "description": "Population count",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "male_pop": {
+            "description": "Male population count",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "female_pop": {
+            "description": "Female population count",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "rent_mean": {
+            "description": "Mean rent",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "rent_median": {
+            "description": "Median rent",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "rent_stdev": {
+            "description": "Standard deviation of rent",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "rent_sample_weight": {
+            "description": "Sample weight of the rent",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "rent_samples": {
+            "description": "Number of rent samples",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "rent_gt_10": {
+            "description": "Percentage of rents greater than 10",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "rent_gt_15": {
+            "description": "Percentage of rents greater than 15",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "rent_gt_20": {
+            "description": "Percentage of rents greater than 20",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "rent_gt_25": {
+            "description": "Percentage of rents greater than 25",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "rent_gt_30": {
+            "description": "Percentage of rents greater than 30",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "rent_gt_35": {
+            "description": "Percentage of rents greater than 35",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "rent_gt_40": {
+            "description": "Percentage of rents greater than 40",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "rent_gt_50": {
+            "description": "Percentage of rents greater than 50",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "universe_samples": {
+            "description": "Total number of samples",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "used_samples": {
+            "description": "Number of used samples",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "hi_mean": {
+            "description": "Mean of household income",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "hi_median": {
+            "description": "Median of household income",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "hi_stdev": {
+            "description": "Standard deviation of household income",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "hi_sample_weight": {
+            "description": "Sample weight of the household income",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "hi_samples": {
+            "description": "Number of household income samples",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "family_mean": {
+            "description": "Mean family income",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "family_median": {
+            "description": "Median family income",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "family_stdev": {
+            "description": "Standard deviation of family income",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "family_sample_weight": {
+            "description": "Sample weight of the family income",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "family_samples": {
+            "description": "Number of family income samples",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "hc_mortgage_mean": {
+            "description": "Mean of housing costs for owners with a mortgage",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "hc_mortgage_median": {
+            "description": "Median of housing costs for owners with a mortgage",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "hc_mortgage_stdev": {
+            "description": "Standard deviation of housing costs for owners with a mortgage",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "hc_mortgage_sample_weight": {
+            "description": "Sample weight of the housing costs for owners with a mortgage",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "hc_mortgage_samples": {
+            "description": "Number of housing costs for owners with a mortgage samples",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "hc_mean": {
+            "description": "Mean of housing costs",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "hc_median": {
+            "description": "Median of housing costs",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "hc_stdev": {
+            "description": "Standard deviation of housing costs",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "hc_samples": {
+            "description": "Number of housing costs samples",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "hc_sample_weight": {
+            "description": "Sample weight of the housing costs",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "home_equity_second_mortgage": {
+            "description": "Home equity second mortgage",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "second_mortgage": {
+            "description": "Second mortgage",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "home_equity": {
+            "description": "Home equity",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "debt": {
+            "description": "Debt",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "second_mortgage_cdf": {
+            "description": "CDF of second mortgage",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "home_equity_cdf": {
+            "description": "CDF of home equity",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "debt_cdf": {
+            "description": "CDF of debt",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "hs_degree": {
+            "description": "Possession of high school degree",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "hs_degree_male": {
+            "description": "Male possession of high school degree",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "hs_degree_female": {
+            "description": "Female possession of high school degree",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "male_age_mean": {
+            "description": "Mean age of males",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "male_age_median": {
+            "description": "Median age of males",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "male_age_stdev": {
+            "description": "Standard deviation of male age",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "male_age_sample_weight": {
+            "description": "Sample weight of the male age",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "male_age_samples": {
+            "description": "Number of male age samples",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "female_age_mean": {
+            "description": "Mean age of females",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "female_age_median": {
+            "description": "Median age of females",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "female_age_stdev": {
+            "description": "Standard deviation of female age",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "female_age_sample_weight": {
+            "description": "Sample weight of the female age",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "female_age_samples": {
+            "description": "Number of female age samples",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "pct_own": {
+            "description": "Percentage of ownership",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "married": {
+            "description": "Marriage rate",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "married_snp": {
+            "description": "Marriage rate for single-nucleus families",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "separated": {
+            "description": "Separation rate",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "divorced": {
+            "description": "Divorce rate",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "rent_mean": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate market analysis.",
+                "task_prompt": "Based on the features of the real estate properties, please predict the average rent.",
+                "answer_prompt": "The average rent is {rent_mean}."
+            }
+        },
+        "hi_mean": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate and finance.",
+                "task_prompt": "Based on the features of the real estate properties, please predict the average household income.",
+                "answer_prompt": "The average household income is {hi_mean}."
+            }
+        },
+        "family_mean": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in demographics and real estate.",
+                "task_prompt": "Based on the features of the real estate properties, please predict the average family size.",
+                "answer_prompt": "The average family size is {family_mean}."
+            }
+        },
+        "hc_mortgage_mean": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate finance.",
+                "task_prompt": "Based on the features of the real estate properties, please predict the average housing cost with mortgage.",
+                "answer_prompt": "The average housing cost with mortgage is {hc_mortgage_mean}."
+            }
+        },
+        "hc_mean": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate market analysis.",
+                "task_prompt": "Based on the features of the real estate properties, please predict the average housing cost.",
+                "answer_prompt": "The average housing cost is {hc_mean}."
+            }
+        },
+        "pct_own": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate market analysis.",
+                "task_prompt": "Based on the features of the real estate properties, please predict the percentage of houses owned.",
+                "answer_prompt": "The percentage of houses owned is {pct_own}%."
+            }
+        },
+        "married": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in demographics.",
+                "task_prompt": "Based on the features of the real estate properties, please predict the percentage of married households.",
+                "answer_prompt": "The percentage of married households is {married}%."
+            }
+        },
+        "divorced": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in demographics.",
+                "task_prompt": "Based on the features of the real estate properties, please predict the percentage of divorced households.",
+                "answer_prompt": "The percentage of divorced households is {divorced}%."
+            }
+        }
+    }
+}

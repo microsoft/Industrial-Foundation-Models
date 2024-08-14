@@ -1,0 +1,208 @@
+{
+    "basic_info": {
+        "row_num": 100000,
+        "col_num": 18,
+        "label_candidates": [
+            "class",
+            "redshift",
+            "u",
+            "g",
+            "r",
+            "i",
+            "z"
+        ],
+        "valid_feature_num": 16,
+        "num_features": [
+            "alpha",
+            "delta",
+            "u",
+            "g",
+            "r",
+            "i",
+            "z",
+            "redshift",
+            "MJD"
+        ],
+        "cat_features": [
+            "run_ID",
+            "rerun_ID",
+            "cam_col",
+            "field_ID",
+            "plate",
+            "fiber_ID",
+            "class"
+        ],
+        "other_features": [],
+        "tags": [
+            "earth and nature",
+            "astronomy",
+            "physics",
+            "beginner",
+            "classification",
+            "multiclass classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/fedesoriano/stellar-classification-dataset-sdss17"
+    },
+    "feature_info": {
+        "obj_ID": {
+            "description": "Unique identifier for each celestial object",
+            "type": "useless"
+        },
+        "alpha": {
+            "description": "Right ascension of the celestial object (in degrees)",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "delta": {
+            "description": "Declination of the celestial object (in degrees)",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "u": {
+            "description": "Response of the object in the u-band of the telescope",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "g": {
+            "description": "Response of the object in the g-band of the telescope",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "r": {
+            "description": "Response of the object in the r-band of the telescope",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "i": {
+            "description": "Response of the object in the i-band of the telescope",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "z": {
+            "description": "Response of the object in the z-band of the telescope",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "run_ID": {
+            "description": "ID of the specific scan",
+            "type": "categorical"
+        },
+        "rerun_ID": {
+            "description": "ID of the rerun",
+            "type": "categorical",
+            "value_dict": {
+                "301": "ID representing the rerun number 301"
+            }
+        },
+        "cam_col": {
+            "description": "Camera column during the scan",
+            "type": "categorical",
+            "value_dict": {
+                "2": "Camera column 2 during the scan",
+                "5": "Camera column 5 during the scan",
+                "3": "Camera column 3 during the scan",
+                "4": "Camera column 4 during the scan",
+                "6": "Camera column 6 during the scan",
+                "1": "Camera column 1 during the scan"
+            }
+        },
+        "field_ID": {
+            "description": "Field number within the scan",
+            "type": "categorical"
+        },
+        "spec_obj_ID": {
+            "description": "Unique identifier for spectral objects",
+            "type": "useless"
+        },
+        "class": {
+            "description": "Class of the celestial object (STAR, GALAXY, QSO)",
+            "type": "categorical",
+            "value_dict": {
+                "GALAXY": "The celestial object is a galaxy",
+                "QSO": "The celestial object is a quasar",
+                "STAR": "The celestial object is a star"
+            }
+        },
+        "redshift": {
+            "description": "Redshift of the celestial object",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "plate": {
+            "description": "Plate number",
+            "type": "categorical"
+        },
+        "MJD": {
+            "description": "Modified Julian Date, used to indicate the date that the observation was made",
+            "type": "numerical",
+            "decimal": "sci"
+        },
+        "fiber_ID": {
+            "description": "Fiber ID",
+            "type": "categorical"
+        }
+    },
+    "task_info": {
+        "class": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in astronomical object classification.",
+                "task_prompt": "Based on the features of the celestial objects, please classify the type of the object.",
+                "answer_prompt": "Galaxy[0], Quasar[1], or Star[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "GALAXY": "The celestial object is a galaxy",
+                "QSO": "The celestial object is a quasar",
+                "STAR": "The celestial object is a star"
+            },
+            "class_index_dict": {
+                "GALAXY": 0,
+                "QSO": 1,
+                "STAR": 2
+            }
+        },
+        "redshift": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in astronomical object analysis.",
+                "task_prompt": "Based on the features of the celestial objects, please predict the redshift."
+            }
+        },
+        "u": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in astronomical object analysis.",
+                "task_prompt": "Based on the features of the celestial objects, please predict the u-band magnitude."
+            }
+        },
+        "g": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in astronomical object analysis.",
+                "task_prompt": "Based on the features of the celestial objects, please predict the g-band magnitude."
+            }
+        },
+        "r": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in astronomical object analysis.",
+                "task_prompt": "Based on the features of the celestial objects, please predict the r-band magnitude."
+            }
+        },
+        "i": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in astronomical object analysis.",
+                "task_prompt": "Based on the features of the celestial objects, please predict the i-band magnitude."
+            }
+        },
+        "z": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in astronomical object analysis.",
+                "task_prompt": "Based on the features of the celestial objects, please predict the z-band magnitude."
+            }
+        }
+    }
+}

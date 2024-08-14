@@ -1,0 +1,429 @@
+{
+    "basic_info": {
+        "row_num": 8124,
+        "col_num": 23,
+        "label_candidates": [
+            "class",
+            "cap-shape",
+            "cap-color",
+            "odor",
+            "habitat"
+        ],
+        "valid_feature_num": 23,
+        "num_features": [],
+        "cat_features": [
+            "cap-shape",
+            "cap-surface",
+            "cap-color",
+            "bruises%3F",
+            "odor",
+            "gill-attachment",
+            "gill-spacing",
+            "gill-size",
+            "gill-color",
+            "stalk-shape",
+            "stalk-root",
+            "stalk-surface-above-ring",
+            "stalk-surface-below-ring",
+            "stalk-color-above-ring",
+            "stalk-color-below-ring",
+            "veil-type",
+            "veil-color",
+            "ring-number",
+            "ring-type",
+            "spore-print-color",
+            "population",
+            "habitat",
+            "class"
+        ],
+        "other_features": [],
+        "tags": [
+            "biology",
+            "beginner",
+            "intermediate",
+            "classification",
+            "binary classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/ulrikthygepedersen/mushroom-attributes"
+    },
+    "feature_info": {
+        "cap-shape": {
+            "description": "Shape of the mushroom cap",
+            "type": "categorical",
+            "value_dict": {
+                "b'x'": "Convex cap shape",
+                "b'b'": "Bell cap shape",
+                "b's'": "Sunken cap shape",
+                "b'f'": "Flat cap shape",
+                "b'k'": "Knobbed cap shape",
+                "b'c'": "Conical cap shape"
+            }
+        },
+        "cap-surface": {
+            "description": "Surface texture of the mushroom cap",
+            "type": "categorical",
+            "value_dict": {
+                "b's'": "Smooth cap surface",
+                "b'y'": "Scaly cap surface",
+                "b'f'": "Fibrous cap surface",
+                "b'g'": "Grooves cap surface"
+            }
+        },
+        "cap-color": {
+            "description": "Color of the mushroom cap",
+            "type": "categorical",
+            "value_dict": {
+                "b'n'": "Brown cap color",
+                "b'y'": "Yellow cap color",
+                "b'w'": "White cap color",
+                "b'g'": "Gray cap color",
+                "b'e'": "Red cap color",
+                "b'p'": "Pink cap color",
+                "b'b'": "Buff cap color",
+                "b'u'": "Purple cap color",
+                "b'c'": "Cinnamon cap color",
+                "b'r'": "Green cap color"
+            }
+        },
+        "bruises%3F": {
+            "description": "Presence of bruises on the mushroom",
+            "type": "categorical",
+            "value_dict": {
+                "b't'": "Bruises present",
+                "b'f'": "No bruises"
+            }
+        },
+        "odor": {
+            "description": "Odor of the mushroom",
+            "type": "categorical",
+            "value_dict": {
+                "b'p'": "Pungent odor",
+                "b'a'": "Almond odor",
+                "b'l'": "Anise odor",
+                "b'n'": "No odor",
+                "b'f'": "Foul odor",
+                "b'c'": "Creosote odor",
+                "b'y'": "Fishy odor",
+                "b's'": "Spicy odor",
+                "b'm'": "Musty odor"
+            }
+        },
+        "gill-attachment": {
+            "description": "Type of gill attachment",
+            "type": "categorical",
+            "value_dict": {
+                "b'f'": "Free gills",
+                "b'a'": "Attached gills"
+            }
+        },
+        "gill-spacing": {
+            "description": "Spacing between gills",
+            "type": "categorical",
+            "value_dict": {
+                "b'c'": "Close gill spacing",
+                "b'w'": "Crowded gill spacing"
+            }
+        },
+        "gill-size": {
+            "description": "Size of gills",
+            "type": "categorical",
+            "value_dict": {
+                "b'n'": "Narrow gills",
+                "b'b'": "Broad gills"
+            }
+        },
+        "gill-color": {
+            "description": "Color of gills",
+            "type": "categorical"
+        },
+        "stalk-shape": {
+            "description": "Shape of the stalk",
+            "type": "categorical",
+            "value_dict": {
+                "b'e'": "Enlarging stalk shape",
+                "b't'": "Tapering stalk shape"
+            }
+        },
+        "stalk-root": {
+            "description": "Type of stalk root",
+            "type": "categorical",
+            "value_dict": {
+                "b'e'": "Equal stalk root",
+                "b'c'": "Club stalk root",
+                "b'b'": "Bulbous stalk root",
+                "b'r'": "Rooted stalk root",
+                "b'?'": "Missing stalk root information"
+            }
+        },
+        "stalk-surface-above-ring": {
+            "description": "Surface texture of the stalk above the ring",
+            "type": "categorical",
+            "value_dict": {
+                "b's'": "Smooth stalk surface above ring",
+                "b'f'": "Fibrous stalk surface above ring",
+                "b'k'": "Silky stalk surface above ring",
+                "b'y'": "Scaly stalk surface above ring"
+            }
+        },
+        "stalk-surface-below-ring": {
+            "description": "Surface texture of the stalk below the ring",
+            "type": "categorical",
+            "value_dict": {
+                "b's'": "Smooth stalk surface below ring",
+                "b'f'": "Fibrous stalk surface below ring",
+                "b'y'": "Scaly stalk surface below ring",
+                "b'k'": "Silky stalk surface below ring"
+            }
+        },
+        "stalk-color-above-ring": {
+            "description": "Color of the stalk above the ring",
+            "type": "categorical",
+            "value_dict": {
+                "b'w'": "White stalk color above ring",
+                "b'g'": "Gray stalk color above ring",
+                "b'p'": "Pink stalk color above ring",
+                "b'n'": "Brown stalk color above ring",
+                "b'b'": "Buff stalk color above ring",
+                "b'e'": "Red stalk color above ring",
+                "b'o'": "Orange stalk color above ring",
+                "b'c'": "Cinnamon stalk color above ring",
+                "b'y'": "Yellow stalk color above ring"
+            }
+        },
+        "stalk-color-below-ring": {
+            "description": "Color of the stalk below the ring",
+            "type": "categorical",
+            "value_dict": {
+                "b'w'": "White stalk color below ring",
+                "b'p'": "Pink stalk color below ring",
+                "b'g'": "Gray stalk color below ring",
+                "b'b'": "Buff stalk color below ring",
+                "b'n'": "Brown stalk color below ring",
+                "b'e'": "Red stalk color below ring",
+                "b'y'": "Yellow stalk color below ring",
+                "b'o'": "Orange stalk color below ring",
+                "b'c'": "Cinnamon stalk color below ring"
+            }
+        },
+        "veil-type": {
+            "description": "Type of veil",
+            "type": "categorical",
+            "value_dict": {
+                "b'p'": "Partial veil"
+            }
+        },
+        "veil-color": {
+            "description": "Color of veil",
+            "type": "categorical",
+            "value_dict": {
+                "b'w'": "White veil color",
+                "b'n'": "Brown veil color",
+                "b'o'": "Orange veil color",
+                "b'y'": "Yellow veil color"
+            }
+        },
+        "ring-number": {
+            "description": "Number of rings",
+            "type": "categorical",
+            "value_dict": {
+                "b'o'": "One ring",
+                "b't'": "Two rings",
+                "b'n'": "No rings"
+            }
+        },
+        "ring-type": {
+            "description": "Type of ring",
+            "type": "categorical",
+            "value_dict": {
+                "b'p'": "Pendant ring type",
+                "b'e'": "Evanescent ring type",
+                "b'l'": "Large ring type",
+                "b'f'": "Flaring ring type",
+                "b'n'": "None ring type"
+            }
+        },
+        "spore-print-color": {
+            "description": "Color of spore print",
+            "type": "categorical",
+            "value_dict": {
+                "b'k'": "Black spore print color",
+                "b'n'": "Brown spore print color",
+                "b'u'": "Purple spore print color",
+                "b'h'": "Chocolate spore print color",
+                "b'w'": "White spore print color",
+                "b'r'": "Green spore print color",
+                "b'o'": "Orange spore print color",
+                "b'y'": "Yellow spore print color",
+                "b'b'": "Buff spore print color"
+            }
+        },
+        "population": {
+            "description": "Population pattern",
+            "type": "categorical",
+            "value_dict": {
+                "b's'": "Scattered population",
+                "b'n'": "Numerous population",
+                "b'a'": "Abundant population",
+                "b'v'": "Several population",
+                "b'y'": "Solitary population",
+                "b'c'": "Clustered population"
+            }
+        },
+        "habitat": {
+            "description": "Habitat type",
+            "type": "categorical",
+            "value_dict": {
+                "b'u'": "Urban habitat",
+                "b'g'": "Grasses habitat",
+                "b'm'": "Meadows habitat",
+                "b'd'": "Woods habitat",
+                "b'p'": "Paths habitat",
+                "b'w'": "Waste habitat",
+                "b'l'": "Leaves habitat"
+            }
+        },
+        "class": {
+            "description": "Class of mushroom (poisonous or edible)",
+            "type": "categorical",
+            "value_dict": {
+                "b'p'": "Poisonous",
+                "b'e'": "Edible"
+            }
+        }
+    },
+    "task_info": {
+        "class": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in mycology.",
+                "task_prompt": "Based on the features of the mushroom, please predict the edibility.",
+                "answer_prompt": "Poisonous[0] or Edible[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "b'p'": "Poisonous",
+                "b'e'": "Edible"
+            },
+            "class_index_dict": {
+                "b'p'": 0,
+                "b'e'": 1
+            }
+        },
+        "cap-shape": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in mycology.",
+                "task_prompt": "Based on the features of the mushroom, please predict the cap shape.",
+                "answer_prompt": "Convex[0], Bell[1], Sunken[2], Flat[3], Knobbed[4], or Conical[5]?"
+            },
+            "class_num": 6,
+            "class_value_dict": {
+                "b'x'": "Convex cap shape",
+                "b'b'": "Bell cap shape",
+                "b's'": "Sunken cap shape",
+                "b'f'": "Flat cap shape",
+                "b'k'": "Knobbed cap shape",
+                "b'c'": "Conical cap shape"
+            },
+            "class_index_dict": {
+                "b'x'": 0,
+                "b'b'": 1,
+                "b's'": 2,
+                "b'f'": 3,
+                "b'k'": 4,
+                "b'c'": 5
+            }
+        },
+        "cap-color": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in mycology.",
+                "task_prompt": "Based on the features of the mushroom, please predict the cap color.",
+                "answer_prompt": "Brown[0], Yellow[1], White[2], Gray[3], Red[4], Pink[5], Buff[6], Purple[7], Cinnamon[8], or Green[9]?"
+            },
+            "class_num": 10,
+            "class_value_dict": {
+                "b'n'": "Brown cap color",
+                "b'y'": "Yellow cap color",
+                "b'w'": "White cap color",
+                "b'g'": "Gray cap color",
+                "b'e'": "Red cap color",
+                "b'p'": "Pink cap color",
+                "b'b'": "Buff cap color",
+                "b'u'": "Purple cap color",
+                "b'c'": "Cinnamon cap color",
+                "b'r'": "Green cap color"
+            },
+            "class_index_dict": {
+                "b'n'": 0,
+                "b'y'": 1,
+                "b'w'": 2,
+                "b'g'": 3,
+                "b'e'": 4,
+                "b'p'": 5,
+                "b'b'": 6,
+                "b'u'": 7,
+                "b'c'": 8,
+                "b'r'": 9
+            }
+        },
+        "odor": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in mycology.",
+                "task_prompt": "Based on the features of the mushroom, please predict the odor.",
+                "answer_prompt": "Pungent[0], Almond[1], Anise[2], No odor[3], Foul[4], Creosote[5], Fishy[6], Spicy[7], or Musty[8]?"
+            },
+            "class_num": 9,
+            "class_value_dict": {
+                "b'p'": "Pungent odor",
+                "b'a'": "Almond odor",
+                "b'l'": "Anise odor",
+                "b'n'": "No odor",
+                "b'f'": "Foul odor",
+                "b'c'": "Creosote odor",
+                "b'y'": "Fishy odor",
+                "b's'": "Spicy odor",
+                "b'm'": "Musty odor"
+            },
+            "class_index_dict": {
+                "b'p'": 0,
+                "b'a'": 1,
+                "b'l'": 2,
+                "b'n'": 3,
+                "b'f'": 4,
+                "b'c'": 5,
+                "b'y'": 6,
+                "b's'": 7,
+                "b'm'": 8
+            }
+        },
+        "habitat": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in mycology.",
+                "task_prompt": "Based on the features of the mushroom, please predict the habitat.",
+                "answer_prompt": "Urban[0], Grasses[1], Meadows[2], Woods[3], Paths[4], Waste[5], or Leaves[6]?"
+            },
+            "class_num": 7,
+            "class_value_dict": {
+                "b'u'": "Urban habitat",
+                "b'g'": "Grasses habitat",
+                "b'm'": "Meadows habitat",
+                "b'd'": "Woods habitat",
+                "b'p'": "Paths habitat",
+                "b'w'": "Waste habitat",
+                "b'l'": "Leaves habitat"
+            },
+            "class_index_dict": {
+                "b'u'": 0,
+                "b'g'": 1,
+                "b'm'": 2,
+                "b'd'": 3,
+                "b'p'": 4,
+                "b'w'": 5,
+                "b'l'": 6
+            }
+        }
+    }
+}

@@ -1,0 +1,273 @@
+{
+    "basic_info": {
+        "row_num": 840918,
+        "col_num": 28,
+        "label_candidates": [
+            "resale_price",
+            "price_psm",
+            "price_psm_yearly",
+            "price cpi_adj",
+            "price_psm cpi_adj",
+            "price lease_adj implied",
+            "price_psm lease_adj implied",
+            "price cpi_lease_adj implied",
+            "price_psm cpi_lease_adj implied"
+        ],
+        "valid_feature_num": 28,
+        "num_features": [
+            "town_dummy",
+            "latitude",
+            "longitude",
+            "storey",
+            "area_sqm",
+            "lease_rem",
+            "price_psm",
+            "price_psm_yearly",
+            "Core CPI",
+            "price cpi_adj",
+            "price_psm cpi_adj",
+            "bala lease pct",
+            "price lease_adj implied",
+            "price_psm lease_adj implied",
+            "price cpi_lease_adj implied",
+            "price_psm cpi_lease_adj implied",
+            "year_gni",
+            "resale_price"
+        ],
+        "cat_features": [
+            "month",
+            "year",
+            "town",
+            "flat_type",
+            "block",
+            "street_name",
+            "address",
+            "storey_range",
+            "flat_model",
+            "lease_start"
+        ],
+        "other_features": [],
+        "tags": [
+            "housing",
+            "real estate",
+            "geospatial analysis",
+            "hotels and accommodations"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/denzilg/hdb-flat-prices-19902021-march"
+    },
+    "feature_info": {
+        "month": {
+            "description": "The month and year when the property was sold",
+            "type": "categorical"
+        },
+        "year": {
+            "description": "The year when the property was sold",
+            "type": "categorical"
+        },
+        "town": {
+            "description": "The town where the property is located",
+            "type": "categorical"
+        },
+        "town_dummy": {
+            "description": "Dummy variable for the town where the property is located",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "flat_type": {
+            "description": "The type of the flat",
+            "type": "categorical",
+            "value_dict": {
+                "4 ROOM": "A flat with 4 rooms",
+                "3 ROOM": "A flat with 3 rooms",
+                "1 ROOM": "A flat with 1 room",
+                "5 ROOM": "A flat with 5 rooms",
+                "EXECUTIVE": "An executive flat",
+                "2 ROOM": "A flat with 2 rooms",
+                "MULTI GENERATION": "A multi-generation flat"
+            }
+        },
+        "block": {
+            "description": "The block number of the flat",
+            "type": "categorical"
+        },
+        "street_name": {
+            "description": "The street name where the flat is located",
+            "type": "categorical"
+        },
+        "address": {
+            "description": "The complete address of the flat",
+            "type": "categorical"
+        },
+        "latitude": {
+            "description": "The latitude of the flat location",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "longitude": {
+            "description": "The longitude of the flat location",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "storey_range": {
+            "description": "The range of storeys in the flat building",
+            "type": "categorical"
+        },
+        "storey": {
+            "description": "The storey of the flat",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "area_sqm": {
+            "description": "The area of the flat in square meters",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "flat_model": {
+            "description": "The model of the flat",
+            "type": "categorical"
+        },
+        "lease_start": {
+            "description": "The start year of the lease",
+            "type": "categorical"
+        },
+        "lease_rem": {
+            "description": "The remaining years of the lease",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "resale_price": {
+            "description": "The resale price of the flat",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "price_psm": {
+            "description": "The price per square meter of the flat",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "price_psm_yearly": {
+            "description": "The yearly price per square meter of the flat",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Core CPI": {
+            "description": "Core Consumer Price Index",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "price cpi_adj": {
+            "description": "The adjusted price based on CPI",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "price_psm cpi_adj": {
+            "description": "The adjusted price per square meter based on CPI",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "bala lease pct": {
+            "description": "The balance lease in percentage",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "price lease_adj implied": {
+            "description": "The implied adjusted price based on lease",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "price_psm lease_adj implied": {
+            "description": "The implied adjusted price per square meter based on lease",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "price cpi_lease_adj implied": {
+            "description": "The implied adjusted price based on CPI and lease",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "price_psm cpi_lease_adj implied": {
+            "description": "The implied adjusted price per square meter based on CPI and lease",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "year_gni": {
+            "description": "Gross National Income of the year",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "resale_price": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate pricing.",
+                "task_prompt": "Based on the features of the HDB flat, please predict the resale price.",
+                "answer_prompt": "The predicted resale price is."
+            }
+        },
+        "price_psm": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate pricing.",
+                "task_prompt": "Based on the features of the HDB flat, please predict the price per square meter.",
+                "answer_prompt": "The predicted price per square meter is."
+            }
+        },
+        "price_psm_yearly": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate pricing.",
+                "task_prompt": "Based on the features of the HDB flat, please predict the yearly price per square meter.",
+                "answer_prompt": "The predicted yearly price per square meter is."
+            }
+        },
+        "price cpi_adj": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate pricing.",
+                "task_prompt": "Based on the features of the HDB flat, please predict the price adjusted for consumer price index.",
+                "answer_prompt": "The predicted price adjusted for consumer price index is."
+            }
+        },
+        "price_psm cpi_adj": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate pricing.",
+                "task_prompt": "Based on the features of the HDB flat, please predict the price per square meter adjusted for consumer price index.",
+                "answer_prompt": "The predicted price per square meter adjusted for consumer price index is."
+            }
+        },
+        "price lease_adj implied": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate pricing.",
+                "task_prompt": "Based on the features of the HDB flat, please predict the implied price adjusted for lease.",
+                "answer_prompt": "The predicted implied price adjusted for lease is."
+            }
+        },
+        "price_psm lease_adj implied": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate pricing.",
+                "task_prompt": "Based on the features of the HDB flat, please predict the implied price per square meter adjusted for lease.",
+                "answer_prompt": "The predicted implied price per square meter adjusted for lease is."
+            }
+        },
+        "price cpi_lease_adj implied": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate pricing.",
+                "task_prompt": "Based on the features of the HDB flat, please predict the implied price adjusted for both consumer price index and lease.",
+                "answer_prompt": "The predicted implied price adjusted for both consumer price index and lease is."
+            }
+        },
+        "price_psm cpi_lease_adj implied": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate pricing.",
+                "task_prompt": "Based on the features of the HDB flat, please predict the implied price per square meter adjusted for both consumer price index and lease.",
+                "answer_prompt": "The predicted implied price per square meter adjusted for both consumer price index and lease is."
+            }
+        }
+    }
+}

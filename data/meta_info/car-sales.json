@@ -1,0 +1,88 @@
+{
+    "basic_info": {
+        "row_num": 827,
+        "col_num": 5,
+        "label_candidates": [
+            "Sales",
+            "Predictions",
+            "Year"
+        ],
+        "valid_feature_num": 5,
+        "num_features": [
+            "Year",
+            "Predictions",
+            "Sales"
+        ],
+        "cat_features": [
+            "Make",
+            "Model"
+        ],
+        "other_features": [],
+        "tags": [
+            "intermediate",
+            "data cleaning",
+            "data analytics",
+            "linear regression",
+            "multimodal"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/prestongrinstead/car-sales"
+    },
+    "feature_info": {
+        "Make": {
+            "description": "The manufacturer of the car",
+            "type": "categorical",
+            "value_dict": {
+                "acura": "Acura is a car manufacturer"
+            }
+        },
+        "Model": {
+            "description": "The specific model of the car produced by the manufacturer",
+            "type": "categorical",
+            "value_dict": {
+                "TSX": "TSX is a model of car produced by Acura",
+                "NSX": "NSX is another model of car produced by Acura"
+            }
+        },
+        "Year": {
+            "description": "The year the car model was sold",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Sales": {
+            "description": "The number of units sold in the given year",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Predictions": {
+            "description": "Predicted sales (the values are missing in the provided sample, so it could be a feature for future predictions)",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "Sales": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in automobile sales prediction.",
+                "task_prompt": "Based on the make, model, and year of the car, please predict the sales.",
+                "answer_prompt": "The predicted sales is."
+            }
+        },
+        "Predictions": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in automobile sales prediction.",
+                "task_prompt": "Based on the make, model, and year of the car, please predict the future sales.",
+                "answer_prompt": "The predicted future sales is."
+            }
+        },
+        "Year": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in automobile industry analysis.",
+                "task_prompt": "Based on the make, model, and sales of the car, please predict the year of the car.",
+                "answer_prompt": "The predicted year of the car is."
+            }
+        }
+    }
+}

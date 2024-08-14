@@ -1,0 +1,204 @@
+{
+    "basic_info": {
+        "row_num": 5110,
+        "col_num": 12,
+        "label_candidates": [
+            "stroke",
+            "age",
+            "bmi",
+            "avg_glucose_level",
+            "heart_disease",
+            "hypertension"
+        ],
+        "valid_feature_num": 11,
+        "num_features": [
+            "age",
+            "avg_glucose_level",
+            "bmi"
+        ],
+        "cat_features": [
+            "gender",
+            "hypertension",
+            "heart_disease",
+            "ever_married",
+            "work_type",
+            "Residence_type",
+            "smoking_status",
+            "stroke"
+        ],
+        "other_features": [],
+        "tags": [
+            "healthcare",
+            "public health",
+            "health",
+            "binary classification",
+            "health conditions"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset"
+    },
+    "feature_info": {
+        "id": {
+            "description": "Unique identifier for each individual",
+            "type": "useless"
+        },
+        "gender": {
+            "description": "Biological sex of the individual",
+            "type": "categorical",
+            "value_dict": {
+                "Male": "The individual is male",
+                "Female": "The individual is female",
+                "Other": "The individual identifies as a gender other than male or female"
+            }
+        },
+        "age": {
+            "description": "Age of the individual in years",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "hypertension": {
+            "description": "Indicates if the individual has hypertension (high blood pressure)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The individual does not have hypertension",
+                "1": "The individual has hypertension"
+            }
+        },
+        "heart_disease": {
+            "description": "Indicates if the individual has a heart disease",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The individual has a heart disease",
+                "0": "The individual does not have a heart disease"
+            }
+        },
+        "ever_married": {
+            "description": "Indicates if the individual has ever been married",
+            "type": "categorical",
+            "value_dict": {
+                "Yes": "The individual has been married at least once",
+                "No": "The individual has never been married"
+            }
+        },
+        "work_type": {
+            "description": "Type of occupation of the individual",
+            "type": "categorical",
+            "value_dict": {
+                "Private": "The individual works in the private sector",
+                "Self-employed": "The individual is self-employed",
+                "Govt_job": "The individual works for the government",
+                "children": "The individual is a child and does not work",
+                "Never_worked": "The individual has never worked"
+            }
+        },
+        "Residence_type": {
+            "description": "Type of residence of the individual (Urban/Rural)",
+            "type": "categorical",
+            "value_dict": {
+                "Urban": "The individual lives in an urban area",
+                "Rural": "The individual lives in a rural area"
+            }
+        },
+        "avg_glucose_level": {
+            "description": "Average glucose level in the blood",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "bmi": {
+            "description": "Body Mass Index of the individual",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "smoking_status": {
+            "description": "Indicates the smoking status of the individual",
+            "type": "categorical",
+            "value_dict": {
+                "formerly smoked": "The individual used to smoke but no longer does",
+                "never smoked": "The individual has never smoked",
+                "smokes": "The individual currently smokes",
+                "Unknown": "The smoking status of the individual is not known"
+            }
+        },
+        "stroke": {
+            "description": "Indicates if the individual has had a stroke",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The individual has had a stroke",
+                "0": "The individual has not had a stroke"
+            }
+        }
+    },
+    "task_info": {
+        "stroke": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical data analysis.",
+                "task_prompt": "Based on the health attributes of the individual, please predict the likelihood of them having a stroke.",
+                "answer_prompt": "Has had a stroke[1] or has not had a stroke[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "The individual has had a stroke",
+                "0": "The individual has not had a stroke"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        },
+        "age": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical data analysis.",
+                "task_prompt": "Based on the health attributes of the individual, please predict their age."
+            }
+        },
+        "bmi": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical data analysis.",
+                "task_prompt": "Based on the health attributes of the individual, please predict their Body Mass Index (BMI)."
+            }
+        },
+        "avg_glucose_level": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical data analysis.",
+                "task_prompt": "Based on the health attributes of the individual, please predict their average glucose level."
+            }
+        },
+        "heart_disease": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical data analysis.",
+                "task_prompt": "Based on the health attributes of the individual, please predict the likelihood of them having a heart disease.",
+                "answer_prompt": "Has heart disease[1] or does not have heart disease[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "The individual has a heart disease",
+                "0": "The individual does not have a heart disease"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        },
+        "hypertension": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical data analysis.",
+                "task_prompt": "Based on the health attributes of the individual, please predict the likelihood of them having hypertension.",
+                "answer_prompt": "Has hypertension[1] or does not have hypertension[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "The individual does not have hypertension",
+                "1": "The individual has hypertension"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        }
+    }
+}

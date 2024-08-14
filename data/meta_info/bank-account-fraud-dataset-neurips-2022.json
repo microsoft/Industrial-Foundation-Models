@@ -1,0 +1,424 @@
+{
+    "basic_info": {
+        "row_num": 1000000,
+        "col_num": 34,
+        "label_candidates": [
+            "fraud_bool",
+            "income",
+            "credit_risk_score",
+            "proposed_credit_limit",
+            "device_fraud_count",
+            "payment_type",
+            "employment_status",
+            "housing_status"
+        ],
+        "valid_feature_num": 34,
+        "num_features": [
+            "income",
+            "name_email_similarity",
+            "prev_address_months_count",
+            "current_address_months_count",
+            "customer_age",
+            "days_since_request",
+            "intended_balcon_amount",
+            "zip_count_4w",
+            "velocity_6h",
+            "velocity_24h",
+            "velocity_4w",
+            "bank_branch_count_8w",
+            "date_of_birth_distinct_emails_4w",
+            "credit_risk_score",
+            "bank_months_count",
+            "proposed_credit_limit",
+            "session_length_in_minutes",
+            "device_distinct_emails_8w",
+            "device_fraud_count"
+        ],
+        "cat_features": [
+            "payment_type",
+            "employment_status",
+            "email_is_free",
+            "housing_status",
+            "phone_home_valid",
+            "phone_mobile_valid",
+            "has_other_cards",
+            "foreign_request",
+            "source",
+            "device_os",
+            "keep_alive_session",
+            "month",
+            "fraud_bool"
+        ],
+        "other_features": [
+            "x1",
+            "x2"
+        ],
+        "tags": [
+            "finance",
+            "banking",
+            "classification",
+            "tabular",
+            "ml ethics"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/sgpjesus/bank-account-fraud-dataset-neurips-2022"
+    },
+    "feature_info": {
+        "fraud_bool": {
+            "description": "Indicates whether the transaction is fraudulent (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The transaction is not fraudulent",
+                "1": "The transaction is fraudulent"
+            }
+        },
+        "income": {
+            "description": "Income of the customer",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "name_email_similarity": {
+            "description": "Similarity between the customer's name and their email",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "prev_address_months_count": {
+            "description": "Number of months the customer has lived at their previous address",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "current_address_months_count": {
+            "description": "Number of months the customer has lived at their current address",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "customer_age": {
+            "description": "Age of the customer",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "days_since_request": {
+            "description": "Number of days since the last request",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "intended_balcon_amount": {
+            "description": "The intended amount to be transferred to the bank account",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "payment_type": {
+            "description": "Type of the payment",
+            "type": "categorical",
+            "value_dict": {
+                "AB": "Payment type AB",
+                "AA": "Payment type AA",
+                "AC": "Payment type AC",
+                "AD": "Payment type AD",
+                "AE": "Payment type AE"
+            }
+        },
+        "zip_count_4w": {
+            "description": "Number of transactions from the same zip code in the last 4 weeks",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "velocity_6h": {
+            "description": "Number of transactions in the last 6 hours",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "velocity_24h": {
+            "description": "Number of transactions in the last 24 hours",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "velocity_4w": {
+            "description": "Number of transactions in the last 4 weeks",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "bank_branch_count_8w": {
+            "description": "Number of transactions at the bank branch in the last 8 weeks",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "date_of_birth_distinct_emails_4w": {
+            "description": "Number of distinct emails associated with the same date of birth in the last 4 weeks",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "employment_status": {
+            "description": "Employment status of the customer",
+            "type": "categorical",
+            "value_dict": {
+                "CC": "Employment status CC",
+                "CA": "Employment status CA",
+                "CB": "Employment status CB",
+                "CF": "Employment status CF",
+                "CD": "Employment status CD",
+                "CE": "Employment status CE",
+                "CG": "Employment status CG"
+            }
+        },
+        "credit_risk_score": {
+            "description": "Credit risk score of the customer",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "email_is_free": {
+            "description": "Whether the email used is a free email service (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The email used is not a free email service",
+                "1": "The email used is a free email service"
+            }
+        },
+        "housing_status": {
+            "description": "Housing status of the customer",
+            "type": "categorical",
+            "value_dict": {
+                "BC": "Housing status BC",
+                "BB": "Housing status BB",
+                "BA": "Housing status BA",
+                "BE": "Housing status BE",
+                "BD": "Housing status BD",
+                "BF": "Housing status BF",
+                "BG": "Housing status BG"
+            }
+        },
+        "phone_home_valid": {
+            "description": "Whether the home phone number is valid (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The home phone number is not valid",
+                "1": "The home phone number is valid"
+            }
+        },
+        "phone_mobile_valid": {
+            "description": "Whether the mobile phone number is valid (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The mobile phone number is not valid",
+                "1": "The mobile phone number is valid"
+            }
+        },
+        "bank_months_count": {
+            "description": "Number of months the customer has been with the bank",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "has_other_cards": {
+            "description": "Whether the customer has other cards (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The customer does not have other cards",
+                "1": "The customer has other cards"
+            }
+        },
+        "proposed_credit_limit": {
+            "description": "Proposed credit limit for the customer",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "foreign_request": {
+            "description": "Whether the request is from a foreign country (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The request is not from a foreign country",
+                "1": "The request is from a foreign country"
+            }
+        },
+        "source": {
+            "description": "Source of the transaction",
+            "type": "categorical",
+            "value_dict": {
+                "INTERNET": "The transaction was made on the internet",
+                "TELEAPP": "The transaction was made via a teleapp"
+            }
+        },
+        "session_length_in_minutes": {
+            "description": "Length of the session in minutes",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "device_os": {
+            "description": "Operating system of the device used",
+            "type": "categorical",
+            "value_dict": {
+                "other": "The operating system of the device is other",
+                "windows": "The operating system of the device is Windows",
+                "macintosh": "The operating system of the device is Macintosh",
+                "linux": "The operating system of the device is Linux",
+                "x11": "The operating system of the device is X11"
+            }
+        },
+        "keep_alive_session": {
+            "description": "Whether the session was kept alive (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The session was kept alive",
+                "0": "The session was not kept alive"
+            }
+        },
+        "device_distinct_emails_8w": {
+            "description": "Number of distinct emails used from the same device in the last 8 weeks",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "device_fraud_count": {
+            "description": "Number of fraudulent transactions made from the same device",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "month": {
+            "description": "Month of the transaction",
+            "type": "categorical",
+            "value_dict": {
+                "3": "The transaction was made in March",
+                "5": "The transaction was made in May",
+                "4": "The transaction was made in April",
+                "2": "The transaction was made in February",
+                "7": "The transaction was made in July",
+                "6": "The transaction was made in June",
+                "1": "The transaction was made in January",
+                "0": "The transaction was made in an unknown month"
+            }
+        },
+        "x1": {
+            "description": "Unknown feature 1",
+            "type": "other"
+        },
+        "x2": {
+            "description": "Unknown feature 2",
+            "type": "other"
+        }
+    },
+    "task_info": {
+        "fraud_bool": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in financial fraud detection.",
+                "task_prompt": "Based on the features of the bank transaction, please predict if the transaction is fraudulent.",
+                "answer_prompt": "The transaction is fraudulent[1] or The transaction is not fraudulent[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "The transaction is not fraudulent",
+                "1": "The transaction is fraudulent"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "income": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in finance.",
+                "task_prompt": "Based on the features of the bank transaction, please predict the income.",
+                "answer_prompt": "What is the predicted income?"
+            }
+        },
+        "credit_risk_score": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in credit risk assessment.",
+                "task_prompt": "Based on the features of the bank transaction, please predict the credit risk score.",
+                "answer_prompt": "What is the predicted credit risk score?"
+            }
+        },
+        "proposed_credit_limit": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in credit limit assessment.",
+                "task_prompt": "Based on the features of the bank transaction, please predict the proposed credit limit.",
+                "answer_prompt": "What is the predicted proposed credit limit?"
+            }
+        },
+        "device_fraud_count": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in device fraud detection.",
+                "task_prompt": "Based on the features of the bank transaction, please predict the device fraud count.",
+                "answer_prompt": "What is the predicted device fraud count?"
+            }
+        },
+        "payment_type": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in payment type classification.",
+                "task_prompt": "Based on the features of the bank transaction, please predict the payment type.",
+                "answer_prompt": "Is it Payment type AB[0], AA[1], AC[2], AD[3], or AE[4]?"
+            },
+            "class_num": 5,
+            "class_value_dict": {
+                "AB": "Payment type AB",
+                "AA": "Payment type AA",
+                "AC": "Payment type AC",
+                "AD": "Payment type AD",
+                "AE": "Payment type AE"
+            },
+            "class_index_dict": {
+                "AB": 0,
+                "AA": 1,
+                "AC": 2,
+                "AD": 3,
+                "AE": 4
+            }
+        },
+        "employment_status": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in employment status classification.",
+                "task_prompt": "Based on the features of the bank transaction, please predict the employment status.",
+                "answer_prompt": "Is it Employment status CC[0], CA[1], CB[2], CF[3], CD[4], CE[5], or CG[6]?"
+            },
+            "class_num": 7,
+            "class_value_dict": {
+                "CC": "Employment status CC",
+                "CA": "Employment status CA",
+                "CB": "Employment status CB",
+                "CF": "Employment status CF",
+                "CD": "Employment status CD",
+                "CE": "Employment status CE",
+                "CG": "Employment status CG"
+            },
+            "class_index_dict": {
+                "CC": 0,
+                "CA": 1,
+                "CB": 2,
+                "CF": 3,
+                "CD": 4,
+                "CE": 5,
+                "CG": 6
+            }
+        },
+        "housing_status": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in housing status classification.",
+                "task_prompt": "Based on the features of the bank transaction, please predict the housing status.",
+                "answer_prompt": "Is it Housing status BC[0], BB[1], BA[2], BE[3], BD[4], BF[5], or BG[6]?"
+            },
+            "class_num": 7,
+            "class_value_dict": {
+                "BC": "Housing status BC",
+                "BB": "Housing status BB",
+                "BA": "Housing status BA",
+                "BE": "Housing status BE",
+                "BD": "Housing status BD",
+                "BF": "Housing status BF",
+                "BG": "Housing status BG"
+            },
+            "class_index_dict": {
+                "BC": 0,
+                "BB": 1,
+                "BA": 2,
+                "BE": 3,
+                "BD": 4,
+                "BF": 5,
+                "BG": 6
+            }
+        }
+    }
+}

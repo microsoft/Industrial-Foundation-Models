@@ -1,0 +1,293 @@
+{
+    "basic_info": {
+        "row_num": 1718,
+        "col_num": 17,
+        "label_candidates": [
+            "Class",
+            "AREA",
+            "PERIMETER",
+            "MAJOR_AXIS",
+            "MINOR_AXIS",
+            "ECCENTRICITY",
+            "EQDIASQ",
+            "SOLIDITY",
+            "CONVEX_AREA",
+            "EXTENT",
+            "ASPECT_RATIO",
+            "ROUNDNESS",
+            "COMPACTNESS",
+            "SHAPEFACTOR_1",
+            "SHAPEFACTOR_2",
+            "SHAPEFACTOR_3",
+            "SHAPEFACTOR_4"
+        ],
+        "valid_feature_num": 17,
+        "num_features": [
+            "AREA",
+            "PERIMETER",
+            "MAJOR_AXIS",
+            "MINOR_AXIS",
+            "ECCENTRICITY",
+            "EQDIASQ",
+            "SOLIDITY",
+            "CONVEX_AREA",
+            "EXTENT",
+            "ASPECT_RATIO",
+            "ROUNDNESS",
+            "COMPACTNESS",
+            "SHAPEFACTOR_1",
+            "SHAPEFACTOR_2",
+            "SHAPEFACTOR_3",
+            "SHAPEFACTOR_4"
+        ],
+        "cat_features": [
+            "Class"
+        ],
+        "other_features": [],
+        "tags": [
+            "nutrition",
+            "beginner",
+            "data cleaning",
+            "classification",
+            "food"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/amirhosseinmirzaie/pistachio-types-detection"
+    },
+    "feature_info": {
+        "AREA": {
+            "description": "The area of the pistachio in the image, likely in pixel units",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "PERIMETER": {
+            "description": "The perimeter of the pistachio in the image, likely in pixel units",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "MAJOR_AXIS": {
+            "description": "The length of the major axis of the pistachio in the image, likely in pixel units",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "MINOR_AXIS": {
+            "description": "The length of the minor axis of the pistachio in the image, likely in pixel units",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "ECCENTRICITY": {
+            "description": "The eccentricity of the pistachio, a measure of how much the shape deviates from a circle",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "EQDIASQ": {
+            "description": "The equivalent diameter of a circle with the same area as the pistachio, likely in pixel units",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "SOLIDITY": {
+            "description": "The solidity of the pistachio, a measure of the spatial density of the shape",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "CONVEX_AREA": {
+            "description": "The area of the smallest convex polygon that can contain the area of the pistachio, likely in pixel units",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "EXTENT": {
+            "description": "The ratio of the pistachio area to the area of the bounding box",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "ASPECT_RATIO": {
+            "description": "The ratio of the major axis length to the minor axis length",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "ROUNDNESS": {
+            "description": "A measure of the roundness of the pistachio",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "COMPACTNESS": {
+            "description": "A measure of the compactness of the pistachio",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "SHAPEFACTOR_1": {
+            "description": "A shape factor of the pistachio, specific meaning unknown",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "SHAPEFACTOR_2": {
+            "description": "A shape factor of the pistachio, specific meaning unknown",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "SHAPEFACTOR_3": {
+            "description": "A shape factor of the pistachio, specific meaning unknown",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "SHAPEFACTOR_4": {
+            "description": "A shape factor of the pistachio, specific meaning unknown",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "Class": {
+            "description": "The type of the pistachio",
+            "type": "categorical",
+            "value_dict": {
+                "Kirmizi_Pistachio": "The pistachio is of the Kirmizi variety",
+                "Siit_Pistachio": "The pistachio is of the Siit variety"
+            }
+        }
+    },
+    "task_info": {
+        "Class": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in pistachio classification.",
+                "task_prompt": "Based on the features of the pistachio, please predict the type of pistachio.",
+                "answer_prompt": "Kirmizi_Pistachio[0] or Siit_Pistachio[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "Kirmizi_Pistachio": "The pistachio is of the Kirmizi variety",
+                "Siit_Pistachio": "The pistachio is of the Siit variety"
+            },
+            "class_index_dict": {
+                "Kirmizi_Pistachio": 0,
+                "Siit_Pistachio": 1
+            }
+        },
+        "AREA": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in pistachio morphology.",
+                "task_prompt": "Based on the features of the pistachio, please predict the area.",
+                "answer_prompt": "What is the area value?"
+            }
+        },
+        "PERIMETER": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in pistachio morphology.",
+                "task_prompt": "Based on the features of the pistachio, please predict the perimeter.",
+                "answer_prompt": "What is the perimeter value?"
+            }
+        },
+        "MAJOR_AXIS": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in pistachio morphology.",
+                "task_prompt": "Based on the features of the pistachio, please predict the major axis.",
+                "answer_prompt": "What is the major axis value?"
+            }
+        },
+        "MINOR_AXIS": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in pistachio morphology.",
+                "task_prompt": "Based on the features of the pistachio, please predict the minor axis.",
+                "answer_prompt": "What is the minor axis value?"
+            }
+        },
+        "ECCENTRICITY": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in pistachio morphology.",
+                "task_prompt": "Based on the features of the pistachio, please predict the eccentricity.",
+                "answer_prompt": "What is the eccentricity value?"
+            }
+        },
+        "EQDIASQ": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in pistachio morphology.",
+                "task_prompt": "Based on the features of the pistachio, please predict the equivalent diameter of a square.",
+                "answer_prompt": "What is the equivalent diameter of a square value?"
+            }
+        },
+        "SOLIDITY": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in pistachio morphology.",
+                "task_prompt": "Based on the features of the pistachio, please predict the solidity.",
+                "answer_prompt": "What is the solidity value?"
+            }
+        },
+        "CONVEX_AREA": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in pistachio morphology.",
+                "task_prompt": "Based on the features of the pistachio, please predict the convex area.",
+                "answer_prompt": "What is the convex area value?"
+            }
+        },
+        "EXTENT": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in pistachio morphology.",
+                "task_prompt": "Based on the features of the pistachio, please predict the extent.",
+                "answer_prompt": "What is the extent value?"
+            }
+        },
+        "ASPECT_RATIO": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in pistachio morphology.",
+                "task_prompt": "Based on the features of the pistachio, please predict the aspect ratio.",
+                "answer_prompt": "What is the aspect ratio value?"
+            }
+        },
+        "ROUNDNESS": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in pistachio morphology.",
+                "task_prompt": "Based on the features of the pistachio, please predict the roundness.",
+                "answer_prompt": "What is the roundness value?"
+            }
+        },
+        "COMPACTNESS": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in pistachio morphology.",
+                "task_prompt": "Based on the features of the pistachio, please predict the compactness.",
+                "answer_prompt": "What is the compactness value?"
+            }
+        },
+        "SHAPEFACTOR_1": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in pistachio morphology.",
+                "task_prompt": "Based on the features of the pistachio, please predict the shape factor 1.",
+                "answer_prompt": "What is the shape factor 1 value?"
+            }
+        },
+        "SHAPEFACTOR_2": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in pistachio morphology.",
+                "task_prompt": "Based on the features of the pistachio, please predict the shape factor 2.",
+                "answer_prompt": "What is the shape factor 2 value?"
+            }
+        },
+        "SHAPEFACTOR_3": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in pistachio morphology.",
+                "task_prompt": "Based on the features of the pistachio, please predict the shape factor 3.",
+                "answer_prompt": "What is the shape factor 3 value?"
+            }
+        },
+        "SHAPEFACTOR_4": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in pistachio morphology.",
+                "task_prompt": "Based on the features of the pistachio, please predict the shape factor 4.",
+                "answer_prompt": "What is the shape factor 4 value?"
+            }
+        }
+    }
+}

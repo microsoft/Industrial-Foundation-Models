@@ -1,0 +1,517 @@
+{
+    "basic_info": {
+        "row_num": 3047,
+        "col_num": 34,
+        "label_candidates": [
+            "target_deathrate",
+            "avgdeathsperyear",
+            "incidencerate",
+            "povertypercent",
+            "medincome",
+            "pctunemployed16_over",
+            "pctprivatecoverage",
+            "pctpubliccoverage",
+            "birthrate",
+            "pctwhite",
+            "pctblack",
+            "pctasian",
+            "pctotherrace",
+            "pctmarriedhouseholds",
+            "pctemployed16_over",
+            "pctpubliccoveragealone",
+            "pctprivatecoveragealone",
+            "pctempprivcoverage",
+            "pctbachdeg25_over",
+            "pcths25_over",
+            "pctbachdeg18_24",
+            "pcths18_24",
+            "pctsomecol18_24",
+            "pctnohs18_24",
+            "percentmarried",
+            "medianagefemale",
+            "medianagemale",
+            "medianage",
+            "studypercap",
+            "popest2015",
+            "avganncount"
+        ],
+        "valid_feature_num": 33,
+        "num_features": [
+            "avganncount",
+            "avgdeathsperyear",
+            "incidencerate",
+            "medincome",
+            "popest2015",
+            "povertypercent",
+            "studypercap",
+            "medianage",
+            "medianagemale",
+            "medianagefemale",
+            "percentmarried",
+            "pctnohs18_24",
+            "pcths18_24",
+            "pctsomecol18_24",
+            "pctbachdeg18_24",
+            "pcths25_over",
+            "pctbachdeg25_over",
+            "pctemployed16_over",
+            "pctunemployed16_over",
+            "pctprivatecoverage",
+            "pctprivatecoveragealone",
+            "pctempprivcoverage",
+            "pctpubliccoverage",
+            "pctpubliccoveragealone",
+            "pctwhite",
+            "pctblack",
+            "pctasian",
+            "pctotherrace",
+            "pctmarriedhouseholds",
+            "birthrate",
+            "target_deathrate"
+        ],
+        "cat_features": [
+            "binnedinc",
+            "geography"
+        ],
+        "other_features": [],
+        "tags": [
+            "housing",
+            "health",
+            "data analytics",
+            "linear regression",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/thedevastator/uncovering-trends-in-health-outcomes-and-socioec"
+    },
+    "feature_info": {
+        "index": {
+            "description": "Unique identifier of the record",
+            "type": "useless"
+        },
+        "avganncount": {
+            "description": "Average annual count of cancer cases",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "avgdeathsperyear": {
+            "description": "Average number of deaths per year",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "target_deathrate": {
+            "description": "Death rate per 100,000 population",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "incidencerate": {
+            "description": "Incidence rate per 100,000 population",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "medincome": {
+            "description": "Median income per county (in US dollars)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "popest2015": {
+            "description": "Population estimate for 2015",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "povertypercent": {
+            "description": "Percentage of population in poverty",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "studypercap": {
+            "description": "Per capita cancer studies",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "binnedinc": {
+            "description": "Income range for a given area",
+            "type": "categorical",
+            "value_dict": {
+                "(61494.5, 125635]": "Income range from $61,494.5 to $125,635",
+                "(48021.6, 51046.4]": "Income range from $48,021.6 to $51,046.4",
+                "(42724.4, 45201]": "Income range from $42,724.4 to $45,201",
+                "(51046.4, 54545.6]": "Income range from $51,046.4 to $54,545.6",
+                "(37413.8, 40362.7]": "Income range from $37,413.8 to $40,362.7",
+                "(40362.7, 42724.4]": "Income range from $40,362.7 to $42,724.4",
+                "(54545.6, 61494.5]": "Income range from $54,545.6 to $61,494.5",
+                "(34218.1, 37413.8]": "Income range from $34,218.1 to $37,413.8",
+                "[22640, 34218.1]": "Income range from $22,640 to $34,218.1",
+                "(45201, 48021.6]": "Income range from $45,201 to $48,021.6"
+            }
+        },
+        "medianage": {
+            "description": "Median age of residents",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "medianagemale": {
+            "description": "Median age of male residents",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "medianagefemale": {
+            "description": "Median age of female residents",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "geography": {
+            "description": "Geographical location",
+            "type": "categorical"
+        },
+        "percentmarried": {
+            "description": "Percentage of married residents",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "pctnohs18_24": {
+            "description": "Percentage of residents aged 18-24 without a high school diploma",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "pcths18_24": {
+            "description": "Percentage of residents aged 18-24 with a high school diploma",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "pctsomecol18_24": {
+            "description": "Percentage of residents aged 18-24 with some college education",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "pctbachdeg18_24": {
+            "description": "Percentage of residents aged 18-24 with a Bachelors degree",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "pcths25_over": {
+            "description": "Percentage of residents aged 25 and over with a high school diploma",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "pctbachdeg25_over": {
+            "description": "Percentage of residents aged 25 and over with a Bachelors degree",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "pctemployed16_over": {
+            "description": "Percentage of residents aged 16 and over who are employed",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "pctunemployed16_over": {
+            "description": "Percentage of residents aged 16 and over who are unemployed",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "pctprivatecoverage": {
+            "description": "Percentage of residents with private health coverage",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "pctprivatecoveragealone": {
+            "description": "Percentage of residents with private health coverage only",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "pctempprivcoverage": {
+            "description": "Percentage of residents with employer provided private health coverage",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "pctpubliccoverage": {
+            "description": "Percentage of residents with public health coverage",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "pctpubliccoveragealone": {
+            "description": "Percentage of residents with public health coverage only",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "pctwhite": {
+            "description": "Percentage of white residents",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "pctblack": {
+            "description": "Percentage of black residents",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "pctasian": {
+            "description": "Percentage of Asian residents",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "pctotherrace": {
+            "description": "Percentage of residents of other race",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "pctmarriedhouseholds": {
+            "description": "Percentage of households that are married",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "birthrate": {
+            "description": "Birth rate per 1,000 population",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "target_deathrate": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health outcomes and socioeconomics.",
+                "task_prompt": "Based on the socio-economic factors, please predict the target death rate.",
+                "answer_prompt": "The predicted target death rate is."
+            }
+        },
+        "avgdeathsperyear": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health outcomes and socioeconomics.",
+                "task_prompt": "Based on the socio-economic factors, please predict the average deaths per year.",
+                "answer_prompt": "The predicted average deaths per year is."
+            }
+        },
+        "incidencerate": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health outcomes and socioeconomics.",
+                "task_prompt": "Based on the socio-economic factors, please predict the incidence rate.",
+                "answer_prompt": "The predicted incidence rate is."
+            }
+        },
+        "povertypercent": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health outcomes and socioeconomics.",
+                "task_prompt": "Based on the socio-economic factors, please predict the poverty percentage.",
+                "answer_prompt": "The predicted poverty percentage is."
+            }
+        },
+        "medincome": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health outcomes and socioeconomics.",
+                "task_prompt": "Based on the socio-economic factors, please predict the median income.",
+                "answer_prompt": "The predicted median income is."
+            }
+        },
+        "pctunemployed16_over": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health outcomes and socioeconomics.",
+                "task_prompt": "Based on the socio-economic factors, please predict the percentage of unemployment for those over 16.",
+                "answer_prompt": "The predicted percentage of unemployment for those over 16 is."
+            }
+        },
+        "pctprivatecoverage": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health outcomes and socioeconomics.",
+                "task_prompt": "Based on the socio-economic factors, please predict the percentage of private coverage.",
+                "answer_prompt": "The predicted percentage of private coverage is."
+            }
+        },
+        "pctpubliccoverage": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health outcomes and socioeconomics.",
+                "task_prompt": "Based on the socio-economic factors, please predict the percentage of public coverage.",
+                "answer_prompt": "The predicted percentage of public coverage is."
+            }
+        },
+        "birthrate": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health outcomes and socioeconomics.",
+                "task_prompt": "Based on the socio-economic factors, please predict the birth rate.",
+                "answer_prompt": "The predicted birth rate is."
+            }
+        },
+        "pctwhite": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health outcomes and socioeconomics.",
+                "task_prompt": "Based on the socio-economic factors, please predict the percentage of white population.",
+                "answer_prompt": "The predicted percentage of white population is."
+            }
+        },
+        "pctblack": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health outcomes and socioeconomics.",
+                "task_prompt": "Based on the socio-economic factors, please predict the percentage of black population.",
+                "answer_prompt": "The predicted percentage of black population is."
+            }
+        },
+        "pctasian": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health outcomes and socioeconomics.",
+                "task_prompt": "Based on the socio-economic factors, please predict the percentage of Asian population.",
+                "answer_prompt": "The predicted percentage of Asian population is."
+            }
+        },
+        "pctotherrace": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health outcomes and socioeconomics.",
+                "task_prompt": "Based on the socio-economic factors, please predict the percentage of other races.",
+                "answer_prompt": "The predicted percentage of other races is."
+            }
+        },
+        "pctmarriedhouseholds": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health outcomes and socioeconomics.",
+                "task_prompt": "Based on the socio-economic factors, please predict the percentage of married households.",
+                "answer_prompt": "The predicted percentage of married households is."
+            }
+        },
+        "pctemployed16_over": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health outcomes and socioeconomics.",
+                "task_prompt": "Based on the socio-economic factors, please predict the percentage of employment for those over 16.",
+                "answer_prompt": "The predicted percentage of employment for those over 16 is."
+            }
+        },
+        "pctpubliccoveragealone": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health outcomes and socioeconomics.",
+                "task_prompt": "Based on the socio-economic factors, please predict the percentage of public coverage alone.",
+                "answer_prompt": "The predicted percentage of public coverage alone is."
+            }
+        },
+        "pctprivatecoveragealone": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health outcomes and socioeconomics.",
+                "task_prompt": "Based on the socio-economic factors, please predict the percentage of private coverage alone.",
+                "answer_prompt": "The predicted percentage of private coverage alone is."
+            }
+        },
+        "pctempprivcoverage": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health outcomes and socioeconomics.",
+                "task_prompt": "Based on the socio-economic factors, please predict the percentage of employer provided private coverage.",
+                "answer_prompt": "The predicted percentage of employer provided private coverage is."
+            }
+        },
+        "pctbachdeg25_over": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health outcomes and socioeconomics.",
+                "task_prompt": "Based on the socio-economic factors, please predict the percentage of individuals over 25 with a bachelor degree.",
+                "answer_prompt": "The predicted percentage of individuals over 25 with a bachelor degree is."
+            }
+        },
+        "pcths25_over": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health outcomes and socioeconomics.",
+                "task_prompt": "Based on the socio-economic factors, please predict the percentage of individuals over 25 with a high school degree.",
+                "answer_prompt": "The predicted percentage of individuals over 25 with a high school degree is."
+            }
+        },
+        "pctbachdeg18_24": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health outcomes and socioeconomics.",
+                "task_prompt": "Based on the socio-economic factors, please predict the percentage of individuals between 18 and 24 with a bachelor degree.",
+                "answer_prompt": "The predicted percentage of individuals between 18 and 24 with a bachelor degree is."
+            }
+        },
+        "pcths18_24": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health outcomes and socioeconomics.",
+                "task_prompt": "Based on the socio-economic factors, please predict the percentage of individuals between 18 and 24 with a high school degree.",
+                "answer_prompt": "The predicted percentage of individuals between 18 and 24 with a high school degree is."
+            }
+        },
+        "pctsomecol18_24": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health outcomes and socioeconomics.",
+                "task_prompt": "Based on the socio-economic factors, please predict the percentage of individuals between 18 and 24 with some college education.",
+                "answer_prompt": "The predicted percentage of individuals between 18 and 24 with some college education is."
+            }
+        },
+        "pctnohs18_24": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health outcomes and socioeconomics.",
+                "task_prompt": "Based on the socio-economic factors, please predict the percentage of individuals between 18 and 24 with no high school degree.",
+                "answer_prompt": "The predicted percentage of individuals between 18 and 24 with no high school degree is."
+            }
+        },
+        "percentmarried": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health outcomes and socioeconomics.",
+                "task_prompt": "Based on the socio-economic factors, please predict the percentage of married individuals.",
+                "answer_prompt": "The predicted percentage of married individuals is."
+            }
+        },
+        "medianagefemale": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health outcomes and socioeconomics.",
+                "task_prompt": "Based on the socio-economic factors, please predict the median age of females.",
+                "answer_prompt": "The predicted median age of females is."
+            }
+        },
+        "medianagemale": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health outcomes and socioeconomics.",
+                "task_prompt": "Based on the socio-economic factors, please predict the median age of males.",
+                "answer_prompt": "The predicted median age of males is."
+            }
+        },
+        "medianage": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health outcomes and socioeconomics.",
+                "task_prompt": "Based on the socio-economic factors, please predict the median age.",
+                "answer_prompt": "The predicted median age is."
+            }
+        },
+        "studypercap": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health outcomes and socioeconomics.",
+                "task_prompt": "Based on the socio-economic factors, please predict the study per capita.",
+                "answer_prompt": "The predicted study per capita is."
+            }
+        },
+        "popest2015": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health outcomes and socioeconomics.",
+                "task_prompt": "Based on the socio-economic factors, please predict the population estimate in 2015.",
+                "answer_prompt": "The predicted population estimate in 2015 is."
+            }
+        },
+        "avganncount": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health outcomes and socioeconomics.",
+                "task_prompt": "Based on the socio-economic factors, please predict the average annual count.",
+                "answer_prompt": "The predicted average annual count is."
+            }
+        }
+    }
+}

@@ -1,0 +1,110 @@
+{
+    "basic_info": {
+        "row_num": 1000,
+        "col_num": 7,
+        "label_candidates": [
+            "ImmersionLevel",
+            "MotionSickness",
+            "Duration",
+            "Age"
+        ],
+        "valid_feature_num": 6,
+        "num_features": [
+            "Age",
+            "Duration",
+            "MotionSickness",
+            "ImmersionLevel"
+        ],
+        "cat_features": [
+            "Gender",
+            "VRHeadset"
+        ],
+        "other_features": [],
+        "tags": [
+            "science and technology",
+            "data cleaning",
+            "classification",
+            "deep learning",
+            "english"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/aakashjoshi123/virtual-reality-experiences"
+    },
+    "feature_info": {
+        "UserID": {
+            "description": "Unique identifier for each user",
+            "type": "useless"
+        },
+        "Age": {
+            "description": "Age of the user in years",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Gender": {
+            "description": "Gender of the user",
+            "type": "categorical",
+            "value_dict": {
+                "Male": "The user is male",
+                "Female": "The user is female",
+                "Other": "The user does not identify as male or female"
+            }
+        },
+        "VRHeadset": {
+            "description": "Type of virtual reality headset used by the user",
+            "type": "categorical",
+            "value_dict": {
+                "HTC Vive": "The user used an HTC Vive headset",
+                "PlayStation VR": "The user used a PlayStation VR headset",
+                "Oculus Rift": "The user used an Oculus Rift headset"
+            }
+        },
+        "Duration": {
+            "description": "Duration of the virtual reality experience in minutes",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "MotionSickness": {
+            "description": "Level of motion sickness experienced by the user (scale not specified)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "ImmersionLevel": {
+            "description": "Level of immersion experienced by the user (scale not specified)",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "ImmersionLevel": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in virtual reality experiences analysis.",
+                "task_prompt": "Based on the user's age, gender, type of VR headset used, duration of use, and level of motion sickness, please predict the immersion level.",
+                "answer_prompt": "The predicted immersion level is."
+            }
+        },
+        "MotionSickness": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in virtual reality experiences analysis.",
+                "task_prompt": "Based on the user's age, gender, type of VR headset used, and duration of use, please predict the level of motion sickness.",
+                "answer_prompt": "The predicted level of motion sickness is."
+            }
+        },
+        "Duration": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in virtual reality experiences analysis.",
+                "task_prompt": "Based on the user's age, gender, type of VR headset used, and level of motion sickness, please predict the duration of use.",
+                "answer_prompt": "The predicted duration of use is."
+            }
+        },
+        "Age": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in virtual reality experiences analysis.",
+                "task_prompt": "Based on the user's gender, type of VR headset used, duration of use, level of motion sickness, and immersion level, please predict the user's age.",
+                "answer_prompt": "The predicted age is."
+            }
+        }
+    }
+}

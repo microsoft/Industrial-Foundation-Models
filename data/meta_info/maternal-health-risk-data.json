@@ -1,0 +1,140 @@
+{
+    "basic_info": {
+        "row_num": 1014,
+        "col_num": 7,
+        "label_candidates": [
+            "RiskLevel",
+            "Age",
+            "SystolicBP",
+            "DiastolicBP",
+            "BS",
+            "BodyTemp",
+            "HeartRate"
+        ],
+        "valid_feature_num": 7,
+        "num_features": [
+            "Age",
+            "SystolicBP",
+            "DiastolicBP",
+            "BS",
+            "BodyTemp",
+            "HeartRate"
+        ],
+        "cat_features": [
+            "RiskLevel"
+        ],
+        "other_features": [],
+        "tags": [
+            "healthcare",
+            "public health",
+            "health",
+            "regression",
+            "health conditions"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/csafrit2/maternal-health-risk-data"
+    },
+    "feature_info": {
+        "Age": {
+            "description": "The age of the person in years",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "SystolicBP": {
+            "description": "The systolic blood pressure of the person in mmHg",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "DiastolicBP": {
+            "description": "The diastolic blood pressure of the person in mmHg",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "BS": {
+            "description": "Blood sugar level of the person",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "BodyTemp": {
+            "description": "The body temperature of the person in Fahrenheit",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "HeartRate": {
+            "description": "The heart rate of the person in beats per minute",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "RiskLevel": {
+            "description": "The level of health risk (high or low)",
+            "type": "categorical",
+            "value_dict": {
+                "high risk": "The health risk is high",
+                "low risk": "The health risk is low",
+                "mid risk": "The health risk is medium"
+            }
+        }
+    },
+    "task_info": {
+        "RiskLevel": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in healthcare and risk assessment.",
+                "task_prompt": "Based on the health indicators such as age, blood pressure, blood sugar, body temperature, and heart rate of the patient, please predict the risk level of maternal health.",
+                "answer_prompt": "High risk[0], medium risk[1] or low risk[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "high risk": "The health risk is high",
+                "mid risk": "The health risk is medium",
+                "low risk": "The health risk is low"
+            },
+            "class_index_dict": {
+                "high risk": 0,
+                "mid risk": 1,
+                "low risk": 2
+            }
+        },
+        "Age": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in healthcare and age prediction.",
+                "task_prompt": "Based on the health indicators such as blood pressure, blood sugar, body temperature, heart rate, and risk level of the patient, please predict the age of the patient."
+            }
+        },
+        "SystolicBP": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in healthcare and blood pressure prediction.",
+                "task_prompt": "Based on the health indicators such as age, blood sugar, body temperature, heart rate, and risk level of the patient, please predict the systolic blood pressure of the patient."
+            }
+        },
+        "DiastolicBP": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in healthcare and blood pressure prediction.",
+                "task_prompt": "Based on the health indicators such as age, blood sugar, body temperature, heart rate, and risk level of the patient, please predict the diastolic blood pressure of the patient."
+            }
+        },
+        "BS": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in healthcare and blood sugar prediction.",
+                "task_prompt": "Based on the health indicators such as age, blood pressure, body temperature, heart rate, and risk level of the patient, please predict the blood sugar level of the patient."
+            }
+        },
+        "BodyTemp": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in healthcare and body temperature prediction.",
+                "task_prompt": "Based on the health indicators such as age, blood pressure, blood sugar, heart rate, and risk level of the patient, please predict the body temperature of the patient."
+            }
+        },
+        "HeartRate": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in healthcare and heart rate prediction.",
+                "task_prompt": "Based on the health indicators such as age, blood pressure, blood sugar, body temperature, and risk level of the patient, please predict the heart rate of the patient."
+            }
+        }
+    }
+}

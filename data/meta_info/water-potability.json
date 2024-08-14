@@ -1,0 +1,125 @@
+{
+    "basic_info": {
+        "row_num": 3276,
+        "col_num": 10,
+        "label_candidates": [
+            "Potability",
+            "ph",
+            "Hardness"
+        ],
+        "valid_feature_num": 10,
+        "num_features": [
+            "ph",
+            "Hardness",
+            "Solids",
+            "Chloramines",
+            "Sulfate",
+            "Conductivity",
+            "Organic_carbon",
+            "Trihalomethanes",
+            "Turbidity"
+        ],
+        "cat_features": [
+            "Potability"
+        ],
+        "other_features": [],
+        "tags": [
+            "water bodies",
+            "public health",
+            "earth and nature",
+            "environment",
+            "energy",
+            "beginner",
+            "binary classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/adityakadiwal/water-potability"
+    },
+    "feature_info": {
+        "ph": {
+            "description": "pH of the water (0 to 14)",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Hardness": {
+            "description": "Hardness of the water (mg/L)",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Solids": {
+            "description": "Total dissolved solids (mg/L)",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Chloramines": {
+            "description": "Chloramines amount (ppm)",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Sulfate": {
+            "description": "Sulfate concentration in the water (mg/L)",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Conductivity": {
+            "description": "Electrical conductivity of the water (\u00b5S/cm)",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Organic_carbon": {
+            "description": "Concentration of organic carbon in the water (ppm)",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Trihalomethanes": {
+            "description": "Concentration of Trihalomethanes (\u00b5g/L)",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Turbidity": {
+            "description": "Measure of light emitting properties of water (NTU)",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Potability": {
+            "description": "Indicates if water is safe for human consumption. 1 means Potable (safe), 0 means not potable (unsafe)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The water is not safe for human consumption",
+                "1": "The water is safe for human consumption"
+            }
+        }
+    },
+    "task_info": {
+        "Potability": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in water quality analysis.",
+                "task_prompt": "Based on the features of the water sample, please predict if the water is safe for human consumption.",
+                "answer_prompt": "The water is not safe for human consumption[0] or the water is safe for human consumption[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "The water is not safe for human consumption",
+                "1": "The water is safe for human consumption"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "ph": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in water quality analysis.",
+                "task_prompt": "Based on the features of the water sample, please predict the pH level."
+            }
+        },
+        "Hardness": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in water quality analysis.",
+                "task_prompt": "Based on the features of the water sample, please predict the hardness."
+            }
+        }
+    }
+}

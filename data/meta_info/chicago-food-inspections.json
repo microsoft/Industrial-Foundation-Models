@@ -1,0 +1,184 @@
+{
+    "basic_info": {
+        "row_num": 221468,
+        "col_num": 17,
+        "label_candidates": [
+            "Results",
+            "Risk"
+        ],
+        "valid_feature_num": 16,
+        "num_features": [
+            "Latitude",
+            "Longitude"
+        ],
+        "cat_features": [
+            "DBA Name",
+            "AKA Name",
+            "License #",
+            "Facility Type",
+            "Risk",
+            "Address",
+            "City",
+            "State",
+            "Zip",
+            "Inspection Type",
+            "Results"
+        ],
+        "other_features": [
+            "Inspection Date",
+            "Violations",
+            "Location"
+        ],
+        "tags": [
+            "public health",
+            "classification",
+            "logistic regression",
+            "food",
+            "restaurants"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/tjkyner/chicago-food-inspections"
+    },
+    "feature_info": {
+        "Inspection ID": {
+            "description": "The unique identifier for each inspection",
+            "type": "useless"
+        },
+        "DBA Name": {
+            "description": "The \"Doing Business As\" name of the establishment",
+            "type": "categorical"
+        },
+        "AKA Name": {
+            "description": "The \"Also Known As\" name of the establishment",
+            "type": "categorical"
+        },
+        "License #": {
+            "description": "The license number of the establishment",
+            "type": "categorical"
+        },
+        "Facility Type": {
+            "description": "The type of the establishment (e.g., restaurant, bakery, etc.)",
+            "type": "categorical"
+        },
+        "Risk": {
+            "description": "The level of health risk the establishment poses",
+            "type": "categorical",
+            "value_dict": {
+                "Risk 1 (High)": "The establishment poses a high level of health risk",
+                "Risk 3 (Low)": "The establishment poses a low level of health risk",
+                "Risk 2 (Medium)": "The establishment poses a medium level of health risk",
+                "All": "The establishment poses all levels of health risk"
+            }
+        },
+        "Address": {
+            "description": "The street address of the establishment",
+            "type": "categorical"
+        },
+        "City": {
+            "description": "The city where the establishment is located",
+            "type": "categorical"
+        },
+        "State": {
+            "description": "The state where the establishment is located",
+            "type": "categorical",
+            "value_dict": {
+                "IL": "The establishment is located in Illinois",
+                "WI": "The establishment is located in Wisconsin",
+                "IN": "The establishment is located in Indiana",
+                "NY": "The establishment is located in New York"
+            }
+        },
+        "Zip": {
+            "description": "The zip code where the establishment is located",
+            "type": "categorical"
+        },
+        "Inspection Date": {
+            "description": "The date when the inspection was performed",
+            "type": "other"
+        },
+        "Inspection Type": {
+            "description": "The type of the inspection",
+            "type": "categorical"
+        },
+        "Results": {
+            "description": "The result of the inspection",
+            "type": "categorical",
+            "value_dict": {
+                "Pass": "The establishment passed the inspection",
+                "No Entry": "The inspector could not enter the establishment",
+                "Not Ready": "The establishment was not ready for inspection",
+                "Out of Business": "The establishment is no longer in business",
+                "Fail": "The establishment failed the inspection",
+                "Pass w/ Conditions": "The establishment passed the inspection with conditions",
+                "Business Not Located": "The establishment could not be located"
+            }
+        },
+        "Violations": {
+            "description": "The violations found during the inspection",
+            "type": "other"
+        },
+        "Latitude": {
+            "description": "The latitude of the establishment",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Longitude": {
+            "description": "The longitude of the establishment",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Location": {
+            "description": "The geographical coordinates (latitude, longitude) of the establishment",
+            "type": "other"
+        }
+    },
+    "task_info": {
+        "Results": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in food safety inspections.",
+                "task_prompt": "Based on the features of the establishment, please predict the result of the food safety inspection.",
+                "answer_prompt": "Pass[0], No Entry[1], Not Ready[2], Out of Business[3], Fail[4], Pass w/ Conditions[5], Business Not Located[6]?"
+            },
+            "class_num": 7,
+            "class_value_dict": {
+                "Pass": "The establishment passed the inspection",
+                "No Entry": "The inspector could not enter the establishment",
+                "Not Ready": "The establishment was not ready for inspection",
+                "Out of Business": "The establishment is no longer in business",
+                "Fail": "The establishment failed the inspection",
+                "Pass w/ Conditions": "The establishment passed the inspection with conditions",
+                "Business Not Located": "The establishment could not be located"
+            },
+            "class_index_dict": {
+                "Pass": 0,
+                "No Entry": 1,
+                "Not Ready": 2,
+                "Out of Business": 3,
+                "Fail": 4,
+                "Pass w/ Conditions": 5,
+                "Business Not Located": 6
+            }
+        },
+        "Risk": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in food safety inspections.",
+                "task_prompt": "Based on the features of the establishment, please predict the level of health risk.",
+                "answer_prompt": "Risk 1 (High)[0], Risk 3 (Low)[1], Risk 2 (Medium)[2], All[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "Risk 1 (High)": "The establishment poses a high level of health risk",
+                "Risk 3 (Low)": "The establishment poses a low level of health risk",
+                "Risk 2 (Medium)": "The establishment poses a medium level of health risk",
+                "All": "The establishment poses all levels of health risk"
+            },
+            "class_index_dict": {
+                "Risk 1 (High)": 0,
+                "Risk 3 (Low)": 1,
+                "Risk 2 (Medium)": 2,
+                "All": 3
+            }
+        }
+    }
+}

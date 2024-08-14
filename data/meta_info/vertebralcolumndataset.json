@@ -1,0 +1,107 @@
+{
+    "basic_info": {
+        "row_num": 310,
+        "col_num": 7,
+        "label_candidates": [
+            "class",
+            "degree_spondylolisthesis",
+            "pelvic_radius"
+        ],
+        "valid_feature_num": 7,
+        "num_features": [
+            "pelvic_incidence",
+            "pelvic_tilt",
+            "lumbar_lordosis_angle",
+            "sacral_slope",
+            "pelvic_radius",
+            "degree_spondylolisthesis"
+        ],
+        "cat_features": [
+            "class"
+        ],
+        "other_features": [],
+        "tags": [
+            "public health",
+            "earth and nature",
+            "biology",
+            "medicine",
+            "martial arts",
+            "health conditions",
+            "hospitals and treatment centers"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/caesarlupum/vertebralcolumndataset"
+    },
+    "feature_info": {
+        "pelvic_incidence": {
+            "description": "Measurement of the angle of incidence of the pelvis, in degrees",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "pelvic_tilt": {
+            "description": "Measurement of the tilt of the pelvis, in degrees",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "lumbar_lordosis_angle": {
+            "description": "Measurement of the lordosis angle of the lumbar region, in degrees",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "sacral_slope": {
+            "description": "Measurement of the slope of the sacrum, in degrees",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "pelvic_radius": {
+            "description": "Measurement of the radius of the pelvis, in millimeters",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "degree_spondylolisthesis": {
+            "description": "Measurement of the degree of spondylolisthesis, a condition where a vertebra slips forward onto the bone below it",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "class": {
+            "description": "Classification of the patient condition, either \"Abnormal\" or \"Normal\"",
+            "type": "categorical",
+            "value_dict": {
+                "Abnormal": "The condition of the patient is abnormal, indicating the presence of vertebral column issues",
+                "Normal": "The condition of the patient is normal, indicating no vertebral column issues"
+            }
+        }
+    },
+    "task_info": {
+        "class": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in vertebral column health diagnosis.",
+                "task_prompt": "Based on the features of the patient\u2019s vertebral column, please predict the condition of the patient.",
+                "answer_prompt": "Abnormal[0] or Normal[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "Abnormal": "The condition of the patient is abnormal, indicating the presence of vertebral column issues",
+                "Normal": "The condition of the patient is normal, indicating no vertebral column issues"
+            },
+            "class_index_dict": {
+                "Abnormal": 0,
+                "Normal": 1
+            }
+        },
+        "degree_spondylolisthesis": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in vertebral column health analysis.",
+                "task_prompt": "Based on the features of the patient\u2019s vertebral column, please predict the degree of spondylolisthesis."
+            }
+        },
+        "pelvic_radius": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in vertebral column health analysis.",
+                "task_prompt": "Based on the features of the patient\u2019s vertebral column, please predict the pelvic radius."
+            }
+        }
+    }
+}

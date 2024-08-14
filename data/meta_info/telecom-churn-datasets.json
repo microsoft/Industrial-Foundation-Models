@@ -1,0 +1,254 @@
+{
+    "basic_info": {
+        "row_num": 3333,
+        "col_num": 20,
+        "label_candidates": [
+            "Churn",
+            "Total day charge",
+            "Total eve charge",
+            "Total night charge",
+            "Total intl charge",
+            "Customer service calls",
+            "Total day minutes",
+            "Total eve minutes",
+            "Total night minutes",
+            "Total intl minutes"
+        ],
+        "valid_feature_num": 20,
+        "num_features": [
+            "Account length",
+            "Number vmail messages",
+            "Total day minutes",
+            "Total day calls",
+            "Total day charge",
+            "Total eve minutes",
+            "Total eve calls",
+            "Total eve charge",
+            "Total night minutes",
+            "Total night calls",
+            "Total night charge",
+            "Total intl minutes",
+            "Total intl calls",
+            "Total intl charge",
+            "Customer service calls"
+        ],
+        "cat_features": [
+            "State",
+            "Area code",
+            "International plan",
+            "Voice mail plan",
+            "Churn"
+        ],
+        "other_features": [],
+        "tags": [
+            "business",
+            "classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/mnassrib/telecom-churn-datasets"
+    },
+    "feature_info": {
+        "State": {
+            "description": "The state where the customer is located",
+            "type": "categorical"
+        },
+        "Account length": {
+            "description": "The length of time the customer has been with the company, likely in days",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Area code": {
+            "description": "The area code of the customer\u2019s telephone number",
+            "type": "categorical",
+            "value_dict": {
+                "408": "Area code for parts of Santa Clara County in California",
+                "415": "Area code for San Francisco and its suburbs in Marin County",
+                "510": "Area code for the western portions of the East Bay in California"
+            }
+        },
+        "International plan": {
+            "description": "Whether the customer has an international calling plan",
+            "type": "categorical",
+            "value_dict": {
+                "No": "The customer does not have an international calling plan",
+                "Yes": "The customer has an international calling plan"
+            }
+        },
+        "Voice mail plan": {
+            "description": "Whether the customer has a voice mail feature",
+            "type": "categorical",
+            "value_dict": {
+                "No": "The customer does not have a voice mail feature",
+                "Yes": "The customer has a voice mail feature"
+            }
+        },
+        "Number vmail messages": {
+            "description": "The number of voice mail messages the customer has sent",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Total day minutes": {
+            "description": "Total number of minutes the customer used during the day",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Total day calls": {
+            "description": "Total number of calls the customer made during the day",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Total day charge": {
+            "description": "Charges incurred by the customer for calls during the day",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Total eve minutes": {
+            "description": "Total number of minutes the customer used during the evening",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Total eve calls": {
+            "description": "Total number of calls the customer made during the evening",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Total eve charge": {
+            "description": "Charges incurred by the customer for calls during the evening",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Total night minutes": {
+            "description": "Total number of minutes the customer used during the night",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Total night calls": {
+            "description": "Total number of calls the customer made during the night",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Total night charge": {
+            "description": "Charges incurred by the customer for calls during the night",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Total intl minutes": {
+            "description": "Total number of international minutes the customer used",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Total intl calls": {
+            "description": "Total number of international calls the customer made",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Total intl charge": {
+            "description": "Charges incurred by the customer for international calls",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Customer service calls": {
+            "description": "Number of times the customer called the customer service",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Churn": {
+            "description": "Whether the customer left the company or not (True - left, False - stayed)",
+            "type": "categorical",
+            "value_dict": {
+                "False": "The customer stayed with the company",
+                "True": "The customer left the company"
+            }
+        }
+    },
+    "task_info": {
+        "Churn": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in telecom customer behavior.",
+                "task_prompt": "Based on the customer usage and interaction data, please predict whether the customer will churn.",
+                "answer_prompt": "The customer stayed with the company[0] or left the company[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "False": "The customer stayed with the company",
+                "True": "The customer left the company"
+            },
+            "class_index_dict": {
+                "False": 0,
+                "True": 1
+            }
+        },
+        "Total day charge": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in telecom customer behavior.",
+                "task_prompt": "Based on the customer usage and interaction data, please predict the total day charge.",
+                "answer_prompt": "What is the predicted total day charge?"
+            }
+        },
+        "Total eve charge": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in telecom customer behavior.",
+                "task_prompt": "Based on the customer usage and interaction data, please predict the total evening charge.",
+                "answer_prompt": "What is the predicted total evening charge?"
+            }
+        },
+        "Total night charge": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in telecom customer behavior.",
+                "task_prompt": "Based on the customer usage and interaction data, please predict the total night charge.",
+                "answer_prompt": "What is the predicted total night charge?"
+            }
+        },
+        "Total intl charge": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in telecom customer behavior.",
+                "task_prompt": "Based on the customer usage and interaction data, please predict the total international charge.",
+                "answer_prompt": "What is the predicted total international charge?"
+            }
+        },
+        "Customer service calls": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in telecom customer behavior.",
+                "task_prompt": "Based on the customer usage and interaction data, please predict the number of customer service calls.",
+                "answer_prompt": "What is the predicted number of customer service calls?"
+            }
+        },
+        "Total day minutes": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in telecom customer behavior.",
+                "task_prompt": "Based on the customer usage and interaction data, please predict the total day minutes.",
+                "answer_prompt": "What is the predicted total day minutes?"
+            }
+        },
+        "Total eve minutes": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in telecom customer behavior.",
+                "task_prompt": "Based on the customer usage and interaction data, please predict the total evening minutes.",
+                "answer_prompt": "What is the predicted total evening minutes?"
+            }
+        },
+        "Total night minutes": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in telecom customer behavior.",
+                "task_prompt": "Based on the customer usage and interaction data, please predict the total night minutes.",
+                "answer_prompt": "What is the predicted total night minutes?"
+            }
+        },
+        "Total intl minutes": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in telecom customer behavior.",
+                "task_prompt": "Based on the customer usage and interaction data, please predict the total international minutes.",
+                "answer_prompt": "What is the predicted total international minutes?"
+            }
+        }
+    }
+}

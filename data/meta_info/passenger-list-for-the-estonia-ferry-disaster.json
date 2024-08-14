@@ -1,0 +1,142 @@
+{
+    "basic_info": {
+        "row_num": 989,
+        "col_num": 8,
+        "label_candidates": [
+            "Survived",
+            "Age",
+            "Sex",
+            "Category"
+        ],
+        "valid_feature_num": 7,
+        "num_features": [
+            "Age"
+        ],
+        "cat_features": [
+            "Country",
+            "Sex",
+            "Category",
+            "Survived"
+        ],
+        "other_features": [
+            "Firstname",
+            "Lastname"
+        ],
+        "tags": [
+            "movies and tv shows",
+            "natural disasters",
+            "health",
+            "beginner",
+            "classification",
+            "binary classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/christianlillelund/passenger-list-for-the-estonia-ferry-disaster"
+    },
+    "feature_info": {
+        "PassengerId": {
+            "description": "Unique identifier for each passenger",
+            "type": "useless"
+        },
+        "Country": {
+            "description": "Country of origin of the passenger",
+            "type": "categorical"
+        },
+        "Firstname": {
+            "description": "First name of the passenger",
+            "type": "other"
+        },
+        "Lastname": {
+            "description": "Last name of the passenger",
+            "type": "other"
+        },
+        "Sex": {
+            "description": "Gender of the passenger (M for male, F for female)",
+            "type": "categorical",
+            "value_dict": {
+                "M": "Male",
+                "F": "Female"
+            }
+        },
+        "Age": {
+            "description": "Age of the passenger",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Category": {
+            "description": "Passenger category (P for passenger, C for crew)",
+            "type": "categorical",
+            "value_dict": {
+                "P": "Passenger",
+                "C": "Crew"
+            }
+        },
+        "Survived": {
+            "description": "Survival status (0 for deceased, 1 for survived)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Deceased",
+                "1": "Survived"
+            }
+        }
+    },
+    "task_info": {
+        "Survived": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in disaster survival analysis.",
+                "task_prompt": "Based on the passenger information, please predict whether the passenger survived or not.",
+                "answer_prompt": "Deceased[0] or Survived[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "Deceased",
+                "1": "Survived"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "Age": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in demographic analysis.",
+                "task_prompt": "Based on the passenger information, please predict the age of the passenger."
+            }
+        },
+        "Sex": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in demographic analysis.",
+                "task_prompt": "Based on the passenger information, please predict the sex of the passenger.",
+                "answer_prompt": "Male[0] or Female[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "M": "Male",
+                "F": "Female"
+            },
+            "class_index_dict": {
+                "M": 0,
+                "F": 1
+            }
+        },
+        "Category": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in disaster survival analysis.",
+                "task_prompt": "Based on the passenger information, please predict whether the passenger is a crew member or a passenger.",
+                "answer_prompt": "Passenger[0] or Crew[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "P": "Passenger",
+                "C": "Crew"
+            },
+            "class_index_dict": {
+                "P": 0,
+                "C": 1
+            }
+        }
+    }
+}

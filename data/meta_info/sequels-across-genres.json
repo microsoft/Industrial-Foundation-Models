@@ -1,0 +1,145 @@
+{
+    "basic_info": {
+        "row_num": 1053,
+        "col_num": 16,
+        "label_candidates": [
+            "IMDb Rating",
+            "Num Votes",
+            "Runtime (mins)"
+        ],
+        "valid_feature_num": 15,
+        "num_features": [
+            "Position",
+            "Runtime (mins)",
+            "Year",
+            "Num Votes",
+            "IMDb Rating"
+        ],
+        "cat_features": [
+            "Const",
+            "Description",
+            "Title",
+            "URL",
+            "Title Type",
+            "Genres",
+            "Directors"
+        ],
+        "other_features": [
+            "Created",
+            "Modified",
+            "Release Date"
+        ],
+        "tags": [
+            "research",
+            "arts and entertainment",
+            "literature",
+            "movies and tv shows",
+            "data visualization"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/thedevastator/sequels-across-genres"
+    },
+    "feature_info": {
+        "index": {
+            "description": "An unique identifier for each row",
+            "type": "useless"
+        },
+        "Position": {
+            "description": "Rank of the movie in the list",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Const": {
+            "description": "An unique identifier for each movie",
+            "type": "categorical"
+        },
+        "Created": {
+            "description": "Date when the record was created",
+            "type": "other"
+        },
+        "Modified": {
+            "description": "Date when the record was last modified",
+            "type": "other"
+        },
+        "Description": {
+            "description": "Brief description about the movie",
+            "type": "categorical"
+        },
+        "Title": {
+            "description": "Title of the movie",
+            "type": "categorical"
+        },
+        "URL": {
+            "description": "URL of the movie on IMDb",
+            "type": "categorical"
+        },
+        "Title Type": {
+            "description": "Type of the title (e.g., movie, TV series)",
+            "type": "categorical",
+            "value_dict": {
+                "movie": "The title is a movie",
+                "video": "The title is a video",
+                "tvShort": "The title is a short TV series",
+                "tvMovie": "The title is a TV movie",
+                "tvEpisode": "The title is a TV episode"
+            }
+        },
+        "IMDb Rating": {
+            "description": "Rating of the movie on IMDb",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Runtime (mins)": {
+            "description": "Duration of the movie in minutes",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Year": {
+            "description": "Year when the movie was released",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Genres": {
+            "description": "Genre of the movie (e.g., drama, comedy)",
+            "type": "categorical"
+        },
+        "Num Votes": {
+            "description": "Number of votes the movie received on IMDb",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Release Date": {
+            "description": "Date when the movie was released",
+            "type": "other"
+        },
+        "Directors": {
+            "description": "Director(s) of the movie",
+            "type": "categorical"
+        }
+    },
+    "task_info": {
+        "IMDb Rating": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in movie rating prediction.",
+                "task_prompt": "Based on the features of the movie, please predict the IMDb rating.",
+                "answer_prompt": "The predicted IMDb rating is [number]."
+            }
+        },
+        "Num Votes": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in predicting audience participation.",
+                "task_prompt": "Based on the features of the movie, please predict the number of votes it will get on IMDb.",
+                "answer_prompt": "The predicted number of votes is [number]."
+            }
+        },
+        "Runtime (mins)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in predicting movie duration.",
+                "task_prompt": "Based on the features of the movie, please predict the runtime in minutes.",
+                "answer_prompt": "The predicted runtime is [number] minutes."
+            }
+        }
+    }
+}

@@ -1,0 +1,172 @@
+{
+    "basic_info": {
+        "row_num": 128,
+        "col_num": 11,
+        "label_candidates": [
+            "Diagnosis",
+            "BMI",
+            "Blood Pressure",
+            "HbA1c",
+            "FBS"
+        ],
+        "valid_feature_num": 11,
+        "num_features": [
+            "Age",
+            "BMI",
+            "FBS",
+            "HbA1c"
+        ],
+        "cat_features": [
+            "Gender",
+            "Blood Pressure",
+            "Family History of Diabetes",
+            "Smoking",
+            "Diet",
+            "Exercise",
+            "Diagnosis"
+        ],
+        "other_features": [],
+        "tags": [
+            "diabetes"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/sujithmandala/easiest-diabetes-classification-dataset"
+    },
+    "feature_info": {
+        "Age": {
+            "description": "The age of the individual in years",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Gender": {
+            "description": "The gender of the individual, Male or Female",
+            "type": "categorical",
+            "value_dict": {
+                "Male": "The individual is male",
+                "Female": "The individual is female"
+            }
+        },
+        "BMI": {
+            "description": "Body Mass Index of the individual",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Blood Pressure": {
+            "description": "Blood pressure level of the individual, can be Normal or High",
+            "type": "categorical",
+            "value_dict": {
+                "Normal": "The individual has normal blood pressure",
+                "High": "The individual has high blood pressure",
+                "Low": "The individual has low blood pressure"
+            }
+        },
+        "FBS": {
+            "description": "Fasting blood sugar level of the individual",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "HbA1c": {
+            "description": "Hemoglobin A1c level, a test to measure blood sugar level over the past 2 to 3 months",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Family History of Diabetes": {
+            "description": "Whether the individual has a family history of diabetes or not",
+            "type": "categorical",
+            "value_dict": {
+                "No": "The individual does not have a family history of diabetes",
+                "Yes": "The individual has a family history of diabetes"
+            }
+        },
+        "Smoking": {
+            "description": "Whether the individual smokes or not",
+            "type": "categorical",
+            "value_dict": {
+                "No": "The individual does not smoke",
+                "Yes": "The individual smokes"
+            }
+        },
+        "Diet": {
+            "description": "The quality of the individual\u2019s diet, can be Healthy or Poor",
+            "type": "categorical",
+            "value_dict": {
+                "Healthy": "The individual has a healthy diet",
+                "Poor": "The individual has a poor diet"
+            }
+        },
+        "Exercise": {
+            "description": "Whether the individual exercises regularly or not",
+            "type": "categorical",
+            "value_dict": {
+                "Regular": "The individual exercises regularly",
+                "No": "The individual does not exercise regularly"
+            }
+        },
+        "Diagnosis": {
+            "description": "Whether the individual is diagnosed with diabetes or not",
+            "type": "categorical",
+            "value_dict": {
+                "No": "The individual is not diagnosed with diabetes",
+                "Yes": "The individual is diagnosed with diabetes"
+            }
+        }
+    },
+    "task_info": {
+        "Diagnosis": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnosis.",
+                "task_prompt": "Based on the features of the patient, please predict the diabetes diagnosis.",
+                "answer_prompt": "Not diagnosed with diabetes[0] or Diagnosed with diabetes[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "No": "The individual is not diagnosed with diabetes",
+                "Yes": "The individual is diagnosed with diabetes"
+            },
+            "class_index_dict": {
+                "No": 0,
+                "Yes": 1
+            }
+        },
+        "BMI": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health assessment.",
+                "task_prompt": "Based on the features of the patient, please predict the BMI."
+            }
+        },
+        "Blood Pressure": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in health assessment.",
+                "task_prompt": "Based on the features of the patient, please predict the blood pressure level.",
+                "answer_prompt": "Normal blood pressure[0], High blood pressure[1] or Low blood pressure[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "Normal": "The individual has normal blood pressure",
+                "High": "The individual has high blood pressure",
+                "Low": "The individual has low blood pressure"
+            },
+            "class_index_dict": {
+                "Normal": 0,
+                "High": 1,
+                "Low": 2
+            }
+        },
+        "HbA1c": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health assessment.",
+                "task_prompt": "Based on the features of the patient, please predict the HbA1c level."
+            }
+        },
+        "FBS": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health assessment.",
+                "task_prompt": "Based on the features of the patient, please predict the Fasting Blood Sugar level."
+            }
+        }
+    }
+}

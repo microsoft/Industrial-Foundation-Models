@@ -1,0 +1,172 @@
+{
+    "basic_info": {
+        "row_num": 33379,
+        "col_num": 16,
+        "label_candidates": [
+            "count",
+            "temp",
+            "feels_like",
+            "humidity",
+            "wind_speed"
+        ],
+        "valid_feature_num": 16,
+        "num_features": [
+            "temp",
+            "feels_like",
+            "temp_min",
+            "temp_max",
+            "pressure",
+            "humidity",
+            "wind_speed",
+            "wind_deg",
+            "rain_1h",
+            "snow_1h",
+            "clouds_all",
+            "count"
+        ],
+        "cat_features": [
+            "holiday",
+            "workingday",
+            "weather_main"
+        ],
+        "other_features": [
+            "datetime"
+        ],
+        "tags": [
+            "environment",
+            "pollution",
+            "beginner",
+            "data analytics",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/vivianyfwang/capital-bike-share-2018-20218"
+    },
+    "feature_info": {
+        "datetime": {
+            "description": "The date and hour of the bike share count, in the format \"YYYY-MM-DD HH:MM\"",
+            "type": "other"
+        },
+        "count": {
+            "description": "The number of bike shares in the given hour",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "holiday": {
+            "description": "Indicates whether the day is a holiday (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The day is a holiday",
+                "0": "The day is not a holiday"
+            }
+        },
+        "workingday": {
+            "description": "Indicates whether the day is a working day (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The day is not a working day",
+                "1": "The day is a working day"
+            }
+        },
+        "temp": {
+            "description": "The temperature at the given hour in Celsius",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "feels_like": {
+            "description": "What the temperature feels like at the given hour in Celsius",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "temp_min": {
+            "description": "The minimum temperature at the given hour in Celsius",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "temp_max": {
+            "description": "The maximum temperature at the given hour in Celsius",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "pressure": {
+            "description": "The atmospheric pressure at the given hour in hPa",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "humidity": {
+            "description": "The humidity level at the given hour, in percentage",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "wind_speed": {
+            "description": "The wind speed at the given hour in meter/sec",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "wind_deg": {
+            "description": "The wind direction at the given hour in meteorological degrees",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "rain_1h": {
+            "description": "The amount of rain that occurred in the last hour in mm",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "snow_1h": {
+            "description": "The amount of snow that occurred in the last hour in mm",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "clouds_all": {
+            "description": "The cloudiness at the given hour, in percentage",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "weather_main": {
+            "description": "The main weather condition at the given hour",
+            "type": "categorical"
+        }
+    },
+    "task_info": {
+        "count": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in bike sharing data analysis.",
+                "task_prompt": "Based on the features of the bike sharing dataset, please predict the number of bikes rented.",
+                "answer_prompt": "The predicted number of rented bikes is."
+            }
+        },
+        "temp": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in weather data analysis.",
+                "task_prompt": "Based on the features of the weather dataset, please predict the temperature.",
+                "answer_prompt": "The predicted temperature is."
+            }
+        },
+        "feels_like": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in weather data analysis.",
+                "task_prompt": "Based on the features of the weather dataset, please predict the feels like temperature.",
+                "answer_prompt": "The predicted feels like temperature is."
+            }
+        },
+        "humidity": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in weather data analysis.",
+                "task_prompt": "Based on the features of the weather dataset, please predict the humidity.",
+                "answer_prompt": "The predicted humidity is."
+            }
+        },
+        "wind_speed": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in weather data analysis.",
+                "task_prompt": "Based on the features of the weather dataset, please predict the wind speed.",
+                "answer_prompt": "The predicted wind speed is."
+            }
+        }
+    }
+}

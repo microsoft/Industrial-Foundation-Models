@@ -1,0 +1,98 @@
+{
+    "basic_info": {
+        "row_num": 920,
+        "col_num": 8,
+        "label_candidates": [
+            "Price",
+            "Area",
+            "Room"
+        ],
+        "valid_feature_num": 7,
+        "num_features": [
+            "Area",
+            "Room",
+            "Lon",
+            "Lat",
+            "Price"
+        ],
+        "cat_features": [
+            "Address",
+            "Zip"
+        ],
+        "other_features": [],
+        "tags": [
+            "housing",
+            "real estate",
+            "beginner",
+            "xgboost",
+            "linear regression",
+            "investing"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/thomasnibb/amsterdam-house-price-prediction"
+    },
+    "feature_info": {
+        "Unnamed: 0": {
+            "description": "Auto-incremented index",
+            "type": "useless"
+        },
+        "Address": {
+            "description": "The address of the house in Amsterdam",
+            "type": "categorical"
+        },
+        "Zip": {
+            "description": "The zip code of the house",
+            "type": "categorical"
+        },
+        "Price": {
+            "description": "The price of the house in Euros",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Area": {
+            "description": "The area of the house in square meters",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Room": {
+            "description": "The number of rooms in the house",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Lon": {
+            "description": "The longitude coordinate of the house",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Lat": {
+            "description": "The latitude coordinate of the house",
+            "type": "numerical",
+            "decimal": 6
+        }
+    },
+    "task_info": {
+        "Price": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate price prediction.",
+                "task_prompt": "Based on the features of the house, including address, zip code, area, number of rooms, longitude, and latitude, please predict the price.",
+                "answer_prompt": "The predicted price of the house is."
+            }
+        },
+        "Area": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate area estimation.",
+                "task_prompt": "Based on the features of the house, including address, zip code, price, number of rooms, longitude, and latitude, please estimate the area.",
+                "answer_prompt": "The estimated area of the house is."
+            }
+        },
+        "Room": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate room number prediction.",
+                "task_prompt": "Based on the features of the house, including address, zip code, price, area, longitude, and latitude, please predict the number of rooms.",
+                "answer_prompt": "The predicted number of rooms in the house is."
+            }
+        }
+    }
+}

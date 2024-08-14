@@ -1,0 +1,244 @@
+{
+    "basic_info": {
+        "row_num": 5834,
+        "col_num": 25,
+        "label_candidates": [
+            "review_scores_rating",
+            "review_scores_value",
+            "review_scores_location",
+            "review_scores_communication",
+            "review_scores_checkin"
+        ],
+        "valid_feature_num": 25,
+        "num_features": [
+            "accommodates",
+            "availability_30",
+            "bathrooms",
+            "bedrooms",
+            "beds",
+            "calculated_host_listings_count",
+            "guests_included",
+            "host_listings_count",
+            "latitude(North)",
+            "longitude(East)",
+            "maximum_nights",
+            "number_of_reviews",
+            "review_scores_checkin",
+            "review_scores_communication",
+            "review_scores_location",
+            "review_scores_rating",
+            "review_scores_value"
+        ],
+        "cat_features": [
+            "bed_type",
+            "cancellation_policy",
+            "has_availability",
+            "host_is_superhost",
+            "instant_bookable",
+            "property_type",
+            "room_type"
+        ],
+        "other_features": [
+            "amenities"
+        ],
+        "tags": [
+            "cities and urban areas",
+            "china ",
+            "economics",
+            "regression",
+            "hotels and accommodations"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/ramjasmaurya/oyo-rental-price-prediction-in-china"
+    },
+    "feature_info": {
+        "accommodates": {
+            "description": "The number of persons that the rental can accommodate",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "amenities": {
+            "description": "List of amenities available in the rental",
+            "type": "other"
+        },
+        "availability_30": {
+            "description": "Availability of the rental over the next 30 days",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "bathrooms": {
+            "description": "Number of bathrooms in the rental",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "bed_type": {
+            "description": "Type of bed in the rental",
+            "type": "categorical",
+            "value_dict": {
+                "Real Bed": "The bed type is a real bed",
+                "Futon": "The bed type is a futon",
+                "Airbed": "The bed type is an airbed",
+                "Pull-out Sofa": "The bed type is a pull-out sofa",
+                "Couch": "The bed type is a couch"
+            }
+        },
+        "bedrooms": {
+            "description": "Number of bedrooms in the rental",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "beds": {
+            "description": "Number of beds in the rental",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "calculated_host_listings_count": {
+            "description": "Number of listings the host has",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "cancellation_policy": {
+            "description": "Policy for cancellation",
+            "type": "categorical",
+            "value_dict": {
+                "moderate": "The cancellation policy is moderate",
+                "flexible": "The cancellation policy is flexible",
+                "strict": "The cancellation policy is strict",
+                "super_strict_30": "The cancellation policy is super strict 30",
+                "no_refunds": "The cancellation policy offers no refunds"
+            }
+        },
+        "guests_included": {
+            "description": "Number of guests included in the booking",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "has_availability": {
+            "description": "Indicates if the rental is available or not",
+            "type": "categorical",
+            "value_dict": {
+                "t": "The rental is currently available"
+            }
+        },
+        "host_is_superhost": {
+            "description": "Indicates if the host is a superhost or not",
+            "type": "categorical",
+            "value_dict": {
+                "f": "The host is not a superhost",
+                "t": "The host is a superhost"
+            }
+        },
+        "host_listings_count": {
+            "description": "Number of listings the host has",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "instant_bookable": {
+            "description": "Indicates if the rental can be booked instantly or not",
+            "type": "categorical",
+            "value_dict": {
+                "f": "The rental cannot be booked instantly",
+                "t": "The rental can be booked instantly"
+            }
+        },
+        "latitude(North)": {
+            "description": "Geographical latitude of the rental",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "longitude(East)": {
+            "description": "Geographical longitude of the rental",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "maximum_nights": {
+            "description": "Maximum number of nights the rental can be booked for",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "number_of_reviews": {
+            "description": "Number of reviews the rental has received",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "property_type": {
+            "description": "Type of property of the rental",
+            "type": "categorical"
+        },
+        "review_scores_checkin": {
+            "description": "Check-in score of the rental based on reviews",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "review_scores_communication": {
+            "description": "Communication score of the rental based on reviews",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "review_scores_location": {
+            "description": "Location score of the rental based on reviews",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "review_scores_rating": {
+            "description": "Overall rating score of the rental based on reviews",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "review_scores_value": {
+            "description": "Value score of the rental based on reviews",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "room_type": {
+            "description": "Type of room in the rental",
+            "type": "categorical",
+            "value_dict": {
+                "Private room": "The room type is a private room",
+                "Entire home/apt": "The room type is an entire home or apartment",
+                "Shared room": "The room type is a shared room"
+            }
+        }
+    },
+    "task_info": {
+        "review_scores_rating": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in rental property analysis.",
+                "task_prompt": "Based on the features of the rental property, please predict the review score rating.",
+                "answer_prompt": "The predicted review score rating is {review_scores_rating}."
+            }
+        },
+        "review_scores_value": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in rental property analysis.",
+                "task_prompt": "Based on the features of the rental property, please predict the review score value.",
+                "answer_prompt": "The predicted review score value is {review_scores_value}."
+            }
+        },
+        "review_scores_location": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in rental property analysis.",
+                "task_prompt": "Based on the features of the rental property, please predict the review score for location.",
+                "answer_prompt": "The predicted review score for location is {review_scores_location}."
+            }
+        },
+        "review_scores_communication": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in rental property analysis.",
+                "task_prompt": "Based on the features of the rental property, please predict the review score for communication.",
+                "answer_prompt": "The predicted review score for communication is {review_scores_communication}."
+            }
+        },
+        "review_scores_checkin": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in rental property analysis.",
+                "task_prompt": "Based on the features of the rental property, please predict the review score for check-in.",
+                "answer_prompt": "The predicted review score for check-in is {review_scores_checkin}."
+            }
+        }
+    }
+}

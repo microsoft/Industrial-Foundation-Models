@@ -1,0 +1,161 @@
+{
+    "basic_info": {
+        "row_num": 718886,
+        "col_num": 19,
+        "label_candidates": [
+            "outcome",
+            "p1trophies",
+            "p2trophies"
+        ],
+        "valid_feature_num": 19,
+        "num_features": [
+            "p1trophies",
+            "p2trophies"
+        ],
+        "cat_features": [
+            "p1card1",
+            "p1card2",
+            "p1card3",
+            "p1card4",
+            "p1card5",
+            "p1card6",
+            "p1card7",
+            "p1card8",
+            "p2card1",
+            "p2card2",
+            "p2card3",
+            "p2card4",
+            "p2card5",
+            "p2card6",
+            "p2card7",
+            "p2card8",
+            "outcome"
+        ],
+        "other_features": [],
+        "tags": [
+            "games",
+            "video games",
+            "categorical",
+            "intermediate",
+            "binary classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/nonrice/clash-royale-battles-upper-ladder-december-2021"
+    },
+    "feature_info": {
+        "p1card1": {
+            "description": "The first card chosen by player 1",
+            "type": "categorical"
+        },
+        "p1card2": {
+            "description": "The second card chosen by player 1",
+            "type": "categorical"
+        },
+        "p1card3": {
+            "description": "The third card chosen by player 1",
+            "type": "categorical"
+        },
+        "p1card4": {
+            "description": "The fourth card chosen by player 1",
+            "type": "categorical"
+        },
+        "p1card5": {
+            "description": "The fifth card chosen by player 1",
+            "type": "categorical"
+        },
+        "p1card6": {
+            "description": "The sixth card chosen by player 1",
+            "type": "categorical"
+        },
+        "p1card7": {
+            "description": "The seventh card chosen by player 1",
+            "type": "categorical"
+        },
+        "p1card8": {
+            "description": "The eighth card chosen by player 1",
+            "type": "categorical"
+        },
+        "p2card1": {
+            "description": "The first card chosen by player 2",
+            "type": "categorical"
+        },
+        "p2card2": {
+            "description": "The second card chosen by player 2",
+            "type": "categorical"
+        },
+        "p2card3": {
+            "description": "The third card chosen by player 2",
+            "type": "categorical"
+        },
+        "p2card4": {
+            "description": "The fourth card chosen by player 2",
+            "type": "categorical"
+        },
+        "p2card5": {
+            "description": "The fifth card chosen by player 2",
+            "type": "categorical"
+        },
+        "p2card6": {
+            "description": "The sixth card chosen by player 2",
+            "type": "categorical"
+        },
+        "p2card7": {
+            "description": "The seventh card chosen by player 2",
+            "type": "categorical"
+        },
+        "p2card8": {
+            "description": "The eighth card chosen by player 2",
+            "type": "categorical"
+        },
+        "p1trophies": {
+            "description": "The number of trophies owned by player 1",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "p2trophies": {
+            "description": "The number of trophies owned by player 2",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "outcome": {
+            "description": "The outcome of the game (1 if player 1 wins, 0 otherwise)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Player 1 wins the game",
+                "0": "Player 1 does not win the game"
+            }
+        }
+    },
+    "task_info": {
+        "outcome": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing Clash Royale game data.",
+                "task_prompt": "Based on the features of the Clash Royale game, please predict the outcome of the game for Player 1.",
+                "answer_prompt": "Player 1 wins the game[1] or Player 1 does not win the game[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "Player 1 wins the game",
+                "0": "Player 1 does not win the game"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        },
+        "p1trophies": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing Clash Royale game data.",
+                "task_prompt": "Based on the features of the Clash Royale game, please predict the number of trophies Player 1 will have."
+            }
+        },
+        "p2trophies": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing Clash Royale game data.",
+                "task_prompt": "Based on the features of the Clash Royale game, please predict the number of trophies Player 2 will have."
+            }
+        }
+    }
+}

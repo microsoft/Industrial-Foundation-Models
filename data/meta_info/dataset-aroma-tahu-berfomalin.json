@@ -1,0 +1,117 @@
+{
+    "basic_info": {
+        "row_num": 45000,
+        "col_num": 9,
+        "label_candidates": [
+            "label",
+            "Temperature(C)",
+            "Smoke_MQ4(ppm)"
+        ],
+        "valid_feature_num": 9,
+        "num_features": [
+            "H2_MQ2(ppm)",
+            "LPG_MQ2(ppm)",
+            "CO_MQ2(ppm)",
+            "Alcohol_MQ2(ppm)",
+            "Propane_MQ2(ppm)",
+            "CH4_MQ4(ppm)",
+            "Smoke_MQ4(ppm)",
+            "Temperature(C)"
+        ],
+        "cat_features": [
+            "label"
+        ],
+        "other_features": [],
+        "tags": [
+            "chemistry",
+            "exploratory data analysis",
+            "classification",
+            "tabular",
+            "english"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/yudhaislamisulistya/dataset-aroma-tahu-berfomalin"
+    },
+    "feature_info": {
+        "H2_MQ2(ppm)": {
+            "description": "Hydrogen gas concentration in parts per million measured by MQ2 sensor",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "LPG_MQ2(ppm)": {
+            "description": "LPG gas concentration in parts per million measured by MQ2 sensor",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "CO_MQ2(ppm)": {
+            "description": "Carbon Monoxide gas concentration in parts per million measured by MQ2 sensor",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Alcohol_MQ2(ppm)": {
+            "description": "Alcohol concentration in parts per million measured by MQ2 sensor",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Propane_MQ2(ppm)": {
+            "description": "Propane gas concentration in parts per million measured by MQ2 sensor",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "CH4_MQ4(ppm)": {
+            "description": "Methane gas concentration in parts per million measured by MQ4 sensor",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Smoke_MQ4(ppm)": {
+            "description": "Smoke concentration in parts per million measured by MQ4 sensor",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Temperature(C)": {
+            "description": "Temperature in Celsius degrees",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "label": {
+            "description": "Target variable indicating whether formalin is present in the tofu (0 = No, 1 = Yes)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Formalin is not present in the tofu",
+                "1": "Formalin is present in the tofu"
+            }
+        }
+    },
+    "task_info": {
+        "label": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in food safety.",
+                "task_prompt": "Based on the sensor readings, please predict if formalin is present in the tofu.",
+                "answer_prompt": "Formalin is not present in the tofu[0] or Formalin is present in the tofu[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "Formalin is not present in the tofu",
+                "1": "Formalin is present in the tofu"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "Temperature(C)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in climate control.",
+                "task_prompt": "Based on the sensor readings, please predict the temperature in Celsius."
+            }
+        },
+        "Smoke_MQ4(ppm)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in air quality monitoring.",
+                "task_prompt": "Based on the sensor readings, please predict the smoke concentration in ppm."
+            }
+        }
+    }
+}

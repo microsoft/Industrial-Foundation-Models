@@ -1,0 +1,81 @@
+{
+    "basic_info": {
+        "row_num": 15037,
+        "col_num": 5,
+        "label_candidates": [
+            "pIC50",
+            "logP",
+            "num_atoms"
+        ],
+        "valid_feature_num": 5,
+        "num_features": [
+            "num_atoms",
+            "logP",
+            "pIC50"
+        ],
+        "cat_features": [
+            "SMILES",
+            "mol"
+        ],
+        "other_features": [],
+        "tags": [
+            "earth and nature",
+            "data cleaning",
+            "data analytics",
+            "classification",
+            "feature extraction"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/yanmaksi/big-molecules-smiles-dataset"
+    },
+    "feature_info": {
+        "SMILES": {
+            "description": "A string representation of the chemical structure of big molecules using the SMILES (Simplified Molecular Input Line Entry System) notation.",
+            "type": "categorical"
+        },
+        "pIC50": {
+            "description": "The negative logarithm of the half maximal inhibitory concentration (IC50) value, which is a measure of the effectiveness of a substance in inhibiting a specific biological or biochemical function. It is a standard measure in pharmacology.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "mol": {
+            "description": "A string representation of the 3D structure of the big molecules.",
+            "type": "categorical"
+        },
+        "num_atoms": {
+            "description": "The total number of atoms in the molecule.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "logP": {
+            "description": "The logarithm of the partition coefficient (P) between octanol and water. It is a measure of the lipophilicity of the molecule, which can affect its distribution within the body.",
+            "type": "numerical",
+            "decimal": 4
+        }
+    },
+    "task_info": {
+        "pIC50": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in chemoinformatics.",
+                "task_prompt": "Based on the features of the molecular structure, please predict the pIC50 value.",
+                "answer_prompt": "The predicted pIC50 value is ______."
+            }
+        },
+        "logP": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in chemoinformatics.",
+                "task_prompt": "Based on the features of the molecular structure, please predict the logP value.",
+                "answer_prompt": "The predicted logP value is ______."
+            }
+        },
+        "num_atoms": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in chemoinformatics.",
+                "task_prompt": "Based on the features of the molecular structure, please predict the number of atoms.",
+                "answer_prompt": "The predicted number of atoms is ______."
+            }
+        }
+    }
+}

@@ -1,0 +1,117 @@
+{
+    "basic_info": {
+        "row_num": 3654,
+        "col_num": 8,
+        "label_candidates": [
+            "Close",
+            "Adj Close",
+            "High",
+            "Low",
+            "Open"
+        ],
+        "valid_feature_num": 8,
+        "num_features": [
+            "Open",
+            "High",
+            "Low",
+            "Adj Close",
+            "Volume",
+            "Close"
+        ],
+        "cat_features": [
+            "Date",
+            "Currency"
+        ],
+        "other_features": [],
+        "tags": [
+            "currencies and foreign exchange"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/zsinghrahulk/crypto-currency-bitcoin-and-ethereum-data"
+    },
+    "feature_info": {
+        "Date": {
+            "description": "The date of the cryptocurrency data, in the format of MM/DD/YYYY",
+            "type": "categorical"
+        },
+        "Open": {
+            "description": "The opening price of the cryptocurrency on the given date, unit is in USD",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "High": {
+            "description": "The highest price of the cryptocurrency on the given date, unit is in USD",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Low": {
+            "description": "The lowest price of the cryptocurrency on the given date, unit is in USD",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Close": {
+            "description": "The closing price of the cryptocurrency on the given date, unit is in USD",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Adj Close": {
+            "description": "The adjusted closing price of the cryptocurrency on the given date, unit is in USD",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Volume": {
+            "description": "The volume of the cryptocurrency traded on the given date, unit is in the number of coins",
+            "type": "numerical",
+            "decimal": "sci"
+        },
+        "Currency": {
+            "description": "The type of cryptocurrency, such as Bitcoin, Etherium, etc",
+            "type": "categorical",
+            "value_dict": {
+                "Etherium": "A type of cryptocurrency known as Etherium",
+                "Bitcoin": "A type of cryptocurrency known as Bitcoin"
+            }
+        }
+    },
+    "task_info": {
+        "Close": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in cryptocurrency market analysis.",
+                "task_prompt": "Based on the historical data of cryptocurrency, please predict the closing price.",
+                "answer_prompt": "The predicted closing price is ______."
+            }
+        },
+        "Adj Close": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in cryptocurrency market analysis.",
+                "task_prompt": "Based on the historical data of cryptocurrency, please predict the adjusted closing price.",
+                "answer_prompt": "The predicted adjusted closing price is ______."
+            }
+        },
+        "High": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in cryptocurrency market analysis.",
+                "task_prompt": "Based on the historical data of cryptocurrency, please predict the highest price.",
+                "answer_prompt": "The predicted highest price is ______."
+            }
+        },
+        "Low": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in cryptocurrency market analysis.",
+                "task_prompt": "Based on the historical data of cryptocurrency, please predict the lowest price.",
+                "answer_prompt": "The predicted lowest price is ______."
+            }
+        },
+        "Open": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in cryptocurrency market analysis.",
+                "task_prompt": "Based on the historical data of cryptocurrency, please predict the opening price.",
+                "answer_prompt": "The predicted opening price is ______."
+            }
+        }
+    }
+}

@@ -1,0 +1,118 @@
+{
+    "basic_info": {
+        "row_num": 17013,
+        "col_num": 8,
+        "label_candidates": [
+            "2022-09-30",
+            "2022-06-30",
+            "2022-03-31",
+            "2021-12-31",
+            "2021-09-30"
+        ],
+        "valid_feature_num": 8,
+        "num_features": [
+            "2021-09-30",
+            "2021-12-31",
+            "2022-03-31",
+            "2022-06-30",
+            "2022-09-30"
+        ],
+        "cat_features": [
+            "symbol",
+            "account",
+            "type"
+        ],
+        "other_features": [],
+        "tags": [
+            "business",
+            "investing"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/greegtitan/financial-statement-idx-stocks"
+    },
+    "feature_info": {
+        "symbol": {
+            "description": "The stock symbol of the company.",
+            "type": "categorical"
+        },
+        "account": {
+            "description": "The type of financial statement account.",
+            "type": "categorical",
+            "value_dict": {
+                "BS": "Balance Sheet account",
+                "CF": "Cash Flow account",
+                "IS": "Income Statement account"
+            }
+        },
+        "type": {
+            "description": "Type of the financial statement.",
+            "type": "categorical"
+        },
+        "2021-09-30": {
+            "description": "Financial data for the period ending on 2021-09-30.",
+            "type": "numerical",
+            "decimal": "sci"
+        },
+        "2021-12-31": {
+            "description": "Financial data for the period ending on 2021-12-31.",
+            "type": "numerical",
+            "decimal": "sci"
+        },
+        "2022-03-31": {
+            "description": "Financial data for the period ending on 2022-03-31.",
+            "type": "numerical",
+            "decimal": "sci"
+        },
+        "2022-06-30": {
+            "description": "Financial data for the period ending on 2022-06-30.",
+            "type": "numerical",
+            "decimal": "sci"
+        },
+        "2022-09-30": {
+            "description": "Financial data for the period ending on 2022-09-30.",
+            "type": "numerical",
+            "decimal": "sci"
+        }
+    },
+    "task_info": {
+        "2022-09-30": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in financial analysis.",
+                "task_prompt": "Based on the symbol, account, type and financial data up to June 2022, please predict the financial statement for September 2022.",
+                "answer_prompt": "The predicted financial statement for September 2022 is {prediction}."
+            }
+        },
+        "2022-06-30": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in financial analysis.",
+                "task_prompt": "Based on the symbol, account, type and financial data up to March 2022, please predict the financial statement for June 2022.",
+                "answer_prompt": "The predicted financial statement for June 2022 is {prediction}."
+            }
+        },
+        "2022-03-31": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in financial analysis.",
+                "task_prompt": "Based on the symbol, account, type and financial data up to December 2021, please predict the financial statement for March 2022.",
+                "answer_prompt": "The predicted financial statement for March 2022 is {prediction}."
+            }
+        },
+        "2021-12-31": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in financial analysis.",
+                "task_prompt": "Based on the symbol, account, type and financial data up to September 2021, please predict the financial statement for December 2021.",
+                "answer_prompt": "The predicted financial statement for December 2021 is {prediction}."
+            }
+        },
+        "2021-09-30": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in financial analysis.",
+                "task_prompt": "Based on the symbol, account, type and financial data up to June 2021, please predict the financial statement for September 2021.",
+                "answer_prompt": "The predicted financial statement for September 2021 is {prediction}."
+            }
+        }
+    }
+}

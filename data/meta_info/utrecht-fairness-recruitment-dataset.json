@@ -1,0 +1,245 @@
+{
+    "basic_info": {
+        "row_num": 4000,
+        "col_num": 15,
+        "label_candidates": [
+            "decision",
+            "ind-degree",
+            "company",
+            "age",
+            "gender"
+        ],
+        "valid_feature_num": 14,
+        "num_features": [
+            "age",
+            "ind-university_grade",
+            "ind-languages"
+        ],
+        "cat_features": [
+            "gender",
+            "nationality",
+            "sport",
+            "ind-debateclub",
+            "ind-programming_exp",
+            "ind-international_exp",
+            "ind-entrepeneur_exp",
+            "ind-exact_study",
+            "ind-degree",
+            "company",
+            "decision"
+        ],
+        "other_features": [],
+        "tags": [
+            "gender",
+            "business",
+            "tabular",
+            "ml ethics"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/ictinstitute/utrecht-fairness-recruitment-dataset"
+    },
+    "feature_info": {
+        "Id": {
+            "description": "Unique identifier for each record",
+            "type": "useless"
+        },
+        "gender": {
+            "description": "Gender of the individual",
+            "type": "categorical",
+            "value_dict": {
+                "female": "The individual identifies as female",
+                "male": "The individual identifies as male",
+                "other": "The individual identifies as a gender not specified"
+            }
+        },
+        "age": {
+            "description": "Age of the individual",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "nationality": {
+            "description": "Nationality of the individual",
+            "type": "categorical",
+            "value_dict": {
+                "German": "The individual is of German nationality",
+                "Dutch": "The individual is of Dutch nationality",
+                "Belgian": "The individual is of Belgian nationality"
+            }
+        },
+        "sport": {
+            "description": "Whether the individual is involved in sports or not",
+            "type": "categorical",
+            "value_dict": {
+                "Swimming": "The individual participates in Swimming",
+                "Golf": "The individual participates in Golf",
+                "Running": "The individual participates in Running",
+                "Cricket": "The individual participates in Cricket",
+                "Chess": "The individual participates in Chess",
+                "Tennis": "The individual participates in Tennis",
+                "Football": "The individual participates in Football",
+                "Rugby": "The individual participates in Rugby"
+            }
+        },
+        "ind-university_grade": {
+            "description": "University grade of the individual",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "ind-debateclub": {
+            "description": "Whether the individual is part of a debate club or not",
+            "type": "categorical",
+            "value_dict": {
+                "False": "The individual is not part of a debate club",
+                "True": "The individual is part of a debate club"
+            }
+        },
+        "ind-programming_exp": {
+            "description": "The individual's experience in programming",
+            "type": "categorical",
+            "value_dict": {
+                "False": "The individual does not have programming experience",
+                "True": "The individual has programming experience"
+            }
+        },
+        "ind-international_exp": {
+            "description": "Whether the individual has international experience or not",
+            "type": "categorical",
+            "value_dict": {
+                "False": "The individual does not have international experience",
+                "True": "The individual has international experience"
+            }
+        },
+        "ind-entrepeneur_exp": {
+            "description": "Whether the individual has entrepreneurial experience or not",
+            "type": "categorical",
+            "value_dict": {
+                "False": "The individual does not have entrepreneurial experience",
+                "True": "The individual has entrepreneurial experience"
+            }
+        },
+        "ind-languages": {
+            "description": "Number of languages the individual knows",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "ind-exact_study": {
+            "description": "Whether the individual has studied exact sciences or not",
+            "type": "categorical",
+            "value_dict": {
+                "True": "The individual has studied exact sciences",
+                "False": "The individual has not studied exact sciences"
+            }
+        },
+        "ind-degree": {
+            "description": "The highest degree obtained by the individual",
+            "type": "categorical",
+            "value_dict": {
+                "phd": "The individual has a PhD degree",
+                "bachelor": "The individual has a Bachelor's degree",
+                "master": "The individual has a Master's degree"
+            }
+        },
+        "company": {
+            "description": "The company the individual is associated with",
+            "type": "categorical",
+            "value_dict": {
+                "A": "The individual is associated with Company A",
+                "B": "The individual is associated with Company B",
+                "C": "The individual is associated with Company C",
+                "D": "The individual is associated with Company D"
+            }
+        },
+        "decision": {
+            "description": "The decision on the individual's application (True for accepted, False for rejected)",
+            "type": "categorical",
+            "value_dict": {
+                "True": "The individual's application was accepted",
+                "False": "The individual's application was rejected"
+            }
+        }
+    },
+    "task_info": {
+        "decision": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in recruitment analysis.",
+                "task_prompt": "Based on the features of the candidate, please predict the decision on their application.",
+                "answer_prompt": "Accepted[1] or Rejected[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "True": "The individual's application was accepted",
+                "False": "The individual's application was rejected"
+            },
+            "class_index_dict": {
+                "True": 1,
+                "False": 0
+            }
+        },
+        "ind-degree": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in education and recruitment analysis.",
+                "task_prompt": "Based on the features of the candidate, please predict the degree they hold.",
+                "answer_prompt": "PhD[0], Bachelor's[1], or Master's[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "phd": "The individual has a PhD degree",
+                "bachelor": "The individual has a Bachelor's degree",
+                "master": "The individual has a Master's degree"
+            },
+            "class_index_dict": {
+                "phd": 0,
+                "bachelor": 1,
+                "master": 2
+            }
+        },
+        "company": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in recruitment analysis.",
+                "task_prompt": "Based on the features of the candidate, please predict the company they are associated with.",
+                "answer_prompt": "Company A[0], Company B[1], Company C[2], or Company D[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "A": "The individual is associated with Company A",
+                "B": "The individual is associated with Company B",
+                "C": "The individual is associated with Company C",
+                "D": "The individual is associated with Company D"
+            },
+            "class_index_dict": {
+                "A": 0,
+                "B": 1,
+                "C": 2,
+                "D": 3
+            }
+        },
+        "age": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in demographic analysis.",
+                "task_prompt": "Based on the features of the candidate, please predict their age."
+            }
+        },
+        "gender": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in demographic analysis.",
+                "task_prompt": "Based on the features of the candidate, please predict their gender.",
+                "answer_prompt": "Female[0], Male[1], or Other[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "female": "The individual identifies as female",
+                "male": "The individual identifies as male",
+                "other": "The individual identifies as a gender not specified"
+            },
+            "class_index_dict": {
+                "female": 0,
+                "male": 1,
+                "other": 2
+            }
+        }
+    }
+}

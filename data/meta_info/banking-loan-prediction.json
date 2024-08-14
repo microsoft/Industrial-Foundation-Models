@@ -1,0 +1,235 @@
+{
+    "basic_info": {
+        "row_num": 69713,
+        "col_num": 22,
+        "label_candidates": [
+            "Approved",
+            "Loan_Amount",
+            "Loan_Period",
+            "Interest_Rate",
+            "EMI"
+        ],
+        "valid_feature_num": 21,
+        "num_features": [
+            "Monthly_Income",
+            "Existing_EMI",
+            "Loan_Amount",
+            "Loan_Period",
+            "Interest_Rate",
+            "EMI"
+        ],
+        "cat_features": [
+            "Gender",
+            "City_Code",
+            "City_Category",
+            "Employer_Code",
+            "Employer_Category1",
+            "Employer_Category2",
+            "Customer_Existing_Primary_Bank_Code",
+            "Primary_Bank_Type",
+            "Contacted",
+            "Source",
+            "Source_Category",
+            "Approved"
+        ],
+        "other_features": [
+            "DOB",
+            "Lead_Creation_Date",
+            "Var1"
+        ],
+        "tags": [
+            "banking",
+            "marketing",
+            "binary classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/arashnic/banking-loan-prediction"
+    },
+    "feature_info": {
+        "ID": {
+            "description": "Unique identifier for each loan application",
+            "type": "useless"
+        },
+        "Gender": {
+            "description": "Gender of the applicant",
+            "type": "categorical",
+            "value_dict": {
+                "Female": "The applicant is female",
+                "Male": "The applicant is male"
+            }
+        },
+        "DOB": {
+            "description": "Date of birth of the applicant",
+            "type": "other"
+        },
+        "Lead_Creation_Date": {
+            "description": "Date when the lead was created",
+            "type": "other"
+        },
+        "City_Code": {
+            "description": "Code of the city of the applicant",
+            "type": "categorical"
+        },
+        "City_Category": {
+            "description": "Category of the city of the applicant",
+            "type": "categorical",
+            "value_dict": {
+                "A": "The city of the applicant belongs to category A",
+                "C": "The city of the applicant belongs to category C",
+                "B": "The city of the applicant belongs to category B"
+            }
+        },
+        "Employer_Code": {
+            "description": "Code of the employer of the applicant",
+            "type": "categorical"
+        },
+        "Employer_Category1": {
+            "description": "Category 1 of the employer",
+            "type": "categorical",
+            "value_dict": {
+                "A": "The employer of the applicant belongs to category A",
+                "C": "The employer of the applicant belongs to category C",
+                "B": "The employer of the applicant belongs to category B"
+            }
+        },
+        "Employer_Category2": {
+            "description": "Category 2 of the employer",
+            "type": "categorical",
+            "value_dict": {
+                "4.0": "The employer of the applicant belongs to sub-category 4",
+                "1.0": "The employer of the applicant belongs to sub-category 1",
+                "3.0": "The employer of the applicant belongs to sub-category 3",
+                "2.0": "The employer of the applicant belongs to sub-category 2"
+            }
+        },
+        "Monthly_Income": {
+            "description": "Monthly income of the applicant in local currency unit",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Customer_Existing_Primary_Bank_Code": {
+            "description": "Code of the primary bank of the customer",
+            "type": "categorical"
+        },
+        "Primary_Bank_Type": {
+            "description": "Type of the primary bank of the customer",
+            "type": "categorical",
+            "value_dict": {
+                "P": "The primary bank of the customer is a private bank",
+                "G": "The primary bank of the customer is a government bank"
+            }
+        },
+        "Contacted": {
+            "description": "Whether the customer was contacted or not",
+            "type": "categorical",
+            "value_dict": {
+                "N": "The customer was not contacted",
+                "Y": "The customer was contacted"
+            }
+        },
+        "Source": {
+            "description": "Source from which the lead was generated",
+            "type": "categorical"
+        },
+        "Source_Category": {
+            "description": "Category of the source from which the lead was generated",
+            "type": "categorical",
+            "value_dict": {
+                "G": "The lead was generated from source category G",
+                "B": "The lead was generated from source category B",
+                "C": "The lead was generated from source category C",
+                "E": "The lead was generated from source category E",
+                "F": "The lead was generated from source category F",
+                "D": "The lead was generated from source category D",
+                "A": "The lead was generated from source category A"
+            }
+        },
+        "Existing_EMI": {
+            "description": "Existing monthly EMI of the applicant in local currency unit",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Loan_Amount": {
+            "description": "Requested loan amount by the applicant in local currency unit",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Loan_Period": {
+            "description": "Requested loan period by the applicant in months",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Interest_Rate": {
+            "description": "Interest rate of the requested loan in percentage",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "EMI": {
+            "description": "Monthly equated installment of the requested loan in local currency unit",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Var1": {
+            "description": "Anonymized variable",
+            "type": "other"
+        },
+        "Approved": {
+            "description": "Whether the loan was approved or not",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The loan was not approved",
+                "1": "The loan was approved"
+            }
+        }
+    },
+    "task_info": {
+        "Approved": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in banking and loan prediction.",
+                "task_prompt": "Based on the features of the loan applicant, please predict whether the loan was approved.",
+                "answer_prompt": "The loan was not approved[0] or The loan was approved[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "The loan was not approved",
+                "1": "The loan was approved"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "Loan_Amount": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in banking and loan prediction.",
+                "task_prompt": "Based on the features of the loan applicant, please predict the loan amount.",
+                "answer_prompt": "What is the predicted loan amount?"
+            }
+        },
+        "Loan_Period": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in banking and loan prediction.",
+                "task_prompt": "Based on the features of the loan applicant, please predict the loan period.",
+                "answer_prompt": "What is the predicted loan period?"
+            }
+        },
+        "Interest_Rate": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in banking and loan prediction.",
+                "task_prompt": "Based on the features of the loan applicant, please predict the interest rate.",
+                "answer_prompt": "What is the predicted interest rate?"
+            }
+        },
+        "EMI": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in banking and loan prediction.",
+                "task_prompt": "Based on the features of the loan applicant, please predict the EMI.",
+                "answer_prompt": "What is the predicted EMI?"
+            }
+        }
+    }
+}

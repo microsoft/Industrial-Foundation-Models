@@ -1,0 +1,148 @@
+{
+    "basic_info": {
+        "row_num": 143917,
+        "col_num": 10,
+        "label_candidates": [
+            "Min Delay",
+            "Min Gap",
+            "Bound"
+        ],
+        "valid_feature_num": 10,
+        "num_features": [
+            "Min Gap",
+            "Min Delay"
+        ],
+        "cat_features": [
+            "Date",
+            "Time",
+            "Day",
+            "Station",
+            "Code",
+            "Bound",
+            "Line",
+            "Vehicle"
+        ],
+        "other_features": [],
+        "tags": [
+            "transportation",
+            "time series analysis",
+            "logistic regression",
+            "linear regression",
+            "decision tree"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/jsun13/toronto-subway-delay-data"
+    },
+    "feature_info": {
+        "Date": {
+            "description": "The date when the delay occurred, in the format of YYYY/MM/DD",
+            "type": "categorical"
+        },
+        "Time": {
+            "description": "The time when the delay occurred, in 24-hour format",
+            "type": "categorical"
+        },
+        "Day": {
+            "description": "The day of the week when the delay occurred",
+            "type": "categorical",
+            "value_dict": {
+                "Wednesday": "The delay occurred on Wednesday",
+                "Thursday": "The delay occurred on Thursday",
+                "Friday": "The delay occurred on Friday",
+                "Saturday": "The delay occurred on Saturday",
+                "Sunday": "The delay occurred on Sunday",
+                "Monday": "The delay occurred on Monday",
+                "Tuesday": "The delay occurred on Tuesday"
+            }
+        },
+        "Station": {
+            "description": "The subway station where the delay occurred",
+            "type": "categorical"
+        },
+        "Code": {
+            "description": "The code representing the reason for the delay",
+            "type": "categorical"
+        },
+        "Min Delay": {
+            "description": "The duration of the delay in minutes",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Min Gap": {
+            "description": "The minimum time gap in minutes between the delayed train and the next one",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Bound": {
+            "description": "The direction of the train that was delayed",
+            "type": "categorical",
+            "value_dict": {
+                "W": "The train was bound west",
+                "S": "The train was bound south",
+                "E": "The train was bound east",
+                "N": "The train was bound north",
+                "B": "The train was bound for Bloor-Danforth line",
+                "Y": "The train was bound for Yonge-University line",
+                "R": "The train was bound for Scarborough RT line",
+                "5": "The train was bound for Line 5 Eglinton",
+                "0": "The direction of the train is unknown"
+            }
+        },
+        "Line": {
+            "description": "The subway line where the delay occurred",
+            "type": "categorical"
+        },
+        "Vehicle": {
+            "description": "The vehicle number of the delayed train",
+            "type": "categorical"
+        }
+    },
+    "task_info": {
+        "Min Delay": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing public transportation data.",
+                "task_prompt": "Based on the features of the Toronto subway delay data, please predict the minimum delay time.",
+                "answer_prompt": "The minimum delay time is __ minutes."
+            }
+        },
+        "Min Gap": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing public transportation data.",
+                "task_prompt": "Based on the features of the Toronto subway delay data, please predict the minimum gap time.",
+                "answer_prompt": "The minimum gap time is __ minutes."
+            }
+        },
+        "Bound": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing public transportation data.",
+                "task_prompt": "Based on the features of the Toronto subway delay data, please predict the train bound direction.",
+                "answer_prompt": "The train was bound west[0], south[1], east[2], north[3], Bloor-Danforth line[4], Yonge-University line[5], Scarborough RT line[6], Line 5 Eglinton[7], or the direction is unknown[8]?"
+            },
+            "class_num": 9,
+            "class_value_dict": {
+                "W": "The train was bound west",
+                "S": "The train was bound south",
+                "E": "The train was bound east",
+                "N": "The train was bound north",
+                "B": "The train was bound for Bloor-Danforth line",
+                "Y": "The train was bound for Yonge-University line",
+                "R": "The train was bound for Scarborough RT line",
+                "5": "The train was bound for Line 5 Eglinton",
+                "0": "The direction of the train is unknown"
+            },
+            "class_index_dict": {
+                "W": 0,
+                "S": 1,
+                "E": 2,
+                "N": 3,
+                "B": 4,
+                "Y": 5,
+                "R": 6,
+                "5": 7,
+                "0": 8
+            }
+        }
+    }
+}

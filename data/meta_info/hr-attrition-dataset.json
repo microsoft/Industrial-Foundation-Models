@@ -1,0 +1,407 @@
+{
+    "basic_info": {
+        "row_num": 1470,
+        "col_num": 33,
+        "label_candidates": [
+            "Attrition",
+            "JobSatisfaction",
+            "PerformanceRating",
+            "Status_of_leaving",
+            "Work_accident"
+        ],
+        "valid_feature_num": 32,
+        "num_features": [
+            "Age",
+            "DistanceFromHome",
+            "MonthlyIncome",
+            "NumCompaniesWorked",
+            "PercentSalaryHike",
+            "TotalWorkingYears",
+            "TrainingTimesLastYear",
+            "YearsAtCompany",
+            "YearsSinceLastPromotion",
+            "YearsWithCurrManager",
+            "Leaves"
+        ],
+        "cat_features": [
+            "BusinessTravel",
+            "Department",
+            "Gender",
+            "JobInvolvement",
+            "JobLevel",
+            "JobRole",
+            "JobSatisfaction",
+            "MaritalStatus",
+            "OverTime",
+            "PerformanceRating",
+            "StockOptionLevel",
+            "Higher_Education",
+            "Status_of_leaving",
+            "Mode_of_work",
+            "Absenteeism",
+            "Work_accident",
+            "Source_of_Hire",
+            "Job_mode",
+            "Attrition"
+        ],
+        "other_features": [
+            "Date_of_Hire",
+            "Date_of_termination"
+        ],
+        "tags": [
+            "india",
+            "employment",
+            "intermediate",
+            "classification",
+            "tabular"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/singhnproud77/hr-attrition-dataset"
+    },
+    "feature_info": {
+        "Age": {
+            "description": "The age of the employee.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Attrition": {
+            "description": "Whether the employee left the company or not.",
+            "type": "categorical",
+            "value_dict": {
+                "Yes": "The employee left the company.",
+                "No": "The employee stayed in the company."
+            }
+        },
+        "BusinessTravel": {
+            "description": "The frequency of business travel for the employee.",
+            "type": "categorical",
+            "value_dict": {
+                "Travel_Rarely": "The employee rarely travels for business.",
+                "Travel_Frequently": "The employee frequently travels for business.",
+                "Non-Travel": "The employee does not travel for business."
+            }
+        },
+        "Department": {
+            "description": "The department in which the employee works.",
+            "type": "categorical",
+            "value_dict": {
+                "Research & Development": "The employee works in the Research & Development department.",
+                "Sales": "The employee works in the Sales department.",
+                "Human Resources": "The employee works in the Human Resources department."
+            }
+        },
+        "DistanceFromHome": {
+            "description": "The distance from work to home.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Gender": {
+            "description": "The gender of the employee.",
+            "type": "categorical",
+            "value_dict": {
+                "Male": "The employee is male.",
+                "Female": "The employee is female."
+            }
+        },
+        "JobInvolvement": {
+            "description": "Level of job involvement.",
+            "type": "categorical",
+            "value_dict": {
+                "2": "The employee has a medium-low job involvement.",
+                "3": "The employee has a medium-high job involvement.",
+                "1": "The employee has a low job involvement.",
+                "4": "The employee has a high job involvement."
+            }
+        },
+        "JobLevel": {
+            "description": "Level of job.",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The employee is at job level 1.",
+                "3": "The employee is at job level 3.",
+                "2": "The employee is at job level 2.",
+                "5": "The employee is at job level 5.",
+                "4": "The employee is at job level 4."
+            }
+        },
+        "JobRole": {
+            "description": "The role of the employee in the company.",
+            "type": "categorical",
+            "value_dict": {
+                "Laboratory Technician": "The employee is a Laboratory Technician.",
+                "Research Scientist": "The employee is a Research Scientist.",
+                "Research Director": "The employee is a Research Director.",
+                "Sales Representative": "The employee is a Sales Representative.",
+                "Sales Executive": "The employee is a Sales Executive.",
+                "Manager": "The employee is a Manager.",
+                "Manufacturing Director": "The employee is a Manufacturing Director.",
+                "Healthcare Representative": "The employee is a Healthcare Representative.",
+                "Human Resources": "The employee is in Human Resources."
+            }
+        },
+        "JobSatisfaction": {
+            "description": "Rating of the employee's job satisfaction.",
+            "type": "categorical",
+            "value_dict": {
+                "3": "The employee has a medium-high job satisfaction.",
+                "4": "The employee has a high job satisfaction.",
+                "1": "The employee has a low job satisfaction.",
+                "2": "The employee has a medium-low job satisfaction."
+            }
+        },
+        "MaritalStatus": {
+            "description": "The marital status of the employee.",
+            "type": "categorical",
+            "value_dict": {
+                "Single": "The employee is single.",
+                "Married": "The employee is married.",
+                "Divorced": "The employee is divorced."
+            }
+        },
+        "MonthlyIncome": {
+            "description": "The monthly income of the employee.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "NumCompaniesWorked": {
+            "description": "The number of companies the employee worked at.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "OverTime": {
+            "description": "Whether the employee works overtime or not.",
+            "type": "categorical",
+            "value_dict": {
+                "Yes": "The employee works overtime.",
+                "No": "The employee does not work overtime."
+            }
+        },
+        "PercentSalaryHike": {
+            "description": "The percentage of the employee's salary hike.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "PerformanceRating": {
+            "description": "The rating of the employee's performance.",
+            "type": "categorical",
+            "value_dict": {
+                "3": "The employee has a performance rating of 3.",
+                "4": "The employee has a performance rating of 4."
+            }
+        },
+        "StockOptionLevel": {
+            "description": "The level of the employee's stock option.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The employee has a stock option level of 0.",
+                "1": "The employee has a stock option level of 1.",
+                "2": "The employee has a stock option level of 2.",
+                "3": "The employee has a stock option level of 3."
+            }
+        },
+        "TotalWorkingYears": {
+            "description": "The total number of years the employee has worked.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "TrainingTimesLastYear": {
+            "description": "The number of times the employee had training last year.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "YearsAtCompany": {
+            "description": "The number of years the employee has worked at the company.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "YearsSinceLastPromotion": {
+            "description": "The number of years since the employee's last promotion.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "YearsWithCurrManager": {
+            "description": "The number of years the employee has been with their current manager.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Higher_Education": {
+            "description": "Whether the employee has higher education or not.",
+            "type": "categorical",
+            "value_dict": {
+                "Graduation": "The employee has a graduation degree.",
+                "Post-Graduation": "The employee has a post-graduation degree.",
+                "PHD": "The employee has a PHD.",
+                "12th": "The employee has completed 12th grade."
+            }
+        },
+        "Date_of_Hire": {
+            "description": "The date when the employee was hired.",
+            "type": "other"
+        },
+        "Date_of_termination": {
+            "description": "The date when the employee was terminated.",
+            "type": "other"
+        },
+        "Status_of_leaving": {
+            "description": "The status of the employee leaving the company.",
+            "type": "categorical",
+            "value_dict": {
+                "Salary": "The employee left due to salary.",
+                "Work Accident": "The employee left due to a work accident.",
+                "Dept.Head": "The employee left due to the department head.",
+                "Better Opportunity": "The employee left for a better opportunity.",
+                "Work Environment": "The employee left due to the work environment."
+            }
+        },
+        "Mode_of_work": {
+            "description": "The mode of work.",
+            "type": "categorical",
+            "value_dict": {
+                "OFFICE": "The employee works in the office.",
+                "WFH": "The employee works from home."
+            }
+        },
+        "Leaves": {
+            "description": "The number of leaves the employee took.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Absenteeism": {
+            "description": "The level of absenteeism of the employee.",
+            "type": "categorical",
+            "value_dict": {
+                "2": "The employee has a medium-low level of absenteeism.",
+                "3": "The employee has a medium-high level of absenteeism.",
+                "0": "The employee has a low level of absenteeism.",
+                "1": "The employee has a high level of absenteeism."
+            }
+        },
+        "Work_accident": {
+            "description": "Whether the employee had a work accident or not.",
+            "type": "categorical",
+            "value_dict": {
+                "No": "The employee has not had a work accident.",
+                "Yes": "The employee has had a work accident."
+            }
+        },
+        "Source_of_Hire": {
+            "description": "The source from which the employee was hired.",
+            "type": "categorical",
+            "value_dict": {
+                "Job Event": "The employee was hired from a job event.",
+                "Recruiter": "The employee was hired through a recruiter.",
+                "Job Portal": "The employee was hired through a job portal.",
+                "Walk-in": "The employee was a walk-in applicant."
+            }
+        },
+        "Job_mode": {
+            "description": "The mode of the job.",
+            "type": "categorical",
+            "value_dict": {
+                "Contract": "The employee is on a contract.",
+                "Part Time": "The employee is part time.",
+                "FullTime": "The employee is full time."
+            }
+        },
+        "Unnamed: 32": {
+            "description": "Unnamed column, seems to be an artifact from data preparation.",
+            "type": "useless"
+        }
+    },
+    "task_info": {
+        "Attrition": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in HR data analysis.",
+                "task_prompt": "Based on the features of the employee, please predict the attrition status.",
+                "answer_prompt": "The employee left the company[1] or The employee stayed in the company[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "Yes": "The employee left the company.",
+                "No": "The employee stayed in the company."
+            },
+            "class_index_dict": {
+                "Yes": 1,
+                "No": 0
+            }
+        },
+        "JobSatisfaction": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in HR data analysis.",
+                "task_prompt": "Based on the features of the employee, please predict the job satisfaction level.",
+                "answer_prompt": "Low[0], medium-low[1], medium-high[2] or high[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "3": "The employee has a medium-high job satisfaction.",
+                "4": "The employee has a high job satisfaction.",
+                "1": "The employee has a low job satisfaction.",
+                "2": "The employee has a medium-low job satisfaction."
+            },
+            "class_index_dict": {
+                "1": 0,
+                "2": 1,
+                "3": 2,
+                "4": 3
+            }
+        },
+        "PerformanceRating": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in HR data analysis.",
+                "task_prompt": "Based on the features of the employee, please predict the performance rating.",
+                "answer_prompt": "The employee has a performance rating of 3[0] or 4[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "3": "The employee has a performance rating of 3.",
+                "4": "The employee has a performance rating of 4."
+            },
+            "class_index_dict": {
+                "3": 0,
+                "4": 1
+            }
+        },
+        "Status_of_leaving": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in HR data analysis.",
+                "task_prompt": "Based on the features of the employee, please predict the reason for leaving.",
+                "answer_prompt": "The employee left due to salary[0], work accident[1], department head[2], better opportunity[3] or work environment[4]?"
+            },
+            "class_num": 5,
+            "class_value_dict": {
+                "Salary": "The employee left due to salary.",
+                "Work Accident": "The employee left due to a work accident.",
+                "Dept.Head": "The employee left due to the department head.",
+                "Better Opportunity": "The employee left for a better opportunity.",
+                "Work Environment": "The employee left due to the work environment."
+            },
+            "class_index_dict": {
+                "Salary": 0,
+                "Work Accident": 1,
+                "Dept.Head": 2,
+                "Better Opportunity": 3,
+                "Work Environment": 4
+            }
+        },
+        "Work_accident": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in HR data analysis.",
+                "task_prompt": "Based on the features of the employee, please predict if the employee has had a work accident.",
+                "answer_prompt": "The employee has not had a work accident[0] or has had a work accident[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "No": "The employee has not had a work accident.",
+                "Yes": "The employee has had a work accident."
+            },
+            "class_index_dict": {
+                "No": 0,
+                "Yes": 1
+            }
+        }
+    }
+}

@@ -1,0 +1,236 @@
+{
+    "basic_info": {
+        "row_num": 44811,
+        "col_num": 24,
+        "label_candidates": [
+            "CO2(g/km)",
+            "Urban_consumption(l/100km)",
+            "Extra-urban_consumption(l/100km)",
+            "Mixed_consumption(l/100km)",
+            "Maximal_power(kW)",
+            "Administrative_power"
+        ],
+        "valid_feature_num": 24,
+        "num_features": [
+            "Administrative_power",
+            "Maximal_power(kW)",
+            "Urban_consumption(l/100km)",
+            "Extra-urban_consumption(l/100km)",
+            "Mixed_consumption(l/100km)",
+            "CO_type_I(g/km)",
+            "HC(g/km)",
+            "NOX(g/km)",
+            "HC+NOX(g/km)",
+            "Particules(g/km)",
+            "Europe_empty_mass_minimum(kg)",
+            "Europe_empty_mass_maximum(kg)",
+            "CO2(g/km)"
+        ],
+        "cat_features": [
+            "Brand",
+            "Model",
+            "UTAC_model",
+            "CNIT",
+            "Type_variant_version_(TVV)",
+            "Fuel",
+            "Hybrid",
+            "Gearbox",
+            "Field_V9",
+            "Body",
+            "Range"
+        ],
+        "other_features": [],
+        "tags": [
+            "environment",
+            "linear regression",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/hetax17/france-vehicles-co2-emission-2013"
+    },
+    "feature_info": {
+        "Brand": {
+            "description": "Brand of the vehicle",
+            "type": "categorical"
+        },
+        "Model": {
+            "description": "Model of the vehicle",
+            "type": "categorical"
+        },
+        "UTAC_model": {
+            "description": "UTAC certified model of the vehicle",
+            "type": "categorical"
+        },
+        "CNIT": {
+            "description": "National Identification Code of the Type of the vehicle",
+            "type": "categorical"
+        },
+        "Type_variant_version_(TVV)": {
+            "description": "Type, variant, and version of the vehicle",
+            "type": "categorical"
+        },
+        "Fuel": {
+            "description": "Type of fuel used by the vehicle",
+            "type": "categorical"
+        },
+        "Hybrid": {
+            "description": "Indicates whether the vehicle is hybrid or not",
+            "type": "categorical",
+            "value_dict": {
+                "no": "The vehicle is not a hybrid",
+                "yes": "The vehicle is a hybrid"
+            }
+        },
+        "Administrative_power": {
+            "description": "Administrative power of the vehicle",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Maximal_power(kW)": {
+            "description": "Maximum power of the vehicle in kilowatts",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Gearbox": {
+            "description": "Type of gearbox in the vehicle",
+            "type": "categorical"
+        },
+        "Urban_consumption(l/100km)": {
+            "description": "Fuel consumption in urban areas in liters per 100 kilometers",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Extra-urban_consumption(l/100km)": {
+            "description": "Fuel consumption in extra-urban areas in liters per 100 kilometers",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Mixed_consumption(l/100km)": {
+            "description": "Mixed fuel consumption in liters per 100 kilometers",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "CO2(g/km)": {
+            "description": "CO2 emission in grams per kilometer",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "CO_type_I(g/km)": {
+            "description": "CO type I emission in grams per kilometer",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "HC(g/km)": {
+            "description": "HC emission in grams per kilometer",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "NOX(g/km)": {
+            "description": "NOX emission in grams per kilometer",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "HC+NOX(g/km)": {
+            "description": "HC and NOX combined emission in grams per kilometer",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Particules(g/km)": {
+            "description": "Particulate emission in grams per kilometer",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Europe_empty_mass_minimum(kg)": {
+            "description": "Minimum empty mass of the vehicle in Europe in kilograms",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Europe_empty_mass_maximum(kg)": {
+            "description": "Maximum empty mass of the vehicle in Europe in kilograms",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Field_V9": {
+            "description": "Field V9 of the vehicle, potentially related to regulations or standards",
+            "type": "categorical"
+        },
+        "Body": {
+            "description": "Body type of the vehicle",
+            "type": "categorical",
+            "value_dict": {
+                "BREAK": "The vehicle body type is a station wagon",
+                "BERLINE": "The vehicle body type is a sedan",
+                "CABRIOLET": "The vehicle body type is a convertible",
+                "COUPE": "The vehicle body type is a coupe",
+                "TS TERRAINS/CHEMINS": "The vehicle body type is an off-road vehicle",
+                "COMBISPACE": "The vehicle body type is a combispace",
+                "MONOSPACE": "The vehicle body type is a monospace",
+                "MINISPACE": "The vehicle body type is a minispace",
+                "MONOSPACE COMPACT": "The vehicle body type is a compact monospace",
+                "MINIBUS": "The vehicle body type is a minibus"
+            }
+        },
+        "Range": {
+            "description": "Range category of the vehicle",
+            "type": "categorical",
+            "value_dict": {
+                "MOY-SUPER": "The vehicle is in the medium-superior range",
+                "LUXE": "The vehicle is in the luxury range",
+                "MOY-INFER": "The vehicle is in the medium-inferior range",
+                "INFERIEURE": "The vehicle is in the inferior range",
+                "SUPERIEURE": "The vehicle is in the superior range",
+                "ECONOMIQUE": "The vehicle is in the economical range",
+                "MOY-INF": "The vehicle is in the medium-inferior range"
+            }
+        }
+    },
+    "task_info": {
+        "CO2(g/km)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in vehicle emissions.",
+                "task_prompt": "Based on the features of the vehicle, please predict the CO2 emissions in grams per kilometer.",
+                "answer_prompt": "The CO2 emissions are ____ g/km."
+            }
+        },
+        "Urban_consumption(l/100km)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in vehicle fuel consumption.",
+                "task_prompt": "Based on the features of the vehicle, please predict the urban fuel consumption in liters per 100 kilometers.",
+                "answer_prompt": "The urban fuel consumption is ____ l/100km."
+            }
+        },
+        "Extra-urban_consumption(l/100km)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in vehicle fuel consumption.",
+                "task_prompt": "Based on the features of the vehicle, please predict the extra-urban fuel consumption in liters per 100 kilometers.",
+                "answer_prompt": "The extra-urban fuel consumption is ____ l/100km."
+            }
+        },
+        "Mixed_consumption(l/100km)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in vehicle fuel consumption.",
+                "task_prompt": "Based on the features of the vehicle, please predict the mixed fuel consumption in liters per 100 kilometers.",
+                "answer_prompt": "The mixed fuel consumption is ____ l/100km."
+            }
+        },
+        "Maximal_power(kW)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in vehicle specifications.",
+                "task_prompt": "Based on the features of the vehicle, please predict the maximal power in kilowatts.",
+                "answer_prompt": "The maximal power is ____ kW."
+            }
+        },
+        "Administrative_power": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in vehicle specifications.",
+                "task_prompt": "Based on the features of the vehicle, please predict the administrative power.",
+                "answer_prompt": "The administrative power is ____."
+            }
+        }
+    }
+}

@@ -1,0 +1,359 @@
+{
+    "basic_info": {
+        "row_num": 400,
+        "col_num": 51,
+        "label_candidates": [
+            "Class"
+        ],
+        "valid_feature_num": 51,
+        "num_features": [
+            "_RMSenergy_Mean",
+            "_Lowenergy_Mean",
+            "_Fluctuation_Mean",
+            "_Tempo_Mean",
+            "_MFCC_Mean_1",
+            "_MFCC_Mean_2",
+            "_MFCC_Mean_3",
+            "_MFCC_Mean_4",
+            "_MFCC_Mean_5",
+            "_MFCC_Mean_6",
+            "_MFCC_Mean_7",
+            "_MFCC_Mean_8",
+            "_MFCC_Mean_9",
+            "_MFCC_Mean_10",
+            "_MFCC_Mean_11",
+            "_MFCC_Mean_12",
+            "_MFCC_Mean_13",
+            "_Roughness_Mean",
+            "_Roughness_Slope",
+            "_Zero-crossingrate_Mean",
+            "_AttackTime_Mean",
+            "_AttackTime_Slope",
+            "_Rolloff_Mean",
+            "_Eventdensity_Mean",
+            "_Pulseclarity_Mean",
+            "_Brightness_Mean",
+            "_Spectralcentroid_Mean",
+            "_Spectralspread_Mean",
+            "_Spectralskewness_Mean",
+            "_Spectralkurtosis_Mean",
+            "_Spectralflatness_Mean",
+            "_EntropyofSpectrum_Mean",
+            "_Chromagram_Mean_1",
+            "_Chromagram_Mean_2",
+            "_Chromagram_Mean_3",
+            "_Chromagram_Mean_4",
+            "_Chromagram_Mean_5",
+            "_Chromagram_Mean_6",
+            "_Chromagram_Mean_7",
+            "_Chromagram_Mean_8",
+            "_Chromagram_Mean_9",
+            "_Chromagram_Mean_10",
+            "_Chromagram_Mean_11",
+            "_Chromagram_Mean_12",
+            "_HarmonicChangeDetectionFunction_Mean",
+            "_HarmonicChangeDetectionFunction_Std",
+            "_HarmonicChangeDetectionFunction_Slope",
+            "_HarmonicChangeDetectionFunction_PeriodFreq",
+            "_HarmonicChangeDetectionFunction_PeriodAmp",
+            "_HarmonicChangeDetectionFunction_PeriodEntropy"
+        ],
+        "cat_features": [
+            "Class"
+        ],
+        "other_features": [],
+        "tags": [
+            "arts and entertainment",
+            "music",
+            "mental health",
+            "multiclass classification",
+            "turkish"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/joebeachcapital/turkish-music-emotion"
+    },
+    "feature_info": {
+        "Class": {
+            "description": "Emotion class of the music",
+            "type": "categorical",
+            "value_dict": {
+                "relax": "The music is classified as relaxing",
+                "happy": "The music is classified as happy",
+                "sad": "The music is classified as sad",
+                "angry": "The music is classified as angry"
+            }
+        },
+        "_RMSenergy_Mean": {
+            "description": "Mean of Root Mean Square energy of the music",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_Lowenergy_Mean": {
+            "description": "Mean of low energy measure of the music",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_Fluctuation_Mean": {
+            "description": "Mean of fluctuation of the music",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_Tempo_Mean": {
+            "description": "Mean tempo of the music",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_MFCC_Mean_1": {
+            "description": "Mean of the 1st Mel-frequency cepstral coefficients (MFCCs)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_MFCC_Mean_2": {
+            "description": "Mean of the 2nd Mel-frequency cepstral coefficients (MFCCs)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_MFCC_Mean_3": {
+            "description": "Mean of the 3rd Mel-frequency cepstral coefficients (MFCCs)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_MFCC_Mean_4": {
+            "description": "Mean of the 4th Mel-frequency cepstral coefficients (MFCCs)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_MFCC_Mean_5": {
+            "description": "Mean of the 5th Mel-frequency cepstral coefficients (MFCCs)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_MFCC_Mean_6": {
+            "description": "Mean of the 6th Mel-frequency cepstral coefficients (MFCCs)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_MFCC_Mean_7": {
+            "description": "Mean of the 7th Mel-frequency cepstral coefficients (MFCCs)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_MFCC_Mean_8": {
+            "description": "Mean of the 8th Mel-frequency cepstral coefficients (MFCCs)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_MFCC_Mean_9": {
+            "description": "Mean of the 9th Mel-frequency cepstral coefficients (MFCCs)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_MFCC_Mean_10": {
+            "description": "Mean of the 10th Mel-frequency cepstral coefficients (MFCCs)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_MFCC_Mean_11": {
+            "description": "Mean of the 11th Mel-frequency cepstral coefficients (MFCCs)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_MFCC_Mean_12": {
+            "description": "Mean of the 12th Mel-frequency cepstral coefficients (MFCCs)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_MFCC_Mean_13": {
+            "description": "Mean of the 13th Mel-frequency cepstral coefficients (MFCCs)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_Roughness_Mean": {
+            "description": "Mean roughness of the music",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_Roughness_Slope": {
+            "description": "Slope of roughness of the music",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_Zero-crossingrate_Mean": {
+            "description": "Mean zero-crossing rate of the music",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_AttackTime_Mean": {
+            "description": "Mean attack time of the music",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_AttackTime_Slope": {
+            "description": "Slope of attack time of the music",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_Rolloff_Mean": {
+            "description": "Mean spectral rolloff of the music",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_Eventdensity_Mean": {
+            "description": "Mean event density of the music",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_Pulseclarity_Mean": {
+            "description": "Mean pulse clarity of the music",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_Brightness_Mean": {
+            "description": "Mean brightness of the music",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_Spectralcentroid_Mean": {
+            "description": "Mean spectral centroid of the music",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_Spectralspread_Mean": {
+            "description": "Mean spectral spread of the music",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_Spectralskewness_Mean": {
+            "description": "Mean spectral skewness of the music",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_Spectralkurtosis_Mean": {
+            "description": "Mean spectral kurtosis of the music",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_Spectralflatness_Mean": {
+            "description": "Mean spectral flatness of the music",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_EntropyofSpectrum_Mean": {
+            "description": "Mean entropy of spectrum of the music",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_Chromagram_Mean_1": {
+            "description": "Mean of the 1st chromagram of the music",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_Chromagram_Mean_2": {
+            "description": "Mean of the 2nd chromagram of the music",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_Chromagram_Mean_3": {
+            "description": "Mean of the 3rd chromagram of the music",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_Chromagram_Mean_4": {
+            "description": "Mean of the 4th chromagram of the music",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_Chromagram_Mean_5": {
+            "description": "Mean of the 5th chromagram of the music",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_Chromagram_Mean_6": {
+            "description": "Mean of the 6th chromagram of the music",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_Chromagram_Mean_7": {
+            "description": "Mean of the 7th chromagram of the music",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_Chromagram_Mean_8": {
+            "description": "Mean of the 8th chromagram of the music",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_Chromagram_Mean_9": {
+            "description": "Mean of the 9th chromagram of the music",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_Chromagram_Mean_10": {
+            "description": "Mean of the 10th chromagram of the music",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_Chromagram_Mean_11": {
+            "description": "Mean of the 11th chromagram of the music",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_Chromagram_Mean_12": {
+            "description": "Mean of the 12th chromagram of the music",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_HarmonicChangeDetectionFunction_Mean": {
+            "description": "Mean of harmonic change detection function of the music",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_HarmonicChangeDetectionFunction_Std": {
+            "description": "Standard deviation of harmonic change detection function of the music",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_HarmonicChangeDetectionFunction_Slope": {
+            "description": "Slope of harmonic change detection function of the music",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_HarmonicChangeDetectionFunction_PeriodFreq": {
+            "description": "Frequency period of harmonic change detection function of the music",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_HarmonicChangeDetectionFunction_PeriodAmp": {
+            "description": "Amplitude period of harmonic change detection function of the music",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "_HarmonicChangeDetectionFunction_PeriodEntropy": {
+            "description": "Entropy period of harmonic change detection function of the music",
+            "type": "numerical",
+            "decimal": 3
+        }
+    },
+    "task_info": {
+        "Class": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in music emotion analysis.",
+                "task_prompt": "Based on the features of the music, please predict the emotion conveyed by the music.",
+                "answer_prompt": "Is the music conveying a sense of relaxation[0], happiness[1], sadness[2], or anger[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "relax": "The music is classified as relaxing",
+                "happy": "The music is classified as happy",
+                "sad": "The music is classified as sad",
+                "angry": "The music is classified as angry"
+            },
+            "class_index_dict": {
+                "relax": 0,
+                "happy": 1,
+                "sad": 2,
+                "angry": 3
+            }
+        }
+    }
+}

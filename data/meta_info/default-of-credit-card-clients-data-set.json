@@ -1,0 +1,243 @@
+{
+    "basic_info": {
+        "row_num": 30000,
+        "col_num": 25,
+        "label_candidates": [
+            "default payment_next_month",
+            "LIMIT_BAL",
+            "AGE"
+        ],
+        "valid_feature_num": 24,
+        "num_features": [
+            "LIMIT_BAL",
+            "AGE",
+            "BILL_AMT1",
+            "BILL_AMT2",
+            "BILL_AMT3",
+            "BILL_AMT4",
+            "BILL_AMT5",
+            "BILL_AMT6",
+            "PAY_AMT1",
+            "PAY_AMT2",
+            "PAY_AMT3",
+            "PAY_AMT4",
+            "PAY_AMT5",
+            "PAY_AMT6"
+        ],
+        "cat_features": [
+            "SEX",
+            "EDUCATION",
+            "MARRIAGE",
+            "PAY_0",
+            "PAY_2",
+            "PAY_3",
+            "PAY_4",
+            "PAY_5",
+            "PAY_6",
+            "default payment_next_month"
+        ],
+        "other_features": [],
+        "tags": [
+            "e-commerce services"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/tunguz/default-of-credit-card-clients-data-set"
+    },
+    "feature_info": {
+        "ID": {
+            "description": "Unique identifier for each client",
+            "type": "useless"
+        },
+        "LIMIT_BAL": {
+            "description": "Amount of the given credit (NT dollar)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "SEX": {
+            "description": "Gender (1 = male; 2 = female)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Male",
+                "2": "Female"
+            }
+        },
+        "EDUCATION": {
+            "description": "Education (1 = graduate school; 2 = university; 3 = high school; 4 = others)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Graduate school",
+                "2": "University",
+                "3": "High school",
+                "4": "Others",
+                "5": "Unknown",
+                "6": "Unknown",
+                "0": "Unknown"
+            }
+        },
+        "MARRIAGE": {
+            "description": "Marital status (1 = married; 2 = single; 3 = others)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Married",
+                "2": "Single",
+                "3": "Others",
+                "0": "Unknown"
+            }
+        },
+        "AGE": {
+            "description": "Age in years",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "PAY_0": {
+            "description": "Repayment status in September, 2005 (-1 = pay duly; 1 = payment delay for one month; 2 = payment delay for two months; ...; 8 = payment delay for eight months; 9 = payment delay for nine months and above)",
+            "type": "categorical"
+        },
+        "PAY_2": {
+            "description": "Repayment status in August, 2005",
+            "type": "categorical"
+        },
+        "PAY_3": {
+            "description": "Repayment status in July, 2005",
+            "type": "categorical"
+        },
+        "PAY_4": {
+            "description": "Repayment status in June, 2005",
+            "type": "categorical"
+        },
+        "PAY_5": {
+            "description": "Repayment status in May, 2005",
+            "type": "categorical",
+            "value_dict": {
+                "-2": "No consumption",
+                "-1": "Pay duly",
+                "0": "The use of revolving credit",
+                "2": "Payment delay for two months",
+                "3": "Payment delay for three months",
+                "4": "Payment delay for four months",
+                "5": "Payment delay for five months",
+                "6": "Payment delay for six months",
+                "7": "Payment delay for seven months",
+                "8": "Payment delay for eight months"
+            }
+        },
+        "PAY_6": {
+            "description": "Repayment status in April, 2005",
+            "type": "categorical",
+            "value_dict": {
+                "-2": "No consumption",
+                "-1": "Pay duly",
+                "0": "The use of revolving credit",
+                "2": "Payment delay for two months",
+                "3": "Payment delay for three months",
+                "4": "Payment delay for four months",
+                "5": "Payment delay for five months",
+                "6": "Payment delay for six months",
+                "7": "Payment delay for seven months",
+                "8": "Payment delay for eight months"
+            }
+        },
+        "BILL_AMT1": {
+            "description": "Amount of bill statement in September, 2005 (NT dollar)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "BILL_AMT2": {
+            "description": "Amount of bill statement in August, 2005 (NT dollar)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "BILL_AMT3": {
+            "description": "Amount of bill statement in July, 2005 (NT dollar)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "BILL_AMT4": {
+            "description": "Amount of bill statement in June, 2005 (NT dollar)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "BILL_AMT5": {
+            "description": "Amount of bill statement in May, 2005 (NT dollar)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "BILL_AMT6": {
+            "description": "Amount of bill statement in April, 2005 (NT dollar)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "PAY_AMT1": {
+            "description": "Amount of previous payment in September, 2005 (NT dollar)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "PAY_AMT2": {
+            "description": "Amount of previous payment in August, 2005 (NT dollar)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "PAY_AMT3": {
+            "description": "Amount of previous payment in July, 2005 (NT dollar)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "PAY_AMT4": {
+            "description": "Amount of previous payment in June, 2005 (NT dollar)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "PAY_AMT5": {
+            "description": "Amount of previous payment in May, 2005 (NT dollar)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "PAY_AMT6": {
+            "description": "Amount of previous payment in April, 2005 (NT dollar)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "default payment_next_month": {
+            "description": "Default payment (1 = yes, 0 = no)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "No default payment",
+                "1": "Default payment"
+            }
+        }
+    },
+    "task_info": {
+        "default payment_next_month": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in credit risk management.",
+                "task_prompt": "Based on the features of the credit card clients, please predict the default payment for next month.",
+                "answer_prompt": "Default payment[1] or No default payment[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "No default payment",
+                "1": "Default payment"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "LIMIT_BAL": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in credit risk management.",
+                "task_prompt": "Based on the features of the credit card clients, please predict the amount of given credit in NT dollars (includes individual and family/supplementary credit.",
+                "answer_prompt": "What is the amount of given credit in NT dollars?"
+            }
+        },
+        "AGE": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in credit risk management.",
+                "task_prompt": "Based on the features of the credit card clients, please predict the age of the client.",
+                "answer_prompt": "What is the age of the client?"
+            }
+        }
+    }
+}

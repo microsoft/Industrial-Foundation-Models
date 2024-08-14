@@ -1,0 +1,294 @@
+{
+    "basic_info": {
+        "row_num": 169,
+        "col_num": 25,
+        "label_candidates": [
+            "SquareMiles",
+            "Shape__Area",
+            "Shape__Length",
+            "PlanningRegion"
+        ],
+        "valid_feature_num": 23,
+        "num_features": [
+            "SquareMiles",
+            "Shape__Area",
+            "Shape__Length"
+        ],
+        "cat_features": [
+            "Municipality",
+            "MunicipalityNumber",
+            "PlanningRegion",
+            "CouncilOfGovernment",
+            "MetropolitanPlanningOrganizatio",
+            "DEMHSRegion",
+            "StatePoliceTroop",
+            "DOTMunicipalityNumber",
+            "DOTConstructionDistrict",
+            "DOTHighwayOperationsCenter",
+            "TransportationManagementArea",
+            "OzoneDesignatedArea",
+            "PM25DesignatedArea",
+            "CarbonMonoxideDesignatedArea",
+            "TransitDistrict",
+            "County"
+        ],
+        "other_features": [
+            "created_user",
+            "created_date",
+            "last_edited_user",
+            "last_edited_date"
+        ],
+        "tags": [
+            "real estate",
+            "beginner",
+            "intermediate",
+            "linear regression",
+            "english"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/kevinmorgado/connecticut-sales-2001-2022"
+    },
+    "feature_info": {
+        "OBJECTID": {
+            "description": "Unique identifier for each entry",
+            "type": "useless"
+        },
+        "GlobalID": {
+            "description": "Globally unique identifier",
+            "type": "useless"
+        },
+        "Municipality": {
+            "description": "Name of the municipality",
+            "type": "categorical"
+        },
+        "MunicipalityNumber": {
+            "description": "Number assigned to the municipality",
+            "type": "categorical"
+        },
+        "PlanningRegion": {
+            "description": "Region of planning",
+            "type": "categorical",
+            "value_dict": {
+                "Capital": "The capital region",
+                "Naugatuck Valley": "The Naugatuck Valley region",
+                "Northeastern Connecticut": "The Northeastern Connecticut region",
+                "Northwest Hills": "The Northwest Hills region",
+                "South Central Connecticut": "The South Central Connecticut region",
+                "Western Connecticut": "The Western Connecticut region",
+                "Southeastern Connecticut": "The Southeastern Connecticut region",
+                "Greater Bridgeport": "The Greater Bridgeport region",
+                "Lower Connecticut River Valley": "The Lower Connecticut River Valley region"
+            }
+        },
+        "CouncilOfGovernment": {
+            "description": "Council of government",
+            "type": "categorical",
+            "value_dict": {
+                "Capital Region": "The capital region government council",
+                "Naugatuck Valley": "The Naugatuck Valley government council",
+                "Northeastern CT": "The Northeastern CT government council",
+                "Northwest Hills": "The Northwest Hills government council",
+                "South Central Regional": "The South Central Regional government council",
+                "Western CT": "The Western CT government council",
+                "Southeastern CT": "The Southeastern CT government council",
+                "CT Metropolitan": "The CT Metropolitan government council",
+                "Lower CT River Valley": "The Lower CT River Valley government council"
+            }
+        },
+        "MetropolitanPlanningOrganizatio": {
+            "description": "Metropolitan planning organization",
+            "type": "categorical",
+            "value_dict": {
+                "Capital Region": "The metropolitan planning organization for the Capital Region",
+                "Greater Bridgeport Valley": "The metropolitan planning organization for the Greater Bridgeport Valley",
+                "Northeastern CT": "The metropolitan planning organization for Northeastern CT",
+                "Northwest Hills": "The metropolitan planning organization for Northwest Hills",
+                "Central Naugatuck Valley": "The metropolitan planning organization for Central Naugatuck Valley",
+                "South Central Region": "The metropolitan planning organization for South Central Region",
+                "Housatonic Valley": "The metropolitan planning organization for Housatonic Valley",
+                "Southeastern CT": "The metropolitan planning organization for Southeastern CT",
+                "Lower CT River Valley": "The metropolitan planning organization for Lower CT River Valley",
+                "South Western": "The metropolitan planning organization for South Western"
+            }
+        },
+        "County": {
+            "description": "County name",
+            "type": "categorical",
+            "value_dict": {
+                "Tolland": "Tolland County",
+                "New Haven": "New Haven County",
+                "Windham": "Windham County",
+                "Hartford": "Hartford County",
+                "Litchfield": "Litchfield County",
+                "Fairfield": "Fairfield County",
+                "New London": "New London County",
+                "Middlesex": "Middlesex County"
+            }
+        },
+        "DEMHSRegion": {
+            "description": "Department of Emergency Management and Homeland Security region",
+            "type": "categorical",
+            "value_dict": {
+                "3": "DEMHS Region 3",
+                "2": "DEMHS Region 2",
+                "4": "DEMHS Region 4",
+                "5": "DEMHS Region 5",
+                "1": "DEMHS Region 1"
+            }
+        },
+        "StatePoliceTroop": {
+            "description": "State police troop",
+            "type": "categorical"
+        },
+        "DOTMunicipalityNumber": {
+            "description": "Department of Transportation number assigned to the municipality",
+            "type": "categorical"
+        },
+        "DOTConstructionDistrict": {
+            "description": "Department of Transportation construction district",
+            "type": "categorical",
+            "value_dict": {
+                "1": "DOT Construction District 1",
+                "4": "DOT Construction District 4",
+                "2": "DOT Construction District 2",
+                "3": "DOT Construction District 3"
+            }
+        },
+        "DOTHighwayOperationsCenter": {
+            "description": "Department of Transportation highway operations center",
+            "type": "categorical",
+            "value_dict": {
+                "Newington": "DOT Highway Operations Center in Newington",
+                "Bridgeport": "DOT Highway Operations Center in Bridgeport"
+            }
+        },
+        "TransportationManagementArea": {
+            "description": "Transportation management area",
+            "type": "categorical",
+            "value_dict": {
+                "Hartford": "Transportation Management Area in Hartford",
+                "Bridgeport - Stamford": "Transportation Management Area in Bridgeport - Stamford",
+                "New Haven": "Transportation Management Area in New Haven",
+                "Southeastern": "Transportation Management Area in Southeastern"
+            }
+        },
+        "OzoneDesignatedArea": {
+            "description": "Ozone designated area",
+            "type": "categorical",
+            "value_dict": {
+                "Greater CT Ozone Non-Attainment Area": "Greater CT area that does not meet the standard for ozone",
+                "NY-NJ-LI Ozone Non-Attainment Area": "NY-NJ-LI area that does not meet the standard for ozone"
+            }
+        },
+        "PM25DesignatedArea": {
+            "description": "PM2.5 (particulate matter) designated area",
+            "type": "categorical",
+            "value_dict": {
+                "PM 2.5 Attainment Area": "Area that meets the standard for PM2.5",
+                "PM 2.5 Attainment - Maintenance Area": "Area that not only meets the standard for PM2.5 but is also maintained"
+            }
+        },
+        "CarbonMonoxideDesignatedArea": {
+            "description": "Carbon monoxide designated area",
+            "type": "categorical",
+            "value_dict": {
+                "4": "Carbon Monoxide Designated Area 4",
+                "3": "Carbon Monoxide Designated Area 3",
+                "5": "Carbon Monoxide Designated Area 5",
+                "2": "Carbon Monoxide Designated Area 2",
+                "1": "Carbon Monoxide Designated Area 1"
+            }
+        },
+        "TransitDistrict": {
+            "description": "Transit district",
+            "type": "categorical"
+        },
+        "SquareMiles": {
+            "description": "Area in square miles",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "created_user": {
+            "description": "User who created the entry",
+            "type": "other"
+        },
+        "created_date": {
+            "description": "Date when the entry was created",
+            "type": "other"
+        },
+        "last_edited_user": {
+            "description": "User who last edited the entry",
+            "type": "other"
+        },
+        "last_edited_date": {
+            "description": "Date when the entry was last edited",
+            "type": "other"
+        },
+        "Shape__Area": {
+            "description": "Area of the shape (not specified unit)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Shape__Length": {
+            "description": "Length of the shape (not specified unit)",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "SquareMiles": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an assistant designed to analyse geographical data.",
+                "task_prompt": "Based on the features of the geographical region, please predict the square miles of the area.",
+                "answer_prompt": "The square miles of the area is {}."
+            }
+        },
+        "Shape__Area": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an assistant designed to analyse geographical data.",
+                "task_prompt": "Based on the features of the geographical region, please predict the area of the shape.",
+                "answer_prompt": "The area of the shape is {}."
+            }
+        },
+        "Shape__Length": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an assistant designed to analyse geographical data.",
+                "task_prompt": "Based on the features of the geographical region, please predict the length of the shape.",
+                "answer_prompt": "The length of the shape is {}."
+            }
+        },
+        "PlanningRegion": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an assistant designed to analyse geographical data.",
+                "task_prompt": "Based on the features of the geographical region, please predict the planning region.",
+                "answer_prompt": "The planning region is Capital[0], Naugatuck Valley[1], Northeastern Connecticut[2], Northwest Hills[3], South Central Connecticut[4], Western Connecticut[5], Southeastern Connecticut[6], Greater Bridgeport[7], Lower Connecticut River Valley[8]."
+            },
+            "class_num": 9,
+            "class_value_dict": {
+                "Capital": "The capital region",
+                "Naugatuck Valley": "The Naugatuck Valley region",
+                "Northeastern Connecticut": "The Northeastern Connecticut region",
+                "Northwest Hills": "The Northwest Hills region",
+                "South Central Connecticut": "The South Central Connecticut region",
+                "Western Connecticut": "The Western Connecticut region",
+                "Southeastern Connecticut": "The Southeastern Connecticut region",
+                "Greater Bridgeport": "The Greater Bridgeport region",
+                "Lower Connecticut River Valley": "The Lower Connecticut River Valley region"
+            },
+            "class_index_dict": {
+                "Capital": 0,
+                "Naugatuck Valley": 1,
+                "Northeastern Connecticut": 2,
+                "Northwest Hills": 3,
+                "South Central Connecticut": 4,
+                "Western Connecticut": 5,
+                "Southeastern Connecticut": 6,
+                "Greater Bridgeport": 7,
+                "Lower Connecticut River Valley": 8
+            }
+        }
+    }
+}

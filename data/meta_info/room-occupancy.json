@@ -1,0 +1,124 @@
+{
+    "basic_info": {
+        "row_num": 2665,
+        "col_num": 6,
+        "label_candidates": [
+            "Occupancy",
+            "Temperature",
+            "Light",
+            "CO2",
+            "Humidity",
+            "HumidityRatio"
+        ],
+        "valid_feature_num": 6,
+        "num_features": [
+            "Temperature",
+            "Humidity",
+            "Light",
+            "CO2",
+            "HumidityRatio"
+        ],
+        "cat_features": [
+            "Occupancy"
+        ],
+        "other_features": [],
+        "tags": [
+            "internet"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/sachinsharma1123/room-occupancy"
+    },
+    "feature_info": {
+        "Temperature": {
+            "description": "Temperature of the room in degree Celsius",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "Humidity": {
+            "description": "Relative humidity of the room in percentage",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Light": {
+            "description": "Light intensity in the room in Lux",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "CO2": {
+            "description": "CO2 concentration in the room in parts per million (ppm)",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "HumidityRatio": {
+            "description": "Ratio of water vapor to dry air in the room, dimensionless",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Occupancy": {
+            "description": "Whether the room is occupied or not, 1 indicates occupied, 0 indicates not occupied",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The room is occupied",
+                "0": "The room is not occupied"
+            }
+        }
+    },
+    "task_info": {
+        "Occupancy": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in room occupancy prediction.",
+                "task_prompt": "Based on the features of the room environment, please predict if the room is occupied or not.",
+                "answer_prompt": "The room is occupied[1] or not occupied[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "The room is occupied",
+                "0": "The room is not occupied"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        },
+        "Temperature": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in room environment analysis.",
+                "task_prompt": "Based on the features of the room environment, please predict the room temperature.",
+                "answer_prompt": "What is the room temperature?"
+            }
+        },
+        "Light": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in room environment analysis.",
+                "task_prompt": "Based on the features of the room environment, please predict the light intensity.",
+                "answer_prompt": "What is the light intensity in the room?"
+            }
+        },
+        "CO2": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in room environment analysis.",
+                "task_prompt": "Based on the features of the room environment, please predict the CO2 level.",
+                "answer_prompt": "What is the CO2 level in the room?"
+            }
+        },
+        "Humidity": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in room environment analysis.",
+                "task_prompt": "Based on the features of the room environment, please predict the humidity.",
+                "answer_prompt": "What is the humidity in the room?"
+            }
+        },
+        "HumidityRatio": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in room environment analysis.",
+                "task_prompt": "Based on the features of the room environment, please predict the humidity ratio.",
+                "answer_prompt": "What is the humidity ratio in the room?"
+            }
+        }
+    }
+}

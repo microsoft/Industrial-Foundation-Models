@@ -1,0 +1,340 @@
+{
+    "basic_info": {
+        "row_num": 67211,
+        "col_num": 31,
+        "label_candidates": [
+            "Class",
+            "VehYear",
+            "VehicleAge",
+            "VehOdo",
+            "MMRAcquisitionAuctionAveragePrice",
+            "MMRAcquisitionRetailAveragePrice",
+            "MMRCurrentAuctionAveragePrice",
+            "MMRCurrentRetailAveragePrice",
+            "VehBCost",
+            "WarrantyCost",
+            "IsOnlineSale"
+        ],
+        "valid_feature_num": 30,
+        "num_features": [
+            "VehYear",
+            "VehicleAge",
+            "VehOdo",
+            "MMRAcquisitionAuctionAveragePrice",
+            "MMRAcquisitionAuctionCleanPrice",
+            "MMRAcquisitionRetailAveragePrice",
+            "MMRAcquisitonRetailCleanPrice",
+            "MMRCurrentAuctionAveragePrice",
+            "MMRCurrentAuctionCleanPrice",
+            "MMRCurrentRetailAveragePrice",
+            "MMRCurrentRetailCleanPrice",
+            "VehBCost",
+            "WarrantyCost"
+        ],
+        "cat_features": [
+            "Auction",
+            "Make",
+            "Model",
+            "Trim",
+            "SubModel",
+            "Color",
+            "Transmission",
+            "WheelTypeID",
+            "WheelType",
+            "Nationality",
+            "Size",
+            "TopThreeAmericanName",
+            "VNZIP1",
+            "VNST",
+            "IsOnlineSale",
+            "Class"
+        ],
+        "other_features": [],
+        "tags": [
+            "beginner",
+            "advanced",
+            "classification",
+            "random forest",
+            "tabular"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/ulrikthygepedersen/car-kick"
+    },
+    "feature_info": {
+        "PurchDate": {
+            "description": "The date when the vehicle was purchased, represented in Unix timestamp",
+            "type": "useless"
+        },
+        "VehYear": {
+            "description": "The year the vehicle was manufactured",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "VehicleAge": {
+            "description": "The age of the vehicle",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "VehOdo": {
+            "description": "The odometer reading of the vehicle",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "MMRAcquisitionAuctionAveragePrice": {
+            "description": "The average price of the vehicle at the time of acquisition at auction",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "MMRAcquisitionAuctionCleanPrice": {
+            "description": "The clean price of the vehicle at the time of acquisition at auction",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "MMRAcquisitionRetailAveragePrice": {
+            "description": "The average retail price of the vehicle at the time of acquisition",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "MMRAcquisitonRetailCleanPrice": {
+            "description": "The clean retail price of the vehicle at the time of acquisition",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "MMRCurrentAuctionAveragePrice": {
+            "description": "The current average price of the vehicle at auction",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "MMRCurrentAuctionCleanPrice": {
+            "description": "The current clean price of the vehicle at auction",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "MMRCurrentRetailAveragePrice": {
+            "description": "The current average retail price of the vehicle",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "MMRCurrentRetailCleanPrice": {
+            "description": "The current clean retail price of the vehicle",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "VehBCost": {
+            "description": "The acquisition cost of the vehicle plus any additional expenses",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "WarrantyCost": {
+            "description": "The cost of warranty for the vehicle",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Auction": {
+            "description": "The auction where the vehicle was purchased",
+            "type": "categorical",
+            "value_dict": {
+                "MANHEIM": "The vehicle was purchased from Manheim auction",
+                "ADESA": "The vehicle was purchased from Adesa auction",
+                "OTHER": "The vehicle was purchased from other auctions"
+            }
+        },
+        "Make": {
+            "description": "The manufacturer of the vehicle",
+            "type": "categorical"
+        },
+        "Model": {
+            "description": "The model of the vehicle",
+            "type": "categorical"
+        },
+        "Trim": {
+            "description": "The trim level of the vehicle",
+            "type": "categorical"
+        },
+        "SubModel": {
+            "description": "The submodel of the vehicle",
+            "type": "categorical"
+        },
+        "Color": {
+            "description": "The color of the vehicle",
+            "type": "categorical"
+        },
+        "Transmission": {
+            "description": "The type of transmission in the vehicle",
+            "type": "categorical",
+            "value_dict": {
+                "AUTO": "The vehicle has an automatic transmission",
+                "MANUAL": "The vehicle has a manual transmission",
+                "Manual": "The vehicle has a manual transmission"
+            }
+        },
+        "WheelTypeID": {
+            "description": "The ID of the type of wheels on the vehicle",
+            "type": "categorical",
+            "value_dict": {
+                "2.0": "The vehicle has wheel type 2",
+                "1.0": "The vehicle has wheel type 1",
+                "3.0": "The vehicle has wheel type 3"
+            }
+        },
+        "WheelType": {
+            "description": "The type of wheels on the vehicle",
+            "type": "categorical",
+            "value_dict": {
+                "Covers": "The vehicle has covers on the wheels",
+                "Alloy": "The vehicle has alloy wheels",
+                "Special": "The vehicle has special type wheels"
+            }
+        },
+        "Nationality": {
+            "description": "The nationality of the manufacturer of the vehicle",
+            "type": "categorical",
+            "value_dict": {
+                "AMERICAN": "The vehicle is manufactured by an American company",
+                "'OTHER ASIAN'": "The vehicle is manufactured by an Asian company other than top line",
+                "'TOP LINE ASIAN'": "The vehicle is manufactured by a top line Asian company",
+                "OTHER": "The vehicle is manufactured by a company of other nationality"
+            }
+        },
+        "Size": {
+            "description": "The size category of the vehicle",
+            "type": "categorical"
+        },
+        "TopThreeAmericanName": {
+            "description": "Whether the manufacturer is in the top three American manufacturers",
+            "type": "categorical",
+            "value_dict": {
+                "CHRYSLER": "The vehicle is manufactured by Chrysler",
+                "FORD": "The vehicle is manufactured by Ford",
+                "GM": "The vehicle is manufactured by General Motors",
+                "OTHER": "The vehicle is manufactured by a company other than Chrysler, Ford, and GM"
+            }
+        },
+        "BYRNO": {
+            "description": "The ID of the buyer",
+            "type": "useless"
+        },
+        "VNZIP1": {
+            "description": "The ZIP code of the location where the vehicle was sold",
+            "type": "categorical"
+        },
+        "VNST": {
+            "description": "The state where the vehicle was sold",
+            "type": "categorical"
+        },
+        "IsOnlineSale": {
+            "description": "Whether the sale was made online",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The vehicle was not sold online",
+                "1": "The vehicle was sold online"
+            }
+        },
+        "Class": {
+            "description": "If the car purchased at the Auction is a bad buy (1 = bad buy; 0 = good buy)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Good buy",
+                "1": "Bad buy"
+            }
+        }
+    },
+    "task_info": {
+        "Class": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in vehicle.",
+                "task_prompt": "Based on the features of the vehicle, please predict if the car purchased at the auction is a bad buy.",
+                "answer_prompt": "Bad buy[1] or good buy[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "Good buy",
+                "1": "Bad buy"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "VehYear": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in vehicle evaluation.",
+                "task_prompt": "Based on the features of the vehicle, please predict the vehicle year."
+            }
+        },
+        "VehicleAge": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in vehicle evaluation.",
+                "task_prompt": "Based on the features of the vehicle, please predict the vehicle age."
+            }
+        },
+        "VehOdo": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in vehicle evaluation.",
+                "task_prompt": "Based on the features of the vehicle, please predict the vehicle odometer reading."
+            }
+        },
+        "MMRAcquisitionAuctionAveragePrice": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in vehicle evaluation.",
+                "task_prompt": "Based on the features of the vehicle, please predict the average price at acquisition auction."
+            }
+        },
+        "MMRAcquisitionRetailAveragePrice": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in vehicle evaluation.",
+                "task_prompt": "Based on the features of the vehicle, please predict the average retail price at acquisition."
+            }
+        },
+        "MMRCurrentAuctionAveragePrice": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in vehicle evaluation.",
+                "task_prompt": "Based on the features of the vehicle, please predict the current average price at auction."
+            }
+        },
+        "MMRCurrentRetailAveragePrice": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in vehicle evaluation.",
+                "task_prompt": "Based on the features of the vehicle, please predict the current average retail price."
+            }
+        },
+        "VehBCost": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in vehicle evaluation.",
+                "task_prompt": "Based on the features of the vehicle, please predict the vehicle cost."
+            }
+        },
+        "WarrantyCost": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in vehicle evaluation.",
+                "task_prompt": "Based on the features of the vehicle, please predict the warranty cost."
+            }
+        },
+        "IsOnlineSale": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in vehicle sales.",
+                "task_prompt": "Based on the features of the vehicle, please predict if it was sold online.",
+                "answer_prompt": "Not sold online[0] or sold online[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "The vehicle was not sold online",
+                "1": "The vehicle was sold online"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        }
+    }
+}

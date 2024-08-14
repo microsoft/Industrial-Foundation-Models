@@ -1,0 +1,207 @@
+{
+    "basic_info": {
+        "row_num": 33441,
+        "col_num": 18,
+        "label_candidates": [
+            "LOS",
+            "max_velocity",
+            "length",
+            "street_level"
+        ],
+        "valid_feature_num": 17,
+        "num_features": [
+            "length",
+            "max_velocity",
+            "long_snode",
+            "lat_snode",
+            "long_enode",
+            "lat_enode"
+        ],
+        "cat_features": [
+            "segment_id",
+            "weekday",
+            "period",
+            "s_node_id",
+            "e_node_id",
+            "street_id",
+            "street_level",
+            "street_name",
+            "street_type",
+            "LOS"
+        ],
+        "other_features": [
+            "date"
+        ],
+        "tags": [
+            "geospatial analysis",
+            "classification",
+            "travel"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/thanhnguyen2612/traffic-flow-data-in-ho-chi-minh-city-viet-nam"
+    },
+    "feature_info": {
+        "_id": {
+            "description": "Unique identifier of each record",
+            "type": "useless"
+        },
+        "segment_id": {
+            "description": "Unique identifier of each segment in the traffic",
+            "type": "categorical"
+        },
+        "date": {
+            "description": "Date when the data was recorded",
+            "type": "other"
+        },
+        "weekday": {
+            "description": "Day of the week when the data was recorded",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Sunday",
+                "1": "Monday",
+                "2": "Tuesday",
+                "3": "Wednesday",
+                "4": "Thursday",
+                "5": "Friday",
+                "6": "Saturday"
+            }
+        },
+        "period": {
+            "description": "Time period of the day when the data was recorded",
+            "type": "categorical"
+        },
+        "LOS": {
+            "description": "Level of Service, a measure of traffic flow quality",
+            "type": "categorical",
+            "value_dict": {
+                "A": "Free Flow",
+                "B": "Reasonably Free Flow",
+                "C": "Stable Flow",
+                "D": "Approaching Unstable Flow",
+                "E": "Unstable Flow",
+                "F": "Forced or Breakdown Flow"
+            }
+        },
+        "s_node_id": {
+            "description": "Unique identifier of the starting node of the segment",
+            "type": "categorical"
+        },
+        "e_node_id": {
+            "description": "Unique identifier of the ending node of the segment",
+            "type": "categorical"
+        },
+        "length": {
+            "description": "Length of the segment in meters",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "street_id": {
+            "description": "Unique identifier of the street",
+            "type": "categorical"
+        },
+        "max_velocity": {
+            "description": "Maximum velocity recorded on the segment in km/h",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "street_level": {
+            "description": "Level of the street",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Main road",
+                "2": "Secondary road",
+                "3": "Local road",
+                "4": "Access road"
+            }
+        },
+        "street_name": {
+            "description": "Name of the street",
+            "type": "categorical"
+        },
+        "street_type": {
+            "description": "Type of the street (e.g., road, avenue, etc.)",
+            "type": "categorical"
+        },
+        "long_snode": {
+            "description": "Longitude of the starting node of the segment",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "lat_snode": {
+            "description": "Latitude of the starting node of the segment",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "long_enode": {
+            "description": "Longitude of the ending node of the segment",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "lat_enode": {
+            "description": "Latitude of the ending node of the segment",
+            "type": "numerical",
+            "decimal": 6
+        }
+    },
+    "task_info": {
+        "LOS": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in traffic flow analysis.",
+                "task_prompt": "Based on the features of the traffic segment, please predict the Level of Service (LOS).",
+                "answer_prompt": "Free Flow[0], Reasonably Free Flow[1], Stable Flow[2], Approaching Unstable Flow[3], Unstable Flow[4], or Forced or Breakdown Flow[5]?"
+            },
+            "class_num": 6,
+            "class_value_dict": {
+                "A": "Free Flow",
+                "B": "Reasonably Free Flow",
+                "C": "Stable Flow",
+                "D": "Approaching Unstable Flow",
+                "E": "Unstable Flow",
+                "F": "Forced or Breakdown Flow"
+            },
+            "class_index_dict": {
+                "A": 0,
+                "B": 1,
+                "C": 2,
+                "D": 3,
+                "E": 4,
+                "F": 5
+            }
+        },
+        "max_velocity": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in traffic flow analysis.",
+                "task_prompt": "Based on the features of the traffic segment, please predict the maximum velocity."
+            }
+        },
+        "length": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in traffic flow analysis.",
+                "task_prompt": "Based on the features of the traffic segment, please predict the length."
+            }
+        },
+        "street_level": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in urban planning and traffic management.",
+                "task_prompt": "Based on the features of the street, please predict the street level.",
+                "answer_prompt": "Main road[0], Secondary road[1], Local road[2], or Access road[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "1": "Main road",
+                "2": "Secondary road",
+                "3": "Local road",
+                "4": "Access road"
+            },
+            "class_index_dict": {
+                "1": 0,
+                "2": 1,
+                "3": 2,
+                "4": 3
+            }
+        }
+    }
+}

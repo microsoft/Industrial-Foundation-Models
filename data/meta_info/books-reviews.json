@@ -1,0 +1,85 @@
+{
+    "basic_info": {
+        "row_num": 9658,
+        "col_num": 5,
+        "label_candidates": [
+            "label",
+            "rating"
+        ],
+        "valid_feature_num": 5,
+        "num_features": [
+            "rating"
+        ],
+        "cat_features": [
+            "book_title",
+            "author",
+            "label"
+        ],
+        "other_features": [
+            "reader_review"
+        ],
+        "tags": [
+            "literature",
+            "classification",
+            "multiclass classification",
+            "ratings and reviews"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/abireltaief/books-reviews"
+    },
+    "feature_info": {
+        "book_title": {
+            "description": "The title of the book being reviewed",
+            "type": "categorical"
+        },
+        "author": {
+            "description": "The author of the book",
+            "type": "categorical"
+        },
+        "reader_review": {
+            "description": "The review text written by the reader",
+            "type": "other"
+        },
+        "rating": {
+            "description": "The rating given to the book by the reader, likely on a scale of 0-5",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "label": {
+            "description": "A binary label, possibly indicating whether the review is positive (1) or negative (0)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Possibly indicates a positive review",
+                "0": "Possibly indicates a negative review",
+                "-1": "Unclear, could potentially represent a neutral review or an error"
+            }
+        }
+    },
+    "task_info": {
+        "label": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in text analysis and sentiment classification.",
+                "task_prompt": "Based on the book title, author, and reader review, please predict the sentiment of the review.",
+                "answer_prompt": "Negative review[0], positive review[1], or unclear[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "1": "Possibly indicates a positive review",
+                "0": "Possibly indicates a negative review",
+                "-1": "Unclear, could potentially represent a neutral review or an error"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0,
+                "-1": 2
+            }
+        },
+        "rating": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in rating prediction.",
+                "task_prompt": "Based on the book title, author, and reader review, please predict the rating of the book."
+            }
+        }
+    }
+}

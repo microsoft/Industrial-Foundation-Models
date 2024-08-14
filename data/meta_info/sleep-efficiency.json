@@ -1,0 +1,174 @@
+{
+    "basic_info": {
+        "row_num": 452,
+        "col_num": 15,
+        "label_candidates": [
+            "Sleep efficiency",
+            "Sleep duration",
+            "REM sleep percentage",
+            "Deep sleep percentage",
+            "Light sleep percentage"
+        ],
+        "valid_feature_num": 14,
+        "num_features": [
+            "Age",
+            "Sleep duration",
+            "REM sleep percentage",
+            "Deep sleep percentage",
+            "Light sleep percentage",
+            "Awakenings",
+            "Caffeine consumption",
+            "Alcohol consumption",
+            "Exercise frequency",
+            "Sleep efficiency"
+        ],
+        "cat_features": [
+            "Gender",
+            "Smoking status"
+        ],
+        "other_features": [
+            "Bedtime",
+            "Wakeup time"
+        ],
+        "tags": [
+            "data cleaning",
+            "data visualization",
+            "tabular",
+            "regression",
+            "english"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/equilibriumm/sleep-efficiency"
+    },
+    "feature_info": {
+        "ID": {
+            "description": "Unique identifier for each participant",
+            "type": "useless"
+        },
+        "Age": {
+            "description": "Age of the participant in years",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Gender": {
+            "description": "Gender of the participant",
+            "type": "categorical",
+            "value_dict": {
+                "Female": "The participant is female",
+                "Male": "The participant is male"
+            }
+        },
+        "Bedtime": {
+            "description": "Time participant usually goes to bed",
+            "type": "other"
+        },
+        "Wakeup time": {
+            "description": "Time participant usually wakes up",
+            "type": "other"
+        },
+        "Sleep duration": {
+            "description": "Average duration of sleep per day in hours",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Sleep efficiency": {
+            "description": "Percentage of time in bed that was spent asleep",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "REM sleep percentage": {
+            "description": "Percentage of total sleep time spent in REM sleep",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Deep sleep percentage": {
+            "description": "Percentage of total sleep time spent in deep sleep",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Light sleep percentage": {
+            "description": "Percentage of total sleep time spent in light sleep",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Awakenings": {
+            "description": "Average number of awakenings per night",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Caffeine consumption": {
+            "description": "Level of caffeine consumption (scale not specified)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Alcohol consumption": {
+            "description": "Level of alcohol consumption (scale not specified)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Smoking status": {
+            "description": "Whether the participant is a smoker or not",
+            "type": "categorical",
+            "value_dict": {
+                "Yes": "The participant is a smoker",
+                "No": "The participant is not a smoker"
+            }
+        },
+        "Exercise frequency": {
+            "description": "Frequency of exercise per week",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "Sleep efficiency": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sleep science and human health.",
+                "task_prompt": "Based on the features of the individual\u2019s lifestyle and sleep habits, please predict the sleep efficiency.",
+                "answer_prompt": "The predicted sleep efficiency is {answer}."
+            },
+            "class_index_dict": null,
+            "class_value_dict": null
+        },
+        "Sleep duration": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sleep science and human health.",
+                "task_prompt": "Based on the features of the individual\u2019s lifestyle and sleep habits, please predict the sleep duration.",
+                "answer_prompt": "The predicted sleep duration is {answer}."
+            },
+            "class_index_dict": null,
+            "class_value_dict": null
+        },
+        "REM sleep percentage": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sleep science and human health.",
+                "task_prompt": "Based on the features of the individual\u2019s lifestyle and sleep habits, please predict the REM sleep percentage.",
+                "answer_prompt": "The predicted REM sleep percentage is {answer}."
+            },
+            "class_index_dict": null,
+            "class_value_dict": null
+        },
+        "Deep sleep percentage": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sleep science and human health.",
+                "task_prompt": "Based on the features of the individual\u2019s lifestyle and sleep habits, please predict the deep sleep percentage.",
+                "answer_prompt": "The predicted deep sleep percentage is {answer}."
+            },
+            "class_index_dict": null,
+            "class_value_dict": null
+        },
+        "Light sleep percentage": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sleep science and human health.",
+                "task_prompt": "Based on the features of the individual\u2019s lifestyle and sleep habits, please predict the light sleep percentage.",
+                "answer_prompt": "The predicted light sleep percentage is {answer}."
+            },
+            "class_index_dict": null,
+            "class_value_dict": null
+        }
+    }
+}

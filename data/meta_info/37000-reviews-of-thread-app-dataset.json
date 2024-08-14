@@ -1,0 +1,158 @@
+{
+    "basic_info": {
+        "row_num": 36943,
+        "col_num": 13,
+        "label_candidates": [
+            "rating",
+            "thumbs_up",
+            "appVersion"
+        ],
+        "valid_feature_num": 12,
+        "num_features": [
+            "thumbs_up",
+            "rating"
+        ],
+        "cat_features": [
+            "source",
+            "user_name",
+            "review_title",
+            "review_description",
+            "developer_response",
+            "appVersion",
+            "laguage_code",
+            "country_code"
+        ],
+        "other_features": [
+            "review_date",
+            "developer_response_date"
+        ],
+        "tags": [
+            "nlp",
+            "lstm",
+            "text",
+            "multiclass classification",
+            "nltk"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/shuvammandal121/37000-reviews-of-thread-app-dataset"
+    },
+    "feature_info": {
+        "source": {
+            "description": "The platform where the review was made",
+            "type": "categorical",
+            "value_dict": {
+                "Google Play": "The review was made on Google Play platform",
+                "App Store": "The review was made on App Store platform"
+            }
+        },
+        "review_id": {
+            "description": "Unique identifier for each review",
+            "type": "useless"
+        },
+        "user_name": {
+            "description": "Name of the user who made the review",
+            "type": "categorical"
+        },
+        "review_title": {
+            "description": "Title of the review",
+            "type": "categorical"
+        },
+        "review_description": {
+            "description": "Detailed description of the review",
+            "type": "categorical"
+        },
+        "rating": {
+            "description": "Rating given by the user",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "thumbs_up": {
+            "description": "Number of thumbs up received for the review",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "review_date": {
+            "description": "Date when the review was made",
+            "type": "other"
+        },
+        "developer_response": {
+            "description": "Response from the developer to the review",
+            "type": "categorical"
+        },
+        "developer_response_date": {
+            "description": "Date when the developer responded to the review",
+            "type": "other"
+        },
+        "appVersion": {
+            "description": "Version of the app when the review was made",
+            "type": "categorical",
+            "value_dict": {
+                "294.0.0.27.110": "The app version was 294.0.0.27.110 when the review was made",
+                "293.0.0.30.110": "The app version was 293.0.0.30.110 when the review was made",
+                "292.0.0.31.110": "The app version was 292.0.0.31.110 when the review was made",
+                "289.0.0.77.109": "The app version was 289.0.0.77.109 when the review was made",
+                "291.0.0.31.111": "The app version was 291.0.0.31.111 when the review was made",
+                "289.0.0.68.109": "The app version was 289.0.0.68.109 when the review was made",
+                "291.0.0.15.111": "The app version was 291.0.0.15.111 when the review was made"
+            }
+        },
+        "laguage_code": {
+            "description": "Language code of the review",
+            "type": "categorical",
+            "value_dict": {
+                "en": "The review was written in English"
+            }
+        },
+        "country_code": {
+            "description": "Country code of the user who made the review",
+            "type": "categorical",
+            "value_dict": {
+                "us": "The user who made the review is from the United States"
+            }
+        }
+    },
+    "task_info": {
+        "rating": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing app reviews.",
+                "task_prompt": "Based on the review information, please predict the rating of the app.",
+                "answer_prompt": "The predicted rating is _."
+            }
+        },
+        "thumbs_up": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing app reviews.",
+                "task_prompt": "Based on the review information, please predict the number of thumbs up for the review.",
+                "answer_prompt": "The predicted number of thumbs up is _."
+            }
+        },
+        "appVersion": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing app reviews.",
+                "task_prompt": "Based on the review information, please predict the app version when the review was made.",
+                "answer_prompt": "The app version was 294.0.0.27.110[0], 293.0.0.30.110[1], 292.0.0.31.110[2], 289.0.0.77.109[3], 291.0.0.31.111[4], 289.0.0.68.109[5], or 291.0.0.15.111[6] when the review was made?"
+            },
+            "class_num": 7,
+            "class_value_dict": {
+                "294.0.0.27.110": "The app version was 294.0.0.27.110 when the review was made",
+                "293.0.0.30.110": "The app version was 293.0.0.30.110 when the review was made",
+                "292.0.0.31.110": "The app version was 292.0.0.31.110 when the review was made",
+                "289.0.0.77.109": "The app version was 289.0.0.77.109 when the review was made",
+                "291.0.0.31.111": "The app version was 291.0.0.31.111 when the review was made",
+                "289.0.0.68.109": "The app version was 289.0.0.68.109 when the review was made",
+                "291.0.0.15.111": "The app version was 291.0.0.15.111 when the review was made"
+            },
+            "class_index_dict": {
+                "294.0.0.27.110": 0,
+                "293.0.0.30.110": 1,
+                "292.0.0.31.110": 2,
+                "289.0.0.77.109": 3,
+                "291.0.0.31.111": 4,
+                "289.0.0.68.109": 5,
+                "291.0.0.15.111": 6
+            }
+        }
+    }
+}

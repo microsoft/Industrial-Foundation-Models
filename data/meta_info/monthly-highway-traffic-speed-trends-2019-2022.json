@@ -1,0 +1,140 @@
+{
+    "basic_info": {
+        "row_num": 3539,
+        "col_num": 7,
+        "label_candidates": [
+            "Speed",
+            "Functional Classification",
+            "Area Type"
+        ],
+        "valid_feature_num": 7,
+        "num_features": [
+            "Year",
+            "Speed"
+        ],
+        "cat_features": [
+            "Month",
+            "Vehicle Type",
+            "Time Period (AM/PM)",
+            "Area Type",
+            "Functional Classification"
+        ],
+        "other_features": [],
+        "tags": [
+            "law",
+            "transportation",
+            "automobiles and vehicles",
+            "public safety",
+            "oil and gas"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/mattop/monthly-highway-traffic-speed-trends-2019-2022"
+    },
+    "feature_info": {
+        "Year": {
+            "description": "The year when the traffic speed was recorded",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Month": {
+            "description": "The month when the traffic speed was recorded",
+            "type": "categorical"
+        },
+        "Vehicle Type": {
+            "description": "The type of vehicle for which the speed was recorded",
+            "type": "categorical",
+            "value_dict": {
+                "Passenger": "The vehicle is a passenger vehicle",
+                "Freight": "The vehicle is a freight vehicle",
+                "All": "The data includes all types of vehicles"
+            }
+        },
+        "Time Period (AM/PM)": {
+            "description": "The time period of the day (AM or PM) when the speed was recorded",
+            "type": "categorical",
+            "value_dict": {
+                "AM": "The speed was recorded in the morning",
+                "PM": "The speed was recorded in the afternoon or evening"
+            }
+        },
+        "Area Type": {
+            "description": "The type of area (Urban or Rural) where the speed was recorded",
+            "type": "categorical",
+            "value_dict": {
+                "Urban": "The speed was recorded in an urban area",
+                "Rural": "The speed was recorded in a rural area"
+            }
+        },
+        "Functional Classification": {
+            "description": "The functional classification of the road where the speed was recorded, represented by a numerical code",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The road is of type 1",
+                "2": "The road is of type 2",
+                "3": "The road is of type 3",
+                "4": "The road is of type 4",
+                "5": "The road is of type 5",
+                "6": "The road is of type 6",
+                "7": "The road is of type 7"
+            }
+        },
+        "Speed": {
+            "description": "The average speed of the vehicle (in mph)",
+            "type": "numerical",
+            "decimal": 1
+        }
+    },
+    "task_info": {
+        "Speed": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in traffic speed analysis.",
+                "task_prompt": "Based on the year, month, vehicle type, time period, area type, and functional classification, please predict the average speed.",
+                "answer_prompt": "The average speed is."
+            }
+        },
+        "Functional Classification": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in traffic road type classification.",
+                "task_prompt": "Based on the year, month, vehicle type, time period, area type, and speed, please classify the functional classification of the road.",
+                "answer_prompt": "The road is of type 1[0], type 2[1], type 3[2], type 4[3], type 5[4], type 6[5], or type 7[6]?"
+            },
+            "class_num": 7,
+            "class_value_dict": {
+                "1": "The road is of type 1",
+                "2": "The road is of type 2",
+                "3": "The road is of type 3",
+                "4": "The road is of type 4",
+                "5": "The road is of type 5",
+                "6": "The road is of type 6",
+                "7": "The road is of type 7"
+            },
+            "class_index_dict": {
+                "1": 0,
+                "2": 1,
+                "3": 2,
+                "4": 3,
+                "5": 4,
+                "6": 5,
+                "7": 6
+            }
+        },
+        "Area Type": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in traffic area type classification.",
+                "task_prompt": "Based on the year, month, vehicle type, time period, functional classification, and speed, please classify the area type.",
+                "answer_prompt": "The speed was recorded in an urban area[0] or a rural area[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "Urban": "The speed was recorded in an urban area",
+                "Rural": "The speed was recorded in a rural area"
+            },
+            "class_index_dict": {
+                "Urban": 0,
+                "Rural": 1
+            }
+        }
+    }
+}

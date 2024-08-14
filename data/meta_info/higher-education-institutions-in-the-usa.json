@@ -1,0 +1,69 @@
+{
+    "basic_info": {
+        "row_num": 1978,
+        "col_num": 5,
+        "label_candidates": [
+            "category"
+        ],
+        "valid_feature_num": 4,
+        "num_features": [],
+        "cat_features": [
+            "region",
+            "name",
+            "category"
+        ],
+        "other_features": [
+            "url"
+        ],
+        "tags": [
+            "universities and colleges",
+            "education"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/jacksonbarreto/higher-education-institutions-in-the-usa"
+    },
+    "feature_info": {
+        "id": {
+            "description": "The unique identifier for each institution",
+            "type": "useless"
+        },
+        "region": {
+            "description": "The geographical region where the institution is located",
+            "type": "categorical"
+        },
+        "name": {
+            "description": "The name of the higher education institution",
+            "type": "categorical"
+        },
+        "category": {
+            "description": "The category of the institution, such as university, college, etc.",
+            "type": "categorical",
+            "value_dict": {
+                "Private": "The institution is privately owned and operated.",
+                "Public": "The institution is publicly owned and operated."
+            }
+        },
+        "url": {
+            "description": "The website URL of the institution",
+            "type": "other"
+        }
+    },
+    "task_info": {
+        "category": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing higher education institutions data.",
+                "task_prompt": "Based on the features of the higher education institution, please predict whether the institution is privately or publicly owned.",
+                "answer_prompt": "Private[0] or Public[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "Private": "The institution is privately owned and operated.",
+                "Public": "The institution is publicly owned and operated."
+            },
+            "class_index_dict": {
+                "Private": 0,
+                "Public": 1
+            }
+        }
+    }
+}

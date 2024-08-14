@@ -1,0 +1,162 @@
+{
+    "basic_info": {
+        "row_num": 11060,
+        "col_num": 8,
+        "label_candidates": [
+            "value",
+            "age",
+            "sex",
+            "time"
+        ],
+        "valid_feature_num": 8,
+        "num_features": [
+            "time",
+            "value"
+        ],
+        "cat_features": [
+            "unit",
+            "isced97",
+            "hlth_pb",
+            "sex",
+            "age",
+            "geo"
+        ],
+        "other_features": [],
+        "tags": [
+            "europe",
+            "education",
+            "beginner",
+            "tabular",
+            "health conditions"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/gpreda/access-to-education-of-disabled-people-in-europe"
+    },
+    "feature_info": {
+        "unit": {
+            "description": "Unit of measure for the value (THS - Thousand)",
+            "type": "categorical",
+            "value_dict": {
+                "THS": "The unit of measure is in thousands"
+            }
+        },
+        "isced97": {
+            "description": "International Standard Classification of Education (ISCED) 1997 level of education",
+            "type": "categorical",
+            "value_dict": {
+                "ED0-2": "Education level covering less than primary, primary and lower secondary education",
+                "ED3_4": "Education level covering upper secondary and post-secondary non-tertiary education",
+                "ED5_6": "Education level covering first and second stages of tertiary education",
+                "NRP": "Not a relevant population",
+                "TOTAL": "Total population"
+            }
+        },
+        "hlth_pb": {
+            "description": "Health problem or disability code",
+            "type": "categorical",
+            "value_dict": {
+                "PB1040": "Persons with a basic activity difficulty",
+                "PB1041": "Persons with a basic activity difficulty, by sex, age and educational attainment level",
+                "PB1070": "Persons with a basic activity difficulty for at least the last 6 months",
+                "PB1071": "Persons with a basic activity difficulty for at least the last 6 months, by sex, age and educational attainment level",
+                "TOTAL": "Total persons"
+            }
+        },
+        "sex": {
+            "description": "Gender of individuals",
+            "type": "categorical",
+            "value_dict": {
+                "F": "Female",
+                "M": "Male",
+                "T": "Total (both sexes)"
+            }
+        },
+        "age": {
+            "description": "Age range of individuals",
+            "type": "categorical",
+            "value_dict": {
+                "TOTAL": "All age groups",
+                "Y15-24": "15 to 24 years old",
+                "Y25-34": "25 to 34 years old",
+                "Y35-44": "35 to 44 years old",
+                "Y45-54": "45 to 54 years old",
+                "Y55-64": "55 to 64 years old"
+            }
+        },
+        "time": {
+            "description": "Year of data collection",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "geo": {
+            "description": "Geographical location (country code)",
+            "type": "categorical"
+        },
+        "value": {
+            "description": "Number of individuals (in thousands) with access to education",
+            "type": "numerical",
+            "decimal": 3
+        }
+    },
+    "task_info": {
+        "value": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing education data.",
+                "task_prompt": "Based on the education level, health problem, gender, age group, year and geographical location, please predict the value.",
+                "answer_prompt": "The predicted value is."
+            }
+        },
+        "age": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing education data.",
+                "task_prompt": "Based on the education level, health problem, gender, value, year and geographical location, please predict the age group.",
+                "answer_prompt": "All age groups[0], 15 to 24 years old[1], 25 to 34 years old[2], 35 to 44 years old[3], 45 to 54 years old[4], or 55 to 64 years old[5]?"
+            },
+            "class_num": 6,
+            "class_value_dict": {
+                "TOTAL": "All age groups",
+                "Y15-24": "15 to 24 years old",
+                "Y25-34": "25 to 34 years old",
+                "Y35-44": "35 to 44 years old",
+                "Y45-54": "45 to 54 years old",
+                "Y55-64": "55 to 64 years old"
+            },
+            "class_index_dict": {
+                "TOTAL": 0,
+                "Y15-24": 1,
+                "Y25-34": 2,
+                "Y35-44": 3,
+                "Y45-54": 4,
+                "Y55-64": 5
+            }
+        },
+        "sex": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing education data.",
+                "task_prompt": "Based on the education level, health problem, age group, value, year and geographical location, please predict the gender.",
+                "answer_prompt": "Female[0], Male[1], or Total (both sexes)[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "F": "Female",
+                "M": "Male",
+                "T": "Total (both sexes)"
+            },
+            "class_index_dict": {
+                "F": 0,
+                "M": 1,
+                "T": 2
+            }
+        },
+        "time": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing education data.",
+                "task_prompt": "Based on the education level, health problem, gender, age group, value and geographical location, please predict the year.",
+                "answer_prompt": "The predicted year is."
+            }
+        }
+    }
+}

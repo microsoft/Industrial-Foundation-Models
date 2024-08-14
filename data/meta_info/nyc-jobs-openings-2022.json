@@ -1,0 +1,266 @@
+{
+    "basic_info": {
+        "row_num": 3610,
+        "col_num": 30,
+        "label_candidates": [
+            "Salary Range From",
+            "Salary Range To",
+            "Full-Time/Part-Time indicator",
+            "Career Level"
+        ],
+        "valid_feature_num": 29,
+        "num_features": [
+            "# Of Positions",
+            "Salary Range From",
+            "Salary Range To"
+        ],
+        "cat_features": [
+            "Agency",
+            "Posting Type",
+            "Business Title",
+            "Civil Service Title",
+            "Title Classification",
+            "Title Code No",
+            "Level",
+            "Job Category",
+            "Career Level",
+            "Salary Frequency",
+            "Work Location",
+            "Division/Work Unit",
+            "Work Location 1",
+            "Full-Time/Part-Time indicator"
+        ],
+        "other_features": [
+            "Job Description",
+            "Minimum Qual Requirements",
+            "Preferred Skills",
+            "Additional Information",
+            "To Apply",
+            "Hours/Shift",
+            "Recruitment Contact",
+            "Residency Requirement",
+            "Posting Date",
+            "Post Until",
+            "Posting Updated",
+            "Process Date"
+        ],
+        "tags": [
+            "united states",
+            "employment",
+            "income",
+            "government",
+            "jobs and career"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/anandaramg/nyc-jobs-openings-2022"
+    },
+    "feature_info": {
+        "Job ID": {
+            "description": "The unique identifier of the job",
+            "type": "useless"
+        },
+        "Agency": {
+            "description": "The agency that posted the job",
+            "type": "categorical"
+        },
+        "Posting Type": {
+            "description": "The type of the job posting",
+            "type": "categorical",
+            "value_dict": {
+                "External": "The job is open to external applicants",
+                "Internal": "The job is open to internal applicants"
+            }
+        },
+        "# Of Positions": {
+            "description": "The number of positions available for the job",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Business Title": {
+            "description": "The business title of the job",
+            "type": "categorical"
+        },
+        "Civil Service Title": {
+            "description": "The civil service title of the job",
+            "type": "categorical"
+        },
+        "Title Classification": {
+            "description": "The classification of the title",
+            "type": "categorical",
+            "value_dict": {
+                "Competitive-1": "The job title is classified as competitive",
+                "Non-Competitive-5": "The job title is classified as non-competitive",
+                "Pending Classification-2": "The job title classification is pending",
+                "Exempt-4": "The job title is classified as exempt",
+                "Labor-3": "The job title is classified as labor"
+            }
+        },
+        "Title Code No": {
+            "description": "The code number of the title",
+            "type": "categorical"
+        },
+        "Level": {
+            "description": "The level of the job",
+            "type": "categorical"
+        },
+        "Job Category": {
+            "description": "The category of the job",
+            "type": "categorical"
+        },
+        "Full-Time/Part-Time indicator": {
+            "description": "Indicator whether the job is full-time or part-time",
+            "type": "categorical",
+            "value_dict": {
+                "F": "The job is full-time",
+                "P": "The job is part-time"
+            }
+        },
+        "Career Level": {
+            "description": "The career level required for the job",
+            "type": "categorical",
+            "value_dict": {
+                "Experienced (non-manager)": "The job requires experienced professionals who are not currently managing teams",
+                "Manager": "The job is a managerial role",
+                "Student": "The job is suitable for students",
+                "Entry-Level": "The job is an entry-level position",
+                "Executive": "The job is an executive role"
+            }
+        },
+        "Salary Range From": {
+            "description": "The starting salary range for the job",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Salary Range To": {
+            "description": "The ending salary range for the job",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Salary Frequency": {
+            "description": "The frequency of the salary payment",
+            "type": "categorical",
+            "value_dict": {
+                "Annual": "The salary is paid annually",
+                "Hourly": "The salary is paid hourly",
+                "Daily": "The salary is paid daily"
+            }
+        },
+        "Work Location": {
+            "description": "The location of the work",
+            "type": "categorical"
+        },
+        "Division/Work Unit": {
+            "description": "The division or work unit of the job",
+            "type": "categorical"
+        },
+        "Job Description": {
+            "description": "The description of the job",
+            "type": "other"
+        },
+        "Minimum Qual Requirements": {
+            "description": "The minimum qualification requirements for the job",
+            "type": "other"
+        },
+        "Preferred Skills": {
+            "description": "The preferred skills for the job",
+            "type": "other"
+        },
+        "Additional Information": {
+            "description": "Additional information about the job",
+            "type": "other"
+        },
+        "To Apply": {
+            "description": "Instructions on how to apply for the job",
+            "type": "other"
+        },
+        "Hours/Shift": {
+            "description": "The work hours or shift for the job",
+            "type": "other"
+        },
+        "Work Location 1": {
+            "description": "Additional work location information",
+            "type": "categorical"
+        },
+        "Recruitment Contact": {
+            "description": "Contact information for recruitment",
+            "type": "other"
+        },
+        "Residency Requirement": {
+            "description": "Residency requirement for the job",
+            "type": "other"
+        },
+        "Posting Date": {
+            "description": "The date when the job was posted",
+            "type": "other"
+        },
+        "Post Until": {
+            "description": "The date until the job is posted",
+            "type": "other"
+        },
+        "Posting Updated": {
+            "description": "The date when the job posting was last updated",
+            "type": "other"
+        },
+        "Process Date": {
+            "description": "The date when the job was processed",
+            "type": "other"
+        }
+    },
+    "task_info": {
+        "Salary Range From": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in job salary prediction.",
+                "task_prompt": "Based on the features of the job posting, please predict the minimum salary range.",
+                "answer_prompt": "The minimum salary range is."
+            }
+        },
+        "Salary Range To": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in job salary prediction.",
+                "task_prompt": "Based on the features of the job posting, please predict the maximum salary range.",
+                "answer_prompt": "The maximum salary range is."
+            }
+        },
+        "Full-Time/Part-Time indicator": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in job type classification.",
+                "task_prompt": "Based on the features of the job posting, please predict if the job is full-time or part-time.",
+                "answer_prompt": "The job is full-time[0] or part-time[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "F": "The job is full-time",
+                "P": "The job is part-time"
+            },
+            "class_index_dict": {
+                "F": 0,
+                "P": 1
+            }
+        },
+        "Career Level": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in career level classification.",
+                "task_prompt": "Based on the features of the job posting, please predict the career level of the job.",
+                "answer_prompt": "The job is suitable for experienced professionals who are not currently managing teams[0], a managerial role[1], students[2], an entry-level position[3], or an executive role[4]?"
+            },
+            "class_num": 5,
+            "class_value_dict": {
+                "Experienced (non-manager)": "The job requires experienced professionals who are not currently managing teams",
+                "Manager": "The job is a managerial role",
+                "Student": "The job is suitable for students",
+                "Entry-Level": "The job is an entry-level position",
+                "Executive": "The job is an executive role"
+            },
+            "class_index_dict": {
+                "Experienced (non-manager)": 0,
+                "Manager": 1,
+                "Student": 2,
+                "Entry-Level": 3,
+                "Executive": 4
+            }
+        }
+    }
+}

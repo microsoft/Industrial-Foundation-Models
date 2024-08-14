@@ -1,0 +1,91 @@
+{
+    "basic_info": {
+        "row_num": 100000,
+        "col_num": 6,
+        "label_candidates": [
+            "Units_Sold",
+            "Inventory_Level",
+            "Customer_Feedback_Rating"
+        ],
+        "valid_feature_num": 6,
+        "num_features": [
+            "Inventory_Level",
+            "Customer_Feedback_Rating",
+            "Units_Sold"
+        ],
+        "cat_features": [
+            "Product_ID",
+            "Promotion"
+        ],
+        "other_features": [
+            "Date"
+        ],
+        "tags": [
+            "artificial intelligence",
+            "intermediate",
+            "neural networks",
+            "text",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/kanchana1990/mystiquemart-deciphering-retail-rhythms"
+    },
+    "feature_info": {
+        "Date": {
+            "description": "The date when the sales record was made",
+            "type": "other"
+        },
+        "Product_ID": {
+            "description": "The unique identifier of the product that was sold",
+            "type": "categorical"
+        },
+        "Units_Sold": {
+            "description": "The number of units of the product that were sold",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Inventory_Level": {
+            "description": "The level of inventory of the product at the time of the sale",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Promotion": {
+            "description": "Indication of whether a promotion was being run for the product at the time of the sale (0 means no promotion, 1 means promotion)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "No promotion was being run for the product at the time of the sale",
+                "1": "A promotion was being run for the product at the time of the sale"
+            }
+        },
+        "Customer_Feedback_Rating": {
+            "description": "The rating given by the customer for the product, on a scale of 1 to 5",
+            "type": "numerical",
+            "decimal": 1
+        }
+    },
+    "task_info": {
+        "Units_Sold": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in retail sales forecasting.",
+                "task_prompt": "Based on the product information and customer feedback, please predict the units sold.",
+                "answer_prompt": "The predicted units sold is:."
+            }
+        },
+        "Inventory_Level": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in inventory management.",
+                "task_prompt": "Based on the product information, sales data and customer feedback, please predict the inventory level.",
+                "answer_prompt": "The predicted inventory level is:."
+            }
+        },
+        "Customer_Feedback_Rating": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in customer satisfaction analysis.",
+                "task_prompt": "Based on the product information, sales data, and inventory level, please predict the customer feedback rating.",
+                "answer_prompt": "The predicted customer feedback rating is:."
+            }
+        }
+    }
+}

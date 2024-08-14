@@ -1,0 +1,133 @@
+{
+    "basic_info": {
+        "row_num": 10948,
+        "col_num": 10,
+        "label_candidates": [
+            "cnt",
+            "casual",
+            "temp",
+            "hum",
+            "windspeed"
+        ],
+        "valid_feature_num": 9,
+        "num_features": [
+            "temp",
+            "atemp",
+            "hum",
+            "windspeed",
+            "casual",
+            "cnt"
+        ],
+        "cat_features": [
+            "hr",
+            "weathersit"
+        ],
+        "other_features": [
+            "dteday"
+        ],
+        "tags": [
+            "business",
+            "health",
+            "time series analysis",
+            "regression",
+            "datetime"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/kukuroo3/bike-users-predict"
+    },
+    "feature_info": {
+        "ID": {
+            "description": "Unique identifier for each record",
+            "type": "useless"
+        },
+        "dteday": {
+            "description": "Date of the record",
+            "type": "other"
+        },
+        "hr": {
+            "description": "Hour of the day (24-hour format)",
+            "type": "categorical"
+        },
+        "weathersit": {
+            "description": "Weather situation (Categorical variable)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Clear, Few clouds, Partly cloudy, Partly cloudy",
+                "2": "Mist + Cloudy, Mist + Broken clouds, Mist + Few clouds, Mist",
+                "3": "Light Snow, Light Rain + Thunderstorm + Scattered clouds, Light Rain + Scattered clouds",
+                "4": "Heavy Rain + Ice Pallets + Thunderstorm + Mist, Snow + Fog"
+            }
+        },
+        "temp": {
+            "description": "Normalized temperature in Celsius",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "atemp": {
+            "description": "Normalized feeling temperature in Celsius",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "hum": {
+            "description": "Normalized humidity",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "windspeed": {
+            "description": "Normalized wind speed",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "casual": {
+            "description": "Count of casual users",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "cnt": {
+            "description": "Count of total rental bikes including both casual and registered",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "cnt": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in bike rental prediction.",
+                "task_prompt": "Based on the features of the bike rental records, please predict the count of total rental bikes.",
+                "answer_prompt": "The predicted count of total rental bikes is."
+            }
+        },
+        "casual": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in bike rental prediction.",
+                "task_prompt": "Based on the features of the bike rental records, please predict the count of casual rental bikes.",
+                "answer_prompt": "The predicted count of casual rental bikes is."
+            }
+        },
+        "temp": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in weather prediction.",
+                "task_prompt": "Based on the features of the bike rental records, please predict the temperature.",
+                "answer_prompt": "The predicted temperature is."
+            }
+        },
+        "hum": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in weather prediction.",
+                "task_prompt": "Based on the features of the bike rental records, please predict the humidity.",
+                "answer_prompt": "The predicted humidity is."
+            }
+        },
+        "windspeed": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in weather prediction.",
+                "task_prompt": "Based on the features of the bike rental records, please predict the wind speed.",
+                "answer_prompt": "The predicted wind speed is."
+            }
+        }
+    }
+}

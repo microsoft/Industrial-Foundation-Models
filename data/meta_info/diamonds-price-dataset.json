@@ -1,0 +1,136 @@
+{
+    "basic_info": {
+        "row_num": 50000,
+        "col_num": 10,
+        "label_candidates": [
+            "price",
+            "carat",
+            "depth"
+        ],
+        "valid_feature_num": 10,
+        "num_features": [
+            "carat",
+            "depth",
+            "table",
+            "x",
+            "y",
+            "z",
+            "price"
+        ],
+        "cat_features": [
+            "cut",
+            "color",
+            "clarity"
+        ],
+        "other_features": [],
+        "tags": [
+            "arts and entertainment",
+            "art",
+            "artificial intelligence",
+            "regression",
+            "english"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/amirhosseinmirzaie/diamonds-price-dataset"
+    },
+    "feature_info": {
+        "carat": {
+            "description": "Weight of the diamond (1 carat = 200 milligrams)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "cut": {
+            "description": "Quality of the cut (Fair, Good, Very Good, Premium, Ideal)",
+            "type": "categorical",
+            "value_dict": {
+                "Ideal": "Top quality cut in the diamond",
+                "Premium": "High quality cut in the diamond",
+                "Good": "Good quality cut in the diamond",
+                "Very Good": "Better than good but below premium",
+                "Fair": "Fair quality cut in the diamond"
+            }
+        },
+        "color": {
+            "description": "Diamond color, from J (worst) to D (best)",
+            "type": "categorical",
+            "value_dict": {
+                "E": "Second highest color grade",
+                "I": "Near colorless grade",
+                "J": "Near colorless, slightly detectable",
+                "H": "Near colorless",
+                "F": "Colorless grade",
+                "G": "Near colorless grade",
+                "D": "Highest color grade (absolutely colorless)"
+            }
+        },
+        "clarity": {
+            "description": "A measurement of how clear the diamond is (I1 (worst), SI2, SI1, VS2, VS1, VVS2, VVS1, IF (best))",
+            "type": "categorical",
+            "value_dict": {
+                "SI2": "Slightly Included (2nd grade)",
+                "SI1": "Slightly Included (1st grade)",
+                "VS1": "Very Slightly Included (1st grade)",
+                "VS2": "Very Slightly Included (2nd grade)",
+                "VVS2": "Very, Very Slightly Included (2nd grade)",
+                "VVS1": "Very, Very Slightly Included (1st grade)",
+                "I1": "Included (worst clarity)",
+                "IF": "Internally Flawless (best clarity)"
+            }
+        },
+        "depth": {
+            "description": "Total depth percentage = z / mean(x, y) = 2 * z / (x + y) (43--79)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "table": {
+            "description": "Width of top of diamond relative to widest point (43--95)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "price": {
+            "description": "Price in US dollars ($326--$18,823)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "x": {
+            "description": "Length in mm (0--10.74)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "y": {
+            "description": "Width in mm (0--58.9)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "z": {
+            "description": "Depth in mm (0--31.8)",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "price": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in diamond valuation.",
+                "task_prompt": "Based on the features of the diamond, please predict the price.",
+                "answer_prompt": "The predicted price of the diamond is ______."
+            }
+        },
+        "carat": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in gemology.",
+                "task_prompt": "Based on the features of the diamond, please predict the carat weight.",
+                "answer_prompt": "The predicted carat weight of the diamond is ______."
+            }
+        },
+        "depth": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in gemology.",
+                "task_prompt": "Based on the features of the diamond, please predict the depth percentage.",
+                "answer_prompt": "The predicted depth percentage of the diamond is ______."
+            }
+        }
+    }
+}

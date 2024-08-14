@@ -1,0 +1,154 @@
+{
+    "basic_info": {
+        "row_num": 51126,
+        "col_num": 11,
+        "label_candidates": [
+            "score",
+            "sentiment",
+            "predicted_category",
+            "thumbsUpCount"
+        ],
+        "valid_feature_num": 10,
+        "num_features": [
+            "score",
+            "thumbsUpCount"
+        ],
+        "cat_features": [
+            "reviewCreatedVersion",
+            "predicted_category",
+            "appVersion",
+            "sentiment"
+        ],
+        "other_features": [
+            "content",
+            "at",
+            "replyContent",
+            "repliedAt"
+        ],
+        "tags": [
+            "intermediate",
+            "exploratory data analysis",
+            "classification",
+            "text",
+            "ratings and reviews"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/raqhea/medium-app-reviews-from-google-play-store"
+    },
+    "feature_info": {
+        "reviewId": {
+            "description": "Unique identifier for each review",
+            "type": "useless"
+        },
+        "content": {
+            "description": "Text content of the review",
+            "type": "other"
+        },
+        "score": {
+            "description": "Rating score given by the user",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "thumbsUpCount": {
+            "description": "Number of thumbs-up reactions the review received",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "reviewCreatedVersion": {
+            "description": "App version when the review was created",
+            "type": "categorical"
+        },
+        "at": {
+            "description": "Timestamp when the review was created",
+            "type": "other"
+        },
+        "replyContent": {
+            "description": "Reply content from the app developer, if any",
+            "type": "other"
+        },
+        "repliedAt": {
+            "description": "Timestamp when the developer replied, if any",
+            "type": "other"
+        },
+        "predicted_category": {
+            "description": "Predicted category of the review based on its content",
+            "type": "categorical",
+            "value_dict": {
+                "USER_EXPERIENCE": "Review focuses on user experience",
+                "CONTENT": "Review focuses on the content of the app",
+                "INTERFACE": "Review focuses on the interface of the app",
+                "SUBSCRIPTION": "Review focuses on the subscription aspects of the app"
+            }
+        },
+        "sentiment": {
+            "description": "Sentiment of the review (positive, neutral, negative)",
+            "type": "categorical",
+            "value_dict": {
+                "NEUTRAL": "Review expresses neutral sentiment",
+                "NEGATIVE": "Review expresses negative sentiment",
+                "POSITIVE": "Review expresses positive sentiment"
+            }
+        },
+        "appVersion": {
+            "description": "Current version of the app",
+            "type": "categorical"
+        }
+    },
+    "task_info": {
+        "score": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in app review analysis.",
+                "task_prompt": "Based on the features of the app review, please predict the score.",
+                "answer_prompt": "The predicted score is {score}."
+            }
+        },
+        "sentiment": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in sentiment analysis.",
+                "task_prompt": "Based on the content of the app review, please classify the sentiment.",
+                "answer_prompt": "The sentiment is neutral[0], negative[1], or positive[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "NEUTRAL": "Review expresses neutral sentiment",
+                "NEGATIVE": "Review expresses negative sentiment",
+                "POSITIVE": "Review expresses positive sentiment"
+            },
+            "class_index_dict": {
+                "NEUTRAL": 0,
+                "NEGATIVE": 1,
+                "POSITIVE": 2
+            }
+        },
+        "predicted_category": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in content classification.",
+                "task_prompt": "Based on the content of the app review, please classify the predicted category.",
+                "answer_prompt": "The category is user experience[0], content[1], interface[2], or subscription[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "USER_EXPERIENCE": "Review focuses on user experience",
+                "CONTENT": "Review focuses on the content of the app",
+                "INTERFACE": "Review focuses on the interface of the app",
+                "SUBSCRIPTION": "Review focuses on the subscription aspects of the app"
+            },
+            "class_index_dict": {
+                "USER_EXPERIENCE": 0,
+                "CONTENT": 1,
+                "INTERFACE": 2,
+                "SUBSCRIPTION": 3
+            }
+        },
+        "thumbsUpCount": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in app review analysis.",
+                "task_prompt": "Based on the features of the app review, please predict the thumbs up count.",
+                "answer_prompt": "The predicted thumbs up count is {thumbsUpCount}."
+            }
+        }
+    }
+}

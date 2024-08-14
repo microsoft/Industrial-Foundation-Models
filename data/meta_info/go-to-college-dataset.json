@@ -1,0 +1,161 @@
+{
+    "basic_info": {
+        "row_num": 1000,
+        "col_num": 11,
+        "label_candidates": [
+            "will_go_to_college",
+            "average_grades",
+            "type_school"
+        ],
+        "valid_feature_num": 11,
+        "num_features": [
+            "parent_age",
+            "parent_salary",
+            "house_area",
+            "average_grades"
+        ],
+        "cat_features": [
+            "type_school",
+            "school_accreditation",
+            "gender",
+            "interest",
+            "residence",
+            "parent_was_in_college",
+            "will_go_to_college"
+        ],
+        "other_features": [],
+        "tags": [
+            "universities and colleges",
+            "education",
+            "beginner",
+            "tabular",
+            "binary classification",
+            "primary and secondary schools"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/saddamazyazy/go-to-college-dataset"
+    },
+    "feature_info": {
+        "type_school": {
+            "description": "The type of school the student attends, either Academic or Vocational",
+            "type": "categorical",
+            "value_dict": {
+                "Academic": "The student attends an academic school",
+                "Vocational": "The student attends a vocational school"
+            }
+        },
+        "school_accreditation": {
+            "description": "The accreditation level of the school",
+            "type": "categorical",
+            "value_dict": {
+                "A": "The school has an A level accreditation",
+                "B": "The school has a B level accreditation"
+            }
+        },
+        "gender": {
+            "description": "The gender of the student",
+            "type": "categorical",
+            "value_dict": {
+                "Male": "The student is male",
+                "Female": "The student is female"
+            }
+        },
+        "interest": {
+            "description": "The field of interest of the student",
+            "type": "categorical",
+            "value_dict": {
+                "Less Interested": "The student is less interested in academic pursuits",
+                "Very Interested": "The student is very interested in academic pursuits",
+                "Uncertain": "The student is uncertain about their academic interests",
+                "Not Interested": "The student is not interested in academic pursuits",
+                "Interested": "The student is interested in academic pursuits"
+            }
+        },
+        "residence": {
+            "description": "The type of residence of the student, e.g. Urban or Rural",
+            "type": "categorical",
+            "value_dict": {
+                "Urban": "The student lives in an urban area",
+                "Rural": "The student lives in a rural area"
+            }
+        },
+        "parent_age": {
+            "description": "The age of the parent",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "parent_salary": {
+            "description": "The salary of the parent",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "house_area": {
+            "description": "The area of the house where the student lives",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "average_grades": {
+            "description": "The average grades of the student",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "parent_was_in_college": {
+            "description": "Whether the parent of the student has been in college",
+            "type": "categorical",
+            "value_dict": {
+                "False": "The parent of the student has not been in college",
+                "True": "The parent of the student has been in college"
+            }
+        },
+        "will_go_to_college": {
+            "description": "Whether the student will go to college",
+            "type": "categorical",
+            "value_dict": {
+                "True": "The student will go to college",
+                "False": "The student will not go to college"
+            }
+        }
+    },
+    "task_info": {
+        "will_go_to_college": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in predicting student behavior.",
+                "task_prompt": "Based on the features of the student, please predict if the student will go to college.",
+                "answer_prompt": "The student will go to college[1] or The student will not go to college[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "True": "The student will go to college",
+                "False": "The student will not go to college"
+            },
+            "class_index_dict": {
+                "True": 1,
+                "False": 0
+            }
+        },
+        "average_grades": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in predicting student academic performance.",
+                "task_prompt": "Based on the features of the student, please predict the average grades of the student."
+            }
+        },
+        "type_school": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in predicting the type of school a student attends.",
+                "task_prompt": "Based on the features of the student, please predict the type of school the student attends.",
+                "answer_prompt": "The student attends an academic school[1] or The student attends a vocational school[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "Academic": "The student attends an academic school",
+                "Vocational": "The student attends a vocational school"
+            },
+            "class_index_dict": {
+                "Academic": 1,
+                "Vocational": 0
+            }
+        }
+    }
+}

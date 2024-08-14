@@ -1,0 +1,178 @@
+{
+    "basic_info": {
+        "row_num": 2000,
+        "col_num": 8,
+        "label_candidates": [
+            "Spending Score (1-100)",
+            "Annual Income ($)",
+            "Age",
+            "Profession",
+            "Family Size",
+            "Work Experience",
+            "Gender"
+        ],
+        "valid_feature_num": 7,
+        "num_features": [
+            "Age",
+            "Annual Income ($)",
+            "Work Experience",
+            "Family Size",
+            "Spending Score (1-100)"
+        ],
+        "cat_features": [
+            "Gender",
+            "Profession"
+        ],
+        "other_features": [],
+        "tags": [
+            "education",
+            "classification",
+            "clustering"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/datascientistanna/customers-dataset"
+    },
+    "feature_info": {
+        "CustomerID": {
+            "description": "Unique identifier for each customer",
+            "type": "useless"
+        },
+        "Gender": {
+            "description": "Gender of the customer",
+            "type": "categorical",
+            "value_dict": {
+                "Male": "The customer is male.",
+                "Female": "The customer is female."
+            }
+        },
+        "Age": {
+            "description": "Age of the customer in years",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Annual Income ($)": {
+            "description": "Annual income of the customer in US dollars",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Spending Score (1-100)": {
+            "description": "Score assigned by the mall based on customer behavior and spending nature, ranging from 1-100",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Profession": {
+            "description": "Profession of the customer",
+            "type": "categorical",
+            "value_dict": {
+                "Healthcare": "The customer works in the healthcare industry.",
+                "Engineer": "The customer is an engineer.",
+                "Lawyer": "The customer is a lawyer.",
+                "Entertainment": "The customer works in the entertainment industry.",
+                "Artist": "The customer is an artist.",
+                "Executive": "The customer is an executive.",
+                "Doctor": "The customer is a doctor.",
+                "Homemaker": "The customer is a homemaker.",
+                "Marketing": "The customer works in marketing."
+            }
+        },
+        "Work Experience": {
+            "description": "Work experience of the customer in years",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Family Size": {
+            "description": "Number of members in the customer's family",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "Spending Score (1-100)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in customer behavior analysis.",
+                "task_prompt": "Based on the features of the customer, please predict the spending score.",
+                "answer_prompt": "The predicted spending score is: ."
+            }
+        },
+        "Annual Income ($)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in income prediction.",
+                "task_prompt": "Based on the features of the customer, please predict the annual income.",
+                "answer_prompt": "The predicted annual income is: ."
+            }
+        },
+        "Age": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in demographic analysis.",
+                "task_prompt": "Based on the features of the customer, please predict the age.",
+                "answer_prompt": "The predicted age is: ."
+            }
+        },
+        "Profession": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in career prediction.",
+                "task_prompt": "Based on the features of the customer, please predict the profession.",
+                "answer_prompt": "Is the customer a Healthcare worker[0], Engineer[1], Lawyer[2], Entertainment worker[3], Artist[4], Executive[5], Doctor[6], Homemaker[7], or works in Marketing[8]?"
+            },
+            "class_num": 9,
+            "class_value_dict": {
+                "Healthcare": "The customer works in the healthcare industry.",
+                "Engineer": "The customer is an engineer.",
+                "Lawyer": "The customer is a lawyer.",
+                "Entertainment": "The customer works in the entertainment industry.",
+                "Artist": "The customer is an artist.",
+                "Executive": "The customer is an executive.",
+                "Doctor": "The customer is a doctor.",
+                "Homemaker": "The customer is a homemaker.",
+                "Marketing": "The customer works in marketing."
+            },
+            "class_index_dict": {
+                "Healthcare": 0,
+                "Engineer": 1,
+                "Lawyer": 2,
+                "Entertainment": 3,
+                "Artist": 4,
+                "Executive": 5,
+                "Doctor": 6,
+                "Homemaker": 7,
+                "Marketing": 8
+            }
+        },
+        "Family Size": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in demographic analysis.",
+                "task_prompt": "Based on the features of the customer, please predict the family size.",
+                "answer_prompt": "The predicted family size is: ."
+            }
+        },
+        "Work Experience": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in career analysis.",
+                "task_prompt": "Based on the features of the customer, please predict the work experience.",
+                "answer_prompt": "The predicted work experience in years is: ."
+            }
+        },
+        "Gender": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in demographic analysis.",
+                "task_prompt": "Based on the features of the customer, please predict the gender.",
+                "answer_prompt": "Is the customer Male[0] or Female[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "Male": "The customer is male.",
+                "Female": "The customer is female."
+            },
+            "class_index_dict": {
+                "Male": 0,
+                "Female": 1
+            }
+        }
+    }
+}

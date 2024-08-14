@@ -1,0 +1,134 @@
+{
+    "basic_info": {
+        "row_num": 934,
+        "col_num": 11,
+        "label_candidates": [
+            "price_pounds",
+            "size_sqft",
+            "bedrooms",
+            "bathrooms"
+        ],
+        "valid_feature_num": 10,
+        "num_features": [
+            "bedrooms",
+            "bathrooms",
+            "size_sqft",
+            "nearest_station_miles",
+            "price_pounds"
+        ],
+        "cat_features": [
+            "tenure",
+            "garden",
+            "street",
+            "nearest_station_name",
+            "postcode_outer"
+        ],
+        "other_features": [],
+        "tags": [
+            "europe",
+            "housing",
+            "tabular",
+            "social issues and advocacy",
+            "english"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/bertiemackie/london-house-listings"
+    },
+    "feature_info": {
+        "id": {
+            "description": "Unique identifier for each house listing",
+            "type": "useless"
+        },
+        "bedrooms": {
+            "description": "Number of bedrooms in the house",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "bathrooms": {
+            "description": "Number of bathrooms in the house",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "tenure": {
+            "description": "The tenure status of the property (e.g., freehold, leasehold)",
+            "type": "categorical",
+            "value_dict": {
+                "freehold": "The property ownership is outright",
+                "leasehold": "The property is held on a lease for a certain number of years",
+                "share of freehold": "The property has a share in the freehold of the building",
+                "ask agent": "The tenure status needs to be confirmed with the agent"
+            }
+        },
+        "garden": {
+            "description": "Whether the house has a garden or not",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The house does not have a garden",
+                "1": "The house has 1 garden",
+                "2": "The house has 2 gardens",
+                "3": "The house has 3 gardens",
+                "4": "The house has 4 gardens"
+            }
+        },
+        "street": {
+            "description": "The street where the house is located",
+            "type": "categorical"
+        },
+        "size_sqft": {
+            "description": "The size of the house in square feet",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "price_pounds": {
+            "description": "The price of the house in pounds",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "nearest_station_name": {
+            "description": "The name of the nearest station to the house",
+            "type": "categorical"
+        },
+        "nearest_station_miles": {
+            "description": "The distance from the house to the nearest station in miles",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "postcode_outer": {
+            "description": "The outer part of the postcode where the house is located",
+            "type": "categorical"
+        }
+    },
+    "task_info": {
+        "price_pounds": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate market analysis.",
+                "task_prompt": "Based on the features of the house, please predict the price in pounds.",
+                "answer_prompt": "The predicted price of the house in pounds is: ."
+            }
+        },
+        "size_sqft": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate market analysis.",
+                "task_prompt": "Based on the features of the house, please predict the size in square feet.",
+                "answer_prompt": "The predicted size of the house in square feet is: ."
+            }
+        },
+        "bedrooms": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate market analysis.",
+                "task_prompt": "Based on the features of the house, please predict the number of bedrooms.",
+                "answer_prompt": "The predicted number of bedrooms in the house is: ."
+            }
+        },
+        "bathrooms": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate market analysis.",
+                "task_prompt": "Based on the features of the house, please predict the number of bathrooms.",
+                "answer_prompt": "The predicted number of bathrooms in the house is: ."
+            }
+        }
+    }
+}

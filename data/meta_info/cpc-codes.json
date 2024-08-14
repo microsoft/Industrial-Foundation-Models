@@ -1,0 +1,121 @@
+{
+    "basic_info": {
+        "row_num": 260476,
+        "col_num": 7,
+        "label_candidates": [
+            "section",
+            "group",
+            "main_group"
+        ],
+        "valid_feature_num": 7,
+        "num_features": [
+            "group",
+            "main_group"
+        ],
+        "cat_features": [
+            "code",
+            "title",
+            "class",
+            "subclass",
+            "section"
+        ],
+        "other_features": [],
+        "tags": [
+            "law",
+            "beginner",
+            "nlp",
+            "text"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/xhlulu/cpc-codes"
+    },
+    "feature_info": {
+        "code": {
+            "description": "The unique identifier code for each patent classification.",
+            "type": "categorical"
+        },
+        "title": {
+            "description": "The title or name of the patent classification.",
+            "type": "categorical"
+        },
+        "section": {
+            "description": "The section of the patent classification system where the patent belongs.",
+            "type": "categorical",
+            "value_dict": {
+                "A": "Patents that belong to section A",
+                "B": "Patents that belong to section B",
+                "C": "Patents that belong to section C",
+                "D": "Patents that belong to section D",
+                "E": "Patents that belong to section E",
+                "F": "Patents that belong to section F",
+                "G": "Patents that belong to section G",
+                "H": "Patents that belong to section H",
+                "Y": "Patents that belong to section Y"
+            }
+        },
+        "class": {
+            "description": "The class within the section where the patent belongs.",
+            "type": "categorical"
+        },
+        "subclass": {
+            "description": "The subclass within the class where the patent belongs.",
+            "type": "categorical"
+        },
+        "group": {
+            "description": "The group within the subclass where the patent belongs.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "main_group": {
+            "description": "The main group within the group where the patent belongs.",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "section": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in patent classification.",
+                "task_prompt": "Based on the code of the patent, please predict the section it belongs to.",
+                "answer_prompt": "A[0], B[1], C[2], D[3], E[4], F[5], G[6], H[7], Y[8]?"
+            },
+            "class_num": 9,
+            "class_value_dict": {
+                "A": "Patents that belong to section A",
+                "B": "Patents that belong to section B",
+                "C": "Patents that belong to section C",
+                "D": "Patents that belong to section D",
+                "E": "Patents that belong to section E",
+                "F": "Patents that belong to section F",
+                "G": "Patents that belong to section G",
+                "H": "Patents that belong to section H",
+                "Y": "Patents that belong to section Y"
+            },
+            "class_index_dict": {
+                "A": 0,
+                "B": 1,
+                "C": 2,
+                "D": 3,
+                "E": 4,
+                "F": 5,
+                "G": 6,
+                "H": 7,
+                "Y": 8
+            }
+        },
+        "group": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in patent classification.",
+                "task_prompt": "Based on the code of the patent, please predict the group number it belongs to."
+            }
+        },
+        "main_group": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in patent classification.",
+                "task_prompt": "Based on the code of the patent, please predict the main group number it belongs to."
+            }
+        }
+    }
+}

@@ -1,0 +1,104 @@
+{
+    "basic_info": {
+        "row_num": 500,
+        "col_num": 4,
+        "label_candidates": [
+            "Index",
+            "Weight",
+            "Height"
+        ],
+        "valid_feature_num": 4,
+        "num_features": [
+            "Height",
+            "Weight"
+        ],
+        "cat_features": [
+            "Gender",
+            "Index"
+        ],
+        "other_features": [],
+        "tags": [
+            "healthcare",
+            "health",
+            "computer science",
+            "beginner",
+            "classification",
+            "logistic regression",
+            "multiclass classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/yasserh/bmidataset"
+    },
+    "feature_info": {
+        "Gender": {
+            "description": "The gender of the individual, either Male or Female",
+            "type": "categorical",
+            "value_dict": {
+                "Male": "The individual is male",
+                "Female": "The individual is female"
+            }
+        },
+        "Height": {
+            "description": "The height of the individual in centimeters",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Weight": {
+            "description": "The weight of the individual in kilograms",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Index": {
+            "description": "Body Mass Index category represented by an integer. The higher the index, the more overweight or obese the individual is",
+            "type": "categorical",
+            "value_dict": {
+                "4": "The individual is severely overweight",
+                "2": "The individual is overweight",
+                "3": "The individual is obese",
+                "5": "The individual is extremely obese",
+                "1": "The individual has normal weight",
+                "0": "The individual is underweight"
+            }
+        }
+    },
+    "task_info": {
+        "Index": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in health and fitness.",
+                "task_prompt": "Based on the gender, height, and weight of the individual, please predict the body mass index category.",
+                "answer_prompt": "The individual is underweight[0], has normal weight[1], is overweight[2], is obese[3], is severely overweight[4], or is extremely obese[5]?"
+            },
+            "class_num": 6,
+            "class_value_dict": {
+                "4": "The individual is severely overweight",
+                "2": "The individual is overweight",
+                "3": "The individual is obese",
+                "5": "The individual is extremely obese",
+                "1": "The individual has normal weight",
+                "0": "The individual is underweight"
+            },
+            "class_index_dict": {
+                "4": 4,
+                "2": 2,
+                "3": 3,
+                "5": 5,
+                "1": 1,
+                "0": 0
+            }
+        },
+        "Weight": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health and fitness.",
+                "task_prompt": "Based on the gender, height, and body mass index of the individual, please predict the weight."
+            }
+        },
+        "Height": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health and fitness.",
+                "task_prompt": "Based on the gender, weight, and body mass index of the individual, please predict the height."
+            }
+        }
+    }
+}

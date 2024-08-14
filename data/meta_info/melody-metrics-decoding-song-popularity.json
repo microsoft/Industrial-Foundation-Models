@@ -1,0 +1,119 @@
+{
+    "basic_info": {
+        "row_num": 8020,
+        "col_num": 7,
+        "label_candidates": [
+            "Popularity",
+            "Genre",
+            "Tempo"
+        ],
+        "valid_feature_num": 7,
+        "num_features": [
+            "SongLength",
+            "NumInstruments",
+            "Tempo",
+            "LyricalContent",
+            "ReleasedYear",
+            "Popularity"
+        ],
+        "cat_features": [
+            "Genre"
+        ],
+        "other_features": [],
+        "tags": [
+            "music",
+            "beginner",
+            "data analytics",
+            "linear regression",
+            "text"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/kanchana1990/melody-metrics-decoding-song-popularity"
+    },
+    "feature_info": {
+        "SongLength": {
+            "description": "The duration of the song in seconds",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "NumInstruments": {
+            "description": "The number of instruments used in the song",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Genre": {
+            "description": "The genre of the song",
+            "type": "categorical",
+            "value_dict": {
+                "Classical": "The song is in the Classical genre",
+                "Rap": "The song is in the Rap genre",
+                "Jazz": "The song is in the Jazz genre",
+                "Pop": "The song is in the Pop genre",
+                "Country": "The song is in the Country genre",
+                "Rock": "The song is in the Rock genre"
+            }
+        },
+        "Tempo": {
+            "description": "The tempo of the song measured in beats per minute (BPM)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "LyricalContent": {
+            "description": "The amount of lyrical content in the song",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "ReleasedYear": {
+            "description": "The year the song was released",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Popularity": {
+            "description": "The popularity of the song",
+            "type": "numerical",
+            "decimal": 1
+        }
+    },
+    "task_info": {
+        "Popularity": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in music analytics.",
+                "task_prompt": "Based on the song features such as length, number of instruments, genre, tempo, lyrical content, and release year, please predict the popularity of the song.",
+                "answer_prompt": "The predicted popularity of the song is."
+            }
+        },
+        "Genre": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in music genre classification.",
+                "task_prompt": "Based on the song features such as length, number of instruments, tempo, lyrical content, release year, and popularity, please classify the genre of the song.",
+                "answer_prompt": "The song is in the Classical genre[0], Rap genre[1], Jazz genre[2], Pop genre[3], Country genre[4], Rock genre[5]?"
+            },
+            "class_num": 6,
+            "class_value_dict": {
+                "Classical": "The song is in the Classical genre",
+                "Rap": "The song is in the Rap genre",
+                "Jazz": "The song is in the Jazz genre",
+                "Pop": "The song is in the Pop genre",
+                "Country": "The song is in the Country genre",
+                "Rock": "The song is in the Rock genre"
+            },
+            "class_index_dict": {
+                "Classical": 0,
+                "Rap": 1,
+                "Jazz": 2,
+                "Pop": 3,
+                "Country": 4,
+                "Rock": 5
+            }
+        },
+        "Tempo": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in music tempo prediction.",
+                "task_prompt": "Based on the song features such as length, number of instruments, genre, lyrical content, release year, and popularity, please predict the tempo of the song.",
+                "answer_prompt": "The predicted tempo of the song is."
+            }
+        }
+    }
+}

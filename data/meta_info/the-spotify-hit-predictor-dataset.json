@@ -1,0 +1,209 @@
+{
+    "basic_info": {
+        "row_num": 41106,
+        "col_num": 19,
+        "label_candidates": [
+            "target",
+            "danceability",
+            "energy",
+            "loudness",
+            "valence",
+            "tempo"
+        ],
+        "valid_feature_num": 18,
+        "num_features": [
+            "danceability",
+            "energy",
+            "loudness",
+            "speechiness",
+            "acousticness",
+            "instrumentalness",
+            "liveness",
+            "valence",
+            "tempo",
+            "duration_ms",
+            "chorus_hit",
+            "sections"
+        ],
+        "cat_features": [
+            "track",
+            "artist",
+            "key",
+            "mode",
+            "time_signature",
+            "target"
+        ],
+        "other_features": [],
+        "tags": [
+            "arts and entertainment",
+            "music",
+            "business",
+            "internet"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/theoverman/the-spotify-hit-predictor-dataset"
+    },
+    "feature_info": {
+        "track": {
+            "description": "The name of the track.",
+            "type": "categorical"
+        },
+        "artist": {
+            "description": "The name of the artist.",
+            "type": "categorical"
+        },
+        "uri": {
+            "description": "The resource identifier for the track on Spotify.",
+            "type": "useless"
+        },
+        "danceability": {
+            "description": "A measure of how suitable a track is for dancing based on a combination of musical elements (0.0 - 1.0).",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "energy": {
+            "description": "A measure of intensity and activity, typically perceived as fast, loud, and noisy (0.0 - 1.0).",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "key": {
+            "description": "The key the track is in. Integers map to pitches using standard Pitch Class notation.",
+            "type": "categorical"
+        },
+        "loudness": {
+            "description": "The overall loudness of a track in decibels (dB).",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "mode": {
+            "description": "Indicates the modality (major or minor) of a track, the type of scale from which its melodic content is derived.",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The track is in major key.",
+                "0": "The track is in minor key."
+            }
+        },
+        "speechiness": {
+            "description": "Detects the presence of spoken words in a track (0.0 - 1.0).",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "acousticness": {
+            "description": "A confidence measure of whether the track is acoustic (0.0 - 1.0).",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "instrumentalness": {
+            "description": "Predicts whether a track contains no vocals (0.0 - 1.0).",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "liveness": {
+            "description": "Detects the presence of an audience in the recording (0.0 - 1.0).",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "valence": {
+            "description": "A measure describing the musical positiveness conveyed by a track (0.0 - 1.0).",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "tempo": {
+            "description": "The overall estimated tempo of a track in beats per minute (BPM).",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "duration_ms": {
+            "description": "The duration of the track in milliseconds.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "time_signature": {
+            "description": "An estimated overall time signature of a track.",
+            "type": "categorical",
+            "value_dict": {
+                "4": "The track has 4 beats in each bar.",
+                "3": "The track has 3 beats in each bar.",
+                "1": "The track has 1 beat in each bar.",
+                "5": "The track has 5 beats in each bar.",
+                "0": "The track has an indeterminate number of beats in each bar."
+            }
+        },
+        "chorus_hit": {
+            "description": "This is the point in the song where the chorus begins.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "sections": {
+            "description": "The number of sections in the track as determined by Spotify.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "target": {
+            "description": "The target variable, indicating whether the song was a hit (1) or not (0).",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The track was a hit.",
+                "0": "The track was not a hit."
+            }
+        }
+    },
+    "task_info": {
+        "target": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in music hit prediction.",
+                "task_prompt": "Based on the features of the track, please predict if it was a hit.",
+                "answer_prompt": "Was the track a hit? Yes[1] or no[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "The track was a hit.",
+                "0": "The track was not a hit."
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        },
+        "danceability": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in music analysis.",
+                "task_prompt": "Based on the features of the track, please predict its danceability score.",
+                "answer_prompt": "What is the danceability score of the track?"
+            }
+        },
+        "energy": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in music analysis.",
+                "task_prompt": "Based on the features of the track, please predict its energy score.",
+                "answer_prompt": "What is the energy score of the track?"
+            }
+        },
+        "loudness": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in music analysis.",
+                "task_prompt": "Based on the features of the track, please predict its loudness.",
+                "answer_prompt": "What is the loudness of the track?"
+            }
+        },
+        "valence": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in music analysis.",
+                "task_prompt": "Based on the features of the track, please predict its valence score.",
+                "answer_prompt": "What is the valence score of the track?"
+            }
+        },
+        "tempo": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in music analysis.",
+                "task_prompt": "Based on the features of the track, please predict its tempo.",
+                "answer_prompt": "What is the tempo of the track?"
+            }
+        }
+    }
+}

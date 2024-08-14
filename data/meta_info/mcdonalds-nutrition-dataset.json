@@ -1,0 +1,156 @@
+{
+    "basic_info": {
+        "row_num": 141,
+        "col_num": 13,
+        "label_candidates": [
+            "calories",
+            "totalfat",
+            "sodium",
+            "protien",
+            "sugar"
+        ],
+        "valid_feature_num": 13,
+        "num_features": [
+            "servesize",
+            "calories",
+            "protien",
+            "totalfat",
+            "satfat",
+            "transfat",
+            "cholestrol",
+            "carbs",
+            "sugar",
+            "addedsugar",
+            "sodium"
+        ],
+        "cat_features": [
+            "item",
+            "menu"
+        ],
+        "other_features": [],
+        "tags": [
+            "health and fitness",
+            "nutrition",
+            "exploratory data analysis",
+            "food",
+            "restaurants"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/priyanshusethi/mcdonalds-nutrition-dataset"
+    },
+    "feature_info": {
+        "item": {
+            "description": "The name of the food item",
+            "type": "categorical"
+        },
+        "servesize": {
+            "description": "The serving size of the food item in grams",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "calories": {
+            "description": "The amount of calories in the food item",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "protien": {
+            "description": "The amount of protein in the food item in grams",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "totalfat": {
+            "description": "The total amount of fat in the food item in grams",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "satfat": {
+            "description": "The amount of saturated fat in the food item in grams",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "transfat": {
+            "description": "The amount of trans fat in the food item in grams",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "cholestrol": {
+            "description": "The amount of cholesterol in the food item in milligrams",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "carbs": {
+            "description": "The amount of carbohydrates in the food item in grams",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "sugar": {
+            "description": "The amount of sugar in the food item in grams",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "addedsugar": {
+            "description": "The amount of added sugar in the food item in grams",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "sodium": {
+            "description": "The amount of sodium in the food item in milligrams",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "menu": {
+            "description": "The menu category of the food item",
+            "type": "categorical",
+            "value_dict": {
+                "regular": "Items that are available in the regular menu of McDonalds",
+                "breakfast": "Items that are available in the breakfast menu of McDonalds",
+                "mccafe": "Items that are available in the McCafe menu of McDonalds",
+                "dessert": "Items that are available in the dessert menu of McDonalds",
+                "gourmet": "Items that are available in the gourmet menu of McDonalds",
+                "beverage": "Items that are available in the beverage menu of McDonalds",
+                "condiments": "Items that are available in the condiments menu of McDonalds"
+            }
+        }
+    },
+    "task_info": {
+        "calories": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in nutrition analysis.",
+                "task_prompt": "Based on the features of the McDonalds menu item, please predict the calorie content.",
+                "answer_prompt": "The predicted calorie content is."
+            }
+        },
+        "totalfat": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in nutrition analysis.",
+                "task_prompt": "Based on the features of the McDonalds menu item, please predict the total fat content.",
+                "answer_prompt": "The predicted total fat content is."
+            }
+        },
+        "sodium": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in nutrition analysis.",
+                "task_prompt": "Based on the features of the McDonalds menu item, please predict the sodium content.",
+                "answer_prompt": "The predicted sodium content is."
+            }
+        },
+        "protien": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in nutrition analysis.",
+                "task_prompt": "Based on the features of the McDonalds menu item, please predict the protein content.",
+                "answer_prompt": "The predicted protein content is."
+            }
+        },
+        "sugar": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in nutrition analysis.",
+                "task_prompt": "Based on the features of the McDonalds menu item, please predict the sugar content.",
+                "answer_prompt": "The predicted sugar content is."
+            }
+        }
+    }
+}

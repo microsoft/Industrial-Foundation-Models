@@ -1,0 +1,190 @@
+{
+    "basic_info": {
+        "row_num": 22699,
+        "col_num": 17,
+        "label_candidates": [
+            "total_amount",
+            "fare_amount",
+            "tip_amount",
+            "trip_distance",
+            "passenger_count"
+        ],
+        "valid_feature_num": 17,
+        "num_features": [
+            "passenger_count",
+            "trip_distance",
+            "fare_amount",
+            "extra",
+            "mta_tax",
+            "tip_amount",
+            "tolls_amount",
+            "improvement_surcharge",
+            "total_amount"
+        ],
+        "cat_features": [
+            "VendorID",
+            "RatecodeID",
+            "store_and_fwd_flag",
+            "PULocationID",
+            "DOLocationID",
+            "payment_type"
+        ],
+        "other_features": [
+            "tpep_pickup_datetime",
+            "tpep_dropoff_datetime"
+        ],
+        "tags": [
+            "united states",
+            "automobiles and vehicles",
+            "beginner",
+            "tabular",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/yakhyojon/automatidata"
+    },
+    "feature_info": {
+        "VendorID": {
+            "description": "A code indicating the TPEP provider that provided the record.",
+            "type": "categorical",
+            "value_dict": {
+                "2": "Indicates the record was provided by VeriFone Inc.",
+                "1": "Indicates the record was provided by Creative Mobile Technologies, LLC"
+            }
+        },
+        "tpep_pickup_datetime": {
+            "description": "The date and time when the meter was engaged.",
+            "type": "other"
+        },
+        "tpep_dropoff_datetime": {
+            "description": "The date and time when the meter was disengaged.",
+            "type": "other"
+        },
+        "passenger_count": {
+            "description": "The number of passengers in the vehicle. This is a driver-entered value.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "trip_distance": {
+            "description": "The elapsed trip distance in miles reported by the taximeter.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "RatecodeID": {
+            "description": "The final rate code in effect at the end of the trip.",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Standard rate",
+                "2": "JFK",
+                "3": "Newark",
+                "4": "Nassau or Westchester",
+                "5": "Negotiated fare",
+                "6": "Group ride"
+            }
+        },
+        "store_and_fwd_flag": {
+            "description": "Indicates whether the trip record was held in vehicle memory before sending to the vendor.",
+            "type": "categorical",
+            "value_dict": {
+                "N": "The trip data was not forwarded to the vendor, it was stored in the vehicle",
+                "Y": "The trip data was forwarded to the vendor"
+            }
+        },
+        "PULocationID": {
+            "description": "TLC Taxi Zone in which the taximeter was engaged",
+            "type": "categorical"
+        },
+        "DOLocationID": {
+            "description": "TLC Taxi Zone in which the taximeter was disengaged",
+            "type": "categorical"
+        },
+        "payment_type": {
+            "description": "A numeric code signifying how the passenger paid for the trip.",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Paid by credit card",
+                "2": "Paid by cash",
+                "3": "No charge",
+                "4": "Dispute",
+                "5": "Unknown",
+                "6": "Voided trip"
+            }
+        },
+        "fare_amount": {
+            "description": "The time-and-distance fare calculated by the meter.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "extra": {
+            "description": "Miscellaneous extras and surcharges.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "mta_tax": {
+            "description": "MTA tax that is automatically triggered based on the metered rate in use.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "tip_amount": {
+            "description": "Tip amount \u2013 This field is automatically populated for credit card tips.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "tolls_amount": {
+            "description": "Total amount of all tolls paid in trip.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "improvement_surcharge": {
+            "description": "Fixed surcharge for all trips that begin, end or pass through Manhattan.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "total_amount": {
+            "description": "The total amount charged to passengers. Does not include cash tips.",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "total_amount": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in taxi ride data analysis.",
+                "task_prompt": "Based on the features of the taxi ride, please predict the total amount of the fare.",
+                "answer_prompt": "The total amount of the fare is {total_amount}."
+            }
+        },
+        "fare_amount": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in taxi ride data analysis.",
+                "task_prompt": "Based on the features of the taxi ride, please predict the fare amount.",
+                "answer_prompt": "The fare amount is {fare_amount}."
+            }
+        },
+        "tip_amount": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in taxi ride data analysis.",
+                "task_prompt": "Based on the features of the taxi ride, please predict the tip amount.",
+                "answer_prompt": "The tip amount is {tip_amount}."
+            }
+        },
+        "trip_distance": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in taxi ride data analysis.",
+                "task_prompt": "Based on the features of the taxi ride, please predict the trip distance.",
+                "answer_prompt": "The trip distance is {trip_distance} miles."
+            }
+        },
+        "passenger_count": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in taxi ride data analysis.",
+                "task_prompt": "Based on the features of the taxi ride, please predict the number of passengers.",
+                "answer_prompt": "The number of passengers is {passenger_count}."
+            }
+        }
+    }
+}

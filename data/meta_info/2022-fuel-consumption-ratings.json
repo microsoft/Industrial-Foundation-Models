@@ -1,0 +1,163 @@
+{
+    "basic_info": {
+        "row_num": 946,
+        "col_num": 15,
+        "label_candidates": [
+            "CO2 Emissions(g/km)",
+            "Fuel Consumption(Comb (L/100 km))",
+            "Fuel Consumption(Comb (mpg))",
+            "CO2 Rating",
+            "Smog Rating"
+        ],
+        "valid_feature_num": 15,
+        "num_features": [
+            "Model Year",
+            "Engine Size(L)",
+            "Cylinders",
+            "Fuel Consumption (City (L/100 km)",
+            "Fuel Consumption(Hwy (L/100 km))",
+            "Fuel Consumption(Comb (L/100 km))",
+            "Fuel Consumption(Comb (mpg))",
+            "CO2 Rating",
+            "Smog Rating",
+            "CO2 Emissions(g/km)"
+        ],
+        "cat_features": [
+            "Make",
+            "Model",
+            "Vehicle Class",
+            "Transmission",
+            "Fuel Type"
+        ],
+        "other_features": [],
+        "tags": [
+            "categorical",
+            "automobiles and vehicles",
+            "classification",
+            "linear regression",
+            "tabular",
+            "ratings and reviews"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/rinichristy/2022-fuel-consumption-ratings"
+    },
+    "feature_info": {
+        "Model Year": {
+            "description": "The year that the car model was released",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Make": {
+            "description": "The manufacturer of the car",
+            "type": "categorical"
+        },
+        "Model": {
+            "description": "The model of the car",
+            "type": "categorical"
+        },
+        "Vehicle Class": {
+            "description": "The classification of the vehicle",
+            "type": "categorical"
+        },
+        "Engine Size(L)": {
+            "description": "The size of the car engine in liters",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Cylinders": {
+            "description": "The number of cylinders in the car engine",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Transmission": {
+            "description": "The type of transmission in the car",
+            "type": "categorical"
+        },
+        "Fuel Type": {
+            "description": "The type of fuel the car uses",
+            "type": "categorical",
+            "value_dict": {
+                "Z": "Premium gasoline",
+                "X": "Regular gasoline",
+                "D": "Diesel",
+                "E": "Ethanol (E85)"
+            }
+        },
+        "Fuel Consumption (City (L/100 km)": {
+            "description": "The fuel consumption in the city measured in liters per 100 kilometers",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Fuel Consumption(Hwy (L/100 km))": {
+            "description": "The fuel consumption on the highway measured in liters per 100 kilometers",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Fuel Consumption(Comb (L/100 km))": {
+            "description": "The combined fuel consumption measured in liters per 100 kilometers",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Fuel Consumption(Comb (mpg))": {
+            "description": "The combined fuel consumption measured in miles per gallon",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "CO2 Emissions(g/km)": {
+            "description": "The CO2 emission of the car measured in grams per kilometer",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "CO2 Rating": {
+            "description": "The CO2 rating of the car",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Smog Rating": {
+            "description": "The smog rating of the car",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "CO2 Emissions(g/km)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in environmental science.",
+                "task_prompt": "Based on the features of the vehicle, please predict the CO2 emissions in grams per kilometer.",
+                "answer_prompt": "The CO2 emissions are {} grams per kilometer."
+            }
+        },
+        "Fuel Consumption(Comb (L/100 km))": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in automotive engineering.",
+                "task_prompt": "Based on the features of the vehicle, please predict the combined fuel consumption in liters per 100 kilometers.",
+                "answer_prompt": "The combined fuel consumption is {} liters per 100 kilometers."
+            }
+        },
+        "Fuel Consumption(Comb (mpg))": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in automotive engineering.",
+                "task_prompt": "Based on the features of the vehicle, please predict the combined fuel consumption in miles per gallon.",
+                "answer_prompt": "The combined fuel consumption is {} miles per gallon."
+            }
+        },
+        "CO2 Rating": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in environmental science.",
+                "task_prompt": "Based on the features of the vehicle, please predict the CO2 rating.",
+                "answer_prompt": "The CO2 rating is {}."
+            }
+        },
+        "Smog Rating": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in environmental science.",
+                "task_prompt": "Based on the features of the vehicle, please predict the smog rating.",
+                "answer_prompt": "The smog rating is {}."
+            }
+        }
+    }
+}

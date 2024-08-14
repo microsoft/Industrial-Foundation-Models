@@ -1,0 +1,86 @@
+{
+    "basic_info": {
+        "row_num": 4971,
+        "col_num": 6,
+        "label_candidates": [
+            "Pure Gold (24 k)",
+            "Standard Gold (22 K)"
+        ],
+        "valid_feature_num": 6,
+        "num_features": [
+            "Standard Gold (22 K)",
+            "Pure Gold (24 k)"
+        ],
+        "cat_features": [
+            "Country",
+            "State",
+            "Location"
+        ],
+        "other_features": [
+            "Date"
+        ],
+        "tags": [
+            "business",
+            "time series analysis",
+            "regression",
+            "investing",
+            "datetime"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/narendrageek/gold-rate-history-in-tamilnadu-india"
+    },
+    "feature_info": {
+        "Date": {
+            "description": "The date when the gold rate was recorded, in MM/DD/YYYY format",
+            "type": "other"
+        },
+        "Country": {
+            "description": "The country where the gold rate was recorded, in this case, India",
+            "type": "categorical",
+            "value_dict": {
+                "India": "The country where the gold rate was recorded"
+            }
+        },
+        "State": {
+            "description": "The state within the country where the gold rate was recorded, in this case, Tamilnadu",
+            "type": "categorical",
+            "value_dict": {
+                "Tamilnadu": "The state within the country India where the gold rate was recorded"
+            }
+        },
+        "Location": {
+            "description": "The specific location within the state where the gold rate was recorded, in this case, Chennai",
+            "type": "categorical",
+            "value_dict": {
+                "Chennai": "The specific location within the state Tamilnadu where the gold rate was recorded"
+            }
+        },
+        "Pure Gold (24 k)": {
+            "description": "The rate of pure gold (24 karat) on the recorded date, in Indian Rupees",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Standard Gold (22 K)": {
+            "description": "The rate of standard gold (22 karat) on the recorded date, in Indian Rupees",
+            "type": "numerical",
+            "decimal": 1
+        }
+    },
+    "task_info": {
+        "Pure Gold (24 k)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing gold rates.",
+                "task_prompt": "Based on the date, country, state, and location, please predict the rate of Pure Gold (24 k).",
+                "answer_prompt": "The predicted rate of Pure Gold (24 k) is ______."
+            }
+        },
+        "Standard Gold (22 K)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing gold rates.",
+                "task_prompt": "Based on the date, country, state, and location, please predict the rate of Standard Gold (22 K).",
+                "answer_prompt": "The predicted rate of Standard Gold (22 K) is ______."
+            }
+        }
+    }
+}

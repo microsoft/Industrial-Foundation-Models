@@ -1,0 +1,177 @@
+{
+    "basic_info": {
+        "row_num": 10695,
+        "col_num": 11,
+        "label_candidates": [
+            "Segmentation",
+            "Spending_Score",
+            "Age"
+        ],
+        "valid_feature_num": 10,
+        "num_features": [
+            "Age",
+            "Work_Experience",
+            "Family_Size"
+        ],
+        "cat_features": [
+            "Gender",
+            "Ever_Married",
+            "Graduated",
+            "Profession",
+            "Spending_Score",
+            "Var_1",
+            "Segmentation"
+        ],
+        "other_features": [],
+        "tags": [
+            "business",
+            "internet",
+            "automobiles and vehicles",
+            "classification",
+            "multiclass classification",
+            "online communities"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/kaushiksuresh147/customer-segmentation"
+    },
+    "feature_info": {
+        "ID": {
+            "description": "Unique identifier of the customer",
+            "type": "useless"
+        },
+        "Gender": {
+            "description": "Gender of the customer",
+            "type": "categorical",
+            "value_dict": {
+                "Female": "The customer is female",
+                "Male": "The customer is male"
+            }
+        },
+        "Ever_Married": {
+            "description": "Marital status of the customer",
+            "type": "categorical",
+            "value_dict": {
+                "Yes": "The customer is married",
+                "No": "The customer is not married"
+            }
+        },
+        "Age": {
+            "description": "Age of the customer",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Graduated": {
+            "description": "Education level of the customer (Graduated or not)",
+            "type": "categorical",
+            "value_dict": {
+                "Yes": "The customer has graduated",
+                "No": "The customer has not graduated"
+            }
+        },
+        "Profession": {
+            "description": "Profession of the customer",
+            "type": "categorical",
+            "value_dict": {
+                "Engineer": "The customer is an engineer",
+                "Healthcare": "The customer works in healthcare",
+                "Executive": "The customer is an executive",
+                "Marketing": "The customer works in marketing",
+                "Doctor": "The customer is a doctor",
+                "Artist": "The customer is an artist",
+                "Lawyer": "The customer is a lawyer",
+                "Entertainment": "The customer works in entertainment",
+                "Homemaker": "The customer is a homemaker"
+            }
+        },
+        "Work_Experience": {
+            "description": "Work experience in years",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Spending_Score": {
+            "description": "Spending score of the customer (Low, Average, High)",
+            "type": "categorical",
+            "value_dict": {
+                "Low": "The customer has a low spending score",
+                "Average": "The customer has an average spending score",
+                "High": "The customer has a high spending score"
+            }
+        },
+        "Family_Size": {
+            "description": "Number of family members for the customer (including the customer)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Var_1": {
+            "description": "Anonymized category for the customer",
+            "type": "categorical",
+            "value_dict": {
+                "Cat_6": "The customer belongs to category 6",
+                "Cat_4": "The customer belongs to category 4",
+                "Cat_3": "The customer belongs to category 3",
+                "Cat_1": "The customer belongs to category 1",
+                "Cat_2": "The customer belongs to category 2",
+                "Cat_5": "The customer belongs to category 5",
+                "Cat_7": "The customer belongs to category 7"
+            }
+        },
+        "Segmentation": {
+            "description": "Market segmentation class",
+            "type": "categorical",
+            "value_dict": {
+                "B": "The customer belongs to market segment B",
+                "A": "The customer belongs to market segment A",
+                "C": "The customer belongs to market segment C",
+                "D": "The customer belongs to market segment D"
+            }
+        }
+    },
+    "task_info": {
+        "Segmentation": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in customer segmentation.",
+                "task_prompt": "Based on the features of the customer, please predict the market segment.",
+                "answer_prompt": "The customer belongs to market segment B[0], A[1], C[2], or D[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "B": "The customer belongs to market segment B",
+                "A": "The customer belongs to market segment A",
+                "C": "The customer belongs to market segment C",
+                "D": "The customer belongs to market segment D"
+            },
+            "class_index_dict": {
+                "B": 0,
+                "A": 1,
+                "C": 2,
+                "D": 3
+            }
+        },
+        "Spending_Score": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in customer behavior analysis.",
+                "task_prompt": "Based on the features of the customer, please predict the spending score.",
+                "answer_prompt": "The customer has a low spending score[0], an average spending score[1], or a high spending score[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "Low": "The customer has a low spending score",
+                "Average": "The customer has an average spending score",
+                "High": "The customer has a high spending score"
+            },
+            "class_index_dict": {
+                "Low": 0,
+                "Average": 1,
+                "High": 2
+            }
+        },
+        "Age": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in demographic analysis.",
+                "task_prompt": "Based on the features of the customer, please predict the age."
+            }
+        }
+    }
+}

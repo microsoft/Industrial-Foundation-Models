@@ -1,0 +1,187 @@
+{
+    "basic_info": {
+        "row_num": 49124,
+        "col_num": 9,
+        "label_candidates": [
+            "Cons_rating",
+            "Materials",
+            "Construction",
+            "Color",
+            "Finishing",
+            "Durability"
+        ],
+        "valid_feature_num": 9,
+        "num_features": [
+            "Durability",
+            "Cons_rating"
+        ],
+        "cat_features": [
+            "Title",
+            "Review",
+            "Cloth_class",
+            "Materials",
+            "Construction",
+            "Color",
+            "Finishing"
+        ],
+        "other_features": [],
+        "tags": [
+            "universities and colleges",
+            "nlp",
+            "data visualization",
+            "multilabel classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/jocelyndumlao/consumer-review-of-clothing-product"
+    },
+    "feature_info": {
+        "Title": {
+            "description": "The title of the customer review for the clothing product",
+            "type": "categorical"
+        },
+        "Review": {
+            "description": "The detailed review text provided by the customer",
+            "type": "categorical"
+        },
+        "Cons_rating": {
+            "description": "The rating given by the customer for the clothing product on a scale",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Cloth_class": {
+            "description": "The category or class of the clothing product",
+            "type": "categorical"
+        },
+        "Materials": {
+            "description": "The materials used in the clothing product",
+            "type": "categorical",
+            "value_dict": {
+                "0.0": "Material quality is not mentioned in the review",
+                "1.0": "Material quality is mentioned in the review",
+                "9.0": "Other"
+            }
+        },
+        "Construction": {
+            "description": "The construction quality of the clothing product",
+            "type": "categorical",
+            "value_dict": {
+                "0.0": "Construction quality is not mentioned in the review",
+                "1.0": "Construction quality is mentioned in the review",
+                "2.0": "Other"
+            }
+        },
+        "Color": {
+            "description": "The color of the clothing product",
+            "type": "categorical",
+            "value_dict": {
+                "0.0": "Color is not mentioned in the review",
+                "1.0": "Color is mentioned in the review",
+                "9.0": "Other"
+            }
+        },
+        "Finishing": {
+            "description": "The finishing quality of the clothing product",
+            "type": "categorical",
+            "value_dict": {
+                "1.0": "Finishing quality is mentioned in the review",
+                "0.0": "Finishing quality is not mentioned in the review"
+            }
+        },
+        "Durability": {
+            "description": "The durability of the clothing product, measured on a scale",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "Cons_rating": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in consumer product reviews.",
+                "task_prompt": "Based on the review of the clothing product, please predict the cons rating.",
+                "answer_prompt": "Please enter a numerical value for the cons rating."
+            }
+        },
+        "Materials": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in consumer product reviews.",
+                "task_prompt": "Based on the review of the clothing product, does it mention the quality of materials?",
+                "answer_prompt": "Material quality is not mentioned in the review[0], Material quality is mentioned in the review[1], Other[2]."
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "0.0": "Material quality is not mentioned in the review",
+                "1.0": "Material quality is mentioned in the review",
+                "9.0": "Other"
+            },
+            "class_index_dict": {
+                "0.0": 0,
+                "1.0": 1,
+                "9.0": 2
+            }
+        },
+        "Construction": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in consumer product reviews.",
+                "task_prompt": "Based on the review of the clothing product, does it mention the quality of construction?",
+                "answer_prompt": "Construction quality is not mentioned in the review[0], Construction quality is mentioned in the review[1], Other[2]."
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "0.0": "Construction quality is not mentioned in the review",
+                "1.0": "Construction quality is mentioned in the review",
+                "2.0": "Other"
+            },
+            "class_index_dict": {
+                "0.0": 0,
+                "1.0": 1,
+                "2.0": 2
+            }
+        },
+        "Color": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in consumer product reviews.",
+                "task_prompt": "Based on the review of the clothing product, does it mention the color?",
+                "answer_prompt": "Color is not mentioned in the review[0], Color is mentioned in the review[1], Other[2]."
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "0.0": "Color is not mentioned in the review",
+                "1.0": "Color is mentioned in the review",
+                "9.0": "Other"
+            },
+            "class_index_dict": {
+                "0.0": 0,
+                "1.0": 1,
+                "9.0": 2
+            }
+        },
+        "Finishing": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in consumer product reviews.",
+                "task_prompt": "Based on the review of the clothing product, does it mention the quality of finishing?",
+                "answer_prompt": "Finishing quality is not mentioned in the review[0], Finishing quality is mentioned in the review[1]."
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1.0": "Finishing quality is mentioned in the review",
+                "0.0": "Finishing quality is not mentioned in the review"
+            },
+            "class_index_dict": {
+                "1.0": 1,
+                "0.0": 0
+            }
+        },
+        "Durability": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in consumer product reviews.",
+                "task_prompt": "Based on the review of the clothing product, please predict the durability rating.",
+                "answer_prompt": "Please enter a numerical value for the durability rating."
+            }
+        }
+    }
+}

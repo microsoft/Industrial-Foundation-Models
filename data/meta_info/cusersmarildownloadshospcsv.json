@@ -1,0 +1,125 @@
+{
+    "basic_info": {
+        "row_num": 37417,
+        "col_num": 10,
+        "label_candidates": [
+            "productive_hours_per_adjusted_patient_day",
+            "productive_hours",
+            "type_of_control"
+        ],
+        "valid_feature_num": 9,
+        "num_features": [
+            "year",
+            "productive_hours",
+            "productive_hours_per_adjusted_patient_day"
+        ],
+        "cat_features": [
+            "facility_name",
+            "county_name",
+            "type_of_control",
+            "hours_type"
+        ],
+        "other_features": [
+            "begin_date",
+            "end_date"
+        ],
+        "tags": [
+            "health",
+            "tabular"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/mpwolke/cusersmarildownloadshospcsv"
+    },
+    "feature_info": {
+        "year": {
+            "description": "The year in which the data was recorded",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "facility_number": {
+            "description": "Unique identifier for each facility",
+            "type": "useless"
+        },
+        "facility_name": {
+            "description": "Name of the healthcare facility",
+            "type": "categorical"
+        },
+        "begin_date": {
+            "description": "The start date of the period for which the data was recorded",
+            "type": "other"
+        },
+        "end_date": {
+            "description": "The end date of the period for which the data was recorded",
+            "type": "other"
+        },
+        "county_name": {
+            "description": "Name of the county where the healthcare facility is located",
+            "type": "categorical"
+        },
+        "type_of_control": {
+            "description": "Type of control under which the healthcare facility operates",
+            "type": "categorical",
+            "value_dict": {
+                "District": "The healthcare facility is controlled by a district",
+                "Non-Profit": "The healthcare facility is controlled by a non-profit organization",
+                "City/County": "The healthcare facility is controlled by a city or county",
+                "Investor": "The healthcare facility is controlled by an investor",
+                "State": "The healthcare facility is controlled by the state"
+            }
+        },
+        "hours_type": {
+            "description": "Type of hours recorded (e.g., working hours, off hours)",
+            "type": "categorical"
+        },
+        "productive_hours": {
+            "description": "Number of productive hours recorded in the facility",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "productive_hours_per_adjusted_patient_day": {
+            "description": "Number of productive hours per adjusted patient day in the facility",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "productive_hours_per_adjusted_patient_day": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in healthcare facility management.",
+                "task_prompt": "Based on the data of the healthcare facility, please predict the productive hours per adjusted patient day.",
+                "answer_prompt": "The predicted productive hours per adjusted patient day is ______."
+            }
+        },
+        "productive_hours": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in healthcare facility management.",
+                "task_prompt": "Based on the data of the healthcare facility, please predict the productive hours.",
+                "answer_prompt": "The predicted productive hours is ______."
+            }
+        },
+        "type_of_control": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in healthcare facility management.",
+                "task_prompt": "Based on the data of the healthcare facility, please predict the type of control.",
+                "answer_prompt": "The predicted type of control is District[0], Non-Profit[1], City/County[2], Investor[3], or State[4]?"
+            },
+            "class_num": 5,
+            "class_value_dict": {
+                "District": "The healthcare facility is controlled by a district",
+                "Non-Profit": "The healthcare facility is controlled by a non-profit organization",
+                "City/County": "The healthcare facility is controlled by a city or county",
+                "Investor": "The healthcare facility is controlled by an investor",
+                "State": "The healthcare facility is controlled by the state"
+            },
+            "class_index_dict": {
+                "District": 0,
+                "Non-Profit": 1,
+                "City/County": 2,
+                "Investor": 3,
+                "State": 4
+            }
+        }
+    }
+}

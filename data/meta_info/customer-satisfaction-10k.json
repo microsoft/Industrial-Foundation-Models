@@ -1,0 +1,99 @@
+{
+    "basic_info": {
+        "row_num": 9956,
+        "col_num": 5,
+        "label_candidates": [
+            "How satisfied were you with your overall delivery experience at Ali?                    1-5 where 1 = extremely dissatisfied and 5 = extremely satisfied",
+            "How satisfied were you with the quality of the food at Alis?                             1-5 where 1 = extremely dissatisfied and 5 = extremely satisfied",
+            "How satisfied were you with the speed of delivery at Alis?                                1-5 where 1 = extremely dissatisfied and 5 = extremely satisfied",
+            "Was your order accurate? Please respond yes or no."
+        ],
+        "valid_feature_num": 4,
+        "num_features": [
+            "How satisfied were you with your overall delivery experience at Ali?                    1-5 where 1 = extremely dissatisfied and 5 = extremely satisfied",
+            "How satisfied were you with the quality of the food at Alis?                             1-5 where 1 = extremely dissatisfied and 5 = extremely satisfied",
+            "How satisfied were you with the speed of delivery at Alis?                                1-5 where 1 = extremely dissatisfied and 5 = extremely satisfied"
+        ],
+        "cat_features": [
+            "Was your order accurate? Please respond yes or no."
+        ],
+        "other_features": [],
+        "tags": [
+            "united states",
+            "business",
+            "advanced",
+            "cooking and recipes",
+            "text classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/ahmedaliraja/customer-satisfaction-10k"
+    },
+    "feature_info": {
+        "Customer": {
+            "description": "The unique identifier of the customer",
+            "type": "useless"
+        },
+        "How satisfied were you with your overall delivery experience at Ali?                    1-5 where 1 = extremely dissatisfied and 5 = extremely satisfied": {
+            "description": "The satisfaction score of the customer with the overall delivery experience at Ali, rated from 1 to 5 where 1 = extremely dissatisfied and 5 = extremely satisfied",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "How satisfied were you with the quality of the food at Alis?                             1-5 where 1 = extremely dissatisfied and 5 = extremely satisfied": {
+            "description": "The satisfaction score of the customer with the quality of the food at Alis, rated from 1 to 5 where 1 = extremely dissatisfied and 5 = extremely satisfied",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "How satisfied were you with the speed of delivery at Alis?                                1-5 where 1 = extremely dissatisfied and 5 = extremely satisfied": {
+            "description": "The satisfaction score of the customer with the speed of delivery at Alis, rated from 1 to 5 where 1 = extremely dissatisfied and 5 = extremely satisfied",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Was your order accurate? Please respond yes or no.": {
+            "description": "The response of the customer whether their order was accurate or not",
+            "type": "categorical",
+            "value_dict": {
+                "Yes": "The order was accurate",
+                "No": "The order was not accurate"
+            }
+        }
+    },
+    "task_info": {
+        "How satisfied were you with your overall delivery experience at Ali?                    1-5 where 1 = extremely dissatisfied and 5 = extremely satisfied": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in customer satisfaction analysis.",
+                "task_prompt": "Based on the features of the customer experience, please predict the overall delivery satisfaction level."
+            }
+        },
+        "How satisfied were you with the quality of the food at Alis?                             1-5 where 1 = extremely dissatisfied and 5 = extremely satisfied": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in food quality analysis.",
+                "task_prompt": "Based on the features of the customer experience, please predict the food quality satisfaction level."
+            }
+        },
+        "How satisfied were you with the speed of delivery at Alis?                                1-5 where 1 = extremely dissatisfied and 5 = extremely satisfied": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in delivery speed analysis.",
+                "task_prompt": "Based on the features of the customer experience, please predict the delivery speed satisfaction level."
+            }
+        },
+        "Was your order accurate? Please respond yes or no.": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in order accuracy analysis.",
+                "task_prompt": "Based on the features of the customer experience, please predict if the order was accurate.",
+                "answer_prompt": "Yes[0] or No[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "Yes": "The order was accurate",
+                "No": "The order was not accurate"
+            },
+            "class_index_dict": {
+                "Yes": 0,
+                "No": 1
+            }
+        }
+    }
+}

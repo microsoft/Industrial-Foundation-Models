@@ -1,0 +1,397 @@
+{
+    "basic_info": {
+        "row_num": 1095,
+        "col_num": 24,
+        "label_candidates": [
+            "Play_A",
+            "Play_B",
+            "Play_C",
+            "Play_D",
+            "Play_E",
+            "Play_F",
+            "Play_G",
+            "PlayTimeHour_A",
+            "PlayTimeHour_B",
+            "PlayTimeHour_C",
+            "PlayTimeHour_D",
+            "PlayTimeHour_E",
+            "PlayTimeHour_F",
+            "PlayTimeHour_G"
+        ],
+        "valid_feature_num": 24,
+        "num_features": [
+            "Temperature",
+            "Humidity",
+            "Crowdedness",
+            "PlayTimeHour_A",
+            "PlayTimeHour_B",
+            "PlayTimeHour_C",
+            "PlayTimeHour_D",
+            "PlayTimeHour_E",
+            "PlayTimeHour_F",
+            "PlayTimeHour_G"
+        ],
+        "cat_features": [
+            "Weekday",
+            "Month",
+            "Season",
+            "Holiday",
+            "Windy",
+            "Outlook",
+            "Play_B",
+            "Play_C",
+            "Play_D",
+            "Play_E",
+            "Play_F",
+            "Play_G",
+            "Play_A"
+        ],
+        "other_features": [
+            "Date"
+        ],
+        "tags": [
+            "golf",
+            "education",
+            "nlp",
+            "time series analysis",
+            "classification",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/samybaladram/golf-play-extended"
+    },
+    "feature_info": {
+        "Date": {
+            "description": "The date of the record",
+            "type": "other"
+        },
+        "Weekday": {
+            "description": "Day of the week represented as a number (0-6)",
+            "type": "categorical",
+            "value_dict": {
+                "4": "Thursday",
+                "5": "Friday",
+                "6": "Saturday",
+                "0": "Sunday",
+                "1": "Monday",
+                "2": "Tuesday",
+                "3": "Wednesday"
+            }
+        },
+        "Month": {
+            "description": "Month of the year",
+            "type": "categorical"
+        },
+        "Season": {
+            "description": "Season of the year",
+            "type": "categorical",
+            "value_dict": {
+                "Winter": "Winter season",
+                "Spring": "Spring season",
+                "Summer": "Summer season",
+                "Autumn": "Autumn season"
+            }
+        },
+        "Holiday": {
+            "description": "Whether the day is a holiday or not",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The day is a holiday",
+                "0": "The day is not a holiday"
+            }
+        },
+        "Temperature": {
+            "description": "Temperature of the day in degrees Celsius",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Humidity": {
+            "description": "Humidity level of the day",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Windy": {
+            "description": "Whether the day is windy or not",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The day is windy",
+                "0": "The day is not windy"
+            }
+        },
+        "Outlook": {
+            "description": "Weather outlook of the day",
+            "type": "categorical",
+            "value_dict": {
+                "sunny": "The weather is sunny",
+                "overcast": "The weather is overcast",
+                "snow": "It is snowing",
+                "rainy": "It is raining"
+            }
+        },
+        "Crowdedness": {
+            "description": "Level of crowdedness at the golf course",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Play_A": {
+            "description": "Whether player A played golf or not",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Player A played golf",
+                "0": "Player A did not play golf"
+            }
+        },
+        "PlayTimeHour_A": {
+            "description": "Number of hours player A played",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Play_B": {
+            "description": "Whether player B played golf or not",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Player B did not play golf",
+                "1": "Player B played golf"
+            }
+        },
+        "PlayTimeHour_B": {
+            "description": "Number of hours player B played",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Play_C": {
+            "description": "Whether player C played golf or not",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Player C did not play golf",
+                "1": "Player C played golf"
+            }
+        },
+        "PlayTimeHour_C": {
+            "description": "Number of hours player C played",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Play_D": {
+            "description": "Whether player D played golf or not",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Player D played golf",
+                "0": "Player D did not play golf"
+            }
+        },
+        "PlayTimeHour_D": {
+            "description": "Number of hours player D played",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Play_E": {
+            "description": "Whether player E played golf or not",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Player E played golf",
+                "0": "Player E did not play golf"
+            }
+        },
+        "PlayTimeHour_E": {
+            "description": "Number of hours player E played",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Play_F": {
+            "description": "Whether player F played golf or not",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Player F did not play golf",
+                "1": "Player F played golf"
+            }
+        },
+        "PlayTimeHour_F": {
+            "description": "Number of hours player F played",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Play_G": {
+            "description": "Whether player G played golf or not",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Player G did not play golf",
+                "1": "Player G played golf"
+            }
+        },
+        "PlayTimeHour_G": {
+            "description": "Number of hours player G played",
+            "type": "numerical",
+            "decimal": 1
+        }
+    },
+    "task_info": {
+        "Play_A": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in sports analytics.",
+                "task_prompt": "Based on the features of the weather and course conditions, please predict if Player A will play golf.",
+                "answer_prompt": "Player A played golf[1] or Player A did not play golf[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "Player A played golf",
+                "0": "Player A did not play golf"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        },
+        "Play_B": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in sports analytics.",
+                "task_prompt": "Based on the features of the weather and course conditions, please predict if Player B will play golf.",
+                "answer_prompt": "Player B played golf[1] or Player B did not play golf[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "Player B did not play golf",
+                "1": "Player B played golf"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "Play_C": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in sports analytics.",
+                "task_prompt": "Based on the features of the weather and course conditions, please predict if Player C will play golf.",
+                "answer_prompt": "Player C played golf[1] or Player C did not play golf[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "Player C did not play golf",
+                "1": "Player C played golf"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "Play_D": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in sports analytics.",
+                "task_prompt": "Based on the features of the weather and course conditions, please predict if Player D will play golf.",
+                "answer_prompt": "Player D played golf[1] or Player D did not play golf[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "Player D played golf",
+                "0": "Player D did not play golf"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        },
+        "Play_E": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in sports analytics.",
+                "task_prompt": "Based on the features of the weather and course conditions, please predict if Player E will play golf.",
+                "answer_prompt": "Player E played golf[1] or Player E did not play golf[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "Player E played golf",
+                "0": "Player E did not play golf"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        },
+        "Play_F": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in sports analytics.",
+                "task_prompt": "Based on the features of the weather and course conditions, please predict if Player F will play golf.",
+                "answer_prompt": "Player F played golf[1] or Player F did not play golf[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "Player F did not play golf",
+                "1": "Player F played golf"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "Play_G": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in sports analytics.",
+                "task_prompt": "Based on the features of the weather and course conditions, please predict if Player G will play golf.",
+                "answer_prompt": "Player G played golf[1] or Player G did not play golf[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "Player G did not play golf",
+                "1": "Player G played golf"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "PlayTimeHour_A": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sports analytics.",
+                "task_prompt": "Based on the features of the weather and course conditions, please predict the play time of Player A."
+            }
+        },
+        "PlayTimeHour_B": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sports analytics.",
+                "task_prompt": "Based on the features of the weather and course conditions, please predict the play time of Player B."
+            }
+        },
+        "PlayTimeHour_C": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sports analytics.",
+                "task_prompt": "Based on the features of the weather and course conditions, please predict the play time of Player C."
+            }
+        },
+        "PlayTimeHour_D": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sports analytics.",
+                "task_prompt": "Based on the features of the weather and course conditions, please predict the play time of Player D."
+            }
+        },
+        "PlayTimeHour_E": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sports analytics.",
+                "task_prompt": "Based on the features of the weather and course conditions, please predict the play time of Player E."
+            }
+        },
+        "PlayTimeHour_F": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sports analytics.",
+                "task_prompt": "Based on the features of the weather and course conditions, please predict the play time of Player F."
+            }
+        },
+        "PlayTimeHour_G": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sports analytics.",
+                "task_prompt": "Based on the features of the weather and course conditions, please predict the play time of Player G."
+            }
+        }
+    }
+}

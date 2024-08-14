@@ -1,0 +1,115 @@
+{
+    "basic_info": {
+        "row_num": 1383,
+        "col_num": 9,
+        "label_candidates": [
+            "BTC",
+            "NASDAQ",
+            "LSE",
+            "NYSE"
+        ],
+        "valid_feature_num": 9,
+        "num_features": [
+            "NYSE",
+            "NASDAQ",
+            "LSE",
+            "BTC_Volume",
+            "NYSE_Volume",
+            "NASDAQ_Volume",
+            "LSE_Volume",
+            "BTC"
+        ],
+        "cat_features": [
+            "Date"
+        ],
+        "other_features": [],
+        "tags": [
+            "time series analysis",
+            "regression",
+            "investing",
+            "currencies and foreign exchange",
+            "data storytelling"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/adilbhatti/bitcoin-and-stock-exchanges"
+    },
+    "feature_info": {
+        "Date": {
+            "description": "The date of the data point",
+            "type": "categorical"
+        },
+        "BTC": {
+            "description": "The price of Bitcoin on the given date",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "NYSE": {
+            "description": "The closing price of the New York Stock Exchange on the given date",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "NASDAQ": {
+            "description": "The closing price of the NASDAQ Stock Exchange on the given date",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "LSE": {
+            "description": "The closing price of the London Stock Exchange on the given date",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "BTC_Volume": {
+            "description": "The trading volume of Bitcoin on the given date",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "NYSE_Volume": {
+            "description": "The trading volume on the New York Stock Exchange on the given date",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "NASDAQ_Volume": {
+            "description": "The trading volume on the NASDAQ Stock Exchange on the given date",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "LSE_Volume": {
+            "description": "The trading volume on the London Stock Exchange on the given date",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "BTC": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in financial market analysis.",
+                "task_prompt": "Based on the volume and dates of the Bitcoin, NYSE, NASDAQ, and LSE markets, please predict the Bitcoin price.",
+                "answer_prompt": "The predicted Bitcoin price is ______."
+            }
+        },
+        "NASDAQ": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in financial market analysis.",
+                "task_prompt": "Based on the volume and dates of the Bitcoin, NYSE, NASDAQ, and LSE markets, please predict the NASDAQ index.",
+                "answer_prompt": "The predicted NASDAQ index is ______."
+            }
+        },
+        "LSE": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in financial market analysis.",
+                "task_prompt": "Based on the volume and dates of the Bitcoin, NYSE, NASDAQ, and LSE markets, please predict the LSE index.",
+                "answer_prompt": "The predicted LSE index is ______."
+            }
+        },
+        "NYSE": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in financial market analysis.",
+                "task_prompt": "Based on the volume and dates of the Bitcoin, NYSE, NASDAQ, and LSE markets, please predict the NYSE index.",
+                "answer_prompt": "The predicted NYSE index is ______."
+            }
+        }
+    }
+}

@@ -1,0 +1,285 @@
+{
+    "basic_info": {
+        "row_num": 1000,
+        "col_num": 21,
+        "label_candidates": [
+            "class",
+            "credit_history",
+            "job"
+        ],
+        "valid_feature_num": 21,
+        "num_features": [
+            "duration",
+            "credit_amount",
+            "installment_commitment",
+            "residence_since",
+            "age",
+            "existing_credits",
+            "num_dependents"
+        ],
+        "cat_features": [
+            "checking_status",
+            "credit_history",
+            "purpose",
+            "savings_status",
+            "employment",
+            "personal_status",
+            "other_parties",
+            "property_magnitude",
+            "other_payment_plans",
+            "housing",
+            "job",
+            "own_telephone",
+            "foreign_worker",
+            "class"
+        ],
+        "other_features": [],
+        "tags": [
+            "banking",
+            "classification",
+            "tabular",
+            "english"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/ppb00x/credit-risk-customers"
+    },
+    "feature_info": {
+        "checking_status": {
+            "description": "Status of the existing checking account",
+            "type": "categorical",
+            "value_dict": {
+                "<0": "Negative balance",
+                "0<=X<200": "Balance between 0 and 200",
+                "no checking": "No checking account",
+                ">=200": "Balance greater than or equal to 200"
+            }
+        },
+        "duration": {
+            "description": "Duration in month",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "credit_history": {
+            "description": "Credit history of the customer",
+            "type": "categorical",
+            "value_dict": {
+                "critical/other existing credit": "Critical or other existing credit",
+                "existing paid": "Existing credits paid back duly till now",
+                "delayed previously": "Credit delayed previously",
+                "no credits/all paid": "No credits taken or all credits paid back duly",
+                "all paid": "All credits at this bank paid back duly"
+            }
+        },
+        "purpose": {
+            "description": "Purpose of the credit",
+            "type": "categorical",
+            "value_dict": {
+                "radio/tv": "Credit for radio or TV",
+                "education": "Credit for education",
+                "furniture/equipment": "Credit for furniture or equipment",
+                "new car": "Credit for new car",
+                "used car": "Credit for used car",
+                "business": "Credit for business",
+                "domestic appliance": "Credit for domestic appliances",
+                "repairs": "Credit for repairs",
+                "other": "Other purposes",
+                "retraining": "Credit for retraining"
+            }
+        },
+        "credit_amount": {
+            "description": "Credit amount",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "savings_status": {
+            "description": "Status of savings account/bonds",
+            "type": "categorical",
+            "value_dict": {
+                "no known savings": "No known savings",
+                "<100": "Savings less than 100",
+                "500<=X<1000": "Savings between 500 and 1000",
+                ">=1000": "Savings greater than or equal to 1000",
+                "100<=X<500": "Savings between 100 and 500"
+            }
+        },
+        "employment": {
+            "description": "Present employment since",
+            "type": "categorical",
+            "value_dict": {
+                ">=7": "Employed for 7 years or more",
+                "1<=X<4": "Employed between 1 and 4 years",
+                "4<=X<7": "Employed between 4 and 7 years",
+                "unemployed": "Unemployed",
+                "<1": "Employed less than 1 year"
+            }
+        },
+        "installment_commitment": {
+            "description": "Installment rate in percentage of disposable income",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "personal_status": {
+            "description": "Personal status and sex",
+            "type": "categorical",
+            "value_dict": {
+                "male single": "Single male",
+                "female div/dep/mar": "Divorced/Dependent/Married female",
+                "male div/sep": "Divorced/Separated male",
+                "male mar/wid": "Married/Widowed male"
+            }
+        },
+        "other_parties": {
+            "description": "Other debtors / guarantors",
+            "type": "categorical",
+            "value_dict": {
+                "none": "No other debtors or guarantors",
+                "guarantor": "Guarantor",
+                "co applicant": "Co-applicant"
+            }
+        },
+        "residence_since": {
+            "description": "Present residence since",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "property_magnitude": {
+            "description": "Property",
+            "type": "categorical",
+            "value_dict": {
+                "real estate": "Real estate",
+                "life insurance": "Life insurance",
+                "no known property": "No known property",
+                "car": "Car"
+            }
+        },
+        "age": {
+            "description": "Age in years",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "other_payment_plans": {
+            "description": "Other installment plans",
+            "type": "categorical",
+            "value_dict": {
+                "none": "No other installment plans",
+                "bank": "Bank",
+                "stores": "Stores"
+            }
+        },
+        "housing": {
+            "description": "Housing",
+            "type": "categorical",
+            "value_dict": {
+                "own": "Own house",
+                "for free": "Living for free",
+                "rent": "Rent"
+            }
+        },
+        "existing_credits": {
+            "description": "Number of existing credits at this bank",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "job": {
+            "description": "Job",
+            "type": "categorical",
+            "value_dict": {
+                "skilled": "Skilled employee/official",
+                "unskilled resident": "Unskilled resident",
+                "high qualif/self emp/mgmt": "Highly qualified employee/self-employed/management",
+                "unemp/unskilled non res": "Unemployed/unskilled non-resident"
+            }
+        },
+        "num_dependents": {
+            "description": "Number of people being liable to provide maintenance for",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "own_telephone": {
+            "description": "Telephone",
+            "type": "categorical",
+            "value_dict": {
+                "yes": "Has own telephone",
+                "none": "No own telephone"
+            }
+        },
+        "foreign_worker": {
+            "description": "Foreign worker",
+            "type": "categorical",
+            "value_dict": {
+                "yes": "Is a foreign worker",
+                "no": "Is not a foreign worker"
+            }
+        },
+        "class": {
+            "description": "Good or Bad credit risk",
+            "type": "categorical",
+            "value_dict": {
+                "good": "Good credit risk",
+                "bad": "Bad credit risk"
+            }
+        }
+    },
+    "task_info": {
+        "class": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in credit risk assessment.",
+                "task_prompt": "Based on the features of the customer, please predict the credit risk class.",
+                "answer_prompt": "Good credit risk[0] or Bad credit risk[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "good": "Good credit risk",
+                "bad": "Bad credit risk"
+            },
+            "class_index_dict": {
+                "good": 0,
+                "bad": 1
+            }
+        },
+        "credit_history": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in credit risk assessment.",
+                "task_prompt": "Based on the features of the customer, please predict the credit history class.",
+                "answer_prompt": "Critical or other existing credit[0], Existing credits paid back duly till now[1], Credit delayed previously[2], No credits taken or all credits paid back duly[3], All credits at this bank paid back duly[4]?"
+            },
+            "class_num": 5,
+            "class_value_dict": {
+                "critical/other existing credit": "Critical or other existing credit",
+                "existing paid": "Existing credits paid back duly till now",
+                "delayed previously": "Credit delayed previously",
+                "no credits/all paid": "No credits taken or all credits paid back duly",
+                "all paid": "All credits at this bank paid back duly"
+            },
+            "class_index_dict": {
+                "critical/other existing credit": 0,
+                "existing paid": 1,
+                "delayed previously": 2,
+                "no credits/all paid": 3,
+                "all paid": 4
+            }
+        },
+        "job": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in credit risk assessment.",
+                "task_prompt": "Based on the features of the customer, please predict the job class.",
+                "answer_prompt": "Skilled employee/official[0], Unskilled resident[1], Highly qualified employee/self-employed/management[2], Unemployed/unskilled non-resident[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "skilled": "Skilled employee/official",
+                "unskilled resident": "Unskilled resident",
+                "high qualif/self emp/mgmt": "Highly qualified employee/self-employed/management",
+                "unemp/unskilled non res": "Unemployed/unskilled non-resident"
+            },
+            "class_index_dict": {
+                "skilled": 0,
+                "unskilled resident": 1,
+                "high qualif/self emp/mgmt": 2,
+                "unemp/unskilled non res": 3
+            }
+        }
+    }
+}

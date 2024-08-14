@@ -1,0 +1,70 @@
+{
+    "basic_info": {
+        "row_num": 100,
+        "col_num": 3,
+        "label_candidates": [
+            "Marks",
+            "number_courses",
+            "time_study"
+        ],
+        "valid_feature_num": 3,
+        "num_features": [
+            "number_courses",
+            "time_study",
+            "Marks"
+        ],
+        "cat_features": [],
+        "other_features": [],
+        "tags": [
+            "education",
+            "beginner",
+            "linear regression",
+            "regression",
+            "primary and secondary schools"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/yasserh/student-marks-dataset"
+    },
+    "feature_info": {
+        "number_courses": {
+            "description": "The number of courses a student is taking",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "time_study": {
+            "description": "The amount of time a student spends studying, in hours",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Marks": {
+            "description": "The marks obtained by the student",
+            "type": "numerical",
+            "decimal": 3
+        }
+    },
+    "task_info": {
+        "Marks": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in predicting student performance.",
+                "task_prompt": "Based on the number of courses and study time of the student, please predict the Marks obtained by the student.",
+                "answer_prompt": "The predicted marks are __."
+            }
+        },
+        "number_courses": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in predicting course load.",
+                "task_prompt": "Based on the study time and Marks obtained by the student, please predict the number of courses the student is taking.",
+                "answer_prompt": "The predicted number of courses is __."
+            }
+        },
+        "time_study": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in predicting study time.",
+                "task_prompt": "Based on the number of courses and Marks obtained by the student, please predict the study time of the student.",
+                "answer_prompt": "The predicted study time is __ hours."
+            }
+        }
+    }
+}

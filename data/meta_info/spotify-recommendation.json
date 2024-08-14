@@ -1,0 +1,157 @@
+{
+    "basic_info": {
+        "row_num": 195,
+        "col_num": 14,
+        "label_candidates": [
+            "liked",
+            "danceability",
+            "energy"
+        ],
+        "valid_feature_num": 14,
+        "num_features": [
+            "danceability",
+            "energy",
+            "loudness",
+            "speechiness",
+            "acousticness",
+            "instrumentalness",
+            "liveness",
+            "valence",
+            "tempo",
+            "duration_ms"
+        ],
+        "cat_features": [
+            "key",
+            "mode",
+            "time_signature",
+            "liked"
+        ],
+        "other_features": [],
+        "tags": [
+            "music",
+            "earth and nature",
+            "computer science",
+            "programming",
+            "beginner",
+            "intermediate",
+            "classification",
+            "tabular"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/bricevergnou/spotify-recommendation"
+    },
+    "feature_info": {
+        "danceability": {
+            "description": "Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. A value of 0.0 is least danceable and 1.0 is most danceable.",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "energy": {
+            "description": "Energy is a measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy.",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "key": {
+            "description": "The key the track is in. Integers map to pitches using standard Pitch Class notation. E.g. 0 = C, 1 = C\u266f/D\u266d, 2 = D, and so on.",
+            "type": "categorical"
+        },
+        "loudness": {
+            "description": "The overall loudness of a track in decibels (dB). Loudness values are averaged across the entire track and are useful for comparing relative loudness of tracks. Loudness is the quality of a sound that is the primary psychological correlate of physical strength (amplitude). Values typical range between -60 and 0 db.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "mode": {
+            "description": "Mode indicates the modality (major or minor) of a track, the type of scale from which its melodic content is derived. Major is represented by 1 and minor is 0.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The track is in minor scale",
+                "1": "The track is in major scale"
+            }
+        },
+        "speechiness": {
+            "description": "Speechiness detects the presence of spoken words in a track. The more exclusively speech-like the recording (e.g. talk show, audio book, poetry), the closer to 1.0 the attribute value.",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "acousticness": {
+            "description": "A confidence measure from 0.0 to 1.0 of whether the track is acoustic. 1.0 represents high confidence the track is acoustic.",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "instrumentalness": {
+            "description": "Predicts whether a track contains no vocals. \u201cOoh\u201d and \u201caah\u201d sounds are treated as instrumental in this context. Rap or spoken word tracks are clearly \u201cvocal\u201d. The closer the instrumentalness value is to 1.0, the greater likelihood the track contains no vocal content.",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "liveness": {
+            "description": "Detects the presence of an audience in the recording. Higher liveness values represent an increased probability that the track was performed live. A value above 0.8 provides strong likelihood that the track is live.",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "valence": {
+            "description": "A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry).",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "tempo": {
+            "description": "The overall estimated tempo of a track in beats per minute (BPM). In musical terminology, tempo is the speed or pace of a given piece and derives directly from the average beat duration.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "duration_ms": {
+            "description": "The duration of the track in milliseconds.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "time_signature": {
+            "description": "An estimated overall time signature of a track. The time signature (meter) is a notational convention to specify how many beats are in each bar (or measure).",
+            "type": "categorical",
+            "value_dict": {
+                "4": "The track has a 4/4 time signature",
+                "5": "The track has a 5/4 time signature",
+                "3": "The track has a 3/4 time signature",
+                "1": "The track has a 1/4 time signature"
+            }
+        },
+        "liked": {
+            "description": "Indicates whether the track is liked by the user or not. 1 represents liked and 0 represents not liked.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The track is not liked by the user",
+                "1": "The track is liked by the user"
+            }
+        }
+    },
+    "task_info": {
+        "liked": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in music preference prediction.",
+                "task_prompt": "Based on the features of the music track, please predict if the user would like the track.",
+                "answer_prompt": "The track is not liked by the user[0] or the track is liked by the user[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "The track is not liked by the user",
+                "1": "The track is liked by the user"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "danceability": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in music characteristics analysis.",
+                "task_prompt": "Based on the features of the music track, please predict the danceability of the track."
+            }
+        },
+        "energy": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in music energy analysis.",
+                "task_prompt": "Based on the features of the music track, please predict the energy of the track."
+            }
+        }
+    }
+}

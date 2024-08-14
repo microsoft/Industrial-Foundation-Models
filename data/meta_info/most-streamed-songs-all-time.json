@@ -1,0 +1,154 @@
+{
+    "basic_info": {
+        "row_num": 100,
+        "col_num": 14,
+        "label_candidates": [
+            "danceability",
+            "tempo",
+            "valence",
+            "energy",
+            "loudness"
+        ],
+        "valid_feature_num": 13,
+        "num_features": [
+            "duration",
+            "energy",
+            "loudness",
+            "speechiness",
+            "acousticness",
+            "instrumentalness",
+            "liveness",
+            "valence",
+            "tempo",
+            "danceability"
+        ],
+        "cat_features": [
+            "name",
+            "key",
+            "mode"
+        ],
+        "other_features": [],
+        "tags": [
+            "music",
+            "exploratory data analysis",
+            "tabular",
+            "audio classification",
+            "feature extraction"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/amaanansari09/most-streamed-songs-all-time"
+    },
+    "feature_info": {
+        "id": {
+            "description": "Unique identifier for each song",
+            "type": "useless"
+        },
+        "name": {
+            "description": "Name of the song",
+            "type": "categorical"
+        },
+        "duration": {
+            "description": "Duration of the song in milliseconds",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "energy": {
+            "description": "Energy of the song, represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy. For example, death metal has high energy, while a Bach prelude scores low on the scale",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "key": {
+            "description": "The key the track is in. Integers map to pitches using standard Pitch Class notation. E.g. 0 = C, 1 = C\u266f/D\u266d, 2 = D, and so on",
+            "type": "categorical"
+        },
+        "loudness": {
+            "description": "Overall loudness of the song in decibels (dB)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "mode": {
+            "description": "Modality of the song. Major is represented by 1 and minor is 0",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The song is in a major key",
+                "0": "The song is in a minor key"
+            }
+        },
+        "speechiness": {
+            "description": "Speechiness detects the presence of spoken words in a track. The more exclusively speech-like the recording (e.g., talk show, audio book, poetry), the closer to 1.0 the attribute value",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "acousticness": {
+            "description": "A confidence measure from 0.0 to 1.0 of whether the track is acoustic",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "instrumentalness": {
+            "description": "Predicts whether a track contains no vocals. \u201cOoh\u201d and \u201caah\u201d sounds are treated as instrumental in this context. Rap or spoken word tracks are clearly \u201cvocal\u201d",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "liveness": {
+            "description": "Detects the presence of an audience in the recording. Higher liveness values represent an increased probability that the track was performed live",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "valence": {
+            "description": "A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g., happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g., sad, depressed, angry)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "tempo": {
+            "description": "The overall estimated tempo of a track in beats per minute (BPM)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "danceability": {
+            "description": "Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. A value of 0.0 is least danceable and 1.0 is most danceable",
+            "type": "numerical",
+            "decimal": 3
+        }
+    },
+    "task_info": {
+        "danceability": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in music analytics.",
+                "task_prompt": "Based on the features of the song, please predict the danceability score.",
+                "answer_prompt": "The danceability score is {danceability}."
+            }
+        },
+        "tempo": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in music analytics.",
+                "task_prompt": "Based on the features of the song, please predict the tempo.",
+                "answer_prompt": "The tempo of the song is {tempo}."
+            }
+        },
+        "valence": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in music analytics.",
+                "task_prompt": "Based on the features of the song, please predict the valence score.",
+                "answer_prompt": "The valence score is {valence}."
+            }
+        },
+        "energy": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in music analytics.",
+                "task_prompt": "Based on the features of the song, please predict the energy level.",
+                "answer_prompt": "The energy level of the song is {energy}."
+            }
+        },
+        "loudness": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in music analytics.",
+                "task_prompt": "Based on the features of the song, please predict the loudness.",
+                "answer_prompt": "The loudness of the song is {loudness}."
+            }
+        }
+    }
+}

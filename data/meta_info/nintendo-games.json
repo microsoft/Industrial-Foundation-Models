@@ -1,0 +1,134 @@
+{
+    "basic_info": {
+        "row_num": 972,
+        "col_num": 9,
+        "label_candidates": [
+            "meta_score",
+            "user_score",
+            "esrb_rating"
+        ],
+        "valid_feature_num": 8,
+        "num_features": [
+            "meta_score",
+            "user_score"
+        ],
+        "cat_features": [
+            "title",
+            "platform",
+            "developers",
+            "genres",
+            "esrb_rating"
+        ],
+        "other_features": [
+            "date"
+        ],
+        "tags": [
+            "games",
+            "video games",
+            "software",
+            "classification",
+            "ratings and reviews"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/joebeachcapital/nintendo-games"
+    },
+    "feature_info": {
+        "meta_score": {
+            "description": "The meta score of the game",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "title": {
+            "description": "The title of the game",
+            "type": "categorical"
+        },
+        "platform": {
+            "description": "The platform on which the game is available",
+            "type": "categorical",
+            "value_dict": {
+                "Switch": "The game is available on Nintendo Switch",
+                "iOS": "The game is available on iOS",
+                "3DS": "The game is available on Nintendo 3DS",
+                "WIIU": "The game is available on Wii U",
+                "WII": "The game is available on Wii",
+                "DS": "The game is available on Nintendo DS",
+                "TG16)": "The game is available on TurboGrafx-16",
+                "GBA": "The game is available on Game Boy Advance",
+                "GC": "The game is available on GameCube",
+                "N64": "The game is available on Nintendo 64"
+            }
+        },
+        "date": {
+            "description": "The release date of the game",
+            "type": "other"
+        },
+        "user_score": {
+            "description": "The user score of the game",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "link": {
+            "description": "The link to the game details",
+            "type": "useless"
+        },
+        "esrb_rating": {
+            "description": "The ESRB rating of the game",
+            "type": "categorical",
+            "value_dict": {
+                "E": "The game is rated E (Everyone) by ESRB",
+                "RP": "The game is rated RP (Rating Pending) by ESRB",
+                "E10+": "The game is rated E10+ (Everyone 10 and older) by ESRB",
+                "T": "The game is rated T (Teen) by ESRB",
+                "M": "The game is rated M (Mature) by ESRB"
+            }
+        },
+        "developers": {
+            "description": "The developers of the game",
+            "type": "categorical"
+        },
+        "genres": {
+            "description": "The genres of the game",
+            "type": "categorical"
+        }
+    },
+    "task_info": {
+        "meta_score": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in video game analysis.",
+                "task_prompt": "Based on the features of the Nintendo game, please predict the meta score.",
+                "answer_prompt": "The predicted meta score of the game is {meta_score}."
+            }
+        },
+        "user_score": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in video game analysis.",
+                "task_prompt": "Based on the features of the Nintendo game, please predict the user score.",
+                "answer_prompt": "The predicted user score of the game is {user_score}."
+            }
+        },
+        "esrb_rating": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in video game analysis.",
+                "task_prompt": "Based on the features of the Nintendo game, please predict the ESRB rating.",
+                "answer_prompt": "E[0], RP[1], E10+[2], T[3] or M[4]."
+            },
+            "class_num": 5,
+            "class_value_dict": {
+                "E": "The game is rated E (Everyone) by ESRB",
+                "RP": "The game is rated RP (Rating Pending) by ESRB",
+                "E10+": "The game is rated E10+ (Everyone 10 and older) by ESRB",
+                "T": "The game is rated T (Teen) by ESRB",
+                "M": "The game is rated M (Mature) by ESRB"
+            },
+            "class_index_dict": {
+                "E": 0,
+                "RP": 1,
+                "E10+": 2,
+                "T": 3,
+                "M": 4
+            }
+        }
+    }
+}

@@ -1,0 +1,224 @@
+{
+    "basic_info": {
+        "row_num": 507,
+        "col_num": 25,
+        "label_candidates": [
+            "wgt",
+            "hgt",
+            "age",
+            "sex"
+        ],
+        "valid_feature_num": 25,
+        "num_features": [
+            "bia_di",
+            "bii_di",
+            "bit_di",
+            "che_de",
+            "che_di",
+            "elb_di",
+            "wri_di",
+            "kne_di",
+            "ank_di",
+            "sho_gi",
+            "che_gi",
+            "wai_gi",
+            "nav_gi",
+            "hip_gi",
+            "thi_gi",
+            "bic_gi",
+            "for_gi",
+            "kne_gi",
+            "cal_gi",
+            "ank_gi",
+            "wri_gi",
+            "age",
+            "wgt",
+            "hgt"
+        ],
+        "cat_features": [
+            "sex"
+        ],
+        "other_features": [],
+        "tags": [
+            "health and fitness",
+            "exercise",
+            "sports",
+            "people",
+            "health"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/utkarshx27/body-measurements"
+    },
+    "feature_info": {
+        "bia_di": {
+            "description": "Biacromial diameter (in cm)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "bii_di": {
+            "description": "Biliocristal diameter (in cm)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "bit_di": {
+            "description": "Bitrochanteric diameter (in cm)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "che_de": {
+            "description": "Chest depth (in cm)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "che_di": {
+            "description": "Chest diameter (in cm)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "elb_di": {
+            "description": "Elbow diameter (in cm)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "wri_di": {
+            "description": "Wrist diameter (in cm)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "kne_di": {
+            "description": "Knee diameter (in cm)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "ank_di": {
+            "description": "Ankle diameter (in cm)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "sho_gi": {
+            "description": "Shoulder girth (in cm)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "che_gi": {
+            "description": "Chest girth (in cm)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "wai_gi": {
+            "description": "Waist girth (in cm)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "nav_gi": {
+            "description": "Navel girth (in cm)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "hip_gi": {
+            "description": "Hip girth (in cm)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "thi_gi": {
+            "description": "Thigh girth (in cm)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "bic_gi": {
+            "description": "Bicep girth (in cm)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "for_gi": {
+            "description": "Forearm girth (in cm)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "kne_gi": {
+            "description": "Knee girth (in cm)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "cal_gi": {
+            "description": "Calf girth (in cm)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "ank_gi": {
+            "description": "Ankle girth (in cm)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "wri_gi": {
+            "description": "Wrist girth (in cm)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "age": {
+            "description": "Age (in years)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "wgt": {
+            "description": "Weight (in kg)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "hgt": {
+            "description": "Height (in cm)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "sex": {
+            "description": "Sex (1 for male, 0 for female)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Male",
+                "0": "Female"
+            }
+        }
+    },
+    "task_info": {
+        "wgt": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in body measurements and health analysis.",
+                "task_prompt": "Based on the body measurements, please predict the weight of the person.",
+                "answer_prompt": "The weight of the person is __ kg."
+            }
+        },
+        "hgt": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in body measurements and health analysis.",
+                "task_prompt": "Based on the body measurements, please predict the height of the person.",
+                "answer_prompt": "The height of the person is __ cm."
+            }
+        },
+        "age": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in body measurements and health analysis.",
+                "task_prompt": "Based on the body measurements, please predict the age of the person.",
+                "answer_prompt": "The age of the person is __ years."
+            }
+        },
+        "sex": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in body measurements and health analysis.",
+                "task_prompt": "Based on the body measurements, please predict the sex of the person.",
+                "answer_prompt": "Male[0] or Female[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "Male",
+                "0": "Female"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        }
+    }
+}

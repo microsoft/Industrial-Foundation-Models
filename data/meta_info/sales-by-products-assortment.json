@@ -1,0 +1,81 @@
+{
+    "basic_info": {
+        "row_num": 1700,
+        "col_num": 4,
+        "label_candidates": [
+            "Sales",
+            "Assortment"
+        ],
+        "valid_feature_num": 3,
+        "num_features": [
+            "Sales"
+        ],
+        "cat_features": [
+            "Assortment"
+        ],
+        "other_features": [
+            "Date"
+        ],
+        "tags": [
+            "earth and nature",
+            "time series analysis",
+            "tabular",
+            "regression",
+            "food"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/gabrielrichter/sales-by-products-assortment"
+    },
+    "feature_info": {
+        "Index": {
+            "description": "The unique identifier of each record in the dataset",
+            "type": "useless"
+        },
+        "Date": {
+            "description": "The date when the sales occurred, formatted as \"YYYY MMM DD\"",
+            "type": "other"
+        },
+        "Sales": {
+            "description": "The total sales amount of the day, measured in currency",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Assortment": {
+            "description": "The category of the product sold",
+            "type": "categorical",
+            "value_dict": {
+                "drink": "This category includes all types of beverages",
+                "savory_snacks": "This category includes all types of savory or salty snacks",
+                "candy": "This category includes all types of candies and sweets"
+            }
+        }
+    },
+    "task_info": {
+        "Sales": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sales forecasting.",
+                "task_prompt": "Based on the date and the assortment type, please predict the sales.",
+                "answer_prompt": "The predicted sales is."
+            }
+        },
+        "Assortment": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in product assortment classification.",
+                "task_prompt": "Based on the sales and the date, please predict the assortment type.",
+                "answer_prompt": "The predicted assortment type is drink[0], savory_snacks[1], or candy[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "drink": "This category includes all types of beverages",
+                "savory_snacks": "This category includes all types of savory or salty snacks",
+                "candy": "This category includes all types of candies and sweets"
+            },
+            "class_index_dict": {
+                "drink": 0,
+                "savory_snacks": 1,
+                "candy": 2
+            }
+        }
+    }
+}

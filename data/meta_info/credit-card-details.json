@@ -1,0 +1,258 @@
+{
+    "basic_info": {
+        "row_num": 1548,
+        "col_num": 18,
+        "label_candidates": [
+            "Annual_income",
+            "Marital_status",
+            "EDUCATION",
+            "Housing_type"
+        ],
+        "valid_feature_num": 17,
+        "num_features": [
+            "CHILDREN",
+            "Annual_income",
+            "Birthday_count",
+            "Employed_days",
+            "Family_Members"
+        ],
+        "cat_features": [
+            "GENDER",
+            "Car_Owner",
+            "Type_Income",
+            "EDUCATION",
+            "Marital_status",
+            "Housing_type",
+            "Mobile_phone",
+            "Work_Phone",
+            "Phone",
+            "EMAIL_ID",
+            "Type_Occupation",
+            "Propert_Owner"
+        ],
+        "other_features": [],
+        "tags": [
+            "exploratory data analysis",
+            "data cleaning",
+            "classification",
+            "random forest",
+            "model explainability"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/rohitudageri/credit-card-details"
+    },
+    "feature_info": {
+        "Ind_ID": {
+            "description": "Unique identifier for each individual",
+            "type": "useless"
+        },
+        "GENDER": {
+            "description": "Gender of the individual",
+            "type": "categorical",
+            "value_dict": {
+                "M": "The individual is Male",
+                "F": "The individual is Female"
+            }
+        },
+        "Car_Owner": {
+            "description": "Whether the individual owns a car or not",
+            "type": "categorical",
+            "value_dict": {
+                "Y": "The individual owns a car",
+                "N": "The individual does not own a car"
+            }
+        },
+        "Propert_Owner": {
+            "description": "Whether the individual owns a property or not",
+            "type": "categorical",
+            "value_dict": {
+                "Y": "The individual owns a property",
+                "N": "The individual does not own a property"
+            }
+        },
+        "CHILDREN": {
+            "description": "Number of children the individual has",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Annual_income": {
+            "description": "Annual income of the individual",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Type_Income": {
+            "description": "Type of income of the individual",
+            "type": "categorical",
+            "value_dict": {
+                "Pensioner": "The individual is a pensioner",
+                "Commercial associate": "The individual is a commercial associate",
+                "Working": "The individual is working",
+                "State servant": "The individual is a state servant"
+            }
+        },
+        "EDUCATION": {
+            "description": "Education level of the individual",
+            "type": "categorical",
+            "value_dict": {
+                "Higher education": "The individual has a higher education",
+                "Secondary / secondary special": "The individual has a secondary or secondary special education",
+                "Lower secondary": "The individual has a lower secondary education",
+                "Incomplete higher": "The individual has an incomplete higher education",
+                "Academic degree": "The individual has an academic degree"
+            }
+        },
+        "Marital_status": {
+            "description": "Marital status of the individual",
+            "type": "categorical",
+            "value_dict": {
+                "Married": "The individual is married",
+                "Single / not married": "The individual is single or not married",
+                "Civil marriage": "The individual is in a civil marriage",
+                "Separated": "The individual is separated",
+                "Widow": "The individual is a widow"
+            }
+        },
+        "Housing_type": {
+            "description": "Type of housing of the individual",
+            "type": "categorical",
+            "value_dict": {
+                "House / apartment": "The individual lives in a house or apartment",
+                "With parents": "The individual lives with parents",
+                "Rented apartment": "The individual lives in a rented apartment",
+                "Municipal apartment": "The individual lives in a municipal apartment",
+                "Co-op apartment": "The individual lives in a co-op apartment",
+                "Office apartment": "The individual lives in an office apartment"
+            }
+        },
+        "Birthday_count": {
+            "description": "Age of the individual in years",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Employed_days": {
+            "description": "Number of days the individual has been employed",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Mobile_phone": {
+            "description": "Whether the individual owns a mobile phone or not",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The individual owns a mobile phone"
+            }
+        },
+        "Work_Phone": {
+            "description": "Whether the individual owns a work phone or not",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The individual does not own a work phone",
+                "1": "The individual owns a work phone"
+            }
+        },
+        "Phone": {
+            "description": "Whether the individual owns a phone or not",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The individual does not own a phone",
+                "1": "The individual owns a phone"
+            }
+        },
+        "EMAIL_ID": {
+            "description": "Whether the individual has an email id or not",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The individual does not have an email id",
+                "1": "The individual has an email id"
+            }
+        },
+        "Type_Occupation": {
+            "description": "Type of occupation of the individual",
+            "type": "categorical"
+        },
+        "Family_Members": {
+            "description": "Number of family members of the individual",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "Annual_income": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in financial analysis.",
+                "task_prompt": "Based on the features of the individual, please predict the annual income.",
+                "answer_prompt": "The predicted annual income is: ."
+            }
+        },
+        "Marital_status": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in demographic analysis.",
+                "task_prompt": "Based on the features of the individual, please predict the marital status.",
+                "answer_prompt": "Married[0], Single / not married[1], Civil marriage[2], Separated[3], Widow[4]?"
+            },
+            "class_num": 5,
+            "class_value_dict": {
+                "Married": "The individual is married",
+                "Single / not married": "The individual is single or not married",
+                "Civil marriage": "The individual is in a civil marriage",
+                "Separated": "The individual is separated",
+                "Widow": "The individual is a widow"
+            },
+            "class_index_dict": {
+                "Married": 0,
+                "Single / not married": 1,
+                "Civil marriage": 2,
+                "Separated": 3,
+                "Widow": 4
+            }
+        },
+        "EDUCATION": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in educational analysis.",
+                "task_prompt": "Based on the features of the individual, please predict the level of education.",
+                "answer_prompt": "Higher education[0], Secondary / secondary special[1], Lower secondary[2], Incomplete higher[3], Academic degree[4]?"
+            },
+            "class_num": 5,
+            "class_value_dict": {
+                "Higher education": "The individual has a higher education",
+                "Secondary / secondary special": "The individual has a secondary or secondary special education",
+                "Lower secondary": "The individual has a lower secondary education",
+                "Incomplete higher": "The individual has an incomplete higher education",
+                "Academic degree": "The individual has an academic degree"
+            },
+            "class_index_dict": {
+                "Higher education": 0,
+                "Secondary / secondary special": 1,
+                "Lower secondary": 2,
+                "Incomplete higher": 3,
+                "Academic degree": 4
+            }
+        },
+        "Housing_type": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in housing analysis.",
+                "task_prompt": "Based on the features of the individual, please predict the type of housing.",
+                "answer_prompt": "House / apartment[0], With parents[1], Rented apartment[2], Municipal apartment[3], Co-op apartment[4], Office apartment[5]?"
+            },
+            "class_num": 6,
+            "class_value_dict": {
+                "House / apartment": "The individual lives in a house or apartment",
+                "With parents": "The individual lives with parents",
+                "Rented apartment": "The individual lives in a rented apartment",
+                "Municipal apartment": "The individual lives in a municipal apartment",
+                "Co-op apartment": "The individual lives in a co-op apartment",
+                "Office apartment": "The individual lives in an office apartment"
+            },
+            "class_index_dict": {
+                "House / apartment": 0,
+                "With parents": 1,
+                "Rented apartment": 2,
+                "Municipal apartment": 3,
+                "Co-op apartment": 4,
+                "Office apartment": 5
+            }
+        }
+    }
+}

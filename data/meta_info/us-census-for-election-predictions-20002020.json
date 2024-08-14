@@ -1,0 +1,353 @@
+{
+    "basic_info": {
+        "row_num": 1670,
+        "col_num": 45,
+        "label_candidates": [
+            "winner",
+            "democrat",
+            "republican",
+            "green",
+            "liberitarian",
+            "other"
+        ],
+        "valid_feature_num": 45,
+        "num_features": [
+            "inctot",
+            "mortamt1",
+            "avrg_age",
+            "ftotinc",
+            "foodstmp_1_freq",
+            "foodstmp_2_freq",
+            "sex_2_freq",
+            "sex_1_freq",
+            "marst_5_freq",
+            "marst_6_freq",
+            "marst_1_freq",
+            "marst_4_freq",
+            "marst_3_freq",
+            "marst_2_freq",
+            "race_1_freq",
+            "race_2_freq",
+            "race_7_freq",
+            "race_8_freq",
+            "race_5_freq",
+            "race_6_freq",
+            "race_3_freq",
+            "race_4_freq",
+            "race_9_freq",
+            "ctz_stat_1_freq",
+            "ctz_stat_3_freq",
+            "ctz_stat_2_freq",
+            "lang_1_freq",
+            "lang_2_freq",
+            "educ_attain_2.0_freq",
+            "educ_attain_1.0_freq",
+            "educ_attain_3.0_freq",
+            "educ_attain_4.0_freq",
+            "empstat_1.0_freq",
+            "empstat_3.0_freq",
+            "empstat_2.0_freq",
+            "democrat",
+            "green",
+            "liberitarian",
+            "other",
+            "republican"
+        ],
+        "cat_features": [
+            "year",
+            "county_fips",
+            "state_po",
+            "county_name",
+            "winner"
+        ],
+        "other_features": [],
+        "tags": [
+            "government",
+            "politics",
+            "demographics",
+            "tabular",
+            "binary classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/minhbtnguyen/us-census-for-election-predictions-20002020"
+    },
+    "feature_info": {
+        "year": {
+            "description": "The year of the record",
+            "type": "categorical"
+        },
+        "county_fips": {
+            "description": "The unique code of the county",
+            "type": "categorical"
+        },
+        "inctot": {
+            "description": "Total income in the county",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "mortamt1": {
+            "description": "Mortgage amount",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "avrg_age": {
+            "description": "Average age of the population in the county",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "ftotinc": {
+            "description": "Total family income in the county",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "foodstmp_1_freq": {
+            "description": "Frequency of food stamps usage (category 1)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "foodstmp_2_freq": {
+            "description": "Frequency of food stamps usage (category 2)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "sex_2_freq": {
+            "description": "Frequency of gender (category 2)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "sex_1_freq": {
+            "description": "Frequency of gender (category 1)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "marst_5_freq": {
+            "description": "Marital status frequency (category 5)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "marst_6_freq": {
+            "description": "Marital status frequency (category 6)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "marst_1_freq": {
+            "description": "Marital status frequency (category 1)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "marst_4_freq": {
+            "description": "Marital status frequency (category 4)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "marst_3_freq": {
+            "description": "Marital status frequency (category 3)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "marst_2_freq": {
+            "description": "Marital status frequency (category 2)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "race_1_freq": {
+            "description": "Race frequency (category 1)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "race_2_freq": {
+            "description": "Race frequency (category 2)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "race_7_freq": {
+            "description": "Race frequency (category 7)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "race_8_freq": {
+            "description": "Race frequency (category 8)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "race_5_freq": {
+            "description": "Race frequency (category 5)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "race_6_freq": {
+            "description": "Race frequency (category 6)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "race_3_freq": {
+            "description": "Race frequency (category 3)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "race_4_freq": {
+            "description": "Race frequency (category 4)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "race_9_freq": {
+            "description": "Race frequency (category 9)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "ctz_stat_1_freq": {
+            "description": "Citizenship status frequency (category 1)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "ctz_stat_3_freq": {
+            "description": "Citizenship status frequency (category 3)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "ctz_stat_2_freq": {
+            "description": "Citizenship status frequency (category 2)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "lang_1_freq": {
+            "description": "Language frequency (category 1)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "lang_2_freq": {
+            "description": "Language frequency (category 2)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "educ_attain_2.0_freq": {
+            "description": "Education attainment frequency (category 2.0)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "educ_attain_1.0_freq": {
+            "description": "Education attainment frequency (category 1.0)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "educ_attain_3.0_freq": {
+            "description": "Education attainment frequency (category 3.0)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "educ_attain_4.0_freq": {
+            "description": "Education attainment frequency (category 4.0)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "empstat_1.0_freq": {
+            "description": "Employment status frequency (category 1.0)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "empstat_3.0_freq": {
+            "description": "Employment status frequency (category 3.0)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "empstat_2.0_freq": {
+            "description": "Employment status frequency (category 2.0)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "state_po": {
+            "description": "Postal abbreviation of the state",
+            "type": "categorical"
+        },
+        "county_name": {
+            "description": "Name of the county",
+            "type": "categorical"
+        },
+        "democrat": {
+            "description": "Number of votes for the Democratic Party",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "green": {
+            "description": "Number of votes for the Green Party",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "liberitarian": {
+            "description": "Number of votes for the Libertarian Party",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "other": {
+            "description": "Number of votes for other parties",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "republican": {
+            "description": "Number of votes for the Republican Party",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "winner": {
+            "description": "The winning party of the election",
+            "type": "categorical",
+            "value_dict": {
+                "1.0": "The Democratic party won the election",
+                "0.0": "The Republican party won the election"
+            }
+        }
+    },
+    "task_info": {
+        "winner": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in US election predictions.",
+                "task_prompt": "Based on the socio-economic and demographic features of the county, please predict which party won the election.",
+                "answer_prompt": "The Democratic party won the election[1] or The Republican party won the election[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1.0": "The Democratic party won the election",
+                "0.0": "The Republican party won the election"
+            },
+            "class_index_dict": {
+                "1.0": 1,
+                "0.0": 0
+            }
+        },
+        "democrat": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in US election predictions.",
+                "task_prompt": "Based on the socio-economic and demographic features of the county, please predict the number of votes for the Democratic party."
+            }
+        },
+        "republican": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in US election predictions.",
+                "task_prompt": "Based on the socio-economic and demographic features of the county, please predict the number of votes for the Republican party."
+            }
+        },
+        "green": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in US election predictions.",
+                "task_prompt": "Based on the socio-economic and demographic features of the county, please predict the number of votes for the Green party."
+            }
+        },
+        "liberitarian": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in US election predictions.",
+                "task_prompt": "Based on the socio-economic and demographic features of the county, please predict the number of votes for the Liberitarian party."
+            }
+        },
+        "other": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in US election predictions.",
+                "task_prompt": "Based on the socio-economic and demographic features of the county, please predict the number of votes for other parties."
+            }
+        }
+    }
+}

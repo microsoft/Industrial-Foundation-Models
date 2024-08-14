@@ -1,0 +1,92 @@
+{
+    "basic_info": {
+        "row_num": 100,
+        "col_num": 4,
+        "label_candidates": [
+            "Salary",
+            "Age",
+            "PhD"
+        ],
+        "valid_feature_num": 4,
+        "num_features": [
+            "Age",
+            "Salary"
+        ],
+        "cat_features": [
+            "Gender",
+            "PhD"
+        ],
+        "other_features": [],
+        "tags": [
+            "people",
+            "business",
+            "beginner",
+            "linear regression",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/yasserh/employee-salaries-datatset"
+    },
+    "feature_info": {
+        "Salary": {
+            "description": "The salary of the employee in a certain unit (likely in thousands)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Gender": {
+            "description": "The gender of the employee, represented as 1 for male and 0 for female",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The employee is male",
+                "0": "The employee is female"
+            }
+        },
+        "Age": {
+            "description": "The age of the employee in years",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "PhD": {
+            "description": "Whether the employee has a PhD or not, represented as 1 for yes and 0 for no",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The employee has a PhD",
+                "0": "The employee does not have a PhD"
+            }
+        }
+    },
+    "task_info": {
+        "Salary": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in employee salary prediction.",
+                "task_prompt": "Based on the features of the employee, please predict the salary.",
+                "answer_prompt": "The predicted salary is: ."
+            }
+        },
+        "Age": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in age prediction.",
+                "task_prompt": "Based on the features of the employee, please predict the age.",
+                "answer_prompt": "The predicted age is: ."
+            }
+        },
+        "PhD": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in education level prediction.",
+                "task_prompt": "Based on the features of the employee, please predict whether the employee has a PhD or not.",
+                "answer_prompt": "Yes, the employee has a PhD[1] or No, the employee does not have a PhD[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "The employee has a PhD",
+                "0": "The employee does not have a PhD"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        }
+    }
+}

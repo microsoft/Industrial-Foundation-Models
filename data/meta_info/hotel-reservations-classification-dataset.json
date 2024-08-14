@@ -1,0 +1,200 @@
+{
+    "basic_info": {
+        "row_num": 36275,
+        "col_num": 19,
+        "label_candidates": [
+            "booking_status",
+            "no_of_special_requests",
+            "avg_price_per_room"
+        ],
+        "valid_feature_num": 18,
+        "num_features": [
+            "no_of_adults",
+            "no_of_children",
+            "no_of_weekend_nights",
+            "no_of_week_nights",
+            "lead_time",
+            "no_of_previous_cancellations",
+            "no_of_previous_bookings_not_canceled",
+            "avg_price_per_room",
+            "no_of_special_requests"
+        ],
+        "cat_features": [
+            "type_of_meal_plan",
+            "required_car_parking_space",
+            "room_type_reserved",
+            "arrival_year",
+            "arrival_month",
+            "arrival_date",
+            "market_segment_type",
+            "repeated_guest",
+            "booking_status"
+        ],
+        "other_features": [],
+        "tags": [
+            "beginner",
+            "exploratory data analysis",
+            "classification",
+            "hotels and accommodations"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/ahsan81/hotel-reservations-classification-dataset"
+    },
+    "feature_info": {
+        "Booking_ID": {
+            "description": "The unique identifier for each hotel booking",
+            "type": "useless"
+        },
+        "no_of_adults": {
+            "description": "The number of adults",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "no_of_children": {
+            "description": "The number of children",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "no_of_weekend_nights": {
+            "description": "The number of weekend nights",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "no_of_week_nights": {
+            "description": "The number of week nights",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "type_of_meal_plan": {
+            "description": "The type of meal plan chosen",
+            "type": "categorical",
+            "value_dict": {
+                "Meal Plan 1": "Breakfast",
+                "Not Selected": "No meal plan selected",
+                "Meal Plan 2": "Half board (breakfast and one other meal)",
+                "Meal Plan 3": "Full board (breakfast, lunch, and dinner)"
+            }
+        },
+        "required_car_parking_space": {
+            "description": "Whether a car parking space is required or not",
+            "type": "categorical",
+            "value_dict": {
+                "0": "No car parking space required",
+                "1": "Car parking space required"
+            }
+        },
+        "room_type_reserved": {
+            "description": "The type of room reserved",
+            "type": "categorical",
+            "value_dict": {
+                "Room_Type 1": "Type 1",
+                "Room_Type 4": "Type 4",
+                "Room_Type 2": "Type 2",
+                "Room_Type 6": "Type 6",
+                "Room_Type 5": "Type 5",
+                "Room_Type 7": "Type 7",
+                "Room_Type 3": "Type 3"
+            }
+        },
+        "lead_time": {
+            "description": "The number of days that elapsed between the booking was made and the arrival date",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "arrival_year": {
+            "description": "The year of arrival",
+            "type": "categorical",
+            "value_dict": {
+                "2017": "Arrival year is 2017",
+                "2018": "Arrival year is 2018"
+            }
+        },
+        "arrival_month": {
+            "description": "The month of arrival",
+            "type": "categorical"
+        },
+        "arrival_date": {
+            "description": "The date of arrival",
+            "type": "categorical"
+        },
+        "market_segment_type": {
+            "description": "The type of market segment the booking falls under",
+            "type": "categorical",
+            "value_dict": {
+                "Offline": "Booking was made offline",
+                "Online": "Booking was made online",
+                "Corporate": "Booking was made through a corporate channel",
+                "Aviation": "Booking was made through an aviation channel",
+                "Complementary": "Booking was complimentary"
+            }
+        },
+        "repeated_guest": {
+            "description": "Whether the guest is a repeat customer or not",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Guest is not a repeat customer",
+                "1": "Guest is a repeat customer"
+            }
+        },
+        "no_of_previous_cancellations": {
+            "description": "The number of previous bookings that were cancelled by the guest",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "no_of_previous_bookings_not_canceled": {
+            "description": "The number of previous bookings that were not cancelled by the guest",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "avg_price_per_room": {
+            "description": "The average price per day of the reservation. (in euros)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "no_of_special_requests": {
+            "description": "The number of special requests made by the guest",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "booking_status": {
+            "description": "The status of the booking (i.e., cancelled or not cancelled)",
+            "type": "categorical",
+            "value_dict": {
+                "Not_Canceled": "Booking was not cancelled",
+                "Canceled": "Booking was cancelled"
+            }
+        }
+    },
+    "task_info": {
+        "booking_status": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in hotel booking data analysis.",
+                "task_prompt": "Based on the features of the hotel booking, please predict the booking status.",
+                "answer_prompt": "Canceled[1] or not canceled[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "Not_Canceled": "Booking was not cancelled",
+                "Canceled": "Booking was cancelled"
+            },
+            "class_index_dict": {
+                "Not_Canceled": 0,
+                "Canceled": 1
+            }
+        },
+        "no_of_special_requests": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in hotel booking data analysis.",
+                "task_prompt": "Based on the features of the hotel booking, please predict the number of special requests."
+            }
+        },
+        "avg_price_per_room": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in hotel booking data analysis.",
+                "task_prompt": "Based on the features of the hotel booking, please predict the average price per room."
+            }
+        }
+    }
+}

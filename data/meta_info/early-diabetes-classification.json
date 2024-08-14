@@ -1,0 +1,220 @@
+{
+    "basic_info": {
+        "row_num": 520,
+        "col_num": 17,
+        "label_candidates": [
+            "class",
+            "age",
+            "gender"
+        ],
+        "valid_feature_num": 17,
+        "num_features": [
+            "age"
+        ],
+        "cat_features": [
+            "gender",
+            "polyuria",
+            "polydipsia",
+            "sudden_weight_loss",
+            "weakness",
+            "polyphagia",
+            "genital_thrush",
+            "visual_blurring",
+            "itching",
+            "irritability",
+            "delayed_healing",
+            "partial_paresis",
+            "muscle_stiffness",
+            "alopecia",
+            "obesity",
+            "class"
+        ],
+        "other_features": [],
+        "tags": [
+            "public health",
+            "health",
+            "tabular",
+            "health conditions",
+            "diabetes"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/andrewmvd/early-diabetes-classification"
+    },
+    "feature_info": {
+        "age": {
+            "description": "Age of the individual in years",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "gender": {
+            "description": "Gender of the individual",
+            "type": "categorical",
+            "value_dict": {
+                "Male": "The individual is male",
+                "Female": "The individual is female"
+            }
+        },
+        "polyuria": {
+            "description": "Presence of polyuria (excessive or an abnormally large production or passage of urine)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The individual does not have polyuria",
+                "1": "The individual has polyuria"
+            }
+        },
+        "polydipsia": {
+            "description": "Presence of polydipsia (excessive or abnormal thirst)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The individual has polydipsia",
+                "0": "The individual does not have polydipsia"
+            }
+        },
+        "sudden_weight_loss": {
+            "description": "Presence of sudden weight loss",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The individual did not experience sudden weight loss",
+                "1": "The individual experienced sudden weight loss"
+            }
+        },
+        "weakness": {
+            "description": "Presence of weakness",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The individual has weakness",
+                "0": "The individual does not have weakness"
+            }
+        },
+        "polyphagia": {
+            "description": "Presence of polyphagia (excessive hunger)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The individual does not have polyphagia",
+                "1": "The individual has polyphagia"
+            }
+        },
+        "genital_thrush": {
+            "description": "Presence of genital thrush (a yeast infection)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The individual does not have genital thrush",
+                "1": "The individual has genital thrush"
+            }
+        },
+        "visual_blurring": {
+            "description": "Presence of visual blurring",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The individual does not have visual blurring",
+                "1": "The individual has visual blurring"
+            }
+        },
+        "itching": {
+            "description": "Presence of itching",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The individual has itching",
+                "0": "The individual does not have itching"
+            }
+        },
+        "irritability": {
+            "description": "Presence of irritability",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The individual is not irritable",
+                "1": "The individual is irritable"
+            }
+        },
+        "delayed_healing": {
+            "description": "Presence of delayed healing",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The individual has delayed healing",
+                "0": "The individual does not have delayed healing"
+            }
+        },
+        "partial_paresis": {
+            "description": "Presence of partial paresis (weakness of muscles)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The individual does not have partial paresis",
+                "1": "The individual has partial paresis"
+            }
+        },
+        "muscle_stiffness": {
+            "description": "Presence of muscle stiffness",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The individual has muscle stiffness",
+                "0": "The individual does not have muscle stiffness"
+            }
+        },
+        "alopecia": {
+            "description": "Presence of alopecia (hair loss)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The individual has alopecia",
+                "0": "The individual does not have alopecia"
+            }
+        },
+        "obesity": {
+            "description": "Presence of obesity",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The individual is obese",
+                "0": "The individual is not obese"
+            }
+        },
+        "class": {
+            "description": "Class label indicating whether the individual is diagnosed with early diabetes or not",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The individual is diagnosed with early diabetes",
+                "0": "The individual is not diagnosed with early diabetes"
+            }
+        }
+    },
+    "task_info": {
+        "class": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in early diabetes diagnosis.",
+                "task_prompt": "Based on the health symptoms of the individual, please predict if the individual is diagnosed with early diabetes.",
+                "answer_prompt": "Diagnosed with early diabetes[1] or not diagnosed with early diabetes[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "The individual is diagnosed with early diabetes",
+                "0": "The individual is not diagnosed with early diabetes"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        },
+        "age": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health data analysis.",
+                "task_prompt": "Based on the health symptoms of the individual, please predict the age of the individual."
+            }
+        },
+        "gender": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in health data analysis.",
+                "task_prompt": "Based on the health symptoms of the individual, please predict the gender of the individual.",
+                "answer_prompt": "Male[0] or Female[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "Male": "The individual is male",
+                "Female": "The individual is female"
+            },
+            "class_index_dict": {
+                "Male": 0,
+                "Female": 1
+            }
+        }
+    }
+}

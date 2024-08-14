@@ -1,0 +1,143 @@
+{
+    "basic_info": {
+        "row_num": 500,
+        "col_num": 9,
+        "label_candidates": [
+            "Chance of Admit ",
+            "GRE Score",
+            "TOEFL Score",
+            "CGPA"
+        ],
+        "valid_feature_num": 8,
+        "num_features": [
+            "GRE Score",
+            "TOEFL Score",
+            "CGPA",
+            "Chance of Admit "
+        ],
+        "cat_features": [
+            "University Rating",
+            "SOP",
+            "LOR ",
+            "Research"
+        ],
+        "other_features": [],
+        "tags": [
+            "education",
+            "exploratory data analysis",
+            "data visualization",
+            "data analytics",
+            "logistic regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/ranitsarkar01/jamboree-linear-regression-dataset"
+    },
+    "feature_info": {
+        "Serial No.": {
+            "description": "The unique identifier for each student",
+            "type": "useless"
+        },
+        "GRE Score": {
+            "description": "The score obtained by the student in the GRE test",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "TOEFL Score": {
+            "description": "The score obtained by the student in the TOEFL test",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "University Rating": {
+            "description": "The rating of the university that the student is applying to",
+            "type": "categorical",
+            "value_dict": {
+                "1": "University with lowest rating",
+                "2": "University with below average rating",
+                "3": "University with average rating",
+                "4": "University with above average rating",
+                "5": "University with highest rating"
+            }
+        },
+        "SOP": {
+            "description": "Rating of the Statement of Purpose written by the student",
+            "type": "categorical",
+            "value_dict": {
+                "1.0": "Statement of Purpose with lowest quality",
+                "1.5": "Statement of Purpose with low quality",
+                "2.0": "Statement of Purpose with below average quality",
+                "2.5": "Statement of Purpose with average quality",
+                "3.0": "Statement of Purpose with above average quality",
+                "3.5": "Statement of Purpose with high quality",
+                "4.0": "Statement of Purpose with very high quality",
+                "4.5": "Statement of Purpose with excellent quality",
+                "5.0": "Statement of Purpose with perfect quality"
+            }
+        },
+        "LOR ": {
+            "description": "Rating of the Letter of Recommendation for the student",
+            "type": "categorical",
+            "value_dict": {
+                "1.0": "Letter of Recommendation with lowest quality",
+                "1.5": "Letter of Recommendation with low quality",
+                "2.0": "Letter of Recommendation with below average quality",
+                "2.5": "Letter of Recommendation with average quality",
+                "3.0": "Letter of Recommendation with above average quality",
+                "3.5": "Letter of Recommendation with high quality",
+                "4.0": "Letter of Recommendation with very high quality",
+                "4.5": "Letter of Recommendation with excellent quality",
+                "5.0": "Letter of Recommendation with perfect quality"
+            }
+        },
+        "CGPA": {
+            "description": "Cumulative Grade Point Average of the student",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Research": {
+            "description": "Whether the student has any research experience (1 for Yes, 0 for No)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The student does not have any research experience",
+                "1": "The student has research experience"
+            }
+        },
+        "Chance of Admit ": {
+            "description": "The probability of the student being admitted to the university",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "Chance of Admit ": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in predicting the chances of university admissions.",
+                "task_prompt": "Based on the features of the candidate, please predict the chance of admission.",
+                "answer_prompt": "The chance of admission is expected to be between 0 and 1."
+            }
+        },
+        "GRE Score": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in predicting GRE scores.",
+                "task_prompt": "Based on the features of the candidate, please predict the GRE score.",
+                "answer_prompt": "The GRE score is expected to be between 260 and 340."
+            }
+        },
+        "TOEFL Score": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in predicting TOEFL scores.",
+                "task_prompt": "Based on the features of the candidate, please predict the TOEFL score.",
+                "answer_prompt": "The TOEFL score is expected to be between 0 and 120."
+            }
+        },
+        "CGPA": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in predicting CGPA.",
+                "task_prompt": "Based on the features of the candidate, please predict the CGPA.",
+                "answer_prompt": "The CGPA is expected to be between 0 and 10."
+            }
+        }
+    }
+}

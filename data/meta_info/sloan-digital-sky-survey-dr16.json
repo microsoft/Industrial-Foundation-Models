@@ -1,0 +1,182 @@
+{
+    "basic_info": {
+        "row_num": 100000,
+        "col_num": 18,
+        "label_candidates": [
+            "class",
+            "redshift",
+            "dec",
+            "ra"
+        ],
+        "valid_feature_num": 15,
+        "num_features": [
+            "ra",
+            "dec",
+            "u",
+            "g",
+            "r",
+            "i",
+            "z",
+            "redshift",
+            "mjd"
+        ],
+        "cat_features": [
+            "run",
+            "camcol",
+            "field",
+            "plate",
+            "fiberid",
+            "class"
+        ],
+        "other_features": [],
+        "tags": [
+            "arts and entertainment",
+            "astronomy",
+            "business",
+            "computer science",
+            "programming",
+            "exploratory data analysis",
+            "classification",
+            "deep learning"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/muhakabartay/sloan-digital-sky-survey-dr16"
+    },
+    "feature_info": {
+        "objid": {
+            "description": "Unique identifier for each object in the dataset",
+            "type": "useless"
+        },
+        "ra": {
+            "description": "Right Ascension of the object in degrees",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "dec": {
+            "description": "Declination of the object in degrees",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "u": {
+            "description": "Response of the object in u band of the telescope",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "g": {
+            "description": "Response of the object in g band of the telescope",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "r": {
+            "description": "Response of the object in r band of the telescope",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "i": {
+            "description": "Response of the object in i band of the telescope",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "z": {
+            "description": "Response of the object in z band of the telescope",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "run": {
+            "description": "Specific scan number",
+            "type": "categorical"
+        },
+        "rerun": {
+            "description": "Reprocessing run number",
+            "type": "useless"
+        },
+        "camcol": {
+            "description": "Camera column during the run",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Camera column 1 during the run",
+                "2": "Camera column 2 during the run",
+                "3": "Camera column 3 during the run",
+                "4": "Camera column 4 during the run",
+                "5": "Camera column 5 during the run",
+                "6": "Camera column 6 during the run"
+            }
+        },
+        "field": {
+            "description": "Field number within the run",
+            "type": "categorical"
+        },
+        "specobjid": {
+            "description": "Unique identifier for spectral objects",
+            "type": "useless"
+        },
+        "class": {
+            "description": "Object classification (e.g., star, galaxy, QSO)",
+            "type": "categorical",
+            "value_dict": {
+                "STAR": "The object is a Star",
+                "GALAXY": "The object is a Galaxy",
+                "QSO": "The object is a Quasi-Stellar Object (QSO)"
+            }
+        },
+        "redshift": {
+            "description": "Redshift of the object",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "plate": {
+            "description": "Plate number",
+            "type": "categorical"
+        },
+        "mjd": {
+            "description": "Modified Julian Date of observation",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "fiberid": {
+            "description": "Fiber ID",
+            "type": "categorical"
+        }
+    },
+    "task_info": {
+        "class": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in astronomical object classification.",
+                "task_prompt": "Based on the features of the celestial bodies, please predict the type of the object.",
+                "answer_prompt": "Star[0], Galaxy[1], or Quasi-Stellar Object (QSO)[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "STAR": "The object is a Star",
+                "GALAXY": "The object is a Galaxy",
+                "QSO": "The object is a Quasi-Stellar Object (QSO)"
+            },
+            "class_index_dict": {
+                "STAR": 0,
+                "GALAXY": 1,
+                "QSO": 2
+            }
+        },
+        "redshift": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in astronomy.",
+                "task_prompt": "Based on the features of the celestial bodies, please predict the redshift value."
+            }
+        },
+        "dec": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in astronomy.",
+                "task_prompt": "Based on the features of the celestial bodies, please predict the declination coordinate."
+            }
+        },
+        "ra": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in astronomy.",
+                "task_prompt": "Based on the features of the celestial bodies, please predict the right ascension coordinate."
+            }
+        }
+    }
+}

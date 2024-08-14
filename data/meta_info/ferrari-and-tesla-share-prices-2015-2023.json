@@ -1,0 +1,121 @@
+{
+    "basic_info": {
+        "row_num": 1885,
+        "col_num": 7,
+        "label_candidates": [
+            "Close",
+            "Adj Close",
+            "High",
+            "Low",
+            "Open",
+            "Volume"
+        ],
+        "valid_feature_num": 7,
+        "num_features": [
+            "Open",
+            "High",
+            "Low",
+            "Adj Close",
+            "Volume",
+            "Close"
+        ],
+        "cat_features": [
+            "Date"
+        ],
+        "other_features": [],
+        "tags": [
+            "finance",
+            "automobiles and vehicles",
+            "tabular",
+            "regression",
+            "investing"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/kapturovalexander/ferrari-and-tesla-share-prices-2015-2023"
+    },
+    "feature_info": {
+        "Date": {
+            "description": "The date of the recorded share prices",
+            "type": "categorical"
+        },
+        "Open": {
+            "description": "The opening share price for the day (in USD)",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "High": {
+            "description": "The highest share price of the day (in USD)",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Low": {
+            "description": "The lowest share price of the day (in USD)",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Close": {
+            "description": "The closing share price for the day (in USD)",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Adj Close": {
+            "description": "The adjusted closing share price for the day (in USD). This is the closing price after adjustments for all applicable splits and dividend distributions.",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Volume": {
+            "description": "The number of shares traded during the day",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "Close": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in stock market analysis.",
+                "task_prompt": "Based on the features of the stock market data, please predict the closing price.",
+                "answer_prompt": "The predicted closing price is ______."
+            }
+        },
+        "Adj Close": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in stock market analysis.",
+                "task_prompt": "Based on the features of the stock market data, please predict the adjusted closing price.",
+                "answer_prompt": "The predicted adjusted closing price is ______."
+            }
+        },
+        "High": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in stock market analysis.",
+                "task_prompt": "Based on the features of the stock market data, please predict the highest price.",
+                "answer_prompt": "The predicted highest price is ______."
+            }
+        },
+        "Low": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in stock market analysis.",
+                "task_prompt": "Based on the features of the stock market data, please predict the lowest price.",
+                "answer_prompt": "The predicted lowest price is ______."
+            }
+        },
+        "Open": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in stock market analysis.",
+                "task_prompt": "Based on the features of the stock market data, please predict the opening price.",
+                "answer_prompt": "The predicted opening price is ______."
+            }
+        },
+        "Volume": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in stock market analysis.",
+                "task_prompt": "Based on the features of the stock market data, please predict the trading volume.",
+                "answer_prompt": "The predicted trading volume is ______."
+            }
+        }
+    }
+}

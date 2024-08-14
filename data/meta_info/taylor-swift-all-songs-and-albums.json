@@ -1,0 +1,357 @@
+{
+    "basic_info": {
+        "row_num": 454,
+        "col_num": 29,
+        "label_candidates": [
+            "danceability",
+            "energy",
+            "loudness",
+            "mode",
+            "speechiness",
+            "acousticness",
+            "instrumentalness",
+            "liveness",
+            "valence",
+            "tempo",
+            "time_signature",
+            "duration_ms",
+            "explicit"
+        ],
+        "valid_feature_num": 29,
+        "num_features": [
+            "track_number",
+            "danceability",
+            "energy",
+            "loudness",
+            "speechiness",
+            "acousticness",
+            "instrumentalness",
+            "liveness",
+            "valence",
+            "tempo",
+            "duration_ms"
+        ],
+        "cat_features": [
+            "album_name",
+            "ep",
+            "track_name",
+            "artist",
+            "featuring",
+            "bonus_track",
+            "promotional_release",
+            "single_release",
+            "key",
+            "mode",
+            "time_signature",
+            "key_name",
+            "mode_name",
+            "key_mode",
+            "explicit"
+        ],
+        "other_features": [
+            "album_release",
+            "track_release",
+            "lyrics"
+        ],
+        "tags": [
+            "arts and entertainment",
+            "celebrities",
+            "music",
+            "nlp",
+            "text classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/joebeachcapital/taylor-swift-all-songs-and-albums"
+    },
+    "feature_info": {
+        "album_name": {
+            "description": "The name of the album for the song",
+            "type": "categorical"
+        },
+        "ep": {
+            "description": "Whether the song is from an extended play (EP)",
+            "type": "categorical",
+            "value_dict": {
+                "False": "The song is not from an extended play (EP)",
+                "True": "The song is from an extended play (EP)"
+            }
+        },
+        "album_release": {
+            "description": "The release date of the album",
+            "type": "other"
+        },
+        "track_number": {
+            "description": "The track number of the song in the album",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "track_name": {
+            "description": "The name of the song",
+            "type": "categorical"
+        },
+        "artist": {
+            "description": "The artist of the song",
+            "type": "categorical"
+        },
+        "featuring": {
+            "description": "The artists featured in the song",
+            "type": "categorical"
+        },
+        "bonus_track": {
+            "description": "Whether the song is a bonus track",
+            "type": "categorical",
+            "value_dict": {
+                "False": "The song is not a bonus track",
+                "True": "The song is a bonus track"
+            }
+        },
+        "promotional_release": {
+            "description": "Whether the song was released for promotional purposes",
+            "type": "categorical"
+        },
+        "single_release": {
+            "description": "Whether the song was released as a single",
+            "type": "categorical"
+        },
+        "track_release": {
+            "description": "The release date of the song",
+            "type": "other"
+        },
+        "danceability": {
+            "description": "The danceability score of the song",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "energy": {
+            "description": "The energy score of the song",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "key": {
+            "description": "The key of the song",
+            "type": "categorical"
+        },
+        "loudness": {
+            "description": "The loudness of the song in decibels (dB)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "mode": {
+            "description": "The modality of the song (major or minor)",
+            "type": "categorical",
+            "value_dict": {
+                "1.0": "The song is in major mode",
+                "0.0": "The song is in minor mode"
+            }
+        },
+        "speechiness": {
+            "description": "The speechiness score of the song",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "acousticness": {
+            "description": "The acousticness score of the song",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "instrumentalness": {
+            "description": "The instrumentalness score of the song",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "liveness": {
+            "description": "The liveness score of the song",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "valence": {
+            "description": "The valence score of the song",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "tempo": {
+            "description": "The tempo of the song in beats per minute (BPM)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "time_signature": {
+            "description": "The time signature of the song",
+            "type": "categorical",
+            "value_dict": {
+                "4.0": "The song has a 4/4 time signature",
+                "3.0": "The song has a 3/4 time signature",
+                "1.0": "The song has a 1/4 time signature",
+                "5.0": "The song has a 5/4 time signature"
+            }
+        },
+        "duration_ms": {
+            "description": "The duration of the song in milliseconds",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "explicit": {
+            "description": "Whether the song has explicit lyrics",
+            "type": "categorical",
+            "value_dict": {
+                "False": "The song does not have explicit lyrics",
+                "True": "The song has explicit lyrics"
+            }
+        },
+        "key_name": {
+            "description": "The name of the key of the song",
+            "type": "categorical"
+        },
+        "mode_name": {
+            "description": "The name of the modality of the song",
+            "type": "categorical",
+            "value_dict": {
+                "major": "The song is in major mode",
+                "minor": "The song is in minor mode"
+            }
+        },
+        "key_mode": {
+            "description": "The key and mode of the song combined",
+            "type": "categorical"
+        },
+        "lyrics": {
+            "description": "The lyrics of the song",
+            "type": "other"
+        }
+    },
+    "task_info": {
+        "danceability": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in music analysis.",
+                "task_prompt": "Based on the features of the Taylor Swift song, please predict the danceability score.",
+                "answer_prompt": "What is the danceability score?"
+            }
+        },
+        "energy": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in music analysis.",
+                "task_prompt": "Based on the features of the Taylor Swift song, please predict the energy score.",
+                "answer_prompt": "What is the energy score?"
+            }
+        },
+        "loudness": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in music analysis.",
+                "task_prompt": "Based on the features of the Taylor Swift song, please predict the loudness score.",
+                "answer_prompt": "What is the loudness score?"
+            }
+        },
+        "mode": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in music analysis.",
+                "task_prompt": "Based on the features of the Taylor Swift song, please predict whether the song is in major or minor mode.",
+                "answer_prompt": "The song is in major mode[0] or minor mode[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1.0": "The song is in major mode",
+                "0.0": "The song is in minor mode"
+            },
+            "class_index_dict": {
+                "1.0": 0,
+                "0.0": 1
+            }
+        },
+        "speechiness": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in music analysis.",
+                "task_prompt": "Based on the features of the Taylor Swift song, please predict the speechiness score.",
+                "answer_prompt": "What is the speechiness score?"
+            }
+        },
+        "acousticness": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in music analysis.",
+                "task_prompt": "Based on the features of the Taylor Swift song, please predict the acousticness score.",
+                "answer_prompt": "What is the acousticness score?"
+            }
+        },
+        "instrumentalness": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in music analysis.",
+                "task_prompt": "Based on the features of the Taylor Swift song, please predict the instrumentalness score.",
+                "answer_prompt": "What is the instrumentalness score?"
+            }
+        },
+        "liveness": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in music analysis.",
+                "task_prompt": "Based on the features of the Taylor Swift song, please predict the liveness score.",
+                "answer_prompt": "What is the liveness score?"
+            }
+        },
+        "valence": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in music analysis.",
+                "task_prompt": "Based on the features of the Taylor Swift song, please predict the valence score.",
+                "answer_prompt": "What is the valence score?"
+            }
+        },
+        "tempo": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in music analysis.",
+                "task_prompt": "Based on the features of the Taylor Swift song, please predict the tempo.",
+                "answer_prompt": "What is the tempo?"
+            }
+        },
+        "time_signature": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in music analysis.",
+                "task_prompt": "Based on the features of the Taylor Swift song, please predict the time signature.",
+                "answer_prompt": "The song has a 4/4 time signature[0], 3/4 time signature[1], 1/4 time signature[2], or 5/4 time signature[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "4.0": "The song has a 4/4 time signature",
+                "3.0": "The song has a 3/4 time signature",
+                "1.0": "The song has a 1/4 time signature",
+                "5.0": "The song has a 5/4 time signature"
+            },
+            "class_index_dict": {
+                "4.0": 0,
+                "3.0": 1,
+                "1.0": 2,
+                "5.0": 3
+            }
+        },
+        "duration_ms": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in music analysis.",
+                "task_prompt": "Based on the features of the Taylor Swift song, please predict the duration in milliseconds.",
+                "answer_prompt": "What is the duration in milliseconds?"
+            }
+        },
+        "explicit": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in music analysis.",
+                "task_prompt": "Based on the features of the Taylor Swift song, please predict whether the song has explicit lyrics.",
+                "answer_prompt": "The song does not have explicit lyrics[0] or has explicit lyrics[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "False": "The song does not have explicit lyrics",
+                "True": "The song has explicit lyrics"
+            },
+            "class_index_dict": {
+                "False": 0,
+                "True": 1
+            }
+        }
+    }
+}

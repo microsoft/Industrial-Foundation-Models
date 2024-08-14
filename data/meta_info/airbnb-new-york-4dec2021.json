@@ -1,0 +1,199 @@
+{
+    "basic_info": {
+        "row_num": 38277,
+        "col_num": 18,
+        "label_candidates": [
+            "price",
+            "number_of_reviews",
+            "availability_365",
+            "minimum_nights",
+            "reviews_per_month",
+            "number_of_reviews_ltm",
+            "calculated_host_listings_count"
+        ],
+        "valid_feature_num": 15,
+        "num_features": [
+            "latitude",
+            "longitude",
+            "minimum_nights",
+            "number_of_reviews",
+            "reviews_per_month",
+            "calculated_host_listings_count",
+            "availability_365",
+            "number_of_reviews_ltm",
+            "price"
+        ],
+        "cat_features": [
+            "host_name",
+            "neighbourhood_group",
+            "neighbourhood",
+            "room_type"
+        ],
+        "other_features": [
+            "name",
+            "last_review"
+        ],
+        "tags": [
+            "united states",
+            "real estate",
+            "beginner",
+            "data analytics",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/sirapatsam/airbnb-new-york-4dec2021"
+    },
+    "feature_info": {
+        "id": {
+            "description": "Unique identifier for each listing",
+            "type": "useless"
+        },
+        "name": {
+            "description": "Name of the listing",
+            "type": "other"
+        },
+        "host_id": {
+            "description": "Unique identifier for each host",
+            "type": "useless"
+        },
+        "host_name": {
+            "description": "Name of the host",
+            "type": "categorical"
+        },
+        "neighbourhood_group": {
+            "description": "Group of neighbourhood where the listing is located",
+            "type": "categorical",
+            "value_dict": {
+                "Manhattan": "The listing is located in Manhattan",
+                "Brooklyn": "The listing is located in Brooklyn",
+                "Queens": "The listing is located in Queens",
+                "Staten Island": "The listing is located in Staten Island",
+                "Bronx": "The listing is located in Bronx"
+            }
+        },
+        "neighbourhood": {
+            "description": "Specific neighbourhood where the listing is located",
+            "type": "categorical"
+        },
+        "latitude": {
+            "description": "Latitude coordinate of the listing",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "longitude": {
+            "description": "Longitude coordinate of the listing",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "room_type": {
+            "description": "Type of room (e.g., Entire home/apt, Private room)",
+            "type": "categorical",
+            "value_dict": {
+                "Entire home/apt": "The listing is for the entire home or apartment",
+                "Private room": "The listing is for a private room in a property",
+                "Hotel room": "The listing is for a hotel room",
+                "Shared room": "The listing is for a shared room in a property"
+            }
+        },
+        "price": {
+            "description": "Price per night for the listing in USD",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "minimum_nights": {
+            "description": "Minimum number of nights a guest can book the listing",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "number_of_reviews": {
+            "description": "Total number of reviews received for the listing",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "last_review": {
+            "description": "Date of the last review received",
+            "type": "other"
+        },
+        "reviews_per_month": {
+            "description": "Average number of reviews received per month",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "calculated_host_listings_count": {
+            "description": "Number of listings the host has in total",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "availability_365": {
+            "description": "Number of days the listing is available for booking in a year",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "number_of_reviews_ltm": {
+            "description": "Number of reviews received in the last twelve months",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "license": {
+            "description": "License number of the listing",
+            "type": "useless"
+        }
+    },
+    "task_info": {
+        "price": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate pricing.",
+                "task_prompt": "Based on the features of the Airbnb listings, please predict the price.",
+                "answer_prompt": "The predicted price is:."
+            }
+        },
+        "number_of_reviews": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in customer engagement analysis.",
+                "task_prompt": "Based on the features of the Airbnb listings, please predict the number of reviews.",
+                "answer_prompt": "The predicted number of reviews is:."
+            }
+        },
+        "availability_365": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in occupancy rate analysis.",
+                "task_prompt": "Based on the features of the Airbnb listings, please predict the availability in the next 365 days.",
+                "answer_prompt": "The predicted availability in the next 365 days is:."
+            }
+        },
+        "minimum_nights": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in short-term rental market.",
+                "task_prompt": "Based on the features of the Airbnb listings, please predict the minimum number of nights for a stay.",
+                "answer_prompt": "The predicted minimum number of nights is:."
+            }
+        },
+        "reviews_per_month": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in customer feedback analysis.",
+                "task_prompt": "Based on the features of the Airbnb listings, please predict the number of reviews per month.",
+                "answer_prompt": "The predicted number of reviews per month is:."
+            }
+        },
+        "number_of_reviews_ltm": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in customer engagement analysis.",
+                "task_prompt": "Based on the features of the Airbnb listings, please predict the number of reviews in the last twelve months.",
+                "answer_prompt": "The predicted number of reviews in the last twelve months is:."
+            }
+        },
+        "calculated_host_listings_count": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in market supply analysis.",
+                "task_prompt": "Based on the features of the Airbnb listings, please predict the number of listings from the same host.",
+                "answer_prompt": "The predicted number of listings from the same host is:."
+            }
+        }
+    }
+}

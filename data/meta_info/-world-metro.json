@@ -1,0 +1,121 @@
+{
+    "basic_info": {
+        "row_num": 198,
+        "col_num": 9,
+        "label_candidates": [
+            "annual_ridership_mill",
+            "length_km",
+            "stations",
+            "year_last_expansion"
+        ],
+        "valid_feature_num": 9,
+        "num_features": [
+            "year",
+            "year_last_expansion",
+            "stations",
+            "length_km",
+            "annual_ridership_mill"
+        ],
+        "cat_features": [
+            "city",
+            "country",
+            "name",
+            "region"
+        ],
+        "other_features": [],
+        "tags": [
+            "global",
+            "categorical",
+            "business",
+            "beginner",
+            "classification",
+            "pandas"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/timmofeyy/-world-metro"
+    },
+    "feature_info": {
+        "city": {
+            "description": "The city where the metro system is located",
+            "type": "categorical"
+        },
+        "country": {
+            "description": "The country where the metro system is located",
+            "type": "categorical"
+        },
+        "name": {
+            "description": "The name of the metro system",
+            "type": "categorical"
+        },
+        "year": {
+            "description": "The year when the metro system was established",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "year_last_expansion": {
+            "description": "The year of the last expansion of the metro system",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "stations": {
+            "description": "The number of stations in the metro system",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "length_km": {
+            "description": "The total length of the metro system in kilometers",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "annual_ridership_mill": {
+            "description": "The annual ridership of the metro system in millions",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "region": {
+            "description": "The region where the metro system is located",
+            "type": "categorical",
+            "value_dict": {
+                "africa": "The metro system is located in the Africa region",
+                "latin_america": "The metro system is located in the Latin America region",
+                "asia": "The metro system is located in the Asia region",
+                "australia": "The metro system is located in the Australia region",
+                "europe": "The metro system is located in the Europe region",
+                "north_america": "The metro system is located in the North America region"
+            }
+        }
+    },
+    "task_info": {
+        "annual_ridership_mill": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in transportation data analysis.",
+                "task_prompt": "Based on the features of the metro system, please predict the annual ridership in millions.",
+                "answer_prompt": "The annual ridership in millions is."
+            }
+        },
+        "length_km": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in transportation data analysis.",
+                "task_prompt": "Based on the features of the metro system, please predict the total length of the metro system in kilometers.",
+                "answer_prompt": "The total length of the metro system in kilometers is."
+            }
+        },
+        "stations": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in transportation data analysis.",
+                "task_prompt": "Based on the features of the metro system, please predict the total number of stations.",
+                "answer_prompt": "The total number of stations is."
+            }
+        },
+        "year_last_expansion": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in transportation data analysis.",
+                "task_prompt": "Based on the features of the metro system, please predict the year of the last expansion.",
+                "answer_prompt": "The year of the last expansion is."
+            }
+        }
+    }
+}

@@ -1,0 +1,195 @@
+{
+    "basic_info": {
+        "row_num": 1827,
+        "col_num": 16,
+        "label_candidates": [
+            "PRCP",
+            "TAVG",
+            "TMAX",
+            "TMIN",
+            "AWND",
+            "WSF2",
+            "WSF5"
+        ],
+        "valid_feature_num": 16,
+        "num_features": [
+            "AWND",
+            "PGTM",
+            "TAVG",
+            "TMAX",
+            "TMIN",
+            "WDF2",
+            "WDF5",
+            "WSF2",
+            "WSF5",
+            "PRCP"
+        ],
+        "cat_features": [
+            "STATION",
+            "NAME",
+            "WT01",
+            "WT02",
+            "WT08"
+        ],
+        "other_features": [
+            "DATE"
+        ],
+        "tags": [
+            "education",
+            "beginner",
+            "exploratory data analysis",
+            "classification",
+            "tabular"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/varunnagpalspyz/precipitation-prediction-in-la"
+    },
+    "feature_info": {
+        "STATION": {
+            "description": "The identifier of the weather station",
+            "type": "categorical",
+            "value_dict": {
+                "USW00093134": "The identifier of the Los Angeles Downtown USC weather station"
+            }
+        },
+        "NAME": {
+            "description": "The name of the weather station",
+            "type": "categorical",
+            "value_dict": {
+                "LOS ANGELES DOWNTOWN USC, CA US": "The name of the Los Angeles Downtown USC weather station"
+            }
+        },
+        "DATE": {
+            "description": "The date of the weather observation",
+            "type": "other"
+        },
+        "AWND": {
+            "description": "Average daily wind speed (tenths of meters per second)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "PGTM": {
+            "description": "Peak gust time (hours and minutes, i.e., HHMM)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "PRCP": {
+            "description": "Daily precipitation (in millimeters)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "TAVG": {
+            "description": "Average daily temperature (in degrees Fahrenheit)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "TMAX": {
+            "description": "Maximum daily temperature (in degrees Fahrenheit)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "TMIN": {
+            "description": "Minimum daily temperature (in degrees Fahrenheit)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "WDF2": {
+            "description": "Direction of fastest 2-minute wind (in degrees)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "WDF5": {
+            "description": "Direction of fastest 5-minute wind (in degrees)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "WSF2": {
+            "description": "Fastest 2-minute wind speed (tenths of meters per second)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "WSF5": {
+            "description": "Fastest 5-minute wind speed (tenths of meters per second)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "WT01": {
+            "description": "Indicator for fog, ice fog, or freezing fog (may include heavy fog)",
+            "type": "categorical",
+            "value_dict": {
+                "1.0": "Fog, ice fog, or freezing fog observed"
+            }
+        },
+        "WT02": {
+            "description": "Indicator for heavy fog or heaving freezing fog (not always distinguished from fog)",
+            "type": "categorical",
+            "value_dict": {
+                "1.0": "Heavy fog or heavy freezing fog observed"
+            }
+        },
+        "WT08": {
+            "description": "Indicator for smoke or haze",
+            "type": "categorical",
+            "value_dict": {
+                "1.0": "Smoke or haze observed"
+            }
+        }
+    },
+    "task_info": {
+        "PRCP": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in meteorology.",
+                "task_prompt": "Based on the weather conditions in Los Angeles, please predict the precipitation.",
+                "answer_prompt": "The predicted precipitation is _."
+            }
+        },
+        "TAVG": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in meteorology.",
+                "task_prompt": "Based on the weather conditions in Los Angeles, please predict the average temperature.",
+                "answer_prompt": "The predicted average temperature is _."
+            }
+        },
+        "TMAX": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in meteorology.",
+                "task_prompt": "Based on the weather conditions in Los Angeles, please predict the maximum temperature.",
+                "answer_prompt": "The predicted maximum temperature is _."
+            }
+        },
+        "TMIN": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in meteorology.",
+                "task_prompt": "Based on the weather conditions in Los Angeles, please predict the minimum temperature.",
+                "answer_prompt": "The predicted minimum temperature is _."
+            }
+        },
+        "AWND": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in meteorology.",
+                "task_prompt": "Based on the weather conditions in Los Angeles, please predict the average wind speed.",
+                "answer_prompt": "The predicted average wind speed is _."
+            }
+        },
+        "WSF2": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in meteorology.",
+                "task_prompt": "Based on the weather conditions in Los Angeles, please predict the fastest 2-minute wind speed.",
+                "answer_prompt": "The predicted fastest 2-minute wind speed is _."
+            }
+        },
+        "WSF5": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in meteorology.",
+                "task_prompt": "Based on the weather conditions in Los Angeles, please predict the fastest 5-second wind speed.",
+                "answer_prompt": "The predicted fastest 5-second wind speed is _."
+            }
+        }
+    }
+}

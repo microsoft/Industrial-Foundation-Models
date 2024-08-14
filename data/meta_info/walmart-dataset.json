@@ -1,0 +1,108 @@
+{
+    "basic_info": {
+        "row_num": 6435,
+        "col_num": 8,
+        "label_candidates": [
+            "Weekly_Sales",
+            "CPI",
+            "Unemployment",
+            "Temperature"
+        ],
+        "valid_feature_num": 8,
+        "num_features": [
+            "Temperature",
+            "Fuel_Price",
+            "CPI",
+            "Unemployment",
+            "Weekly_Sales"
+        ],
+        "cat_features": [
+            "Store",
+            "Holiday_Flag"
+        ],
+        "other_features": [
+            "Date"
+        ],
+        "tags": [
+            "beginner",
+            "linear regression",
+            "tabular",
+            "regression",
+            "retail and shopping"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/yasserh/walmart-dataset"
+    },
+    "feature_info": {
+        "Store": {
+            "description": "The identifier of the store",
+            "type": "categorical"
+        },
+        "Date": {
+            "description": "The date of the recorded sales, in the format of DD-MM-YYYY",
+            "type": "other"
+        },
+        "Weekly_Sales": {
+            "description": "The total sales for the given store in the given week",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Holiday_Flag": {
+            "description": "A binary flag indicating whether the week contains a holiday or not (1 if the week has a holiday, 0 otherwise)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The week does not contain a holiday",
+                "1": "The week contains a holiday"
+            }
+        },
+        "Temperature": {
+            "description": "The average temperature in the region of the store for the week in Fahrenheit",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Fuel_Price": {
+            "description": "The cost of fuel in the region of the store during the given week",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "CPI": {
+            "description": "The consumer price index for the given week",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Unemployment": {
+            "description": "The unemployment rate for the given week",
+            "type": "numerical",
+            "decimal": 3
+        }
+    },
+    "task_info": {
+        "Weekly_Sales": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in retail sales forecasting.",
+                "task_prompt": "Based on the features of the Walmart store, please predict the weekly sales."
+            }
+        },
+        "CPI": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in economic indicators forecasting.",
+                "task_prompt": "Based on the features of the Walmart store, please predict the Consumer Price Index (CPI)."
+            }
+        },
+        "Unemployment": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in economic indicators forecasting.",
+                "task_prompt": "Based on the features of the Walmart store, please predict the unemployment rate."
+            }
+        },
+        "Temperature": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in weather forecasting.",
+                "task_prompt": "Based on the features of the Walmart store, please predict the temperature."
+            }
+        }
+    }
+}

@@ -1,0 +1,222 @@
+{
+    "basic_info": {
+        "row_num": 13136,
+        "col_num": 17,
+        "label_candidates": [
+            "Anemia level",
+            "Hemoglobin level adjusted for altitude and smoking (g/dl - 1 decimal)",
+            "Hemoglobin level adjusted for altitude (g/dl - 1 decimal)",
+            "Anemia level.1"
+        ],
+        "valid_feature_num": 16,
+        "num_features": [
+            "Births in last five years",
+            "Age of respondent at 1st birth",
+            "Hemoglobin level adjusted for altitude and smoking (g/dl - 1 decimal)",
+            "Hemoglobin level adjusted for altitude (g/dl - 1 decimal)"
+        ],
+        "cat_features": [
+            "Age in 5-year groups",
+            "Type of place of residence",
+            "Highest educational level",
+            "Wealth index combined",
+            "Have mosquito bed net for sleeping (from household questionnaire)",
+            "Smokes cigarettes",
+            "Current marital status",
+            "Currently residing with husband/partner",
+            "When child put to breast",
+            "Had fever in last two weeks",
+            "Taking iron pills, sprinkles or syrup",
+            "Anemia level"
+        ],
+        "other_features": [],
+        "tags": [
+            "africa",
+            "health",
+            "statistical analysis",
+            "classification",
+            "tabular"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/adeolaadesina/factors-affecting-children-anemia-level"
+    },
+    "feature_info": {
+        "Age in 5-year groups": {
+            "description": "Age of the respondent in 5-year groups",
+            "type": "categorical",
+            "value_dict": {
+                "40-44": "Respondents aged between 40 and 44",
+                "35-39": "Respondents aged between 35 and 39",
+                "25-29": "Respondents aged between 25 and 29",
+                "20-24": "Respondents aged between 20 and 24",
+                "30-34": "Respondents aged between 30 and 34",
+                "15-19": "Respondents aged between 15 and 19",
+                "45-49": "Respondents aged between 45 and 49"
+            }
+        },
+        "Type of place of residence": {
+            "description": "Type of place where the respondent resides",
+            "type": "categorical",
+            "value_dict": {
+                "Urban": "Respondents living in urban areas",
+                "Rural": "Respondents living in rural areas"
+            }
+        },
+        "Highest educational level": {
+            "description": "Highest level of education attained by the respondent",
+            "type": "categorical",
+            "value_dict": {
+                "Higher": "Respondents with higher education",
+                "Secondary": "Respondents with secondary education",
+                "Primary": "Respondents with primary education",
+                "No education": "Respondents without any formal education"
+            }
+        },
+        "Wealth index combined": {
+            "description": "Wealth index of the respondent",
+            "type": "categorical",
+            "value_dict": {
+                "Richest": "Respondents in the richest wealth category",
+                "Richer": "Respondents in the richer wealth category",
+                "Middle": "Respondents in the middle wealth category",
+                "Poorer": "Respondents in the poorer wealth category",
+                "Poorest": "Respondents in the poorest wealth category"
+            }
+        },
+        "Births in last five years": {
+            "description": "Number of births the respondent had in the last five years",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Age of respondent at 1st birth": {
+            "description": "Age of the respondent at their first birth",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Hemoglobin level adjusted for altitude and smoking (g/dl - 1 decimal)": {
+            "description": "Hemoglobin level of the respondent adjusted for altitude and smoking, in g/dl",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Anemia level": {
+            "description": "Level of anemia in the respondent",
+            "type": "categorical",
+            "value_dict": {
+                "Moderate": "Respondents with moderate anemia",
+                "Mild": "Respondents with mild anemia",
+                "Not anemic": "Respondents not anemic",
+                "Severe": "Respondents with severe anemia"
+            }
+        },
+        "Have mosquito bed net for sleeping (from household questionnaire)": {
+            "description": "Whether the respondent has a mosquito bed net for sleeping",
+            "type": "categorical",
+            "value_dict": {
+                "Yes": "Respondents who have a mosquito bed net for sleeping",
+                "No": "Respondents who do not have a mosquito bed net for sleeping"
+            }
+        },
+        "Smokes cigarettes": {
+            "description": "Whether the respondent smokes cigarettes",
+            "type": "categorical",
+            "value_dict": {
+                "No": "Respondents who do not smoke cigarettes",
+                "Yes": "Respondents who smoke cigarettes"
+            }
+        },
+        "Current marital status": {
+            "description": "Current marital status of the respondent",
+            "type": "categorical",
+            "value_dict": {
+                "Living with partner": "Respondents currently living with a partner",
+                "Married": "Respondents who are married",
+                "No longer living together/separated": "Respondents who are no longer living together or are separated",
+                "Never in union": "Respondents who have never been in a union",
+                "Widowed": "Respondents who are widowed",
+                "Divorced": "Respondents who are divorced"
+            }
+        },
+        "Currently residing with husband/partner": {
+            "description": "Whether the respondent is currently residing with their husband/partner",
+            "type": "categorical",
+            "value_dict": {
+                "Staying elsewhere": "Respondents whose husband/partner is staying elsewhere",
+                "Living with her": "Respondents living with their husband/partner"
+            }
+        },
+        "When child put to breast": {
+            "description": "When the child was put to the breast for breastfeeding",
+            "type": "categorical"
+        },
+        "Had fever in last two weeks": {
+            "description": "Whether the respondent had a fever in the last two weeks",
+            "type": "categorical",
+            "value_dict": {
+                "No": "Respondents who did not have a fever in the last two weeks",
+                "Yes": "Respondents who had a fever in the last two weeks",
+                "Don't know": "Respondents who do not know if they had a fever in the last two weeks"
+            }
+        },
+        "Hemoglobin level adjusted for altitude (g/dl - 1 decimal)": {
+            "description": "Hemoglobin level of the respondent adjusted for altitude, in g/dl",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Anemia level.1": {
+            "description": "Duplicate of Anemia level",
+            "type": "useless"
+        },
+        "Taking iron pills, sprinkles or syrup": {
+            "description": "Whether the respondent is taking iron pills, sprinkles or syrup",
+            "type": "categorical",
+            "value_dict": {
+                "Yes": "Respondents who are taking iron pills, sprinkles or syrup",
+                "No": "Respondents who are not taking iron pills, sprinkles or syrup",
+                "Don't know": "Respondents who do not know if they are taking iron pills, sprinkles or syrup"
+            }
+        }
+    },
+    "task_info": {
+        "Anemia level": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in healthcare and nutrition.",
+                "task_prompt": "Based on the features of the respondents, please predict the anemia level.",
+                "answer_prompt": "Severe[0], Moderate[1], Mild[2], or Not anemic[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "Moderate": "Respondents with moderate anemia",
+                "Mild": "Respondents with mild anemia",
+                "Not anemic": "Respondents not anemic",
+                "Severe": "Respondents with severe anemia"
+            },
+            "class_index_dict": {
+                "Severe": 0,
+                "Moderate": 1,
+                "Mild": 2,
+                "Not anemic": 3
+            }
+        },
+        "Hemoglobin level adjusted for altitude and smoking (g/dl - 1 decimal)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in healthcare and nutrition.",
+                "task_prompt": "Based on the features of the respondents, please predict the hemoglobin level adjusted for altitude and smoking."
+            }
+        },
+        "Hemoglobin level adjusted for altitude (g/dl - 1 decimal)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in healthcare and nutrition.",
+                "task_prompt": "Based on the features of the respondents, please predict the hemoglobin level adjusted for altitude."
+            }
+        },
+        "Anemia level.1": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in healthcare and nutrition.",
+                "task_prompt": "Based on the features of the respondents, please predict the anemia level."
+            }
+        }
+    }
+}

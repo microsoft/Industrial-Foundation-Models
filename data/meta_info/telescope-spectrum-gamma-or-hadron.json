@@ -1,0 +1,132 @@
+{
+    "basic_info": {
+        "row_num": 19020,
+        "col_num": 11,
+        "label_candidates": [
+            "class",
+            "fDist",
+            "fAlpha"
+        ],
+        "valid_feature_num": 11,
+        "num_features": [
+            "fLength",
+            "fWidth",
+            "fSize",
+            "fConc",
+            "fConc1",
+            "fAsym",
+            "fM3Long",
+            "fM3Trans",
+            "fAlpha",
+            "fDist"
+        ],
+        "cat_features": [
+            "class"
+        ],
+        "other_features": [],
+        "tags": [
+            "categorical",
+            "earth and nature",
+            "atmospheric science",
+            "astronomy",
+            "data analytics",
+            "classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/brsdincer/telescope-spectrum-gamma-or-hadron"
+    },
+    "feature_info": {
+        "fLength": {
+            "description": "Length of the major axis of the ellipse [mm]",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "fWidth": {
+            "description": "Length of the minor axis of the ellipse [mm]",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "fSize": {
+            "description": "Size of the ellipse",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "fConc": {
+            "description": "Ratio of sum of two highest pixels over fSize [ratio]",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "fConc1": {
+            "description": "Ratio of highest pixel over fSize [ratio]",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "fAsym": {
+            "description": "Distance from highest pixel to center, projected onto major axis [mm]",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "fM3Long": {
+            "description": "3rd root of third moment along major axis [mm]",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "fM3Trans": {
+            "description": "3rd root of third moment along minor axis [mm]",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "fAlpha": {
+            "description": "Angle of major axis with vector to origin [deg]",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "fDist": {
+            "description": "Distance from origin to center of ellipse [mm]",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "class": {
+            "description": "Particle type, g (gamma, signal) or h (hadron, background)",
+            "type": "categorical",
+            "value_dict": {
+                "g": "Gamma particle",
+                "h": "Hadron particle"
+            }
+        }
+    },
+    "task_info": {
+        "class": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in astrophysics.",
+                "task_prompt": "Based on the features of the telescope spectrum, please predict the particle type.",
+                "answer_prompt": "Gamma particle[0] or Hadron particle[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "g": "Gamma particle",
+                "h": "Hadron particle"
+            },
+            "class_index_dict": {
+                "g": 0,
+                "h": 1
+            }
+        },
+        "fDist": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in astrophysics.",
+                "task_prompt": "Based on the features of the telescope spectrum, please predict the distance of the particle.",
+                "answer_prompt": "What is the predicted distance?"
+            }
+        },
+        "fAlpha": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in astrophysics.",
+                "task_prompt": "Based on the features of the telescope spectrum, please predict the alpha value of the particle.",
+                "answer_prompt": "What is the predicted alpha value?"
+            }
+        }
+    }
+}

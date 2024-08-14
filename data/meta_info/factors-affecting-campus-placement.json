@@ -1,0 +1,213 @@
+{
+    "basic_info": {
+        "row_num": 215,
+        "col_num": 15,
+        "label_candidates": [
+            "status",
+            "salary",
+            "mba_p",
+            "degree_p",
+            "etest_p",
+            "hsc_p",
+            "ssc_p"
+        ],
+        "valid_feature_num": 14,
+        "num_features": [
+            "ssc_p",
+            "hsc_p",
+            "degree_p",
+            "etest_p",
+            "mba_p",
+            "salary"
+        ],
+        "cat_features": [
+            "gender",
+            "ssc_b",
+            "hsc_b",
+            "hsc_s",
+            "degree_t",
+            "workex",
+            "specialisation",
+            "status"
+        ],
+        "other_features": [],
+        "tags": [
+            "universities and colleges",
+            "business",
+            "education",
+            "classification",
+            "deep learning",
+            "standardized testing"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/benroshan/factors-affecting-campus-placement"
+    },
+    "feature_info": {
+        "sl_no": {
+            "description": "Serial Number",
+            "type": "useless"
+        },
+        "gender": {
+            "description": "Gender of the student",
+            "type": "categorical",
+            "value_dict": {
+                "M": "Male",
+                "F": "Female"
+            }
+        },
+        "ssc_p": {
+            "description": "Secondary Education percentage- 10th Grade",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "ssc_b": {
+            "description": "Board of Education- Central/ Others",
+            "type": "categorical",
+            "value_dict": {
+                "Others": "Other board of education for secondary education",
+                "Central": "Central board of education for secondary education"
+            }
+        },
+        "hsc_p": {
+            "description": "Higher Secondary Education percentage- 12th Grade",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "hsc_b": {
+            "description": "Board of Education- Central/ Others",
+            "type": "categorical",
+            "value_dict": {
+                "Others": "Other board of education for higher secondary education",
+                "Central": "Central board of education for higher secondary education"
+            }
+        },
+        "hsc_s": {
+            "description": "Specialization in Higher Secondary Education",
+            "type": "categorical",
+            "value_dict": {
+                "Commerce": "Specialization in Commerce during higher secondary education",
+                "Science": "Specialization in Science during higher secondary education",
+                "Arts": "Specialization in Arts during higher secondary education"
+            }
+        },
+        "degree_p": {
+            "description": "Degree Percentage",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "degree_t": {
+            "description": "Under Graduation(Degree type)- Field of degree education",
+            "type": "categorical",
+            "value_dict": {
+                "Sci&Tech": "Under graduation degree in Science & Technology",
+                "Comm&Mgmt": "Under graduation degree in Commerce & Management",
+                "Others": "Under graduation degree in other fields"
+            }
+        },
+        "workex": {
+            "description": "Work Experience",
+            "type": "categorical",
+            "value_dict": {
+                "No": "No work experience",
+                "Yes": "Has work experience"
+            }
+        },
+        "etest_p": {
+            "description": "Employability test percentage (conducted by college)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "specialisation": {
+            "description": "Post Graduation(MBA)- Specialization",
+            "type": "categorical",
+            "value_dict": {
+                "Mkt&HR": "MBA specialization in Marketing & Human Resources",
+                "Mkt&Fin": "MBA specialization in Marketing & Finance"
+            }
+        },
+        "mba_p": {
+            "description": "MBA percentage",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "status": {
+            "description": "Job Placement Status",
+            "type": "categorical",
+            "value_dict": {
+                "Placed": "Successfully placed in a job",
+                "Not Placed": "Not placed in a job"
+            }
+        },
+        "salary": {
+            "description": "Salary offered by corporate to candidates",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "status": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in job placement prediction.",
+                "task_prompt": "Based on the student data, please predict the job placement status.",
+                "answer_prompt": "Successfully placed in a job[0] or not placed in a job[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "Placed": "Successfully placed in a job",
+                "Not Placed": "Not placed in a job"
+            },
+            "class_index_dict": {
+                "Placed": 0,
+                "Not Placed": 1
+            }
+        },
+        "salary": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in salary prediction.",
+                "task_prompt": "Based on the student data, please predict the salary.",
+                "answer_prompt": "What is the predicted salary?"
+            }
+        },
+        "mba_p": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in academic performance prediction.",
+                "task_prompt": "Based on the student data, please predict the MBA percentage.",
+                "answer_prompt": "What is the predicted MBA percentage?"
+            }
+        },
+        "degree_p": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in academic performance prediction.",
+                "task_prompt": "Based on the student data, please predict the degree percentage.",
+                "answer_prompt": "What is the predicted degree percentage?"
+            }
+        },
+        "etest_p": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in academic performance prediction.",
+                "task_prompt": "Based on the student data, please predict the employment test percentage.",
+                "answer_prompt": "What is the predicted employment test percentage?"
+            }
+        },
+        "hsc_p": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in academic performance prediction.",
+                "task_prompt": "Based on the student data, please predict the higher secondary percentage.",
+                "answer_prompt": "What is the predicted higher secondary percentage?"
+            }
+        },
+        "ssc_p": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in academic performance prediction.",
+                "task_prompt": "Based on the student data, please predict the secondary school percentage.",
+                "answer_prompt": "What is the predicted secondary school percentage?"
+            }
+        }
+    }
+}

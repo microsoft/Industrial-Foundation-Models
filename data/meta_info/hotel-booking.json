@@ -1,0 +1,501 @@
+{
+    "basic_info": {
+        "row_num": 119390,
+        "col_num": 36,
+        "label_candidates": [
+            "is_canceled",
+            "hotel",
+            "meal",
+            "market_segment",
+            "distribution_channel",
+            "is_repeated_guest",
+            "deposit_type",
+            "customer_type",
+            "adr",
+            "required_car_parking_spaces",
+            "total_of_special_requests",
+            "reservation_status"
+        ],
+        "valid_feature_num": 32,
+        "num_features": [
+            "lead_time",
+            "arrival_date_year",
+            "arrival_date_week_number",
+            "arrival_date_day_of_month",
+            "stays_in_weekend_nights",
+            "stays_in_week_nights",
+            "adults",
+            "children",
+            "babies",
+            "previous_cancellations",
+            "previous_bookings_not_canceled",
+            "booking_changes",
+            "days_in_waiting_list",
+            "adr",
+            "required_car_parking_spaces",
+            "total_of_special_requests"
+        ],
+        "cat_features": [
+            "hotel",
+            "arrival_date_month",
+            "meal",
+            "country",
+            "market_segment",
+            "distribution_channel",
+            "is_repeated_guest",
+            "reserved_room_type",
+            "assigned_room_type",
+            "deposit_type",
+            "agent",
+            "company",
+            "customer_type",
+            "reservation_status",
+            "is_canceled"
+        ],
+        "other_features": [
+            "reservation_status_date"
+        ],
+        "tags": [
+            "exploratory data analysis",
+            "data visualization",
+            "data analytics",
+            "binary classification",
+            "hotels and accommodations"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/mojtaba142/hotel-booking"
+    },
+    "feature_info": {
+        "hotel": {
+            "description": "Type of hotel",
+            "type": "categorical",
+            "value_dict": {
+                "Resort Hotel": "The booking was made for a resort hotel",
+                "City Hotel": "The booking was made for a city hotel"
+            }
+        },
+        "is_canceled": {
+            "description": "Value indicating if the booking was canceled (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The booking was not canceled",
+                "1": "The booking was canceled"
+            }
+        },
+        "lead_time": {
+            "description": "Number of days that elapsed between the entering date of the booking into the PMS and the arrival date",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "arrival_date_year": {
+            "description": "Year of arrival date",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "arrival_date_month": {
+            "description": "Month of arrival date",
+            "type": "categorical"
+        },
+        "arrival_date_week_number": {
+            "description": "Week number of year for arrival date",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "arrival_date_day_of_month": {
+            "description": "Day of the month of arrival date",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "stays_in_weekend_nights": {
+            "description": "Number of weekend nights (Saturday or Sunday) the guest stayed or booked to stay at the hotel",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "stays_in_week_nights": {
+            "description": "Number of week nights (Monday to Friday) the guest stayed or booked to stay at the hotel",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "adults": {
+            "description": "Number of adults",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "children": {
+            "description": "Number of children",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "babies": {
+            "description": "Number of babies",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "meal": {
+            "description": "Type of meal booked",
+            "type": "categorical",
+            "value_dict": {
+                "BB": "Bed & Breakfast",
+                "FB": "Full Board (breakfast, lunch and dinner)",
+                "HB": "Half Board (breakfast and one other meal \u2013 usually dinner)",
+                "SC": "Self Catering",
+                "Undefined": "No meal package"
+            }
+        },
+        "country": {
+            "description": "Country of origin",
+            "type": "categorical"
+        },
+        "market_segment": {
+            "description": "Market segment designation",
+            "type": "categorical",
+            "value_dict": {
+                "Direct": "Bookings made directly with the hotel",
+                "Corporate": "Bookings made by corporate clients",
+                "Online TA": "Bookings made through an online Travel Agent",
+                "Offline TA/TO": "Bookings made through an offline Travel Agent/Tour Operator",
+                "Complementary": "Complimentary bookings",
+                "Groups": "Group bookings",
+                "Undefined": "Undefined market segment",
+                "Aviation": "Bookings made by airline crew"
+            }
+        },
+        "distribution_channel": {
+            "description": "Booking distribution channel",
+            "type": "categorical",
+            "value_dict": {
+                "Direct": "Bookings made directly without a third party",
+                "Corporate": "Bookings made by corporate clients",
+                "TA/TO": "Bookings made through a Travel Agent/Tour Operator",
+                "Undefined": "Undefined distribution channel",
+                "GDS": "Bookings made through a Global Distribution System (GDS)"
+            }
+        },
+        "is_repeated_guest": {
+            "description": "Value indicating if the booking was from a repeated guest (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The guest had not previously booked",
+                "1": "The guest had previously booked"
+            }
+        },
+        "previous_cancellations": {
+            "description": "Number of previous bookings that were cancelled by the customer prior to the current booking",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "previous_bookings_not_canceled": {
+            "description": "Number of previous bookings not cancelled by the customer prior to the current booking",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "reserved_room_type": {
+            "description": "Code of room type reserved",
+            "type": "categorical",
+            "value_dict": {
+                "C": "Room type C",
+                "A": "Room type A",
+                "D": "Room type D",
+                "E": "Room type E",
+                "G": "Room type G",
+                "F": "Room type F",
+                "H": "Room type H",
+                "L": "Room type L",
+                "P": "Room type P",
+                "B": "Room type B"
+            }
+        },
+        "assigned_room_type": {
+            "description": "Code for the type of room assigned to the booking",
+            "type": "categorical"
+        },
+        "booking_changes": {
+            "description": "Number of changes/amendments made to the booking from the moment the booking was entered on the PMS until the moment of check-in or cancellation",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "deposit_type": {
+            "description": "Indication on if the customer made a deposit to guarantee the booking",
+            "type": "categorical",
+            "value_dict": {
+                "No Deposit": "No deposit was made",
+                "Refundable": "A refundable deposit was made",
+                "Non Refund": "A non-refundable deposit was made"
+            }
+        },
+        "agent": {
+            "description": "ID of the travel agency that made the booking",
+            "type": "categorical"
+        },
+        "company": {
+            "description": "ID of the company/entity that made the booking or responsible for paying the booking",
+            "type": "categorical"
+        },
+        "days_in_waiting_list": {
+            "description": "Number of days the booking was in the waiting list before it was confirmed to the customer",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "customer_type": {
+            "description": "Type of booking",
+            "type": "categorical",
+            "value_dict": {
+                "Transient": "When the booking is not part of a group or contract, and is not associated to another transient booking",
+                "Contract": "When the booking has an allotment or other type of contract associated",
+                "Transient-Party": "When the booking is transient, but is associated to at least other transient booking",
+                "Group": "When the booking is associated to a group"
+            }
+        },
+        "adr": {
+            "description": "Average Daily Rate as defined by dividing the sum of all lodging transactions by the total number of staying nights",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "required_car_parking_spaces": {
+            "description": "Number of car parking spaces required by the customer",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "total_of_special_requests": {
+            "description": "Number of special requests made by the customer",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "reservation_status": {
+            "description": "Last reservation status",
+            "type": "categorical",
+            "value_dict": {
+                "Check-Out": "The guest has checked out",
+                "Canceled": "The booking was canceled",
+                "No-Show": "The guest did not check-in and did inform the hotel of the reason"
+            }
+        },
+        "reservation_status_date": {
+            "description": "Date at which the last status was set",
+            "type": "other"
+        },
+        "name": {
+            "description": "Name of the customer",
+            "type": "useless"
+        },
+        "email": {
+            "description": "Email of the customer",
+            "type": "useless"
+        },
+        "phone-number": {
+            "description": "Phone number of the customer",
+            "type": "useless"
+        },
+        "credit_card": {
+            "description": "Credit card number of the customer",
+            "type": "useless"
+        }
+    },
+    "task_info": {
+        "is_canceled": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in hotel booking analysis.",
+                "task_prompt": "Based on the features of the hotel booking, please predict if the booking was canceled.",
+                "answer_prompt": "The booking was not canceled[0] or The booking was canceled[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "The booking was not canceled",
+                "1": "The booking was canceled"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "hotel": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in hotel booking analysis.",
+                "task_prompt": "Based on the features of the hotel booking, please predict the type of hotel booked.",
+                "answer_prompt": "The booking was made for a resort hotel[0] or The booking was made for a city hotel[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "Resort Hotel": "The booking was made for a resort hotel",
+                "City Hotel": "The booking was made for a city hotel"
+            },
+            "class_index_dict": {
+                "Resort Hotel": 0,
+                "City Hotel": 1
+            }
+        },
+        "meal": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in hotel booking analysis.",
+                "task_prompt": "Based on the features of the hotel booking, please predict the meal package chosen.",
+                "answer_prompt": "Bed & Breakfast[0], Full Board (breakfast, lunch and dinner)[1], Half Board (breakfast and one other meal \u2013 usually dinner)[2], Self Catering[3] or No meal package[4]?"
+            },
+            "class_num": 5,
+            "class_value_dict": {
+                "BB": "Bed & Breakfast",
+                "FB": "Full Board (breakfast, lunch and dinner)",
+                "HB": "Half Board (breakfast and one other meal \u2013 usually dinner)",
+                "SC": "Self Catering",
+                "Undefined": "No meal package"
+            },
+            "class_index_dict": {
+                "BB": 0,
+                "FB": 1,
+                "HB": 2,
+                "SC": 3,
+                "Undefined": 4
+            }
+        },
+        "market_segment": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in hotel booking analysis.",
+                "task_prompt": "Based on the features of the hotel booking, please predict the market segment of the booking.",
+                "answer_prompt": "Bookings made directly with the hotel[0], Bookings made by corporate clients[1], Bookings made through an online Travel Agent[2], Bookings made through an offline Travel Agent/Tour Operator[3], Complimentary bookings[4], Group bookings[5], Undefined market segment[6] or Bookings made by airline crew[7]?"
+            },
+            "class_num": 8,
+            "class_value_dict": {
+                "Direct": "Bookings made directly with the hotel",
+                "Corporate": "Bookings made by corporate clients",
+                "Online TA": "Bookings made through an online Travel Agent",
+                "Offline TA/TO": "Bookings made through an offline Travel Agent/Tour Operator",
+                "Complementary": "Complimentary bookings",
+                "Groups": "Group bookings",
+                "Undefined": "Undefined market segment",
+                "Aviation": "Bookings made by airline crew"
+            },
+            "class_index_dict": {
+                "Direct": 0,
+                "Corporate": 1,
+                "Online TA": 2,
+                "Offline TA/TO": 3,
+                "Complementary": 4,
+                "Groups": 5,
+                "Undefined": 6,
+                "Aviation": 7
+            }
+        },
+        "distribution_channel": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in hotel booking analysis.",
+                "task_prompt": "Based on the features of the hotel booking, please predict the distribution channel of the booking.",
+                "answer_prompt": "Bookings made directly without a third party[0], Bookings made by corporate clients[1], Bookings made through a Travel Agent/Tour Operator[2], Undefined distribution channel[3] or Bookings made through a Global Distribution System (GDS)[4]?"
+            },
+            "class_num": 5,
+            "class_value_dict": {
+                "Direct": "Bookings made directly without a third party",
+                "Corporate": "Bookings made by corporate clients",
+                "TA/TO": "Bookings made through a Travel Agent/Tour Operator",
+                "Undefined": "Undefined distribution channel",
+                "GDS": "Bookings made through a Global Distribution System (GDS)"
+            },
+            "class_index_dict": {
+                "Direct": 0,
+                "Corporate": 1,
+                "TA/TO": 2,
+                "Undefined": 3,
+                "GDS": 4
+            }
+        },
+        "is_repeated_guest": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in hotel booking analysis.",
+                "task_prompt": "Based on the features of the hotel booking, please predict if the guest had previously booked.",
+                "answer_prompt": "The guest had not previously booked[0] or The guest had previously booked[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "The guest had not previously booked",
+                "1": "The guest had previously booked"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "deposit_type": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in hotel booking analysis.",
+                "task_prompt": "Based on the features of the hotel booking, please predict the deposit type of the booking.",
+                "answer_prompt": "No deposit was made[0], A refundable deposit was made[1] or A non-refundable deposit was made[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "No Deposit": "No deposit was made",
+                "Refundable": "A refundable deposit was made",
+                "Non Refund": "A non-refundable deposit was made"
+            },
+            "class_index_dict": {
+                "No Deposit": 0,
+                "Refundable": 1,
+                "Non Refund": 2
+            }
+        },
+        "customer_type": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in hotel booking analysis.",
+                "task_prompt": "Based on the features of the hotel booking, please predict the customer type of the booking.",
+                "answer_prompt": "When the booking is not part of a group or contract, and is not associated to another transient booking[0], When the booking has an allotment or other type of contract associated[1], When the booking is transient, but is associated to at least other transient booking[2] or When the booking is associated to a group[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "Transient": "When the booking is not part of a group or contract, and is not associated to another transient booking",
+                "Contract": "When the booking has an allotment or other type of contract associated",
+                "Transient-Party": "When the booking is transient, but is associated to at least other transient booking",
+                "Group": "When the booking is associated to a group"
+            },
+            "class_index_dict": {
+                "Transient": 0,
+                "Contract": 1,
+                "Transient-Party": 2,
+                "Group": 3
+            }
+        },
+        "adr": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in hotel booking analysis.",
+                "task_prompt": "Based on the features of the hotel booking, please predict the Average Daily Rate (ADR) of the booking."
+            }
+        },
+        "required_car_parking_spaces": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in hotel booking analysis.",
+                "task_prompt": "Based on the features of the hotel booking, please predict the number of car parking spaces required for the booking."
+            }
+        },
+        "total_of_special_requests": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in hotel booking analysis.",
+                "task_prompt": "Based on the features of the hotel booking, please predict the total number of special requests made for the booking."
+            }
+        },
+        "reservation_status": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in hotel booking analysis.",
+                "task_prompt": "Based on the features of the hotel booking, please predict the reservation status of the booking.",
+                "answer_prompt": "The guest has checked out[0], The booking was canceled[1] or The guest did not check-in and did inform the hotel of the reason[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "Check-Out": "The guest has checked out",
+                "Canceled": "The booking was canceled",
+                "No-Show": "The guest did not check-in and did inform the hotel of the reason"
+            },
+            "class_index_dict": {
+                "Check-Out": 0,
+                "Canceled": 1,
+                "No-Show": 2
+            }
+        }
+    }
+}

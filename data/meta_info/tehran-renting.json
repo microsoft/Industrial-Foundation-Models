@@ -1,0 +1,143 @@
+{
+    "basic_info": {
+        "row_num": 165118,
+        "col_num": 14,
+        "label_candidates": [
+            "rent",
+            "deposit",
+            "all_to_deposit"
+        ],
+        "valid_feature_num": 13,
+        "num_features": [
+            "deposit",
+            "floor",
+            "area",
+            "age",
+            "rooms",
+            "all_to_deposit",
+            "rent"
+        ],
+        "cat_features": [
+            "elavator",
+            "parking",
+            "Warehouse",
+            "region",
+            "district"
+        ],
+        "other_features": [
+            "time"
+        ],
+        "tags": [
+            "housing",
+            "beginner",
+            "exploratory data analysis",
+            "tabular",
+            "regression",
+            "hotels and accommodations"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/amiroft/tehran-renting"
+    },
+    "feature_info": {
+        "Unnamed: 0": {
+            "description": "An index column added automatically when the data was saved, it has no meaningful information.",
+            "type": "useless"
+        },
+        "deposit": {
+            "description": "The deposit amount required for the rental property, in million Iranian Rials.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "rent": {
+            "description": "The monthly rent of the property, in million Iranian Rials.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "floor": {
+            "description": "The floor on which the rental property is located.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "area": {
+            "description": "The area of the rental property in square meters.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "age": {
+            "description": "The age of the building in which the rental property is located, in years.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "rooms": {
+            "description": "The number of rooms in the rental property.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "elavator": {
+            "description": "Whether the building has an elevator or not, 1 means it has an elevator, 0 means it does not.",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The building has an elevator.",
+                "0": "The building does not have an elevator."
+            }
+        },
+        "parking": {
+            "description": "Whether the rental property has parking or not, 1 means it has parking, 0 means it does not.",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The rental property has parking.",
+                "0": "The rental property does not have parking."
+            }
+        },
+        "Warehouse": {
+            "description": "Whether the rental property has a warehouse or not, 1 means it has a warehouse, 0 means it does not.",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The rental property has a warehouse.",
+                "0": "The rental property does not have a warehouse."
+            }
+        },
+        "time": {
+            "description": "The time when the rental property was listed, in the format of YYYY-MM-DD.",
+            "type": "other"
+        },
+        "region": {
+            "description": "The region where the rental property is located.",
+            "type": "categorical"
+        },
+        "all_to_deposit": {
+            "description": "The total amount to be paid as deposit, in million Iranian Rials.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "district": {
+            "description": "The district where the rental property is located.",
+            "type": "categorical"
+        }
+    },
+    "task_info": {
+        "rent": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate market analysis.",
+                "task_prompt": "Based on the features of the property, please predict the rental price.",
+                "answer_prompt": "The predicted rental price is ________."
+            }
+        },
+        "deposit": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate market analysis.",
+                "task_prompt": "Based on the features of the property, please predict the deposit amount.",
+                "answer_prompt": "The predicted deposit amount is ________."
+            }
+        },
+        "all_to_deposit": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate market analysis.",
+                "task_prompt": "Based on the features of the property, please predict the total amount to deposit.",
+                "answer_prompt": "The predicted total amount to deposit is ________."
+            }
+        }
+    }
+}

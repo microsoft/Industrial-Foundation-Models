@@ -1,0 +1,154 @@
+{
+    "basic_info": {
+        "row_num": 73,
+        "col_num": 10,
+        "label_candidates": [
+            "Imdb rating",
+            "U.S. viewers(millions)",
+            "Season"
+        ],
+        "valid_feature_num": 10,
+        "num_features": [
+            "No. overall",
+            "No. in season",
+            "U.S. viewers(millions)",
+            "Imdb rating"
+        ],
+        "cat_features": [
+            "Season",
+            "Title",
+            "Directed by",
+            "Written by",
+            "Novel(s) adapted"
+        ],
+        "other_features": [
+            "Original air date"
+        ],
+        "tags": [
+            "exploratory data analysis",
+            "data visualization",
+            "data analytics",
+            "text",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/bakar31/game-of-thronesgot"
+    },
+    "feature_info": {
+        "No. overall": {
+            "description": "The overall episode number in the Game of Thrones series",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "No. in season": {
+            "description": "The episode number within a particular season",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Season": {
+            "description": "The season number of the Game of Thrones series",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The first season of the Game of Thrones series",
+                "2": "The second season of the Game of Thrones series",
+                "3": "The third season of the Game of Thrones series",
+                "4": "The fourth season of the Game of Thrones series",
+                "5": "The fifth season of the Game of Thrones series",
+                "6": "The sixth season of the Game of Thrones series",
+                "7": "The seventh season of the Game of Thrones series",
+                "8": "The eighth and final season of the Game of Thrones series"
+            }
+        },
+        "Title": {
+            "description": "The title of the episode",
+            "type": "categorical"
+        },
+        "Directed by": {
+            "description": "The director of the episode",
+            "type": "categorical"
+        },
+        "Written by": {
+            "description": "The writer(s) of the episode",
+            "type": "categorical",
+            "value_dict": {
+                "David Benioff & D. B. Weiss": "Episodes written by David Benioff and D. B. Weiss",
+                "Bryan Cogman": "Episodes written by Bryan Cogman",
+                "George R. R. Martin": "Episodes written by George R. R. Martin",
+                "Vanessa Taylor": "Episodes written by Vanessa Taylor",
+                "Dave Hill": "Episodes written by Dave Hill"
+            }
+        },
+        "Novel(s) adapted": {
+            "description": "The novel(s) from which the episode was adapted",
+            "type": "categorical",
+            "value_dict": {
+                "A Game of Thrones": "Episodes adapted from the novel \"A Game of Thrones\"",
+                "A Clash of Kings": "Episodes adapted from the novel \"A Clash of Kings\"",
+                "A Storm of Swords": "Episodes adapted from the novel \"A Storm of Swords\"",
+                "A Feast for Crows, A Dance with Dragons and original content": "Episodes adapted from the novels \"A Feast for Crows\", \"A Dance with Dragons\" and original content",
+                "Outline from The Winds of Winter and original content ": "Episodes adapted from the outline of \"The Winds of Winter\" and original content",
+                "Outline from A Dream of Spring and original content ": "Episodes adapted from the outline of \"A Dream of Spring\" and original content"
+            }
+        },
+        "Original air date": {
+            "description": "The original air date of the episode",
+            "type": "other"
+        },
+        "U.S. viewers(millions)": {
+            "description": "The number of U.S. viewers in millions who watched the episode",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Imdb rating": {
+            "description": "The IMDB rating of the episode",
+            "type": "numerical",
+            "decimal": 1
+        }
+    },
+    "task_info": {
+        "Imdb rating": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing TV show ratings.",
+                "task_prompt": "Based on the features of the Game of Thrones episodes, please predict the IMDb rating.",
+                "answer_prompt": "The IMDb rating is."
+            }
+        },
+        "U.S. viewers(millions)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing TV show viewership.",
+                "task_prompt": "Based on the features of the Game of Thrones episodes, please predict the number of U.S. viewers in millions.",
+                "answer_prompt": "The number of U.S. viewers in millions is."
+            }
+        },
+        "Season": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing TV show seasons.",
+                "task_prompt": "Based on the features of the Game of Thrones episodes, please predict the season.",
+                "answer_prompt": "The first season of the Game of Thrones series[0], The second season of the Game of Thrones series[1], The third season of the Game of Thrones series[2], The fourth season of the Game of Thrones series[3], The fifth season of the Game of Thrones series[4], The sixth season of the Game of Thrones series[5], The seventh season of the Game of Thrones series[6], The eighth and final season of the Game of Thrones series[7]?"
+            },
+            "class_num": 8,
+            "class_value_dict": {
+                "1": "The first season of the Game of Thrones series",
+                "2": "The second season of the Game of Thrones series",
+                "3": "The third season of the Game of Thrones series",
+                "4": "The fourth season of the Game of Thrones series",
+                "5": "The fifth season of the Game of Thrones series",
+                "6": "The sixth season of the Game of Thrones series",
+                "7": "The seventh season of the Game of Thrones series",
+                "8": "The eighth and final season of the Game of Thrones series"
+            },
+            "class_index_dict": {
+                "1": 0,
+                "2": 1,
+                "3": 2,
+                "4": 3,
+                "5": 4,
+                "6": 5,
+                "7": 6,
+                "8": 7
+            }
+        }
+    }
+}

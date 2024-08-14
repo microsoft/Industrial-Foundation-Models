@@ -1,0 +1,303 @@
+{
+    "basic_info": {
+        "row_num": 425119,
+        "col_num": 34,
+        "label_candidates": [
+            "Chased Successfully",
+            "Innings Runs",
+            "Runs to Get",
+            "Total Batter Runs",
+            "Total Non Striker Runs",
+            "Bowler Runs Conceded"
+        ],
+        "valid_feature_num": 33,
+        "num_features": [
+            "Over",
+            "Ball",
+            "Batter Runs",
+            "Extra Runs",
+            "Runs From Ball",
+            "Innings Runs",
+            "Innings Wickets",
+            "Target Score",
+            "Runs to Get",
+            "Balls Remaining",
+            "Total Batter Runs",
+            "Total Non Striker Runs",
+            "Batter Balls Faced",
+            "Non Striker Balls Faced",
+            "Player Out Runs",
+            "Player Out Balls Faced",
+            "Bowler Runs Conceded"
+        ],
+        "cat_features": [
+            "Venue",
+            "Bat First",
+            "Bat Second",
+            "Innings",
+            "Batter",
+            "Non Striker",
+            "Bowler",
+            "Ball Rebowled",
+            "Extra Type",
+            "Wicket",
+            "Method",
+            "Player Out",
+            "Chased Successfully",
+            "Valid Ball",
+            "Winner"
+        ],
+        "other_features": [
+            "Date"
+        ],
+        "tags": [
+            "cricket",
+            "sports",
+            "matplotlib",
+            "numpy",
+            "pandas"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/jamiewelsh2/ball-by-ball-it20"
+    },
+    "feature_info": {
+        "Match ID": {
+            "description": "Unique identifier for each match",
+            "type": "useless"
+        },
+        "Date": {
+            "description": "Date when the match was played",
+            "type": "other"
+        },
+        "Venue": {
+            "description": "Location where the match was played",
+            "type": "categorical"
+        },
+        "Bat First": {
+            "description": "Team that batted first",
+            "type": "categorical"
+        },
+        "Bat Second": {
+            "description": "Team that batted second",
+            "type": "categorical"
+        },
+        "Innings": {
+            "description": "Innings number in the match",
+            "type": "categorical",
+            "value_dict": {
+                "1": "First innings of the match",
+                "2": "Second innings of the match"
+            }
+        },
+        "Over": {
+            "description": "Over number in the innings",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Ball": {
+            "description": "Ball number in the over",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Batter": {
+            "description": "Name of the player who is batting",
+            "type": "categorical"
+        },
+        "Non Striker": {
+            "description": "Name of the non-striking batsman",
+            "type": "categorical"
+        },
+        "Bowler": {
+            "description": "Name of the player who is bowling",
+            "type": "categorical"
+        },
+        "Batter Runs": {
+            "description": "Runs scored by the batter from the ball",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Extra Runs": {
+            "description": "Extra runs scored from the ball",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Runs From Ball": {
+            "description": "Total runs scored from the ball including batter runs and extra runs",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Ball Rebowled": {
+            "description": "Indicates if the ball was rebowled",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The ball was not rebowled",
+                "1": "The ball was rebowled"
+            }
+        },
+        "Extra Type": {
+            "description": "Type of extra run if any",
+            "type": "categorical",
+            "value_dict": {
+                "[]": "No extra runs",
+                "['wides']": "Extra runs due to wide ball",
+                "['legbyes']": "Extra runs due to leg byes",
+                "['noballs']": "Extra runs due to no ball",
+                "['byes']": "Extra runs due to byes",
+                "['byes', 'noballs']": "Extra runs due to byes and no ball",
+                "['legbyes', 'noballs']": "Extra runs due to leg byes and no ball",
+                "['penalty']": "Extra runs due to penalty",
+                "['noballs', 'byes']": "Extra runs due to no ball and byes",
+                "['noballs', 'penalty']": "Extra runs due to no ball and penalty"
+            }
+        },
+        "Wicket": {
+            "description": "Indicates if a wicket fell on the ball",
+            "type": "categorical",
+            "value_dict": {
+                "0": "No wicket fell",
+                "1": "A wicket fell"
+            }
+        },
+        "Method": {
+            "description": "Method of dismissal if a wicket fell",
+            "type": "categorical"
+        },
+        "Player Out": {
+            "description": "Name of the player who got out",
+            "type": "categorical"
+        },
+        "Innings Runs": {
+            "description": "Total runs scored in the innings till that ball",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Innings Wickets": {
+            "description": "Total wickets fallen in the innings till that ball",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Target Score": {
+            "description": "Score that the batting team is chasing",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Runs to Get": {
+            "description": "Runs required to win the match at that point",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Balls Remaining": {
+            "description": "Balls remaining in the match at that point",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Winner": {
+            "description": "Team that won the match",
+            "type": "categorical"
+        },
+        "Chased Successfully": {
+            "description": "Indicates if the target was successfully chased",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The target was successfully chased",
+                "0": "The target was not successfully chased"
+            }
+        },
+        "Total Batter Runs": {
+            "description": "Total runs scored by the batter in the match till that ball",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Total Non Striker Runs": {
+            "description": "Total runs scored by the non-striker in the match till that ball",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Batter Balls Faced": {
+            "description": "Total balls faced by the batter in the match till that ball",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Non Striker Balls Faced": {
+            "description": "Total balls faced by the non-striker in the match till that ball",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Player Out Runs": {
+            "description": "Runs scored by the player who got out",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Player Out Balls Faced": {
+            "description": "Balls faced by the player who got out",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Bowler Runs Conceded": {
+            "description": "Runs conceded by the bowler in the match till that ball",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Valid Ball": {
+            "description": "Indicates if the ball bowled was valid",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The ball bowled was valid",
+                "0": "The ball bowled was not valid"
+            }
+        }
+    },
+    "task_info": {
+        "Chased Successfully": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in cricket match analysis.",
+                "task_prompt": "Based on the features of the cricket match, please predict if the target was successfully chased.",
+                "answer_prompt": "The target was successfully chased[1] or not[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "The target was successfully chased",
+                "0": "The target was not successfully chased"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        },
+        "Innings Runs": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in cricket match analysis.",
+                "task_prompt": "Based on the features of the cricket match, please predict the runs made in the innings."
+            }
+        },
+        "Runs to Get": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in cricket match analysis.",
+                "task_prompt": "Based on the features of the cricket match, please predict the runs required to win."
+            }
+        },
+        "Total Batter Runs": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in cricket match analysis.",
+                "task_prompt": "Based on the features of the cricket match, please predict the total runs made by the batter."
+            }
+        },
+        "Total Non Striker Runs": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in cricket match analysis.",
+                "task_prompt": "Based on the features of the cricket match, please predict the total runs made by the non-striker."
+            }
+        },
+        "Bowler Runs Conceded": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in cricket match analysis.",
+                "task_prompt": "Based on the features of the cricket match, please predict the total runs conceded by the bowler."
+            }
+        }
+    }
+}

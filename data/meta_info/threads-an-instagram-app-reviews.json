@@ -1,0 +1,69 @@
+{
+    "basic_info": {
+        "row_num": 32910,
+        "col_num": 4,
+        "label_candidates": [
+            "rating",
+            "review_description"
+        ],
+        "valid_feature_num": 4,
+        "num_features": [
+            "rating"
+        ],
+        "cat_features": [
+            "source"
+        ],
+        "other_features": [
+            "review_description",
+            "review_date"
+        ],
+        "tags": [
+            "nlp",
+            "text",
+            "multiclass classification",
+            "ratings and reviews"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/saloni1712/threads-an-instagram-app-reviews"
+    },
+    "feature_info": {
+        "source": {
+            "description": "The platform where the review was made",
+            "type": "categorical",
+            "value_dict": {
+                "Google Play": "The review was made on Google Play platform",
+                "App Store": "The review was made on App Store platform"
+            }
+        },
+        "review_description": {
+            "description": "The text content of the review",
+            "type": "other"
+        },
+        "rating": {
+            "description": "The rating given by the user, presumably on a scale",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "review_date": {
+            "description": "The date and time when the review was made",
+            "type": "other"
+        }
+    },
+    "task_info": {
+        "rating": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in app review analysis.",
+                "task_prompt": "Based on the review description and source, please predict the rating.",
+                "answer_prompt": "What is the predicted rating?"
+            }
+        },
+        "review_description": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in text generation.",
+                "task_prompt": "Based on the source, rating and review date, please generate a possible review description.",
+                "answer_prompt": "What is the generated review description?"
+            }
+        }
+    }
+}

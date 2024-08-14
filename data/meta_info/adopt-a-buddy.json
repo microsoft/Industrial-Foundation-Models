@@ -1,0 +1,165 @@
+{
+    "basic_info": {
+        "row_num": 18834,
+        "col_num": 11,
+        "label_candidates": [
+            "breed_category",
+            "pet_category",
+            "condition"
+        ],
+        "valid_feature_num": 10,
+        "num_features": [
+            "length(m)",
+            "height(cm)",
+            "X1",
+            "X2"
+        ],
+        "cat_features": [
+            "condition",
+            "color_type",
+            "breed_category",
+            "pet_category"
+        ],
+        "other_features": [
+            "issue_date",
+            "listing_date"
+        ],
+        "tags": [
+            "earth and nature",
+            "artificial intelligence",
+            "computer science",
+            "data cleaning",
+            "text",
+            "dailychallenge",
+            "gpu"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/akash14/adopt-a-buddy"
+    },
+    "feature_info": {
+        "pet_id": {
+            "description": "Unique identifier for each pet",
+            "type": "useless"
+        },
+        "issue_date": {
+            "description": "The date when the pet was issued for adoption",
+            "type": "other"
+        },
+        "listing_date": {
+            "description": "The date when the pet was listed for adoption",
+            "type": "other"
+        },
+        "condition": {
+            "description": "The condition of the pet when it was listed for adoption",
+            "type": "categorical",
+            "value_dict": {
+                "2.0": "Condition type 2",
+                "1.0": "Condition type 1",
+                "0.0": "Condition type 0"
+            }
+        },
+        "color_type": {
+            "description": "The color type of the pet",
+            "type": "categorical"
+        },
+        "length(m)": {
+            "description": "The length of the pet in meters",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "height(cm)": {
+            "description": "The height of the pet in centimeters",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "X1": {
+            "description": "An anonymized feature related to the pet",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "X2": {
+            "description": "Another anonymized feature related to the pet",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "breed_category": {
+            "description": "The breed category of the pet",
+            "type": "categorical",
+            "value_dict": {
+                "0.0": "Breed category 0",
+                "2.0": "Breed category 2",
+                "1.0": "Breed category 1"
+            }
+        },
+        "pet_category": {
+            "description": "The category of the pet",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Pet category 1",
+                "2": "Pet category 2",
+                "4": "Pet category 4",
+                "0": "Pet category 0"
+            }
+        }
+    },
+    "task_info": {
+        "breed_category": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in animal adoption.",
+                "task_prompt": "Based on the features of the pet, please predict the breed category.",
+                "answer_prompt": "Breed category 0[0], Breed category 1[1], or Breed category 2[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "0.0": "Breed category 0",
+                "2.0": "Breed category 2",
+                "1.0": "Breed category 1"
+            },
+            "class_index_dict": {
+                "0.0": 0,
+                "1.0": 1,
+                "2.0": 2
+            }
+        },
+        "pet_category": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in animal adoption.",
+                "task_prompt": "Based on the features of the pet, please predict the pet category.",
+                "answer_prompt": "Pet category 0[0], Pet category 1[1], Pet category 2[2], or Pet category 4[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "1": "Pet category 1",
+                "2": "Pet category 2",
+                "4": "Pet category 4",
+                "0": "Pet category 0"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1,
+                "2": 2,
+                "4": 3
+            }
+        },
+        "condition": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in animal adoption.",
+                "task_prompt": "Based on the features of the pet, please predict the condition.",
+                "answer_prompt": "Condition type 0[0], Condition type 1[1], or Condition type 2[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "2.0": "Condition type 2",
+                "1.0": "Condition type 1",
+                "0.0": "Condition type 0"
+            },
+            "class_index_dict": {
+                "0.0": 0,
+                "1.0": 1,
+                "2.0": 2
+            }
+        }
+    }
+}

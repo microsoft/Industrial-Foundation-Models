@@ -1,0 +1,122 @@
+{
+    "basic_info": {
+        "row_num": 21626,
+        "col_num": 9,
+        "label_candidates": [
+            "Burn Rate",
+            "Mental Fatigue Score",
+            "Resource Allocation"
+        ],
+        "valid_feature_num": 8,
+        "num_features": [
+            "Resource Allocation",
+            "Mental Fatigue Score",
+            "Burn Rate"
+        ],
+        "cat_features": [
+            "Gender",
+            "Company Type",
+            "WFH Setup Available",
+            "Designation"
+        ],
+        "other_features": [
+            "Date of Joining"
+        ],
+        "tags": [
+            "mental health",
+            "business",
+            "health",
+            "exploratory data analysis",
+            "data analytics",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/blurredmachine/are-your-employees-burning-out"
+    },
+    "feature_info": {
+        "Employee ID": {
+            "description": "Unique identifier of the employee",
+            "type": "useless"
+        },
+        "Date of Joining": {
+            "description": "The date when the employee joined the company",
+            "type": "other"
+        },
+        "Gender": {
+            "description": "The gender of the employee",
+            "type": "categorical",
+            "value_dict": {
+                "Female": "The employee is female",
+                "Male": "The employee is male"
+            }
+        },
+        "Company Type": {
+            "description": "The type of the company where the employee works",
+            "type": "categorical",
+            "value_dict": {
+                "Service": "The company is a service-based company",
+                "Product": "The company is a product-based company"
+            }
+        },
+        "WFH Setup Available": {
+            "description": "Whether the employee has a work from home setup",
+            "type": "categorical",
+            "value_dict": {
+                "No": "The employee does not have a work from home setup",
+                "Yes": "The employee has a work from home setup"
+            }
+        },
+        "Designation": {
+            "description": "The designation or position of the employee in the company",
+            "type": "categorical",
+            "value_dict": {
+                "2.0": "The employee holds a designation level of 2.0",
+                "1.0": "The employee holds a designation level of 1.0",
+                "3.0": "The employee holds a designation level of 3.0",
+                "0.0": "The employee holds a designation level of 0.0",
+                "4.0": "The employee holds a designation level of 4.0",
+                "5.0": "The employee holds a designation level of 5.0"
+            }
+        },
+        "Resource Allocation": {
+            "description": "The amount of resources allocated to the employee",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Mental Fatigue Score": {
+            "description": "The score indicating the level of mental fatigue of the employee",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Burn Rate": {
+            "description": "The rate at which an employee experiences burnout",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "Burn Rate": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in employee well-being and productivity analysis.",
+                "task_prompt": "Based on the features of the employee, please predict the burn rate.",
+                "answer_prompt": "The predicted burn rate is."
+            }
+        },
+        "Mental Fatigue Score": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in employee mental health analysis.",
+                "task_prompt": "Based on the features of the employee, please predict the mental fatigue score.",
+                "answer_prompt": "The predicted mental fatigue score is."
+            }
+        },
+        "Resource Allocation": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in resource management.",
+                "task_prompt": "Based on the features of the employee, please predict the resource allocation.",
+                "answer_prompt": "The predicted resource allocation is."
+            }
+        }
+    }
+}

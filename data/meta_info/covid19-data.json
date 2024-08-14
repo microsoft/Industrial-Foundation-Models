@@ -1,0 +1,414 @@
+{
+    "basic_info": {
+        "row_num": 202342,
+        "col_num": 45,
+        "label_candidates": [
+            "total_vaccinations",
+            "new_vaccinations",
+            "total_tests",
+            "new_tests",
+            "positive_rate",
+            "people_vaccinated",
+            "people_fully_vaccinated",
+            "total_boosters",
+            "stringency_index",
+            "life_expectancy",
+            "human_development_index",
+            "excess_mortality"
+        ],
+        "valid_feature_num": 45,
+        "num_features": [
+            "total_tests",
+            "new_tests",
+            "total_tests_per_thousand",
+            "new_tests_per_thousand",
+            "new_tests_smoothed",
+            "new_tests_smoothed_per_thousand",
+            "positive_rate",
+            "tests_per_case",
+            "total_vaccinations",
+            "people_vaccinated",
+            "people_fully_vaccinated",
+            "total_boosters",
+            "new_vaccinations",
+            "new_vaccinations_smoothed",
+            "total_vaccinations_per_hundred",
+            "people_vaccinated_per_hundred",
+            "people_fully_vaccinated_per_hundred",
+            "total_boosters_per_hundred",
+            "new_vaccinations_smoothed_per_million",
+            "new_people_vaccinated_smoothed",
+            "new_people_vaccinated_smoothed_per_hundred",
+            "stringency_index",
+            "population_density",
+            "median_age",
+            "aged_65_older",
+            "aged_70_older",
+            "gdp_per_capita",
+            "extreme_poverty",
+            "cardiovasc_death_rate",
+            "diabetes_prevalence",
+            "female_smokers",
+            "male_smokers",
+            "handwashing_facilities",
+            "hospital_beds_per_thousand",
+            "life_expectancy",
+            "human_development_index",
+            "excess_mortality_cumulative_absolute",
+            "excess_mortality_cumulative",
+            "excess_mortality",
+            "excess_mortality_cumulative_per_million"
+        ],
+        "cat_features": [
+            "iso_code",
+            "location",
+            "tests_units",
+            "continent"
+        ],
+        "other_features": [
+            "date"
+        ],
+        "tags": [
+            "healthcare",
+            "diseases",
+            "public health",
+            "people",
+            "covid19"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/roopacalistus/covid19-data"
+    },
+    "feature_info": {
+        "iso_code": {
+            "description": "The International Organization for Standardization (ISO) 3166-1 alpha-3 country codes.",
+            "type": "categorical"
+        },
+        "continent": {
+            "description": "The continent where the country is located.",
+            "type": "categorical",
+            "value_dict": {
+                "Asia": "The location is in the continent of Asia",
+                "Europe": "The location is in the continent of Europe",
+                "Africa": "The location is in the continent of Africa",
+                "North America": "The location is in the continent of North America",
+                "South America": "The location is in the continent of South America",
+                "Oceania": "The location is in the continent of Oceania"
+            }
+        },
+        "location": {
+            "description": "The specific location or country.",
+            "type": "categorical"
+        },
+        "date": {
+            "description": "The date of data collection.",
+            "type": "other"
+        },
+        "total_tests": {
+            "description": "The total number of COVID-19 tests conducted.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "new_tests": {
+            "description": "The number of new COVID-19 tests conducted on the date.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "total_tests_per_thousand": {
+            "description": "The total number of COVID-19 tests conducted per thousand people.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "new_tests_per_thousand": {
+            "description": "The number of new COVID-19 tests conducted on the date per thousand people.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "new_tests_smoothed": {
+            "description": "The smoothed number of new COVID-19 tests conducted.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "new_tests_smoothed_per_thousand": {
+            "description": "The smoothed number of new COVID-19 tests conducted per thousand people.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "positive_rate": {
+            "description": "The rate of positive COVID-19 cases.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "tests_per_case": {
+            "description": "The number of tests conducted per confirmed COVID-19 case.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "tests_units": {
+            "description": "Units used to report the COVID-19 testing data.",
+            "type": "categorical",
+            "value_dict": {
+                "tests performed": "The testing data is reported as the number of tests performed",
+                "units unclear": "The units of the testing data are unclear",
+                "samples tested": "The testing data is reported as the number of samples tested",
+                "people tested": "The testing data is reported as the number of people tested"
+            }
+        },
+        "total_vaccinations": {
+            "description": "The total number of COVID-19 vaccination doses administered.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "people_vaccinated": {
+            "description": "The total number of people who received at least one vaccine dose.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "people_fully_vaccinated": {
+            "description": "The total number of people who received all doses prescribed by the vaccination protocol.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "total_boosters": {
+            "description": "The total number of booster doses administered.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "new_vaccinations": {
+            "description": "The number of new COVID-19 vaccination doses administered on the date.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "new_vaccinations_smoothed": {
+            "description": "The smoothed number of new COVID-19 vaccination doses administered.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "total_vaccinations_per_hundred": {
+            "description": "The total number of COVID-19 vaccination doses administered per hundred people.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "people_vaccinated_per_hundred": {
+            "description": "The total number of people who received at least one vaccine dose per hundred people.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "people_fully_vaccinated_per_hundred": {
+            "description": "The total number of people who received all doses prescribed by the vaccination protocol per hundred people.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "total_boosters_per_hundred": {
+            "description": "The total number of booster doses administered per hundred people.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "new_vaccinations_smoothed_per_million": {
+            "description": "The smoothed number of new COVID-19 vaccination doses administered per million people.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "new_people_vaccinated_smoothed": {
+            "description": "The smoothed number of new people who received at least one vaccine dose.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "new_people_vaccinated_smoothed_per_hundred": {
+            "description": "The smoothed number of new people who received at least one vaccine dose per hundred people.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "stringency_index": {
+            "description": "The government response stringency index: composite measure based on 9 response indicators including school closures, workplace closures, and travel bans, scaled from 0 to 100 (100 = strictest response)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "population_density": {
+            "description": "The population density of the location (people per km\u00b2).",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "median_age": {
+            "description": "The median age of the population.",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "aged_65_older": {
+            "description": "The proportion of the population that is 65 years and older.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "aged_70_older": {
+            "description": "The proportion of the population that is 70 years and older.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "gdp_per_capita": {
+            "description": "Gross Domestic Product per capita in US dollars.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "extreme_poverty": {
+            "description": "The proportion of the population living in extreme poverty.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "cardiovasc_death_rate": {
+            "description": "The death rate from cardiovascular disease in the population (per 100,000).",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "diabetes_prevalence": {
+            "description": "The prevalence of diabetes in the population (%).",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "female_smokers": {
+            "description": "The proportion of females in the population that smoke.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "male_smokers": {
+            "description": "The proportion of males in the population that smoke.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "handwashing_facilities": {
+            "description": "The proportion of the population with access to handwashing facilities.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "hospital_beds_per_thousand": {
+            "description": "The number of hospital beds per 1,000 people in the population.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "life_expectancy": {
+            "description": "The average life expectancy at birth in years.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "human_development_index": {
+            "description": "The Human Development Index (HDI) is a summary measure of average achievement in key dimensions of human development: a long and healthy life, being knowledgeable and have a decent standard of living. The HDI is the geometric mean of normalized indices for each of the three dimensions.",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "excess_mortality_cumulative_absolute": {
+            "description": "The absolute cumulative number of excess mortality.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "excess_mortality_cumulative": {
+            "description": "The cumulative number of excess mortality.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "excess_mortality": {
+            "description": "The number of excess mortality.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "excess_mortality_cumulative_per_million": {
+            "description": "The cumulative number of excess mortality per million people.",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "total_vaccinations": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in global health statistics.",
+                "task_prompt": "Based on the features of the COVID-19 situation, please predict the total vaccinations.",
+                "answer_prompt": "The total vaccinations are expected to be {}."
+            }
+        },
+        "new_vaccinations": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in global health statistics.",
+                "task_prompt": "Based on the features of the COVID-19 situation, please predict the new vaccinations.",
+                "answer_prompt": "The new vaccinations are expected to be {}."
+            }
+        },
+        "total_tests": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in global health statistics.",
+                "task_prompt": "Based on the features of the COVID-19 situation, please predict the total tests.",
+                "answer_prompt": "The total tests are expected to be {}."
+            }
+        },
+        "new_tests": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in global health statistics.",
+                "task_prompt": "Based on the features of the COVID-19 situation, please predict the new tests.",
+                "answer_prompt": "The new tests are expected to be {}."
+            }
+        },
+        "positive_rate": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in global health statistics.",
+                "task_prompt": "Based on the features of the COVID-19 situation, please predict the positive rate.",
+                "answer_prompt": "The positive rate is expected to be {}."
+            }
+        },
+        "people_vaccinated": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in global health statistics.",
+                "task_prompt": "Based on the features of the COVID-19 situation, please predict the number of people vaccinated.",
+                "answer_prompt": "The number of people vaccinated is expected to be {}."
+            }
+        },
+        "people_fully_vaccinated": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in global health statistics.",
+                "task_prompt": "Based on the features of the COVID-19 situation, please predict the number of people fully vaccinated.",
+                "answer_prompt": "The number of people fully vaccinated is expected to be {}."
+            }
+        },
+        "total_boosters": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in global health statistics.",
+                "task_prompt": "Based on the features of the COVID-19 situation, please predict the total boosters.",
+                "answer_prompt": "The total boosters are expected to be {}."
+            }
+        },
+        "stringency_index": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in global health statistics.",
+                "task_prompt": "Based on the features of the COVID-19 situation, please predict the stringency index.",
+                "answer_prompt": "The stringency index is expected to be {}."
+            }
+        },
+        "life_expectancy": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in global health statistics.",
+                "task_prompt": "Based on the features of the COVID-19 situation, please predict the life expectancy.",
+                "answer_prompt": "The life expectancy is expected to be {}."
+            }
+        },
+        "human_development_index": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in global health statistics.",
+                "task_prompt": "Based on the features of the COVID-19 situation, please predict the human development index.",
+                "answer_prompt": "The human development index is expected to be {}."
+            }
+        },
+        "excess_mortality": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in global health statistics.",
+                "task_prompt": "Based on the features of the COVID-19 situation, please predict the excess mortality.",
+                "answer_prompt": "The excess mortality is expected to be {}."
+            }
+        }
+    }
+}

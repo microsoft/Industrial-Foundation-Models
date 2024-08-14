@@ -1,0 +1,223 @@
+{
+    "basic_info": {
+        "row_num": 418,
+        "col_num": 20,
+        "label_candidates": [
+            "Status",
+            "Stage",
+            "N_Days"
+        ],
+        "valid_feature_num": 19,
+        "num_features": [
+            "N_Days",
+            "Age",
+            "Bilirubin",
+            "Cholesterol",
+            "Albumin",
+            "Copper",
+            "Alk_Phos",
+            "SGOT",
+            "Tryglicerides",
+            "Platelets",
+            "Prothrombin"
+        ],
+        "cat_features": [
+            "Drug",
+            "Sex",
+            "Ascites",
+            "Hepatomegaly",
+            "Spiders",
+            "Edema",
+            "Stage",
+            "Status"
+        ],
+        "other_features": [],
+        "tags": [
+            "healthcare",
+            "health",
+            "mortality",
+            "classification",
+            "binary classification",
+            "health conditions"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/joebeachcapital/cirrhosis-patient-survival-prediction"
+    },
+    "feature_info": {
+        "ID": {
+            "description": "Unique identifier for each patient",
+            "type": "useless"
+        },
+        "N_Days": {
+            "description": "Number of days the patient has been tracked",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Status": {
+            "description": "Current status of the patient (Survived, Died, etc.)",
+            "type": "categorical",
+            "value_dict": {
+                "D": "Patient has died",
+                "C": "Patient is currently alive",
+                "CL": "Patient is alive and no longer has the disease"
+            }
+        },
+        "Drug": {
+            "description": "Type of drug administered to the patient",
+            "type": "categorical",
+            "value_dict": {
+                "D-penicillamine": "Patient was administered D-penicillamine",
+                "Placebo": "Patient was given a placebo"
+            }
+        },
+        "Age": {
+            "description": "Age of the patient in years",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Sex": {
+            "description": "Sex of the patient",
+            "type": "categorical",
+            "value_dict": {
+                "F": "Female",
+                "M": "Male"
+            }
+        },
+        "Ascites": {
+            "description": "Presence of ascites in the patient (abnormal build-up of fluid in the abdomen)",
+            "type": "categorical",
+            "value_dict": {
+                "Y": "Patient has ascites",
+                "N": "Patient does not have ascites"
+            }
+        },
+        "Hepatomegaly": {
+            "description": "Presence of hepatomegaly in the patient (abnormal enlargement of the liver)",
+            "type": "categorical",
+            "value_dict": {
+                "Y": "Patient has hepatomegaly",
+                "N": "Patient does not have hepatomegaly"
+            }
+        },
+        "Spiders": {
+            "description": "Presence of spider nevi in the patient (small, dilated blood vessels)",
+            "type": "categorical",
+            "value_dict": {
+                "Y": "Patient has spider nevi",
+                "N": "Patient does not have spider nevi"
+            }
+        },
+        "Edema": {
+            "description": "Presence of edema in the patient (swelling caused by excess fluid trapped in body\u2019s tissues)",
+            "type": "categorical",
+            "value_dict": {
+                "Y": "Patient has edema",
+                "N": "Patient does not have edema",
+                "S": "Patient has slight edema"
+            }
+        },
+        "Bilirubin": {
+            "description": "Bilirubin level in the patient\u2019s blood (mg/dL)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Cholesterol": {
+            "description": "Cholesterol level in the patient\u2019s blood (mg/dL)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Albumin": {
+            "description": "Albumin level in the patient\u2019s blood (g/dL)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Copper": {
+            "description": "Copper level in the patient\u2019s blood (\u00b5g/dL)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Alk_Phos": {
+            "description": "Alkaline phosphatase level in the patient\u2019s blood (IU/L)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "SGOT": {
+            "description": "Serum Glutamic-Oxaloacetic Transaminase level in the patient\u2019s blood (U/L)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Tryglicerides": {
+            "description": "Triglyceride level in the patient\u2019s blood (mg/dL)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Platelets": {
+            "description": "Platelet count in the patient\u2019s blood (thousands/\u00b5L)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Prothrombin": {
+            "description": "Prothrombin time in the patient\u2019s blood (seconds)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Stage": {
+            "description": "Stage of cirrhosis the patient is in",
+            "type": "categorical",
+            "value_dict": {
+                "4.0": "Stage 4 cirrhosis",
+                "3.0": "Stage 3 cirrhosis",
+                "2.0": "Stage 2 cirrhosis",
+                "1.0": "Stage 1 cirrhosis"
+            }
+        }
+    },
+    "task_info": {
+        "Status": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnosis.",
+                "task_prompt": "Based on the features of the patient, please predict the survival status.",
+                "answer_prompt": "Patient has died[0], Patient is currently alive[1], or Patient is alive and no longer has the disease[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "D": "Patient has died",
+                "C": "Patient is currently alive",
+                "CL": "Patient is alive and no longer has the disease"
+            },
+            "class_index_dict": {
+                "D": 0,
+                "C": 1,
+                "CL": 2
+            }
+        },
+        "Stage": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnosis.",
+                "task_prompt": "Based on the features of the patient, please predict the stage of cirrhosis.",
+                "answer_prompt": "Stage 1 cirrhosis[0], Stage 2 cirrhosis[1], Stage 3 cirrhosis[2], or Stage 4 cirrhosis[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "4.0": "Stage 4 cirrhosis",
+                "3.0": "Stage 3 cirrhosis",
+                "2.0": "Stage 2 cirrhosis",
+                "1.0": "Stage 1 cirrhosis"
+            },
+            "class_index_dict": {
+                "1.0": 0,
+                "2.0": 1,
+                "3.0": 2,
+                "4.0": 3
+            }
+        },
+        "N_Days": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnosis.",
+                "task_prompt": "Based on the features of the patient, please predict the number of days the patient will survive."
+            }
+        }
+    }
+}

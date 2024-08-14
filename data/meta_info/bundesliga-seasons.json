@@ -1,0 +1,230 @@
+{
+    "basic_info": {
+        "row_num": 5508,
+        "col_num": 22,
+        "label_candidates": [
+            "GOALS_HOME",
+            "GOALS_AWAY",
+            "WIN_HOME",
+            "WIN_AWAY",
+            "DRAW"
+        ],
+        "valid_feature_num": 20,
+        "num_features": [
+            "VIEWER",
+            "MATCHDAY_NR",
+            "GOALS_HOME",
+            "GOALS_AWAY"
+        ],
+        "cat_features": [
+            "LEAGUE_NAME",
+            "SEASON",
+            "LEAGUE",
+            "FINISHED",
+            "LOCATION",
+            "MATCHDAY",
+            "HOME_TEAM_NAME",
+            "HOME_TEAM",
+            "AWAY_TEAM_NAME",
+            "AWAY_TEAM",
+            "DRAW",
+            "WIN_AWAY",
+            "WIN_HOME"
+        ],
+        "other_features": [
+            "MATCH_DATE",
+            "HOME_ICON",
+            "AWAY_ICON"
+        ],
+        "tags": [
+            "football",
+            "sports",
+            "categorical",
+            "data visualization",
+            "data analytics",
+            "classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/oles04/bundesliga-seasons"
+    },
+    "feature_info": {
+        "MATCH_DATE": {
+            "description": "The date and time of the match",
+            "type": "other"
+        },
+        "LEAGUE_NAME": {
+            "description": "The name of the league in which the match was played",
+            "type": "categorical"
+        },
+        "SEASON": {
+            "description": "The season during which the match was played",
+            "type": "categorical"
+        },
+        "LEAGUE": {
+            "description": "The league in which the match was played",
+            "type": "categorical",
+            "value_dict": {
+                "bl1": "This represents the Bundesliga, the top-tier professional football league in Germany"
+            }
+        },
+        "FINISHED": {
+            "description": "Indicates whether the match has finished or not",
+            "type": "categorical",
+            "value_dict": {
+                "True": "This indicates that the match has been finished"
+            }
+        },
+        "LOCATION": {
+            "description": "The location where the match was played",
+            "type": "categorical"
+        },
+        "VIEWER": {
+            "description": "The number of viewers who watched the match",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "MATCHDAY": {
+            "description": "The day of the match",
+            "type": "categorical"
+        },
+        "MATCHDAY_NR": {
+            "description": "The number of the match day",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "HOME_TEAM_ID": {
+            "description": "The ID of the home team",
+            "type": "useless"
+        },
+        "HOME_TEAM_NAME": {
+            "description": "The name of the home team",
+            "type": "categorical"
+        },
+        "HOME_TEAM": {
+            "description": "The home team",
+            "type": "categorical"
+        },
+        "HOME_ICON": {
+            "description": "The icon of the home team",
+            "type": "other"
+        },
+        "AWAY_TEAM_ID": {
+            "description": "The ID of the away team",
+            "type": "useless"
+        },
+        "AWAY_TEAM_NAME": {
+            "description": "The name of the away team",
+            "type": "categorical"
+        },
+        "AWAY_TEAM": {
+            "description": "The away team",
+            "type": "categorical"
+        },
+        "AWAY_ICON": {
+            "description": "The icon of the away team",
+            "type": "other"
+        },
+        "GOALS_HOME": {
+            "description": "The number of goals scored by the home team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "GOALS_AWAY": {
+            "description": "The number of goals scored by the away team",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "DRAW": {
+            "description": "Indicates whether the match was a draw or not",
+            "type": "categorical",
+            "value_dict": {
+                "0.0": "This indicates that the match was not a draw",
+                "1.0": "This indicates that the match was a draw"
+            }
+        },
+        "WIN_HOME": {
+            "description": "Indicates whether the home team won the match or not",
+            "type": "categorical",
+            "value_dict": {
+                "1.0": "This indicates that the home team won the match",
+                "0.0": "This indicates that the home team did not win the match"
+            }
+        },
+        "WIN_AWAY": {
+            "description": "Indicates whether the away team won the match or not",
+            "type": "categorical",
+            "value_dict": {
+                "0.0": "This indicates that the away team did not win the match",
+                "1.0": "This indicates that the away team won the match"
+            }
+        }
+    },
+    "task_info": {
+        "GOALS_HOME": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in football match analysis.",
+                "task_prompt": "Based on the features of the football match, please predict the goals scored by the home team.",
+                "answer_prompt": "The number of goals scored by the home team is:."
+            }
+        },
+        "GOALS_AWAY": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in football match analysis.",
+                "task_prompt": "Based on the features of the football match, please predict the goals scored by the away team.",
+                "answer_prompt": "The number of goals scored by the away team is:."
+            }
+        },
+        "WIN_HOME": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in football match analysis.",
+                "task_prompt": "Based on the features of the football match, please predict if the home team won.",
+                "answer_prompt": "Did the home team win the match? Yes[1] or no[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1.0": "This indicates that the home team won the match",
+                "0.0": "This indicates that the home team did not win the match"
+            },
+            "class_index_dict": {
+                "1.0": 1,
+                "0.0": 0
+            }
+        },
+        "WIN_AWAY": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in football match analysis.",
+                "task_prompt": "Based on the features of the football match, please predict if the away team won.",
+                "answer_prompt": "Did the away team win the match? Yes[1] or no[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0.0": "This indicates that the away team did not win the match",
+                "1.0": "This indicates that the away team won the match"
+            },
+            "class_index_dict": {
+                "1.0": 1,
+                "0.0": 0
+            }
+        },
+        "DRAW": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in football match analysis.",
+                "task_prompt": "Based on the features of the football match, please predict if the match was a draw.",
+                "answer_prompt": "Was the match a draw? Yes[1] or no[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0.0": "This indicates that the match was not a draw",
+                "1.0": "This indicates that the match was a draw"
+            },
+            "class_index_dict": {
+                "1.0": 1,
+                "0.0": 0
+            }
+        }
+    }
+}

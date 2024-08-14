@@ -1,0 +1,147 @@
+{
+    "basic_info": {
+        "row_num": 1748,
+        "col_num": 12,
+        "label_candidates": [
+            "class",
+            "H (mag)",
+            "P (yr)"
+        ],
+        "valid_feature_num": 12,
+        "num_features": [
+            "a (AU)",
+            "e",
+            "i (deg)",
+            "w (deg)",
+            "Node (deg)",
+            "M (deg)",
+            "q (AU)",
+            "Q (AU)",
+            "P (yr)",
+            "H (mag)",
+            "MOID (AU)"
+        ],
+        "cat_features": [
+            "class"
+        ],
+        "other_features": [],
+        "tags": [
+            "astronomy",
+            "exploratory data analysis",
+            "classification",
+            "model comparison",
+            "multiclass classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/brsdincer/orbitclassification"
+    },
+    "feature_info": {
+        "a (AU)": {
+            "description": "Semi-major axis in Astronomical Units (AU)",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "e": {
+            "description": "Eccentricity",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "i (deg)": {
+            "description": "Inclination in degrees",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "w (deg)": {
+            "description": "Argument of perihelion in degrees",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Node (deg)": {
+            "description": "Longitude of the ascending node in degrees",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "M (deg)": {
+            "description": "Mean anomaly at epoch in degrees",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "q (AU)": {
+            "description": "Perihelion distance in Astronomical Units (AU)",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Q (AU)": {
+            "description": "Aphelion distance in Astronomical Units (AU)",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "P (yr)": {
+            "description": "Orbital period in years",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "H (mag)": {
+            "description": "Absolute magnitude",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "MOID (AU)": {
+            "description": "Minimum Orbit Intersection Distance in Astronomical Units (AU)",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "class": {
+            "description": "Orbit classification",
+            "type": "categorical",
+            "value_dict": {
+                "APO*": "Potentially Hazardous Asteroid (PHA) with Apohele orbit",
+                "ATE*": "Potentially Hazardous Asteroid (PHA) with Aten orbit",
+                "AMO*": "Potentially Hazardous Asteroid (PHA) with Amor orbit",
+                "APO": "Non-Potentially Hazardous Asteroid with Apohele orbit",
+                "IEO*": "Potentially Hazardous Asteroid (PHA) with Interior to Earth Object (IEO) orbit",
+                "ATE": "Non-Potentially Hazardous Asteroid with Aten orbit"
+            }
+        }
+    },
+    "task_info": {
+        "class": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in space object classification.",
+                "task_prompt": "Based on the orbital elements of the asteroids, please classify the type of the orbit.",
+                "answer_prompt": "Potentially Hazardous Asteroid (PHA) with Apohele orbit[0], Potentially Hazardous Asteroid (PHA) with Aten orbit[1], Potentially Hazardous Asteroid (PHA) with Amor orbit[2], Non-Potentially Hazardous Asteroid with Apohele orbit[3], Potentially Hazardous Asteroid (PHA) with Interior to Earth Object (IEO) orbit[4] or Non-Potentially Hazardous Asteroid with Aten orbit[5]?"
+            },
+            "class_num": 6,
+            "class_value_dict": {
+                "APO*": "Potentially Hazardous Asteroid (PHA) with Apohele orbit",
+                "ATE*": "Potentially Hazardous Asteroid (PHA) with Aten orbit",
+                "AMO*": "Potentially Hazardous Asteroid (PHA) with Amor orbit",
+                "APO": "Non-Potentially Hazardous Asteroid with Apohele orbit",
+                "IEO*": "Potentially Hazardous Asteroid (PHA) with Interior to Earth Object (IEO) orbit",
+                "ATE": "Non-Potentially Hazardous Asteroid with Aten orbit"
+            },
+            "class_index_dict": {
+                "APO*": 0,
+                "ATE*": 1,
+                "AMO*": 2,
+                "APO": 3,
+                "IEO*": 4,
+                "ATE": 5
+            }
+        },
+        "H (mag)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in space object observation.",
+                "task_prompt": "Based on the orbital elements of the asteroids, please predict the absolute magnitude (H)."
+            }
+        },
+        "P (yr)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in orbital mechanics.",
+                "task_prompt": "Based on the orbital elements of the asteroids, please predict the orbital period in years."
+            }
+        }
+    }
+}

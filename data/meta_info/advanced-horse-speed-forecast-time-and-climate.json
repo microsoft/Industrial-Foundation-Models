@@ -1,0 +1,85 @@
+{
+    "basic_info": {
+        "row_num": 100000,
+        "col_num": 4,
+        "label_candidates": [
+            "Horse_Speed",
+            "Weather"
+        ],
+        "valid_feature_num": 4,
+        "num_features": [
+            "Horse_Speed"
+        ],
+        "cat_features": [
+            "Weather"
+        ],
+        "other_features": [
+            "Date",
+            "Race_Time"
+        ],
+        "tags": [
+            "artificial intelligence",
+            "advanced",
+            "time series analysis",
+            "text",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/kanchana1990/advanced-horse-speed-forecast-time-and-climate"
+    },
+    "feature_info": {
+        "Date": {
+            "description": "The date on which the horse race occurred",
+            "type": "other"
+        },
+        "Race_Time": {
+            "description": "The time at which the horse race started",
+            "type": "other"
+        },
+        "Weather": {
+            "description": "The weather condition during the race",
+            "type": "categorical",
+            "value_dict": {
+                "Cloudy": "The weather during the race was cloudy",
+                "Sunny": "The weather during the race was sunny",
+                "Stormy": "The weather during the race was stormy",
+                "Rainy": "The weather during the race was rainy"
+            }
+        },
+        "Horse_Speed": {
+            "description": "The speed of the horse during the race, measured in km/h",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "Horse_Speed": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in horse racing analytics.",
+                "task_prompt": "Based on the date, race time, and weather conditions, please predict the speed of the horse.",
+                "answer_prompt": "The predicted speed of the horse is."
+            }
+        },
+        "Weather": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in horse racing analytics.",
+                "task_prompt": "Based on the date, race time, and horse speed, please predict the weather conditions during the race.",
+                "answer_prompt": "The weather during the race was cloudy[0], sunny[1], stormy[2], or rainy[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "Cloudy": "The weather during the race was cloudy",
+                "Sunny": "The weather during the race was sunny",
+                "Stormy": "The weather during the race was stormy",
+                "Rainy": "The weather during the race was rainy"
+            },
+            "class_index_dict": {
+                "Cloudy": 0,
+                "Sunny": 1,
+                "Stormy": 2,
+                "Rainy": 3
+            }
+        }
+    }
+}

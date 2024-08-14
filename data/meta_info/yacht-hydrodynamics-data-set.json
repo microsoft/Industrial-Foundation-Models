@@ -1,0 +1,128 @@
+{
+    "basic_info": {
+        "row_num": 308,
+        "col_num": 7,
+        "label_candidates": [
+            "Rr",
+            "Fr",
+            "L/B",
+            "B/Dr",
+            "L/D",
+            "PC",
+            "LC"
+        ],
+        "valid_feature_num": 7,
+        "num_features": [
+            "LC",
+            "PC",
+            "L/D",
+            "B/Dr",
+            "L/B",
+            "Fr",
+            "Rr"
+        ],
+        "cat_features": [],
+        "other_features": [],
+        "tags": [
+            "science and technology",
+            "engineering",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/heitornunes/yacht-hydrodynamics-data-set"
+    },
+    "feature_info": {
+        "LC": {
+            "description": "Longitudinal position of the center of buoyancy",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "PC": {
+            "description": "Prismatic coefficient",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "L/D": {
+            "description": "Length-Displacement ratio",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "B/Dr": {
+            "description": "Beam-Draught ratio",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "L/B": {
+            "description": "Length-Beam ratio",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Fr": {
+            "description": "Froude number",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Rr": {
+            "description": "Residuary resistance per unit weight of displacement",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "Rr": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in hydrodynamics.",
+                "task_prompt": "Based on the features of the yacht, please predict the residual resistance.",
+                "answer_prompt": "The predicted residual resistance is."
+            }
+        },
+        "Fr": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in hydrodynamics.",
+                "task_prompt": "Based on the features of the yacht, please predict the Froude number.",
+                "answer_prompt": "The predicted Froude number is."
+            }
+        },
+        "L/B": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in hydrodynamics.",
+                "task_prompt": "Based on the features of the yacht, please predict the length-breadth ratio.",
+                "answer_prompt": "The predicted length-breadth ratio is."
+            }
+        },
+        "B/Dr": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in hydrodynamics.",
+                "task_prompt": "Based on the features of the yacht, please predict the breadth-draft ratio.",
+                "answer_prompt": "The predicted breadth-draft ratio is."
+            }
+        },
+        "L/D": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in hydrodynamics.",
+                "task_prompt": "Based on the features of the yacht, please predict the length-displacement ratio.",
+                "answer_prompt": "The predicted length-displacement ratio is."
+            }
+        },
+        "PC": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in hydrodynamics.",
+                "task_prompt": "Based on the features of the yacht, please predict the prismatic coefficient.",
+                "answer_prompt": "The predicted prismatic coefficient is."
+            }
+        },
+        "LC": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in hydrodynamics.",
+                "task_prompt": "Based on the features of the yacht, please predict the longitudinal center of buoyancy.",
+                "answer_prompt": "The predicted longitudinal center of buoyancy is."
+            }
+        }
+    }
+}

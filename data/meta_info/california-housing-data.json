@@ -1,0 +1,115 @@
+{
+    "basic_info": {
+        "row_num": 20640,
+        "col_num": 10,
+        "label_candidates": [
+            "median_house_value",
+            "median_income",
+            "housing_median_age"
+        ],
+        "valid_feature_num": 10,
+        "num_features": [
+            "longitude",
+            "latitude",
+            "housing_median_age",
+            "total_rooms",
+            "total_bedrooms",
+            "population",
+            "households",
+            "median_income",
+            "median_house_value"
+        ],
+        "cat_features": [
+            "ocean_proximity"
+        ],
+        "other_features": [],
+        "tags": [
+            "real estate"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/dhirajnirne/california-housing-data"
+    },
+    "feature_info": {
+        "longitude": {
+            "description": "A measure of how far west a house is; a higher value is farther west",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "latitude": {
+            "description": "A measure of how far north a house is; a higher value is farther north",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "housing_median_age": {
+            "description": "Median age of a house within a block; a lower number is a newer building",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "total_rooms": {
+            "description": "Total number of rooms within a block",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "total_bedrooms": {
+            "description": "Total number of bedrooms within a block",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "population": {
+            "description": "Total number of people residing within a block",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "households": {
+            "description": "Total number of households, a group of people residing within a home unit, for a block",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "median_income": {
+            "description": "Median income for households within a block of houses (measured in tens of thousands of US Dollars)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "median_house_value": {
+            "description": "Median house value for households within a block (measured in US Dollars)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "ocean_proximity": {
+            "description": "Location of the house w.r.t ocean/sea",
+            "type": "categorical",
+            "value_dict": {
+                "NEAR BAY": "House is near the bay",
+                "<1H OCEAN": "House is less than an hour from the ocean",
+                "INLAND": "House is inland",
+                "NEAR OCEAN": "House is near the ocean",
+                "ISLAND": "House is on an island"
+            }
+        }
+    },
+    "task_info": {
+        "median_house_value": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate data analysis.",
+                "task_prompt": "Based on the features of the housing data, please predict the median house value.",
+                "answer_prompt": "The predicted median house value is ______."
+            }
+        },
+        "median_income": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in socio-economic data analysis.",
+                "task_prompt": "Based on the features of the housing data, please predict the median income of the area.",
+                "answer_prompt": "The predicted median income is ______."
+            }
+        },
+        "housing_median_age": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in housing market analysis.",
+                "task_prompt": "Based on the features of the housing data, please predict the median age of the houses.",
+                "answer_prompt": "The predicted median age of the houses is ______."
+            }
+        }
+    }
+}

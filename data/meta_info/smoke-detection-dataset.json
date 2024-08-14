@@ -1,0 +1,216 @@
+{
+    "basic_info": {
+        "row_num": 62630,
+        "col_num": 15,
+        "label_candidates": [
+            "Fire Alarm",
+            "Temperature[C]",
+            "Humidity[%]",
+            "TVOC[ppb]",
+            "eCO2[ppm]",
+            "Pressure[hPa]",
+            "PM1.0",
+            "PM2.5",
+            "NC0.5",
+            "NC1.0",
+            "NC2.5"
+        ],
+        "valid_feature_num": 15,
+        "num_features": [
+            "UTC",
+            "Temperature[C]",
+            "Humidity[%]",
+            "TVOC[ppb]",
+            "eCO2[ppm]",
+            "Raw H2",
+            "Raw Ethanol",
+            "Pressure[hPa]",
+            "PM1.0",
+            "PM2.5",
+            "NC0.5",
+            "NC1.0",
+            "NC2.5",
+            "CNT"
+        ],
+        "cat_features": [
+            "Fire Alarm"
+        ],
+        "other_features": [],
+        "tags": [
+            "classification",
+            "tabular",
+            "binary classification",
+            "public safety"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/deepcontractor/smoke-detection-dataset"
+    },
+    "feature_info": {
+        "UTC": {
+            "description": "Coordinated Universal Time as a timestamp.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Temperature[C]": {
+            "description": "Temperature in Celsius.",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Humidity[%]": {
+            "description": "Humidity in percentage.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "TVOC[ppb]": {
+            "description": "Total Volatile Organic Compounds in parts per billion.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "eCO2[ppm]": {
+            "description": "Equivalent Carbon Dioxide in parts per million.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Raw H2": {
+            "description": "Raw reading of Hydrogen gas.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Raw Ethanol": {
+            "description": "Raw reading of Ethanol.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Pressure[hPa]": {
+            "description": "Pressure in hectopascal.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "PM1.0": {
+            "description": "Particulate matter less than 1.0 micrometers.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "PM2.5": {
+            "description": "Particulate matter less than 2.5 micrometers.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "NC0.5": {
+            "description": "Number of particles with diameter greater than 0.5 micrometer.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "NC1.0": {
+            "description": "Number of particles with diameter greater than 1.0 micrometer.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "NC2.5": {
+            "description": "Number of particles with diameter greater than 2.5 micrometers.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "CNT": {
+            "description": "Count of observations.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Fire Alarm": {
+            "description": "Whether a fire alarm was triggered (0 means no, 1 means yes).",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Fire alarm was not triggered",
+                "1": "Fire alarm was triggered"
+            }
+        }
+    },
+    "task_info": {
+        "Fire Alarm": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in fire detection systems.",
+                "task_prompt": "Based on the environmental sensor readings, please predict if the fire alarm was triggered.",
+                "answer_prompt": "Fire alarm was not triggered[0] or Fire alarm was triggered[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "Fire alarm was not triggered",
+                "1": "Fire alarm was triggered"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "Temperature[C]": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in environmental monitoring.",
+                "task_prompt": "Based on the sensor readings, please predict the temperature in Celsius."
+            }
+        },
+        "Humidity[%]": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in environmental monitoring.",
+                "task_prompt": "Based on the sensor readings, please predict the humidity percentage."
+            }
+        },
+        "TVOC[ppb]": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in air quality monitoring.",
+                "task_prompt": "Based on the sensor readings, please predict the Total Volatile Organic Compounds in ppb."
+            }
+        },
+        "eCO2[ppm]": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in air quality monitoring.",
+                "task_prompt": "Based on the sensor readings, please predict the equivalent CO2 in ppm."
+            }
+        },
+        "Pressure[hPa]": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in environmental monitoring.",
+                "task_prompt": "Based on the sensor readings, please predict the pressure in hPa."
+            }
+        },
+        "PM1.0": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in air quality monitoring.",
+                "task_prompt": "Based on the sensor readings, please predict the PM1.0 level."
+            }
+        },
+        "PM2.5": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in air quality monitoring.",
+                "task_prompt": "Based on the sensor readings, please predict the PM2.5 level."
+            }
+        },
+        "NC0.5": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in air quality monitoring.",
+                "task_prompt": "Based on the sensor readings, please predict the NC0.5 level."
+            }
+        },
+        "NC1.0": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in air quality monitoring.",
+                "task_prompt": "Based on the sensor readings, please predict the NC1.0 level."
+            }
+        },
+        "NC2.5": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in air quality monitoring.",
+                "task_prompt": "Based on the sensor readings, please predict the NC2.5 level."
+            }
+        }
+    }
+}

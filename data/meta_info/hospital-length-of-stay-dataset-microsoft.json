@@ -1,0 +1,352 @@
+{
+    "basic_info": {
+        "row_num": 100000,
+        "col_num": 28,
+        "label_candidates": [
+            "lengthofstay",
+            "discharged",
+            "rcount",
+            "gender",
+            "bmi",
+            "pulse",
+            "respiration",
+            "sodium",
+            "glucose",
+            "creatinine"
+        ],
+        "valid_feature_num": 27,
+        "num_features": [
+            "hemo",
+            "hematocrit",
+            "neutrophils",
+            "sodium",
+            "glucose",
+            "bloodureanitro",
+            "creatinine",
+            "bmi",
+            "pulse",
+            "respiration",
+            "lengthofstay"
+        ],
+        "cat_features": [
+            "rcount",
+            "gender",
+            "dialysisrenalendstage",
+            "asthma",
+            "irondef",
+            "pneum",
+            "substancedependence",
+            "psychologicaldisordermajor",
+            "depress",
+            "psychother",
+            "fibrosisandother",
+            "malnutrition",
+            "secondarydiagnosisnonicd9",
+            "facid"
+        ],
+        "other_features": [
+            "vdate",
+            "discharged"
+        ],
+        "tags": [
+            "healthcare",
+            "health",
+            "tabular",
+            "model explainability",
+            "hospitals and treatment centers"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/aayushchou/hospital-length-of-stay-dataset-microsoft"
+    },
+    "feature_info": {
+        "eid": {
+            "description": "Unique patient identifier",
+            "type": "useless"
+        },
+        "vdate": {
+            "description": "Date of patient visit to hospital",
+            "type": "other"
+        },
+        "rcount": {
+            "description": "Count of patient visits",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Patient has no previous visits",
+                "5+": "Patient has more than 5 previous visits",
+                "1": "Patient has 1 previous visit",
+                "3": "Patient has 3 previous visits",
+                "4": "Patient has 4 previous visits",
+                "2": "Patient has 2 previous visits"
+            }
+        },
+        "gender": {
+            "description": "Patient gender",
+            "type": "categorical",
+            "value_dict": {
+                "F": "Female",
+                "M": "Male"
+            }
+        },
+        "dialysisrenalendstage": {
+            "description": "Indicator of end stage renal disease requiring dialysis",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Patient does not have end stage renal disease requiring dialysis",
+                "1": "Patient has end stage renal disease requiring dialysis"
+            }
+        },
+        "asthma": {
+            "description": "Indicator of asthma",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Patient does not have asthma",
+                "1": "Patient has asthma"
+            }
+        },
+        "irondef": {
+            "description": "Indicator of iron deficiency",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Patient does not have iron deficiency",
+                "1": "Patient has iron deficiency"
+            }
+        },
+        "pneum": {
+            "description": "Indicator of pneumonia",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Patient does not have pneumonia",
+                "1": "Patient has pneumonia"
+            }
+        },
+        "substancedependence": {
+            "description": "Indicator of substance dependence",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Patient is not substance dependent",
+                "1": "Patient is substance dependent"
+            }
+        },
+        "psychologicaldisordermajor": {
+            "description": "Indicator of major psychological disorder",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Patient does not have a major psychological disorder",
+                "1": "Patient has a major psychological disorder"
+            }
+        },
+        "depress": {
+            "description": "Indicator of depression",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Patient is not depressed",
+                "1": "Patient is depressed"
+            }
+        },
+        "psychother": {
+            "description": "Indicator of psychotherapy",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Patient does not receive psychotherapy",
+                "1": "Patient receives psychotherapy"
+            }
+        },
+        "fibrosisandother": {
+            "description": "Indicator of fibrosis and other similar conditions",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Patient does not have fibrosis or similar conditions",
+                "1": "Patient has fibrosis or similar conditions"
+            }
+        },
+        "malnutrition": {
+            "description": "Indicator of malnutrition",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Patient is not malnourished",
+                "1": "Patient is malnourished"
+            }
+        },
+        "hemo": {
+            "description": "Indicator of hemoglobin count",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "hematocrit": {
+            "description": "Hematocrit level",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "neutrophils": {
+            "description": "Neutrophils count",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "sodium": {
+            "description": "Sodium level",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "glucose": {
+            "description": "Glucose level",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "bloodureanitro": {
+            "description": "Blood urea nitrogen level",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "creatinine": {
+            "description": "Creatinine level",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "bmi": {
+            "description": "Body Mass Index of patient",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "pulse": {
+            "description": "Pulse rate of patient",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "respiration": {
+            "description": "Respiration rate of patient",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "secondarydiagnosisnonicd9": {
+            "description": "Indicator of secondary diagnosis other than ICD9",
+            "type": "categorical"
+        },
+        "discharged": {
+            "description": "Date of patient discharge",
+            "type": "other"
+        },
+        "facid": {
+            "description": "Identifier of facility where treatment was provided",
+            "type": "categorical",
+            "value_dict": {
+                "B": "Facility B",
+                "A": "Facility A",
+                "E": "Facility E",
+                "D": "Facility D",
+                "C": "Facility C"
+            }
+        },
+        "lengthofstay": {
+            "description": "Length of patient stay at hospital in days",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "lengthofstay": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in healthcare data analysis.",
+                "task_prompt": "Based on the patient medical records, please predict the length of stay in the hospital.",
+                "answer_prompt": "The length of stay in the hospital is {lengthofstay} days."
+            }
+        },
+        "discharged": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in healthcare data analysis.",
+                "task_prompt": "Based on the patient medical records, please predict the discharge date.",
+                "answer_prompt": "The patient will be discharged on {discharged}."
+            }
+        },
+        "rcount": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in healthcare data analysis.",
+                "task_prompt": "Based on the patient medical records, please classify the number of previous hospital visits.",
+                "answer_prompt": "0[0], 1[1], 2[2], 3[3], 4[4] or 5+[5]?"
+            },
+            "class_num": 6,
+            "class_value_dict": {
+                "0": "no previous visits",
+                "5+": "more than 5 previous visits",
+                "1": "1 previous visit",
+                "3": "3 previous visits",
+                "4": "4 previous visits",
+                "2": "2 previous visits"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "5+": 5,
+                "1": 1,
+                "2": 2,
+                "3": 3,
+                "4": 4
+            }
+        },
+        "gender": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in healthcare data analysis.",
+                "task_prompt": "Based on the patient medical records, please classify the gender of the patient.",
+                "answer_prompt": "Female[0] or male[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "F": "Female",
+                "M": "Male"
+            },
+            "class_index_dict": {
+                "F": 0,
+                "M": 1
+            }
+        },
+        "bmi": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in healthcare data analysis.",
+                "task_prompt": "Based on the patient medical records, please predict the body mass index of the patient.",
+                "answer_prompt": "The body mass index of the patient is {bmi}."
+            }
+        },
+        "pulse": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in healthcare data analysis.",
+                "task_prompt": "Based on the patient medical records, please predict the pulse rate of the patient.",
+                "answer_prompt": "The pulse rate of the patient is {pulse}."
+            }
+        },
+        "respiration": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in healthcare data analysis.",
+                "task_prompt": "Based on the patient medical records, please predict the respiration rate of the patient.",
+                "answer_prompt": "The respiration rate of the patient is {respiration}."
+            }
+        },
+        "sodium": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in healthcare data analysis.",
+                "task_prompt": "Based on the patient medical records, please predict the sodium level of the patient.",
+                "answer_prompt": "The sodium level of the patient is {sodium}."
+            }
+        },
+        "glucose": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in healthcare data analysis.",
+                "task_prompt": "Based on the patient medical records, please predict the glucose level of the patient.",
+                "answer_prompt": "The glucose level of the patient is {glucose}."
+            }
+        },
+        "creatinine": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in healthcare data analysis.",
+                "task_prompt": "Based on the patient medical records, please predict the creatinine level of the patient.",
+                "answer_prompt": "The creatinine level of the patient is {creatinine}."
+            }
+        }
+    }
+}

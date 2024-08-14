@@ -1,0 +1,96 @@
+{
+    "basic_info": {
+        "row_num": 1000,
+        "col_num": 5,
+        "label_candidates": [
+            "Purchased",
+            "Age",
+            "AnnualSalary"
+        ],
+        "valid_feature_num": 4,
+        "num_features": [
+            "Age",
+            "AnnualSalary"
+        ],
+        "cat_features": [
+            "Gender",
+            "Purchased"
+        ],
+        "other_features": [],
+        "tags": [
+            "categorical",
+            "automobiles and vehicles",
+            "logistic regression",
+            "decision tree",
+            "binary classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/gabrielsantello/cars-purchase-decision-dataset"
+    },
+    "feature_info": {
+        "User ID": {
+            "description": "Unique identifier for each user",
+            "type": "useless"
+        },
+        "Gender": {
+            "description": "The gender of the user",
+            "type": "categorical",
+            "value_dict": {
+                "Male": "The user is male",
+                "Female": "The user is female"
+            }
+        },
+        "Age": {
+            "description": "The age of the user",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "AnnualSalary": {
+            "description": "The annual salary of the user in USD",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Purchased": {
+            "description": "Whether the user has made a purchase (1: Yes, 0: No)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The user has not made a purchase",
+                "1": "The user has made a purchase"
+            }
+        }
+    },
+    "task_info": {
+        "Purchased": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in consumer behavior analysis.",
+                "task_prompt": "Based on the user's gender, age, and annual salary, please predict whether the user has made a purchase.",
+                "answer_prompt": "Has the user made a purchase? Yes[1] or no[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "The user has not made a purchase",
+                "1": "The user has made a purchase"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "Age": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in demographic analysis.",
+                "task_prompt": "Based on the user's gender, annual salary, and purchase history, please predict the user's age.",
+                "answer_prompt": "What is the user's age?"
+            }
+        },
+        "AnnualSalary": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in income estimation.",
+                "task_prompt": "Based on the user's gender, age, and purchase history, please predict the user's annual salary.",
+                "answer_prompt": "What is the user's annual salary?"
+            }
+        }
+    }
+}

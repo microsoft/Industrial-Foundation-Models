@@ -1,0 +1,102 @@
+{
+    "basic_info": {
+        "row_num": 172,
+        "col_num": 5,
+        "label_candidates": [
+            "Grade",
+            "Weight",
+            "Length",
+            "Circumference"
+        ],
+        "valid_feature_num": 4,
+        "num_features": [
+            "Weight",
+            "Length",
+            "Circumference"
+        ],
+        "cat_features": [
+            "Grade"
+        ],
+        "other_features": [],
+        "tags": [
+            "classification",
+            "deep learning",
+            "svm",
+            "tabular",
+            "food"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/mohdnazuan/harumanis-mango-physical-measurement"
+    },
+    "feature_info": {
+        "No": {
+            "description": "The unique identifier for each mango.",
+            "type": "useless"
+        },
+        "Weight": {
+            "description": "The weight of the mango in grams.",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Length": {
+            "description": "The length of the mango in centimeters.",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Circumference": {
+            "description": "The circumference of the mango in centimeters.",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Grade": {
+            "description": "The quality grade of the mango, determined by certain physical characteristics.",
+            "type": "categorical",
+            "value_dict": {
+                "A": "Grade A represents the highest quality mangoes.",
+                "B": "Grade B represents medium quality mangoes.",
+                "C": "Grade C represents the lowest quality mangoes."
+            }
+        }
+    },
+    "task_info": {
+        "Grade": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in agricultural data analysis.",
+                "task_prompt": "Based on the physical measurements of the mangoes, please predict the grade of the mango.",
+                "answer_prompt": "Grade A[0], Grade B[1], or Grade C[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "A": "Grade A represents the highest quality mangoes.",
+                "B": "Grade B represents medium quality mangoes.",
+                "C": "Grade C represents the lowest quality mangoes."
+            },
+            "class_index_dict": {
+                "A": 0,
+                "B": 1,
+                "C": 2
+            }
+        },
+        "Weight": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in agricultural data analysis.",
+                "task_prompt": "Based on the physical measurements of the mangoes, please predict the weight of the mango."
+            }
+        },
+        "Length": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in agricultural data analysis.",
+                "task_prompt": "Based on the physical measurements of the mangoes, please predict the length of the mango."
+            }
+        },
+        "Circumference": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in agricultural data analysis.",
+                "task_prompt": "Based on the physical measurements of the mangoes, please predict the circumference of the mango."
+            }
+        }
+    }
+}

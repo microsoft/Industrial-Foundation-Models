@@ -1,0 +1,143 @@
+{
+    "basic_info": {
+        "row_num": 35040,
+        "col_num": 11,
+        "label_candidates": [
+            "Usage_kWh",
+            "CO2(tCO2)",
+            "Lagging_Current_Power_Factor",
+            "Leading_Current_Power_Factor"
+        ],
+        "valid_feature_num": 11,
+        "num_features": [
+            "Usage_kWh",
+            "Lagging_Current_Reactive.Power_kVarh",
+            "Leading_Current_Reactive_Power_kVarh",
+            "CO2(tCO2)",
+            "Lagging_Current_Power_Factor",
+            "Leading_Current_Power_Factor",
+            "NSM"
+        ],
+        "cat_features": [
+            "WeekStatus",
+            "Day_of_week",
+            "Load_Type"
+        ],
+        "other_features": [
+            "date"
+        ],
+        "tags": [
+            "environment",
+            "pollution",
+            "science and technology",
+            "energy",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/csafrit2/steel-industry-energy-consumption"
+    },
+    "feature_info": {
+        "date": {
+            "description": "The date and time when the record was created, in the format: dd/mm/yyyy hh:mm",
+            "type": "other"
+        },
+        "Usage_kWh": {
+            "description": "The amount of energy consumption in kilowatt-hours (kWh)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Lagging_Current_Reactive.Power_kVarh": {
+            "description": "The amount of lagging current reactive power in kilovolt-ampere reactive hours (kVarh)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Leading_Current_Reactive_Power_kVarh": {
+            "description": "The amount of leading current reactive power in kilovolt-ampere reactive hours (kVarh)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "CO2(tCO2)": {
+            "description": "The amount of CO2 emissions in metric tons (tCO2)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Lagging_Current_Power_Factor": {
+            "description": "The lagging current power factor, a dimensionless number between -1 and 1",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Leading_Current_Power_Factor": {
+            "description": "The leading current power factor, a dimensionless number between -1 and 1",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "NSM": {
+            "description": "The number of seconds since midnight",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "WeekStatus": {
+            "description": "The status of the week, indicating whether it is a weekday or weekend",
+            "type": "categorical",
+            "value_dict": {
+                "Weekday": "The record was created on a weekday",
+                "Weekend": "The record was created on a weekend"
+            }
+        },
+        "Day_of_week": {
+            "description": "The day of the week when the record was created",
+            "type": "categorical",
+            "value_dict": {
+                "Monday": "The record was created on Monday",
+                "Tuesday": "The record was created on Tuesday",
+                "Wednesday": "The record was created on Wednesday",
+                "Thursday": "The record was created on Thursday",
+                "Friday": "The record was created on Friday",
+                "Saturday": "The record was created on Saturday",
+                "Sunday": "The record was created on Sunday"
+            }
+        },
+        "Load_Type": {
+            "description": "The type of load, indicating the level of energy consumption",
+            "type": "categorical",
+            "value_dict": {
+                "Light_Load": "The energy consumption level was light",
+                "Medium_Load": "The energy consumption level was medium",
+                "Maximum_Load": "The energy consumption level was maximum"
+            }
+        }
+    },
+    "task_info": {
+        "Usage_kWh": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in energy consumption analysis.",
+                "task_prompt": "Based on the features of the steel industry energy data, please predict the usage in kWh.",
+                "answer_prompt": "The predicted energy usage in kWh is."
+            }
+        },
+        "CO2(tCO2)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in environmental impact analysis.",
+                "task_prompt": "Based on the features of the steel industry energy data, please predict the CO2 emissions.",
+                "answer_prompt": "The predicted CO2 emissions are."
+            }
+        },
+        "Lagging_Current_Power_Factor": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in power factor analysis.",
+                "task_prompt": "Based on the features of the steel industry energy data, please predict the lagging current power factor.",
+                "answer_prompt": "The predicted lagging current power factor is."
+            }
+        },
+        "Leading_Current_Power_Factor": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in power factor analysis.",
+                "task_prompt": "Based on the features of the steel industry energy data, please predict the leading current power factor.",
+                "answer_prompt": "The predicted leading current power factor is."
+            }
+        }
+    }
+}

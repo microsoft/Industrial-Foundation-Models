@@ -1,0 +1,107 @@
+{
+    "basic_info": {
+        "row_num": 1030,
+        "col_num": 9,
+        "label_candidates": [
+            "csMPa",
+            "age",
+            "water"
+        ],
+        "valid_feature_num": 9,
+        "num_features": [
+            "cement",
+            "slag",
+            "flyash",
+            "water",
+            "superplasticizer",
+            "coarseaggregate",
+            "fineaggregate",
+            "age",
+            "csMPa"
+        ],
+        "cat_features": [],
+        "other_features": [],
+        "tags": [
+            "earth and nature",
+            "science and technology",
+            "random forest",
+            "linear regression",
+            "decision tree",
+            "urban planning"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/maajdl/yeh-concret-data"
+    },
+    "feature_info": {
+        "cement": {
+            "description": "The amount of cement used in the concrete mix (in kg/m^3)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "slag": {
+            "description": "The amount of slag used in the concrete mix (in kg/m^3)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "flyash": {
+            "description": "The amount of fly ash used in the concrete mix (in kg/m^3)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "water": {
+            "description": "The amount of water used in the concrete mix (in kg/m^3)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "superplasticizer": {
+            "description": "The amount of superplasticizer used in the concrete mix (in kg/m^3)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "coarseaggregate": {
+            "description": "The amount of coarse aggregate used in the concrete mix (in kg/m^3)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "fineaggregate": {
+            "description": "The amount of fine aggregate used in the concrete mix (in kg/m^3)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "age": {
+            "description": "The age of the concrete (in days) at which the strength is tested",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "csMPa": {
+            "description": "The compressive strength of the concrete (in Mega Pascals)",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "csMPa": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in concrete composition analysis.",
+                "task_prompt": "Based on the composition and age of the concrete, please predict the concrete strength (csMPa).",
+                "answer_prompt": "The concrete strength (csMPa) is predicted to be __."
+            }
+        },
+        "age": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in concrete composition analysis.",
+                "task_prompt": "Based on the composition of the concrete, please predict the age of the concrete.",
+                "answer_prompt": "The age of the concrete is predicted to be __ days."
+            }
+        },
+        "water": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in concrete composition analysis.",
+                "task_prompt": "Based on the other components and age of the concrete, please predict the amount of water used in the mix.",
+                "answer_prompt": "The amount of water used in the mix is predicted to be __."
+            }
+        }
+    }
+}

@@ -1,0 +1,125 @@
+{
+    "basic_info": {
+        "row_num": 9824,
+        "col_num": 7,
+        "label_candidates": [
+            "PRICE",
+            "QUANTITY",
+            "SALESPERSON"
+        ],
+        "valid_feature_num": 7,
+        "num_features": [
+            "PRICE",
+            "QUANTITY"
+        ],
+        "cat_features": [
+            "SKU",
+            "CUSTOMER",
+            "CITY",
+            "SALESPERSON"
+        ],
+        "other_features": [
+            "DATE"
+        ],
+        "tags": [
+            "chemistry",
+            "business",
+            "regression",
+            "tabular classification",
+            "segmentation"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/shedai/sales-person-performance"
+    },
+    "feature_info": {
+        "DATE": {
+            "description": "The date when the sales were made",
+            "type": "other"
+        },
+        "SKU": {
+            "description": "Stock Keeping Unit, unique identifier for each distinct product and service that can be purchased",
+            "type": "categorical"
+        },
+        "CUSTOMER": {
+            "description": "Unique identifier for each customer",
+            "type": "categorical"
+        },
+        "CITY": {
+            "description": "Unique identifier for each city",
+            "type": "categorical"
+        },
+        "PRICE": {
+            "description": "The price of the product sold, in the unit of local currency",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "QUANTITY": {
+            "description": "The quantity of the product sold",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "SALESPERSON": {
+            "description": "Unique identifier for each sales person",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Salesperson with ID 1",
+                "7": "Salesperson with ID 7",
+                "0": "Salesperson with ID 0",
+                "6": "Salesperson with ID 6",
+                "5": "Salesperson with ID 5",
+                "3": "Salesperson with ID 3",
+                "4": "Salesperson with ID 4",
+                "2": "Salesperson with ID 2",
+                "8": "Salesperson with ID 8"
+            }
+        }
+    },
+    "task_info": {
+        "PRICE": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sales data analysis.",
+                "task_prompt": "Based on the features of the sales record, please predict the sales price.",
+                "answer_prompt": "The predicted sales price is."
+            }
+        },
+        "QUANTITY": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sales data analysis.",
+                "task_prompt": "Based on the features of the sales record, please predict the sales quantity.",
+                "answer_prompt": "The predicted sales quantity is."
+            }
+        },
+        "SALESPERSON": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in sales data analysis.",
+                "task_prompt": "Based on the features of the sales record, please predict the ID of the salesperson.",
+                "answer_prompt": "Salesperson with ID 1[0], Salesperson with ID 7[1], Salesperson with ID 0[2], Salesperson with ID 6[3], Salesperson with ID 5[4], Salesperson with ID 3[5], Salesperson with ID 4[6], Salesperson with ID 2[7], Salesperson with ID 8[8]?"
+            },
+            "class_num": 9,
+            "class_value_dict": {
+                "1": "Salesperson with ID 1",
+                "7": "Salesperson with ID 7",
+                "0": "Salesperson with ID 0",
+                "6": "Salesperson with ID 6",
+                "5": "Salesperson with ID 5",
+                "3": "Salesperson with ID 3",
+                "4": "Salesperson with ID 4",
+                "2": "Salesperson with ID 2",
+                "8": "Salesperson with ID 8"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "7": 7,
+                "0": 0,
+                "6": 6,
+                "5": 5,
+                "3": 3,
+                "4": 4,
+                "2": 2,
+                "8": 8
+            }
+        }
+    }
+}

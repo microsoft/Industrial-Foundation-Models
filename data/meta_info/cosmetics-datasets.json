@@ -1,0 +1,152 @@
+{
+    "basic_info": {
+        "row_num": 1472,
+        "col_num": 11,
+        "label_candidates": [
+            "Label",
+            "Price",
+            "Rank"
+        ],
+        "valid_feature_num": 11,
+        "num_features": [
+            "Price",
+            "Rank"
+        ],
+        "cat_features": [
+            "Brand",
+            "Name",
+            "Combination",
+            "Dry",
+            "Normal",
+            "Oily",
+            "Sensitive",
+            "Label"
+        ],
+        "other_features": [
+            "Ingredients"
+        ],
+        "tags": [
+            "data visualization",
+            "make-up and cosmetics",
+            "multilabel classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/kingabzpro/cosmetics-datasets"
+    },
+    "feature_info": {
+        "Label": {
+            "description": "The category of the cosmetic product (e.g., Moisturizer)",
+            "type": "categorical",
+            "value_dict": {
+                "Moisturizer": "The product is a moisturizer",
+                "Cleanser": "The product is a cleanser",
+                "Treatment": "The product is a treatment",
+                "Face Mask": "The product is a face mask",
+                "Eye cream": "The product is an eye cream",
+                "Sun protect": "The product is a sun protection cream"
+            }
+        },
+        "Brand": {
+            "description": "The brand that manufactures the product",
+            "type": "categorical"
+        },
+        "Name": {
+            "description": "The name of the product",
+            "type": "categorical"
+        },
+        "Price": {
+            "description": "The price of the product in USD",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Rank": {
+            "description": "The rank of the product based on user reviews",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Ingredients": {
+            "description": "The ingredients used in the product",
+            "type": "other"
+        },
+        "Combination": {
+            "description": "Indicates if the product is suitable for combination skin type (1 for suitable, 0 for not suitable)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The product is suitable for combination skin type",
+                "0": "The product is not suitable for combination skin type"
+            }
+        },
+        "Dry": {
+            "description": "Indicates if the product is suitable for dry skin type (1 for suitable, 0 for not suitable)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The product is suitable for dry skin type",
+                "0": "The product is not suitable for dry skin type"
+            }
+        },
+        "Normal": {
+            "description": "Indicates if the product is suitable for normal skin type (1 for suitable, 0 for not suitable)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The product is suitable for normal skin type",
+                "0": "The product is not suitable for normal skin type"
+            }
+        },
+        "Oily": {
+            "description": "Indicates if the product is suitable for oily skin type (1 for suitable, 0 for not suitable)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The product is suitable for oily skin type",
+                "0": "The product is not suitable for oily skin type"
+            }
+        },
+        "Sensitive": {
+            "description": "Indicates if the product is suitable for sensitive skin type (1 for suitable, 0 for not suitable)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The product is suitable for sensitive skin type",
+                "0": "The product is not suitable for sensitive skin type"
+            }
+        }
+    },
+    "task_info": {
+        "Label": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in cosmetics.",
+                "task_prompt": "Based on the features of the cosmetics product, please predict the category of the product.",
+                "answer_prompt": "Moisturizer[0], Cleanser[1], Treatment[2], Face Mask[3], Eye cream[4], Sun protect[5]?"
+            },
+            "class_num": 6,
+            "class_value_dict": {
+                "Moisturizer": "The product is a moisturizer",
+                "Cleanser": "The product is a cleanser",
+                "Treatment": "The product is a treatment",
+                "Face Mask": "The product is a face mask",
+                "Eye cream": "The product is an eye cream",
+                "Sun protect": "The product is a sun protection cream"
+            },
+            "class_index_dict": {
+                "Moisturizer": 0,
+                "Cleanser": 1,
+                "Treatment": 2,
+                "Face Mask": 3,
+                "Eye cream": 4,
+                "Sun protect": 5
+            }
+        },
+        "Price": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in cosmetics.",
+                "task_prompt": "Based on the features of the cosmetics product, please predict the price of the product."
+            }
+        },
+        "Rank": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in cosmetics.",
+                "task_prompt": "Based on the features of the cosmetics product, please predict the rank of the product."
+            }
+        }
+    }
+}

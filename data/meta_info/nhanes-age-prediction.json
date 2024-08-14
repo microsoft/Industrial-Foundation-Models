@@ -1,0 +1,142 @@
+{
+    "basic_info": {
+        "row_num": 2278,
+        "col_num": 10,
+        "label_candidates": [
+            "RIDAGEYR",
+            "BMXBMI",
+            "LBXGLU",
+            "LBXGLT",
+            "LBXIN"
+        ],
+        "valid_feature_num": 9,
+        "num_features": [
+            "RIDAGEYR",
+            "BMXBMI",
+            "LBXGLU",
+            "LBXGLT",
+            "LBXIN"
+        ],
+        "cat_features": [
+            "RIAGENDR",
+            "PAQ605",
+            "DIQ010",
+            "age_group"
+        ],
+        "other_features": [],
+        "tags": [
+            "united states",
+            "nutrition",
+            "health",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/joebeachcapital/nhanes-age-prediction"
+    },
+    "feature_info": {
+        "SEQN": {
+            "description": "Respondent sequence number, serving as a unique identifier for each participant",
+            "type": "useless"
+        },
+        "age_group": {
+            "description": "Grouped age of the participant, categorized as adult or child",
+            "type": "categorical",
+            "value_dict": {
+                "Adult": "Participant is in the adult age group",
+                "Senior": "Participant is in the senior age group"
+            }
+        },
+        "RIDAGEYR": {
+            "description": "Age of the participant in years",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "RIAGENDR": {
+            "description": "Gender of the participant. 1 for male and 2 for female",
+            "type": "categorical",
+            "value_dict": {
+                "2.0": "Participant is female",
+                "1.0": "Participant is male"
+            }
+        },
+        "PAQ605": {
+            "description": "Physical Activity Indicator. Whether the participant does moderate work or recreational activities",
+            "type": "categorical",
+            "value_dict": {
+                "2.0": "Participant does not engage in moderate work or recreational activities",
+                "1.0": "Participant does engage in moderate work or recreational activities",
+                "7.0": "Data is missing or participant refused to answer"
+            }
+        },
+        "BMXBMI": {
+            "description": "Body Mass Index (BMI) of the participant",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "LBXGLU": {
+            "description": "Serum Glucose level",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "DIQ010": {
+            "description": "Diabetes indicator. Whether the participant has diabetes",
+            "type": "categorical",
+            "value_dict": {
+                "2.0": "Participant does not have diabetes",
+                "1.0": "Participant has diabetes",
+                "3.0": "Data is missing or participant refused to answer"
+            }
+        },
+        "LBXGLT": {
+            "description": "Gamma Glutamyl Transferase (GGT) level",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "LBXIN": {
+            "description": "Insulin level",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "RIDAGEYR": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health data analysis.",
+                "task_prompt": "Based on the features of the individual health records, please predict the age of the individual.",
+                "answer_prompt": "The predicted age is: ."
+            }
+        },
+        "BMXBMI": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health data analysis.",
+                "task_prompt": "Based on the features of the individual health records, please predict the BMI of the individual.",
+                "answer_prompt": "The predicted BMI is: ."
+            }
+        },
+        "LBXGLU": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health data analysis.",
+                "task_prompt": "Based on the features of the individual health records, please predict the glucose level.",
+                "answer_prompt": "The predicted glucose level is: ."
+            }
+        },
+        "LBXGLT": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health data analysis.",
+                "task_prompt": "Based on the features of the individual health records, please predict the glutamate level.",
+                "answer_prompt": "The predicted glutamate level is: ."
+            }
+        },
+        "LBXIN": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health data analysis.",
+                "task_prompt": "Based on the features of the individual health records, please predict the insulin level.",
+                "answer_prompt": "The predicted insulin level is: ."
+            }
+        }
+    }
+}

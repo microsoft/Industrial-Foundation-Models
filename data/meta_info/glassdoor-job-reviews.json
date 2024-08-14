@@ -1,0 +1,269 @@
+{
+    "basic_info": {
+        "row_num": 838566,
+        "col_num": 18,
+        "label_candidates": [
+            "overall_rating",
+            "recommend",
+            "work_life_balance",
+            "culture_values",
+            "diversity_inclusion",
+            "career_opp",
+            "comp_benefits",
+            "senior_mgmt",
+            "ceo_approv",
+            "outlook"
+        ],
+        "valid_feature_num": 18,
+        "num_features": [
+            "overall_rating",
+            "work_life_balance",
+            "culture_values",
+            "diversity_inclusion",
+            "career_opp",
+            "comp_benefits",
+            "senior_mgmt"
+        ],
+        "cat_features": [
+            "firm",
+            "job_title",
+            "current",
+            "location",
+            "ceo_approv",
+            "outlook",
+            "recommend"
+        ],
+        "other_features": [
+            "date_review",
+            "headline",
+            "pros",
+            "cons"
+        ],
+        "tags": [
+            "categorical",
+            "business",
+            "social science",
+            "classification",
+            "text",
+            "jobs and career"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/davidgauthier/glassdoor-job-reviews"
+    },
+    "feature_info": {
+        "firm": {
+            "description": "The name of the firm where the review was made",
+            "type": "categorical"
+        },
+        "date_review": {
+            "description": "The date when the review was made",
+            "type": "other"
+        },
+        "job_title": {
+            "description": "The job title of the reviewer",
+            "type": "categorical"
+        },
+        "current": {
+            "description": "Whether the reviewer is a current employee or not",
+            "type": "categorical"
+        },
+        "location": {
+            "description": "The location of the firm where the reviewer works",
+            "type": "categorical"
+        },
+        "overall_rating": {
+            "description": "Overall rating given by the reviewer",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "work_life_balance": {
+            "description": "Rating given by the reviewer for work-life balance",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "culture_values": {
+            "description": "Rating given by the reviewer for the firm\u2019s culture and values",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "diversity_inclusion": {
+            "description": "Rating given by the reviewer for the firm\u2019s diversity and inclusion",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "career_opp": {
+            "description": "Rating given by the reviewer for the career opportunities at the firm",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "comp_benefits": {
+            "description": "Rating given by the reviewer for the compensation and benefits at the firm",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "senior_mgmt": {
+            "description": "Rating given by the reviewer for the senior management at the firm",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "recommend": {
+            "description": "Whether the reviewer recommends the firm or not",
+            "type": "categorical",
+            "value_dict": {
+                "x": "The reviewer does not recommend the firm",
+                "o": "The reviewer recommends the firm",
+                "v": "The reviewer did not provide a recommendation"
+            }
+        },
+        "ceo_approv": {
+            "description": "Whether the reviewer approves the CEO or not",
+            "type": "categorical",
+            "value_dict": {
+                "o": "The reviewer approves the CEO",
+                "r": "The reviewer does not approve the CEO",
+                "x": "The reviewer did not provide an approval rating for the CEO",
+                "v": "The reviewer did not provide an approval rating for the CEO"
+            }
+        },
+        "outlook": {
+            "description": "The outlook of the reviewer about the firm",
+            "type": "categorical",
+            "value_dict": {
+                "r": "The reviewer has a negative outlook for the firm",
+                "x": "The reviewer did not provide an outlook for the firm",
+                "v": "The reviewer did not provide an outlook for the firm",
+                "o": "The reviewer has a positive outlook for the firm"
+            }
+        },
+        "headline": {
+            "description": "The headline of the review",
+            "type": "other"
+        },
+        "pros": {
+            "description": "The pros mentioned by the reviewer",
+            "type": "other"
+        },
+        "cons": {
+            "description": "The cons mentioned by the reviewer",
+            "type": "other"
+        }
+    },
+    "task_info": {
+        "overall_rating": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in job review analysis.",
+                "task_prompt": "Based on the features of the job review, please predict the overall rating.",
+                "answer_prompt": "The overall rating is on a 1-5 scale."
+            }
+        },
+        "recommend": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in job review analysis.",
+                "task_prompt": "Based on the features of the job review, please predict if the reviewer recommends the firm.",
+                "answer_prompt": "Does not recommend the firm[0], recommends the firm[1], did not provide a recommendation[2]."
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "x": "The reviewer does not recommend the firm",
+                "o": "The reviewer recommends the firm",
+                "v": "The reviewer did not provide a recommendation"
+            },
+            "class_index_dict": {
+                "x": 0,
+                "o": 1,
+                "v": 2
+            }
+        },
+        "work_life_balance": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in job review analysis.",
+                "task_prompt": "Based on the features of the job review, please predict the work life balance rating.",
+                "answer_prompt": "The work life balance rating is on a 1-5 scale."
+            }
+        },
+        "culture_values": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in job review analysis.",
+                "task_prompt": "Based on the features of the job review, please predict the culture values rating.",
+                "answer_prompt": "The culture values rating is on a 1-5 scale."
+            }
+        },
+        "diversity_inclusion": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in job review analysis.",
+                "task_prompt": "Based on the features of the job review, please predict the diversity inclusion rating.",
+                "answer_prompt": "The diversity inclusion rating is on a 1-5 scale."
+            }
+        },
+        "career_opp": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in job review analysis.",
+                "task_prompt": "Based on the features of the job review, please predict the career opportunity rating.",
+                "answer_prompt": "The career opportunity rating is on a 1-5 scale."
+            }
+        },
+        "comp_benefits": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in job review analysis.",
+                "task_prompt": "Based on the features of the job review, please predict the compensation and benefits rating.",
+                "answer_prompt": "The compensation and benefits rating is on a 1-5 scale."
+            }
+        },
+        "senior_mgmt": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in job review analysis.",
+                "task_prompt": "Based on the features of the job review, please predict the senior management rating.",
+                "answer_prompt": "The senior management rating is on a 1-5 scale."
+            }
+        },
+        "ceo_approv": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in job review analysis.",
+                "task_prompt": "Based on the features of the job review, please predict the CEO approval rating.",
+                "answer_prompt": "Disapproves the CEO[0], approves the CEO[1], did not provide an approval rating for the CEO[2]."
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "o": "The reviewer approves the CEO",
+                "r": "The reviewer does not approve the CEO",
+                "x": "The reviewer did not provide an approval rating for the CEO",
+                "v": "The reviewer did not provide an approval rating for the CEO"
+            },
+            "class_index_dict": {
+                "r": 0,
+                "o": 1,
+                "x": 2,
+                "v": 2
+            }
+        },
+        "outlook": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in job review analysis.",
+                "task_prompt": "Based on the features of the job review, please predict the reviewer's outlook for the firm.",
+                "answer_prompt": "Negative outlook for the firm[0], positive outlook for the firm[1], did not provide an outlook for the firm[2]."
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "r": "The reviewer has a negative outlook for the firm",
+                "x": "The reviewer did not provide an outlook for the firm",
+                "v": "The reviewer did not provide an outlook for the firm",
+                "o": "The reviewer has a positive outlook for the firm"
+            },
+            "class_index_dict": {
+                "r": 0,
+                "o": 1,
+                "x": 2,
+                "v": 2
+            }
+        }
+    }
+}

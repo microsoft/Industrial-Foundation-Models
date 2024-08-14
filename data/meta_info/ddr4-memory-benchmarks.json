@@ -1,0 +1,99 @@
+{
+    "basic_info": {
+        "row_num": 652,
+        "col_num": 6,
+        "label_candidates": [
+            "Price (USD)",
+            "Latency (ns)",
+            "Read Uncached (GB/s)",
+            "Write (GB/s)"
+        ],
+        "valid_feature_num": 6,
+        "num_features": [
+            "Latency (ns)",
+            "Read Uncached (GB/s)",
+            "Write (GB/s)",
+            "Price (USD)"
+        ],
+        "cat_features": [
+            "Memory Name",
+            "Generation"
+        ],
+        "other_features": [],
+        "tags": [
+            "computer science",
+            "automobiles and vehicles",
+            "model comparison",
+            "regression",
+            "ratings and reviews"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/alanjo/ddr4-memory-benchmarks"
+    },
+    "feature_info": {
+        "Memory Name": {
+            "description": "The name of the DDR4 memory product.",
+            "type": "categorical"
+        },
+        "Generation": {
+            "description": "The generation of the DDR4 memory.",
+            "type": "categorical",
+            "value_dict": {
+                "DDR4": "DDR4 is the fourth generation of double data rate (DDR) synchronous dynamic random-access (SDRAM) memories."
+            }
+        },
+        "Latency (ns)": {
+            "description": "The latency of the DDR4 memory in nanoseconds.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Read Uncached (GB/s)": {
+            "description": "The uncached read speed of the DDR4 memory in Gigabytes per second.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Write (GB/s)": {
+            "description": "The write speed of the DDR4 memory in Gigabytes per second.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Price (USD)": {
+            "description": "The price of the DDR4 memory in US dollars.",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "Price (USD)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in computer hardware and pricing.",
+                "task_prompt": "Based on the features of the DDR4 memory, please predict the price in USD.",
+                "answer_prompt": "The predicted price in USD is ______."
+            }
+        },
+        "Latency (ns)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in computer memory performance.",
+                "task_prompt": "Based on the features of the DDR4 memory, please predict the latency in nanoseconds.",
+                "answer_prompt": "The predicted latency in nanoseconds is ______."
+            }
+        },
+        "Read Uncached (GB/s)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in computer memory performance.",
+                "task_prompt": "Based on the features of the DDR4 memory, please predict the uncached read speed in GB/s.",
+                "answer_prompt": "The predicted uncached read speed in GB/s is ______."
+            }
+        },
+        "Write (GB/s)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in computer memory performance.",
+                "task_prompt": "Based on the features of the DDR4 memory, please predict the write speed in GB/s.",
+                "answer_prompt": "The predicted write speed in GB/s is ______."
+            }
+        }
+    }
+}

@@ -1,0 +1,139 @@
+{
+    "basic_info": {
+        "row_num": 1000,
+        "col_num": 9,
+        "label_candidates": [
+            "ROOT_CAUSE",
+            "CPU_LOAD",
+            "MEMORY_LOAD",
+            "DELAY"
+        ],
+        "valid_feature_num": 8,
+        "num_features": [
+            "CPU_LOAD",
+            "MEMORY_LOAD",
+            "DELAY"
+        ],
+        "cat_features": [
+            "ERROR_1000",
+            "ERROR_1001",
+            "ERROR_1002",
+            "ERROR_1003",
+            "ROOT_CAUSE"
+        ],
+        "other_features": [],
+        "tags": [
+            "earth and nature",
+            "artificial intelligence",
+            "beginner",
+            "intermediate",
+            "time series analysis",
+            "classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/aryashah2k/datasets-in-it-ops-applied-ai"
+    },
+    "feature_info": {
+        "ID": {
+            "description": "Unique identifier for each record",
+            "type": "useless"
+        },
+        "CPU_LOAD": {
+            "description": "Load on the CPU, presumably in percentage",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "MEMORY_LOAD": {
+            "description": "Load on the memory, presumably in percentage",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "DELAY": {
+            "description": "Delay in the system, presumably in milliseconds",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "ERROR_1000": {
+            "description": "Indicator of the occurrence of error 1000 (1 for occurred, 0 for not occurred)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Error 1000 did not occur",
+                "1": "Error 1000 occurred"
+            }
+        },
+        "ERROR_1001": {
+            "description": "Indicator of the occurrence of error 1001 (1 for occurred, 0 for not occurred)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Error 1001 occurred",
+                "0": "Error 1001 did not occur"
+            }
+        },
+        "ERROR_1002": {
+            "description": "Indicator of the occurrence of error 1002 (1 for occurred, 0 for not occurred)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Error 1002 did not occur",
+                "1": "Error 1002 occurred"
+            }
+        },
+        "ERROR_1003": {
+            "description": "Indicator of the occurrence of error 1003 (1 for occurred, 0 for not occurred)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Error 1003 occurred",
+                "0": "Error 1003 did not occur"
+            }
+        },
+        "ROOT_CAUSE": {
+            "description": "Root cause of the issue",
+            "type": "categorical",
+            "value_dict": {
+                "MEMORY": "The root cause of the issue is related to memory",
+                "NETWORK_DELAY": "The root cause of the issue is related to network delay",
+                "DATABASE_ISSUE": "The root cause of the issue is related to database"
+            }
+        }
+    },
+    "task_info": {
+        "ROOT_CAUSE": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in IT operations.",
+                "task_prompt": "Based on the server load and error codes, please predict the root cause of the issue.",
+                "answer_prompt": "Is it related to memory[0], network delay[1] or database[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "MEMORY": "The root cause of the issue is related to memory",
+                "NETWORK_DELAY": "The root cause of the issue is related to network delay",
+                "DATABASE_ISSUE": "The root cause of the issue is related to database"
+            },
+            "class_index_dict": {
+                "MEMORY": 0,
+                "NETWORK_DELAY": 1,
+                "DATABASE_ISSUE": 2
+            }
+        },
+        "CPU_LOAD": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in IT operations.",
+                "task_prompt": "Based on the error codes, please predict the CPU load."
+            }
+        },
+        "MEMORY_LOAD": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in IT operations.",
+                "task_prompt": "Based on the error codes, please predict the memory load."
+            }
+        },
+        "DELAY": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in IT operations.",
+                "task_prompt": "Based on the error codes, please predict the delay."
+            }
+        }
+    }
+}

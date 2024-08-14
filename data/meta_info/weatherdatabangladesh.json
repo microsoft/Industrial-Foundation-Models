@@ -1,0 +1,233 @@
+{
+    "basic_info": {
+        "row_num": 3271,
+        "col_num": 21,
+        "label_candidates": [
+            "Temp3pm",
+            "MaxTemp",
+            "Rainfall",
+            "RainToday",
+            "WindGustSpeed",
+            "Humidity3pm",
+            "Pressure3pm",
+            "Cloud3pm"
+        ],
+        "valid_feature_num": 21,
+        "num_features": [
+            "Temp9am",
+            "Temp3pm",
+            "MinTemp",
+            "MaxTemp",
+            "Rainfall",
+            "Evaporation",
+            "Sunshine",
+            "WindGustSpeed",
+            "WindSpeed9am",
+            "WindSpeed3pm",
+            "Humidity9am",
+            "Humidity3pm",
+            "Pressure9am",
+            "Pressure3pm",
+            "Cloud9am",
+            "Cloud3pm"
+        ],
+        "cat_features": [
+            "WindGustDir",
+            "WindDir9am",
+            "WindDir3pm",
+            "RainToday"
+        ],
+        "other_features": [
+            "Date"
+        ],
+        "tags": [
+            "categorical",
+            "earth and nature",
+            "weather and climate",
+            "classification",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/apurboshahidshawon/weatherdatabangladesh"
+    },
+    "feature_info": {
+        "Date": {
+            "description": "The date when the weather data was recorded. Format: dd-mm-yy",
+            "type": "other"
+        },
+        "Temp9am": {
+            "description": "Temperature at 9am in degrees Celsius",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Temp3pm": {
+            "description": "Temperature at 3pm in degrees Celsius",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "MinTemp": {
+            "description": "Minimum temperature in 24 hours in degrees Celsius",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "MaxTemp": {
+            "description": "Maximum temperature in 24 hours in degrees Celsius",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Rainfall": {
+            "description": "The amount of rainfall recorded in the 24 hours to 9am in mm",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "RainToday": {
+            "description": "Whether it rained today (1 if it rained, 0 if not)",
+            "type": "categorical",
+            "value_dict": {
+                "Yes": "It rained today",
+                "No": "It did not rain today"
+            }
+        },
+        "Evaporation": {
+            "description": "The so-called Class A pan evaporation (mm) in the 24 hours to 9am",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Sunshine": {
+            "description": "The number of hours of bright sunshine in the day.",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "WindGustDir": {
+            "description": "The direction of the strongest wind gust in the 24 hours to midnight",
+            "type": "categorical"
+        },
+        "WindGustSpeed": {
+            "description": "The speed (km/h) of the strongest wind gust in the 24 hours to midnight.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "WindDir9am": {
+            "description": "Direction of the wind at 9am",
+            "type": "categorical"
+        },
+        "WindDir3pm": {
+            "description": "Direction of the wind at 3pm",
+            "type": "categorical"
+        },
+        "WindSpeed9am": {
+            "description": "Wind speed (km/hr) averaged over 10 minutes prior to 9am",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "WindSpeed3pm": {
+            "description": "Wind speed (km/hr) averaged over 10 minutes prior to 3pm",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Humidity9am": {
+            "description": "Humidity (percent) at 9am",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Humidity3pm": {
+            "description": "Humidity (percent) at 3pm",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Pressure9am": {
+            "description": "Atmospheric pressure (hpa) reduced to mean sea level at 9am",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Pressure3pm": {
+            "description": "Atmospheric pressure (hpa) reduced to mean sea level at 3pm",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Cloud9am": {
+            "description": "Fraction of sky obscured by cloud at 9am. This is measured in \"oktas\", which are a unit of eigths. It records how many eigths of the sky are obscured by cloud. A 0 measure indicates completely clear sky whilst an 8 indicates that it is completely overcast.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Cloud3pm": {
+            "description": "Fraction of sky obscured by cloud (in \"oktas\": eighths) at 3pm. A 0 measure indicates completely clear sky whilst an 8 indicates that it is completely overcast.",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "Temp3pm": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in weather forecasting.",
+                "task_prompt": "Based on the weather conditions in the morning and other factors, please predict the temperature at 3pm.",
+                "answer_prompt": "The temperature at 3pm is expected to be."
+            }
+        },
+        "MaxTemp": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in weather forecasting.",
+                "task_prompt": "Based on various meteorological factors, please predict the maximum temperature for the day.",
+                "answer_prompt": "The maximum temperature for the day is expected to be."
+            }
+        },
+        "Rainfall": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in weather forecasting.",
+                "task_prompt": "Based on various weather conditions, please predict the amount of rainfall.",
+                "answer_prompt": "The amount of rainfall is expected to be."
+            }
+        },
+        "RainToday": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in weather forecasting.",
+                "task_prompt": "Based on the weather conditions, please predict if it will rain today.",
+                "answer_prompt": "It rained today[1] or It did not rain today[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "Yes": "It rained today",
+                "No": "It did not rain today"
+            },
+            "class_index_dict": {
+                "Yes": 1,
+                "No": 0
+            }
+        },
+        "WindGustSpeed": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in weather forecasting.",
+                "task_prompt": "Based on the weather conditions, please predict the wind gust speed.",
+                "answer_prompt": "The wind gust speed is expected to be."
+            }
+        },
+        "Humidity3pm": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in weather forecasting.",
+                "task_prompt": "Based on the weather conditions in the morning and other factors, please predict the humidity level at 3pm.",
+                "answer_prompt": "The humidity level at 3pm is expected to be."
+            }
+        },
+        "Pressure3pm": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in weather forecasting.",
+                "task_prompt": "Based on the weather conditions in the morning and other factors, please predict the atmospheric pressure at 3pm.",
+                "answer_prompt": "The atmospheric pressure at 3pm is expected to be."
+            }
+        },
+        "Cloud3pm": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in weather forecasting.",
+                "task_prompt": "Based on the weather conditions in the morning and other factors, please predict the cloud cover at 3pm.",
+                "answer_prompt": "The cloud cover at 3pm is expected to be."
+            }
+        }
+    }
+}

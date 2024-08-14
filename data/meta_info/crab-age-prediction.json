@@ -1,0 +1,115 @@
+{
+    "basic_info": {
+        "row_num": 3893,
+        "col_num": 9,
+        "label_candidates": [
+            "Age",
+            "Weight",
+            "Shell Weight"
+        ],
+        "valid_feature_num": 9,
+        "num_features": [
+            "Length",
+            "Diameter",
+            "Height",
+            "Weight",
+            "Shucked Weight",
+            "Viscera Weight",
+            "Shell Weight",
+            "Age"
+        ],
+        "cat_features": [
+            "Sex"
+        ],
+        "other_features": [],
+        "tags": [
+            "earth and nature",
+            "feature engineering",
+            "tabular",
+            "regression",
+            "fish and aquaria",
+            "sklearn"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/sidhus/crab-age-prediction"
+    },
+    "feature_info": {
+        "Sex": {
+            "description": "The sex of the crab, can be Male (M), Female (F) or Infant (I)",
+            "type": "categorical",
+            "value_dict": {
+                "F": "The crab is Female",
+                "M": "The crab is Male",
+                "I": "The crab is an Infant"
+            }
+        },
+        "Length": {
+            "description": "The length of the crab (unit is not specified)",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "Diameter": {
+            "description": "The diameter of the crab (unit is not specified)",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "Height": {
+            "description": "The height of the crab (unit is not specified)",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "Weight": {
+            "description": "The overall weight of the crab (unit is not specified)",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "Shucked Weight": {
+            "description": "The weight of the crab after being shucked (unit is not specified)",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Viscera Weight": {
+            "description": "The weight of the viscera of the crab (unit is not specified)",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Shell Weight": {
+            "description": "The weight of the shell of the crab (unit is not specified)",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Age": {
+            "description": "The age of the crab",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "Age": {
+            "task_type": "regression",
+            "class_index_dict": null,
+            "prompt": {
+                "role_prompt": "You are an expert in marine biology.",
+                "task_prompt": "Based on the physical features of the crab, please predict the age of the crab.",
+                "answer_prompt": "The predicted age of the crab is."
+            }
+        },
+        "Weight": {
+            "task_type": "regression",
+            "class_index_dict": null,
+            "prompt": {
+                "role_prompt": "You are an expert in marine biology.",
+                "task_prompt": "Based on the physical features of the crab, please predict the weight of the crab.",
+                "answer_prompt": "The predicted weight of the crab is."
+            }
+        },
+        "Shell Weight": {
+            "task_type": "regression",
+            "class_index_dict": null,
+            "prompt": {
+                "role_prompt": "You are an expert in marine biology.",
+                "task_prompt": "Based on the physical features of the crab, please predict the shell weight of the crab.",
+                "answer_prompt": "The predicted shell weight of the crab is."
+            }
+        }
+    }
+}

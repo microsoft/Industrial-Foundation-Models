@@ -1,0 +1,192 @@
+{
+    "basic_info": {
+        "row_num": 12107,
+        "col_num": 18,
+        "label_candidates": [
+            "rating",
+            "votes",
+            "watched",
+            "wantWatch",
+            "dropped"
+        ],
+        "valid_feature_num": 18,
+        "num_features": [
+            "eps",
+            "duration",
+            "startYr",
+            "finishYr",
+            "watched",
+            "watching",
+            "wantWatch",
+            "dropped",
+            "votes",
+            "rating"
+        ],
+        "cat_features": [
+            "title",
+            "mediaType",
+            "ongoing",
+            "sznOfRelease",
+            "studios"
+        ],
+        "other_features": [
+            "description",
+            "tags",
+            "contentWarn"
+        ],
+        "tags": [
+            "arts and entertainment",
+            "clustering",
+            "linear regression",
+            "regression",
+            "anime and manga"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/alancmathew/anime-dataset"
+    },
+    "feature_info": {
+        "title": {
+            "description": "The title of the anime",
+            "type": "categorical"
+        },
+        "mediaType": {
+            "description": "The type of media in which the anime was released (e.g., TV, Movie)",
+            "type": "categorical",
+            "value_dict": {
+                "TV": "The anime was released as a TV show",
+                "Movie": "The anime was released as a movie",
+                "Web": "The anime was released on the web",
+                "TV Special": "The anime was released as a TV special",
+                "OVA": "The anime was released as an Original Video Animation",
+                "DVD Special": "The anime was released as a DVD special",
+                "Other": "The anime was released in a format not listed here",
+                "Music Video": "The anime was released as a music video"
+            }
+        },
+        "eps": {
+            "description": "Number of episodes in the anime",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "duration": {
+            "description": "Duration of each episode in minutes",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "ongoing": {
+            "description": "Indicates whether the anime is ongoing or not",
+            "type": "categorical",
+            "value_dict": {
+                "False": "The anime is not currently ongoing",
+                "True": "The anime is currently ongoing"
+            }
+        },
+        "startYr": {
+            "description": "The year when the anime started airing",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "finishYr": {
+            "description": "The year when the anime finished airing",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "sznOfRelease": {
+            "description": "The season of the year when the anime was released",
+            "type": "categorical",
+            "value_dict": {
+                "Spring": "The anime was released in the Spring",
+                "Fall": "The anime was released in the Fall",
+                "Winter": "The anime was released in the Winter",
+                "Summer": "The anime was released in the Summer"
+            }
+        },
+        "description": {
+            "description": "A brief description of the anime",
+            "type": "other"
+        },
+        "studios": {
+            "description": "The studios that produced the anime",
+            "type": "categorical"
+        },
+        "tags": {
+            "description": "Tags associated with the anime",
+            "type": "other"
+        },
+        "contentWarn": {
+            "description": "Content warnings for the anime",
+            "type": "other"
+        },
+        "watched": {
+            "description": "Number of people who have watched the anime",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "watching": {
+            "description": "Number of people currently watching the anime",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "wantWatch": {
+            "description": "Number of people who want to watch the anime",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "dropped": {
+            "description": "Number of people who dropped the anime before finishing it",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "rating": {
+            "description": "Average rating of the anime",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "votes": {
+            "description": "Number of votes for the anime",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "rating": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in anime data analysis.",
+                "task_prompt": "Based on the features of the anime, please predict the rating.",
+                "answer_prompt": "The predicted rating is {rating}."
+            }
+        },
+        "votes": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in anime data analysis.",
+                "task_prompt": "Based on the features of the anime, please predict the number of votes.",
+                "answer_prompt": "The predicted number of votes is {votes}."
+            }
+        },
+        "watched": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in anime data analysis.",
+                "task_prompt": "Based on the features of the anime, please predict the number of times it has been watched.",
+                "answer_prompt": "The predicted number of times watched is {watched}."
+            }
+        },
+        "wantWatch": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in anime data analysis.",
+                "task_prompt": "Based on the features of the anime, please predict the number of people who want to watch it.",
+                "answer_prompt": "The predicted number of people who want to watch it is {wantWatch}."
+            }
+        },
+        "dropped": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in anime data analysis.",
+                "task_prompt": "Based on the features of the anime, please predict the number of people who dropped it.",
+                "answer_prompt": "The predicted number of people who dropped it is {dropped}."
+            }
+        }
+    }
+}

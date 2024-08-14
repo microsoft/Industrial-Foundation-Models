@@ -1,0 +1,107 @@
+{
+    "basic_info": {
+        "row_num": 643,
+        "col_num": 10,
+        "label_candidates": [
+            "sale_price",
+            "discount",
+            "rating"
+        ],
+        "valid_feature_num": 8,
+        "num_features": [
+            "listing_price",
+            "sale_price",
+            "rating",
+            "reviews",
+            "discount"
+        ],
+        "cat_features": [
+            "product_name"
+        ],
+        "other_features": [
+            "description",
+            "images"
+        ],
+        "tags": [
+            "popular culture",
+            "business",
+            "beginner",
+            "intermediate",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/ulrikthygepedersen/nike-shoes-sales"
+    },
+    "feature_info": {
+        "product_name": {
+            "description": "The name of the Nike product",
+            "type": "categorical"
+        },
+        "product_id": {
+            "description": "The unique identifier for each Nike product",
+            "type": "useless"
+        },
+        "listing_price": {
+            "description": "The original listed price of the Nike product",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "sale_price": {
+            "description": "The sale price of the Nike product",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "discount": {
+            "description": "The discount applied to the Nike product, if any",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "brand": {
+            "description": "The brand name of the product, in this case, Nike",
+            "type": "useless"
+        },
+        "description": {
+            "description": "The detailed description of the Nike product",
+            "type": "other"
+        },
+        "rating": {
+            "description": "The average rating of the Nike product given by customers",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "reviews": {
+            "description": "The number of reviews given by customers for the Nike product",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "images": {
+            "description": "The URL of the images of the Nike product",
+            "type": "other"
+        }
+    },
+    "task_info": {
+        "sale_price": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an assistant specializing in sales and pricing analytics.",
+                "task_prompt": "Based on the features of the Nike shoes, please predict the sale price.",
+                "answer_prompt": "The predicted sale price is."
+            }
+        },
+        "discount": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an assistant specializing in sales and pricing analytics.",
+                "task_prompt": "Based on the features of the Nike shoes, please predict the discount.",
+                "answer_prompt": "The predicted discount is."
+            }
+        },
+        "rating": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an assistant specializing in product rating prediction.",
+                "task_prompt": "Based on the features of the Nike shoes, please predict the rating.",
+                "answer_prompt": "The predicted rating is."
+            }
+        }
+    }
+}

@@ -1,0 +1,156 @@
+{
+    "basic_info": {
+        "row_num": 1000,
+        "col_num": 8,
+        "label_candidates": [
+            "spending",
+            "purchase_frequency",
+            "income",
+            "age",
+            "education",
+            "gender"
+        ],
+        "valid_feature_num": 8,
+        "num_features": [
+            "age",
+            "income",
+            "purchase_frequency",
+            "spending"
+        ],
+        "cat_features": [
+            "name",
+            "gender",
+            "education",
+            "country"
+        ],
+        "other_features": [],
+        "tags": [
+            "business",
+            "exploratory data analysis",
+            "data analytics",
+            "k-means",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/goyaladi/customer-spending-dataset"
+    },
+    "feature_info": {
+        "name": {
+            "description": "The full name of the customer",
+            "type": "categorical"
+        },
+        "age": {
+            "description": "The age of the customer",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "gender": {
+            "description": "The gender of the customer",
+            "type": "categorical",
+            "value_dict": {
+                "Female": "The customer is female",
+                "Male": "The customer is male"
+            }
+        },
+        "education": {
+            "description": "The highest education level of the customer",
+            "type": "categorical",
+            "value_dict": {
+                "High School": "The customer has a high school level education",
+                "Master": "The customer has a master degree",
+                "Bachelor": "The customer has a bachelor degree",
+                "PhD": "The customer has a PhD degree"
+            }
+        },
+        "income": {
+            "description": "The annual income of the customer in US dollars",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "country": {
+            "description": "The country where the customer resides",
+            "type": "categorical"
+        },
+        "purchase_frequency": {
+            "description": "The frequency of purchase by the customer, represented as a fraction of 1",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "spending": {
+            "description": "The total spending of the customer in US dollars",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "spending": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in customer behavior analysis.",
+                "task_prompt": "Based on the features of the customer, please predict the spending.",
+                "answer_prompt": "The spending of the customer is ."
+            }
+        },
+        "purchase_frequency": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in customer behavior analysis.",
+                "task_prompt": "Based on the features of the customer, please predict the purchase frequency.",
+                "answer_prompt": "The purchase frequency of the customer is ."
+            }
+        },
+        "income": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in customer behavior analysis.",
+                "task_prompt": "Based on the features of the customer, please predict the income.",
+                "answer_prompt": "The income of the customer is ."
+            }
+        },
+        "age": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in customer behavior analysis.",
+                "task_prompt": "Based on the features of the customer, please predict the age.",
+                "answer_prompt": "The age of the customer is ."
+            }
+        },
+        "education": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in customer behavior analysis.",
+                "task_prompt": "Based on the features of the customer, please predict the education level.",
+                "answer_prompt": "The customer has a high school level education[0], a bachelor degree[1], a master degree[2], or a PhD degree[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "High School": "The customer has a high school level education",
+                "Bachelor": "The customer has a bachelor degree",
+                "Master": "The customer has a master degree",
+                "PhD": "The customer has a PhD degree"
+            },
+            "class_index_dict": {
+                "High School": 0,
+                "Bachelor": 1,
+                "Master": 2,
+                "PhD": 3
+            }
+        },
+        "gender": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in customer behavior analysis.",
+                "task_prompt": "Based on the features of the customer, please predict the gender.",
+                "answer_prompt": "The customer is female[0] or male[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "Female": "The customer is female",
+                "Male": "The customer is male"
+            },
+            "class_index_dict": {
+                "Female": 0,
+                "Male": 1
+            }
+        }
+    }
+}

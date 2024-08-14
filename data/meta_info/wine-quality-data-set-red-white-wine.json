@@ -1,0 +1,143 @@
+{
+    "basic_info": {
+        "row_num": 6497,
+        "col_num": 13,
+        "label_candidates": [
+            "quality",
+            "type",
+            "alcohol"
+        ],
+        "valid_feature_num": 13,
+        "num_features": [
+            "fixed acidity",
+            "volatile acidity",
+            "citric acid",
+            "residual sugar",
+            "chlorides",
+            "free sulfur dioxide",
+            "total sulfur dioxide",
+            "density",
+            "pH",
+            "sulphates",
+            "alcohol",
+            "quality"
+        ],
+        "cat_features": [
+            "type"
+        ],
+        "other_features": [],
+        "tags": [
+            "alcohol",
+            "arts and entertainment",
+            "chemistry",
+            "business",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/ruthgn/wine-quality-data-set-red-white-wine"
+    },
+    "feature_info": {
+        "type": {
+            "description": "The type of wine, either red or white",
+            "type": "categorical",
+            "value_dict": {
+                "white": "The wine is white",
+                "red": "The wine is red"
+            }
+        },
+        "fixed acidity": {
+            "description": "The amount of fixed acids in the wine (g/dm^3)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "volatile acidity": {
+            "description": "The amount of acetic acid in the wine, which at too high of levels can lead to an unpleasant, vinegar taste (g/dm^3)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "citric acid": {
+            "description": "Found in small quantities, citric acid can add freshness and flavor to wines (g/dm^3)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "residual sugar": {
+            "description": "The amount of sugar remaining after fermentation stops, it\u2019s rare to find wines with less than 1 gram/liter and wines with greater than 45 grams/liter are considered sweet (g/dm^3)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "chlorides": {
+            "description": "The amount of salt in the wine (g/dm^3)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "free sulfur dioxide": {
+            "description": "The free form of SO2 exists in equilibrium between molecular SO2 (as a dissolved gas) and bisulfite ion; it prevents microbial growth and the oxidation of wine (mg/dm^3)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "total sulfur dioxide": {
+            "description": "Amount of free and bound forms of S02; in low concentrations, SO2 is mostly undetectable in wine, but at free SO2 concentrations over 50 ppm, SO2 becomes evident in the nose and taste of wine (mg/dm^3)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "density": {
+            "description": "The density of the wine, which can provide some insight into the alcohol content and sugar level (g/cm^3)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "pH": {
+            "description": "Describes the level of acidity or basicity the wine has on a scale from 0 (very acidic) to 14 (very basic); most wines are between 3-4 on the pH scale",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "sulphates": {
+            "description": "A wine additive which can contribute to sulfur dioxide gas (S02) levels, wich acts as an antimicrobial and antioxidant (g/dm^3)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "alcohol": {
+            "description": "The alcohol content of the wine (% vol.)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "quality": {
+            "description": "The quality of the wine, rated by experts on a scale from 0 (very bad) to 10 (very excellent)",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "quality": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in wine quality assessment.",
+                "task_prompt": "Based on the features of the wine, please predict the quality score.",
+                "answer_prompt": "The quality score of the wine is."
+            }
+        },
+        "type": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in wine type identification.",
+                "task_prompt": "Based on the features of the wine, please identify the type.",
+                "answer_prompt": "The wine is white[0] or red[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "white": "The wine is white",
+                "red": "The wine is red"
+            },
+            "class_index_dict": {
+                "white": 0,
+                "red": 1
+            }
+        },
+        "alcohol": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in alcohol content estimation.",
+                "task_prompt": "Based on the features of the wine, please estimate the alcohol content.",
+                "answer_prompt": "The alcohol content of the wine is."
+            }
+        }
+    }
+}

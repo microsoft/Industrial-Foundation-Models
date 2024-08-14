@@ -1,0 +1,84 @@
+{
+    "basic_info": {
+        "row_num": 3957,
+        "col_num": 6,
+        "label_candidates": [
+            "Quality Rating",
+            "Material Transformation Metric",
+            "Material Fusion Metric"
+        ],
+        "valid_feature_num": 6,
+        "num_features": [
+            "Temperature (\u00b0C)",
+            "Pressure (kPa)",
+            "Temperature x Pressure",
+            "Material Fusion Metric",
+            "Material Transformation Metric",
+            "Quality Rating"
+        ],
+        "cat_features": [],
+        "other_features": [],
+        "tags": [
+            "business"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/rukenmissonnier/manufacturing-data-for-polynomial-regression"
+    },
+    "feature_info": {
+        "Temperature (\u00b0C)": {
+            "description": "The temperature in degree Celsius at which the manufacturing process is performed.",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Pressure (kPa)": {
+            "description": "The pressure in kilopascal applied during the manufacturing process.",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Temperature x Pressure": {
+            "description": "The product of the temperature and pressure used in the manufacturing process.",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Material Fusion Metric": {
+            "description": "A metric to measure the fusion of the material during the manufacturing process.",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Material Transformation Metric": {
+            "description": "A metric to measure the transformation of the material during the manufacturing process.",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Quality Rating": {
+            "description": "The quality rating of the manufacturing process, likely on a scale from 0 to 100.",
+            "type": "numerical",
+            "decimal": 6
+        }
+    },
+    "task_info": {
+        "Quality Rating": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in manufacturing process analysis.",
+                "task_prompt": "Based on the features of the manufacturing process, such as temperature, pressure, and material metrics, please predict the quality rating.",
+                "answer_prompt": "The predicted quality rating is:."
+            }
+        },
+        "Material Transformation Metric": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in manufacturing process analysis.",
+                "task_prompt": "Based on the features of the manufacturing process, such as temperature, pressure, and quality rating, please predict the material transformation metric.",
+                "answer_prompt": "The predicted material transformation metric is:."
+            }
+        },
+        "Material Fusion Metric": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in manufacturing process analysis.",
+                "task_prompt": "Based on the features of the manufacturing process, such as temperature, pressure, and quality rating, please predict the material fusion metric.",
+                "answer_prompt": "The predicted material fusion metric is:."
+            }
+        }
+    }
+}

@@ -1,0 +1,136 @@
+{
+    "basic_info": {
+        "row_num": 53940,
+        "col_num": 10,
+        "label_candidates": [
+            "price",
+            "carat",
+            "depth"
+        ],
+        "valid_feature_num": 10,
+        "num_features": [
+            "carat",
+            "depth",
+            "table",
+            "'x'",
+            "'y'",
+            "'z'",
+            "price"
+        ],
+        "cat_features": [
+            "cut",
+            "color",
+            "clarity"
+        ],
+        "other_features": [],
+        "tags": [
+            "beginner",
+            "advanced",
+            "classification",
+            "random forest",
+            "tabular"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/ulrikthygepedersen/diamonds"
+    },
+    "feature_info": {
+        "carat": {
+            "description": "Weight of the diamond (in carats)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "cut": {
+            "description": "Quality of the cut (Ideal, Premium, Good)",
+            "type": "categorical",
+            "value_dict": {
+                "b'Ideal'": "Quality of the cut is Ideal",
+                "b'Premium'": "Quality of the cut is Premium",
+                "b'Good'": "Quality of the cut is Good",
+                "b'Very Good'": "Quality of the cut is Very Good",
+                "b'Fair'": "Quality of the cut is Fair"
+            }
+        },
+        "color": {
+            "description": "Diamond color, from J (worst) to D (best)",
+            "type": "categorical",
+            "value_dict": {
+                "b'E'": "Diamond color is E",
+                "b'I'": "Diamond color is I",
+                "b'J'": "Diamond color is J",
+                "b'H'": "Diamond color is H",
+                "b'F'": "Diamond color is F",
+                "b'G'": "Diamond color is G",
+                "b'D'": "Diamond color is D"
+            }
+        },
+        "clarity": {
+            "description": "A measurement of how clear the diamond is (I1 (worst), SI2, SI1, VS2, VS1, VVS2, VVS1, IF (best))",
+            "type": "categorical",
+            "value_dict": {
+                "b'SI2'": "Clarity of the diamond is SI2",
+                "b'SI1'": "Clarity of the diamond is SI1",
+                "b'VS1'": "Clarity of the diamond is VS1",
+                "b'VS2'": "Clarity of the diamond is VS2",
+                "b'VVS2'": "Clarity of the diamond is VVS2",
+                "b'VVS1'": "Clarity of the diamond is VVS1",
+                "b'I1'": "Clarity of the diamond is I1",
+                "b'IF'": "Clarity of the diamond is IF"
+            }
+        },
+        "depth": {
+            "description": "Total depth percentage = z / mean(x, y) = 2 * z / (x + y) (43--79)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "table": {
+            "description": "Width of top of diamond relative to widest point (43--95)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "price": {
+            "description": "Price in US dollars ($326--$18,823)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "'x'": {
+            "description": "Length in mm (0--10.74)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "'y'": {
+            "description": "Width in mm (0--58.9)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "'z'": {
+            "description": "Depth in mm (0--31.8)",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "price": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in diamond valuation.",
+                "task_prompt": "Based on the features of the diamond, please predict the price.",
+                "answer_prompt": "The predicted price of the diamond is."
+            }
+        },
+        "carat": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in diamond analysis.",
+                "task_prompt": "Based on the features of the diamond, please predict the carat weight.",
+                "answer_prompt": "The predicted carat weight of the diamond is."
+            }
+        },
+        "depth": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in diamond geometry.",
+                "task_prompt": "Based on the features of the diamond, please predict the depth percentage.",
+                "answer_prompt": "The predicted depth percentage of the diamond is."
+            }
+        }
+    }
+}

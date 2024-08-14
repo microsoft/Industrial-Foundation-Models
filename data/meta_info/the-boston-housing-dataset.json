@@ -1,0 +1,138 @@
+{
+    "basic_info": {
+        "row_num": 506,
+        "col_num": 14,
+        "label_candidates": [
+            "MEDV",
+            "CRIM",
+            "LSTAT"
+        ],
+        "valid_feature_num": 14,
+        "num_features": [
+            "CRIM",
+            "ZN",
+            "INDUS",
+            "NOX",
+            "RM",
+            "AGE",
+            "DIS",
+            "RAD",
+            "TAX",
+            "PTRATIO",
+            "B",
+            "LSTAT",
+            "MEDV"
+        ],
+        "cat_features": [
+            "CHAS"
+        ],
+        "other_features": [],
+        "tags": [
+            "universities and colleges",
+            "housing",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/abhijithudayakumar/the-boston-housing-dataset"
+    },
+    "feature_info": {
+        "CRIM": {
+            "description": "Per capita crime rate by town",
+            "type": "numerical",
+            "decimal": 5
+        },
+        "ZN": {
+            "description": "Proportion of residential land zoned for lots over 25,000 sq.ft.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "INDUS": {
+            "description": "Proportion of non-retail business acres per town",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "CHAS": {
+            "description": "Charles River dummy variable (= 1 if tract bounds river; 0 otherwise)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Tract does not bound river",
+                "1": "Tract bounds river"
+            }
+        },
+        "NOX": {
+            "description": "Nitric oxides concentration (parts per 10 million)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "RM": {
+            "description": "Average number of rooms per dwelling",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "AGE": {
+            "description": "Proportion of owner-occupied units built prior to 1940",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "DIS": {
+            "description": "Weighted distances to five Boston employment centres",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "RAD": {
+            "description": "Index of accessibility to radial highways",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "TAX": {
+            "description": "Full-value property-tax rate per $10,000",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "PTRATIO": {
+            "description": "Pupil-teacher ratio by town",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "B": {
+            "description": "1000(Bk - 0.63)^2 where Bk is the proportion of blacks by town",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "LSTAT": {
+            "description": "% lower status of the population",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "MEDV": {
+            "description": "Median value of owner-occupied homes in $1000s",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "MEDV": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate.",
+                "task_prompt": "Based on the features of the houses in Boston, please predict the median value of owner-occupied homes.",
+                "answer_prompt": "The predicted median value is _______ (in $1000s)."
+            }
+        },
+        "CRIM": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in urban planning.",
+                "task_prompt": "Based on the features of the neighborhoods in Boston, please predict the per capita crime rate.",
+                "answer_prompt": "The predicted per capita crime rate is _______."
+            }
+        },
+        "LSTAT": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in socio-economic studies.",
+                "task_prompt": "Based on the features of the neighborhoods in Boston, please predict the percentage of lower status population.",
+                "answer_prompt": "The predicted percentage of lower status population is _______."
+            }
+        }
+    }
+}

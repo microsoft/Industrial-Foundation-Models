@@ -1,0 +1,343 @@
+{
+    "basic_info": {
+        "row_num": 396030,
+        "col_num": 27,
+        "label_candidates": [
+            "loan_status",
+            "grade",
+            "home_ownership",
+            "verification_status",
+            "initial_list_status",
+            "application_type"
+        ],
+        "valid_feature_num": 26,
+        "num_features": [
+            "loan_amnt",
+            "int_rate",
+            "installment",
+            "annual_inc",
+            "dti",
+            "open_acc",
+            "pub_rec",
+            "revol_bal",
+            "revol_util",
+            "total_acc",
+            "mort_acc",
+            "pub_rec_bankruptcies"
+        ],
+        "cat_features": [
+            "term",
+            "grade",
+            "sub_grade",
+            "emp_length",
+            "home_ownership",
+            "verification_status",
+            "purpose",
+            "initial_list_status",
+            "application_type",
+            "loan_status"
+        ],
+        "other_features": [
+            "emp_title",
+            "issue_d",
+            "title",
+            "earliest_cr_line"
+        ],
+        "tags": [
+            "business",
+            "education",
+            "exploratory data analysis",
+            "data visualization",
+            "data analytics",
+            "logistic regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/ranitsarkar01/loantap-logisticregression"
+    },
+    "feature_info": {
+        "loan_amnt": {
+            "description": "The listed amount of the loan applied for by the borrower. If at some point in time, the credit department reduces the loan amount, then it will be reflected in this value.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "term": {
+            "description": "The number of payments on the loan. Values are in months and can be either 36 or 60.",
+            "type": "categorical",
+            "value_dict": {
+                " 36 months": "The loan term is 36 months",
+                " 60 months": "The loan term is 60 months"
+            }
+        },
+        "int_rate": {
+            "description": "Interest Rate on the loan",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "installment": {
+            "description": "The monthly payment owed by the borrower if the loan originates.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "grade": {
+            "description": "LC assigned loan grade",
+            "type": "categorical",
+            "value_dict": {
+                "B": "Loan grade B",
+                "A": "Loan grade A",
+                "C": "Loan grade C",
+                "E": "Loan grade E",
+                "D": "Loan grade D",
+                "F": "Loan grade F",
+                "G": "Loan grade G"
+            }
+        },
+        "sub_grade": {
+            "description": "LC assigned loan subgrade",
+            "type": "categorical"
+        },
+        "emp_title": {
+            "description": "The job title supplied by the Borrower when applying for the loan.",
+            "type": "other"
+        },
+        "emp_length": {
+            "description": "Employment length in years. Possible values are between 0 and 10 where 0 means less than one year and 10 means ten or more years.",
+            "type": "categorical"
+        },
+        "home_ownership": {
+            "description": "The home ownership status provided by the borrower during registration or obtained from the credit report. Our values are: RENT, OWN, MORTGAGE, OTHER.",
+            "type": "categorical",
+            "value_dict": {
+                "RENT": "The borrower rents their home",
+                "MORTGAGE": "The borrower has a mortgage on their home",
+                "OWN": "The borrower owns their home",
+                "OTHER": "The borrower has another type of home ownership",
+                "NONE": "The borrower does not own a home",
+                "ANY": "Any type of home ownership"
+            }
+        },
+        "annual_inc": {
+            "description": "The self-reported annual income provided by the borrower during registration.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "verification_status": {
+            "description": "Indicates if income was verified by LC, not verified, or if the income source was verified",
+            "type": "categorical",
+            "value_dict": {
+                "Not Verified": "The borrower's income has not been verified",
+                "Source Verified": "The borrower's income has been verified by a source",
+                "Verified": "The borrower's income has been verified"
+            }
+        },
+        "issue_d": {
+            "description": "The month which the loan was funded",
+            "type": "other"
+        },
+        "loan_status": {
+            "description": "Current status of the loan",
+            "type": "categorical",
+            "value_dict": {
+                "Fully Paid": "The loan is fully paid",
+                "Charged Off": "The loan is charged off"
+            }
+        },
+        "purpose": {
+            "description": "A category provided by the borrower for the loan request.",
+            "type": "categorical"
+        },
+        "title": {
+            "description": "The loan title provided by the borrower",
+            "type": "other"
+        },
+        "dti": {
+            "description": "A ratio calculated using the borrower\u2019s total monthly debt payments on the total debt obligations, excluding mortgage and the requested LC loan, divided by the borrower\u2019s self-reported monthly income.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "earliest_cr_line": {
+            "description": "The month the borrower's earliest reported credit line was opened",
+            "type": "other"
+        },
+        "open_acc": {
+            "description": "The number of open credit lines in the borrower's credit file.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "pub_rec": {
+            "description": "Number of derogatory public records",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "revol_bal": {
+            "description": "Total credit revolving balance",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "revol_util": {
+            "description": "Revolving line utilization rate, or the amount of credit the borrower is using relative to all available revolving credit.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "total_acc": {
+            "description": "The total number of credit lines currently in the borrower's credit file",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "initial_list_status": {
+            "description": "The initial listing status of the loan. Possible values are \u2013 W, F",
+            "type": "categorical",
+            "value_dict": {
+                "w": "Whole loans",
+                "f": "Fractional loans"
+            }
+        },
+        "application_type": {
+            "description": "Indicates whether the loan is an individual application or a joint application with two co-borrowers",
+            "type": "categorical",
+            "value_dict": {
+                "INDIVIDUAL": "The loan is applied by an individual",
+                "JOINT": "The loan is applied jointly",
+                "DIRECT_PAY": "The loan is paid directly"
+            }
+        },
+        "mort_acc": {
+            "description": "Number of mortgage accounts.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "pub_rec_bankruptcies": {
+            "description": "Number of public record bankruptcies",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "address": {
+            "description": "The address of the borrower",
+            "type": "useless"
+        }
+    },
+    "task_info": {
+        "loan_status": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in financial lending.",
+                "task_prompt": "Based on the features of the loan application, please predict the loan status.",
+                "answer_prompt": "Fully Paid[0] or Charged Off[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "Fully Paid": "The loan is fully paid",
+                "Charged Off": "The loan is charged off"
+            },
+            "class_index_dict": {
+                "Fully Paid": 0,
+                "Charged Off": 1
+            }
+        },
+        "grade": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in financial lending.",
+                "task_prompt": "Based on the features of the loan application, please predict the loan grade.",
+                "answer_prompt": "A[0], B[1], C[2], D[3], E[4], F[5], or G[6]?"
+            },
+            "class_num": 7,
+            "class_value_dict": {
+                "B": "Loan grade B",
+                "A": "Loan grade A",
+                "C": "Loan grade C",
+                "E": "Loan grade E",
+                "D": "Loan grade D",
+                "F": "Loan grade F",
+                "G": "Loan grade G"
+            },
+            "class_index_dict": {
+                "A": 0,
+                "B": 1,
+                "C": 2,
+                "D": 3,
+                "E": 4,
+                "F": 5,
+                "G": 6
+            }
+        },
+        "home_ownership": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in financial lending.",
+                "task_prompt": "Based on the features of the loan application, please predict the home ownership status of the borrower.",
+                "answer_prompt": "RENT[0], MORTGAGE[1], OWN[2], OTHER[3], NONE[4], or ANY[5]?"
+            },
+            "class_num": 6,
+            "class_value_dict": {
+                "RENT": "The borrower rents their home",
+                "MORTGAGE": "The borrower has a mortgage on their home",
+                "OWN": "The borrower owns their home",
+                "OTHER": "The borrower has another type of home ownership",
+                "NONE": "The borrower does not own a home",
+                "ANY": "Any type of home ownership"
+            },
+            "class_index_dict": {
+                "RENT": 0,
+                "MORTGAGE": 1,
+                "OWN": 2,
+                "OTHER": 3,
+                "NONE": 4,
+                "ANY": 5
+            }
+        },
+        "verification_status": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in financial lending.",
+                "task_prompt": "Based on the features of the loan application, please predict the verification status of the borrower.",
+                "answer_prompt": "Not Verified[0], Source Verified[1], or Verified[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "Not Verified": "The borrower's income has not been verified",
+                "Source Verified": "The borrower's income has been verified by a source",
+                "Verified": "The borrower's income has been verified"
+            },
+            "class_index_dict": {
+                "Not Verified": 0,
+                "Source Verified": 1,
+                "Verified": 2
+            }
+        },
+        "initial_list_status": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in financial lending.",
+                "task_prompt": "Based on the features of the loan application, please predict the initial list status of the loan.",
+                "answer_prompt": "Whole loans[0] or Fractional loans[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "w": "Whole loans",
+                "f": "Fractional loans"
+            },
+            "class_index_dict": {
+                "w": 0,
+                "f": 1
+            }
+        },
+        "application_type": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in financial lending.",
+                "task_prompt": "Based on the features of the loan application, please predict the application type of the loan.",
+                "answer_prompt": "INDIVIDUAL[0], JOINT[1], or DIRECT_PAY[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "INDIVIDUAL": "The loan is applied by an individual",
+                "JOINT": "The loan is applied jointly",
+                "DIRECT_PAY": "The loan is paid directly"
+            },
+            "class_index_dict": {
+                "INDIVIDUAL": 0,
+                "JOINT": 1,
+                "DIRECT_PAY": 2
+            }
+        }
+    }
+}

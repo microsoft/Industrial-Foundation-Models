@@ -1,0 +1,362 @@
+{
+    "basic_info": {
+        "row_num": 145,
+        "col_num": 33,
+        "label_candidates": [
+            "GRADE",
+            "CUML_GPA",
+            "EXP_GPA"
+        ],
+        "valid_feature_num": 31,
+        "num_features": [
+            "#_SIBLINGS",
+            "STUDY_HRS",
+            "CUML_GPA",
+            "EXP_GPA",
+            "GRADE"
+        ],
+        "cat_features": [
+            "AGE",
+            "GENDER",
+            "HS_TYPE",
+            "SCHOLARSHIP",
+            "WORK",
+            "ACTIVITY",
+            "PARTNER",
+            "SALARY",
+            "TRANSPORT",
+            "LIVING",
+            "MOTHER_EDU",
+            "FATHER_EDU",
+            "KIDS",
+            "MOTHER_JOB",
+            "FATHER_JOB",
+            "READ_FREQ",
+            "READ_FREQ_SCI",
+            "ATTEND_DEPT",
+            "IMPACT",
+            "ATTEND",
+            "PREP_STUDY",
+            "PREP_EXAM",
+            "NOTES",
+            "LISTENS",
+            "LIKES_DISCUSS",
+            "CLASSROOM"
+        ],
+        "other_features": [],
+        "tags": [
+            "research",
+            "education",
+            "multiclass classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/csafrit2/higher-education-students-performance-evaluation"
+    },
+    "feature_info": {
+        "STUDENTID": {
+            "description": "Unique identifier for each student",
+            "type": "useless"
+        },
+        "AGE": {
+            "description": "Age group of the student",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Below average age",
+                "2": "Average age",
+                "3": "Above average age"
+            }
+        },
+        "GENDER": {
+            "description": "Gender of the student",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Male",
+                "2": "Female"
+            }
+        },
+        "HS_TYPE": {
+            "description": "Type of high school the student attended",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Public high school",
+                "2": "Private high school",
+                "3": "Other types of high school"
+            }
+        },
+        "SCHOLARSHIP": {
+            "description": "Whether the student has a scholarship or not",
+            "type": "categorical",
+            "value_dict": {
+                "1": "No scholarship",
+                "2": "Partial scholarship",
+                "3": "Full scholarship",
+                "4": "Scholarship with stipend",
+                "5": "Other forms of scholarship"
+            }
+        },
+        "WORK": {
+            "description": "Whether the student works or not",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Does not work",
+                "2": "Works part-time or full-time"
+            }
+        },
+        "ACTIVITY": {
+            "description": "Student engagement in activities",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Not active in extracurricular activities",
+                "2": "Active in extracurricular activities"
+            }
+        },
+        "PARTNER": {
+            "description": "Whether the student has a partner or not",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Does not have a partner",
+                "2": "Has a partner"
+            }
+        },
+        "SALARY": {
+            "description": "Salary level of the student",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Low salary",
+                "2": "Below average salary",
+                "3": "Average salary",
+                "4": "Above average salary",
+                "5": "High salary"
+            }
+        },
+        "TRANSPORT": {
+            "description": "Transportation means of the student",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Walks or bikes",
+                "2": "Uses public transportation",
+                "3": "Drives a car",
+                "4": "Other means of transportation"
+            }
+        },
+        "LIVING": {
+            "description": "Living situation of the student",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Lives with parents",
+                "2": "Lives on campus",
+                "3": "Rents an apartment",
+                "4": "Other living situations"
+            }
+        },
+        "MOTHER_EDU": {
+            "description": "Student's mother's education level",
+            "type": "categorical",
+            "value_dict": {
+                "1": "No formal education",
+                "2": "Primary education",
+                "3": "Secondary education",
+                "4": "Higher education",
+                "5": "Postgraduate education",
+                "6": "Other forms of education"
+            }
+        },
+        "FATHER_EDU": {
+            "description": "Student's father's education level",
+            "type": "categorical",
+            "value_dict": {
+                "1": "No formal education",
+                "2": "Primary education",
+                "3": "Secondary education",
+                "4": "Higher education",
+                "5": "Postgraduate education",
+                "6": "Other forms of education"
+            }
+        },
+        "#_SIBLINGS": {
+            "description": "Number of siblings the student has",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "KIDS": {
+            "description": "Whether the student has kids or not",
+            "type": "categorical",
+            "value_dict": {
+                "1": "No kids",
+                "2": "1-2 kids",
+                "3": "3 or more kids"
+            }
+        },
+        "MOTHER_JOB": {
+            "description": "Student's mother's job",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Unemployed",
+                "2": "Part-time job",
+                "3": "Full-time job",
+                "4": "Self-employed",
+                "5": "Other"
+            }
+        },
+        "FATHER_JOB": {
+            "description": "Student's father's job",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Unemployed",
+                "2": "Part-time job",
+                "3": "Full-time job",
+                "4": "Self-employed",
+                "5": "Other"
+            }
+        },
+        "STUDY_HRS": {
+            "description": "Hours the student studies per week",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "READ_FREQ": {
+            "description": "How frequently the student reads",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Rarely reads",
+                "2": "Reads occasionally",
+                "3": "Reads frequently"
+            }
+        },
+        "READ_FREQ_SCI": {
+            "description": "How frequently the student reads scientific literature",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Rarely reads scientific literature",
+                "2": "Reads scientific literature occasionally",
+                "3": "Reads scientific literature frequently"
+            }
+        },
+        "ATTEND_DEPT": {
+            "description": "Whether the student attends department activities",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Does not attend department activities",
+                "2": "Attends department activities"
+            }
+        },
+        "IMPACT": {
+            "description": "Impact level of the student in their environment",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Low impact",
+                "2": "Medium impact",
+                "3": "High impact"
+            }
+        },
+        "ATTEND": {
+            "description": "Attendance level of the student",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Poor attendance",
+                "2": "Good attendance"
+            }
+        },
+        "PREP_STUDY": {
+            "description": "How well the student prepares for studying",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Poorly prepared for studying",
+                "2": "Adequately prepared for studying",
+                "3": "Well prepared for studying"
+            }
+        },
+        "PREP_EXAM": {
+            "description": "How well the student prepares for exams",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Poorly prepared for exams",
+                "2": "Adequately prepared for exams",
+                "3": "Well prepared for exams"
+            }
+        },
+        "NOTES": {
+            "description": "Whether the student takes notes during lectures",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Does not take notes",
+                "2": "Takes notes occasionally",
+                "3": "Frequently takes notes"
+            }
+        },
+        "LISTENS": {
+            "description": "Whether the student listens during lectures",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Does not listen attentively",
+                "2": "Listens attentively occasionally",
+                "3": "Frequently listens attentively"
+            }
+        },
+        "LIKES_DISCUSS": {
+            "description": "Whether the student likes to discuss in class",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Does not like class discussions",
+                "2": "Likes class discussions occasionally",
+                "3": "Frequently likes class discussions"
+            }
+        },
+        "CLASSROOM": {
+            "description": "Classroom behavior of the student",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Poor classroom behavior",
+                "2": "Average classroom behavior",
+                "3": "Good classroom behavior"
+            }
+        },
+        "CUML_GPA": {
+            "description": "Cumulative Grade Point Average of the student",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "EXP_GPA": {
+            "description": "Expected Grade Point Average of the student",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "COURSE ID": {
+            "description": "Unique identifier for each course",
+            "type": "useless"
+        },
+        "GRADE": {
+            "description": "Final grade of the student",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "GRADE": {
+            "task_type": "regression",
+            "class_index_dict": {},
+            "prompt": {
+                "role_prompt": "You are an expert in educational data analysis.",
+                "task_prompt": "Based on the features of the student, please predict the grade.",
+                "answer_prompt": "The grade is."
+            }
+        },
+        "CUML_GPA": {
+            "task_type": "regression",
+            "class_index_dict": {},
+            "prompt": {
+                "role_prompt": "You are an expert in educational data analysis.",
+                "task_prompt": "Based on the features of the student, please predict the cumulative GPA.",
+                "answer_prompt": "The cumulative GPA is."
+            }
+        },
+        "EXP_GPA": {
+            "task_type": "regression",
+            "class_index_dict": {},
+            "prompt": {
+                "role_prompt": "You are an expert in educational data analysis.",
+                "task_prompt": "Based on the features of the student, please predict the expected GPA.",
+                "answer_prompt": "The expected GPA is."
+            }
+        }
+    }
+}

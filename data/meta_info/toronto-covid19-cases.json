@@ -1,0 +1,248 @@
+{
+    "basic_info": {
+        "row_num": 14911,
+        "col_num": 17,
+        "label_candidates": [
+            "Outcome",
+            "Ever Hospitalized",
+            "Ever in ICU",
+            "Ever Intubated"
+        ],
+        "valid_feature_num": 16,
+        "num_features": [],
+        "cat_features": [
+            "Outbreak Associated",
+            "Age Group",
+            "Neighbourhood Name",
+            "FSA",
+            "Source of Infection",
+            "Classification",
+            "Client Gender",
+            "Currently Hospitalized",
+            "Currently in ICU",
+            "Currently Intubated",
+            "Ever Hospitalized",
+            "Ever in ICU",
+            "Ever Intubated",
+            "Outcome"
+        ],
+        "other_features": [
+            "Episode Date",
+            "Reported Date"
+        ],
+        "tags": [
+            "healthcare",
+            "health",
+            "data visualization",
+            "covid19"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/divyansh22/toronto-covid19-cases"
+    },
+    "feature_info": {
+        "_id": {
+            "description": "Unique identifier for each record",
+            "type": "useless"
+        },
+        "Outbreak Associated": {
+            "description": "Whether the case is associated with an outbreak or not",
+            "type": "categorical",
+            "value_dict": {
+                "Sporadic": "The case is not associated with any outbreak",
+                "Outbreak Associated": "The case is associated with an outbreak"
+            }
+        },
+        "Age Group": {
+            "description": "Age group of the infected individual",
+            "type": "categorical",
+            "value_dict": {
+                "50-59": "The individual is between 50 and 59 years old",
+                "20-29": "The individual is between 20 and 29 years old",
+                "60-69": "The individual is between 60 and 69 years old",
+                "30-39": "The individual is between 30 and 39 years old",
+                "19 and younger": "The individual is 19 years old or younger",
+                "80-89": "The individual is between 80 and 89 years old",
+                "70-79": "The individual is between 70 and 79 years old",
+                "40-49": "The individual is between 40 and 49 years old",
+                "90+": "The individual is 90 years old or older"
+            }
+        },
+        "Neighbourhood Name": {
+            "description": "Name of the neighbourhood where the case was reported",
+            "type": "categorical"
+        },
+        "FSA": {
+            "description": "Forward Sortation Area (geographical area based on postal codes)",
+            "type": "categorical"
+        },
+        "Source of Infection": {
+            "description": "Source from where the individual got infected",
+            "type": "categorical",
+            "value_dict": {
+                "Institutional": "The infection source is institutional",
+                "Community": "The infection source is the community",
+                "Travel": "The infection source is related to travel",
+                "N/A - Outbreak associated": "The infection source is not available due to association with an outbreak",
+                "Close contact": "The infection source is close contact with an infected individual",
+                "Pending": "The infection source is pending investigation",
+                "Healthcare": "The infection source is healthcare-related",
+                "Unknown/Missing": "The infection source is unknown or missing"
+            }
+        },
+        "Classification": {
+            "description": "Classification of the case (e.g., confirmed, probable)",
+            "type": "categorical",
+            "value_dict": {
+                "CONFIRMED": "The case is confirmed",
+                "PROBABLE": "The case is probable"
+            }
+        },
+        "Episode Date": {
+            "description": "Date when the episode was reported",
+            "type": "other"
+        },
+        "Reported Date": {
+            "description": "Date when the case was officially reported",
+            "type": "other"
+        },
+        "Client Gender": {
+            "description": "Gender of the infected individual",
+            "type": "categorical",
+            "value_dict": {
+                "MALE": "The individual is male",
+                "FEMALE": "The individual is female",
+                "UNKNOWN": "The gender of the individual is unknown",
+                "TRANSGENDER": "The individual is transgender",
+                "OTHER": "The individual identifies as other gender"
+            }
+        },
+        "Outcome": {
+            "description": "Outcome of the case (e.g., resolved, fatal)",
+            "type": "categorical",
+            "value_dict": {
+                "RESOLVED": "The case is resolved",
+                "FATAL": "The case was fatal",
+                "ACTIVE": "The case is active"
+            }
+        },
+        "Currently Hospitalized": {
+            "description": "Whether the individual is currently hospitalized or not",
+            "type": "categorical",
+            "value_dict": {
+                "No": "The individual is not currently hospitalized",
+                "Yes": "The individual is currently hospitalized"
+            }
+        },
+        "Currently in ICU": {
+            "description": "Whether the individual is currently in ICU or not",
+            "type": "categorical",
+            "value_dict": {
+                "No": "The individual is not currently in ICU",
+                "Yes": "The individual is currently in ICU"
+            }
+        },
+        "Currently Intubated": {
+            "description": "Whether the individual is currently intubated or not",
+            "type": "categorical",
+            "value_dict": {
+                "No": "The individual is not currently intubated",
+                "Yes": "The individual is currently intubated"
+            }
+        },
+        "Ever Hospitalized": {
+            "description": "Whether the individual was ever hospitalized due to the infection or not",
+            "type": "categorical",
+            "value_dict": {
+                "No": "The individual was never hospitalized due to the infection",
+                "Yes": "The individual was hospitalized due to the infection at some point"
+            }
+        },
+        "Ever in ICU": {
+            "description": "Whether the individual was ever in ICU due to the infection or not",
+            "type": "categorical",
+            "value_dict": {
+                "No": "The individual was never in ICU due to the infection",
+                "Yes": "The individual was in ICU due to the infection at some point"
+            }
+        },
+        "Ever Intubated": {
+            "description": "Whether the individual was ever intubated due to the infection or not",
+            "type": "categorical",
+            "value_dict": {
+                "No": "The individual was never intubated due to the infection",
+                "Yes": "The individual was intubated due to the infection at some point"
+            }
+        }
+    },
+    "task_info": {
+        "Outcome": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in public health data analysis.",
+                "task_prompt": "Based on the features of the patient, please predict the outcome of the COVID-19 case.",
+                "answer_prompt": "RESOLVED[0], ACTIVE[1] or FATAL[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "RESOLVED": "The case is resolved",
+                "FATAL": "The case was fatal",
+                "ACTIVE": "The case is active"
+            },
+            "class_index_dict": {
+                "RESOLVED": 0,
+                "ACTIVE": 1,
+                "FATAL": 2
+            }
+        },
+        "Ever Hospitalized": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in public health data analysis.",
+                "task_prompt": "Based on the features of the patient, please predict if the individual was ever hospitalized due to the infection.",
+                "answer_prompt": "No[0] or Yes[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "No": "The individual was never hospitalized due to the infection",
+                "Yes": "The individual was hospitalized due to the infection at some point"
+            },
+            "class_index_dict": {
+                "No": 0,
+                "Yes": 1
+            }
+        },
+        "Ever in ICU": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in public health data analysis.",
+                "task_prompt": "Based on the features of the patient, please predict if the individual was ever in ICU due to the infection.",
+                "answer_prompt": "No[0] or Yes[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "No": "The individual was never in ICU due to the infection",
+                "Yes": "The individual was in ICU due to the infection at some point"
+            },
+            "class_index_dict": {
+                "No": 0,
+                "Yes": 1
+            }
+        },
+        "Ever Intubated": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in public health data analysis.",
+                "task_prompt": "Based on the features of the patient, please predict if the individual was ever intubated due to the infection.",
+                "answer_prompt": "No[0] or Yes[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "No": "The individual was never intubated due to the infection",
+                "Yes": "The individual was intubated due to the infection at some point"
+            },
+            "class_index_dict": {
+                "No": 0,
+                "Yes": 1
+            }
+        }
+    }
+}

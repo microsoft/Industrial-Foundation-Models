@@ -1,0 +1,343 @@
+{
+    "basic_info": {
+        "row_num": 324372,
+        "col_num": 23,
+        "label_candidates": [
+            "Diabetes_binary",
+            "Diabetes_012",
+            "HighBP",
+            "HighChol",
+            "Stroke",
+            "HeartDiseaseorAttack"
+        ],
+        "valid_feature_num": 23,
+        "num_features": [
+            "BMI",
+            "Age"
+        ],
+        "cat_features": [
+            "Diabetes_012",
+            "HighBP",
+            "HighChol",
+            "CholCheck",
+            "Smoker",
+            "Stroke",
+            "HeartDiseaseorAttack",
+            "PhysActivity",
+            "Fruits",
+            "Veggies",
+            "HvyAlcoholConsump",
+            "AnyHealthcare",
+            "NoDocbcCost",
+            "GenHlth",
+            "MentHlth",
+            "PhysHlth",
+            "DiffWalk",
+            "Sex",
+            "Education",
+            "Income",
+            "Diabetes_binary"
+        ],
+        "other_features": [],
+        "tags": [
+            "public health",
+            "health",
+            "beginner",
+            "classification",
+            "diabetes"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/alexteboul/diabetes-health-indicators-dataset"
+    },
+    "feature_info": {
+        "Diabetes_012": {
+            "description": "Indicator if the individual has diabetes",
+            "type": "categorical",
+            "value_dict": {
+                "0.0": "Does not have diabetes",
+                "1.0": "Has prediabetes",
+                "2.0": "Has diabetes"
+            }
+        },
+        "HighBP": {
+            "description": "Indicator if the individual has high blood pressure",
+            "type": "categorical",
+            "value_dict": {
+                "0.0": "Does not have high blood pressure",
+                "1.0": "Has high blood pressure"
+            }
+        },
+        "HighChol": {
+            "description": "Indicator if the individual has high cholesterol",
+            "type": "categorical",
+            "value_dict": {
+                "0.0": "Does not have high cholesterol",
+                "1.0": "Has high cholesterol"
+            }
+        },
+        "CholCheck": {
+            "description": "Indicator if the individual has checked their cholesterol",
+            "type": "categorical",
+            "value_dict": {
+                "0.0": "Has not checked cholesterol",
+                "1.0": "Has checked cholesterol"
+            }
+        },
+        "BMI": {
+            "description": "Body Mass Index of the individual",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Smoker": {
+            "description": "Indicator if the individual is a smoker",
+            "type": "categorical",
+            "value_dict": {
+                "0.0": "Non-smoker",
+                "1.0": "Smoker"
+            }
+        },
+        "Stroke": {
+            "description": "Indicator if the individual has had a stroke",
+            "type": "categorical",
+            "value_dict": {
+                "0.0": "Has not had a stroke",
+                "1.0": "Has had a stroke"
+            }
+        },
+        "HeartDiseaseorAttack": {
+            "description": "Indicator if the individual has had a heart disease or attack",
+            "type": "categorical",
+            "value_dict": {
+                "0.0": "Has not had a heart disease or attack",
+                "1.0": "Has had a heart disease or attack"
+            }
+        },
+        "PhysActivity": {
+            "description": "Indicator of the level of physical activity of the individual",
+            "type": "categorical",
+            "value_dict": {
+                "0.0": "Low physical activity",
+                "1.0": "High physical activity"
+            }
+        },
+        "Fruits": {
+            "description": "Indicator of the fruit consumption level of the individual",
+            "type": "categorical",
+            "value_dict": {
+                "0.0": "Low fruit consumption",
+                "1.0": "High fruit consumption"
+            }
+        },
+        "Veggies": {
+            "description": "Indicator of the vegetable consumption level of the individual",
+            "type": "categorical",
+            "value_dict": {
+                "0.0": "Low vegetable consumption",
+                "1.0": "High vegetable consumption"
+            }
+        },
+        "HvyAlcoholConsump": {
+            "description": "Indicator if the individual is a heavy alcohol consumer",
+            "type": "categorical",
+            "value_dict": {
+                "0.0": "Not a heavy alcohol consumer",
+                "1.0": "Heavy alcohol consumer"
+            }
+        },
+        "AnyHealthcare": {
+            "description": "Indicator if the individual has any healthcare",
+            "type": "categorical",
+            "value_dict": {
+                "0.0": "Does not have any healthcare",
+                "1.0": "Has healthcare"
+            }
+        },
+        "NoDocbcCost": {
+            "description": "Indicator if the individual has not seen a doctor because of cost",
+            "type": "categorical",
+            "value_dict": {
+                "0.0": "Has not avoided doctor due to cost",
+                "1.0": "Has avoided doctor due to cost"
+            }
+        },
+        "GenHlth": {
+            "description": "General health status of the individual",
+            "type": "categorical",
+            "value_dict": {
+                "1.0": "Very good general health",
+                "2.0": "Good general health",
+                "3.0": "Average general health",
+                "4.0": "Poor general health",
+                "5.0": "Very poor general health"
+            }
+        },
+        "MentHlth": {
+            "description": "Mental health status of the individual",
+            "type": "categorical"
+        },
+        "PhysHlth": {
+            "description": "Physical health status of the individual",
+            "type": "categorical"
+        },
+        "DiffWalk": {
+            "description": "Indicator if the individual has difficulty walking",
+            "type": "categorical",
+            "value_dict": {
+                "0.0": "Does not have difficulty walking",
+                "1.0": "Has difficulty walking"
+            }
+        },
+        "Sex": {
+            "description": "Sex of the individual",
+            "type": "categorical",
+            "value_dict": {
+                "0.0": "Male",
+                "1.0": "Female"
+            }
+        },
+        "Age": {
+            "description": "Age of the individual",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Education": {
+            "description": "Education level of the individual",
+            "type": "categorical",
+            "value_dict": {
+                "1.0": "Lowest education level",
+                "2.0": "Low education level",
+                "3.0": "Average education level",
+                "4.0": "High education level",
+                "5.0": "Higher education level",
+                "6.0": "Highest education level"
+            }
+        },
+        "Income": {
+            "description": "Income level of the individual",
+            "type": "categorical",
+            "value_dict": {
+                "1.0": "Lowest income level",
+                "2.0": "Low income level",
+                "3.0": "Average income level",
+                "4.0": "High income level",
+                "5.0": "Higher income level",
+                "6.0": "Highest income level",
+                "7.0": "Above highest income level",
+                "8.0": "Much above highest income level"
+            }
+        },
+        "Diabetes_binary": {
+            "description": "Binary indicator if the individual has diabetes",
+            "type": "categorical",
+            "value_dict": {
+                "0.0": "Does not have diabetes",
+                "1.0": "Has diabetes"
+            }
+        }
+    },
+    "task_info": {
+        "Diabetes_binary": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in health data analysis.",
+                "task_prompt": "Based on the health indicators of the patient, please predict if the patient has diabetes.",
+                "answer_prompt": "Does not have diabetes[0] or Has diabetes[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0.0": "Does not have diabetes",
+                "1.0": "Has diabetes"
+            },
+            "class_index_dict": {
+                "0.0": 0,
+                "1.0": 1
+            }
+        },
+        "Diabetes_012": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in health data analysis.",
+                "task_prompt": "Based on the health indicators of the patient, please predict the diabetes status of the patient.",
+                "answer_prompt": "Does not have diabetes[0], Has prediabetes[1], or Has diabetes[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "0.0": "Does not have diabetes",
+                "1.0": "Has prediabetes",
+                "2.0": "Has diabetes"
+            },
+            "class_index_dict": {
+                "0.0": 0,
+                "1.0": 1,
+                "2.0": 2
+            }
+        },
+        "HighBP": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in health data analysis.",
+                "task_prompt": "Based on the health indicators of the patient, please predict if the patient has high blood pressure.",
+                "answer_prompt": "Does not have high blood pressure[0] or Has high blood pressure[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0.0": "Does not have high blood pressure",
+                "1.0": "Has high blood pressure"
+            },
+            "class_index_dict": {
+                "0.0": 0,
+                "1.0": 1
+            }
+        },
+        "HighChol": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in health data analysis.",
+                "task_prompt": "Based on the health indicators of the patient, please predict if the patient has high cholesterol.",
+                "answer_prompt": "Does not have high cholesterol[0] or Has high cholesterol[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0.0": "Does not have high cholesterol",
+                "1.0": "Has high cholesterol"
+            },
+            "class_index_dict": {
+                "0.0": 0,
+                "1.0": 1
+            }
+        },
+        "Stroke": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in health data analysis.",
+                "task_prompt": "Based on the health indicators of the patient, please predict if the patient has had a stroke.",
+                "answer_prompt": "Has not had a stroke[0] or Has had a stroke[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0.0": "Has not had a stroke",
+                "1.0": "Has had a stroke"
+            },
+            "class_index_dict": {
+                "0.0": 0,
+                "1.0": 1
+            }
+        },
+        "HeartDiseaseorAttack": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in health data analysis.",
+                "task_prompt": "Based on the health indicators of the patient, please predict if the patient has had a heart disease or attack.",
+                "answer_prompt": "Has not had a heart disease or attack[0] or Has had a heart disease or attack[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0.0": "Has not had a heart disease or attack",
+                "1.0": "Has had a heart disease or attack"
+            },
+            "class_index_dict": {
+                "0.0": 0,
+                "1.0": 1
+            }
+        }
+    }
+}

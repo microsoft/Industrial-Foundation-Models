@@ -1,0 +1,245 @@
+{
+    "basic_info": {
+        "row_num": 10127,
+        "col_num": 23,
+        "label_candidates": [
+            "Attrition_Flag",
+            "Total_Trans_Amt",
+            "Total_Trans_Ct",
+            "Total_Ct_Chng_Q4_Q1",
+            "Avg_Utilization_Ratio"
+        ],
+        "valid_feature_num": 22,
+        "num_features": [
+            "Customer_Age",
+            "Dependent_count",
+            "Months_on_book",
+            "Total_Relationship_Count",
+            "Months_Inactive_12_mon",
+            "Contacts_Count_12_mon",
+            "Credit_Limit",
+            "Total_Revolving_Bal",
+            "Avg_Open_To_Buy",
+            "Total_Amt_Chng_Q4_Q1",
+            "Total_Trans_Amt",
+            "Total_Trans_Ct",
+            "Total_Ct_Chng_Q4_Q1",
+            "Avg_Utilization_Ratio"
+        ],
+        "cat_features": [
+            "Gender",
+            "Education_Level",
+            "Marital_Status",
+            "Income_Category",
+            "Card_Category",
+            "Attrition_Flag"
+        ],
+        "other_features": [
+            "Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1",
+            "Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2"
+        ],
+        "tags": [
+            "business",
+            "lending",
+            "data analytics",
+            "classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/thedevastator/predicting-credit-card-customer-attrition-with-m"
+    },
+    "feature_info": {
+        "CLIENTNUM": {
+            "description": "Unique identifier for the customer holding the credit card",
+            "type": "useless"
+        },
+        "Attrition_Flag": {
+            "description": "Internal event (customer activity) variable - if the account is closed then 1 else 0",
+            "type": "categorical",
+            "value_dict": {
+                "Existing Customer": "The account is still active",
+                "Attrited Customer": "The account is closed"
+            }
+        },
+        "Customer_Age": {
+            "description": "Demographic variable - Age of the customer",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Gender": {
+            "description": "Demographic variable - M=Male, F=Female",
+            "type": "categorical",
+            "value_dict": {
+                "M": "Male",
+                "F": "Female"
+            }
+        },
+        "Dependent_count": {
+            "description": "Demographic variable - Number of dependents",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Education_Level": {
+            "description": "Education Level e.g. high school, college graduate, etc.",
+            "type": "categorical",
+            "value_dict": {
+                "High School": "Customer has a high school level education",
+                "Graduate": "Customer has a graduate level education",
+                "Uneducated": "Customer has no formal education",
+                "Unknown": "Education level of the customer is unknown",
+                "College": "Customer has a college level education",
+                "Post-Graduate": "Customer has a post-graduate level education",
+                "Doctorate": "Customer has a doctorate level education"
+            }
+        },
+        "Marital_Status": {
+            "description": "Marital Status",
+            "type": "categorical",
+            "value_dict": {
+                "Married": "Customer is married",
+                "Single": "Customer is single",
+                "Unknown": "Marital status of the customer is unknown",
+                "Divorced": "Customer is divorced"
+            }
+        },
+        "Income_Category": {
+            "description": "Income Category of the account holder (in dollars)",
+            "type": "categorical",
+            "value_dict": {
+                "$60K - $80K": "Customer income falls between $60K and $80K",
+                "Less than $40K": "Customer income is less than $40K",
+                "$80K - $120K": "Customer income falls between $80K and $120K",
+                "$40K - $60K": "Customer income falls between $40K and $60K",
+                "$120K +": "Customer income is more than $120K",
+                "Unknown": "Income of the customer is unknown"
+            }
+        },
+        "Card_Category": {
+            "description": "Product Variable - Type of Card (Blue, Silver, Gold, Platinum)",
+            "type": "categorical",
+            "value_dict": {
+                "Blue": "Customer has a Blue card",
+                "Gold": "Customer has a Gold card",
+                "Silver": "Customer has a Silver card",
+                "Platinum": "Customer has a Platinum card"
+            }
+        },
+        "Months_on_book": {
+            "description": "Period of relationship with bank",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Total_Relationship_Count": {
+            "description": "Total no. of products held by the customer",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Months_Inactive_12_mon": {
+            "description": "No. of months inactive in the last 12 months",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Contacts_Count_12_mon": {
+            "description": "No. of Contacts in the last 12 months",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Credit_Limit": {
+            "description": "Credit Limit on the Credit Card",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Total_Revolving_Bal": {
+            "description": "Total Revolving Balance on the Credit Card",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Avg_Open_To_Buy": {
+            "description": "Open to Buy Credit Line (Average of last 12 months)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Total_Amt_Chng_Q4_Q1": {
+            "description": "Change in Transaction Amount (Q4 over Q1)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Total_Trans_Amt": {
+            "description": "Total Transaction Amount (Last 12 months)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Total_Trans_Ct": {
+            "description": "Total Transaction Count (Last 12 months)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Total_Ct_Chng_Q4_Q1": {
+            "description": "Change in Transaction Count (Q4 over Q1)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Avg_Utilization_Ratio": {
+            "description": "Average Card Utilization Ratio",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1": {
+            "description": "Naive Bayes classifier prediction probability for attrition flag, card category, contacts count, dependent count, education level, months inactive in the last 12 months - class 1",
+            "type": "other"
+        },
+        "Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2": {
+            "description": "Naive Bayes classifier prediction probability for attrition flag, card category, contacts count, dependent count, education level, months inactive in the last 12 months - class 2",
+            "type": "other"
+        }
+    },
+    "task_info": {
+        "Attrition_Flag": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in credit card customer behavior analysis.",
+                "task_prompt": "Based on the features of the customer, please predict whether the customer will close the account.",
+                "answer_prompt": "The account is still active[0] or The account is closed[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "Existing Customer": "The account is still active",
+                "Attrited Customer": "The account is closed"
+            },
+            "class_index_dict": {
+                "Existing Customer": 0,
+                "Attrited Customer": 1
+            }
+        },
+        "Total_Trans_Amt": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in credit card transaction analysis.",
+                "task_prompt": "Based on the features of the customer, please predict the total transaction amount.",
+                "answer_prompt": "What is the predicted total transaction amount?"
+            }
+        },
+        "Total_Trans_Ct": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in credit card transaction analysis.",
+                "task_prompt": "Based on the features of the customer, please predict the total transaction count.",
+                "answer_prompt": "What is the predicted total transaction count?"
+            }
+        },
+        "Total_Ct_Chng_Q4_Q1": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in credit card usage analysis.",
+                "task_prompt": "Based on the features of the customer, please predict the change in transaction count from Q4 to Q1.",
+                "answer_prompt": "What is the predicted change in transaction count from Q4 to Q1?"
+            }
+        },
+        "Avg_Utilization_Ratio": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in credit card usage analysis.",
+                "task_prompt": "Based on the features of the customer, please predict the average utilization ratio.",
+                "answer_prompt": "What is the predicted average utilization ratio?"
+            }
+        }
+    }
+}

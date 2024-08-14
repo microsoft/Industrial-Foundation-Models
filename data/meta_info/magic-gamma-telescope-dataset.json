@@ -1,0 +1,130 @@
+{
+    "basic_info": {
+        "row_num": 19020,
+        "col_num": 11,
+        "label_candidates": [
+            "class",
+            "fDist",
+            "fAlpha"
+        ],
+        "valid_feature_num": 11,
+        "num_features": [
+            "fLength",
+            "fWidth",
+            "fSize",
+            "fConc",
+            "fConc1",
+            "fAsym",
+            "fM3Long",
+            "fM3Trans",
+            "fAlpha",
+            "fDist"
+        ],
+        "cat_features": [
+            "class"
+        ],
+        "other_features": [],
+        "tags": [
+            "earth and nature",
+            "earth science",
+            "atmospheric science",
+            "physics"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/abhinand05/magic-gamma-telescope-dataset"
+    },
+    "feature_info": {
+        "fLength": {
+            "description": "Length of the major axis of the ellipse [mm]",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "fWidth": {
+            "description": "Width of the minor axis of the ellipse [mm]",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "fSize": {
+            "description": "Size of the ellipse [mm]",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "fConc": {
+            "description": "Ratio of sum of pixels along major axis to total pixels",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "fConc1": {
+            "description": "Ratio of sum of pixels along minor axis to total pixels",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "fAsym": {
+            "description": "Distance from highest pixel to center, projected onto major axis [mm]",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "fM3Long": {
+            "description": "3rd root of third moment along major axis [mm]",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "fM3Trans": {
+            "description": "3rd root of third moment along minor axis [mm]",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "fAlpha": {
+            "description": "Angle of major axis with vector to origin [deg]",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "fDist": {
+            "description": "Distance from origin to center of ellipse [mm]",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "class": {
+            "description": "Class of the observation (g for gamma, h for hadron)",
+            "type": "categorical",
+            "value_dict": {
+                "g": "Gamma (signal)",
+                "h": "Hadron (background)"
+            }
+        }
+    },
+    "task_info": {
+        "class": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in astronomical data analysis.",
+                "task_prompt": "Based on the features of the telescope data, please predict the type of particle.",
+                "answer_prompt": "Gamma (signal)[0] or Hadron (background)[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "g": "Gamma (signal)",
+                "h": "Hadron (background)"
+            },
+            "class_index_dict": {
+                "g": 0,
+                "h": 1
+            }
+        },
+        "fDist": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in astronomical data analysis.",
+                "task_prompt": "Based on the features of the telescope data, please predict the distance of the particle.",
+                "answer_prompt": "What is the predicted distance?"
+            }
+        },
+        "fAlpha": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in astronomical data analysis.",
+                "task_prompt": "Based on the features of the telescope data, please predict the angle of the particle.",
+                "answer_prompt": "What is the predicted angle?"
+            }
+        }
+    }
+}

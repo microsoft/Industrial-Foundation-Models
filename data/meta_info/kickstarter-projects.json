@@ -1,0 +1,131 @@
+{
+    "basic_info": {
+        "row_num": 374853,
+        "col_num": 11,
+        "label_candidates": [
+            "State",
+            "Backers",
+            "Pledged"
+        ],
+        "valid_feature_num": 10,
+        "num_features": [
+            "Goal",
+            "Pledged",
+            "Backers"
+        ],
+        "cat_features": [
+            "Name",
+            "Category",
+            "Subcategory",
+            "Country",
+            "State"
+        ],
+        "other_features": [
+            "Launched",
+            "Deadline"
+        ],
+        "tags": [
+            "finance",
+            "beginner",
+            "intermediate",
+            "classification",
+            "tabular"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/ulrikthygepedersen/kickstarter-projects"
+    },
+    "feature_info": {
+        "ID": {
+            "description": "The unique identifier for each project",
+            "type": "useless"
+        },
+        "Name": {
+            "description": "The name of the project",
+            "type": "categorical"
+        },
+        "Category": {
+            "description": "The general category the project falls under",
+            "type": "categorical"
+        },
+        "Subcategory": {
+            "description": "The specific category within the general category that the project falls under",
+            "type": "categorical"
+        },
+        "Country": {
+            "description": "The country where the project is based",
+            "type": "categorical"
+        },
+        "Launched": {
+            "description": "The date and time when the project was launched for crowdfunding",
+            "type": "other"
+        },
+        "Deadline": {
+            "description": "The date and time when the crowdfunding campaign ends",
+            "type": "other"
+        },
+        "Goal": {
+            "description": "The funding goal for the project in the project\u2019s native currency",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Pledged": {
+            "description": "The amount pledged by the crowd in the project\u2019s native currency",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Backers": {
+            "description": "The number of backers for the project",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "State": {
+            "description": "The final state of the project (e.g., successful, failed)",
+            "type": "categorical",
+            "value_dict": {
+                "Failed": "The project did not meet its funding goal",
+                "Successful": "The project met its funding goal",
+                "Canceled": "The project was canceled by the creator or Kickstarter",
+                "Suspended": "The project was suspended by Kickstarter for violating rules",
+                "Live": "The project is currently live and open for funding"
+            }
+        }
+    },
+    "task_info": {
+        "State": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in crowdfunding project analysis.",
+                "task_prompt": "Based on the features of the Kickstarter project, please predict the final state of the project.",
+                "answer_prompt": "Failed[0], Successful[1], Canceled[2], Suspended[3], Live[4]?"
+            },
+            "class_num": 5,
+            "class_value_dict": {
+                "Failed": "The project did not meet its funding goal",
+                "Successful": "The project met its funding goal",
+                "Canceled": "The project was canceled by the creator or Kickstarter",
+                "Suspended": "The project was suspended by Kickstarter for violating rules",
+                "Live": "The project is currently live and open for funding"
+            },
+            "class_index_dict": {
+                "Failed": 0,
+                "Successful": 1,
+                "Canceled": 2,
+                "Suspended": 3,
+                "Live": 4
+            }
+        },
+        "Backers": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in crowdfunding project analysis.",
+                "task_prompt": "Based on the features of the Kickstarter project, please predict the number of backers."
+            }
+        },
+        "Pledged": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in crowdfunding project analysis.",
+                "task_prompt": "Based on the features of the Kickstarter project, please predict the pledged amount."
+            }
+        }
+    }
+}

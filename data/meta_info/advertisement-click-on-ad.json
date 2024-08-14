@@ -1,0 +1,139 @@
+{
+    "basic_info": {
+        "row_num": 1000,
+        "col_num": 10,
+        "label_candidates": [
+            "Clicked on Ad",
+            "Daily Time Spent on Site",
+            "Age",
+            "Daily Internet Usage",
+            "Area Income"
+        ],
+        "valid_feature_num": 10,
+        "num_features": [
+            "Daily Time Spent on Site",
+            "Age",
+            "Area Income",
+            "Daily Internet Usage"
+        ],
+        "cat_features": [
+            "Ad Topic Line",
+            "City",
+            "Male",
+            "Country",
+            "Clicked on Ad"
+        ],
+        "other_features": [
+            "Timestamp"
+        ],
+        "tags": [
+            "websites",
+            "categorical",
+            "marketing",
+            "logistic regression",
+            "sklearn"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/gabrielsantello/advertisement-click-on-ad"
+    },
+    "feature_info": {
+        "Daily Time Spent on Site": {
+            "description": "The amount of time the user spends on the site daily, measured in minutes",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Age": {
+            "description": "The age of the user",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Area Income": {
+            "description": "Average income of geographical area of user",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Daily Internet Usage": {
+            "description": "Average in minutes a day the user is on the internet",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Ad Topic Line": {
+            "description": "Headline of the advertisement",
+            "type": "categorical"
+        },
+        "City": {
+            "description": "The city of the user",
+            "type": "categorical"
+        },
+        "Male": {
+            "description": "Whether the user is male (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The user is not male",
+                "1": "The user is male"
+            }
+        },
+        "Country": {
+            "description": "The country of the user",
+            "type": "categorical"
+        },
+        "Timestamp": {
+            "description": "Time at which user clicked on Ad or closed window",
+            "type": "other"
+        },
+        "Clicked on Ad": {
+            "description": "0 or 1 indicating whether the user clicked on the ad",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The user did not click on the ad",
+                "1": "The user clicked on the ad"
+            }
+        }
+    },
+    "task_info": {
+        "Clicked on Ad": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in digital marketing analysis.",
+                "task_prompt": "Based on the user behavior data, please predict whether the user clicked on the ad.",
+                "answer_prompt": "The user clicked on the ad[1] or did not click on the ad[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "The user did not click on the ad",
+                "1": "The user clicked on the ad"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "Daily Time Spent on Site": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in user behavior analysis.",
+                "task_prompt": "Based on the user profile, please predict the daily time spent on the site."
+            }
+        },
+        "Age": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in demographic analysis.",
+                "task_prompt": "Based on the user behavior data, please predict the age of the user."
+            }
+        },
+        "Daily Internet Usage": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in internet usage analysis.",
+                "task_prompt": "Based on the user profile, please predict the daily internet usage."
+            }
+        },
+        "Area Income": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in economic analysis.",
+                "task_prompt": "Based on the user profile and behavior data, please predict the area income."
+            }
+        }
+    }
+}

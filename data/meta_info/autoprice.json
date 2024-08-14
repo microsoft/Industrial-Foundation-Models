@@ -1,0 +1,170 @@
+{
+    "basic_info": {
+        "row_num": 159,
+        "col_num": 16,
+        "label_candidates": [
+            "class",
+            "city-mpg",
+            "highway-mpg",
+            "horsepower",
+            "curb-weight"
+        ],
+        "valid_feature_num": 16,
+        "num_features": [
+            "normalized-losses",
+            "wheel-base",
+            "length",
+            "width",
+            "height",
+            "curb-weight",
+            "engine-size",
+            "bore",
+            "stroke",
+            "compression-ratio",
+            "horsepower",
+            "peak-rpm",
+            "city-mpg",
+            "highway-mpg",
+            "class"
+        ],
+        "cat_features": [
+            "symboling"
+        ],
+        "other_features": [],
+        "tags": [
+            "arts and entertainment"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/mathurinache/autoprice"
+    },
+    "feature_info": {
+        "symboling": {
+            "description": "Its assigned insurance risk rating, A value of +3 indicates that the auto is risky, -3 that it is probably pretty safe.",
+            "type": "categorical",
+            "value_dict": {
+                "2": "Assigned insurance risk rating of 2, indicating medium risk.",
+                "1": "Assigned insurance risk rating of 1, indicating lower than average risk.",
+                "0": "Assigned insurance risk rating of 0, indicating average risk.",
+                "-1": "Assigned insurance risk rating of -1, indicating lower than average risk.",
+                "3": "Assigned insurance risk rating of 3, indicating high risk.",
+                "-2": "Assigned insurance risk rating of -2, indicating very low risk."
+            }
+        },
+        "normalized-losses": {
+            "description": "The average loss payment per insured vehicle year. This value is normalized for all autos within a particular size classification (two-door small, station wagons, sports/speciality, etc\u2026)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "wheel-base": {
+            "description": "The distance between the centers of the front and rear wheels, measured in inches.",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "length": {
+            "description": "Length of the car, measured in inches.",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "width": {
+            "description": "Width of the car, measured in inches.",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "height": {
+            "description": "Height of the car, measured in inches.",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "curb-weight": {
+            "description": "The weight of a car without occupants or baggage, measured in pounds.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "engine-size": {
+            "description": "The size of the engine, measured in cubic inches.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "bore": {
+            "description": "The diameter of each cylinder in the engine, measured in inches.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "stroke": {
+            "description": "The distance the piston travels in the cylinder, measured in inches.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "compression-ratio": {
+            "description": "The ratio of the volume of compression chamber at its largest capacity to its smallest capacity.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "horsepower": {
+            "description": "The horsepower of the car.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "peak-rpm": {
+            "description": "The maximum RPM (Rotations Per Minute) of the car engine.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "city-mpg": {
+            "description": "The fuel efficiency in city driving, measured in miles per gallon (mpg).",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "highway-mpg": {
+            "description": "The fuel efficiency in highway driving, measured in miles per gallon (mpg).",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "class": {
+            "description": "The price of the car.",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "class": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in automobile pricing.",
+                "task_prompt": "Based on the features of the automobile, please predict the price.",
+                "answer_prompt": "The predicted price is ______."
+            }
+        },
+        "city-mpg": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in automobile fuel efficiency.",
+                "task_prompt": "Based on the features of the automobile, please predict the city miles per gallon.",
+                "answer_prompt": "The predicted city miles per gallon is ______."
+            }
+        },
+        "highway-mpg": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in automobile fuel efficiency.",
+                "task_prompt": "Based on the features of the automobile, please predict the highway miles per gallon.",
+                "answer_prompt": "The predicted highway miles per gallon is ______."
+            }
+        },
+        "horsepower": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in automobile performance.",
+                "task_prompt": "Based on the features of the automobile, please predict the horsepower.",
+                "answer_prompt": "The predicted horsepower is ______."
+            }
+        },
+        "curb-weight": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in automobile specifications.",
+                "task_prompt": "Based on the features of the automobile, please predict the curb weight.",
+                "answer_prompt": "The predicted curb weight is ______."
+            }
+        }
+    }
+}

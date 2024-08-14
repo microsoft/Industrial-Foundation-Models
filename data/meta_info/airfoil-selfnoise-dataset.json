@@ -1,0 +1,117 @@
+{
+    "basic_info": {
+        "row_num": 1503,
+        "col_num": 6,
+        "label_candidates": [
+            "SSPL",
+            "f",
+            "alpha",
+            "c",
+            "U_infinity",
+            "delta"
+        ],
+        "valid_feature_num": 6,
+        "num_features": [
+            "f",
+            "alpha",
+            "c",
+            "U_infinity",
+            "delta",
+            "SSPL"
+        ],
+        "cat_features": [],
+        "other_features": [],
+        "tags": [
+            "earth and nature",
+            "physics",
+            "business",
+            "engineering",
+            "aviation",
+            "linear regression",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/fedesoriano/airfoil-selfnoise-dataset"
+    },
+    "feature_info": {
+        "f": {
+            "description": "Frequency, in Hertzs.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "alpha": {
+            "description": "Angle of attack, in degrees.",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "c": {
+            "description": "Chord length, in meters.",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "U_infinity": {
+            "description": "Free-stream velocity, in meters per second.",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "delta": {
+            "description": "Suction side displacement thickness, in meters.",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "SSPL": {
+            "description": "Scaled sound pressure level, in decibels.",
+            "type": "numerical",
+            "decimal": 3
+        }
+    },
+    "task_info": {
+        "SSPL": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in acoustics and aerodynamics.",
+                "task_prompt": "Based on the frequency, angle of attack, chord length, free-stream velocity, and thickness of the airfoil, please predict the scaled sound pressure level.",
+                "answer_prompt": "The predicted scaled sound pressure level is."
+            }
+        },
+        "f": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in acoustics and aerodynamics.",
+                "task_prompt": "Based on the scaled sound pressure level, angle of attack, chord length, free-stream velocity, and thickness of the airfoil, please predict the frequency.",
+                "answer_prompt": "The predicted frequency is."
+            }
+        },
+        "alpha": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in acoustics and aerodynamics.",
+                "task_prompt": "Based on the frequency, scaled sound pressure level, chord length, free-stream velocity, and thickness of the airfoil, please predict the angle of attack.",
+                "answer_prompt": "The predicted angle of attack is."
+            }
+        },
+        "c": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in acoustics and aerodynamics.",
+                "task_prompt": "Based on the frequency, angle of attack, scaled sound pressure level, free-stream velocity, and thickness of the airfoil, please predict the chord length.",
+                "answer_prompt": "The predicted chord length is."
+            }
+        },
+        "U_infinity": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in acoustics and aerodynamics.",
+                "task_prompt": "Based on the frequency, angle of attack, chord length, scaled sound pressure level, and thickness of the airfoil, please predict the free-stream velocity.",
+                "answer_prompt": "The predicted free-stream velocity is."
+            }
+        },
+        "delta": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in acoustics and aerodynamics.",
+                "task_prompt": "Based on the frequency, angle of attack, chord length, free-stream velocity, and scaled sound pressure level, please predict the thickness of the airfoil.",
+                "answer_prompt": "The predicted thickness of the airfoil is."
+            }
+        }
+    }
+}

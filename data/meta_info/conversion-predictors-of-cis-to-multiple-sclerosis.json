@@ -1,0 +1,219 @@
+{
+    "basic_info": {
+        "row_num": 273,
+        "col_num": 19,
+        "label_candidates": [
+            "group",
+            "Final_EDSS",
+            "Initial_EDSS"
+        ],
+        "valid_feature_num": 19,
+        "num_features": [
+            "Age",
+            "Schooling",
+            "Initial_EDSS",
+            "Final_EDSS"
+        ],
+        "cat_features": [
+            "Gender",
+            "Breastfeeding",
+            "Varicella",
+            "Initial_Symptom",
+            "Mono_or_Polysymptomatic",
+            "Oligoclonal_Bands",
+            "LLSSEP",
+            "ULSSEP",
+            "VEP",
+            "BAEP",
+            "Periventricular_MRI",
+            "Cortical_MRI",
+            "Infratentorial_MRI",
+            "Spinal_Cord_MRI",
+            "group"
+        ],
+        "other_features": [],
+        "tags": [
+            "diseases",
+            "health",
+            "classification",
+            "health conditions",
+            "tabular classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/desalegngeb/conversion-predictors-of-cis-to-multiple-sclerosis"
+    },
+    "feature_info": {
+        "Gender": {
+            "description": "Gender of the patient. 1 represents male, and 2 represents female.",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The patient is male.",
+                "2": "The patient is female."
+            }
+        },
+        "Age": {
+            "description": "Age of the patient in years.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Schooling": {
+            "description": "Years of schooling of the patient.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Breastfeeding": {
+            "description": "Indicates whether the patient was breastfed or not. The specific coding scheme is not provided.",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The patient was breastfed.",
+                "2": "The patient was not breastfed.",
+                "3": "Unknown breastfeeding status of the patient."
+            }
+        },
+        "Varicella": {
+            "description": "Indicates whether the patient has had Varicella (chickenpox). The specific coding scheme is not provided.",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The patient has had Varicella.",
+                "2": "The patient has not had Varicella.",
+                "3": "Unknown Varicella status of the patient."
+            }
+        },
+        "Initial_Symptom": {
+            "description": "Initial symptom of the disease. The specific coding scheme is not provided.",
+            "type": "categorical"
+        },
+        "Mono_or_Polysymptomatic": {
+            "description": "Indicates whether the patient presented with one symptom (mono) or multiple symptoms (poly). The specific coding scheme is not provided.",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The patient presented with one symptom.",
+                "2": "The patient presented with multiple symptoms.",
+                "3": "Unknown symptom status of the patient."
+            }
+        },
+        "Oligoclonal_Bands": {
+            "description": "Indicates the presence of Oligoclonal Bands, a test for multiple sclerosis. The specific coding scheme is not provided.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Oligoclonal Bands test was negative.",
+                "1": "Oligoclonal Bands test was positive.",
+                "2": "Unknown Oligoclonal Bands test status."
+            }
+        },
+        "LLSSEP": {
+            "description": "Lower Limb Somatosensory Evoked Potentials, a test for neurological conditions. The specific coding scheme is not provided.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Lower Limb Somatosensory Evoked Potentials test was negative.",
+                "1": "Lower Limb Somatosensory Evoked Potentials test was positive."
+            }
+        },
+        "ULSSEP": {
+            "description": "Upper Limb Somatosensory Evoked Potentials, a test for neurological conditions. The specific coding scheme is not provided.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Upper Limb Somatosensory Evoked Potentials test was negative.",
+                "1": "Upper Limb Somatosensory Evoked Potentials test was positive."
+            }
+        },
+        "VEP": {
+            "description": "Visual Evoked Potentials, a test for visual pathway abnormalities. The specific coding scheme is not provided.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Visual Evoked Potentials test was negative.",
+                "1": "Visual Evoked Potentials test was positive."
+            }
+        },
+        "BAEP": {
+            "description": "Brainstem Auditory Evoked Potential, a test for hearing and brainstem function. The specific coding scheme is not provided.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Brainstem Auditory Evoked Potential test was negative.",
+                "1": "Brainstem Auditory Evoked Potential test was positive."
+            }
+        },
+        "Periventricular_MRI": {
+            "description": "Periventricular Magnetic Resonance Imaging results. The specific coding scheme is not provided.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Periventricular MRI results were normal.",
+                "1": "Periventricular MRI results showed abnormalities."
+            }
+        },
+        "Cortical_MRI": {
+            "description": "Cortical Magnetic Resonance Imaging results. The specific coding scheme is not provided.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Cortical MRI results were normal.",
+                "1": "Cortical MRI results showed abnormalities."
+            }
+        },
+        "Infratentorial_MRI": {
+            "description": "Infratentorial Magnetic Resonance Imaging results. The specific coding scheme is not provided.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Infratentorial MRI results were normal.",
+                "1": "Infratentorial MRI results showed abnormalities."
+            }
+        },
+        "Spinal_Cord_MRI": {
+            "description": "Spinal Cord Magnetic Resonance Imaging results. The specific coding scheme is not provided.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Spinal Cord MRI results were normal.",
+                "1": "Spinal Cord MRI results showed abnormalities."
+            }
+        },
+        "Initial_EDSS": {
+            "description": "Initial Expanded Disability Status Scale score, a method of quantifying disability in multiple sclerosis. The score ranges from 0 (normal neurological exam) to 10 (death due to MS).",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Final_EDSS": {
+            "description": "Final Expanded Disability Status Scale score.",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "group": {
+            "description": "Group assignment of the patient. The specific coding scheme is not provided.",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The patient belongs to group 1.",
+                "2": "The patient belongs to group 2."
+            }
+        }
+    },
+    "task_info": {
+        "group": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical data analysis.",
+                "task_prompt": "Based on the medical features of the patient, please predict the group the patient belongs to.",
+                "answer_prompt": "Group 1[0] or Group 2[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "The patient belongs to group 1.",
+                "2": "The patient belongs to group 2."
+            },
+            "class_index_dict": {
+                "1": 0,
+                "2": 1
+            }
+        },
+        "Final_EDSS": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical data analysis.",
+                "task_prompt": "Based on the medical features of the patient, please predict the final EDSS score."
+            }
+        },
+        "Initial_EDSS": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical data analysis.",
+                "task_prompt": "Based on the medical features of the patient, please predict the initial EDSS score."
+            }
+        }
+    }
+}

@@ -1,0 +1,115 @@
+{
+    "basic_info": {
+        "row_num": 1000,
+        "col_num": 8,
+        "label_candidates": [
+            "Attrition",
+            "LastPromotionYears",
+            "AverageFeedback"
+        ],
+        "valid_feature_num": 7,
+        "num_features": [
+            "TotalMonthsOfExp",
+            "TotalOrgsWorked",
+            "MonthsInOrg",
+            "AverageFeedback",
+            "LastPromotionYears"
+        ],
+        "cat_features": [
+            "LastPayIncrementBand",
+            "Attrition"
+        ],
+        "other_features": [],
+        "tags": [
+            "intermediate",
+            "nlp",
+            "data analytics",
+            "classification",
+            "keras"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/aryashah2k/datasets-in-hr-analytics-applied-ai"
+    },
+    "feature_info": {
+        "EmployeeID": {
+            "description": "Unique identifier for each employee",
+            "type": "useless"
+        },
+        "TotalMonthsOfExp": {
+            "description": "Total months of experience the employee has",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "TotalOrgsWorked": {
+            "description": "Total number of organizations the employee has worked for",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "MonthsInOrg": {
+            "description": "Number of months the employee has been in the current organization",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "LastPayIncrementBand": {
+            "description": "The band of the last pay increment of the employee",
+            "type": "categorical",
+            "value_dict": {
+                "5": "Employee received a pay increment in band 5",
+                "1": "Employee received a pay increment in band 1",
+                "3": "Employee received a pay increment in band 3",
+                "4": "Employee received a pay increment in band 4",
+                "2": "Employee received a pay increment in band 2"
+            }
+        },
+        "AverageFeedback": {
+            "description": "Average feedback score of the employee",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "LastPromotionYears": {
+            "description": "Number of years since the last promotion of the employee",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Attrition": {
+            "description": "Whether the employee left the company (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Employee left the company",
+                "0": "Employee did not leave the company"
+            }
+        }
+    },
+    "task_info": {
+        "Attrition": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in HR analytics.",
+                "task_prompt": "Based on the features of the employee, please predict if the employee will leave the company.",
+                "answer_prompt": "Employee left the company[1] or Employee did not leave the company[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "Employee left the company",
+                "0": "Employee did not leave the company"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        },
+        "LastPromotionYears": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in HR analytics.",
+                "task_prompt": "Based on the features of the employee, please predict the number of years since the last promotion."
+            }
+        },
+        "AverageFeedback": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in HR analytics.",
+                "task_prompt": "Based on the features of the employee, please predict the average feedback score."
+            }
+        }
+    }
+}

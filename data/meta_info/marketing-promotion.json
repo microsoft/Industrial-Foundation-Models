@@ -1,0 +1,110 @@
+{
+    "basic_info": {
+        "row_num": 572,
+        "col_num": 5,
+        "label_candidates": [
+            "Sales",
+            "TV",
+            "Radio",
+            "Social Media"
+        ],
+        "valid_feature_num": 5,
+        "num_features": [
+            "Radio",
+            "Social Media",
+            "Sales"
+        ],
+        "cat_features": [
+            "TV",
+            "Influencer"
+        ],
+        "other_features": [],
+        "tags": [
+            "marketing",
+            "linear regression",
+            "tabular"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/yakhyojon/marketing-promotion"
+    },
+    "feature_info": {
+        "TV": {
+            "description": "Level of TV advertisement (Low, Medium, High)",
+            "type": "categorical",
+            "value_dict": {
+                "Low": "Low level of TV advertisement",
+                "High": "High level of TV advertisement",
+                "Medium": "Medium level of TV advertisement"
+            }
+        },
+        "Radio": {
+            "description": "Radio advertisement budget in unknown unit",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Social Media": {
+            "description": "Social media advertisement budget in unknown unit",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Influencer": {
+            "description": "Type of influencer involved in the marketing promotion (Micro, Mega, Nano)",
+            "type": "categorical",
+            "value_dict": {
+                "Micro": "Micro influencer involved in the marketing promotion",
+                "Mega": "Mega influencer involved in the marketing promotion",
+                "Nano": "Nano influencer involved in the marketing promotion",
+                "Macro": "Macro influencer involved in the marketing promotion"
+            }
+        },
+        "Sales": {
+            "description": "Sales amount in unknown unit",
+            "type": "numerical",
+            "decimal": 6
+        }
+    },
+    "task_info": {
+        "Sales": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sales forecasting.",
+                "task_prompt": "Based on the features of the marketing promotion, please predict the sales.",
+                "answer_prompt": "The sales will be ."
+            }
+        },
+        "TV": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in advertisement analysis.",
+                "task_prompt": "Based on the features of the marketing promotion, please predict the level of TV advertisement.",
+                "answer_prompt": "Low level of TV advertisement[0], Medium level of TV advertisement[1] or High level of TV advertisement[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "Low": "Low level of TV advertisement",
+                "High": "High level of TV advertisement",
+                "Medium": "Medium level of TV advertisement"
+            },
+            "class_index_dict": {
+                "Low": 0,
+                "Medium": 1,
+                "High": 2
+            }
+        },
+        "Radio": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in radio marketing analysis.",
+                "task_prompt": "Based on the features of the marketing promotion, please predict the radio marketing expense.",
+                "answer_prompt": "The radio marketing expense will be ."
+            }
+        },
+        "Social Media": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in social media marketing analysis.",
+                "task_prompt": "Based on the features of the marketing promotion, please predict the social media marketing expense.",
+                "answer_prompt": "The social media marketing expense will be ."
+            }
+        }
+    }
+}

@@ -1,0 +1,105 @@
+{
+    "basic_info": {
+        "row_num": 50000,
+        "col_num": 6,
+        "label_candidates": [
+            "Price",
+            "SquareFeet",
+            "Bedrooms",
+            "Bathrooms",
+            "YearBuilt"
+        ],
+        "valid_feature_num": 6,
+        "num_features": [
+            "SquareFeet",
+            "Bedrooms",
+            "Bathrooms",
+            "YearBuilt",
+            "Price"
+        ],
+        "cat_features": [
+            "Neighborhood"
+        ],
+        "other_features": [],
+        "tags": [
+            "cities and urban areas",
+            "computer science",
+            "classification",
+            "text"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/muhammadbinimran/housing-price-prediction-data"
+    },
+    "feature_info": {
+        "SquareFeet": {
+            "description": "The area of the house in square feet",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Bedrooms": {
+            "description": "The number of bedrooms in the house",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Bathrooms": {
+            "description": "The number of bathrooms in the house",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Neighborhood": {
+            "description": "The location of the house categorized as Rural, Suburb, or Urban",
+            "type": "categorical",
+            "value_dict": {
+                "Rural": "The house is located in a rural area",
+                "Suburb": "The house is located in a suburban area",
+                "Urban": "The house is located in an urban area"
+            }
+        },
+        "YearBuilt": {
+            "description": "The year that the house was built",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Price": {
+            "description": "The price of the house in USD",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "Price": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate price prediction.",
+                "task_prompt": "Based on the features of the house, such as square footage, number of bedrooms, number of bathrooms, neighborhood, and year built, please predict the price."
+            }
+        },
+        "SquareFeet": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate.",
+                "task_prompt": "Based on the features of the house, such as price, number of bedrooms, number of bathrooms, neighborhood, and year built, please predict the square footage."
+            }
+        },
+        "Bedrooms": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate.",
+                "task_prompt": "Based on the features of the house, such as square footage, price, number of bathrooms, neighborhood, and year built, please predict the number of bedrooms."
+            }
+        },
+        "Bathrooms": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate.",
+                "task_prompt": "Based on the features of the house, such as square footage, number of bedrooms, price, neighborhood, and year built, please predict the number of bathrooms."
+            }
+        },
+        "YearBuilt": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate.",
+                "task_prompt": "Based on the features of the house, such as square footage, number of bedrooms, number of bathrooms, neighborhood, and price, please predict the year the house was built."
+            }
+        }
+    }
+}

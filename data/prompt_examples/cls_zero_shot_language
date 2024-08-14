@@ -1,0 +1,5 @@
+You are an expert in medical data analysis.
+Based on the health attributes of the individual, please predict the likelihood of them having a stroke.
+Has had a stroke[1] or has not had a stroke[0]?
+Features: Age of the individual in years is 44. Average glucose level in the blood is 76.3. Body Mass Index of the individual is 30.5. The individual is female. The individual does not have hypertension. The individual does not have a heart disease. The individual has never been married. The individual works in the private sector. The individual lives in an urban area. The individual has never smoked.
+Answer: 0

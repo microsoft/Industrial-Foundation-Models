@@ -1,0 +1,124 @@
+{
+    "basic_info": {
+        "row_num": 10000,
+        "col_num": 6,
+        "label_candidates": [
+            "name",
+            "diameter",
+            "weight",
+            "red",
+            "green",
+            "blue"
+        ],
+        "valid_feature_num": 6,
+        "num_features": [
+            "diameter",
+            "weight",
+            "red",
+            "green",
+            "blue"
+        ],
+        "cat_features": [
+            "name"
+        ],
+        "other_features": [],
+        "tags": [
+            "food"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/joshmcadams/oranges-vs-grapefruit"
+    },
+    "feature_info": {
+        "name": {
+            "description": "The type of the fruit, either orange or grapefruit.",
+            "type": "categorical",
+            "value_dict": {
+                "orange": "This value indicates that the fruit is an orange.",
+                "grapefruit": "This value indicates that the fruit is a grapefruit."
+            }
+        },
+        "diameter": {
+            "description": "The diameter of the fruit in cm.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "weight": {
+            "description": "The weight of the fruit in grams.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "red": {
+            "description": "The red color intensity of the fruit on a scale of 0-255.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "green": {
+            "description": "The green color intensity of the fruit on a scale of 0-255.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "blue": {
+            "description": "The blue color intensity of the fruit on a scale of 0-255.",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "name": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in fruit classification.",
+                "task_prompt": "Based on the features of the fruit such as diameter, weight, and color (red, green, blue), please predict the type of the fruit.",
+                "answer_prompt": "Is it an orange[0] or a grapefruit[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "orange": "This value indicates that the fruit is an orange.",
+                "grapefruit": "This value indicates that the fruit is a grapefruit."
+            },
+            "class_index_dict": {
+                "orange": 0,
+                "grapefruit": 1
+            }
+        },
+        "diameter": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in fruit analysis.",
+                "task_prompt": "Based on the features of the fruit such as type, weight, and color (red, green, blue), please predict the diameter of the fruit.",
+                "answer_prompt": "What is the diameter of the fruit?"
+            }
+        },
+        "weight": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in fruit analysis.",
+                "task_prompt": "Based on the features of the fruit such as type, diameter, and color (red, green, blue), please predict the weight of the fruit.",
+                "answer_prompt": "What is the weight of the fruit?"
+            }
+        },
+        "red": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in color analysis.",
+                "task_prompt": "Based on the features of the fruit such as type, diameter, weight, and color (green, blue), please predict the red color value of the fruit.",
+                "answer_prompt": "What is the red color value of the fruit?"
+            }
+        },
+        "green": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in color analysis.",
+                "task_prompt": "Based on the features of the fruit such as type, diameter, weight, and color (red, blue), please predict the green color value of the fruit.",
+                "answer_prompt": "What is the green color value of the fruit?"
+            }
+        },
+        "blue": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in color analysis.",
+                "task_prompt": "Based on the features of the fruit such as type, diameter, weight, and color (red, green), please predict the blue color value of the fruit.",
+                "answer_prompt": "What is the blue color value of the fruit?"
+            }
+        }
+    }
+}

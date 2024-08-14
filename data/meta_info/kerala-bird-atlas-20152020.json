@@ -1,0 +1,100 @@
+{
+    "basic_info": {
+        "row_num": 300882,
+        "col_num": 10,
+        "label_candidates": [
+            "Season"
+        ],
+        "valid_feature_num": 8,
+        "num_features": [
+            "n.observers",
+            "DEM"
+        ],
+        "cat_features": [
+            "County",
+            "Sub.cell",
+            "Season",
+            "Common.Name"
+        ],
+        "other_features": [
+            "Date",
+            "Time"
+        ],
+        "tags": [
+            "biology",
+            "earth science",
+            "animals",
+            "business",
+            "education",
+            "classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/jishnukoliyadan/kerala-bird-atlas-20152020"
+    },
+    "feature_info": {
+        "Common.Name": {
+            "description": "The common name of the bird species observed",
+            "type": "categorical"
+        },
+        "Date": {
+            "description": "The date when the bird species was observed",
+            "type": "other"
+        },
+        "Time": {
+            "description": "The time when the bird species was observed",
+            "type": "other"
+        },
+        "n.observers": {
+            "description": "The number of observers who reported the bird species",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "County": {
+            "description": "The county where the bird species was observed",
+            "type": "categorical"
+        },
+        "Sub.cell": {
+            "description": "The sub-cell location within the county where the bird species was observed",
+            "type": "categorical"
+        },
+        "Season": {
+            "description": "The season when the bird species was observed",
+            "type": "categorical",
+            "value_dict": {
+                "Wet": "The observation was made during the wet season",
+                "Dry": "The observation was made during the dry season"
+            }
+        },
+        "DEM": {
+            "description": "Digital Elevation Model (DEM) is a 3D representation of a terrain's surface - commonly of a planet (e.g., Earth), moon, or asteroid - created from terrain elevation data",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Cell.ID": {
+            "description": "The unique identification of the cell where the bird species was observed",
+            "type": "useless"
+        },
+        "List.ID": {
+            "description": "The unique identification of the list where the bird species was included",
+            "type": "useless"
+        }
+    },
+    "task_info": {
+        "Season": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in ornithology.",
+                "task_prompt": "Based on the features of the bird observation, please predict the season of the observation.",
+                "answer_prompt": "Wet[0] or Dry[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "Wet": "The observation was made during the wet season",
+                "Dry": "The observation was made during the dry season"
+            },
+            "class_index_dict": {
+                "Wet": 0,
+                "Dry": 1
+            }
+        }
+    }
+}

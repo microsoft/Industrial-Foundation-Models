@@ -1,0 +1,123 @@
+{
+    "basic_info": {
+        "row_num": 1000,
+        "col_num": 8,
+        "label_candidates": [
+            "math score",
+            "reading score",
+            "writing score"
+        ],
+        "valid_feature_num": 8,
+        "num_features": [
+            "reading score",
+            "writing score",
+            "math score"
+        ],
+        "cat_features": [
+            "gender",
+            "race/ethnicity",
+            "parental level of education",
+            "lunch",
+            "test preparation course"
+        ],
+        "other_features": [],
+        "tags": [
+            "education",
+            "beginner",
+            "data analytics",
+            "classification",
+            "tabular"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/rkiattisak/student-performance-in-mathematics"
+    },
+    "feature_info": {
+        "gender": {
+            "description": "The gender of the student",
+            "type": "categorical",
+            "value_dict": {
+                "female": "The student is female",
+                "male": "The student is male"
+            }
+        },
+        "race/ethnicity": {
+            "description": "The race or ethnicity group the student belongs to",
+            "type": "categorical",
+            "value_dict": {
+                "group D": "The student belongs to ethnicity group D",
+                "group B": "The student belongs to ethnicity group B",
+                "group C": "The student belongs to ethnicity group C",
+                "group E": "The student belongs to ethnicity group E",
+                "group A": "The student belongs to ethnicity group A"
+            }
+        },
+        "parental level of education": {
+            "description": "The highest level of education achieved by the student's parents",
+            "type": "categorical",
+            "value_dict": {
+                "some college": "The highest level of education achieved by the parents is some college",
+                "associate's degree": "The highest level of education achieved by the parents is an associate's degree",
+                "some high school": "The highest level of education achieved by the parents is some high school",
+                "bachelor's degree": "The highest level of education achieved by the parents is a bachelor's degree",
+                "master's degree": "The highest level of education achieved by the parents is a master's degree",
+                "high school": "The highest level of education achieved by the parents is high school"
+            }
+        },
+        "lunch": {
+            "description": "Indicates whether the student has a standard or free/reduced lunch",
+            "type": "categorical",
+            "value_dict": {
+                "standard": "The student has a standard lunch",
+                "free/reduced": "The student has a free or reduced lunch"
+            }
+        },
+        "test preparation course": {
+            "description": "Indicates whether the student has completed a test preparation course or not",
+            "type": "categorical",
+            "value_dict": {
+                "completed": "The student has completed a test preparation course",
+                "none": "The student has not completed a test preparation course"
+            }
+        },
+        "math score": {
+            "description": "The student's score in mathematics, out of 100",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "reading score": {
+            "description": "The student's score in reading, out of 100",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "writing score": {
+            "description": "The student's score in writing, out of 100",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "math score": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in student performance prediction.",
+                "task_prompt": "Based on the features of the student, please predict the math score.",
+                "answer_prompt": "The predicted math score is __."
+            }
+        },
+        "reading score": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in student performance prediction.",
+                "task_prompt": "Based on the features of the student, please predict the reading score.",
+                "answer_prompt": "The predicted reading score is __."
+            }
+        },
+        "writing score": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in student performance prediction.",
+                "task_prompt": "Based on the features of the student, please predict the writing score.",
+                "answer_prompt": "The predicted writing score is __."
+            }
+        }
+    }
+}

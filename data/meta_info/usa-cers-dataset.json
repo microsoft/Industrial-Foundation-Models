@@ -1,0 +1,119 @@
+{
+    "basic_info": {
+        "row_num": 2499,
+        "col_num": 12,
+        "label_candidates": [
+            "price",
+            "year",
+            "mileage"
+        ],
+        "valid_feature_num": 10,
+        "num_features": [
+            "year",
+            "mileage",
+            "price"
+        ],
+        "cat_features": [
+            "brand",
+            "model",
+            "title_status",
+            "color",
+            "state",
+            "country"
+        ],
+        "other_features": [
+            "condition"
+        ],
+        "tags": [
+            "automobiles and vehicles"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/doaaalsenani/usa-cers-dataset"
+    },
+    "feature_info": {
+        "price": {
+            "description": "The price of the used car in USD.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "brand": {
+            "description": "The brand of the car.",
+            "type": "categorical"
+        },
+        "model": {
+            "description": "The model of the car.",
+            "type": "categorical"
+        },
+        "year": {
+            "description": "The year the car was manufactured.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "title_status": {
+            "description": "The title status of the car (e.g., clean, missing, rebuilt, salvage).",
+            "type": "categorical",
+            "value_dict": {
+                "clean vehicle": "The vehicle has a clean title with no significant legal issues.",
+                "salvage insurance": "The vehicle has a salvage title, typically due to significant damage or a total loss claim from an insurance company."
+            }
+        },
+        "mileage": {
+            "description": "The number of miles the car has driven.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "color": {
+            "description": "The color of the car.",
+            "type": "categorical"
+        },
+        "vin": {
+            "description": "The Vehicle Identification Number (VIN) of the car.",
+            "type": "useless"
+        },
+        "lot": {
+            "description": "The lot number where the car is located.",
+            "type": "useless"
+        },
+        "state": {
+            "description": "The state where the car is located in the USA.",
+            "type": "categorical"
+        },
+        "country": {
+            "description": "The country where the car is located.",
+            "type": "categorical",
+            "value_dict": {
+                " usa": "The car is located in the United States.",
+                " canada": "The car is located in Canada."
+            }
+        },
+        "condition": {
+            "description": "The condition of the car auction (e.g., time left).",
+            "type": "other"
+        }
+    },
+    "task_info": {
+        "price": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in car sales.",
+                "task_prompt": "Based on the features of the used car, please predict the sales price.",
+                "answer_prompt": "The predicted sales price is ______."
+            }
+        },
+        "year": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in car sales.",
+                "task_prompt": "Based on the features of the used car, please predict the production year.",
+                "answer_prompt": "The predicted production year is ______."
+            }
+        },
+        "mileage": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in car sales.",
+                "task_prompt": "Based on the features of the used car, please predict the mileage.",
+                "answer_prompt": "The predicted mileage is ______."
+            }
+        }
+    }
+}

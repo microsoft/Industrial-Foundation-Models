@@ -1,0 +1,390 @@
+{
+    "basic_info": {
+        "row_num": 7043,
+        "col_num": 38,
+        "label_candidates": [
+            "Churn Category",
+            "Customer Status",
+            "Total Revenue",
+            "Total Charges",
+            "Monthly Charge"
+        ],
+        "valid_feature_num": 37,
+        "num_features": [
+            "Age",
+            "Number of Dependents",
+            "Latitude",
+            "Longitude",
+            "Number of Referrals",
+            "Tenure in Months",
+            "Avg Monthly Long Distance Charges",
+            "Avg Monthly GB Download",
+            "Monthly Charge",
+            "Total Charges",
+            "Total Refunds",
+            "Total Extra Data Charges",
+            "Total Long Distance Charges",
+            "Total Revenue"
+        ],
+        "cat_features": [
+            "Gender",
+            "Married",
+            "City",
+            "Zip Code",
+            "Offer",
+            "Phone Service",
+            "Multiple Lines",
+            "Internet Service",
+            "Internet Type",
+            "Online Security",
+            "Online Backup",
+            "Device Protection Plan",
+            "Premium Tech Support",
+            "Streaming TV",
+            "Streaming Movies",
+            "Streaming Music",
+            "Unlimited Data",
+            "Contract",
+            "Paperless Billing",
+            "Payment Method",
+            "Churn Category",
+            "Churn Reason",
+            "Customer Status"
+        ],
+        "other_features": [],
+        "tags": [
+            "business",
+            "internet",
+            "exploratory data analysis",
+            "data visualization",
+            "binary classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/shilongzhuang/telecom-customer-churn-by-maven-analytics"
+    },
+    "feature_info": {
+        "Customer ID": {
+            "description": "Unique identifier for the customer",
+            "type": "useless"
+        },
+        "Gender": {
+            "description": "Gender of the customer",
+            "type": "categorical",
+            "value_dict": {
+                "Female": "The customer is female",
+                "Male": "The customer is male"
+            }
+        },
+        "Age": {
+            "description": "Age of the customer",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Married": {
+            "description": "Marital status of the customer",
+            "type": "categorical",
+            "value_dict": {
+                "Yes": "The customer is married",
+                "No": "The customer is not married"
+            }
+        },
+        "Number of Dependents": {
+            "description": "Number of dependents the customer has",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "City": {
+            "description": "City where the customer lives",
+            "type": "categorical"
+        },
+        "Zip Code": {
+            "description": "Zip code of the customer",
+            "type": "categorical"
+        },
+        "Latitude": {
+            "description": "Latitude of the customer location",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Longitude": {
+            "description": "Longitude of the customer location",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Number of Referrals": {
+            "description": "Number of referrals made by the customer",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Tenure in Months": {
+            "description": "Length of customer relationship in months",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Offer": {
+            "description": "Special offer subscribed by the customer",
+            "type": "categorical",
+            "value_dict": {
+                "Offer E": "The customer is subscribed to Offer E",
+                "Offer D": "The customer is subscribed to Offer D",
+                "Offer A": "The customer is subscribed to Offer A",
+                "Offer B": "The customer is subscribed to Offer B",
+                "Offer C": "The customer is subscribed to Offer C"
+            }
+        },
+        "Phone Service": {
+            "description": "Whether the customer has a phone service or not",
+            "type": "categorical",
+            "value_dict": {
+                "Yes": "The customer has a phone service",
+                "No": "The customer does not have a phone service"
+            }
+        },
+        "Avg Monthly Long Distance Charges": {
+            "description": "Average monthly long distance charges for the customer",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Multiple Lines": {
+            "description": "Whether the customer has multiple lines or not",
+            "type": "categorical",
+            "value_dict": {
+                "No": "The customer does not have multiple lines",
+                "Yes": "The customer has multiple lines"
+            }
+        },
+        "Internet Service": {
+            "description": "Whether the customer has internet service or not",
+            "type": "categorical",
+            "value_dict": {
+                "Yes": "The customer has internet service",
+                "No": "The customer does not have internet service"
+            }
+        },
+        "Internet Type": {
+            "description": "Type of internet service the customer has",
+            "type": "categorical",
+            "value_dict": {
+                "Cable": "The customer has Cable internet",
+                "Fiber Optic": "The customer has Fiber Optic internet",
+                "DSL": "The customer has DSL internet"
+            }
+        },
+        "Avg Monthly GB Download": {
+            "description": "Average monthly GBs downloaded by the customer",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Online Security": {
+            "description": "Whether the customer has online security or not",
+            "type": "categorical",
+            "value_dict": {
+                "No": "The customer does not have online security",
+                "Yes": "The customer has online security"
+            }
+        },
+        "Online Backup": {
+            "description": "Whether the customer has online backup service or not",
+            "type": "categorical",
+            "value_dict": {
+                "Yes": "The customer has online backup service",
+                "No": "The customer does not have online backup service"
+            }
+        },
+        "Device Protection Plan": {
+            "description": "Whether the customer has a device protection plan or not",
+            "type": "categorical",
+            "value_dict": {
+                "No": "The customer does not have a device protection plan",
+                "Yes": "The customer has a device protection plan"
+            }
+        },
+        "Premium Tech Support": {
+            "description": "Whether the customer has premium tech support or not",
+            "type": "categorical",
+            "value_dict": {
+                "Yes": "The customer has premium tech support",
+                "No": "The customer does not have premium tech support"
+            }
+        },
+        "Streaming TV": {
+            "description": "Whether the customer has streaming TV service or not",
+            "type": "categorical",
+            "value_dict": {
+                "Yes": "The customer has streaming TV service",
+                "No": "The customer does not have streaming TV service"
+            }
+        },
+        "Streaming Movies": {
+            "description": "Whether the customer has streaming movies service or not",
+            "type": "categorical",
+            "value_dict": {
+                "No": "The customer does not have streaming movies service",
+                "Yes": "The customer has streaming movies service"
+            }
+        },
+        "Streaming Music": {
+            "description": "Whether the customer has streaming music service or not",
+            "type": "categorical",
+            "value_dict": {
+                "No": "The customer does not have streaming music service",
+                "Yes": "The customer has streaming music service"
+            }
+        },
+        "Unlimited Data": {
+            "description": "Whether the customer has unlimited data plan or not",
+            "type": "categorical",
+            "value_dict": {
+                "Yes": "The customer has unlimited data plan",
+                "No": "The customer does not have unlimited data plan"
+            }
+        },
+        "Contract": {
+            "description": "Contract term of the customer",
+            "type": "categorical",
+            "value_dict": {
+                "One Year": "The customer has a one year contract",
+                "Month-to-Month": "The customer has a month-to-month contract",
+                "Two Year": "The customer has a two year contract"
+            }
+        },
+        "Paperless Billing": {
+            "description": "Whether the customer has paperless billing or not",
+            "type": "categorical",
+            "value_dict": {
+                "Yes": "The customer has paperless billing",
+                "No": "The customer does not have paperless billing"
+            }
+        },
+        "Payment Method": {
+            "description": "Payment method of the customer",
+            "type": "categorical",
+            "value_dict": {
+                "Credit Card": "The customer pays by credit card",
+                "Bank Withdrawal": "The customer pays by bank withdrawal",
+                "Mailed Check": "The customer pays by mailed check"
+            }
+        },
+        "Monthly Charge": {
+            "description": "Monthly charge for the customer",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Total Charges": {
+            "description": "Total charges for the customer",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Total Refunds": {
+            "description": "Total refunds received by the customer",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Total Extra Data Charges": {
+            "description": "Total extra data charges for the customer",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Total Long Distance Charges": {
+            "description": "Total long distance charges for the customer",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Total Revenue": {
+            "description": "Total revenue generated from the customer",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Customer Status": {
+            "description": "Current status of the customer",
+            "type": "categorical",
+            "value_dict": {
+                "Stayed": "The customer stayed with the company",
+                "Churned": "The customer churned",
+                "Joined": "The customer joined the company"
+            }
+        },
+        "Churn Category": {
+            "description": "Category of churn if the customer has churned",
+            "type": "categorical",
+            "value_dict": {
+                "Competitor": "The customer churned due to a competitor",
+                "Dissatisfaction": "The customer churned due to dissatisfaction",
+                "Other": "The customer churned due to other reasons",
+                "Price": "The customer churned due to price",
+                "Attitude": "The customer churned due to attitude"
+            }
+        },
+        "Churn Reason": {
+            "description": "Reason for customer churn if the customer has churned",
+            "type": "categorical"
+        }
+    },
+    "task_info": {
+        "Churn Category": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in customer churn analysis.",
+                "task_prompt": "Based on the features of the telecom customer, please predict the category of churn.",
+                "answer_prompt": "Competitor[0], Dissatisfaction[1], Other[2], Price[3], Attitude[4]?"
+            },
+            "class_num": 5,
+            "class_value_dict": {
+                "Competitor": "The customer churned due to a competitor",
+                "Dissatisfaction": "The customer churned due to dissatisfaction",
+                "Other": "The customer churned due to other reasons",
+                "Price": "The customer churned due to price",
+                "Attitude": "The customer churned due to attitude"
+            },
+            "class_index_dict": {
+                "Competitor": 0,
+                "Dissatisfaction": 1,
+                "Other": 2,
+                "Price": 3,
+                "Attitude": 4
+            }
+        },
+        "Customer Status": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in customer relationship management.",
+                "task_prompt": "Based on the features of the telecom customer, please predict the customer status.",
+                "answer_prompt": "Stayed[0], Churned[1], Joined[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "Stayed": "The customer stayed with the company",
+                "Churned": "The customer churned",
+                "Joined": "The customer joined the company"
+            },
+            "class_index_dict": {
+                "Stayed": 0,
+                "Churned": 1,
+                "Joined": 2
+            }
+        },
+        "Total Revenue": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in revenue prediction.",
+                "task_prompt": "Based on the features of the telecom customer, please predict the total revenue.",
+                "answer_prompt": "What is the predicted total revenue?"
+            }
+        },
+        "Total Charges": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in charge prediction.",
+                "task_prompt": "Based on the features of the telecom customer, please predict the total charges.",
+                "answer_prompt": "What is the predicted total charges?"
+            }
+        },
+        "Monthly Charge": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in charge prediction.",
+                "task_prompt": "Based on the features of the telecom customer, please predict the monthly charge.",
+                "answer_prompt": "What is the predicted monthly charge?"
+            }
+        }
+    }
+}

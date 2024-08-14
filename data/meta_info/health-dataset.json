@@ -1,0 +1,261 @@
+{
+    "basic_info": {
+        "row_num": 70692,
+        "col_num": 18,
+        "label_candidates": [
+            "Diabetes",
+            "HighBP",
+            "Stroke",
+            "HeartDiseaseorAttack",
+            "HighChol"
+        ],
+        "valid_feature_num": 18,
+        "num_features": [
+            "Age",
+            "BMI",
+            "GenHlth",
+            "MentHlth",
+            "PhysHlth"
+        ],
+        "cat_features": [
+            "Sex",
+            "HighChol",
+            "CholCheck",
+            "Smoker",
+            "HeartDiseaseorAttack",
+            "PhysActivity",
+            "Fruits",
+            "Veggies",
+            "HvyAlcoholConsump",
+            "DiffWalk",
+            "Stroke",
+            "HighBP",
+            "Diabetes"
+        ],
+        "other_features": [],
+        "tags": [
+            "health",
+            "classification",
+            "pandas"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/prosperchuks/health-dataset"
+    },
+    "feature_info": {
+        "Age": {
+            "description": "Age of the individual in years",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Sex": {
+            "description": "Sex of the individual (1.0 might represent male and 0.0 might represent female or vice versa)",
+            "type": "categorical",
+            "value_dict": {
+                "1.0": "Male",
+                "0.0": "Female"
+            }
+        },
+        "HighChol": {
+            "description": "Whether the individual has high cholesterol (1.0 for high cholesterol, 0.0 for normal)",
+            "type": "categorical",
+            "value_dict": {
+                "0.0": "Normal Cholesterol",
+                "1.0": "High Cholesterol"
+            }
+        },
+        "CholCheck": {
+            "description": "Whether the individual has checked their cholesterol (1.0 for checked, 0.0 for not checked)",
+            "type": "categorical",
+            "value_dict": {
+                "1.0": "Cholesterol Checked",
+                "0.0": "Cholesterol Not Checked"
+            }
+        },
+        "BMI": {
+            "description": "Body Mass Index of the individual",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Smoker": {
+            "description": "Whether the individual is a smoker (1.0 for smoker, 0.0 for non-smoker)",
+            "type": "categorical",
+            "value_dict": {
+                "0.0": "Non-Smoker",
+                "1.0": "Smoker"
+            }
+        },
+        "HeartDiseaseorAttack": {
+            "description": "Whether the individual has heart disease or has had a heart attack (1.0 for yes, 0.0 for no)",
+            "type": "categorical",
+            "value_dict": {
+                "0.0": "No Heart Disease/Attack",
+                "1.0": "Has Heart Disease/Attack"
+            }
+        },
+        "PhysActivity": {
+            "description": "Whether the individual engages in physical activity (1.0 for yes, 0.0 for no)",
+            "type": "categorical",
+            "value_dict": {
+                "1.0": "Engages in Physical Activity",
+                "0.0": "Does Not Engage in Physical Activity"
+            }
+        },
+        "Fruits": {
+            "description": "Whether the individual consumes fruits (1.0 for yes, 0.0 for no)",
+            "type": "categorical",
+            "value_dict": {
+                "0.0": "Does Not Consume Fruits",
+                "1.0": "Consumes Fruits"
+            }
+        },
+        "Veggies": {
+            "description": "Whether the individual consumes vegetables (1.0 for yes, 0.0 for no)",
+            "type": "categorical",
+            "value_dict": {
+                "1.0": "Consumes Vegetables",
+                "0.0": "Does Not Consume Vegetables"
+            }
+        },
+        "HvyAlcoholConsump": {
+            "description": "Whether the individual is a heavy alcohol consumer (1.0 for yes, 0.0 for no)",
+            "type": "categorical",
+            "value_dict": {
+                "0.0": "Not a Heavy Alcohol Consumer",
+                "1.0": "Heavy Alcohol Consumer"
+            }
+        },
+        "GenHlth": {
+            "description": "General health status of the individual",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "MentHlth": {
+            "description": "Mental health status of the individual",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "PhysHlth": {
+            "description": "Physical health status of the individual",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "DiffWalk": {
+            "description": "Whether the individual has difficulty walking (1.0 for yes, 0.0 for no)",
+            "type": "categorical",
+            "value_dict": {
+                "0.0": "No Difficulty Walking",
+                "1.0": "Has Difficulty Walking"
+            }
+        },
+        "Stroke": {
+            "description": "Whether the individual has had a stroke (1.0 for yes, 0.0 for no)",
+            "type": "categorical",
+            "value_dict": {
+                "0.0": "No Stroke",
+                "1.0": "Had a Stroke"
+            }
+        },
+        "HighBP": {
+            "description": "Whether the individual has high blood pressure (1.0 for yes, 0.0 for no)",
+            "type": "categorical",
+            "value_dict": {
+                "1.0": "High Blood Pressure",
+                "0.0": "Normal Blood Pressure"
+            }
+        },
+        "Diabetes": {
+            "description": "Whether the individual has diabetes (1.0 for yes, 0.0 for no)",
+            "type": "categorical",
+            "value_dict": {
+                "0.0": "No Diabetes",
+                "1.0": "Has Diabetes"
+            }
+        }
+    },
+    "task_info": {
+        "Diabetes": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in health analytics.",
+                "task_prompt": "Based on the features of the patient, please predict the diabetes status.",
+                "answer_prompt": "Has Diabetes[1] or No Diabetes[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0.0": "No Diabetes",
+                "1.0": "Has Diabetes"
+            },
+            "class_index_dict": {
+                "0.0": 0,
+                "1.0": 1
+            }
+        },
+        "HighBP": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in health analytics.",
+                "task_prompt": "Based on the features of the patient, please predict the blood pressure status.",
+                "answer_prompt": "High Blood Pressure[1] or Normal Blood Pressure[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1.0": "High Blood Pressure",
+                "0.0": "Normal Blood Pressure"
+            },
+            "class_index_dict": {
+                "0.0": 0,
+                "1.0": 1
+            }
+        },
+        "Stroke": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in health analytics.",
+                "task_prompt": "Based on the features of the patient, please predict the stroke status.",
+                "answer_prompt": "Had a Stroke[1] or No Stroke[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0.0": "No Stroke",
+                "1.0": "Had a Stroke"
+            },
+            "class_index_dict": {
+                "0.0": 0,
+                "1.0": 1
+            }
+        },
+        "HeartDiseaseorAttack": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in health analytics.",
+                "task_prompt": "Based on the features of the patient, please predict the heart disease or attack status.",
+                "answer_prompt": "Has Heart Disease/Attack[1] or No Heart Disease/Attack[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0.0": "No Heart Disease/Attack",
+                "1.0": "Has Heart Disease/Attack"
+            },
+            "class_index_dict": {
+                "0.0": 0,
+                "1.0": 1
+            }
+        },
+        "HighChol": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in health analytics.",
+                "task_prompt": "Based on the features of the patient, please predict the cholesterol status.",
+                "answer_prompt": "High Cholesterol[1] or Normal Cholesterol[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0.0": "Normal Cholesterol",
+                "1.0": "High Cholesterol"
+            },
+            "class_index_dict": {
+                "0.0": 0,
+                "1.0": 1
+            }
+        }
+    }
+}

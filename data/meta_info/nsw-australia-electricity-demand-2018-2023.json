@@ -1,0 +1,78 @@
+{
+    "basic_info": {
+        "row_num": 211392,
+        "col_num": 5,
+        "label_candidates": [
+            "TOTALDEMAND",
+            "RRP"
+        ],
+        "valid_feature_num": 5,
+        "num_features": [
+            "TOTALDEMAND",
+            "RRP"
+        ],
+        "cat_features": [
+            "REGION",
+            "PERIODTYPE"
+        ],
+        "other_features": [
+            "SETTLEMENTDATE"
+        ],
+        "tags": [
+            "energy",
+            "exploratory data analysis",
+            "time series analysis",
+            "regression",
+            "electricity"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/joebeachcapital/nsw-australia-electricity-demand-2018-2023"
+    },
+    "feature_info": {
+        "REGION": {
+            "description": "The region where the electricity demand is measured. In this case, it is NSW1 which stands for New South Wales 1.",
+            "type": "categorical",
+            "value_dict": {
+                "NSW1": "NSW1 stands for New South Wales 1, a region in Australia."
+            }
+        },
+        "SETTLEMENTDATE": {
+            "description": "The date and time when the electricity demand was measured. The format is YYYY/MM/DD HH:MM:SS.",
+            "type": "other"
+        },
+        "TOTALDEMAND": {
+            "description": "The total electricity demand at the settlement date in the region. The unit is not explicitly stated but it is likely to be in Megawatts (MW).",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "RRP": {
+            "description": "The Regional Reference Price (RRP) at the settlement date in the region. The unit is not explicitly stated but it is likely to be in Australian dollars (AUD).",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "PERIODTYPE": {
+            "description": "The type of period for the settlement date. In this case, it is TRADE which stands for trade period.",
+            "type": "categorical",
+            "value_dict": {
+                "TRADE": "TRADE indicates that the period type for the settlement date is a trade period."
+            }
+        }
+    },
+    "task_info": {
+        "TOTALDEMAND": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in electricity demand prediction.",
+                "task_prompt": "Based on the features of the electricity usage data, please predict the total demand.",
+                "answer_prompt": "The predicted total demand is {total demand}."
+            }
+        },
+        "RRP": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in electricity price prediction.",
+                "task_prompt": "Based on the features of the electricity usage data, please predict the real-time price.",
+                "answer_prompt": "The predicted real-time price is {RRP}."
+            }
+        }
+    }
+}

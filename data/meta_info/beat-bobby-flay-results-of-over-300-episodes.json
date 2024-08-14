@@ -1,0 +1,125 @@
+{
+    "basic_info": {
+        "row_num": 306,
+        "col_num": 16,
+        "label_candidates": [
+            "season"
+        ],
+        "valid_feature_num": 16,
+        "num_features": [
+            "num_overall",
+            "num_within_season",
+            "season"
+        ],
+        "cat_features": [
+            "title",
+            "ingredients",
+            "dish",
+            "guest1",
+            "guest2",
+            "guest3",
+            "contestant1",
+            "contestant2",
+            "judge1",
+            "judge2",
+            "judge3",
+            "winner"
+        ],
+        "other_features": [
+            "airdate"
+        ],
+        "tags": [
+            "movies and tv shows",
+            "nlp",
+            "classification",
+            "cooking and recipes",
+            "food"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/jeffreybraun/beat-bobby-flay-results-of-over-300-episodes"
+    },
+    "feature_info": {
+        "num_overall": {
+            "description": "The overall episode number in the series",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "num_within_season": {
+            "description": "The episode number within the specific season",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "title": {
+            "description": "The title of the episode",
+            "type": "categorical"
+        },
+        "airdate": {
+            "description": "The airdate of the episode",
+            "type": "other"
+        },
+        "ingredients": {
+            "description": "The main ingredients used in the episode",
+            "type": "categorical"
+        },
+        "dish": {
+            "description": "The dish prepared in the episode",
+            "type": "categorical"
+        },
+        "winner": {
+            "description": "The winner of the episode",
+            "type": "categorical"
+        },
+        "season": {
+            "description": "The season number of the episode",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "guest1": {
+            "description": "The first guest in the episode",
+            "type": "categorical"
+        },
+        "guest2": {
+            "description": "The second guest in the episode",
+            "type": "categorical"
+        },
+        "guest3": {
+            "description": "The third guest in the episode",
+            "type": "categorical",
+            "value_dict": {
+                "Drew Scott": "Drew Scott is a guest who appeared in the episode",
+                "Alex Guarnaschelli": "Alex Guarnaschelli is a guest who appeared in the episode",
+                "Quvenzhane Wallis": "Quvenzhane Wallis is a guest who appeared in the episode",
+                "Sunny Anderson": "Sunny Anderson is a guest who appeared in the episode"
+            }
+        },
+        "contestant1": {
+            "description": "The first contestant in the episode",
+            "type": "categorical"
+        },
+        "contestant2": {
+            "description": "The second contestant in the episode",
+            "type": "categorical"
+        },
+        "judge1": {
+            "description": "The first judge in the episode",
+            "type": "categorical"
+        },
+        "judge2": {
+            "description": "The second judge in the episode",
+            "type": "categorical"
+        },
+        "judge3": {
+            "description": "The third judge in the episode",
+            "type": "categorical"
+        }
+    },
+    "task_info": {
+        "season": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in television show analytics.",
+                "task_prompt": "Based on the features of the episodes of the television show \"Beat Bobby Flay\", please predict the season number.",
+                "answer_prompt": "The season number is ."
+            }
+        }
+    }
+}

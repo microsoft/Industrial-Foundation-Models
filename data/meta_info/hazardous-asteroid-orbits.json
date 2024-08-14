@@ -1,0 +1,167 @@
+{
+    "basic_info": {
+        "row_num": 1748,
+        "col_num": 16,
+        "label_candidates": [
+            "class",
+            "H (mag)",
+            "P (yr)"
+        ],
+        "valid_feature_num": 15,
+        "num_features": [
+            "Epoch (TDB)",
+            "a (AU)",
+            "e",
+            "i (deg)",
+            "w (deg)",
+            "Node (deg)",
+            "M (deg)",
+            "q (AU)",
+            "Q (AU)",
+            "P (yr)",
+            "H (mag)",
+            "MOID (AU)"
+        ],
+        "cat_features": [
+            "Object",
+            "ref",
+            "class"
+        ],
+        "other_features": [],
+        "tags": [
+            "earth and nature",
+            "astronomy",
+            "education",
+            "health",
+            "computer science"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/vipulgote4/hazardous-asteroid-orbits"
+    },
+    "feature_info": {
+        "Object": {
+            "description": "Name of the asteroid",
+            "type": "categorical"
+        },
+        "Epoch (TDB)": {
+            "description": "Time of observation in Barycentric Dynamical Time (TDB)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "a (AU)": {
+            "description": "Semi-major axis of the asteroid orbit in Astronomical Units (AU)",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "e": {
+            "description": "Eccentricity of the asteroid orbit",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "i (deg)": {
+            "description": "Inclination of the asteroid orbit in degrees",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "w (deg)": {
+            "description": "Argument of perihelion in degrees",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Node (deg)": {
+            "description": "Longitude of the ascending node in degrees",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "M (deg)": {
+            "description": "Mean anomaly at epoch in degrees",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "q (AU)": {
+            "description": "Perihelion distance in Astronomical Units (AU)",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Q (AU)": {
+            "description": "Aphelion distance in Astronomical Units (AU)",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "P (yr)": {
+            "description": "Orbital period in years",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "H (mag)": {
+            "description": "Absolute magnitude of the asteroid",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "MOID (AU)": {
+            "description": "Minimum Orbit Intersection Distance in Astronomical Units (AU)",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "ref": {
+            "description": "Reference ID",
+            "type": "categorical"
+        },
+        "class": {
+            "description": "Class of the asteroid",
+            "type": "categorical",
+            "value_dict": {
+                "APO*": "Potentially Hazardous Asteroid (PHA) with Apohele orbit",
+                "ATE*": "Potentially Hazardous Asteroid (PHA) with Aten orbit",
+                "AMO*": "Potentially Hazardous Asteroid (PHA) with Amor orbit",
+                "APO": "Asteroid with Apohele orbit",
+                "IEO*": "Potentially Hazardous Asteroid (PHA) with Interior to Earth Orbit (IEO)",
+                "ATE": "Asteroid with Aten orbit"
+            }
+        },
+        "Object.1": {
+            "description": "Duplicated name of the asteroid",
+            "type": "useless"
+        }
+    },
+    "task_info": {
+        "class": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in space science and asteroid classification.",
+                "task_prompt": "Based on the orbital characteristics of the asteroid, please predict the type of its orbit.",
+                "answer_prompt": "Is it a Potentially Hazardous Asteroid (PHA) with Apohele orbit[0], Potentially Hazardous Asteroid (PHA) with Aten orbit[1], Potentially Hazardous Asteroid (PHA) with Amor orbit[2], Asteroid with Apohele orbit[3], Potentially Hazardous Asteroid (PHA) with Interior to Earth Orbit (IEO)[4], or Asteroid with Aten orbit[5]?"
+            },
+            "class_num": 6,
+            "class_value_dict": {
+                "APO*": "Potentially Hazardous Asteroid (PHA) with Apohele orbit",
+                "ATE*": "Potentially Hazardous Asteroid (PHA) with Aten orbit",
+                "AMO*": "Potentially Hazardous Asteroid (PHA) with Amor orbit",
+                "APO": "Asteroid with Apohele orbit",
+                "IEO*": "Potentially Hazardous Asteroid (PHA) with Interior to Earth Orbit (IEO)",
+                "ATE": "Asteroid with Aten orbit"
+            },
+            "class_index_dict": {
+                "APO*": 0,
+                "ATE*": 1,
+                "AMO*": 2,
+                "APO": 3,
+                "IEO*": 4,
+                "ATE": 5
+            }
+        },
+        "H (mag)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in space science and asteroid observation.",
+                "task_prompt": "Based on the orbital characteristics of the asteroid, please predict its absolute magnitude (H)."
+            }
+        },
+        "P (yr)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in space science and asteroid observation.",
+                "task_prompt": "Based on the orbital characteristics of the asteroid, please predict its orbital period in years (P)."
+            }
+        }
+    }
+}

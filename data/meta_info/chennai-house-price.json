@@ -1,0 +1,120 @@
+{
+    "basic_info": {
+        "row_num": 2620,
+        "col_num": 8,
+        "label_candidates": [
+            "price",
+            "area",
+            "bhk",
+            "bathroom",
+            "age"
+        ],
+        "valid_feature_num": 8,
+        "num_features": [
+            "area",
+            "bhk",
+            "bathroom",
+            "age",
+            "price"
+        ],
+        "cat_features": [
+            "status",
+            "location",
+            "builder"
+        ],
+        "other_features": [],
+        "tags": [
+            "india",
+            "real estate",
+            "beginner",
+            "linear regression",
+            "tabular"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/amaanafif/chennai-house-price"
+    },
+    "feature_info": {
+        "price": {
+            "description": "The price of the house in lakhs (Indian Rupees)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "area": {
+            "description": "The total area of the house in square feet",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "status": {
+            "description": "The status of the house (Ready to move, Under Construction etc.)",
+            "type": "categorical",
+            "value_dict": {
+                "Ready to move": "The house is ready for immediate occupancy",
+                "Under Construction": "The house is currently under construction and not ready for occupancy"
+            }
+        },
+        "bhk": {
+            "description": "Number of bedrooms in the house",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "bathroom": {
+            "description": "Number of bathrooms in the house",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "age": {
+            "description": "The age of the house in years",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "location": {
+            "description": "The location where the house is situated",
+            "type": "categorical"
+        },
+        "builder": {
+            "description": "The builder who constructed the house",
+            "type": "categorical"
+        }
+    },
+    "task_info": {
+        "price": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate data analysis.",
+                "task_prompt": "Based on the features of the property, please predict the price.",
+                "answer_prompt": "The predicted price is __."
+            }
+        },
+        "area": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate data analysis.",
+                "task_prompt": "Based on the features of the property, please predict the area.",
+                "answer_prompt": "The predicted area is __."
+            }
+        },
+        "bhk": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate data analysis.",
+                "task_prompt": "Based on the features of the property, please predict the number of bedrooms.",
+                "answer_prompt": "The predicted number of bedrooms is __."
+            }
+        },
+        "bathroom": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate data analysis.",
+                "task_prompt": "Based on the features of the property, please predict the number of bathrooms.",
+                "answer_prompt": "The predicted number of bathrooms is __."
+            }
+        },
+        "age": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate data analysis.",
+                "task_prompt": "Based on the features of the property, please predict the age of the property.",
+                "answer_prompt": "The predicted age of the property is __."
+            }
+        }
+    }
+}

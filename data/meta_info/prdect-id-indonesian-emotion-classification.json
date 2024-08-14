@@ -1,0 +1,154 @@
+{
+    "basic_info": {
+        "row_num": 5400,
+        "col_num": 11,
+        "label_candidates": [
+            "Emotion",
+            "Sentiment",
+            "Customer Rating",
+            "Overall Rating"
+        ],
+        "valid_feature_num": 11,
+        "num_features": [
+            "Price",
+            "Overall Rating",
+            "Number Sold",
+            "Total Review",
+            "Customer Rating"
+        ],
+        "cat_features": [
+            "Category",
+            "Product Name",
+            "Location",
+            "Customer Review",
+            "Sentiment",
+            "Emotion"
+        ],
+        "other_features": [],
+        "tags": [
+            "nlp",
+            "text mining",
+            "neural networks",
+            "online communities"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/jocelyndumlao/prdect-id-indonesian-emotion-classification"
+    },
+    "feature_info": {
+        "Category": {
+            "description": "The category of the product",
+            "type": "categorical"
+        },
+        "Product Name": {
+            "description": "The name of the product",
+            "type": "categorical"
+        },
+        "Location": {
+            "description": "The location where the product is sold",
+            "type": "categorical"
+        },
+        "Price": {
+            "description": "The price of the product",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Overall Rating": {
+            "description": "The overall rating of the product",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Number Sold": {
+            "description": "The number of units sold for the product",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Total Review": {
+            "description": "The total number of reviews for the product",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Customer Rating": {
+            "description": "The rating given by the customer",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Customer Review": {
+            "description": "The review given by the customer",
+            "type": "categorical"
+        },
+        "Sentiment": {
+            "description": "The sentiment of the customer review",
+            "type": "categorical",
+            "value_dict": {
+                "Positive": "The review given by the customer is positive",
+                "Negative": "The review given by the customer is negative"
+            }
+        },
+        "Emotion": {
+            "description": "The emotion expressed in the customer review",
+            "type": "categorical",
+            "value_dict": {
+                "Happy": "The emotion expressed in the review is happiness",
+                "Sadness": "The emotion expressed in the review is sadness",
+                "Anger": "The emotion expressed in the review is anger",
+                "Love": "The emotion expressed in the review is love",
+                "Fear": "The emotion expressed in the review is fear"
+            }
+        }
+    },
+    "task_info": {
+        "Emotion": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in emotion analysis.",
+                "task_prompt": "Based on the customer review, please predict the emotion expressed.",
+                "answer_prompt": "Is the emotion expressed happiness[0], sadness[1], anger[2], love[3] or fear[4]?"
+            },
+            "class_num": 5,
+            "class_value_dict": {
+                "Happy": "The emotion expressed in the review is happiness",
+                "Sadness": "The emotion expressed in the review is sadness",
+                "Anger": "The emotion expressed in the review is anger",
+                "Love": "The emotion expressed in the review is love",
+                "Fear": "The emotion expressed in the review is fear"
+            },
+            "class_index_dict": {
+                "Happy": 0,
+                "Sadness": 1,
+                "Anger": 2,
+                "Love": 3,
+                "Fear": 4
+            }
+        },
+        "Sentiment": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in sentiment analysis.",
+                "task_prompt": "Based on the customer review, please predict the sentiment.",
+                "answer_prompt": "Is the sentiment positive[0] or negative[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "Positive": "The review given by the customer is positive",
+                "Negative": "The review given by the customer is negative"
+            },
+            "class_index_dict": {
+                "Positive": 0,
+                "Negative": 1
+            }
+        },
+        "Customer Rating": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in customer behavior analysis.",
+                "task_prompt": "Based on the customer review and other product information, please predict the customer rating."
+            }
+        },
+        "Overall Rating": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in product analysis.",
+                "task_prompt": "Based on the product information and customer reviews, please predict the overall rating."
+            }
+        }
+    }
+}

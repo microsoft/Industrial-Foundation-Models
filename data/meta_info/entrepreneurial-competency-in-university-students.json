@@ -1,0 +1,411 @@
+{
+    "basic_info": {
+        "row_num": 219,
+        "col_num": 17,
+        "label_candidates": [
+            "y",
+            "EducationSector",
+            "IndividualProject",
+            "Age",
+            "Gender",
+            "City",
+            "Influenced",
+            "Perseverance",
+            "DesireToTakeInitiative",
+            "Competitiveness",
+            "SelfReliance",
+            "StrongNeedToAchieve",
+            "SelfConfidence",
+            "GoodPhysicalHealth",
+            "MentalDisorder",
+            "KeyTraits"
+        ],
+        "valid_feature_num": 17,
+        "num_features": [
+            "Age",
+            "Perseverance",
+            "DesireToTakeInitiative",
+            "Competitiveness",
+            "SelfReliance",
+            "StrongNeedToAchieve",
+            "SelfConfidence"
+        ],
+        "cat_features": [
+            "EducationSector",
+            "IndividualProject",
+            "Gender",
+            "City",
+            "Influenced",
+            "GoodPhysicalHealth",
+            "MentalDisorder",
+            "KeyTraits",
+            "ReasonsForLack",
+            "y"
+        ],
+        "other_features": [],
+        "tags": [
+            "universities and colleges",
+            "business",
+            "education",
+            "beginner",
+            "binary classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/namanmanchanda/entrepreneurial-competency-in-university-students"
+    },
+    "feature_info": {
+        "EducationSector": {
+            "description": "The sector of education the student belongs to",
+            "type": "categorical",
+            "value_dict": {
+                "Engineering Sciences": "Student belongs to Engineering Sciences",
+                "Others": "Student belongs to other education sectors",
+                "Economic Sciences, Business Studies, Commerce and Law": "Student belongs to Economic Sciences, Business Studies, Commerce and Law",
+                "Art, Music or Design": "Student belongs to Art, Music or Design",
+                "Humanities and Social Sciences": "Student belongs to Humanities and Social Sciences",
+                "Medicine, Health Sciences": "Student belongs to Medicine, Health Sciences",
+                "Teaching Degree (e.g., B.Ed)": "Student is pursuing a Teaching Degree (e.g., B.Ed)",
+                "Mathematics or Natural Sciences": "Student belongs to Mathematics or Natural Sciences",
+                "Language and Cultural Studies": "Student belongs to Language and Cultural Studies"
+            }
+        },
+        "IndividualProject": {
+            "description": "Whether the student has done any individual projects",
+            "type": "categorical",
+            "value_dict": {
+                "No": "Student has not done any individual projects",
+                "Yes": "Student has done individual projects"
+            }
+        },
+        "Age": {
+            "description": "The age of the student",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Gender": {
+            "description": "The gender of the student",
+            "type": "categorical",
+            "value_dict": {
+                "Male": "Student is Male",
+                "Female": "Student is Female"
+            }
+        },
+        "City": {
+            "description": "The city where the student lives",
+            "type": "categorical",
+            "value_dict": {
+                "Yes": "Student lives in a city",
+                "No": "Student does not live in a city"
+            }
+        },
+        "Influenced": {
+            "description": "Whether the student is influenced by someone or not",
+            "type": "categorical",
+            "value_dict": {
+                "No": "Student is not influenced by anyone",
+                "Yes": "Student is influenced by someone"
+            }
+        },
+        "Perseverance": {
+            "description": "Perseverance level of the student",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "DesireToTakeInitiative": {
+            "description": "The desire level of the student to take initiatives",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Competitiveness": {
+            "description": "Competitiveness level of the student",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "SelfReliance": {
+            "description": "Self-reliance level of the student",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "StrongNeedToAchieve": {
+            "description": "The level of strong need to achieve in the student",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "SelfConfidence": {
+            "description": "Self-confidence level of the student",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "GoodPhysicalHealth": {
+            "description": "Whether the student is in good physical health or not",
+            "type": "categorical",
+            "value_dict": {
+                "3": "Student rates their physical health as 3",
+                "4": "Student rates their physical health as 4",
+                "2": "Student rates their physical health as 2",
+                "1": "Student rates their physical health as 1",
+                "5": "Student rates their physical health as 5"
+            }
+        },
+        "MentalDisorder": {
+            "description": "Whether the student has any mental disorders or not",
+            "type": "categorical",
+            "value_dict": {
+                "Yes": "Student has a mental disorder",
+                "No": "Student does not have a mental disorder"
+            }
+        },
+        "KeyTraits": {
+            "description": "The key traits of the student",
+            "type": "categorical",
+            "value_dict": {
+                "Passion": "One of the key traits of the student is Passion",
+                "Vision": "One of the key traits of the student is Vision",
+                "Resilience": "One of the key traits of the student is Resilience",
+                "Positivity": "One of the key traits of the student is Positivity",
+                "Work Ethic": "One of the key traits of the student is Work Ethic"
+            }
+        },
+        "ReasonsForLack": {
+            "description": "The reasons for lack of entrepreneurial competency",
+            "type": "categorical"
+        },
+        "y": {
+            "description": "Target variable indicating whether the student has entrepreneurial competency or not",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Student has entrepreneurial competency",
+                "0": "Student does not have entrepreneurial competency"
+            }
+        }
+    },
+    "task_info": {
+        "y": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing student data.",
+                "task_prompt": "Based on the features of the student, please predict if the student has entrepreneurial competency.",
+                "answer_prompt": "Yes[1] or No[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "Student has entrepreneurial competency",
+                "0": "Student does not have entrepreneurial competency"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        },
+        "EducationSector": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing student data.",
+                "task_prompt": "Based on the features of the student, please predict the education sector of the student.",
+                "answer_prompt": "Engineering Sciences[0], Others[1], Economic Sciences, Business Studies, Commerce and Law[2], Art, Music or Design[3], Humanities and Social Sciences[4], Medicine, Health Sciences[5], Teaching Degree (e.g., B.Ed)[6], Mathematics or Natural Sciences[7], Language and Cultural Studies[8]?"
+            },
+            "class_num": 9,
+            "class_value_dict": {
+                "Engineering Sciences": "Student belongs to Engineering Sciences",
+                "Others": "Student belongs to other education sectors",
+                "Economic Sciences, Business Studies, Commerce and Law": "Student belongs to Economic Sciences, Business Studies, Commerce and Law",
+                "Art, Music or Design": "Student belongs to Art, Music or Design",
+                "Humanities and Social Sciences": "Student belongs to Humanities and Social Sciences",
+                "Medicine, Health Sciences": "Student belongs to Medicine, Health Sciences",
+                "Teaching Degree (e.g., B.Ed)": "Student is pursuing a Teaching Degree (e.g., B.Ed)",
+                "Mathematics or Natural Sciences": "Student belongs to Mathematics or Natural Sciences",
+                "Language and Cultural Studies": "Student belongs to Language and Cultural Studies"
+            },
+            "class_index_dict": {
+                "Engineering Sciences": 0,
+                "Others": 1,
+                "Economic Sciences, Business Studies, Commerce and Law": 2,
+                "Art, Music or Design": 3,
+                "Humanities and Social Sciences": 4,
+                "Medicine, Health Sciences": 5,
+                "Teaching Degree (e.g., B.Ed)": 6,
+                "Mathematics or Natural Sciences": 7,
+                "Language and Cultural Studies": 8
+            }
+        },
+        "IndividualProject": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing student data.",
+                "task_prompt": "Based on the features of the student, please predict if the student has done any individual projects.",
+                "answer_prompt": "Yes[0] or No[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "No": "Student has not done any individual projects",
+                "Yes": "Student has done individual projects"
+            },
+            "class_index_dict": {
+                "No": 0,
+                "Yes": 1
+            }
+        },
+        "Age": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing student data.",
+                "task_prompt": "Based on the features of the student, please predict the age of the student."
+            }
+        },
+        "Gender": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing student data.",
+                "task_prompt": "Based on the features of the student, please predict the gender of the student.",
+                "answer_prompt": "Male[0] or Female[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "Male": "Student is Male",
+                "Female": "Student is Female"
+            },
+            "class_index_dict": {
+                "Male": 0,
+                "Female": 1
+            }
+        },
+        "City": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing student data.",
+                "task_prompt": "Based on the features of the student, please predict if the student lives in a city.",
+                "answer_prompt": "Yes[0] or No[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "Yes": "Student lives in a city",
+                "No": "Student does not live in a city"
+            },
+            "class_index_dict": {
+                "Yes": 0,
+                "No": 1
+            }
+        },
+        "Influenced": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing student data.",
+                "task_prompt": "Based on the features of the student, please predict if the student is influenced by someone.",
+                "answer_prompt": "Yes[0] or No[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "No": "Student is not influenced by anyone",
+                "Yes": "Student is influenced by someone"
+            },
+            "class_index_dict": {
+                "No": 0,
+                "Yes": 1
+            }
+        },
+        "Perseverance": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing student data.",
+                "task_prompt": "Based on the features of the student, please predict the perseverance score of the student."
+            }
+        },
+        "DesireToTakeInitiative": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing student data.",
+                "task_prompt": "Based on the features of the student, please predict the desire to take initiative score of the student."
+            }
+        },
+        "Competitiveness": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing student data.",
+                "task_prompt": "Based on the features of the student, please predict the competitiveness score of the student."
+            }
+        },
+        "SelfReliance": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing student data.",
+                "task_prompt": "Based on the features of the student, please predict the self-reliance score of the student."
+            }
+        },
+        "StrongNeedToAchieve": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing student data.",
+                "task_prompt": "Based on the features of the student, please predict the strong need to achieve score of the student."
+            }
+        },
+        "SelfConfidence": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing student data.",
+                "task_prompt": "Based on the features of the student, please predict the self-confidence score of the student."
+            }
+        },
+        "GoodPhysicalHealth": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing student data.",
+                "task_prompt": "Based on the features of the student, please predict the student's rating of their physical health.",
+                "answer_prompt": "3[0], 4[1], 2[2], 1[3], 5[4]?"
+            },
+            "class_num": 5,
+            "class_value_dict": {
+                "3": "Student rates their physical health as 3",
+                "4": "Student rates their physical health as 4",
+                "2": "Student rates their physical health as 2",
+                "1": "Student rates their physical health as 1",
+                "5": "Student rates their physical health as 5"
+            },
+            "class_index_dict": {
+                "3": 0,
+                "4": 1,
+                "2": 2,
+                "1": 3,
+                "5": 4
+            }
+        },
+        "MentalDisorder": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing student data.",
+                "task_prompt": "Based on the features of the student, please predict if the student has a mental disorder.",
+                "answer_prompt": "Yes[0] or No[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "Yes": "Student has a mental disorder",
+                "No": "Student does not have a mental disorder"
+            },
+            "class_index_dict": {
+                "Yes": 0,
+                "No": 1
+            }
+        },
+        "KeyTraits": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing student data.",
+                "task_prompt": "Based on the features of the student, please predict one of the key traits of the student.",
+                "answer_prompt": "Passion[0], Vision[1], Resilience[2], Positivity[3], Work Ethic[4]?"
+            },
+            "class_num": 5,
+            "class_value_dict": {
+                "Passion": "One of the key traits of the student is Passion",
+                "Vision": "One of the key traits of the student is Vision",
+                "Resilience": "One of the key traits of the student is Resilience",
+                "Positivity": "One of the key traits of the student is Positivity",
+                "Work Ethic": "One of the key traits of the student is Work Ethic"
+            },
+            "class_index_dict": {
+                "Passion": 0,
+                "Vision": 1,
+                "Resilience": 2,
+                "Positivity": 3,
+                "Work Ethic": 4
+            }
+        }
+    }
+}

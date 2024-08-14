@@ -1,0 +1,143 @@
+{
+    "basic_info": {
+        "row_num": 164,
+        "col_num": 8,
+        "label_candidates": [
+            "Credit Score",
+            "Income",
+            "Education"
+        ],
+        "valid_feature_num": 8,
+        "num_features": [
+            "Age",
+            "Income",
+            "Number of Children"
+        ],
+        "cat_features": [
+            "Gender",
+            "Education",
+            "Marital Status",
+            "Home Ownership",
+            "Credit Score"
+        ],
+        "other_features": [],
+        "tags": [
+            "finance",
+            "banking",
+            "investing"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/sujithmandala/credit-score-classification-dataset"
+    },
+    "feature_info": {
+        "Age": {
+            "description": "The age of the individual in years",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Gender": {
+            "description": "The gender of the individual",
+            "type": "categorical",
+            "value_dict": {
+                "Female": "The individual is female",
+                "Male": "The individual is male"
+            }
+        },
+        "Income": {
+            "description": "The annual income of the individual in USD",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Education": {
+            "description": "The highest level of education attained by the individual",
+            "type": "categorical",
+            "value_dict": {
+                "Bachelor's Degree": "The individual has a Bachelor degree",
+                "Master's Degree": "The individual has a Master degree",
+                "Doctorate": "The individual has a Doctorate degree",
+                "High School Diploma": "The individual has a High School Diploma",
+                "Associate's Degree": "The individual has an Associate degree"
+            }
+        },
+        "Marital Status": {
+            "description": "The marital status of the individual",
+            "type": "categorical",
+            "value_dict": {
+                "Single": "The individual is not married",
+                "Married": "The individual is married"
+            }
+        },
+        "Number of Children": {
+            "description": "The number of children the individual has",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Home Ownership": {
+            "description": "Whether the individual owns or rents their home",
+            "type": "categorical",
+            "value_dict": {
+                "Rented": "The individual rents their home",
+                "Owned": "The individual owns their home"
+            }
+        },
+        "Credit Score": {
+            "description": "The credit score category of the individual",
+            "type": "categorical",
+            "value_dict": {
+                "High": "The individual has a high credit score",
+                "Average": "The individual has an average credit score",
+                "Low": "The individual has a low credit score"
+            }
+        }
+    },
+    "task_info": {
+        "Credit Score": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in credit score prediction.",
+                "task_prompt": "Based on the features of the individual, please predict the credit score.",
+                "answer_prompt": "High[0], Average[1] or Low[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "High": "The individual has a high credit score",
+                "Average": "The individual has an average credit score",
+                "Low": "The individual has a low credit score"
+            },
+            "class_index_dict": {
+                "High": 0,
+                "Average": 1,
+                "Low": 2
+            }
+        },
+        "Income": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in income prediction.",
+                "task_prompt": "Based on the features of the individual, please predict the income."
+            }
+        },
+        "Education": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in education level prediction.",
+                "task_prompt": "Based on the features of the individual, please predict the education level.",
+                "answer_prompt": "Bachelor's Degree[0], Master's Degree[1], Doctorate[2], High School Diploma[3] or Associate's Degree[4]?"
+            },
+            "class_num": 5,
+            "class_value_dict": {
+                "Bachelor's Degree": "The individual has a Bachelor degree",
+                "Master's Degree": "The individual has a Master degree",
+                "Doctorate": "The individual has a Doctorate degree",
+                "High School Diploma": "The individual has a High School Diploma",
+                "Associate's Degree": "The individual has an Associate degree"
+            },
+            "class_index_dict": {
+                "Bachelor's Degree": 0,
+                "Master's Degree": 1,
+                "Doctorate": 2,
+                "High School Diploma": 3,
+                "Associate's Degree": 4
+            }
+        }
+    }
+}

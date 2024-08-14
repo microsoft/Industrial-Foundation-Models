@@ -1,0 +1,353 @@
+{
+    "basic_info": {
+        "row_num": 11055,
+        "col_num": 32,
+        "label_candidates": [
+            "Result",
+            "SSLfinal_State",
+            "web_traffic",
+            "Page_Rank",
+            "Google_Index"
+        ],
+        "valid_feature_num": 31,
+        "num_features": [
+            "URLURL_Length",
+            "having_Sub_Domain",
+            "Domain_registeration_length",
+            "URL_of_Anchor",
+            "Links_in_tags",
+            "Redirect",
+            "age_of_domain",
+            "web_traffic",
+            "Page_Rank",
+            "Links_pointing_to_page"
+        ],
+        "cat_features": [
+            "having_IPhaving_IP_Address",
+            "Shortining_Service",
+            "having_At_Symbol",
+            "double_slash_redirecting",
+            "Prefix_Suffix",
+            "SSLfinal_State",
+            "Favicon",
+            "port",
+            "HTTPS_token",
+            "Request_URL",
+            "SFH",
+            "Submitting_to_email",
+            "Abnormal_URL",
+            "on_mouseover",
+            "RightClick",
+            "popUpWidnow",
+            "Iframe",
+            "DNSRecord",
+            "Google_Index",
+            "Statistical_report",
+            "Result"
+        ],
+        "other_features": [],
+        "tags": [
+            "model comparison",
+            "xgboost",
+            "logistic regression",
+            "k-means",
+            "tensorflow"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/shibumohapatra/book-my-show"
+    },
+    "feature_info": {
+        "index": {
+            "description": "Index of the record",
+            "type": "useless"
+        },
+        "having_IPhaving_IP_Address": {
+            "description": "Whether the URL has an IP address",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The URL does not have an IP address",
+                "1": "The URL has an IP address"
+            }
+        },
+        "URLURL_Length": {
+            "description": "Length of the URL",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Shortining_Service": {
+            "description": "Whether the URL uses a URL shortening service",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The URL uses a URL shortening service",
+                "0": "The URL does not use a URL shortening service"
+            }
+        },
+        "having_At_Symbol": {
+            "description": "Whether the URL contains \"@\" symbol",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The URL contains \"@\" symbol",
+                "0": "The URL does not contain \"@\" symbol"
+            }
+        },
+        "double_slash_redirecting": {
+            "description": "Whether the URL has \"//\" in the path part or not",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The URL does not have \"//\" in the path part",
+                "1": "The URL has \"//\" in the path part"
+            }
+        },
+        "Prefix_Suffix": {
+            "description": "Whether the domain has a \"-\" symbol",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The domain does not have a \"-\" symbol",
+                "1": "The domain has a \"-\" symbol"
+            }
+        },
+        "having_Sub_Domain": {
+            "description": "Number of sub domains in the URL",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "SSLfinal_State": {
+            "description": "State of the SSL certificate of the website",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The SSL certificate of the website is not trusted",
+                "1": "The SSL certificate of the website is trusted",
+                "-1": "The website does not have a SSL certificate"
+            }
+        },
+        "Domain_registeration_length": {
+            "description": "Length of time since the domain was registered",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Favicon": {
+            "description": "Whether the website has a favicon or not",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The website has a favicon",
+                "0": "The website does not have a favicon"
+            }
+        },
+        "port": {
+            "description": "Whether the website uses a standard HTTP port",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The website uses a standard HTTP port",
+                "0": "The website does not use a standard HTTP port"
+            }
+        },
+        "HTTPS_token": {
+            "description": "Whether the domain part includes HTTPS token",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The domain part does not include HTTPS token",
+                "1": "The domain part includes HTTPS token"
+            }
+        },
+        "Request_URL": {
+            "description": "Whether the URL in <img> tags is loaded from the same domain",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The URL in <img> tags is loaded from the same domain",
+                "0": "The URL in <img> tags is not loaded from the same domain"
+            }
+        },
+        "URL_of_Anchor": {
+            "description": "Percentage of URLs in anchor tags that point to the same domain",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Links_in_tags": {
+            "description": "Percentage of links in <Meta>, <Script> and <Link> tags pointing to the same domain",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "SFH": {
+            "description": "Whether the \"about:blank\" is used as an action field in the form",
+            "type": "categorical",
+            "value_dict": {
+                "0": "\"about:blank\" is not used as an action field in the form",
+                "1": "\"about:blank\" is used as an action field in the form",
+                "-1": "The form does not have an action field"
+            }
+        },
+        "Submitting_to_email": {
+            "description": "Whether the website has a \"mailto:\" used in the form",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The website does not have a \"mailto:\" used in the form",
+                "1": "The website has a \"mailto:\" used in the form"
+            }
+        },
+        "Abnormal_URL": {
+            "description": "Whether the host name is different from the domain name in the URL",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The host name is the same as the domain name in the URL",
+                "1": "The host name is different from the domain name in the URL"
+            }
+        },
+        "Redirect": {
+            "description": "Number of redirects in the website",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "on_mouseover": {
+            "description": "Whether the website has \"onmouseover\" to change the status bar",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The website has \"onmouseover\" to change the status bar",
+                "0": "The website does not have \"onmouseover\" to change the status bar"
+            }
+        },
+        "RightClick": {
+            "description": "Whether the right click is disabled on the website",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The right click is disabled on the website",
+                "0": "The right click is not disabled on the website"
+            }
+        },
+        "popUpWidnow": {
+            "description": "Whether the website has a popup window",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The website has a popup window",
+                "0": "The website does not have a popup window"
+            }
+        },
+        "Iframe": {
+            "description": "Whether the website has an \"iframe\"",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The website has an \"iframe\"",
+                "0": "The website does not have an \"iframe\""
+            }
+        },
+        "age_of_domain": {
+            "description": "Age of the domain",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "DNSRecord": {
+            "description": "Whether the website has DNS records",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The website does not have DNS records",
+                "1": "The website has DNS records"
+            }
+        },
+        "web_traffic": {
+            "description": "Web traffic rank of the website",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Page_Rank": {
+            "description": "Page rank of the website",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Google_Index": {
+            "description": "Whether the website is indexed by Google",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The website is indexed by Google",
+                "0": "The website is not indexed by Google"
+            }
+        },
+        "Links_pointing_to_page": {
+            "description": "Number of links pointing to the page",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Statistical_report": {
+            "description": "Whether the website redirects the user to a different domain",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The website does not redirect the user to a different domain",
+                "1": "The website redirects the user to a different domain"
+            }
+        },
+        "Result": {
+            "description": "Whether the website is phishing(1) or not(0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The website is not phishing",
+                "1": "The website is phishing"
+            }
+        }
+    },
+    "task_info": {
+        "Result": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in website security.",
+                "task_prompt": "Based on the features of the website, please predict if the website is phishing or not.",
+                "answer_prompt": "The website is not phishing[0] or The website is phishing[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "The website is not phishing",
+                "1": "The website is phishing"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "SSLfinal_State": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in SSL certificate validation.",
+                "task_prompt": "Based on the features of the website, please predict the state of the SSL certificate.",
+                "answer_prompt": "Not trusted[0], trusted[1] or does not have a SSL certificate[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "0": "The SSL certificate of the website is not trusted",
+                "1": "The SSL certificate of the website is trusted",
+                "-1": "The website does not have a SSL certificate"
+            },
+            "class_index_dict": {
+                "-1": 2,
+                "0": 0,
+                "1": 1
+            }
+        },
+        "web_traffic": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in web analytics.",
+                "task_prompt": "Based on the features of the website, please predict the web traffic."
+            }
+        },
+        "Page_Rank": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in SEO.",
+                "task_prompt": "Based on the features of the website, please predict the Page Rank."
+            }
+        },
+        "Google_Index": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in search engine indexing.",
+                "task_prompt": "Based on the features of the website, please predict if the website is indexed by Google or not.",
+                "answer_prompt": "The website is not indexed by Google[0] or The website is indexed by Google[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "The website is indexed by Google",
+                "0": "The website is not indexed by Google"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        }
+    }
+}

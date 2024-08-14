@@ -1,0 +1,159 @@
+{
+    "basic_info": {
+        "row_num": 500,
+        "col_num": 14,
+        "label_candidates": [
+            "rank",
+            "strength",
+            "agility",
+            "mental"
+        ],
+        "valid_feature_num": 14,
+        "num_features": [
+            "age",
+            "height",
+            "weight",
+            "hours_per_day",
+            "strength",
+            "agility",
+            "mental",
+            "year_start",
+            "rank"
+        ],
+        "cat_features": [
+            "name",
+            "gender",
+            "nationality",
+            "sports",
+            "federation"
+        ],
+        "other_features": [],
+        "tags": [
+            "sports",
+            "classification",
+            "clustering",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/julienjta/wrestling-world-tournament"
+    },
+    "feature_info": {
+        "name": {
+            "description": "The name of the wrestler",
+            "type": "categorical"
+        },
+        "gender": {
+            "description": "The gender of the wrestler, either Male or Female",
+            "type": "categorical",
+            "value_dict": {
+                "Female": "The wrestler is female",
+                "Male": "The wrestler is male"
+            }
+        },
+        "age": {
+            "description": "The age of the wrestler",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "height": {
+            "description": "The height of the wrestler in cm",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "nationality": {
+            "description": "The nationality of the wrestler",
+            "type": "categorical",
+            "value_dict": {
+                "England": "The wrestler is from England",
+                "Japan": "The wrestler is from Japan",
+                "USA": "The wrestler is from USA",
+                "France": "The wrestler is from France",
+                "Egypt": "The wrestler is from Egypt",
+                "Australia": "The wrestler is from Australia",
+                "Argentina": "The wrestler is from Argentina",
+                "India": "The wrestler is from India"
+            }
+        },
+        "weight": {
+            "description": "The weight of the wrestler in kg",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "sports": {
+            "description": "The sports discipline of the wrestler",
+            "type": "categorical"
+        },
+        "hours_per_day": {
+            "description": "The average hours per day the wrestler trains",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "strength": {
+            "description": "A measure of the wrestler strength",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "agility": {
+            "description": "A measure of the wrestler agility",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "mental": {
+            "description": "A measure of the wrestler mental strength",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "federation": {
+            "description": "The federation the wrestler belongs to",
+            "type": "categorical",
+            "value_dict": {
+                "Fight Zone Wrestling": "The wrestler belongs to the Fight Zone Wrestling federation",
+                "World Wrestling Entertainment": "The wrestler belongs to the World Wrestling Entertainment federation",
+                "Consejo Global de Lucha Libre": "The wrestler belongs to the Consejo Global de Lucha Libre federation"
+            }
+        },
+        "year_start": {
+            "description": "The year the wrestler started their career",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "rank": {
+            "description": "The rank of the wrestler in their discipline",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "rank": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sports analytics.",
+                "task_prompt": "Based on the features of the wrestler, please predict the rank.",
+                "answer_prompt": "The predicted rank is."
+            }
+        },
+        "strength": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sports analytics.",
+                "task_prompt": "Based on the features of the wrestler, please predict the strength.",
+                "answer_prompt": "The predicted strength is."
+            }
+        },
+        "agility": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sports analytics.",
+                "task_prompt": "Based on the features of the wrestler, please predict the agility.",
+                "answer_prompt": "The predicted agility is."
+            }
+        },
+        "mental": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sports analytics.",
+                "task_prompt": "Based on the features of the wrestler, please predict the mental strength.",
+                "answer_prompt": "The predicted mental strength is."
+            }
+        }
+    }
+}

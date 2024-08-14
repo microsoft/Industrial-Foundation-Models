@@ -1,0 +1,78 @@
+{
+    "basic_info": {
+        "row_num": 250608,
+        "col_num": 5,
+        "label_candidates": [
+            "TOTALDEMAND",
+            "RRP"
+        ],
+        "valid_feature_num": 5,
+        "num_features": [
+            "TOTALDEMAND",
+            "RRP"
+        ],
+        "cat_features": [
+            "REGION",
+            "PERIODTYPE"
+        ],
+        "other_features": [
+            "SETTLEMENTDATE"
+        ],
+        "tags": [
+            "energy",
+            "time series analysis",
+            "tabular",
+            "regression",
+            "electricity"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/joebeachcapital/aemo-qld-australia-electricity-demand-2018-2022"
+    },
+    "feature_info": {
+        "REGION": {
+            "description": "The region of the electricity demand data, in this case, QLD1 represents Queensland, Australia",
+            "type": "categorical",
+            "value_dict": {
+                "QLD1": "QLD1 represents the region of Queensland, Australia in the dataset"
+            }
+        },
+        "SETTLEMENTDATE": {
+            "description": "The date and time of the recorded electricity demand, in the format of YYYY/MM/DD HH:MM:SS",
+            "type": "other"
+        },
+        "TOTALDEMAND": {
+            "description": "The total electricity demand at the given date and time, measured in megawatts (MW)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "RRP": {
+            "description": "The regional reference price (RRP) for the electricity at the given date and time, measured in Australian dollars per megawatt hour (AUD/MWh)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "PERIODTYPE": {
+            "description": "The type of period for the electricity demand record, in this case, TRADE represents trading intervals",
+            "type": "categorical",
+            "value_dict": {
+                "TRADE": "TRADE indicates that the record is for a trading interval period"
+            }
+        }
+    },
+    "task_info": {
+        "TOTALDEMAND": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in energy demand forecasting.",
+                "task_prompt": "Based on the features of the electricity market data, please predict the total demand.",
+                "answer_prompt": "The predicted total demand is {total_demand}."
+            }
+        },
+        "RRP": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in energy price forecasting.",
+                "task_prompt": "Based on the features of the electricity market data, please predict the regional reference price.",
+                "answer_prompt": "The predicted regional reference price is {rrp}."
+            }
+        }
+    }
+}

@@ -1,0 +1,234 @@
+{
+    "basic_info": {
+        "row_num": 303,
+        "col_num": 14,
+        "label_candidates": [
+            "chol",
+            "num",
+            "age",
+            "thal",
+            "ca"
+        ],
+        "valid_feature_num": 14,
+        "num_features": [
+            "age",
+            "trestbps",
+            "thalach",
+            "oldpeak",
+            "chol"
+        ],
+        "cat_features": [
+            "sex",
+            "cp",
+            "fbs",
+            "restecg",
+            "exang",
+            "slope",
+            "ca",
+            "thal",
+            "num"
+        ],
+        "other_features": [],
+        "tags": [
+            "health conditions",
+            "heart conditions"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/mathurinache/cholesterol"
+    },
+    "feature_info": {
+        "age": {
+            "description": "Age of the individual in years",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "sex": {
+            "description": "Sex of the individual (1: male, 0: female)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Male",
+                "0": "Female"
+            }
+        },
+        "cp": {
+            "description": "Chest pain type (Value 1: typical angina, Value 2: atypical angina, Value 3: non-anginal pain, Value 4: asymptomatic)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Typical angina",
+                "4": "Asymptomatic",
+                "3": "Non-anginal pain",
+                "2": "Atypical angina"
+            }
+        },
+        "trestbps": {
+            "description": "Resting blood pressure (in mm Hg on admission to the hospital)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "fbs": {
+            "description": "Fasting blood sugar > 120 mg/dl (1: true, 0: false)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Fasting blood sugar > 120 mg/dl",
+                "0": "Fasting blood sugar <= 120 mg/dl"
+            }
+        },
+        "restecg": {
+            "description": "Resting electrocardiographic results (Value 0: normal, Value 1: having ST-T wave abnormality, Value 2: showing probable or definite left ventricular hypertrophy)",
+            "type": "categorical",
+            "value_dict": {
+                "2": "Showing probable or definite left ventricular hypertrophy",
+                "0": "Normal",
+                "1": "Having ST-T wave abnormality"
+            }
+        },
+        "thalach": {
+            "description": "Maximum heart rate achieved",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "exang": {
+            "description": "Exercise induced angina (1: yes, 0: no)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "No exercise induced angina",
+                "1": "Exercise induced angina"
+            }
+        },
+        "oldpeak": {
+            "description": "ST depression induced by exercise relative to rest",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "slope": {
+            "description": "The slope of the peak exercise ST segment (Value 1: upsloping, Value 2: flat, Value 3: downsloping)",
+            "type": "categorical",
+            "value_dict": {
+                "3": "Downsloping",
+                "2": "Flat",
+                "1": "Upsloping"
+            }
+        },
+        "ca": {
+            "description": "Number of major vessels (0-3) colored by flourosopy",
+            "type": "categorical",
+            "value_dict": {
+                "0": "No major vessels colored by flourosopy",
+                "3": "Three major vessels colored by flourosopy",
+                "2": "Two major vessels colored by flourosopy",
+                "1": "One major vessel colored by flourosopy",
+                "?": "Unknown"
+            }
+        },
+        "thal": {
+            "description": "Thalassemia (3: normal, 6: fixed defect, 7: reversable defect)",
+            "type": "categorical",
+            "value_dict": {
+                "6": "Fixed defect",
+                "3": "Normal",
+                "7": "Reversable defect",
+                "?": "Unknown"
+            }
+        },
+        "num": {
+            "description": "Diagnosis of heart disease (angiographic disease status)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "No heart disease",
+                "2": "Moderate heart disease",
+                "1": "Mild heart disease",
+                "3": "Severe heart disease",
+                "4": "Very severe heart disease"
+            }
+        },
+        "chol": {
+            "description": "Serum cholestoral in mg/dl",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "chol": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in healthcare data analysis.",
+                "task_prompt": "Based on the health indicators of the patient, please predict the cholesterol level.",
+                "answer_prompt": "What is the predicted cholesterol level?"
+            }
+        },
+        "num": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in cardiovascular disease prediction.",
+                "task_prompt": "Based on the health indicators of the patient, please predict the severity of heart disease.",
+                "answer_prompt": "No heart disease[0], Mild heart disease[1], Moderate heart disease[2], Severe heart disease[3] or Very severe heart disease[4]?"
+            },
+            "class_num": 5,
+            "class_value_dict": {
+                "0": "No heart disease",
+                "2": "Moderate heart disease",
+                "1": "Mild heart disease",
+                "3": "Severe heart disease",
+                "4": "Very severe heart disease"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "2": 2,
+                "1": 1,
+                "3": 3,
+                "4": 4
+            }
+        },
+        "age": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in healthcare data analysis.",
+                "task_prompt": "Based on the health indicators of the patient, please predict the age.",
+                "answer_prompt": "What is the predicted age?"
+            }
+        },
+        "thal": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in cardiovascular diagnosis.",
+                "task_prompt": "Based on the health indicators of the patient, please predict the thalassemia type.",
+                "answer_prompt": "Normal[0], Fixed defect[1], Reversable defect[2] or Unknown[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "6": "Fixed defect",
+                "3": "Normal",
+                "7": "Reversable defect",
+                "?": "Unknown"
+            },
+            "class_index_dict": {
+                "Normal": 0,
+                "Fixed defect": 1,
+                "Reversable defect": 2,
+                "Unknown": 3
+            }
+        },
+        "ca": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in cardiovascular diagnosis.",
+                "task_prompt": "Based on the health indicators of the patient, please predict the number of major vessels colored by flourosopy.",
+                "answer_prompt": "No major vessels colored by flourosopy[0], One major vessel colored by flourosopy[1], Two major vessels colored by flourosopy[2], Three major vessels colored by flourosopy[3] or Unknown[4]?"
+            },
+            "class_num": 5,
+            "class_value_dict": {
+                "0": "No major vessels colored by flourosopy",
+                "3": "Three major vessels colored by flourosopy",
+                "2": "Two major vessels colored by flourosopy",
+                "1": "One major vessel colored by flourosopy",
+                "?": "Unknown"
+            },
+            "class_index_dict": {
+                "No major vessels colored by flourosopy": 0,
+                "One major vessel colored by flourosopy": 1,
+                "Two major vessels colored by flourosopy": 2,
+                "Three major vessels colored by flourosopy": 3,
+                "Unknown": 4
+            }
+        }
+    }
+}

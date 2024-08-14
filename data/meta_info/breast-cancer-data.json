@@ -1,0 +1,179 @@
+{
+    "basic_info": {
+        "row_num": 286,
+        "col_num": 10,
+        "label_candidates": [
+            "class",
+            "deg-malig",
+            "irradiate"
+        ],
+        "valid_feature_num": 10,
+        "num_features": [],
+        "cat_features": [
+            "age",
+            "menopause",
+            "tumer-size",
+            "inv-nodes",
+            "node-caps",
+            "deg-malig",
+            "breast",
+            "breast-quad",
+            "irradiate",
+            "class"
+        ],
+        "other_features": [],
+        "tags": [
+            "health",
+            "tabular",
+            "cancer"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/faysalmiah1721758/breast-cancer-data"
+    },
+    "feature_info": {
+        "age": {
+            "description": "Age of the patient categorized in 10 years interval",
+            "type": "categorical",
+            "value_dict": {
+                "40-49'": "Patients aged between 40 and 49",
+                "50-59'": "Patients aged between 50 and 59",
+                "60-69'": "Patients aged between 60 and 69",
+                "30-39'": "Patients aged between 30 and 39",
+                "70-79'": "Patients aged between 70 and 79",
+                "20-29'": "Patients aged between 20 and 29"
+            }
+        },
+        "menopause": {
+            "description": "Menopausal status of the patient",
+            "type": "categorical",
+            "value_dict": {
+                "premeno'": "Premenopausal patients",
+                "ge40'": "Patients aged 40 or older",
+                "lt40'": "Patients aged less than 40"
+            }
+        },
+        "tumer-size": {
+            "description": "Size of the tumor categorized in 5 units interval",
+            "type": "categorical"
+        },
+        "inv-nodes": {
+            "description": "Number of invasive nodes detected",
+            "type": "categorical",
+            "value_dict": {
+                "0-2'": "0 to 2 invasive nodes detected",
+                "3-5'": "3 to 5 invasive nodes detected",
+                "15-17'": "15 to 17 invasive nodes detected",
+                "6-8'": "6 to 8 invasive nodes detected",
+                "9-11'": "9 to 11 invasive nodes detected",
+                "24-26'": "24 to 26 invasive nodes detected",
+                "12-14'": "12 to 14 invasive nodes detected"
+            }
+        },
+        "node-caps": {
+            "description": "Presence of node capsules",
+            "type": "categorical",
+            "value_dict": {
+                "yes'": "Node capsules present",
+                "no'": "Node capsules absent"
+            }
+        },
+        "deg-malig": {
+            "description": "Degree of malignancy of the tumor",
+            "type": "categorical",
+            "value_dict": {
+                "3'": "High degree of malignancy",
+                "1'": "Low degree of malignancy",
+                "2'": "Intermediate degree of malignancy"
+            }
+        },
+        "breast": {
+            "description": "Breast where the tumor is located",
+            "type": "categorical",
+            "value_dict": {
+                "right'": "Tumor located in right breast",
+                "left'": "Tumor located in left breast"
+            }
+        },
+        "breast-quad": {
+            "description": "Quadrant of the breast where the tumor is located",
+            "type": "categorical",
+            "value_dict": {
+                "left_up'": "Tumor located in upper left quadrant",
+                "central'": "Tumor located centrally",
+                "left_low'": "Tumor located in lower left quadrant",
+                "right_up'": "Tumor located in upper right quadrant",
+                "right_low'": "Tumor located in lower right quadrant"
+            }
+        },
+        "irradiate": {
+            "description": "Whether the patient had undergone irradiation treatment",
+            "type": "categorical",
+            "value_dict": {
+                "no'": "Patient did not undergo irradiation treatment",
+                "yes'": "Patient underwent irradiation treatment"
+            }
+        },
+        "class": {
+            "description": "Whether the breast cancer event was recurrent or not",
+            "type": "categorical",
+            "value_dict": {
+                "recurrence-events'": "Breast cancer event was recurrent",
+                "no-recurrence-events'": "Breast cancer event was not recurrent"
+            }
+        }
+    },
+    "task_info": {
+        "class": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnosis.",
+                "task_prompt": "Based on the features of the patient, please predict the recurrence of breast cancer.",
+                "answer_prompt": "Breast cancer event was recurrent[0] or Breast cancer event was not recurrent[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "recurrence-events'": "Breast cancer event was recurrent",
+                "no-recurrence-events'": "Breast cancer event was not recurrent"
+            },
+            "class_index_dict": {
+                "recurrence-events'": 0,
+                "no-recurrence-events'": 1
+            }
+        },
+        "deg-malig": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnosis.",
+                "task_prompt": "Based on the features of the patient, please predict the degree of malignancy of the tumor.",
+                "answer_prompt": "High degree of malignancy[0], Low degree of malignancy[1] or Intermediate degree of malignancy[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "3'": "High degree of malignancy",
+                "1'": "Low degree of malignancy",
+                "2'": "Intermediate degree of malignancy"
+            },
+            "class_index_dict": {
+                "3'": 0,
+                "1'": 1,
+                "2'": 2
+            }
+        },
+        "irradiate": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical treatment.",
+                "task_prompt": "Based on the features of the patient, please predict if the patient underwent irradiation treatment.",
+                "answer_prompt": "Patient did not undergo irradiation treatment[0] or Patient underwent irradiation treatment[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "no'": "Patient did not undergo irradiation treatment",
+                "yes'": "Patient underwent irradiation treatment"
+            },
+            "class_index_dict": {
+                "no'": 0,
+                "yes'": 1
+            }
+        }
+    }
+}

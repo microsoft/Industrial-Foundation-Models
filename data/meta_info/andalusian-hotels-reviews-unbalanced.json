@@ -1,0 +1,89 @@
+{
+    "basic_info": {
+        "row_num": 25787,
+        "col_num": 6,
+        "label_candidates": [
+            "label",
+            "rating"
+        ],
+        "valid_feature_num": 6,
+        "num_features": [
+            "rating"
+        ],
+        "cat_features": [
+            "title",
+            "review_text",
+            "location",
+            "hotel",
+            "label"
+        ],
+        "other_features": [],
+        "tags": [
+            "health",
+            "nlp",
+            "text",
+            "hotels and accommodations"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/chizhikchi/andalusian-hotels-reviews-unbalanced"
+    },
+    "feature_info": {
+        "title": {
+            "description": "The title of the hotel review",
+            "type": "categorical"
+        },
+        "rating": {
+            "description": "The rating given by the reviewer on a scale of 1-5",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "review_text": {
+            "description": "The detailed review text written by the reviewer",
+            "type": "categorical"
+        },
+        "location": {
+            "description": "The location where the hotel is situated",
+            "type": "categorical"
+        },
+        "hotel": {
+            "description": "The name of the hotel",
+            "type": "categorical"
+        },
+        "label": {
+            "description": "The label assigned to the review based on its sentiment",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Represents negative sentiment in the review",
+                "3": "Represents neutral sentiment in the review",
+                "1": "Represents positive sentiment in the review"
+            }
+        }
+    },
+    "task_info": {
+        "label": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in sentiment analysis.",
+                "task_prompt": "Based on the title, review text, location, and hotel of the review, please predict the sentiment of the review.",
+                "answer_prompt": "Negative sentiment[0], Neutral sentiment[1] or Positive sentiment[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "0": "Represents negative sentiment in the review",
+                "3": "Represents neutral sentiment in the review",
+                "1": "Represents positive sentiment in the review"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "3": 1,
+                "1": 2
+            }
+        },
+        "rating": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in hotel review analysis.",
+                "task_prompt": "Based on the title, review text, location, and hotel of the review, please predict the rating of the review."
+            }
+        }
+    }
+}

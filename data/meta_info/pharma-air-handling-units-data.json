@@ -1,0 +1,127 @@
+{
+    "basic_info": {
+        "row_num": 2870,
+        "col_num": 8,
+        "label_candidates": [
+            "Unit Status",
+            "RA Humidity",
+            "RA Temp",
+            "SA %RH",
+            "SA Temp"
+        ],
+        "valid_feature_num": 8,
+        "num_features": [
+            "SA DPT",
+            "SA Temp",
+            "RA DPT",
+            "SA %RH",
+            "RA Temp",
+            "RA Humidity"
+        ],
+        "cat_features": [
+            "Unit Status"
+        ],
+        "other_features": [
+            "Datetime"
+        ],
+        "tags": [
+            "weather and climate",
+            "business",
+            "exploratory data analysis",
+            "time series analysis",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/vitthalmadane/pharma-air-handling-units-data"
+    },
+    "feature_info": {
+        "Datetime": {
+            "description": "Timestamp of the recorded data",
+            "type": "other"
+        },
+        "SA DPT": {
+            "description": "Supply Air Dew Point Temperature in Celsius",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "SA Temp": {
+            "description": "Supply Air Temperature in Celsius",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "RA DPT": {
+            "description": "Return Air Dew Point Temperature in Celsius",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "SA %RH": {
+            "description": "Supply Air Relative Humidity in Percentage",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "RA Temp": {
+            "description": "Return Air Temperature in Celsius",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "RA Humidity": {
+            "description": "Return Air Humidity in Percentage",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Unit Status": {
+            "description": "Status of the Air Handling Unit (0 indicates off and 1 indicates on)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The Air Handling Unit is off",
+                "1": "The Air Handling Unit is on"
+            }
+        }
+    },
+    "task_info": {
+        "Unit Status": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in pharmaceutical air handling units analysis.",
+                "task_prompt": "Based on the features of the air handling unit, please predict the unit status.",
+                "answer_prompt": "The Air Handling Unit is off[0] or The Air Handling Unit is on[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "The Air Handling Unit is off",
+                "1": "The Air Handling Unit is on"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "RA Humidity": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in pharmaceutical air handling units analysis.",
+                "task_prompt": "Based on the features of the air handling unit, please predict the return air humidity."
+            }
+        },
+        "RA Temp": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in pharmaceutical air handling units analysis.",
+                "task_prompt": "Based on the features of the air handling unit, please predict the return air temperature."
+            }
+        },
+        "SA %RH": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in pharmaceutical air handling units analysis.",
+                "task_prompt": "Based on the features of the air handling unit, please predict the supply air relative humidity."
+            }
+        },
+        "SA Temp": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in pharmaceutical air handling units analysis.",
+                "task_prompt": "Based on the features of the air handling unit, please predict the supply air temperature."
+            }
+        }
+    }
+}

@@ -1,0 +1,135 @@
+{
+    "basic_info": {
+        "row_num": 801,
+        "col_num": 14,
+        "label_candidates": [
+            "is_legendary"
+        ],
+        "valid_feature_num": 13,
+        "num_features": [
+            "attack",
+            "defense",
+            "height_m",
+            "hp",
+            "percentage_male",
+            "sp_attack",
+            "sp_defense",
+            "speed",
+            "weight_kg"
+        ],
+        "cat_features": [
+            "name",
+            "type",
+            "generation",
+            "is_legendary"
+        ],
+        "other_features": [],
+        "tags": [
+            "movies and tv shows",
+            "card games",
+            "random forest",
+            "decision tree",
+            "anime and manga"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/kingabzpro/pokmon-legendary-data"
+    },
+    "feature_info": {
+        "pokedex_number": {
+            "description": "Unique identifier for each Pok\u00e9mon",
+            "type": "useless"
+        },
+        "name": {
+            "description": "Name of the Pok\u00e9mon",
+            "type": "categorical"
+        },
+        "attack": {
+            "description": "Attack power of the Pok\u00e9mon",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "defense": {
+            "description": "Defense power of the Pok\u00e9mon",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "height_m": {
+            "description": "Height of the Pok\u00e9mon in meters",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "hp": {
+            "description": "Health points of the Pok\u00e9mon",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "percentage_male": {
+            "description": "Percentage of the Pok\u00e9mon that are male",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "sp_attack": {
+            "description": "Special attack power of the Pok\u00e9mon",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "sp_defense": {
+            "description": "Special defense power of the Pok\u00e9mon",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "speed": {
+            "description": "Speed of the Pok\u00e9mon",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "type": {
+            "description": "Type of the Pok\u00e9mon (e.g., fire, water, grass, etc.)",
+            "type": "categorical"
+        },
+        "weight_kg": {
+            "description": "Weight of the Pok\u00e9mon in kilograms",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "generation": {
+            "description": "The generation of games in which the Pok\u00e9mon was first introduced",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The Pok\u00e9mon was first introduced in the first generation of games",
+                "2": "The Pok\u00e9mon was first introduced in the second generation of games",
+                "3": "The Pok\u00e9mon was first introduced in the third generation of games",
+                "4": "The Pok\u00e9mon was first introduced in the fourth generation of games",
+                "5": "The Pok\u00e9mon was first introduced in the fifth generation of games",
+                "6": "The Pok\u00e9mon was first introduced in the sixth generation of games",
+                "7": "The Pok\u00e9mon was first introduced in the seventh generation of games"
+            }
+        },
+        "is_legendary": {
+            "description": "Indicator if the Pok\u00e9mon is legendary (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The Pok\u00e9mon is not legendary",
+                "1": "The Pok\u00e9mon is legendary"
+            }
+        }
+    },
+    "task_info": {
+        "is_legendary": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in Pok\u00e9mon data analysis.",
+                "task_prompt": "Based on the features of the Pok\u00e9mon, please predict if the Pok\u00e9mon is legendary.",
+                "answer_prompt": "The Pok\u00e9mon is legendary[1] or not[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "The Pok\u00e9mon is not legendary",
+                "1": "The Pok\u00e9mon is legendary"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        }
+    }
+}

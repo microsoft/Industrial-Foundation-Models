@@ -1,0 +1,383 @@
+{
+    "basic_info": {
+        "row_num": 299,
+        "col_num": 28,
+        "label_candidates": [
+            "outcome",
+            "surgery",
+            "age",
+            "pain",
+            "surgical_lesion"
+        ],
+        "valid_feature_num": 27,
+        "num_features": [
+            "rectal_temp",
+            "pulse",
+            "respiratory_rate",
+            "nasogastric_reflux_ph",
+            "packed_cell_volume",
+            "total_protein",
+            "abdomo_protein"
+        ],
+        "cat_features": [
+            "surgery",
+            "age",
+            "temp_of_extremities",
+            "peripheral_pulse",
+            "mucous_membrane",
+            "capillary_refill_time",
+            "pain",
+            "peristalsis",
+            "abdominal_distention",
+            "nasogastric_tube",
+            "nasogastric_reflux",
+            "rectal_exam_feces",
+            "abdomen",
+            "abdomo_appearance",
+            "surgical_lesion",
+            "lesion_1",
+            "lesion_2",
+            "lesion_3",
+            "cp_data",
+            "outcome"
+        ],
+        "other_features": [],
+        "tags": [
+            "healthcare",
+            "health",
+            "beginner",
+            "tabular",
+            "health conditions"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/yasserh/horse-survival-dataset"
+    },
+    "feature_info": {
+        "surgery": {
+            "description": "Whether the horse had surgery or not",
+            "type": "categorical",
+            "value_dict": {
+                "no": "The horse did not have surgery",
+                "yes": "The horse had surgery"
+            }
+        },
+        "age": {
+            "description": "The age of the horse",
+            "type": "categorical",
+            "value_dict": {
+                "adult": "The horse is an adult",
+                "young": "The horse is young"
+            }
+        },
+        "hospital_number": {
+            "description": "Unique ID for each horse",
+            "type": "useless"
+        },
+        "rectal_temp": {
+            "description": "The horse's rectal temperature in degrees Celsius",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "pulse": {
+            "description": "The horse's pulse rate per minute",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "respiratory_rate": {
+            "description": "The horse's respiratory rate per minute",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "temp_of_extremities": {
+            "description": "The temperature of the horse's extremities",
+            "type": "categorical",
+            "value_dict": {
+                "cool": "The horse's extremities are cool",
+                "normal": "The horse's extremities are at a normal temperature",
+                "cold": "The horse's extremities are cold",
+                "warm": "The horse's extremities are warm"
+            }
+        },
+        "peripheral_pulse": {
+            "description": "The quality of the horse's peripheral pulse",
+            "type": "categorical",
+            "value_dict": {
+                "reduced": "The horse's peripheral pulse is reduced",
+                "normal": "The horse's peripheral pulse is normal",
+                "absent": "The horse's peripheral pulse is absent",
+                "increased": "The horse's peripheral pulse is increased"
+            }
+        },
+        "mucous_membrane": {
+            "description": "The appearance of the horse's mucous membranes",
+            "type": "categorical",
+            "value_dict": {
+                "pale_cyanotic": "The horse's mucous membranes are pale cyanotic",
+                "pale_pink": "The horse's mucous membranes are pale pink",
+                "dark_cyanotic": "The horse's mucous membranes are dark cyanotic",
+                "normal_pink": "The horse's mucous membranes are normal pink",
+                "bright_red": "The horse's mucous membranes are bright red",
+                "bright_pink": "The horse's mucous membranes are bright pink"
+            }
+        },
+        "capillary_refill_time": {
+            "description": "The horse's capillary refill time in seconds",
+            "type": "categorical",
+            "value_dict": {
+                "more_3_sec": "The horse's capillary refill time is more than 3 seconds",
+                "less_3_sec": "The horse's capillary refill time is less than 3 seconds",
+                "3": "The horse's capillary refill time is exactly 3 seconds"
+            }
+        },
+        "pain": {
+            "description": "The level of pain the horse is experiencing",
+            "type": "categorical",
+            "value_dict": {
+                "extreme_pain": "The horse is in extreme pain",
+                "mild_pain": "The horse is in mild pain",
+                "depressed": "The horse is depressed",
+                "severe_pain": "The horse is in severe pain",
+                "alert": "The horse is alert"
+            }
+        },
+        "peristalsis": {
+            "description": "The horse's peristalsis activity",
+            "type": "categorical",
+            "value_dict": {
+                "absent": "The horse's peristalsis is absent",
+                "hypomotile": "The horse's peristalsis is hypomotile",
+                "hypermotile": "The horse's peristalsis is hypermotile",
+                "normal": "The horse's peristalsis is normal"
+            }
+        },
+        "abdominal_distention": {
+            "description": "The level of distention in the horse's abdomen",
+            "type": "categorical",
+            "value_dict": {
+                "severe": "The horse has severe abdominal distention",
+                "slight": "The horse has slight abdominal distention",
+                "none": "The horse has no abdominal distention",
+                "moderate": "The horse has moderate abdominal distention"
+            }
+        },
+        "nasogastric_tube": {
+            "description": "The status of the horse's nasogastric tube",
+            "type": "categorical",
+            "value_dict": {
+                "none": "The horse has no nasogastric tube",
+                "slight": "The horse has a slight nasogastric tube",
+                "significant": "The horse has a significant nasogastric tube"
+            }
+        },
+        "nasogastric_reflux": {
+            "description": "The amount of reflux from the horse's nasogastric tube",
+            "type": "categorical",
+            "value_dict": {
+                "less_1_liter": "The horse has less than 1 liter of nasogastric reflux",
+                "none": "The horse has no nasogastric reflux",
+                "more_1_liter": "The horse has more than 1 liter of nasogastric reflux"
+            }
+        },
+        "nasogastric_reflux_ph": {
+            "description": "The pH of the horse's nasogastric reflux",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "rectal_exam_feces": {
+            "description": "The results of the horse's rectal exam",
+            "type": "categorical",
+            "value_dict": {
+                "decreased": "The horse has decreased feces from the rectal exam",
+                "absent": "The horse has no feces from the rectal exam",
+                "normal": "The horse has a normal amount of feces from the rectal exam",
+                "increased": "The horse has increased feces from the rectal exam"
+            }
+        },
+        "abdomen": {
+            "description": "The condition of the horse's abdomen",
+            "type": "categorical",
+            "value_dict": {
+                "distend_large": "The horse's abdomen is largely distended",
+                "other": "The horse's abdomen is in another condition",
+                "normal": "The horse's abdomen is normal",
+                "firm": "The horse's abdomen is firm",
+                "distend_small": "The horse's abdomen is slightly distended"
+            }
+        },
+        "packed_cell_volume": {
+            "description": "The horse's packed cell volume",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "total_protein": {
+            "description": "The total protein level in the horse's blood",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "abdomo_appearance": {
+            "description": "The appearance of the horse's abdominal fluid",
+            "type": "categorical",
+            "value_dict": {
+                "cloudy": "The horse's abdominal fluid is cloudy",
+                "serosanguious": "The horse's abdominal fluid is serosanguious",
+                "clear": "The horse's abdominal fluid is clear"
+            }
+        },
+        "abdomo_protein": {
+            "description": "The protein level in the horse's abdominal fluid",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "outcome": {
+            "description": "The outcome for the horse",
+            "type": "categorical",
+            "value_dict": {
+                "died": "The horse died",
+                "euthanized": "The horse was euthanized",
+                "lived": "The horse lived"
+            }
+        },
+        "surgical_lesion": {
+            "description": "Whether the horse has a surgical lesion or not",
+            "type": "categorical",
+            "value_dict": {
+                "no": "The horse has no surgical lesion",
+                "yes": "The horse has a surgical lesion"
+            }
+        },
+        "lesion_1": {
+            "description": "The type of the first lesion",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The horse has no first lesion",
+                "1400": "The horse has a first lesion of type 1400",
+                "7111": "The horse has a first lesion of type 7111",
+                "3111": "The horse has a first lesion of type 3111",
+                "6112": "The horse has a first lesion of type 6112",
+                "3112": "The horse has a first lesion of type 3112"
+            }
+        },
+        "lesion_2": {
+            "description": "The type of the second lesion",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The horse has no second lesion",
+                "1400": "The horse has a second lesion of type 1400",
+                "7111": "The horse has a second lesion of type 7111",
+                "3111": "The horse has a second lesion of type 3111",
+                "6112": "The horse has a second lesion of type 6112",
+                "3112": "The horse has a second lesion of type 3112"
+            }
+        },
+        "lesion_3": {
+            "description": "The type of the third lesion",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The horse has no third lesion",
+                "2209": "The horse has a third lesion of type 2209"
+            }
+        },
+        "cp_data": {
+            "description": "Whether the horse was part of a clinical pathology data set or not",
+            "type": "categorical",
+            "value_dict": {
+                "no": "The horse was not part of a clinical pathology data set",
+                "yes": "The horse was part of a clinical pathology data set"
+            }
+        }
+    },
+    "task_info": {
+        "outcome": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in predicting horse survival outcomes based on their medical data.",
+                "task_prompt": "Based on the medical features of the horse, please predict the survival outcome.",
+                "answer_prompt": "Died[0], Euthanized[1], or Lived[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "died": "The horse died",
+                "euthanized": "The horse was euthanized",
+                "lived": "The horse lived"
+            },
+            "class_index_dict": {
+                "died": 0,
+                "euthanized": 1,
+                "lived": 2
+            }
+        },
+        "surgery": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in predicting whether a horse had surgery based on their medical data.",
+                "task_prompt": "Based on the medical features of the horse, please predict if the horse had surgery.",
+                "answer_prompt": "No[0] or Yes[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "no": "The horse did not have surgery",
+                "yes": "The horse had surgery"
+            },
+            "class_index_dict": {
+                "no": 0,
+                "yes": 1
+            }
+        },
+        "age": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in predicting the age category of a horse based on their medical data.",
+                "task_prompt": "Based on the medical features of the horse, please predict the age category of the horse.",
+                "answer_prompt": "Adult[0] or Young[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "adult": "The horse is an adult",
+                "young": "The horse is young"
+            },
+            "class_index_dict": {
+                "adult": 0,
+                "young": 1
+            }
+        },
+        "pain": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in predicting the pain level of a horse based on their medical data.",
+                "task_prompt": "Based on the medical features of the horse, please predict the pain level of the horse.",
+                "answer_prompt": "Extreme Pain[0], Mild Pain[1], Depressed[2], Severe Pain[3], Alert[4]?"
+            },
+            "class_num": 5,
+            "class_value_dict": {
+                "extreme_pain": "The horse is in extreme pain",
+                "mild_pain": "The horse is in mild pain",
+                "depressed": "The horse is depressed",
+                "severe_pain": "The horse is in severe pain",
+                "alert": "The horse is alert"
+            },
+            "class_index_dict": {
+                "extreme_pain": 0,
+                "mild_pain": 1,
+                "depressed": 2,
+                "severe_pain": 3,
+                "alert": 4
+            }
+        },
+        "surgical_lesion": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in predicting whether a horse has a surgical lesion based on their medical data.",
+                "task_prompt": "Based on the medical features of the horse, please predict if the horse has a surgical lesion.",
+                "answer_prompt": "No[0] or Yes[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "no": "The horse has no surgical lesion",
+                "yes": "The horse has a surgical lesion"
+            },
+            "class_index_dict": {
+                "no": 0,
+                "yes": 1
+            }
+        }
+    }
+}

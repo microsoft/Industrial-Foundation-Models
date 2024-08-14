@@ -1,0 +1,428 @@
+{
+    "basic_info": {
+        "row_num": 28645,
+        "col_num": 21,
+        "label_candidates": [
+            "y",
+            "marital",
+            "education",
+            "default",
+            "housing",
+            "loan",
+            "contact",
+            "month",
+            "day_of_week",
+            "poutcome"
+        ],
+        "valid_feature_num": 20,
+        "num_features": [
+            "age",
+            "campaign",
+            "pdays",
+            "previous",
+            "emp.var.rate",
+            "cons.price.idx",
+            "cons.conf.idx",
+            "euribor3m",
+            "nr.employed"
+        ],
+        "cat_features": [
+            "job",
+            "marital",
+            "education",
+            "default",
+            "housing",
+            "loan",
+            "contact",
+            "month",
+            "day_of_week",
+            "poutcome",
+            "y"
+        ],
+        "other_features": [],
+        "tags": [
+            "banking",
+            "marketing",
+            "exploratory data analysis",
+            "classification",
+            "clustering"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/aguado/telemarketing-jyb-dataset"
+    },
+    "feature_info": {
+        "Unnamed: 0": {
+            "description": "Index column",
+            "type": "useless"
+        },
+        "age": {
+            "description": "Age of the client",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "job": {
+            "description": "Type of job of the client",
+            "type": "categorical"
+        },
+        "marital": {
+            "description": "Marital status of the client",
+            "type": "categorical",
+            "value_dict": {
+                "married": "The client is married",
+                "single": "The client is single",
+                "divorced": "The client is divorced",
+                "unknown": "The marital status of the client is unknown"
+            }
+        },
+        "education": {
+            "description": "Education level of the client",
+            "type": "categorical",
+            "value_dict": {
+                "high.school": "The client has a high school level education",
+                "university.degree": "The client has a university degree",
+                "basic.4y": "The client has a basic education of 4 years",
+                "professional.course": "The client has completed a professional course",
+                "basic.6y": "The client has a basic education of 6 years",
+                "unknown": "The education level of the client is unknown",
+                "basic.9y": "The client has a basic education of 9 years",
+                "illiterate": "The client is illiterate"
+            }
+        },
+        "default": {
+            "description": "Indicates if the client has credit in default",
+            "type": "categorical",
+            "value_dict": {
+                "no": "The client has no credit in default",
+                "unknown": "It is unknown whether the client has credit in default",
+                "yes": "The client has credit in default"
+            }
+        },
+        "housing": {
+            "description": "Indicates if the client has a housing loan",
+            "type": "categorical",
+            "value_dict": {
+                "yes": "The client has a housing loan",
+                "no": "The client does not have a housing loan",
+                "unknown": "It is unknown whether the client has a housing loan"
+            }
+        },
+        "loan": {
+            "description": "Indicates if the client has a personal loan",
+            "type": "categorical",
+            "value_dict": {
+                "no": "The client does not have a personal loan",
+                "yes": "The client has a personal loan",
+                "unknown": "It is unknown whether the client has a personal loan"
+            }
+        },
+        "contact": {
+            "description": "Type of communication contact",
+            "type": "categorical",
+            "value_dict": {
+                "cellular": "The client was contacted via cellular phone",
+                "telephone": "The client was contacted via telephone"
+            }
+        },
+        "month": {
+            "description": "Last contact month of year",
+            "type": "categorical",
+            "value_dict": {
+                "nov": "The last contact with the client was in November",
+                "may": "The last contact with the client was in May",
+                "jun": "The last contact with the client was in June",
+                "aug": "The last contact with the client was in August",
+                "jul": "The last contact with the client was in July",
+                "apr": "The last contact with the client was in April",
+                "mar": "The last contact with the client was in March",
+                "dec": "The last contact with the client was in December",
+                "oct": "The last contact with the client was in October",
+                "sep": "The last contact with the client was in September"
+            }
+        },
+        "day_of_week": {
+            "description": "Last contact day of the week",
+            "type": "categorical",
+            "value_dict": {
+                "tue": "The last contact with the client was on Tuesday",
+                "thu": "The last contact with the client was on Thursday",
+                "mon": "The last contact with the client was on Monday",
+                "wed": "The last contact with the client was on Wednesday",
+                "fri": "The last contact with the client was on Friday"
+            }
+        },
+        "campaign": {
+            "description": "Number of contacts performed during this campaign for this client",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "pdays": {
+            "description": "Number of days that passed by after the client was last contacted from a previous campaign",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "previous": {
+            "description": "Number of contacts performed before this campaign for this client",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "poutcome": {
+            "description": "Outcome of the previous marketing campaign",
+            "type": "categorical",
+            "value_dict": {
+                "nonexistent": "There was no previous marketing campaign for this client",
+                "failure": "The previous marketing campaign for this client was a failure",
+                "success": "The previous marketing campaign for this client was a success"
+            }
+        },
+        "emp.var.rate": {
+            "description": "Employment variation rate - quarterly indicator",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "cons.price.idx": {
+            "description": "Consumer price index - monthly indicator",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "cons.conf.idx": {
+            "description": "Consumer confidence index - monthly indicator",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "euribor3m": {
+            "description": "Euribor 3 month rate - daily indicator",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "nr.employed": {
+            "description": "Number of employees - quarterly indicator",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "y": {
+            "description": "Has the client subscribed a term deposit?",
+            "type": "categorical",
+            "value_dict": {
+                "no": "The client has not subscribed a term deposit",
+                "yes": "The client has subscribed a term deposit"
+            }
+        }
+    },
+    "task_info": {
+        "y": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in financial marketing.",
+                "task_prompt": "Based on the features of the client, please predict if the client has subscribed a term deposit.",
+                "answer_prompt": "Has the client subscribed a term deposit? Yes[1] or No[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "no": "The client has not subscribed a term deposit",
+                "yes": "The client has subscribed a term deposit"
+            },
+            "class_index_dict": {
+                "no": 0,
+                "yes": 1
+            }
+        },
+        "marital": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in demographics.",
+                "task_prompt": "Based on the features of the client, please predict the marital status of the client.",
+                "answer_prompt": "Is the client married[0], single[1], divorced[2] or unknown[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "married": "The client is married",
+                "single": "The client is single",
+                "divorced": "The client is divorced",
+                "unknown": "The marital status of the client is unknown"
+            },
+            "class_index_dict": {
+                "married": 0,
+                "single": 1,
+                "divorced": 2,
+                "unknown": 3
+            }
+        },
+        "education": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in education demographics.",
+                "task_prompt": "Based on the features of the client, please predict the education level of the client.",
+                "answer_prompt": "Does the client have a high school education[0], a university degree[1], a basic education of 4 years[2], completed a professional course[3], a basic education of 6 years[4], unknown education level[5], a basic education of 9 years[6], or is the client illiterate[7]?"
+            },
+            "class_num": 8,
+            "class_value_dict": {
+                "high.school": "The client has a high school level education",
+                "university.degree": "The client has a university degree",
+                "basic.4y": "The client has a basic education of 4 years",
+                "professional.course": "The client has completed a professional course",
+                "basic.6y": "The client has a basic education of 6 years",
+                "unknown": "The education level of the client is unknown",
+                "basic.9y": "The client has a basic education of 9 years",
+                "illiterate": "The client is illiterate"
+            },
+            "class_index_dict": {
+                "high.school": 0,
+                "university.degree": 1,
+                "basic.4y": 2,
+                "professional.course": 3,
+                "basic.6y": 4,
+                "unknown": 5,
+                "basic.9y": 6,
+                "illiterate": 7
+            }
+        },
+        "default": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in credit assessment.",
+                "task_prompt": "Based on the features of the client, please predict if the client has credit in default.",
+                "answer_prompt": "Does the client have no credit in default[0], unknown credit status[1] or credit in default[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "no": "The client has no credit in default",
+                "unknown": "It is unknown whether the client has credit in default",
+                "yes": "The client has credit in default"
+            },
+            "class_index_dict": {
+                "no": 0,
+                "unknown": 1,
+                "yes": 2
+            }
+        },
+        "housing": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in financial assessment.",
+                "task_prompt": "Based on the features of the client, please predict if the client has a housing loan.",
+                "answer_prompt": "Does the client have a housing loan[0], no housing loan[1] or unknown housing loan status[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "yes": "The client has a housing loan",
+                "no": "The client does not have a housing loan",
+                "unknown": "It is unknown whether the client has a housing loan"
+            },
+            "class_index_dict": {
+                "yes": 0,
+                "no": 1,
+                "unknown": 2
+            }
+        },
+        "loan": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in financial assessment.",
+                "task_prompt": "Based on the features of the client, please predict if the client has a personal loan.",
+                "answer_prompt": "Does the client have no personal loan[0], a personal loan[1] or unknown personal loan status[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "no": "The client does not have a personal loan",
+                "yes": "The client has a personal loan",
+                "unknown": "It is unknown whether the client has a personal loan"
+            },
+            "class_index_dict": {
+                "no": 0,
+                "yes": 1,
+                "unknown": 2
+            }
+        },
+        "contact": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in communication methods.",
+                "task_prompt": "Based on the features of the client, please predict the method of contact with the client.",
+                "answer_prompt": "Was the client contacted via cellular phone[0] or telephone[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "cellular": "The client was contacted via cellular phone",
+                "telephone": "The client was contacted via telephone"
+            },
+            "class_index_dict": {
+                "cellular": 0,
+                "telephone": 1
+            }
+        },
+        "month": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in time series analysis.",
+                "task_prompt": "Based on the features of the client, please predict the month of the last contact with the client.",
+                "answer_prompt": "Was the last contact with the client in November[0], May[1], June[2], August[3], July[4], April[5], March[6], December[7], October[8], or September[9]?"
+            },
+            "class_num": 10,
+            "class_value_dict": {
+                "nov": "The last contact with the client was in November",
+                "may": "The last contact with the client was in May",
+                "jun": "The last contact with the client was in June",
+                "aug": "The last contact with the client was in August",
+                "jul": "The last contact with the client was in July",
+                "apr": "The last contact with the client was in April",
+                "mar": "The last contact with the client was in March",
+                "dec": "The last contact with the client was in December",
+                "oct": "The last contact with the client was in October",
+                "sep": "The last contact with the client was in September"
+            },
+            "class_index_dict": {
+                "nov": 0,
+                "may": 1,
+                "jun": 2,
+                "aug": 3,
+                "jul": 4,
+                "apr": 5,
+                "mar": 6,
+                "dec": 7,
+                "oct": 8,
+                "sep": 9
+            }
+        },
+        "day_of_week": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in time series analysis.",
+                "task_prompt": "Based on the features of the client, please predict the day of the week of the last contact with the client.",
+                "answer_prompt": "Was the last contact with the client on Tuesday[0], Thursday[1], Monday[2], Wednesday[3], or Friday[4]?"
+            },
+            "class_num": 5,
+            "class_value_dict": {
+                "tue": "The last contact with the client was on Tuesday",
+                "thu": "The last contact with the client was on Thursday",
+                "mon": "The last contact with the client was on Monday",
+                "wed": "The last contact with the client was on Wednesday",
+                "fri": "The last contact with the client was on Friday"
+            },
+            "class_index_dict": {
+                "tue": 0,
+                "thu": 1,
+                "mon": 2,
+                "wed": 3,
+                "fri": 4
+            }
+        },
+        "poutcome": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in marketing campaign analysis.",
+                "task_prompt": "Based on the features of the client, please predict the outcome of the previous marketing campaign for this client.",
+                "answer_prompt": "Was the previous marketing campaign for this client nonexistent[0], a failure[1], or a success[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "nonexistent": "There was no previous marketing campaign for this client",
+                "failure": "The previous marketing campaign for this client was a failure",
+                "success": "The previous marketing campaign for this client was a success"
+            },
+            "class_index_dict": {
+                "nonexistent": 0,
+                "failure": 1,
+                "success": 2
+            }
+        }
+    }
+}

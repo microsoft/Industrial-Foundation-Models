@@ -1,0 +1,484 @@
+{
+    "basic_info": {
+        "row_num": 10000,
+        "col_num": 22,
+        "label_candidates": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "K",
+            "L",
+            "M",
+            "N",
+            "V",
+            "Z"
+        ],
+        "valid_feature_num": 20,
+        "num_features": [],
+        "cat_features": [
+            "Title",
+            "abstractText",
+            "meshMajor",
+            "meshroot",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "K",
+            "L",
+            "M",
+            "N",
+            "V",
+            "Z",
+            "A"
+        ],
+        "other_features": [],
+        "tags": [
+            "earth and nature",
+            "education",
+            "health",
+            "exploratory data analysis",
+            "text mining",
+            "deep learning",
+            "transfer learning"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/owaiskhan9654/pubmed-multilabel-text-classification"
+    },
+    "feature_info": {
+        "Title": {
+            "description": "The title of the research paper",
+            "type": "categorical"
+        },
+        "abstractText": {
+            "description": "The abstract content of the research paper",
+            "type": "categorical"
+        },
+        "meshMajor": {
+            "description": "Major topics of the research paper identified by MeSH (Medical Subject Headings)",
+            "type": "categorical"
+        },
+        "pmid": {
+            "description": "PubMed unique identifier for the research paper",
+            "type": "useless"
+        },
+        "meshid": {
+            "description": "Unique identifier for the MeSH term",
+            "type": "useless"
+        },
+        "meshroot": {
+            "description": "Root category of the MeSH term",
+            "type": "categorical"
+        },
+        "A": {
+            "description": "Binary label for category A",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The paper does not belong to category A",
+                "1": "The paper belongs to category A"
+            }
+        },
+        "B": {
+            "description": "Binary label for category B",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The paper belongs to category B",
+                "0": "The paper does not belong to category B"
+            }
+        },
+        "C": {
+            "description": "Binary label for category C",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The paper belongs to category C",
+                "0": "The paper does not belong to category C"
+            }
+        },
+        "D": {
+            "description": "Binary label for category D",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The paper belongs to category D",
+                "0": "The paper does not belong to category D"
+            }
+        },
+        "E": {
+            "description": "Binary label for category E",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The paper belongs to category E",
+                "0": "The paper does not belong to category E"
+            }
+        },
+        "F": {
+            "description": "Binary label for category F",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The paper does not belong to category F",
+                "1": "The paper belongs to category F"
+            }
+        },
+        "G": {
+            "description": "Binary label for category G",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The paper does not belong to category G",
+                "1": "The paper belongs to category G"
+            }
+        },
+        "H": {
+            "description": "Binary label for category H",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The paper belongs to category H",
+                "0": "The paper does not belong to category H"
+            }
+        },
+        "I": {
+            "description": "Binary label for category I",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The paper does not belong to category I",
+                "1": "The paper belongs to category I"
+            }
+        },
+        "J": {
+            "description": "Binary label for category J",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The paper does not belong to category J",
+                "1": "The paper belongs to category J"
+            }
+        },
+        "K": {
+            "description": "Binary label for category K",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The paper does not belong to category K",
+                "1": "The paper belongs to category K"
+            }
+        },
+        "L": {
+            "description": "Binary label for category L",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The paper does not belong to category L",
+                "1": "The paper belongs to category L"
+            }
+        },
+        "M": {
+            "description": "Binary label for category M",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The paper does not belong to category M",
+                "1": "The paper belongs to category M"
+            }
+        },
+        "N": {
+            "description": "Binary label for category N",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The paper does not belong to category N",
+                "1": "The paper belongs to category N"
+            }
+        },
+        "V": {
+            "description": "Binary label for category V",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The paper does not belong to category V"
+            }
+        },
+        "Z": {
+            "description": "Binary label for category Z",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The paper does not belong to category Z",
+                "1": "The paper belongs to category Z"
+            }
+        }
+    },
+    "task_info": {
+        "A": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in biomedical text classification.",
+                "task_prompt": "Based on the features of the research paper, please predict if the paper belongs to category A.",
+                "answer_prompt": "Yes[1] or no[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "The paper does not belong to category A",
+                "1": "The paper belongs to category A"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "B": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in biomedical text classification.",
+                "task_prompt": "Based on the features of the research paper, please predict if the paper belongs to category B.",
+                "answer_prompt": "Yes[1] or no[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "The paper belongs to category B",
+                "0": "The paper does not belong to category B"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        },
+        "C": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in biomedical text classification.",
+                "task_prompt": "Based on the features of the research paper, please predict if the paper belongs to category C.",
+                "answer_prompt": "Yes[1] or no[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "The paper belongs to category C",
+                "0": "The paper does not belong to category C"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        },
+        "D": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in biomedical text classification.",
+                "task_prompt": "Based on the features of the research paper, please predict if the paper belongs to category D.",
+                "answer_prompt": "Yes[1] or no[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "The paper belongs to category D",
+                "0": "The paper does not belong to category D"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        },
+        "E": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in biomedical text classification.",
+                "task_prompt": "Based on the features of the research paper, please predict if the paper belongs to category E.",
+                "answer_prompt": "Yes[1] or no[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "The paper belongs to category E",
+                "0": "The paper does not belong to category E"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        },
+        "F": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in biomedical text classification.",
+                "task_prompt": "Based on the features of the research paper, please predict if the paper belongs to category F.",
+                "answer_prompt": "Yes[1] or no[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "The paper does not belong to category F",
+                "1": "The paper belongs to category F"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "G": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in biomedical text classification.",
+                "task_prompt": "Based on the features of the research paper, please predict if the paper belongs to category G.",
+                "answer_prompt": "Yes[1] or no[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "The paper does not belong to category G",
+                "1": "The paper belongs to category G"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "H": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in biomedical text classification.",
+                "task_prompt": "Based on the features of the research paper, please predict if the paper belongs to category H.",
+                "answer_prompt": "Yes[1] or no[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "The paper belongs to category H",
+                "0": "The paper does not belong to category H"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        },
+        "I": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in biomedical text classification.",
+                "task_prompt": "Based on the features of the research paper, please predict if the paper belongs to category I.",
+                "answer_prompt": "Yes[1] or no[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "The paper does not belong to category I",
+                "1": "The paper belongs to category I"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "J": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in biomedical text classification.",
+                "task_prompt": "Based on the features of the research paper, please predict if the paper belongs to category J.",
+                "answer_prompt": "Yes[1] or no[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "The paper does not belong to category J",
+                "1": "The paper belongs to category J"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "K": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in biomedical text classification.",
+                "task_prompt": "Based on the features of the research paper, please predict if the paper belongs to category K.",
+                "answer_prompt": "Yes[1] or no[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "The paper does not belong to category K",
+                "1": "The paper belongs to category K"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "L": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in biomedical text classification.",
+                "task_prompt": "Based on the features of the research paper, please predict if the paper belongs to category L.",
+                "answer_prompt": "Yes[1] or no[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "The paper does not belong to category L",
+                "1": "The paper belongs to category L"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "M": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in biomedical text classification.",
+                "task_prompt": "Based on the features of the research paper, please predict if the paper belongs to category M.",
+                "answer_prompt": "Yes[1] or no[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "The paper does not belong to category M",
+                "1": "The paper belongs to category M"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "N": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in biomedical text classification.",
+                "task_prompt": "Based on the features of the research paper, please predict if the paper belongs to category N.",
+                "answer_prompt": "Yes[1] or no[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "The paper does not belong to category N",
+                "1": "The paper belongs to category N"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "V": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in biomedical text classification.",
+                "task_prompt": "Based on the features of the research paper, please predict if the paper belongs to category V.",
+                "answer_prompt": "Yes[1] or no[0]?"
+            },
+            "class_num": 1,
+            "class_value_dict": {
+                "0": "The paper does not belong to category V"
+            },
+            "class_index_dict": {
+                "0": 0
+            }
+        },
+        "Z": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in biomedical text classification.",
+                "task_prompt": "Based on the features of the research paper, please predict if the paper belongs to category Z.",
+                "answer_prompt": "Yes[1] or no[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "The paper does not belong to category Z",
+                "1": "The paper belongs to category Z"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        }
+    }
+}

@@ -1,0 +1,127 @@
+{
+    "basic_info": {
+        "row_num": 83,
+        "col_num": 14,
+        "label_candidates": [
+            "gender"
+        ],
+        "valid_feature_num": 14,
+        "num_features": [
+            "height",
+            "mass",
+            "birth_year"
+        ],
+        "cat_features": [
+            "name",
+            "hair_color",
+            "skin_color",
+            "eye_color",
+            "sex",
+            "gender",
+            "homeworld",
+            "films",
+            "vehicles",
+            "starships",
+            "species"
+        ],
+        "other_features": [],
+        "tags": [
+            "movies and tv shows",
+            "beginner",
+            "exploratory data analysis",
+            "classification",
+            "tabular"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/ulrikthygepedersen/star-wars-characters"
+    },
+    "feature_info": {
+        "name": {
+            "description": "Name of the Star Wars character",
+            "type": "categorical"
+        },
+        "height": {
+            "description": "Height of the character in centimeters",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "mass": {
+            "description": "Mass of the character in kilograms",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "hair_color": {
+            "description": "Hair color of the character",
+            "type": "categorical"
+        },
+        "skin_color": {
+            "description": "Skin color of the character",
+            "type": "categorical"
+        },
+        "eye_color": {
+            "description": "Eye color of the character",
+            "type": "categorical"
+        },
+        "birth_year": {
+            "description": "The birth year of the character",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "sex": {
+            "description": "Biological sex of the character",
+            "type": "categorical",
+            "value_dict": {
+                "male": "The character is biologically male",
+                "none": "The character does not have a biological sex",
+                "female": "The character is biologically female",
+                "hermaphroditic": "The character is biologically both male and female"
+            }
+        },
+        "gender": {
+            "description": "Gender identity of the character",
+            "type": "categorical",
+            "value_dict": {
+                "masculine": "The character identifies as male",
+                "feminine": "The character identifies as female"
+            }
+        },
+        "homeworld": {
+            "description": "Home planet of the character",
+            "type": "categorical"
+        },
+        "species": {
+            "description": "Species of the character",
+            "type": "categorical"
+        },
+        "films": {
+            "description": "Films that the character appeared in",
+            "type": "categorical"
+        },
+        "vehicles": {
+            "description": "Vehicles driven by the character",
+            "type": "categorical"
+        },
+        "starships": {
+            "description": "Starships piloted by the character",
+            "type": "categorical"
+        }
+    },
+    "task_info": {
+        "gender": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in Star Wars character analysis.",
+                "task_prompt": "Based on the features of the Star Wars character, please predict the gender.",
+                "answer_prompt": "Masculine[0] or Feminine[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "masculine": "The character identifies as male",
+                "feminine": "The character identifies as female"
+            },
+            "class_index_dict": {
+                "masculine": 0,
+                "feminine": 1
+            }
+        }
+    }
+}

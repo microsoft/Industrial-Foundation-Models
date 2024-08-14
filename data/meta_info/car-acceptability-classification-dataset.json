@@ -1,0 +1,185 @@
+{
+    "basic_info": {
+        "row_num": 1728,
+        "col_num": 7,
+        "label_candidates": [
+            "Car_Acceptability",
+            "Buying_Price",
+            "Maintenance_Price",
+            "Safety"
+        ],
+        "valid_feature_num": 7,
+        "num_features": [],
+        "cat_features": [
+            "Buying_Price",
+            "Maintenance_Price",
+            "No_of_Doors",
+            "Person_Capacity",
+            "Size_of_Luggage",
+            "Safety",
+            "Car_Acceptability"
+        ],
+        "other_features": [],
+        "tags": [
+            "categorical",
+            "automobiles and vehicles",
+            "beginner",
+            "data visualization",
+            "classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/subhajeetdas/car-acceptability-classification-dataset"
+    },
+    "feature_info": {
+        "Buying_Price": {
+            "description": "The buying price of the car.",
+            "type": "categorical",
+            "value_dict": {
+                "vhigh": "The buying price of the car is very high.",
+                "high": "The buying price of the car is high.",
+                "med": "The buying price of the car is medium.",
+                "low": "The buying price of the car is low."
+            }
+        },
+        "Maintenance_Price": {
+            "description": "The maintenance price of the car.",
+            "type": "categorical",
+            "value_dict": {
+                "vhigh": "The maintenance price of the car is very high.",
+                "high": "The maintenance price of the car is high.",
+                "med": "The maintenance price of the car is medium.",
+                "low": "The maintenance price of the car is low."
+            }
+        },
+        "No_of_Doors": {
+            "description": "The number of doors in the car.",
+            "type": "categorical",
+            "value_dict": {
+                "2": "The car has 2 doors.",
+                "3": "The car has 3 doors.",
+                "4": "The car has 4 doors.",
+                "5more": "The car has more than 5 doors."
+            }
+        },
+        "Person_Capacity": {
+            "description": "The maximum number of people the car can accommodate.",
+            "type": "categorical",
+            "value_dict": {
+                "2": "The car can accommodate 2 people.",
+                "4": "The car can accommodate 4 people.",
+                "more": "The car can accommodate more than 4 people."
+            }
+        },
+        "Size_of_Luggage": {
+            "description": "The size of the luggage compartment in the car.",
+            "type": "categorical",
+            "value_dict": {
+                "small": "The size of the luggage compartment in the car is small.",
+                "med": "The size of the luggage compartment in the car is medium.",
+                "big": "The size of the luggage compartment in the car is big."
+            }
+        },
+        "Safety": {
+            "description": "The safety level of the car.",
+            "type": "categorical",
+            "value_dict": {
+                "low": "The safety level of the car is low.",
+                "med": "The safety level of the car is medium.",
+                "high": "The safety level of the car is high."
+            }
+        },
+        "Car_Acceptability": {
+            "description": "The acceptability of the car based on the above features.",
+            "type": "categorical",
+            "value_dict": {
+                "unacc": "The car is unacceptable.",
+                "acc": "The car is acceptable.",
+                "vgood": "The car is very good.",
+                "good": "The car is good."
+            }
+        }
+    },
+    "task_info": {
+        "Car_Acceptability": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in car evaluation.",
+                "task_prompt": "Based on the features of the car, please predict the acceptability of the car.",
+                "answer_prompt": "Unacceptable[0], Acceptable[1], Very Good[2] or Good[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "unacc": "The car is unacceptable.",
+                "acc": "The car is acceptable.",
+                "vgood": "The car is very good.",
+                "good": "The car is good."
+            },
+            "class_index_dict": {
+                "unacc": 0,
+                "acc": 1,
+                "vgood": 2,
+                "good": 3
+            }
+        },
+        "Buying_Price": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in car evaluation.",
+                "task_prompt": "Based on the features of the car, please predict the buying price of the car.",
+                "answer_prompt": "Very High[0], High[1], Medium[2] or Low[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "vhigh": "The buying price of the car is very high.",
+                "high": "The buying price of the car is high.",
+                "med": "The buying price of the car is medium.",
+                "low": "The buying price of the car is low."
+            },
+            "class_index_dict": {
+                "vhigh": 0,
+                "high": 1,
+                "med": 2,
+                "low": 3
+            }
+        },
+        "Maintenance_Price": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in car evaluation.",
+                "task_prompt": "Based on the features of the car, please predict the maintenance price of the car.",
+                "answer_prompt": "Very High[0], High[1], Medium[2] or Low[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "vhigh": "The maintenance price of the car is very high.",
+                "high": "The maintenance price of the car is high.",
+                "med": "The maintenance price of the car is medium.",
+                "low": "The maintenance price of the car is low."
+            },
+            "class_index_dict": {
+                "vhigh": 0,
+                "high": 1,
+                "med": 2,
+                "low": 3
+            }
+        },
+        "Safety": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in car evaluation.",
+                "task_prompt": "Based on the features of the car, please predict the safety level of the car.",
+                "answer_prompt": "Low[0], Medium[1] or High[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "low": "The safety level of the car is low.",
+                "med": "The safety level of the car is medium.",
+                "high": "The safety level of the car is high."
+            },
+            "class_index_dict": {
+                "low": 0,
+                "med": 1,
+                "high": 2
+            }
+        }
+    }
+}

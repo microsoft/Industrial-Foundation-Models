@@ -1,0 +1,150 @@
+{
+    "basic_info": {
+        "row_num": 218,
+        "col_num": 7,
+        "label_candidates": [
+            "Region",
+            "Income group",
+            "Lending category"
+        ],
+        "valid_feature_num": 6,
+        "num_features": [],
+        "cat_features": [
+            "Economy",
+            "Code",
+            "Region",
+            "Lending category",
+            "Income group"
+        ],
+        "other_features": [
+            "Other"
+        ],
+        "tags": [
+            "earth and nature",
+            "economics"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/taniaj/world-bank-country-and-lending-groups"
+    },
+    "feature_info": {
+        "x": {
+            "description": "Index or ID of the record",
+            "type": "useless"
+        },
+        "Economy": {
+            "description": "Name of the country or region",
+            "type": "categorical"
+        },
+        "Code": {
+            "description": "Country or region code",
+            "type": "categorical"
+        },
+        "Region": {
+            "description": "Geographical region where the country or region is located",
+            "type": "categorical",
+            "value_dict": {
+                "South Asia": "Countries located in the South Asia region",
+                "Europe & Central Asia": "Countries located in the Europe & Central Asia region",
+                "Middle East & North Africa": "Countries located in the Middle East & North Africa region",
+                "East Asia & Pacific": "Countries located in the East Asia & Pacific region",
+                "Sub-Saharan Africa": "Countries located in the Sub-Saharan Africa region",
+                "Latin America & Caribbean": "Countries located in the Latin America & Caribbean region",
+                "North America": "Countries located in the North America region"
+            }
+        },
+        "Income group": {
+            "description": "Income group classification of the country or region by World Bank",
+            "type": "categorical",
+            "value_dict": {
+                "Low income": "Countries classified as having low income",
+                "Upper middle income": "Countries classified as having upper middle income",
+                "High income": "Countries classified as having high income",
+                "Lower middle income": "Countries classified as having lower middle income"
+            }
+        },
+        "Lending category": {
+            "description": "World Bank lending category for the country or region",
+            "type": "categorical",
+            "value_dict": {
+                "IDA": "Countries that are eligible for IDA (International Development Association) assistance",
+                "IBRD": "Countries that are eligible for IBRD (International Bank for Reconstruction and Development) assistance",
+                "EMU": "Countries that are members of the European Monetary Union",
+                "Blend": "Countries that are eligible for both IDA and IBRD assistance"
+            }
+        },
+        "Other": {
+            "description": "Any other relevant information or category",
+            "type": "other"
+        }
+    },
+    "task_info": {
+        "Region": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in geography and international relations.",
+                "task_prompt": "Based on the features of the country, please predict the region it belongs to.",
+                "answer_prompt": "South Asia[0], Europe & Central Asia[1], Middle East & North Africa[2], East Asia & Pacific[3], Sub-Saharan Africa[4], Latin America & Caribbean[5], North America[6]?"
+            },
+            "class_num": 7,
+            "class_value_dict": {
+                "South Asia": "Countries located in the South Asia region",
+                "Europe & Central Asia": "Countries located in the Europe & Central Asia region",
+                "Middle East & North Africa": "Countries located in the Middle East & North Africa region",
+                "East Asia & Pacific": "Countries located in the East Asia & Pacific region",
+                "Sub-Saharan Africa": "Countries located in the Sub-Saharan Africa region",
+                "Latin America & Caribbean": "Countries located in the Latin America & Caribbean region",
+                "North America": "Countries located in the North America region"
+            },
+            "class_index_dict": {
+                "South Asia": 0,
+                "Europe & Central Asia": 1,
+                "Middle East & North Africa": 2,
+                "East Asia & Pacific": 3,
+                "Sub-Saharan Africa": 4,
+                "Latin America & Caribbean": 5,
+                "North America": 6
+            }
+        },
+        "Income group": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in economics.",
+                "task_prompt": "Based on the features of the country, please predict its income group.",
+                "answer_prompt": "Low income[0], Upper middle income[1], High income[2], Lower middle income[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "Low income": "Countries classified as having low income",
+                "Upper middle income": "Countries classified as having upper middle income",
+                "High income": "Countries classified as having high income",
+                "Lower middle income": "Countries classified as having lower middle income"
+            },
+            "class_index_dict": {
+                "Low income": 0,
+                "Upper middle income": 1,
+                "High income": 2,
+                "Lower middle income": 3
+            }
+        },
+        "Lending category": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in international finance.",
+                "task_prompt": "Based on the features of the country, please predict its lending category.",
+                "answer_prompt": "IDA[0], IBRD[1], EMU[2], Blend[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "IDA": "Countries that are eligible for IDA (International Development Association) assistance",
+                "IBRD": "Countries that are eligible for IBRD (International Bank for Reconstruction and Development) assistance",
+                "EMU": "Countries that are members of the European Monetary Union",
+                "Blend": "Countries that are eligible for both IDA and IBRD assistance"
+            },
+            "class_index_dict": {
+                "IDA": 0,
+                "IBRD": 1,
+                "EMU": 2,
+                "Blend": 3
+            }
+        }
+    }
+}

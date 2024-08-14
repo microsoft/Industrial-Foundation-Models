@@ -1,0 +1,101 @@
+{
+    "basic_info": {
+        "row_num": 17494,
+        "col_num": 9,
+        "label_candidates": [
+            "user_suggestion",
+            "year"
+        ],
+        "valid_feature_num": 8,
+        "num_features": [
+            "year"
+        ],
+        "cat_features": [
+            "title",
+            "developer",
+            "publisher",
+            "tags",
+            "overview",
+            "user_suggestion"
+        ],
+        "other_features": [
+            "user_review"
+        ],
+        "tags": [
+            "video games",
+            "nlp",
+            "classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/arashnic/game-review-dataset"
+    },
+    "feature_info": {
+        "title": {
+            "description": "The title of the game",
+            "type": "categorical"
+        },
+        "developer": {
+            "description": "The developer of the game",
+            "type": "categorical"
+        },
+        "publisher": {
+            "description": "The publisher of the game",
+            "type": "categorical"
+        },
+        "tags": {
+            "description": "Tags related to the game",
+            "type": "categorical"
+        },
+        "overview": {
+            "description": "Overview or brief description of the game",
+            "type": "categorical"
+        },
+        "review_id": {
+            "description": "Unique identifier for each review",
+            "type": "useless"
+        },
+        "year": {
+            "description": "The year the review was written",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "user_review": {
+            "description": "The text of the user review",
+            "type": "other"
+        },
+        "user_suggestion": {
+            "description": "User suggestion for the game",
+            "type": "categorical",
+            "value_dict": {
+                "1.0": "User made a suggestion for the game",
+                "0.0": "User did not make a suggestion for the game"
+            }
+        }
+    },
+    "task_info": {
+        "user_suggestion": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in game reviews analysis.",
+                "task_prompt": "Based on the game review, please predict whether the user made a suggestion for the game or not.",
+                "answer_prompt": "User made a suggestion for the game[1] or User did not make a suggestion for the game[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1.0": "User made a suggestion for the game",
+                "0.0": "User did not make a suggestion for the game"
+            },
+            "class_index_dict": {
+                "1.0": 1,
+                "0.0": 0
+            }
+        },
+        "year": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in game reviews analysis.",
+                "task_prompt": "Based on the game review, please predict the year the review was made.",
+                "answer_prompt": "What is the predicted year?"
+            }
+        }
+    }
+}

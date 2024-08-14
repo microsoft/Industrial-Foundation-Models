@@ -1,0 +1,138 @@
+{
+    "basic_info": {
+        "row_num": 60000,
+        "col_num": 14,
+        "label_candidates": [
+            "stabf",
+            "stab"
+        ],
+        "valid_feature_num": 14,
+        "num_features": [
+            "tau1",
+            "tau2",
+            "tau3",
+            "tau4",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "g1",
+            "g2",
+            "g3",
+            "g4",
+            "stab"
+        ],
+        "cat_features": [
+            "stabf"
+        ],
+        "other_features": [],
+        "tags": [
+            "renewable energy",
+            "deep learning",
+            "neural networks",
+            "binary classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/pcbreviglieri/smart-grid-stability"
+    },
+    "feature_info": {
+        "tau1": {
+            "description": "Reaction time of participant 1",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "tau2": {
+            "description": "Reaction time of participant 2",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "tau3": {
+            "description": "Reaction time of participant 3",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "tau4": {
+            "description": "Reaction time of participant 4",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "p1": {
+            "description": "Real power consumed by participant 1",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "p2": {
+            "description": "Real power consumed by participant 2",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "p3": {
+            "description": "Real power consumed by participant 3",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "p4": {
+            "description": "Real power consumed by participant 4",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "g1": {
+            "description": "Price elasticity coefficient of participant 1",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "g2": {
+            "description": "Price elasticity coefficient of participant 2",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "g3": {
+            "description": "Price elasticity coefficient of participant 3",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "g4": {
+            "description": "Price elasticity coefficient of participant 4",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "stab": {
+            "description": "System stability",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "stabf": {
+            "description": "System stability classification",
+            "type": "categorical",
+            "value_dict": {
+                "unstable": "The system is unstable",
+                "stable": "The system is stable"
+            }
+        }
+    },
+    "task_info": {
+        "stabf": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in power system stability analysis.",
+                "task_prompt": "Based on the features of the power system, please predict the stability status.",
+                "answer_prompt": "Unstable[0] or stable[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "unstable": "The system is unstable",
+                "stable": "The system is stable"
+            },
+            "class_index_dict": {
+                "unstable": 0,
+                "stable": 1
+            }
+        },
+        "stab": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in power system stability analysis.",
+                "task_prompt": "Based on the features of the power system, please predict the stability value."
+            }
+        }
+    }
+}

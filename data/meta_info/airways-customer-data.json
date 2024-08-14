@@ -1,0 +1,223 @@
+{
+    "basic_info": {
+        "row_num": 49982,
+        "col_num": 14,
+        "label_candidates": [
+            "booking_complete",
+            "num_passengers",
+            "length_of_stay",
+            "wants_extra_baggage",
+            "wants_preferred_seat",
+            "wants_in_flight_meals"
+        ],
+        "valid_feature_num": 14,
+        "num_features": [
+            "num_passengers",
+            "purchase_lead",
+            "length_of_stay",
+            "flight_hour",
+            "flight_duration"
+        ],
+        "cat_features": [
+            "sales_channel",
+            "trip_type",
+            "flight_day",
+            "route",
+            "booking_origin",
+            "wants_extra_baggage",
+            "wants_preferred_seat",
+            "wants_in_flight_meals",
+            "booking_complete"
+        ],
+        "other_features": [],
+        "tags": [
+            "nlp",
+            "data visualization",
+            "data analytics",
+            "classification",
+            "feature extraction"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/ghassenkhaled/airways-customer-data"
+    },
+    "feature_info": {
+        "num_passengers": {
+            "description": "The number of passengers for the booking",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "sales_channel": {
+            "description": "The sales channel through which the booking was made",
+            "type": "categorical",
+            "value_dict": {
+                "Internet": "The booking was made through the Internet",
+                "Mobile": "The booking was made through a mobile device"
+            }
+        },
+        "trip_type": {
+            "description": "The type of trip (e.g., round trip, one-way)",
+            "type": "categorical",
+            "value_dict": {
+                "RoundTrip": "The trip is a round trip",
+                "CircleTrip": "The trip is a circle trip",
+                "OneWay": "The trip is one way"
+            }
+        },
+        "purchase_lead": {
+            "description": "The lead time before the trip when the purchase was made",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "length_of_stay": {
+            "description": "The duration of the stay in days",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "flight_hour": {
+            "description": "The hour of the flight",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "flight_day": {
+            "description": "The day of the flight",
+            "type": "categorical",
+            "value_dict": {
+                "6": "The flight is on the 6th day of the week",
+                "3": "The flight is on the 3rd day of the week",
+                "4": "The flight is on the 4th day of the week",
+                "1": "The flight is on the 1st day of the week",
+                "7": "The flight is on the 7th day of the week",
+                "2": "The flight is on the 2nd day of the week",
+                "5": "The flight is on the 5th day of the week"
+            }
+        },
+        "route": {
+            "description": "The route of the flight",
+            "type": "categorical"
+        },
+        "booking_origin": {
+            "description": "The origin of the booking",
+            "type": "categorical"
+        },
+        "wants_extra_baggage": {
+            "description": "Whether the customer wants extra baggage or not",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The customer wants extra baggage",
+                "0": "The customer does not want extra baggage"
+            }
+        },
+        "wants_preferred_seat": {
+            "description": "Whether the customer wants a preferred seat or not",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The customer does not want a preferred seat",
+                "1": "The customer wants a preferred seat"
+            }
+        },
+        "wants_in_flight_meals": {
+            "description": "Whether the customer wants in-flight meals or not",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The customer does not want in-flight meals",
+                "1": "The customer wants in-flight meals"
+            }
+        },
+        "flight_duration": {
+            "description": "The duration of the flight in hours",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "booking_complete": {
+            "description": "Whether the booking is complete or not",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The booking is not complete",
+                "1": "The booking is complete"
+            }
+        }
+    },
+    "task_info": {
+        "booking_complete": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in airline booking data analysis.",
+                "task_prompt": "Based on the features of the airline booking, please predict whether the booking is complete or not.",
+                "answer_prompt": "The booking is complete[1] or The booking is not complete[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "The booking is not complete",
+                "1": "The booking is complete"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "num_passengers": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in airline booking data analysis.",
+                "task_prompt": "Based on the features of the airline booking, please predict the number of passengers."
+            }
+        },
+        "length_of_stay": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in airline booking data analysis.",
+                "task_prompt": "Based on the features of the airline booking, please predict the length of stay."
+            }
+        },
+        "wants_extra_baggage": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in airline booking data analysis.",
+                "task_prompt": "Based on the features of the airline booking, please predict whether the customer wants extra baggage or not.",
+                "answer_prompt": "The customer wants extra baggage[1] or The customer does not want extra baggage[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "The customer does not want extra baggage",
+                "1": "The customer wants extra baggage"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "wants_preferred_seat": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in airline booking data analysis.",
+                "task_prompt": "Based on the features of the airline booking, please predict whether the customer wants a preferred seat or not.",
+                "answer_prompt": "The customer wants a preferred seat[1] or The customer does not want a preferred seat[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "The customer does not want a preferred seat",
+                "1": "The customer wants a preferred seat"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "wants_in_flight_meals": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in airline booking data analysis.",
+                "task_prompt": "Based on the features of the airline booking, please predict whether the customer wants in-flight meals or not.",
+                "answer_prompt": "The customer wants in-flight meals[1] or The customer does not want in-flight meals[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "The customer does not want in-flight meals",
+                "1": "The customer wants in-flight meals"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        }
+    }
+}

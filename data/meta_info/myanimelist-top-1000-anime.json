@@ -1,0 +1,136 @@
+{
+    "basic_info": {
+        "row_num": 2000,
+        "col_num": 11,
+        "label_candidates": [
+            "Score",
+            "Score Rank",
+            "Popularity Rank",
+            "Num. of episodes"
+        ],
+        "valid_feature_num": 11,
+        "num_features": [
+            "Score Rank",
+            "Popularity Rank",
+            "Num. of episodes",
+            "Score"
+        ],
+        "cat_features": [
+            "Name",
+            "Type",
+            "Studio",
+            "Genres",
+            "Theme(s)",
+            "Demographic"
+        ],
+        "other_features": [
+            "Air Date"
+        ],
+        "tags": [
+            "data visualization",
+            "recommender systems",
+            "regression",
+            "anime and manga"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/brunobacelardc/myanimelist-top-1000-anime"
+    },
+    "feature_info": {
+        "Name": {
+            "description": "The name of the anime.",
+            "type": "categorical"
+        },
+        "Type": {
+            "description": "The format of the anime (e.g., TV, Movie, OVA, etc.).",
+            "type": "categorical",
+            "value_dict": {
+                "TV": "The anime was aired on television.",
+                "Movie": "The anime was produced as a movie.",
+                "OVA": "The anime was released directly to video (Original Video Animation).",
+                "ONA": "The anime was released directly to the internet (Original Net Animation).",
+                "Special": "The anime was produced as a special episode or short series.",
+                "Music": "The anime is a music video or concert."
+            }
+        },
+        "Score": {
+            "description": "The average score given by users on MyAnimeList.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Score Rank": {
+            "description": "The ranking of the anime based on the score.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Popularity Rank": {
+            "description": "The ranking of the anime based on its popularity.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Air Date": {
+            "description": "The date when the anime was first aired.",
+            "type": "other"
+        },
+        "Studio": {
+            "description": "The studio that produced the anime.",
+            "type": "categorical"
+        },
+        "Num. of episodes": {
+            "description": "The total number of episodes in the anime.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Genres": {
+            "description": "The genres that the anime falls under.",
+            "type": "categorical"
+        },
+        "Theme(s)": {
+            "description": "The themes present in the anime.",
+            "type": "categorical"
+        },
+        "Demographic": {
+            "description": "The target demographic of the anime (e.g., Shounen, Seinen, etc.).",
+            "type": "categorical",
+            "value_dict": {
+                "Shounen": "The anime is targeted towards young boys.",
+                "Shoujo": "The anime is targeted towards young girls.",
+                "Seinen": "The anime is targeted towards adult men.",
+                "Josei": "The anime is targeted towards adult women.",
+                "Kids": "The anime is targeted towards children."
+            }
+        }
+    },
+    "task_info": {
+        "Score": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in anime analysis.",
+                "task_prompt": "Based on the features of the anime series, please predict the score.",
+                "answer_prompt": "The predicted score is."
+            }
+        },
+        "Score Rank": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in anime analysis.",
+                "task_prompt": "Based on the features of the anime series, please predict the score rank.",
+                "answer_prompt": "The predicted score rank is."
+            }
+        },
+        "Popularity Rank": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in anime analysis.",
+                "task_prompt": "Based on the features of the anime series, please predict the popularity rank.",
+                "answer_prompt": "The predicted popularity rank is."
+            }
+        },
+        "Num. of episodes": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in anime analysis.",
+                "task_prompt": "Based on the features of the anime series, please predict the number of episodes.",
+                "answer_prompt": "The predicted number of episodes is."
+            }
+        }
+    }
+}

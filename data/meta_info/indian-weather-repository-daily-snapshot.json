@@ -1,0 +1,398 @@
+{
+    "basic_info": {
+        "row_num": 47597,
+        "col_num": 42,
+        "label_candidates": [
+            "temperature_celsius",
+            "temperature_fahrenheit",
+            "feels_like_celsius",
+            "feels_like_fahrenheit",
+            "humidity",
+            "air_quality_Carbon_Monoxide",
+            "air_quality_Ozone",
+            "air_quality_Nitrogen_dioxide",
+            "air_quality_Sulphur_dioxide",
+            "air_quality_PM2.5",
+            "air_quality_PM10",
+            "air_quality_us-epa-index",
+            "air_quality_gb-defra-index"
+        ],
+        "valid_feature_num": 41,
+        "num_features": [
+            "latitude",
+            "longitude",
+            "last_updated_epoch",
+            "temperature_celsius",
+            "temperature_fahrenheit",
+            "wind_mph",
+            "wind_kph",
+            "wind_degree",
+            "pressure_mb",
+            "pressure_in",
+            "precip_mm",
+            "precip_in",
+            "humidity",
+            "cloud",
+            "feels_like_celsius",
+            "feels_like_fahrenheit",
+            "visibility_km",
+            "visibility_miles",
+            "uv_index",
+            "gust_mph",
+            "gust_kph",
+            "air_quality_Carbon_Monoxide",
+            "air_quality_Ozone",
+            "air_quality_Nitrogen_dioxide",
+            "air_quality_Sulphur_dioxide",
+            "air_quality_PM2.5",
+            "air_quality_PM10",
+            "air_quality_us-epa-index",
+            "air_quality_gb-defra-index",
+            "moon_illumination"
+        ],
+        "cat_features": [
+            "location_name",
+            "region",
+            "timezone",
+            "wind_direction",
+            "moon_phase",
+            "condition_text"
+        ],
+        "other_features": [
+            "last_updated",
+            "sunrise",
+            "sunset",
+            "moonrise",
+            "moonset"
+        ],
+        "tags": [
+            "weather and climate",
+            "computer science",
+            "exploratory data analysis",
+            "data visualization",
+            "classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/nelgiriyewithana/indian-weather-repository-daily-snapshot"
+    },
+    "feature_info": {
+        "country": {
+            "description": "Country where the weather data was recorded. In this case, it is India.",
+            "type": "useless"
+        },
+        "location_name": {
+            "description": "Name of the location in India where the weather data was recorded.",
+            "type": "categorical"
+        },
+        "region": {
+            "description": "Region of the location where the weather data was recorded.",
+            "type": "categorical"
+        },
+        "latitude": {
+            "description": "Latitude of the location where the weather data was recorded.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "longitude": {
+            "description": "Longitude of the location where the weather data was recorded.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "timezone": {
+            "description": "Timezone of the location where the weather data was recorded.",
+            "type": "categorical",
+            "value_dict": {
+                "Asia/Kolkata": "Timezone for locations in India",
+                "Asia/Karachi": "Timezone for locations in Pakistan",
+                "Asia/Dhaka": "Timezone for locations in Bangladesh"
+            }
+        },
+        "last_updated_epoch": {
+            "description": "The last time when the data was updated in epoch format.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "last_updated": {
+            "description": "The last time when the data was updated in human readable format.",
+            "type": "other"
+        },
+        "temperature_celsius": {
+            "description": "Temperature recorded in Celsius.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "temperature_fahrenheit": {
+            "description": "Temperature recorded in Fahrenheit.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "condition_text": {
+            "description": "Textual description of the weather condition.",
+            "type": "categorical"
+        },
+        "wind_mph": {
+            "description": "Wind speed recorded in miles per hour.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "wind_kph": {
+            "description": "Wind speed recorded in kilometers per hour.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "wind_degree": {
+            "description": "Wind direction in degrees.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "wind_direction": {
+            "description": "Wind direction in cardinal directions.",
+            "type": "categorical"
+        },
+        "pressure_mb": {
+            "description": "Atmospheric pressure recorded in millibars.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "pressure_in": {
+            "description": "Atmospheric pressure recorded in inches.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "precip_mm": {
+            "description": "Precipitation recorded in millimeters.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "precip_in": {
+            "description": "Precipitation recorded in inches.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "humidity": {
+            "description": "Humidity percentage.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "cloud": {
+            "description": "Cloud coverage percentage.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "feels_like_celsius": {
+            "description": "Perceived temperature in Celsius.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "feels_like_fahrenheit": {
+            "description": "Perceived temperature in Fahrenheit.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "visibility_km": {
+            "description": "Visibility recorded in kilometers.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "visibility_miles": {
+            "description": "Visibility recorded in miles.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "uv_index": {
+            "description": "UV index.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "gust_mph": {
+            "description": "Gust speed recorded in miles per hour.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "gust_kph": {
+            "description": "Gust speed recorded in kilometers per hour.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "air_quality_Carbon_Monoxide": {
+            "description": "Air quality measurement for Carbon Monoxide.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "air_quality_Ozone": {
+            "description": "Air quality measurement for Ozone.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "air_quality_Nitrogen_dioxide": {
+            "description": "Air quality measurement for Nitrogen Dioxide.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "air_quality_Sulphur_dioxide": {
+            "description": "Air quality measurement for Sulphur Dioxide.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "air_quality_PM2.5": {
+            "description": "Air quality measurement for PM2.5 particles.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "air_quality_PM10": {
+            "description": "Air quality measurement for PM10 particles.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "air_quality_us-epa-index": {
+            "description": "US EPA air quality index.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "air_quality_gb-defra-index": {
+            "description": "GB DEFRA air quality index.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "sunrise": {
+            "description": "Time of sunrise.",
+            "type": "other"
+        },
+        "sunset": {
+            "description": "Time of sunset.",
+            "type": "other"
+        },
+        "moonrise": {
+            "description": "Time of moonrise.",
+            "type": "other"
+        },
+        "moonset": {
+            "description": "Time of moonset.",
+            "type": "other"
+        },
+        "moon_phase": {
+            "description": "Phase of the moon.",
+            "type": "categorical",
+            "value_dict": {
+                "Waxing Gibbous": "Moon phase where the moon is more than half illuminated but not full.",
+                "Full Moon": "Moon phase where the moon is fully illuminated.",
+                "Waning Gibbous": "Moon phase where the moon is less than fully illuminated but more than half.",
+                "Last Quarter": "Moon phase where the left half of the moon is illuminated.",
+                "Waning Crescent": "Moon phase where the moon is less than half illuminated after being full.",
+                "New Moon": "Moon phase where the moon is not illuminated.",
+                "Waxing Crescent": "Moon phase where the moon is less than half illuminated after being a new moon.",
+                "First Quarter": "Moon phase where the right half of the moon is illuminated."
+            }
+        },
+        "moon_illumination": {
+            "description": "Percentage of moon illumination.",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "temperature_celsius": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in meteorology.",
+                "task_prompt": "Based on the features of the weather conditions, please predict the temperature in Celsius.",
+                "answer_prompt": "The predicted temperature in Celsius is ______."
+            }
+        },
+        "temperature_fahrenheit": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in meteorology.",
+                "task_prompt": "Based on the features of the weather conditions, please predict the temperature in Fahrenheit.",
+                "answer_prompt": "The predicted temperature in Fahrenheit is ______."
+            }
+        },
+        "feels_like_celsius": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in meteorology.",
+                "task_prompt": "Based on the features of the weather conditions, please predict the feels like temperature in Celsius.",
+                "answer_prompt": "The feels like temperature in Celsius is ______."
+            }
+        },
+        "feels_like_fahrenheit": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in meteorology.",
+                "task_prompt": "Based on the features of the weather conditions, please predict the feels like temperature in Fahrenheit.",
+                "answer_prompt": "The feels like temperature in Fahrenheit is ______."
+            }
+        },
+        "humidity": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in meteorology.",
+                "task_prompt": "Based on the features of the weather conditions, please predict the humidity.",
+                "answer_prompt": "The predicted humidity is ______."
+            }
+        },
+        "air_quality_Carbon_Monoxide": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in air quality analysis.",
+                "task_prompt": "Based on the features of the weather conditions, please predict the level of Carbon Monoxide in the air.",
+                "answer_prompt": "The predicted level of Carbon Monoxide in the air is ______."
+            }
+        },
+        "air_quality_Ozone": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in air quality analysis.",
+                "task_prompt": "Based on the features of the weather conditions, please predict the level of Ozone in the air.",
+                "answer_prompt": "The predicted level of Ozone in the air is ______."
+            }
+        },
+        "air_quality_Nitrogen_dioxide": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in air quality analysis.",
+                "task_prompt": "Based on the features of the weather conditions, please predict the level of Nitrogen Dioxide in the air.",
+                "answer_prompt": "The predicted level of Nitrogen Dioxide in the air is ______."
+            }
+        },
+        "air_quality_Sulphur_dioxide": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in air quality analysis.",
+                "task_prompt": "Based on the features of the weather conditions, please predict the level of Sulphur Dioxide in the air.",
+                "answer_prompt": "The predicted level of Sulphur Dioxide in the air is ______."
+            }
+        },
+        "air_quality_PM2.5": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in air quality analysis.",
+                "task_prompt": "Based on the features of the weather conditions, please predict the level of PM2.5 in the air.",
+                "answer_prompt": "The predicted level of PM2.5 in the air is ______."
+            }
+        },
+        "air_quality_PM10": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in air quality analysis.",
+                "task_prompt": "Based on the features of the weather conditions, please predict the level of PM10 in the air.",
+                "answer_prompt": "The predicted level of PM10 in the air is ______."
+            }
+        },
+        "air_quality_us-epa-index": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in air quality analysis.",
+                "task_prompt": "Based on the features of the weather conditions, please predict the US EPA index of the air quality.",
+                "answer_prompt": "The predicted US EPA index of the air quality is ______."
+            }
+        },
+        "air_quality_gb-defra-index": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in air quality analysis.",
+                "task_prompt": "Based on the features of the weather conditions, please predict the GB DEFRA index of the air quality.",
+                "answer_prompt": "The predicted GB DEFRA index of the air quality is ______."
+            }
+        }
+    }
+}

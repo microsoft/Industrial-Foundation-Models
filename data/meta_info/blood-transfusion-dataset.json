@@ -1,0 +1,109 @@
+{
+    "basic_info": {
+        "row_num": 748,
+        "col_num": 5,
+        "label_candidates": [
+            "whether he/she donated blood in March 2007",
+            "Recency (months)",
+            "Frequency (times)",
+            "Monetary (c.c. blood)",
+            "Time (months)"
+        ],
+        "valid_feature_num": 5,
+        "num_features": [
+            "Recency (months)",
+            "Frequency (times)",
+            "Monetary (c.c. blood)",
+            "Time (months)"
+        ],
+        "cat_features": [
+            "whether he/she donated blood in March 2007"
+        ],
+        "other_features": [],
+        "tags": [
+            "education",
+            "health",
+            "computer science",
+            "data visualization",
+            "classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/whenamancodes/blood-transfusion-dataset"
+    },
+    "feature_info": {
+        "Recency (months)": {
+            "description": "Months since the last donation",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Frequency (times)": {
+            "description": "Total number of donations",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Monetary (c.c. blood)": {
+            "description": "Total blood donated in cubic centimeters",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Time (months)": {
+            "description": "Months since the first donation",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "whether he/she donated blood in March 2007": {
+            "description": "Whether the donor donated blood in March 2007 (1 stands for donating blood; 0 stands for not donating blood)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The donor donated blood in March 2007",
+                "0": "The donor did not donate blood in March 2007"
+            }
+        }
+    },
+    "task_info": {
+        "whether he/she donated blood in March 2007": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical data analysis.",
+                "task_prompt": "Based on the donation history of the blood donor, please predict whether the donor donated blood in March 2007.",
+                "answer_prompt": "Donated[1] or not donated[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "The donor donated blood in March 2007",
+                "0": "The donor did not donate blood in March 2007"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        },
+        "Recency (months)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical data analysis.",
+                "task_prompt": "Based on the donation history of the blood donor, please predict the recency of the last donation in months."
+            }
+        },
+        "Frequency (times)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical data analysis.",
+                "task_prompt": "Based on the donation history of the blood donor, please predict the frequency of donations."
+            }
+        },
+        "Monetary (c.c. blood)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical data analysis.",
+                "task_prompt": "Based on the donation history of the blood donor, please predict the monetary value of the blood donated."
+            }
+        },
+        "Time (months)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical data analysis.",
+                "task_prompt": "Based on the donation history of the blood donor, please predict the time in months since the first donation."
+            }
+        }
+    }
+}

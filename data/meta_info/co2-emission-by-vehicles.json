@@ -1,0 +1,130 @@
+{
+    "basic_info": {
+        "row_num": 7385,
+        "col_num": 12,
+        "label_candidates": [
+            "CO2 Emissions(g/km)",
+            "Fuel Consumption Comb (mpg)",
+            "Fuel Consumption Comb (L/100 km)"
+        ],
+        "valid_feature_num": 12,
+        "num_features": [
+            "Engine Size(L)",
+            "Cylinders",
+            "Fuel Consumption City (L/100 km)",
+            "Fuel Consumption Hwy (L/100 km)",
+            "Fuel Consumption Comb (L/100 km)",
+            "Fuel Consumption Comb (mpg)",
+            "CO2 Emissions(g/km)"
+        ],
+        "cat_features": [
+            "Make",
+            "Model",
+            "Vehicle Class",
+            "Transmission",
+            "Fuel Type"
+        ],
+        "other_features": [],
+        "tags": [
+            "earth and nature",
+            "environment",
+            "pollution",
+            "business",
+            "computer science",
+            "automobiles and vehicles",
+            "linear regression",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/debajyotipodder/co2-emission-by-vehicles"
+    },
+    "feature_info": {
+        "Make": {
+            "description": "The manufacturer of the vehicle",
+            "type": "categorical"
+        },
+        "Model": {
+            "description": "The model of the vehicle",
+            "type": "categorical"
+        },
+        "Vehicle Class": {
+            "description": "The category to which the vehicle belongs",
+            "type": "categorical"
+        },
+        "Engine Size(L)": {
+            "description": "The size of the engine in liters",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Cylinders": {
+            "description": "The number of cylinders in the engine",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Transmission": {
+            "description": "The type of transmission in the vehicle",
+            "type": "categorical"
+        },
+        "Fuel Type": {
+            "description": "The type of fuel the vehicle uses",
+            "type": "categorical",
+            "value_dict": {
+                "Z": "Regular gasoline",
+                "D": "Diesel",
+                "X": "Premium gasoline",
+                "E": "Ethanol (E85)",
+                "N": "Natural gas"
+            }
+        },
+        "Fuel Consumption City (L/100 km)": {
+            "description": "The fuel consumption in city driving (liters per 100 kilometers)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Fuel Consumption Hwy (L/100 km)": {
+            "description": "The fuel consumption in highway driving (liters per 100 kilometers)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Fuel Consumption Comb (L/100 km)": {
+            "description": "The combined fuel consumption (city and highway) (liters per 100 kilometers)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Fuel Consumption Comb (mpg)": {
+            "description": "The combined fuel consumption (city and highway) (miles per gallon)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "CO2 Emissions(g/km)": {
+            "description": "The CO2 emissions of the vehicle (grams per kilometer)",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "CO2 Emissions(g/km)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in environmental science.",
+                "task_prompt": "Based on the features of the vehicle, please predict the CO2 emissions in grams per kilometer.",
+                "answer_prompt": "The CO2 emissions in grams per kilometer is:."
+            }
+        },
+        "Fuel Consumption Comb (mpg)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in automotive engineering.",
+                "task_prompt": "Based on the features of the vehicle, please predict the combined fuel consumption in miles per gallon.",
+                "answer_prompt": "The combined fuel consumption in miles per gallon is:."
+            }
+        },
+        "Fuel Consumption Comb (L/100 km)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in automotive engineering.",
+                "task_prompt": "Based on the features of the vehicle, please predict the combined fuel consumption in liters per 100 kilometers.",
+                "answer_prompt": "The combined fuel consumption in liters per 100 kilometers is:."
+            }
+        }
+    }
+}

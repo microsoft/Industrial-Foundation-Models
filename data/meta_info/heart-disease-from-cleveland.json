@@ -1,0 +1,186 @@
+{
+    "basic_info": {
+        "row_num": 303,
+        "col_num": 14,
+        "label_candidates": [
+            "class",
+            "age",
+            "sex"
+        ],
+        "valid_feature_num": 14,
+        "num_features": [
+            "age",
+            "trestbps",
+            "chol",
+            "thalach",
+            "oldpeak"
+        ],
+        "cat_features": [
+            "sex",
+            "cp",
+            "fbs",
+            "restecg",
+            "exang",
+            "slope",
+            "ca",
+            "thal",
+            "class"
+        ],
+        "other_features": [],
+        "tags": [
+            "linear regression",
+            "regression",
+            "heart conditions"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/kingabzpro/heart-disease-from-cleveland"
+    },
+    "feature_info": {
+        "age": {
+            "description": "Age of the patient in years",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "sex": {
+            "description": "Sex of the patient (1 = male; 0 = female)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Male",
+                "0": "Female"
+            }
+        },
+        "cp": {
+            "description": "Chest pain type (Value 1: typical angina, Value 2: atypical angina, Value 3: non-anginal pain, Value 4: asymptomatic)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Typical angina",
+                "4": "Asymptomatic",
+                "3": "Non-anginal pain",
+                "2": "Atypical angina"
+            }
+        },
+        "trestbps": {
+            "description": "Resting blood pressure (in mm Hg on admission to the hospital)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "chol": {
+            "description": "Serum cholestoral in mg/dl",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "fbs": {
+            "description": "Fasting blood sugar > 120 mg/dl (1 = true; 0 = false)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "True",
+                "0": "False"
+            }
+        },
+        "restecg": {
+            "description": "Resting electrocardiographic results (Values 0,1,2)",
+            "type": "categorical",
+            "value_dict": {
+                "2": "Showing probable or definite left ventricular hypertrophy by Estes criteria",
+                "0": "Normal",
+                "1": "Having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV)"
+            }
+        },
+        "thalach": {
+            "description": "Maximum heart rate achieved",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "exang": {
+            "description": "Exercise induced angina (1 = yes; 0 = no)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "No",
+                "1": "Yes"
+            }
+        },
+        "oldpeak": {
+            "description": "ST depression induced by exercise relative to rest",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "slope": {
+            "description": "The slope of the peak exercise ST segment",
+            "type": "categorical",
+            "value_dict": {
+                "3": "Downsloping",
+                "2": "Flat",
+                "1": "Upsloping"
+            }
+        },
+        "ca": {
+            "description": "Number of major vessels (0-3) colored by flourosopy",
+            "type": "categorical",
+            "value_dict": {
+                "0.0": "No major vessels colored",
+                "3.0": "Three major vessels colored",
+                "2.0": "Two major vessels colored",
+                "1.0": "One major vessel colored"
+            }
+        },
+        "thal": {
+            "description": "Thalassemia (3 = normal; 6 = fixed defect; 7 = reversable defect)",
+            "type": "categorical",
+            "value_dict": {
+                "6.0": "Fixed defect",
+                "3.0": "Normal",
+                "7.0": "Reversable defect"
+            }
+        },
+        "class": {
+            "description": "Heart disease status (Value 0: heart disease, Value 1: no heart disease)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "heart disease",
+                "1": "no heart disease"
+            }
+        }
+    },
+    "task_info": {
+        "class": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in heart disease diagnosis.",
+                "task_prompt": "Based on the medical features of the patient, please predict the degree of heart disease.",
+                "answer_prompt": "Heart disease[0] or not[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "heart disease",
+                "1": "no heart disease"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "2": 1
+            }
+        },
+        "age": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in age prediction.",
+                "task_prompt": "Based on the medical features of the patient, please predict the age."
+            }
+        },
+        "sex": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in gender prediction.",
+                "task_prompt": "Based on the medical features of the patient, please predict the gender.",
+                "answer_prompt": "Male[1] or Female[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "Male",
+                "0": "Female"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        }
+    }
+}

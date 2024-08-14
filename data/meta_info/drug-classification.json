@@ -1,0 +1,174 @@
+{
+    "basic_info": {
+        "row_num": 200,
+        "col_num": 6,
+        "label_candidates": [
+            "Drug",
+            "Age",
+            "Sex",
+            "BP",
+            "Cholesterol",
+            "Na_to_K"
+        ],
+        "valid_feature_num": 6,
+        "num_features": [
+            "Age",
+            "Na_to_K"
+        ],
+        "cat_features": [
+            "Sex",
+            "BP",
+            "Cholesterol",
+            "Drug"
+        ],
+        "other_features": [],
+        "tags": [
+            "health",
+            "classification",
+            "binary classification",
+            "drugs and medications",
+            "heart conditions"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/prathamtripathi/drug-classification"
+    },
+    "feature_info": {
+        "Age": {
+            "description": "The age of the individual in years",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Sex": {
+            "description": "The sex of the individual (F for female, M for male)",
+            "type": "categorical",
+            "value_dict": {
+                "F": "Female",
+                "M": "Male"
+            }
+        },
+        "BP": {
+            "description": "The individual's blood pressure level (LOW, NORMAL, HIGH)",
+            "type": "categorical",
+            "value_dict": {
+                "HIGH": "High blood pressure",
+                "LOW": "Low blood pressure",
+                "NORMAL": "Normal blood pressure"
+            }
+        },
+        "Cholesterol": {
+            "description": "The individual's cholesterol level (LOW, HIGH)",
+            "type": "categorical",
+            "value_dict": {
+                "HIGH": "High cholesterol level",
+                "NORMAL": "Normal cholesterol level"
+            }
+        },
+        "Na_to_K": {
+            "description": "The ratio of Sodium to Potassium in the individual's blood",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Drug": {
+            "description": "The drug type that was used by the individual (DrugY, drugC, drugX, etc.)",
+            "type": "categorical",
+            "value_dict": {
+                "DrugY": "Type Y drug",
+                "drugC": "Type C drug",
+                "drugX": "Type X drug",
+                "drugA": "Type A drug",
+                "drugB": "Type B drug"
+            }
+        }
+    },
+    "task_info": {
+        "Drug": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in drug classification.",
+                "task_prompt": "Based on the features of the patient, please predict the type of drug.",
+                "answer_prompt": "Type Y drug[0], Type C drug[1], Type X drug[2], Type A drug[3], or Type B drug[4]?"
+            },
+            "class_num": 5,
+            "class_value_dict": {
+                "DrugY": "Type Y drug",
+                "drugC": "Type C drug",
+                "drugX": "Type X drug",
+                "drugA": "Type A drug",
+                "drugB": "Type B drug"
+            },
+            "class_index_dict": {
+                "DrugY": 0,
+                "drugC": 1,
+                "drugX": 2,
+                "drugA": 3,
+                "drugB": 4
+            }
+        },
+        "Age": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical data analysis.",
+                "task_prompt": "Based on the features of the patient, please predict the age."
+            }
+        },
+        "Sex": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical data analysis.",
+                "task_prompt": "Based on the features of the patient, please predict the sex.",
+                "answer_prompt": "Female[0] or Male[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "F": "Female",
+                "M": "Male"
+            },
+            "class_index_dict": {
+                "F": 0,
+                "M": 1
+            }
+        },
+        "BP": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical data analysis.",
+                "task_prompt": "Based on the features of the patient, please predict the blood pressure level.",
+                "answer_prompt": "High blood pressure[0], Low blood pressure[1], Normal blood pressure[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "HIGH": "High blood pressure",
+                "LOW": "Low blood pressure",
+                "NORMAL": "Normal blood pressure"
+            },
+            "class_index_dict": {
+                "HIGH": 0,
+                "LOW": 1,
+                "NORMAL": 2
+            }
+        },
+        "Cholesterol": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical data analysis.",
+                "task_prompt": "Based on the features of the patient, please predict the cholesterol level.",
+                "answer_prompt": "High cholesterol level[0] or Normal cholesterol level[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "HIGH": "High cholesterol level",
+                "NORMAL": "Normal cholesterol level"
+            },
+            "class_index_dict": {
+                "HIGH": 0,
+                "NORMAL": 1
+            }
+        },
+        "Na_to_K": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical data analysis.",
+                "task_prompt": "Based on the features of the patient, please predict the Na_to_K ratio."
+            }
+        }
+    }
+}

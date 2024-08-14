@@ -1,0 +1,179 @@
+{
+    "basic_info": {
+        "row_num": 200000,
+        "col_num": 10,
+        "label_candidates": [
+            "Age",
+            "Sex",
+            "Length",
+            "Diameter",
+            "Height",
+            "Weight",
+            "Shucked Weight",
+            "Viscera Weight",
+            "Shell Weight"
+        ],
+        "valid_feature_num": 9,
+        "num_features": [
+            "Length",
+            "Diameter",
+            "Height",
+            "Weight",
+            "Shucked Weight",
+            "Viscera Weight",
+            "Shell Weight",
+            "Age"
+        ],
+        "cat_features": [
+            "Sex"
+        ],
+        "other_features": [],
+        "tags": [
+            "earth and nature",
+            "deep learning",
+            "tabular",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/shalfey/extended-crab-age-prediction"
+    },
+    "feature_info": {
+        "id": {
+            "description": "Unique identifier for each entry",
+            "type": "useless"
+        },
+        "Sex": {
+            "description": "Sex of the crab, M for male, F for female, I for infant",
+            "type": "categorical",
+            "value_dict": {
+                "M": "Male crab",
+                "I": "Infant crab",
+                "F": "Female crab"
+            }
+        },
+        "Length": {
+            "description": "Length of the crab (in mm)",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "Diameter": {
+            "description": "Diameter of the crab (in mm)",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "Height": {
+            "description": "Height of the crab (in mm)",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "Weight": {
+            "description": "Weight of the crab (in grams)",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "Shucked Weight": {
+            "description": "Weight of the crab meat (in grams)",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Viscera Weight": {
+            "description": "Weight of the crab guts (in grams)",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Shell Weight": {
+            "description": "Weight of the crab shell (in grams)",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Age": {
+            "description": "Age of the crab (in years)",
+            "type": "numerical",
+            "decimal": 1
+        }
+    },
+    "task_info": {
+        "Age": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in marine biology.",
+                "task_prompt": "Based on the features of the crab, please predict the age.",
+                "answer_prompt": "The predicted age is: ."
+            }
+        },
+        "Sex": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in marine biology.",
+                "task_prompt": "Based on the features of the crab, please predict the sex.",
+                "answer_prompt": "Is the crab Male[0], Infant[1], or Female[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "M": "Male crab",
+                "I": "Infant crab",
+                "F": "Female crab"
+            },
+            "class_index_dict": {
+                "M": 0,
+                "I": 1,
+                "F": 2
+            }
+        },
+        "Length": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in marine biology.",
+                "task_prompt": "Based on the features of the crab, please predict the length.",
+                "answer_prompt": "The predicted length is: ."
+            }
+        },
+        "Diameter": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in marine biology.",
+                "task_prompt": "Based on the features of the crab, please predict the diameter.",
+                "answer_prompt": "The predicted diameter is: ."
+            }
+        },
+        "Height": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in marine biology.",
+                "task_prompt": "Based on the features of the crab, please predict the height.",
+                "answer_prompt": "The predicted height is: ."
+            }
+        },
+        "Weight": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in marine biology.",
+                "task_prompt": "Based on the features of the crab, please predict the weight.",
+                "answer_prompt": "The predicted weight is: ."
+            }
+        },
+        "Shucked Weight": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in marine biology.",
+                "task_prompt": "Based on the features of the crab, please predict the shucked weight.",
+                "answer_prompt": "The predicted shucked weight is: ."
+            }
+        },
+        "Viscera Weight": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in marine biology.",
+                "task_prompt": "Based on the features of the crab, please predict the viscera weight.",
+                "answer_prompt": "The predicted viscera weight is: ."
+            }
+        },
+        "Shell Weight": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in marine biology.",
+                "task_prompt": "Based on the features of the crab, please predict the shell weight.",
+                "answer_prompt": "The predicted shell weight is: ."
+            }
+        }
+    }
+}

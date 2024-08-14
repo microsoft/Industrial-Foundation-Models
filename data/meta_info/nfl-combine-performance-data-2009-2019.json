@@ -1,0 +1,227 @@
+{
+    "basic_info": {
+        "row_num": 3477,
+        "col_num": 18,
+        "label_candidates": [
+            "Drafted",
+            "Player_Type",
+            "Position_Type",
+            "Age",
+            "BMI"
+        ],
+        "valid_feature_num": 17,
+        "num_features": [
+            "Year",
+            "Age",
+            "Height",
+            "Weight",
+            "Sprint_40yd",
+            "Vertical_Jump",
+            "Bench_Press_Reps",
+            "Broad_Jump",
+            "Agility_3cone",
+            "Shuttle",
+            "BMI"
+        ],
+        "cat_features": [
+            "School",
+            "Player_Type",
+            "Position_Type",
+            "Position",
+            "Drafted"
+        ],
+        "other_features": [
+            "Drafted..tm.rnd.yr."
+        ],
+        "tags": [
+            "sports",
+            "beginner",
+            "intermediate",
+            "data analytics",
+            "classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/redlineracer/nfl-combine-performance-data-2009-2019"
+    },
+    "feature_info": {
+        "Year": {
+            "description": "The year when the player participated in the NFL combine",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Player": {
+            "description": "Name and unique identifier of the player",
+            "type": "useless"
+        },
+        "Age": {
+            "description": "Age of the player at the time of the combine",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "School": {
+            "description": "The college or university that the player attended",
+            "type": "categorical"
+        },
+        "Height": {
+            "description": "Height of the player in inches",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Weight": {
+            "description": "Weight of the player in pounds",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Sprint_40yd": {
+            "description": "Time taken by the player to sprint 40 yards, in seconds",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Vertical_Jump": {
+            "description": "Vertical jump height of the player in inches",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Bench_Press_Reps": {
+            "description": "Number of repetitions of bench press performed by the player",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Broad_Jump": {
+            "description": "Distance of broad jump performed by the player in inches",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Agility_3cone": {
+            "description": "Time taken by the player to complete the 3-cone drill, in seconds",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Shuttle": {
+            "description": "Time taken by the player to complete the shuttle run, in seconds",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Drafted..tm.rnd.yr.": {
+            "description": "Drafted team, round, and year",
+            "type": "other"
+        },
+        "BMI": {
+            "description": "Body Mass Index of the player",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Player_Type": {
+            "description": "Type of player based on their position",
+            "type": "categorical",
+            "value_dict": {
+                "offense": "Player primarily plays on the offensive side",
+                "defense": "Player primarily plays on the defensive side",
+                "special_teams": "Player primarily plays on special teams"
+            }
+        },
+        "Position_Type": {
+            "description": "General position type of the player",
+            "type": "categorical",
+            "value_dict": {
+                "backs_receivers": "Player is a back or receiver",
+                "defensive_lineman": "Player is a defensive lineman",
+                "offensive_lineman": "Player is an offensive lineman",
+                "defensive_back": "Player is a defensive back",
+                "line_backer": "Player is a line backer",
+                "kicking_specialist": "Player is a kicking specialist",
+                "other_special": "Player has a special position not categorized elsewhere"
+            }
+        },
+        "Position": {
+            "description": "Specific position of the player in the game",
+            "type": "categorical"
+        },
+        "Drafted": {
+            "description": "Whether the player was drafted or not",
+            "type": "categorical",
+            "value_dict": {
+                "Yes": "Player was drafted into the NFL",
+                "No": "Player was not drafted into the NFL"
+            }
+        }
+    },
+    "task_info": {
+        "Drafted": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in NFL player performance analysis.",
+                "task_prompt": "Based on the performance data of the NFL combine, please predict if the player was drafted into the NFL.",
+                "answer_prompt": "Yes[1] or No[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "Yes": "Player was drafted into the NFL",
+                "No": "Player was not drafted into the NFL"
+            },
+            "class_index_dict": {
+                "Yes": 1,
+                "No": 0
+            }
+        },
+        "Player_Type": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in NFL player performance analysis.",
+                "task_prompt": "Based on the performance data of the NFL combine, please predict the primary play side of the player.",
+                "answer_prompt": "offense[0], defense[1], or special_teams[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "offense": "Player primarily plays on the offensive side",
+                "defense": "Player primarily plays on the defensive side",
+                "special_teams": "Player primarily plays on special teams"
+            },
+            "class_index_dict": {
+                "offense": 0,
+                "defense": 1,
+                "special_teams": 2
+            }
+        },
+        "Position_Type": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in NFL player performance analysis.",
+                "task_prompt": "Based on the performance data of the NFL combine, please predict the position type of the player.",
+                "answer_prompt": "backs_receivers[0], defensive_lineman[1], offensive_lineman[2], defensive_back[3], line_backer[4], kicking_specialist[5], or other_special[6]?"
+            },
+            "class_num": 7,
+            "class_value_dict": {
+                "backs_receivers": "Player is a back or receiver",
+                "defensive_lineman": "Player is a defensive lineman",
+                "offensive_lineman": "Player is an offensive lineman",
+                "defensive_back": "Player is a defensive back",
+                "line_backer": "Player is a line backer",
+                "kicking_specialist": "Player is a kicking specialist",
+                "other_special": "Player has a special position not categorized elsewhere"
+            },
+            "class_index_dict": {
+                "backs_receivers": 0,
+                "defensive_lineman": 1,
+                "offensive_lineman": 2,
+                "defensive_back": 3,
+                "line_backer": 4,
+                "kicking_specialist": 5,
+                "other_special": 6
+            }
+        },
+        "Age": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in NFL player performance analysis.",
+                "task_prompt": "Based on the performance data of the NFL combine, please predict the age of the player."
+            }
+        },
+        "BMI": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in NFL player performance analysis.",
+                "task_prompt": "Based on the performance data of the NFL combine, please predict the BMI of the player."
+            }
+        }
+    }
+}

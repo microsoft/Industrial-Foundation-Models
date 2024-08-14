@@ -1,0 +1,380 @@
+{
+    "basic_info": {
+        "row_num": 486,
+        "col_num": 50,
+        "label_candidates": [
+            "growthbucket",
+            "total_change",
+            "excl_energy_change",
+            "energy_change",
+            "metals_minerals_change"
+        ],
+        "valid_feature_num": 50,
+        "num_features": [
+            "pop",
+            "emp",
+            "emp_to_pop_ratio",
+            "hc",
+            "ccon",
+            "cda",
+            "cn",
+            "ck",
+            "ctfp",
+            "cwtfp",
+            "rconna",
+            "rdana",
+            "rnna",
+            "rkna",
+            "rtfpna",
+            "rwtfpna",
+            "labsh",
+            "irr",
+            "delta",
+            "xr",
+            "pl_con",
+            "pl_da",
+            "pl_gdpo",
+            "csh_c",
+            "csh_i",
+            "csh_g",
+            "csh_x",
+            "csh_m",
+            "csh_r",
+            "pl_c",
+            "pl_i",
+            "pl_g",
+            "pl_x",
+            "pl_m",
+            "pl_n",
+            "total",
+            "excl_energy",
+            "energy",
+            "metals_minerals",
+            "forestry",
+            "agriculture",
+            "fish",
+            "total_change",
+            "excl_energy_change",
+            "energy_change",
+            "metals_minerals_change",
+            "forestry_change",
+            "agriculture_change",
+            "fish_change"
+        ],
+        "cat_features": [
+            "growthbucket"
+        ],
+        "other_features": [],
+        "tags": [
+            "africa",
+            "business",
+            "finance",
+            "social science",
+            "demographics",
+            "economics"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/chirin/african-country-recession-dataset-2000-to-2017"
+    },
+    "feature_info": {
+        "pop": {
+            "description": "Population of the country",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "emp": {
+            "description": "Employment rate",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "emp_to_pop_ratio": {
+            "description": "Ratio of employment to population",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "hc": {
+            "description": "Human capital index",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "ccon": {
+            "description": "Real consumption of households and government at constant national prices",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "cda": {
+            "description": "Real domestic absorption (real consumption plus investment)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "cn": {
+            "description": "Real consumption at constant international prices",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "ck": {
+            "description": "Capital services at constant national prices",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "ctfp": {
+            "description": "TFP at constant national prices",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "cwtfp": {
+            "description": "Welfare-relevant TFP at constant national prices",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "rconna": {
+            "description": "Real consumption at constant national prices (2005=1)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "rdana": {
+            "description": "Real domestic absorption at constant national prices (2005=1)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "rnna": {
+            "description": "Real net national income at constant national prices (2005=1)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "rkna": {
+            "description": "Capital services at constant national prices (2005=1)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "rtfpna": {
+            "description": "TFP at constant national prices (2005=1)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "rwtfpna": {
+            "description": "Welfare-relevant TFP at constant national prices (2005=1)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "labsh": {
+            "description": "Labor share of income",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "irr": {
+            "description": "Investment rate",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "delta": {
+            "description": "Depreciation rate",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "xr": {
+            "description": "Exchange rate",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "pl_con": {
+            "description": "Price level of CCON (PPP/XR)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "pl_da": {
+            "description": "Price level of CDA (PPP/XR)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "pl_gdpo": {
+            "description": "Price level of GDPo (PPP/XR)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "csh_c": {
+            "description": "Share of consumption at current PPPs",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "csh_i": {
+            "description": "Share of investment at current PPPs",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "csh_g": {
+            "description": "Share of government at current PPPs",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "csh_x": {
+            "description": "Share of exports at current PPPs",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "csh_m": {
+            "description": "Share of imports at current PPPs",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "csh_r": {
+            "description": "Share of residual at current PPPs",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "pl_c": {
+            "description": "Price level of C (PPP/XR)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "pl_i": {
+            "description": "Price level of I (PPP/XR)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "pl_g": {
+            "description": "Price level of G (PPP/XR)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "pl_x": {
+            "description": "Price level of X (PPP/XR)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "pl_m": {
+            "description": "Price level of M (PPP/XR)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "pl_n": {
+            "description": "Price level of N (PPP/XR)",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "total": {
+            "description": "Total value of commodities",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "excl_energy": {
+            "description": "Value of commodities excluding energy",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "energy": {
+            "description": "Value of energy commodities",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "metals_minerals": {
+            "description": "Value of metals and minerals",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "forestry": {
+            "description": "Value of forestry commodities",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "agriculture": {
+            "description": "Value of agriculture commodities",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "fish": {
+            "description": "Value of fish commodities",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "total_change": {
+            "description": "Change in total value of commodities",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "excl_energy_change": {
+            "description": "Change in value of commodities excluding energy",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "energy_change": {
+            "description": "Change in value of energy commodities",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "metals_minerals_change": {
+            "description": "Change in value of metals and minerals",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "forestry_change": {
+            "description": "Change in value of forestry commodities",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "agriculture_change": {
+            "description": "Change in value of agriculture commodities",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "fish_change": {
+            "description": "Change in value of fish commodities",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "growthbucket": {
+            "description": "Categorical variable representing growth (1: Recession, 0: No recession)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "No recession",
+                "1": "Recession"
+            }
+        }
+    },
+    "task_info": {
+        "growthbucket": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in economic growth analysis.",
+                "task_prompt": "Based on the economic indicators of the African countries, please predict the growth status.",
+                "answer_prompt": "Recession[1] or no recession[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "No recession",
+                "1": "Recession"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "total_change": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in economic change analysis.",
+                "task_prompt": "Based on the economic indicators of the African countries, please predict the total change."
+            }
+        },
+        "excl_energy_change": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in energy sector analysis.",
+                "task_prompt": "Based on the economic indicators of the African countries, please predict the change in the energy sector excluding energy."
+            }
+        },
+        "energy_change": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in energy sector analysis.",
+                "task_prompt": "Based on the economic indicators of the African countries, please predict the change in the energy sector."
+            }
+        },
+        "metals_minerals_change": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in mining sector analysis.",
+                "task_prompt": "Based on the economic indicators of the African countries, please predict the change in the metals and minerals sector."
+            }
+        }
+    }
+}

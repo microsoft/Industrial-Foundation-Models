@@ -1,0 +1,143 @@
+{
+    "basic_info": {
+        "row_num": 1500,
+        "col_num": 7,
+        "label_candidates": [
+            "is_genuine",
+            "diagonal",
+            "height_left",
+            "height_right",
+            "margin_low",
+            "margin_up",
+            "length"
+        ],
+        "valid_feature_num": 7,
+        "num_features": [
+            "diagonal",
+            "height_left",
+            "height_right",
+            "margin_low",
+            "margin_up",
+            "length"
+        ],
+        "cat_features": [
+            "is_genuine"
+        ],
+        "other_features": [],
+        "tags": [
+            "earth and nature",
+            "beginner",
+            "k-means",
+            "tabular",
+            "knn"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/alexandrepetit881234/fake-bills"
+    },
+    "feature_info": {
+        "is_genuine": {
+            "description": "Indicates whether the bill is genuine or not. True means the bill is genuine, False means the bill is fake.",
+            "type": "categorical",
+            "value_dict": {
+                "True": "The bill is genuine.",
+                "False": "The bill is fake."
+            }
+        },
+        "diagonal": {
+            "description": "The diagonal length of the bill in millimeters.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "height_left": {
+            "description": "The height of the left side of the bill in millimeters.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "height_right": {
+            "description": "The height of the right side of the bill in millimeters.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "margin_low": {
+            "description": "The lower margin size of the bill in millimeters.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "margin_up": {
+            "description": "The upper margin size of the bill in millimeters.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "length": {
+            "description": "The length of the bill in millimeters.",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "is_genuine": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in counterfeit detection.",
+                "task_prompt": "Based on the physical features of the banknote, please predict if it is genuine or fake.",
+                "answer_prompt": "Genuine[0] or Fake[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "True": "The bill is genuine.",
+                "False": "The bill is fake."
+            },
+            "class_index_dict": {
+                "True": 0,
+                "False": 1
+            }
+        },
+        "diagonal": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in counterfeit detection.",
+                "task_prompt": "Based on the physical features of the banknote, please predict the diagonal length.",
+                "answer_prompt": "What is the predicted diagonal length?"
+            }
+        },
+        "height_left": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in counterfeit detection.",
+                "task_prompt": "Based on the physical features of the banknote, please predict the height on the left side.",
+                "answer_prompt": "What is the predicted height on the left side?"
+            }
+        },
+        "height_right": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in counterfeit detection.",
+                "task_prompt": "Based on the physical features of the banknote, please predict the height on the right side.",
+                "answer_prompt": "What is the predicted height on the right side?"
+            }
+        },
+        "margin_low": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in counterfeit detection.",
+                "task_prompt": "Based on the physical features of the banknote, please predict the lower margin.",
+                "answer_prompt": "What is the predicted lower margin?"
+            }
+        },
+        "margin_up": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in counterfeit detection.",
+                "task_prompt": "Based on the physical features of the banknote, please predict the upper margin.",
+                "answer_prompt": "What is the predicted upper margin?"
+            }
+        },
+        "length": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in counterfeit detection.",
+                "task_prompt": "Based on the physical features of the banknote, please predict the length.",
+                "answer_prompt": "What is the predicted length?"
+            }
+        }
+    }
+}

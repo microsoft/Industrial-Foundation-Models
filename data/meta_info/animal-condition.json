@@ -1,0 +1,83 @@
+{
+    "basic_info": {
+        "row_num": 869,
+        "col_num": 7,
+        "label_candidates": [
+            "Dangerous"
+        ],
+        "valid_feature_num": 7,
+        "num_features": [],
+        "cat_features": [
+            "AnimalName",
+            "symptoms1",
+            "symptoms2",
+            "symptoms3",
+            "symptoms4",
+            "symptoms5",
+            "Dangerous"
+        ],
+        "other_features": [],
+        "tags": [
+            "brazil",
+            "animals",
+            "computer vision",
+            "data analytics",
+            "audio synthesis",
+            "audio event classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/willianoliveiragibin/animal-condition"
+    },
+    "feature_info": {
+        "AnimalName": {
+            "description": "The name of the animal.",
+            "type": "categorical"
+        },
+        "symptoms1": {
+            "description": "The first symptom that the animal is experiencing.",
+            "type": "categorical"
+        },
+        "symptoms2": {
+            "description": "The second symptom that the animal is experiencing.",
+            "type": "categorical"
+        },
+        "symptoms3": {
+            "description": "The third symptom that the animal is experiencing.",
+            "type": "categorical"
+        },
+        "symptoms4": {
+            "description": "The fourth symptom that the animal is experiencing.",
+            "type": "categorical"
+        },
+        "symptoms5": {
+            "description": "The fifth symptom that the animal is experiencing.",
+            "type": "categorical"
+        },
+        "Dangerous": {
+            "description": "Whether the animal is considered dangerous based on its symptoms.",
+            "type": "categorical",
+            "value_dict": {
+                "Yes": "The animal is considered dangerous based on its symptoms.",
+                "No": "The animal is not considered dangerous based on its symptoms."
+            }
+        }
+    },
+    "task_info": {
+        "Dangerous": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in veterinary diagnostics.",
+                "task_prompt": "Based on the animal type and symptoms, please predict if the animal is considered dangerous.",
+                "answer_prompt": "Yes[1] or no[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "Yes": "The animal is considered dangerous based on its symptoms.",
+                "No": "The animal is not considered dangerous based on its symptoms."
+            },
+            "class_index_dict": {
+                "Yes": 1,
+                "No": 0
+            }
+        }
+    }
+}

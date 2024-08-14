@@ -1,0 +1,43 @@
+You are an expert in analyzing student data.
+Based on the features of the student, please predict if the student has entrepreneurial competency.
+I will supply multiple instances with features and the corresponding label for your reference.
+Please refer to the table below for detailed descriptions of the features and label:
+--- feature description ---
+Age: The age of the student
+Perseverance: Perseverance level of the student
+DesireToTakeInitiative: The desire level of the student to take initiatives
+Competitiveness: Competitiveness level of the student
+SelfReliance: Self-reliance level of the student
+StrongNeedToAchieve: The level of strong need to achieve in the student
+SelfConfidence: Self-confidence level of the student
+EducationSector: The sector of education the student belongs to
+IndividualProject: Whether the student has done any individual projects
+Gender: The gender of the student
+City: The city where the student lives
+Influenced: Whether the student is influenced by someone or not
+GoodPhysicalHealth: Whether the student is in good physical health or not
+MentalDisorder: Whether the student has any mental disorders or not
+KeyTraits: The key traits of the student
+--- label description --- 
+y: Target variable indicating whether the student has entrepreneurial competency or not
+--- data ---
+|Age|Perseverance|DesireToTakeInitiative|Competitiveness|SelfReliance|StrongNeedToAchieve|SelfConfidence|EducationSector|IndividualProject|Gender|City|Influenced|GoodPhysicalHealth|MentalDisorder|KeyTraits|y|
+|21|4|5|4|4|5|4|Engineering Sciences|No|Female|Yes|Yes|4|No|Positivity|0|
+|20|2|1|2|3|3|2|Others|No|Male|No|Yes|3|No|Passion|1|
+|20|4|5|4|5|5|3|Engineering Sciences|Yes|Male|Yes|No|4|No|Passion|0|
+|20|2|2|2|2|2|2|Engineering Sciences|Yes|Male|Yes|Yes|2|No|Vision|0|
+|19|4|5|5|5|5|5|Art, Music or Design|Yes|Female|Yes|Yes|5|No|Passion|1|
+|19|1|2|2|3|3|2|Engineering Sciences|No|Male|Yes|No|2|No|Passion|0|
+|20|3|5|5|4|5|2|Engineering Sciences|Yes|Male|Yes|Yes|4|Yes|Passion|1|
+|19|3|3|4|4|5|4|Economic Sciences, Business Studies, Commerce and Law|Yes|Male|Yes|Yes|5|No|Passion|1|
+|19|4|5|5|5|5|4|Economic Sciences, Business Studies, Commerce and Law|No|Male|No|Yes|5|Yes|Passion|0|
+|19|4|5|4|3|4|4|Engineering Sciences|Yes|Male|Yes|Yes|5|Yes|Positivity|1|
+|20|5|3|4|4|5|3|Engineering Sciences|Yes|Female|Yes|No|3|No|Work Ethic|0|
+|18|3|4|2|3|3|4|Engineering Sciences|No|Male|No|Yes|4|No|Positivity|1|
+|22|5|5|5|5|5|5|Engineering Sciences|Yes|Male|No|No|5|No|Positivity|1|
+|21|4|4|4|4|4|4|Engineering Sciences|Yes|Male|Yes|Yes|4|No|Positivity|0|
+|20|3|4|3|4|5|2|Economic Sciences, Business Studies, Commerce and Law|Yes|Male|No|No|3|No|Vision|0|
+|18|3|3|2|2|3|3|Engineering Sciences|No|Male|Yes|Yes|2|No|Work Ethic|1|
+|20|3|4|3|4|3|4|Art, Music or Design|Yes|Female|Yes|Yes|3|Yes|Positivity|<MASK>|
+Please use the supplied data to predict the <MASK> y. Yes[1] or No[0]?
+Answer: 1

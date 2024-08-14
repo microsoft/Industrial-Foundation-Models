@@ -1,0 +1,112 @@
+{
+    "basic_info": {
+        "row_num": 7935,
+        "col_num": 6,
+        "label_candidates": [
+            "Genre",
+            "Song year"
+        ],
+        "valid_feature_num": 5,
+        "num_features": [
+            "Song year"
+        ],
+        "cat_features": [
+            "Song",
+            "Artist",
+            "Genre"
+        ],
+        "other_features": [
+            "Lyrics"
+        ],
+        "tags": [
+            "arts and entertainment",
+            "text mining",
+            "feature engineering",
+            "text",
+            "multiclass classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/mateibejan/multilingual-lyrics-for-genre-classification"
+    },
+    "feature_info": {
+        "Song": {
+            "description": "The title of the song.",
+            "type": "categorical"
+        },
+        "Song year": {
+            "description": "The year the song was released.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Artist": {
+            "description": "The artist or band that performed the song.",
+            "type": "categorical"
+        },
+        "Genre": {
+            "description": "The genre of the song.",
+            "type": "categorical",
+            "value_dict": {
+                "Hip-Hop": "A genre characterized by a stylized rhythmic music that commonly accompanies rapping.",
+                "Indie": "A genre of alternative music that originated from the punk scene of the 1970s.",
+                "Metal": "A genre of rock music known for its amplified distortion, extended guitar solos and lyrics often dealing with masculine and aggressive themes.",
+                "Pop": "A genre of popular music that originated in its modern form during the mid-1950s.",
+                "Country": "A genre that emerged in the 1920s in the Southern United States, taking its roots from genres such as folk music and blues.",
+                "Jazz": "A genre originated in the African-American communities of New Orleans, United States.",
+                "Rock": "A genre that originated as \"rock and roll\" in the United States in the early 1950s.",
+                "R&B": "A genre that combines jazz, gospel, and blues influences.",
+                "Electronic": "A genre of music that employs electronic musical instruments, digital instruments and circuitry-based music technology.",
+                "Folk": "A genre that includes traditional folk music and the contemporary genre that evolved from it during the 20th-century folk revival."
+            }
+        },
+        "Lyrics": {
+            "description": "The lyrics of the song.",
+            "type": "other"
+        },
+        "Track_id": {
+            "description": "The unique identifier of the song.",
+            "type": "useless"
+        }
+    },
+    "task_info": {
+        "Genre": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in music genre classification.",
+                "task_prompt": "Based on the song, song year, artist, lyrics and track id, please predict the genre of the music.",
+                "answer_prompt": "Is it Hip-Hop[0], Indie[1], Metal[2], Pop[3], Country[4], Jazz[5], Rock[6], R&B[7], Electronic[8], or Folk[9]?"
+            },
+            "class_num": 10,
+            "class_value_dict": {
+                "Hip-Hop": "A genre characterized by a stylized rhythmic music that commonly accompanies rapping.",
+                "Indie": "A genre of alternative music that originated from the punk scene of the 1970s.",
+                "Metal": "A genre of rock music known for its amplified distortion, extended guitar solos and lyrics often dealing with masculine and aggressive themes.",
+                "Pop": "A genre of popular music that originated in its modern form during the mid-1950s.",
+                "Country": "A genre that emerged in the 1920s in the Southern United States, taking its roots from genres such as folk music and blues.",
+                "Jazz": "A genre originated in the African-American communities of New Orleans, United States.",
+                "Rock": "A genre that originated as \"rock and roll\" in the United States in the early 1950s.",
+                "R&B": "A genre that combines jazz, gospel, and blues influences.",
+                "Electronic": "A genre of music that employs electronic musical instruments, digital instruments and circuitry-based music technology.",
+                "Folk": "A genre that includes traditional folk music and the contemporary genre that evolved from it during the 20th-century folk revival."
+            },
+            "class_index_dict": {
+                "Hip-Hop": 0,
+                "Indie": 1,
+                "Metal": 2,
+                "Pop": 3,
+                "Country": 4,
+                "Jazz": 5,
+                "Rock": 6,
+                "R&B": 7,
+                "Electronic": 8,
+                "Folk": 9
+            }
+        },
+        "Song year": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in music history.",
+                "task_prompt": "Based on the song, artist, genre, lyrics and track id, please predict the year of the song.",
+                "answer_prompt": "Please enter the year in the format of \"YYYY\"."
+            }
+        }
+    }
+}

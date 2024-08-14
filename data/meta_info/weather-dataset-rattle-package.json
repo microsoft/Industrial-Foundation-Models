@@ -1,0 +1,217 @@
+{
+    "basic_info": {
+        "row_num": 142193,
+        "col_num": 23,
+        "label_candidates": [
+            "RainTomorrow",
+            "RainToday",
+            "MinTemp",
+            "MaxTemp"
+        ],
+        "valid_feature_num": 23,
+        "num_features": [
+            "MinTemp",
+            "MaxTemp",
+            "Rainfall",
+            "Evaporation",
+            "Sunshine",
+            "WindGustSpeed",
+            "WindSpeed9am",
+            "WindSpeed3pm",
+            "Humidity9am",
+            "Humidity3pm",
+            "Pressure9am",
+            "Pressure3pm",
+            "Cloud9am",
+            "Cloud3pm",
+            "Temp9am",
+            "Temp3pm"
+        ],
+        "cat_features": [
+            "Location",
+            "WindGustDir",
+            "WindDir9am",
+            "WindDir3pm",
+            "RainToday",
+            "RainTomorrow"
+        ],
+        "other_features": [
+            "Date"
+        ],
+        "tags": [
+            "earth and nature",
+            "weather and climate",
+            "classification",
+            "binary classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/jsphyg/weather-dataset-rattle-package"
+    },
+    "feature_info": {
+        "Date": {
+            "description": "The date of observation",
+            "type": "other"
+        },
+        "Location": {
+            "description": "The common name of the location of the weather station",
+            "type": "categorical"
+        },
+        "MinTemp": {
+            "description": "The minimum temperature in degrees celsius",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "MaxTemp": {
+            "description": "The maximum temperature in degrees celsius",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Rainfall": {
+            "description": "The amount of rainfall recorded for the day in mm",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Evaporation": {
+            "description": "The so-called Class A pan evaporation (mm) in the 24 hours to 9am",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Sunshine": {
+            "description": "The number of hours of bright sunshine in the day.",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "WindGustDir": {
+            "description": "The direction of the strongest wind gust in the 24 hours to midnight",
+            "type": "categorical"
+        },
+        "WindGustSpeed": {
+            "description": "The speed (km/h) of the strongest wind gust in the 24 hours to midnight",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "WindDir9am": {
+            "description": "Direction of the wind at 9am",
+            "type": "categorical"
+        },
+        "WindDir3pm": {
+            "description": "Direction of the wind at 3pm",
+            "type": "categorical"
+        },
+        "WindSpeed9am": {
+            "description": "Wind speed (km/hr) averaged over 10 minutes prior to 9am",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "WindSpeed3pm": {
+            "description": "Wind speed (km/hr) averaged over 10 minutes prior to 3pm",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Humidity9am": {
+            "description": "Humidity (percent) at 9am",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Humidity3pm": {
+            "description": "Humidity (percent) at 3pm",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Pressure9am": {
+            "description": "Atmospheric pressure (hpa) reduced to mean sea level at 9am",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Pressure3pm": {
+            "description": "Atmospheric pressure (hpa) reduced to mean sea level at 3pm",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Cloud9am": {
+            "description": "Fraction of sky obscured by cloud at 9am. This is measured in \"oktas\", which are a unit of eigths. It records how many eigths of the sky are obscured by cloud. A 0 measure indicates completely clear sky whilst an 8 indicates that it is completely overcast.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Cloud3pm": {
+            "description": "Fraction of sky obscured by cloud (in \"oktas\": eighths) at 3pm. A 0 measure indicates completely clear sky whilst an 8 indicates that it is completely overcast.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Temp9am": {
+            "description": "Temperature (degrees C) at 9am",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Temp3pm": {
+            "description": "Temperature (degrees C) at 3pm",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "RainToday": {
+            "description": "Boolean: 1 if precipitation (mm) in the 24 hours to 9am exceeds 1mm, otherwise 0",
+            "type": "categorical",
+            "value_dict": {
+                "No": "No rain today",
+                "Yes": "There was rain today"
+            }
+        },
+        "RainTomorrow": {
+            "description": "The amount of next day rain in mm. Used to create response variable RainTomorrow. A kind of measure of the \"risk\".",
+            "type": "categorical",
+            "value_dict": {
+                "No": "No rain tomorrow",
+                "Yes": "There will be rain tomorrow"
+            }
+        }
+    },
+    "task_info": {
+        "RainTomorrow": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are a weather forecasting assistant.",
+                "task_prompt": "Based on the weather conditions, please predict if there will be rain tomorrow.",
+                "answer_prompt": "No rain tomorrow[0] or there will be rain tomorrow[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "No": "No rain tomorrow",
+                "Yes": "There will be rain tomorrow"
+            },
+            "class_index_dict": {
+                "No": 0,
+                "Yes": 1
+            }
+        },
+        "RainToday": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are a weather forecasting assistant.",
+                "task_prompt": "Based on the weather conditions, please predict if there was rain today.",
+                "answer_prompt": "No rain today[0] or there was rain today[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "No": "No rain today",
+                "Yes": "There was rain today"
+            },
+            "class_index_dict": {
+                "No": 0,
+                "Yes": 1
+            }
+        },
+        "MinTemp": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are a weather forecasting assistant.",
+                "task_prompt": "Based on the weather conditions, please predict the minimum temperature."
+            }
+        },
+        "MaxTemp": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are a weather forecasting assistant.",
+                "task_prompt": "Based on the weather conditions, please predict the maximum temperature."
+            }
+        }
+    }
+}

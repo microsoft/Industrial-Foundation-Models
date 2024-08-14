@@ -1,0 +1,140 @@
+{
+    "basic_info": {
+        "row_num": 10000,
+        "col_num": 10,
+        "label_candidates": [
+            "Target",
+            "Failure Type"
+        ],
+        "valid_feature_num": 8,
+        "num_features": [
+            "Air temperature [K]",
+            "Process temperature [K]",
+            "Rotational speed [rpm]",
+            "Torque [Nm]",
+            "Tool wear [min]"
+        ],
+        "cat_features": [
+            "Type",
+            "Failure Type",
+            "Target"
+        ],
+        "other_features": [],
+        "tags": [
+            "earth and nature",
+            "physics",
+            "manufacturing",
+            "binary classification",
+            "multiclass classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/shivamb/machine-predictive-maintenance-classification"
+    },
+    "feature_info": {
+        "UDI": {
+            "description": "Unique identifier for each record",
+            "type": "useless"
+        },
+        "Product ID": {
+            "description": "Unique identifier for each product",
+            "type": "useless"
+        },
+        "Type": {
+            "description": "Type of the product",
+            "type": "categorical",
+            "value_dict": {
+                "M": "Type M product",
+                "L": "Type L product",
+                "H": "Type H product"
+            }
+        },
+        "Air temperature [K]": {
+            "description": "Air temperature in Kelvin during the manufacturing process",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Process temperature [K]": {
+            "description": "Process temperature in Kelvin during the manufacturing process",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Rotational speed [rpm]": {
+            "description": "Rotational speed in revolutions per minute during the manufacturing process",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Torque [Nm]": {
+            "description": "Torque in Newton meter applied during the manufacturing process",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Tool wear [min]": {
+            "description": "Tool wear in minutes",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Target": {
+            "description": "Target variable indicating the occurrence of failure (1: failure, 0: no failure)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "No failure occurred",
+                "1": "Failure occurred"
+            }
+        },
+        "Failure Type": {
+            "description": "Type of failure occurred",
+            "type": "categorical",
+            "value_dict": {
+                "No Failure": "No failure occurred",
+                "Power Failure": "Power failure occurred",
+                "Tool Wear Failure": "Tool wear failure occurred",
+                "Overstrain Failure": "Overstrain failure occurred",
+                "Random Failures": "Random failure occurred",
+                "Heat Dissipation Failure": "Heat dissipation failure occurred"
+            }
+        }
+    },
+    "task_info": {
+        "Target": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in predictive maintenance.",
+                "task_prompt": "Based on the features of the machine, please predict whether a failure will occur.",
+                "answer_prompt": "No failure occurred[0] or Failure occurred[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "No failure occurred",
+                "1": "Failure occurred"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "Failure Type": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in predictive maintenance.",
+                "task_prompt": "Based on the features of the machine, please predict the type of failure.",
+                "answer_prompt": "No failure occurred[0], Power failure occurred[1], Tool wear failure occurred[2], Overstrain failure occurred[3], Random failure occurred[4], Heat dissipation failure occurred[5]."
+            },
+            "class_num": 6,
+            "class_value_dict": {
+                "No Failure": "No failure occurred",
+                "Power Failure": "Power failure occurred",
+                "Tool Wear Failure": "Tool wear failure occurred",
+                "Overstrain Failure": "Overstrain failure occurred",
+                "Random Failures": "Random failure occurred",
+                "Heat Dissipation Failure": "Heat dissipation failure occurred"
+            },
+            "class_index_dict": {
+                "No Failure": 0,
+                "Power Failure": 1,
+                "Tool Wear Failure": 2,
+                "Overstrain Failure": 3,
+                "Random Failures": 4,
+                "Heat Dissipation Failure": 5
+            }
+        }
+    }
+}

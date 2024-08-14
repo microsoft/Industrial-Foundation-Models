@@ -1,0 +1,265 @@
+{
+    "basic_info": {
+        "row_num": 45211,
+        "col_num": 23,
+        "label_candidates": [
+            "response",
+            "y",
+            "eligible"
+        ],
+        "valid_feature_num": 23,
+        "num_features": [
+            "age",
+            "salary",
+            "balance",
+            "day",
+            "duration",
+            "campaign",
+            "pdays",
+            "previous"
+        ],
+        "cat_features": [
+            "age group",
+            "eligible",
+            "job",
+            "marital",
+            "education",
+            "marital-education",
+            "targeted",
+            "default",
+            "housing",
+            "loan",
+            "contact",
+            "month",
+            "poutcome",
+            "y",
+            "response"
+        ],
+        "other_features": [],
+        "tags": [
+            "finance",
+            "banking",
+            "marketing",
+            "intermediate",
+            "classification",
+            "tabular"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/dhirajnirne/bank-marketing"
+    },
+    "feature_info": {
+        "age": {
+            "description": "The age of the customer",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "age group": {
+            "description": "The age group that the customer falls into",
+            "type": "categorical",
+            "value_dict": {
+                "5": "Age between 50-59",
+                "4": "Age between 40-49",
+                "3": "Age between 30-39",
+                "2": "Age between 20-29",
+                "6": "Age between 60-69",
+                "8": "Age between 80-89",
+                "7": "Age between 70-79",
+                "1": "Age less than 20",
+                "9": "Age 90 and above"
+            }
+        },
+        "eligible": {
+            "description": "Whether the customer is eligible or not",
+            "type": "categorical",
+            "value_dict": {
+                "Y": "Eligible",
+                "N": "Not Eligible"
+            }
+        },
+        "job": {
+            "description": "The type of job the customer has",
+            "type": "categorical"
+        },
+        "salary": {
+            "description": "The salary of the customer",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "marital": {
+            "description": "The marital status of the customer",
+            "type": "categorical",
+            "value_dict": {
+                "married": "Married",
+                "single": "Single",
+                "divorced": "Divorced"
+            }
+        },
+        "education": {
+            "description": "The education level of the customer",
+            "type": "categorical",
+            "value_dict": {
+                "tertiary": "Tertiary education",
+                "secondary": "Secondary education",
+                "unknown": "Education level unknown",
+                "primary": "Primary education"
+            }
+        },
+        "marital-education": {
+            "description": "The combination of marital status and education level",
+            "type": "categorical"
+        },
+        "targeted": {
+            "description": "Whether the customer is targeted or not",
+            "type": "categorical",
+            "value_dict": {
+                "yes": "Targeted for campaign",
+                "no": "Not targeted for campaign"
+            }
+        },
+        "default": {
+            "description": "Whether the customer has credit in default",
+            "type": "categorical",
+            "value_dict": {
+                "no": "No credit in default",
+                "yes": "Credit in default"
+            }
+        },
+        "balance": {
+            "description": "The average yearly balance, in euros",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "housing": {
+            "description": "Whether the customer has a housing loan",
+            "type": "categorical",
+            "value_dict": {
+                "yes": "Has housing loan",
+                "no": "Does not have housing loan"
+            }
+        },
+        "loan": {
+            "description": "Whether the customer has a personal loan",
+            "type": "categorical",
+            "value_dict": {
+                "no": "Does not have personal loan",
+                "yes": "Has personal loan"
+            }
+        },
+        "contact": {
+            "description": "Contact communication type",
+            "type": "categorical",
+            "value_dict": {
+                "unknown": "Contact type unknown",
+                "cellular": "Cellular contact",
+                "telephone": "Telephone contact"
+            }
+        },
+        "day": {
+            "description": "Last contact day of the month",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "month": {
+            "description": "Last contact month of year",
+            "type": "categorical"
+        },
+        "duration": {
+            "description": "Last contact duration, in seconds",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "campaign": {
+            "description": "Number of contacts performed during this campaign and for this client",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "pdays": {
+            "description": "Number of days that passed by after the client was last contacted from a previous campaign",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "previous": {
+            "description": "Number of contacts performed before this campaign and for this client",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "poutcome": {
+            "description": "Outcome of the previous marketing campaign",
+            "type": "categorical",
+            "value_dict": {
+                "unknown": "Outcome of previous campaign unknown",
+                "failure": "Previous campaign was a failure",
+                "other": "Other outcome of previous campaign",
+                "success": "Previous campaign was a success"
+            }
+        },
+        "y": {
+            "description": "Has the client subscribed a term deposit?",
+            "type": "categorical",
+            "value_dict": {
+                "no": "Has not subscribed a term deposit",
+                "yes": "Has subscribed a term deposit"
+            }
+        },
+        "response": {
+            "description": "Response of the client to the marketing campaign (0: no, 1: yes)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Did not respond to the marketing campaign",
+                "1": "Responded to the marketing campaign"
+            }
+        }
+    },
+    "task_info": {
+        "response": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in bank marketing analysis.",
+                "task_prompt": "Based on the features of the customer, please predict whether the customer responded to the marketing campaign.",
+                "answer_prompt": "Did not respond to the marketing campaign[0] or Responded to the marketing campaign[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "Did not respond to the marketing campaign",
+                "1": "Responded to the marketing campaign"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "y": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in bank marketing analysis.",
+                "task_prompt": "Based on the features of the customer, please predict whether the customer has subscribed a term deposit.",
+                "answer_prompt": "Has not subscribed a term deposit[0] or Has subscribed a term deposit[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "no": "Has not subscribed a term deposit",
+                "yes": "Has subscribed a term deposit"
+            },
+            "class_index_dict": {
+                "no": 0,
+                "yes": 1
+            }
+        },
+        "eligible": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in bank marketing analysis.",
+                "task_prompt": "Based on the features of the customer, please predict whether the customer is eligible.",
+                "answer_prompt": "Not Eligible[0] or Eligible[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "Y": "Eligible",
+                "N": "Not Eligible"
+            },
+            "class_index_dict": {
+                "N": 0,
+                "Y": 1
+            }
+        }
+    }
+}

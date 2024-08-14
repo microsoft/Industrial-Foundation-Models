@@ -1,0 +1,124 @@
+{
+    "basic_info": {
+        "row_num": 65,
+        "col_num": 8,
+        "label_candidates": [
+            "Total Library Size",
+            "No. of TV Shows",
+            "No. of Movies",
+            "Cost Per Month - Basic ($)",
+            "Cost Per Month - Standard ($)",
+            "Cost Per Month - Premium ($)"
+        ],
+        "valid_feature_num": 8,
+        "num_features": [
+            "Total Library Size",
+            "No. of TV Shows",
+            "No. of Movies",
+            "Cost Per Month - Basic ($)",
+            "Cost Per Month - Standard ($)",
+            "Cost Per Month - Premium ($)"
+        ],
+        "cat_features": [
+            "Country_code",
+            "Country"
+        ],
+        "other_features": [],
+        "tags": [
+            "movies and tv shows",
+            "exploratory data analysis",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/prasertk/netflix-subscription-price-in-different-countries"
+    },
+    "feature_info": {
+        "Country_code": {
+            "description": "The code representing the country where the Netflix subscription is located.",
+            "type": "categorical"
+        },
+        "Country": {
+            "description": "The name of the country where the Netflix subscription is located.",
+            "type": "categorical"
+        },
+        "Total Library Size": {
+            "description": "The total number of TV shows and movies available in the Netflix library for the specific country.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "No. of TV Shows": {
+            "description": "The number of TV shows available in the Netflix library for the specific country.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "No. of Movies": {
+            "description": "The number of movies available in the Netflix library for the specific country.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Cost Per Month - Basic ($)": {
+            "description": "The monthly cost of a basic Netflix subscription in the specific country, in US dollars.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Cost Per Month - Standard ($)": {
+            "description": "The monthly cost of a standard Netflix subscription in the specific country, in US dollars.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Cost Per Month - Premium ($)": {
+            "description": "The monthly cost of a premium Netflix subscription in the specific country, in US dollars.",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "Total Library Size": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in data analysis for streaming platforms.",
+                "task_prompt": "Based on the features of the different countries, please predict the total library size.",
+                "answer_prompt": "The total library size is predicted to be {}."
+            }
+        },
+        "No. of TV Shows": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in data analysis for streaming platforms.",
+                "task_prompt": "Based on the features of the different countries, please predict the number of TV shows.",
+                "answer_prompt": "The number of TV shows is predicted to be {}."
+            }
+        },
+        "No. of Movies": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in data analysis for streaming platforms.",
+                "task_prompt": "Based on the features of the different countries, please predict the number of movies.",
+                "answer_prompt": "The number of movies is predicted to be {}."
+            }
+        },
+        "Cost Per Month - Basic ($)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in data analysis for streaming platforms.",
+                "task_prompt": "Based on the features of the different countries, please predict the cost per month for a basic subscription.",
+                "answer_prompt": "The cost per month for a basic subscription is predicted to be {}."
+            }
+        },
+        "Cost Per Month - Standard ($)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in data analysis for streaming platforms.",
+                "task_prompt": "Based on the features of the different countries, please predict the cost per month for a standard subscription.",
+                "answer_prompt": "The cost per month for a standard subscription is predicted to be {}."
+            }
+        },
+        "Cost Per Month - Premium ($)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in data analysis for streaming platforms.",
+                "task_prompt": "Based on the features of the different countries, please predict the cost per month for a premium subscription.",
+                "answer_prompt": "The cost per month for a premium subscription is predicted to be {}."
+            }
+        }
+    }
+}

@@ -1,0 +1,95 @@
+{
+    "basic_info": {
+        "row_num": 373,
+        "col_num": 6,
+        "label_candidates": [
+            "Salary",
+            "Years of Experience",
+            "Age"
+        ],
+        "valid_feature_num": 6,
+        "num_features": [
+            "Age",
+            "Years of Experience",
+            "Salary"
+        ],
+        "cat_features": [
+            "Gender",
+            "Education Level",
+            "Job Title"
+        ],
+        "other_features": [],
+        "tags": [
+            "beginner",
+            "data analytics",
+            "tabular",
+            "regression",
+            "jobs and career"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/rkiattisak/salaly-prediction-for-beginer"
+    },
+    "feature_info": {
+        "Age": {
+            "description": "The age of the employee in years",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Gender": {
+            "description": "The gender of the employee",
+            "type": "categorical",
+            "value_dict": {
+                "Male": "The employee is male",
+                "Female": "The employee is female"
+            }
+        },
+        "Education Level": {
+            "description": "The highest level of education achieved by the employee",
+            "type": "categorical",
+            "value_dict": {
+                "Bachelor's": "The employee has a Bachelor degree",
+                "Master's": "The employee has a Master degree",
+                "PhD": "The employee has a PhD degree"
+            }
+        },
+        "Job Title": {
+            "description": "The job title of the employee",
+            "type": "categorical"
+        },
+        "Years of Experience": {
+            "description": "The total years of experience in the relevant field by the employee",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Salary": {
+            "description": "The annual salary of the employee in USD",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "Salary": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in job salary prediction.",
+                "task_prompt": "Based on the age, gender, education level, job title, and years of experience of the employee, please predict the salary.",
+                "answer_prompt": "The predicted salary is ______."
+            }
+        },
+        "Years of Experience": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in predicting years of professional experience.",
+                "task_prompt": "Based on the age, gender, education level, job title, and salary of the employee, please predict the years of experience.",
+                "answer_prompt": "The predicted years of experience are ______."
+            }
+        },
+        "Age": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in predicting the age of employees.",
+                "task_prompt": "Based on the gender, education level, job title, years of experience, and salary of the employee, please predict the age.",
+                "answer_prompt": "The predicted age is ______."
+            }
+        }
+    }
+}

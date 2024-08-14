@@ -1,0 +1,385 @@
+{
+    "basic_info": {
+        "row_num": 2395,
+        "col_num": 34,
+        "label_candidates": [
+            "esrb_rating",
+            "violence",
+            "sexual_content"
+        ],
+        "valid_feature_num": 34,
+        "num_features": [],
+        "cat_features": [
+            "title",
+            "console",
+            "alcohol_reference",
+            "animated_blood",
+            "blood",
+            "blood_and_gore",
+            "cartoon_violence",
+            "crude_humor",
+            "drug_reference",
+            "fantasy_violence",
+            "intense_violence",
+            "language",
+            "lyrics",
+            "mature_humor",
+            "mild_blood",
+            "mild_cartoon_violence",
+            "mild_fantasy_violence",
+            "mild_language",
+            "mild_lyrics",
+            "mild_suggestive_themes",
+            "mild_violence",
+            "no_descriptors",
+            "nudity",
+            "partial_nudity",
+            "sexual_content",
+            "sexual_themes",
+            "simulated_gambling",
+            "strong_janguage",
+            "strong_sexual_content",
+            "suggestive_themes",
+            "use_of_alcohol",
+            "use_of_drugs_and_alcohol",
+            "violence",
+            "esrb_rating"
+        ],
+        "other_features": [],
+        "tags": [
+            "video games",
+            "beginner",
+            "classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/imohtn/video-games-rating-by-esrb"
+    },
+    "feature_info": {
+        "title": {
+            "description": "The title of the video game.",
+            "type": "categorical"
+        },
+        "console": {
+            "description": "The console on which the game is played. 1 represents Yes, 0 represents No.",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The game is available on console.",
+                "0": "The game is not available on console."
+            }
+        },
+        "alcohol_reference": {
+            "description": "Whether the game has references to alcohol. 1 represents Yes, 0 represents No.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The game does not have references to alcohol.",
+                "1": "The game has references to alcohol."
+            }
+        },
+        "animated_blood": {
+            "description": "Whether the game has animated blood. 1 represents Yes, 0 represents No.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The game does not have animated blood.",
+                "1": "The game has animated blood."
+            }
+        },
+        "blood": {
+            "description": "Whether the game has blood. 1 represents Yes, 0 represents No.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The game does not have blood.",
+                "1": "The game has blood."
+            }
+        },
+        "blood_and_gore": {
+            "description": "Whether the game has blood and gore. 1 represents Yes, 0 represents No.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The game does not have blood and gore.",
+                "1": "The game has blood and gore."
+            }
+        },
+        "cartoon_violence": {
+            "description": "Whether the game has cartoon violence. 1 represents Yes, 0 represents No.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The game does not have cartoon violence.",
+                "1": "The game has cartoon violence."
+            }
+        },
+        "crude_humor": {
+            "description": "Whether the game has crude humor. 1 represents Yes, 0 represents No.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The game does not have crude humor.",
+                "1": "The game has crude humor."
+            }
+        },
+        "drug_reference": {
+            "description": "Whether the game has drug references. 1 represents Yes, 0 represents No.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The game does not have drug references.",
+                "1": "The game has drug references."
+            }
+        },
+        "fantasy_violence": {
+            "description": "Whether the game has fantasy violence. 1 represents Yes, 0 represents No.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The game does not have fantasy violence.",
+                "1": "The game has fantasy violence."
+            }
+        },
+        "intense_violence": {
+            "description": "Whether the game has intense violence. 1 represents Yes, 0 represents No.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The game does not have intense violence.",
+                "1": "The game has intense violence."
+            }
+        },
+        "language": {
+            "description": "Whether the game has language. 1 represents Yes, 0 represents No.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The game does not have language.",
+                "1": "The game has language."
+            }
+        },
+        "lyrics": {
+            "description": "Whether the game has lyrics. 1 represents Yes, 0 represents No.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The game does not have lyrics.",
+                "1": "The game has lyrics."
+            }
+        },
+        "mature_humor": {
+            "description": "Whether the game has mature humor. 1 represents Yes, 0 represents No.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The game does not have mature humor.",
+                "1": "The game has mature humor."
+            }
+        },
+        "mild_blood": {
+            "description": "Whether the game has mild blood. 1 represents Yes, 0 represents No.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The game does not have mild blood.",
+                "1": "The game has mild blood."
+            }
+        },
+        "mild_cartoon_violence": {
+            "description": "Whether the game has mild cartoon violence. 1 represents Yes, 0 represents No.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The game does not have mild cartoon violence.",
+                "1": "The game has mild cartoon violence."
+            }
+        },
+        "mild_fantasy_violence": {
+            "description": "Whether the game has mild fantasy violence. 1 represents Yes, 0 represents No.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The game does not have mild fantasy violence.",
+                "1": "The game has mild fantasy violence."
+            }
+        },
+        "mild_language": {
+            "description": "Whether the game has mild language. 1 represents Yes, 0 represents No.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The game does not have mild language.",
+                "1": "The game has mild language."
+            }
+        },
+        "mild_lyrics": {
+            "description": "Whether the game has mild lyrics. 1 represents Yes, 0 represents No.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The game does not have mild lyrics.",
+                "1": "The game has mild lyrics."
+            }
+        },
+        "mild_suggestive_themes": {
+            "description": "Whether the game has mild suggestive themes. 1 represents Yes, 0 represents No.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The game does not have mild suggestive themes.",
+                "1": "The game has mild suggestive themes."
+            }
+        },
+        "mild_violence": {
+            "description": "Whether the game has mild violence. 1 represents Yes, 0 represents No.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The game does not have mild violence.",
+                "1": "The game has mild violence."
+            }
+        },
+        "no_descriptors": {
+            "description": "Whether the game has no descriptors. 1 represents Yes, 0 represents No.",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The game does not have any descriptors.",
+                "0": "The game has descriptors."
+            }
+        },
+        "nudity": {
+            "description": "Whether the game has nudity. 1 represents Yes, 0 represents No.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The game does not have nudity.",
+                "1": "The game has nudity."
+            }
+        },
+        "partial_nudity": {
+            "description": "Whether the game has partial nudity. 1 represents Yes, 0 represents No.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The game does not have partial nudity.",
+                "1": "The game has partial nudity."
+            }
+        },
+        "sexual_content": {
+            "description": "Whether the game has sexual content. 1 represents Yes, 0 represents No.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The game does not have sexual content.",
+                "1": "The game has sexual content."
+            }
+        },
+        "sexual_themes": {
+            "description": "Whether the game has sexual themes. 1 represents Yes, 0 represents No.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The game does not have sexual themes.",
+                "1": "The game has sexual themes."
+            }
+        },
+        "simulated_gambling": {
+            "description": "Whether the game has simulated gambling. 1 represents Yes, 0 represents No.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The game does not have simulated gambling.",
+                "1": "The game has simulated gambling."
+            }
+        },
+        "strong_janguage": {
+            "description": "Whether the game has strong language. 1 represents Yes, 0 represents No.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The game does not have strong language.",
+                "1": "The game has strong language."
+            }
+        },
+        "strong_sexual_content": {
+            "description": "Whether the game has strong sexual content. 1 represents Yes, 0 represents No.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The game does not have strong sexual content.",
+                "1": "The game has strong sexual content."
+            }
+        },
+        "suggestive_themes": {
+            "description": "Whether the game has suggestive themes. 1 represents Yes, 0 represents No.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The game does not have suggestive themes.",
+                "1": "The game has suggestive themes."
+            }
+        },
+        "use_of_alcohol": {
+            "description": "Whether the game has use of alcohol. 1 represents Yes, 0 represents No.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The game does not have use of alcohol.",
+                "1": "The game has use of alcohol."
+            }
+        },
+        "use_of_drugs_and_alcohol": {
+            "description": "Whether the game has use of drugs and alcohol. 1 represents Yes, 0 represents No.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The game does not have use of drugs and alcohol.",
+                "1": "The game has use of drugs and alcohol."
+            }
+        },
+        "violence": {
+            "description": "Whether the game has violence. 1 represents Yes, 0 represents No.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The game does not have violence.",
+                "1": "The game has violence."
+            }
+        },
+        "esrb_rating": {
+            "description": "The ESRB rating of the game. E for Everyone, ET for Everyone 10+, T for Teen, M for Mature.",
+            "type": "categorical",
+            "value_dict": {
+                "E": "The game is rated E for Everyone.",
+                "ET": "The game is rated ET for Everyone 10+.",
+                "M": "The game is rated M for Mature.",
+                "T": "The game is rated T for Teen."
+            }
+        }
+    },
+    "task_info": {
+        "esrb_rating": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in video game content rating.",
+                "task_prompt": "Based on the features of the video game, please predict the ESRB rating.",
+                "answer_prompt": "E for Everyone[0], ET for Everyone 10+[1], M for Mature[2], or T for Teen[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "E": "The game is rated E for Everyone.",
+                "ET": "The game is rated ET for Everyone 10+.",
+                "M": "The game is rated M for Mature.",
+                "T": "The game is rated T for Teen."
+            },
+            "class_index_dict": {
+                "E": 0,
+                "ET": 1,
+                "M": 2,
+                "T": 3
+            }
+        },
+        "violence": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in video game content analysis.",
+                "task_prompt": "Based on the features of the video game, please predict if the game has violence.",
+                "answer_prompt": "No[0] or Yes[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "The game does not have violence.",
+                "1": "The game has violence."
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "sexual_content": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in video game content analysis.",
+                "task_prompt": "Based on the features of the video game, please predict if the game has sexual content.",
+                "answer_prompt": "No[0] or Yes[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "The game does not have sexual content.",
+                "1": "The game has sexual content."
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        }
+    }
+}

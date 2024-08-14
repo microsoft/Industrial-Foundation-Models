@@ -1,0 +1,495 @@
+{
+    "basic_info": {
+        "row_num": 184152,
+        "col_num": 38,
+        "label_candidates": [
+            "flWinner",
+            "qtKill",
+            "qtAssist",
+            "qtDeath",
+            "qtHs",
+            "qtBombeDefuse",
+            "qtBombePlant",
+            "qt1Kill",
+            "qt2Kill",
+            "qt3Kill",
+            "qt4Kill",
+            "qt5Kill",
+            "qtPlusKill",
+            "qtFirstKill",
+            "vlDamage",
+            "qtHits",
+            "qtLastAlive",
+            "qtClutchWon",
+            "qtSurvived",
+            "qtTrade",
+            "qtFlashAssist",
+            "qtHitHeadshot",
+            "qtHitChest",
+            "qtHitStomach",
+            "qtHitLeftAtm",
+            "qtHitRightArm",
+            "qtHitLeftLeg",
+            "qtHitRightLeg"
+        ],
+        "valid_feature_num": 35,
+        "num_features": [
+            "qtKill",
+            "qtAssist",
+            "qtDeath",
+            "qtHs",
+            "qtBombeDefuse",
+            "qtBombePlant",
+            "qtTk",
+            "qtTkAssist",
+            "qt1Kill",
+            "qt2Kill",
+            "qt3Kill",
+            "qt4Kill",
+            "qt5Kill",
+            "qtPlusKill",
+            "qtFirstKill",
+            "vlDamage",
+            "qtHits",
+            "qtShots",
+            "qtLastAlive",
+            "qtClutchWon",
+            "qtRoundsPlayed",
+            "vlLevel",
+            "qtSurvived",
+            "qtTrade",
+            "qtFlashAssist",
+            "qtHitHeadshot",
+            "qtHitChest",
+            "qtHitStomach",
+            "qtHitLeftAtm",
+            "qtHitRightArm",
+            "qtHitLeftLeg",
+            "qtHitRightLeg"
+        ],
+        "cat_features": [
+            "descMapName",
+            "flWinner"
+        ],
+        "other_features": [
+            "dtCreatedAt"
+        ],
+        "tags": [
+            "games",
+            "video games",
+            "data analytics",
+            "classification",
+            "clustering",
+            "tabular"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/gamersclub/brazilian-csgo-plataform-dataset-by-gamers-club"
+    },
+    "feature_info": {
+        "idLobbyGame": {
+            "description": "Unique ID of the game lobby",
+            "type": "useless"
+        },
+        "idPlayer": {
+            "description": "Unique ID of the player",
+            "type": "useless"
+        },
+        "idRoom": {
+            "description": "Unique ID of the room",
+            "type": "useless"
+        },
+        "qtKill": {
+            "description": "Quantity of kills made by the player",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "qtAssist": {
+            "description": "Quantity of assists made by the player",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "qtDeath": {
+            "description": "Quantity of deaths of the player",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "qtHs": {
+            "description": "Quantity of headshots made by the player",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "qtBombeDefuse": {
+            "description": "Quantity of bomb defuses made by the player",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "qtBombePlant": {
+            "description": "Quantity of bomb plants made by the player",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "qtTk": {
+            "description": "Quantity of team kills made by the player",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "qtTkAssist": {
+            "description": "Quantity of team kill assists made by the player",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "qt1Kill": {
+            "description": "Quantity of single kills made by the player",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "qt2Kill": {
+            "description": "Quantity of double kills made by the player",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "qt3Kill": {
+            "description": "Quantity of triple kills made by the player",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "qt4Kill": {
+            "description": "Quantity of quadruple kills made by the player",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "qt5Kill": {
+            "description": "Quantity of quintuple kills made by the player",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "qtPlusKill": {
+            "description": "Quantity of plus kills made by the player",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "qtFirstKill": {
+            "description": "Quantity of first kills made by the player",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "vlDamage": {
+            "description": "Total damage value made by the player",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "qtHits": {
+            "description": "Quantity of hits made by the player",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "qtShots": {
+            "description": "Quantity of shots made by the player",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "qtLastAlive": {
+            "description": "Quantity of times the player was the last one alive",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "qtClutchWon": {
+            "description": "Quantity of clutches won by the player",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "qtRoundsPlayed": {
+            "description": "Quantity of rounds played by the player",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "descMapName": {
+            "description": "Name of the map where the game was played",
+            "type": "categorical",
+            "value_dict": {
+                "de_mirage": "The game was played on the de_mirage map",
+                "de_nuke": "The game was played on the de_nuke map",
+                "de_inferno": "The game was played on the de_inferno map",
+                "de_vertigo": "The game was played on the de_vertigo map",
+                "de_ancient": "The game was played on the de_ancient map",
+                "de_dust2": "The game was played on the de_dust2 map",
+                "de_train": "The game was played on the de_train map",
+                "de_overpass": "The game was played on the de_overpass map"
+            }
+        },
+        "vlLevel": {
+            "description": "Level of the player",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "qtSurvived": {
+            "description": "Quantity of times the player survived",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "qtTrade": {
+            "description": "Quantity of trades made by the player",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "qtFlashAssist": {
+            "description": "Quantity of flash assists made by the player",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "qtHitHeadshot": {
+            "description": "Quantity of headshots hit by the player",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "qtHitChest": {
+            "description": "Quantity of chest hits made by the player",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "qtHitStomach": {
+            "description": "Quantity of stomach hits made by the player",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "qtHitLeftAtm": {
+            "description": "Quantity of left arm hits made by the player",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "qtHitRightArm": {
+            "description": "Quantity of right arm hits made by the player",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "qtHitLeftLeg": {
+            "description": "Quantity of left leg hits made by the player",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "qtHitRightLeg": {
+            "description": "Quantity of right leg hits made by the player",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "flWinner": {
+            "description": "Flag indicating if the player was the winner (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The player was not the winner of the game",
+                "1": "The player was the winner of the game"
+            }
+        },
+        "dtCreatedAt": {
+            "description": "Date and time when the game was created",
+            "type": "other"
+        }
+    },
+    "task_info": {
+        "flWinner": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in competitive gaming data analysis.",
+                "task_prompt": "Based on the gaming data of the player, please predict if the player was the winner of the game.",
+                "answer_prompt": "Not the winner[0] or the winner[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "The player was not the winner of the game",
+                "1": "The player was the winner of the game"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "qtKill": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in competitive gaming data analysis.",
+                "task_prompt": "Based on the gaming data of the player, please predict the number of kills the player made."
+            }
+        },
+        "qtAssist": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in competitive gaming data analysis.",
+                "task_prompt": "Based on the gaming data of the player, please predict the number of assists the player made."
+            }
+        },
+        "qtDeath": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in competitive gaming data analysis.",
+                "task_prompt": "Based on the gaming data of the player, please predict the number of deaths the player had."
+            }
+        },
+        "qtHs": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in competitive gaming data analysis.",
+                "task_prompt": "Based on the gaming data of the player, please predict the number of headshots the player made."
+            }
+        },
+        "qtBombeDefuse": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in competitive gaming data analysis.",
+                "task_prompt": "Based on the gaming data of the player, please predict the number of bombs the player defused."
+            }
+        },
+        "qtBombePlant": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in competitive gaming data analysis.",
+                "task_prompt": "Based on the gaming data of the player, please predict the number of bombs the player planted."
+            }
+        },
+        "qt1Kill": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in competitive gaming data analysis.",
+                "task_prompt": "Based on the gaming data of the player, please predict the number of times the player killed 1 enemy."
+            }
+        },
+        "qt2Kill": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in competitive gaming data analysis.",
+                "task_prompt": "Based on the gaming data of the player, please predict the number of times the player killed 2 enemies."
+            }
+        },
+        "qt3Kill": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in competitive gaming data analysis.",
+                "task_prompt": "Based on the gaming data of the player, please predict the number of times the player killed 3 enemies."
+            }
+        },
+        "qt4Kill": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in competitive gaming data analysis.",
+                "task_prompt": "Based on the gaming data of the player, please predict the number of times the player killed 4 enemies."
+            }
+        },
+        "qt5Kill": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in competitive gaming data analysis.",
+                "task_prompt": "Based on the gaming data of the player, please predict the number of times the player killed 5 enemies."
+            }
+        },
+        "qtPlusKill": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in competitive gaming data analysis.",
+                "task_prompt": "Based on the gaming data of the player, please predict the number of times the player killed more than 1 enemy."
+            }
+        },
+        "qtFirstKill": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in competitive gaming data analysis.",
+                "task_prompt": "Based on the gaming data of the player, please predict the number of times the player made the first kill."
+            }
+        },
+        "vlDamage": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in competitive gaming data analysis.",
+                "task_prompt": "Based on the gaming data of the player, please predict the total damage the player made."
+            }
+        },
+        "qtHits": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in competitive gaming data analysis.",
+                "task_prompt": "Based on the gaming data of the player, please predict the total number of hits the player made."
+            }
+        },
+        "qtLastAlive": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in competitive gaming data analysis.",
+                "task_prompt": "Based on the gaming data of the player, please predict the number of times the player was the last one alive."
+            }
+        },
+        "qtClutchWon": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in competitive gaming data analysis.",
+                "task_prompt": "Based on the gaming data of the player, please predict the number of clutch rounds the player won."
+            }
+        },
+        "qtSurvived": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in competitive gaming data analysis.",
+                "task_prompt": "Based on the gaming data of the player, please predict the number of rounds the player survived."
+            }
+        },
+        "qtTrade": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in competitive gaming data analysis.",
+                "task_prompt": "Based on the gaming data of the player, please predict the number of trades the player made."
+            }
+        },
+        "qtFlashAssist": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in competitive gaming data analysis.",
+                "task_prompt": "Based on the gaming data of the player, please predict the number of flash assists the player made."
+            }
+        },
+        "qtHitHeadshot": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in competitive gaming data analysis.",
+                "task_prompt": "Based on the gaming data of the player, please predict the number of headshots the player hit."
+            }
+        },
+        "qtHitChest": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in competitive gaming data analysis.",
+                "task_prompt": "Based on the gaming data of the player, please predict the number of chest hits the player made."
+            }
+        },
+        "qtHitStomach": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in competitive gaming data analysis.",
+                "task_prompt": "Based on the gaming data of the player, please predict the number of stomach hits the player made."
+            }
+        },
+        "qtHitLeftAtm": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in competitive gaming data analysis.",
+                "task_prompt": "Based on the gaming data of the player, please predict the number of left arm hits the player made."
+            }
+        },
+        "qtHitRightArm": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in competitive gaming data analysis.",
+                "task_prompt": "Based on the gaming data of the player, please predict the number of right arm hits the player made."
+            }
+        },
+        "qtHitLeftLeg": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in competitive gaming data analysis.",
+                "task_prompt": "Based on the gaming data of the player, please predict the number of left leg hits the player made."
+            }
+        },
+        "qtHitRightLeg": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in competitive gaming data analysis.",
+                "task_prompt": "Based on the gaming data of the player, please predict the number of right leg hits the player made."
+            }
+        }
+    }
+}

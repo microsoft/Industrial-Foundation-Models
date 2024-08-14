@@ -1,0 +1,413 @@
+{
+    "basic_info": {
+        "row_num": 1122,
+        "col_num": 44,
+        "label_candidates": [
+            "Value",
+            "Transfer Value",
+            "Apps",
+            "Mins",
+            "Gls",
+            "Age",
+            "Av Rat",
+            "xG",
+            "Distance",
+            "Saves"
+        ],
+        "valid_feature_num": 44,
+        "num_features": [
+            "Apps",
+            "Mins",
+            "Mins/Gm",
+            "Height",
+            "Weight",
+            "Age",
+            "Av Rat",
+            "Gls",
+            "Gls/90",
+            "Shot %",
+            "Pen/R",
+            "xG",
+            "Ch C/90",
+            "Asts/90",
+            "K Ps/90",
+            "Pas %",
+            "Cr C/A",
+            "Drb/90",
+            "Distance",
+            "Hdr %",
+            "K Tck",
+            "Fls",
+            "Int/90",
+            "Clear",
+            "Con/90",
+            "xSv %",
+            "Sv %",
+            "Svh",
+            "Svt",
+            "Svp",
+            "Pens Saved Ratio",
+            "PoM",
+            "Aer A/90",
+            "Off",
+            "Tck R",
+            "CA",
+            "Saves",
+            "Saves/xSv%",
+            "Gls/xG",
+            "Dist/Mins",
+            "Value"
+        ],
+        "cat_features": [
+            "Name",
+            "Based",
+            "Transfer Value"
+        ],
+        "other_features": [],
+        "tags": [
+            "games",
+            "football",
+            "tabular",
+            "regression",
+            "sklearn"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/gabrielabilleira/football-manager-2022-player-data"
+    },
+    "feature_info": {
+        "Name": {
+            "description": "The name of the football player",
+            "type": "categorical",
+            "value_dict": {
+                "Josip Mijatovi\u0107": "Name of a player",
+                "Duje Nin\u010devi\u0107": "Name of a player",
+                "Marin Karabati\u0107": "Name of a player",
+                "Vicko \u0160evelj": "Name of a player",
+                "Fran Vujnovi\u0107": "Name of a player"
+            }
+        },
+        "Apps": {
+            "description": "Number of appearances the player has made",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Mins": {
+            "description": "Total minutes the player has played",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Mins/Gm": {
+            "description": "Average minutes played per game",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Height": {
+            "description": "The height of the player",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Weight": {
+            "description": "The weight of the player",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Age": {
+            "description": "The age of the player",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Av Rat": {
+            "description": "Average rating of the player",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Gls": {
+            "description": "Number of goals scored by the player",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Gls/90": {
+            "description": "Number of goals scored per 90 minutes of play",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Shot %": {
+            "description": "Percentage of shots made by the player",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Pen/R": {
+            "description": "Penalties per game",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "xG": {
+            "description": "Expected number of goals",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Ch C/90": {
+            "description": "Chance creation per 90 minutes",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Asts/90": {
+            "description": "Assists per 90 minutes",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "K Ps/90": {
+            "description": "Key passes per 90 minutes",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Pas %": {
+            "description": "Passing accuracy percentage",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Cr C/A": {
+            "description": "Cross completion/attempted ratio",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Drb/90": {
+            "description": "Dribbles per 90 minutes",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Distance": {
+            "description": "Total distance covered by the player",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Hdr %": {
+            "description": "Header accuracy percentage",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "K Tck": {
+            "description": "Key tackles made by the player",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Fls": {
+            "description": "Number of fouls made by the player",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Int/90": {
+            "description": "Interceptions per 90 minutes",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Clear": {
+            "description": "Number of clearances made by the player",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Con/90": {
+            "description": "Concessions per 90 minutes",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "xSv %": {
+            "description": "Expected save percentage",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Sv %": {
+            "description": "Actual save percentage",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Svh": {
+            "description": "Saves with hands",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Svt": {
+            "description": "Saves with feet",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Svp": {
+            "description": "Penalty saves",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Pens Saved Ratio": {
+            "description": "Penalties saved ratio",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "PoM": {
+            "description": "Player of the match awards",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Aer A/90": {
+            "description": "Aerial duels attempted per 90 minutes",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Off": {
+            "description": "Offsides",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Based": {
+            "description": "Player's base or location",
+            "type": "categorical",
+            "value_dict": {
+                "Location 1": "Base location of player 1",
+                "Location 2": "Base location of player 2",
+                "Location 3": "Base location of player 3",
+                "Location 4": "Base location of player 4",
+                "Location 5": "Base location of player 5"
+            }
+        },
+        "Tck R": {
+            "description": "Tackle success rate",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "CA": {
+            "description": "Chances created by the player",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Saves": {
+            "description": "Number of saves made by the player",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Saves/xSv%": {
+            "description": "Ratio of saves made to expected saves",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Gls/xG": {
+            "description": "Ratio of goals scored to expected goals",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Dist/Mins": {
+            "description": "Distance covered per minute",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Transfer Value": {
+            "description": "Estimated transfer value of the player",
+            "type": "categorical",
+            "value_dict": {
+                "\u20ac3K - \u20ac9K": "Transfer value range for a player",
+                "\u20ac0 - \u20ac2.5K": "Transfer value range for a player",
+                "\u20ac0 - \u20ac12K": "Transfer value range for a player",
+                "\u20ac100K - \u20ac1M": "Transfer value range for a player",
+                "\u20ac14K - \u20ac150K": "Transfer value range for a player"
+            }
+        },
+        "Value": {
+            "description": "Monetary value of the player",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "Value": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in football player analysis.",
+                "task_prompt": "Based on the features of the football player, please predict the player value.",
+                "answer_prompt": "The player value is."
+            }
+        },
+        "Transfer Value": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in football player analysis.",
+                "task_prompt": "Based on the features of the football player, please classify the player transfer value range.",
+                "answer_prompt": "The transfer value range is \u20ac3K - \u20ac9K[0], \u20ac0 - \u20ac2.5K[1], \u20ac0 - \u20ac12K[2], \u20ac100K - \u20ac1M[3], \u20ac14K - \u20ac150K[4]?"
+            },
+            "class_num": 5,
+            "class_value_dict": {
+                "\u20ac3K - \u20ac9K": "Transfer value range for a player",
+                "\u20ac0 - \u20ac2.5K": "Transfer value range for a player",
+                "\u20ac0 - \u20ac12K": "Transfer value range for a player",
+                "\u20ac100K - \u20ac1M": "Transfer value range for a player",
+                "\u20ac14K - \u20ac150K": "Transfer value range for a player"
+            },
+            "class_index_dict": {
+                "\u20ac3K - \u20ac9K": 0,
+                "\u20ac0 - \u20ac2.5K": 1,
+                "\u20ac0 - \u20ac12K": 2,
+                "\u20ac100K - \u20ac1M": 3,
+                "\u20ac14K - \u20ac150K": 4
+            }
+        },
+        "Apps": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in football player analysis.",
+                "task_prompt": "Based on the features of the football player, please predict the number of appearances.",
+                "answer_prompt": "The number of appearances is."
+            }
+        },
+        "Mins": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in football player analysis.",
+                "task_prompt": "Based on the features of the football player, please predict the number of minutes played.",
+                "answer_prompt": "The number of minutes played is."
+            }
+        },
+        "Gls": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in football player analysis.",
+                "task_prompt": "Based on the features of the football player, please predict the number of goals.",
+                "answer_prompt": "The number of goals is."
+            }
+        },
+        "Age": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in football player analysis.",
+                "task_prompt": "Based on the features of the football player, please predict the age.",
+                "answer_prompt": "The age is."
+            }
+        },
+        "Av Rat": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in football player analysis.",
+                "task_prompt": "Based on the features of the football player, please predict the average rating.",
+                "answer_prompt": "The average rating is."
+            }
+        },
+        "xG": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in football player analysis.",
+                "task_prompt": "Based on the features of the football player, please predict the expected goals (xG).",
+                "answer_prompt": "The expected goals (xG) is."
+            }
+        },
+        "Distance": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in football player analysis.",
+                "task_prompt": "Based on the features of the football player, please predict the distance covered.",
+                "answer_prompt": "The distance covered is."
+            }
+        },
+        "Saves": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in football player analysis.",
+                "task_prompt": "Based on the features of the football player, please predict the number of saves.",
+                "answer_prompt": "The number of saves is."
+            }
+        }
+    }
+}

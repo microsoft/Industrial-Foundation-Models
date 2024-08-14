@@ -1,0 +1,160 @@
+{
+    "basic_info": {
+        "row_num": 544160,
+        "col_num": 12,
+        "label_candidates": [
+            "Tavg",
+            "RH_avg",
+            "RR",
+            "ss",
+            "ff_x",
+            "ff_avg"
+        ],
+        "valid_feature_num": 11,
+        "num_features": [
+            "Tn",
+            "Tx",
+            "RH_avg",
+            "RR",
+            "ss",
+            "ff_x",
+            "ddd_x",
+            "ff_avg",
+            "Tavg"
+        ],
+        "cat_features": [
+            "ddd_car"
+        ],
+        "other_features": [
+            "date"
+        ],
+        "tags": [
+            "earth science",
+            "geology",
+            "classification",
+            "reinforcement learning",
+            "tabular"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/greegtitan/indonesia-climate"
+    },
+    "feature_info": {
+        "date": {
+            "description": "The date when the climate data was recorded, in DD-MM-YYYY format",
+            "type": "other"
+        },
+        "Tn": {
+            "description": "Minimum temperature recorded on the specified date, in degrees Celsius",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Tx": {
+            "description": "Maximum temperature recorded on the specified date, in degrees Celsius",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Tavg": {
+            "description": "Average temperature recorded on the specified date, in degrees Celsius",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "RH_avg": {
+            "description": "Average relative humidity recorded on the specified date, in percentage (%)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "RR": {
+            "description": "Rainfall rate recorded on the specified date, in millimeters (mm)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "ss": {
+            "description": "Sunshine duration recorded on the specified date, in hours",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "ff_x": {
+            "description": "Maximum wind speed recorded on the specified date, in meters per second (m/s)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "ddd_x": {
+            "description": "Direction of maximum wind speed recorded on the specified date, in degrees",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "ff_avg": {
+            "description": "Average wind speed recorded on the specified date, in meters per second (m/s)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "ddd_car": {
+            "description": "Cardinal direction of the wind recorded on the specified date",
+            "type": "categorical",
+            "value_dict": {
+                "E": "Wind direction is from East",
+                "SW": "Wind direction is from Southwest",
+                "NE": "Wind direction is from Northeast",
+                "W": "Wind direction is from West",
+                "N": "Wind direction is from North",
+                "NW": "Wind direction is from Northwest",
+                "S": "Wind direction is from South",
+                "SE": "Wind direction is from Southeast",
+                "C": "Calm wind with no specific direction"
+            }
+        },
+        "station_id": {
+            "description": "Unique identifier of the weather station that recorded the data",
+            "type": "useless"
+        }
+    },
+    "task_info": {
+        "Tavg": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in climate analysis.",
+                "task_prompt": "Based on the features of the climate data, please predict the average temperature.",
+                "answer_prompt": "The predicted average temperature is: ."
+            }
+        },
+        "RH_avg": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in climate analysis.",
+                "task_prompt": "Based on the features of the climate data, please predict the average relative humidity.",
+                "answer_prompt": "The predicted average relative humidity is: ."
+            }
+        },
+        "RR": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in climate analysis.",
+                "task_prompt": "Based on the features of the climate data, please predict the rainfall.",
+                "answer_prompt": "The predicted rainfall is: ."
+            }
+        },
+        "ss": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in climate analysis.",
+                "task_prompt": "Based on the features of the climate data, please predict the sunshine duration.",
+                "answer_prompt": "The predicted sunshine duration is: ."
+            }
+        },
+        "ff_x": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in climate analysis.",
+                "task_prompt": "Based on the features of the climate data, please predict the wind speed.",
+                "answer_prompt": "The predicted wind speed is: ."
+            }
+        },
+        "ff_avg": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in climate analysis.",
+                "task_prompt": "Based on the features of the climate data, please predict the average wind speed.",
+                "answer_prompt": "The predicted average wind speed is: ."
+            }
+        }
+    }
+}

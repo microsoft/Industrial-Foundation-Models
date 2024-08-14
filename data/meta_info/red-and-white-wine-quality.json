@@ -1,0 +1,150 @@
+{
+    "basic_info": {
+        "row_num": 6497,
+        "col_num": 12,
+        "label_candidates": [
+            "quality",
+            "alcohol",
+            "pH"
+        ],
+        "valid_feature_num": 12,
+        "num_features": [
+            "fixed acidity",
+            "volatile acidity",
+            "citric acid",
+            "residual sugar",
+            "chlorides",
+            "free sulfur dioxide",
+            "total sulfur dioxide",
+            "density",
+            "pH",
+            "sulphates",
+            "alcohol"
+        ],
+        "cat_features": [
+            "quality"
+        ],
+        "other_features": [],
+        "tags": [
+            "alcohol",
+            "beginner",
+            "exploratory data analysis",
+            "tabular",
+            "multiclass classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/shilongzhuang/red-and-white-wine-quality"
+    },
+    "feature_info": {
+        "fixed acidity": {
+            "description": "Most acids involved with wine or fixed or nonvolatile (do not evaporate readily). Unit: g/dm^3",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "volatile acidity": {
+            "description": "The amount of acetic acid in wine, which at too high of levels can lead to an unpleasant, vinegar taste. Unit: g/dm^3",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "citric acid": {
+            "description": "Found in small quantities, citric acid can add freshness and flavor to wines. Unit: g/dm^3",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "residual sugar": {
+            "description": "The amount of sugar remaining after fermentation stops, it\u2019s rare to find wines with less than 1 gram/liter and wines with greater than 45 grams/liter are considered sweet. Unit: g/dm^3",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "chlorides": {
+            "description": "The amount of salt in the wine. Unit: g/dm^3",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "free sulfur dioxide": {
+            "description": "The free form of SO2 exists in equilibrium between molecular SO2 (as a dissolved gas) and bisulfite ion; it prevents microbial growth and the oxidation of wine. Unit: mg/dm^3",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "total sulfur dioxide": {
+            "description": "Amount of free and bound forms of S02; in low concentrations, SO2 is mostly undetectable in wine, but at free SO2 concentrations over 50 ppm, SO2 becomes evident in the nose and taste of wine. Unit: mg/dm^3",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "density": {
+            "description": "The density of wine is close to that of water depending on the percent alcohol and sugar content. Unit: g/cm^3",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "pH": {
+            "description": "Describes how acidic or basic a wine is on a scale from 0 (very acidic) to 14 (very basic); most wines are between 3-4 on the pH scale.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "sulphates": {
+            "description": "Wine additive which can contribute to sulfur dioxide gas (S02) levels, wich acts as an antimicrobial and antioxidant. Unit: g/dm^3",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "alcohol": {
+            "description": "The percent alcohol content of the wine. Unit: % vol",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "quality": {
+            "description": "The quality of the wine, rated on a scale from 1 to 10.",
+            "type": "categorical",
+            "value_dict": {
+                "3": "Quality rating of 3",
+                "4": "Quality rating of 4",
+                "5": "Quality rating of 5",
+                "6": "Quality rating of 6",
+                "7": "Quality rating of 7",
+                "8": "Quality rating of 8",
+                "9": "Quality rating of 9"
+            }
+        }
+    },
+    "task_info": {
+        "quality": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in wine quality evaluation.",
+                "task_prompt": "Based on the chemical attributes of the wine, please predict the quality rating.",
+                "answer_prompt": "Quality rating of 3[0], 4[1], 5[2], 6[3], 7[4], 8[5], or 9[6]?"
+            },
+            "class_num": 7,
+            "class_value_dict": {
+                "3": "Quality rating of 3",
+                "4": "Quality rating of 4",
+                "5": "Quality rating of 5",
+                "6": "Quality rating of 6",
+                "7": "Quality rating of 7",
+                "8": "Quality rating of 8",
+                "9": "Quality rating of 9"
+            },
+            "class_index_dict": {
+                "3": 0,
+                "4": 1,
+                "5": 2,
+                "6": 3,
+                "7": 4,
+                "8": 5,
+                "9": 6
+            }
+        },
+        "alcohol": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in wine chemistry.",
+                "task_prompt": "Based on the other attributes of the wine, please predict the alcohol content."
+            }
+        },
+        "pH": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in wine chemistry.",
+                "task_prompt": "Based on the other attributes of the wine, please predict the pH level."
+            }
+        }
+    }
+}

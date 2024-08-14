@@ -1,0 +1,189 @@
+{
+    "basic_info": {
+        "row_num": 10998,
+        "col_num": 10,
+        "label_candidates": [
+            "Class",
+            "Customer_care_calls",
+            "Customer_rating",
+            "Prior_purchases",
+            "Product_importance"
+        ],
+        "valid_feature_num": 10,
+        "num_features": [
+            "Customer_care_calls",
+            "Prior_purchases",
+            "Discount_offered",
+            "Weight_in_gms"
+        ],
+        "cat_features": [
+            "Customer_rating",
+            "Warehouse_block",
+            "Mode_of_Shipment",
+            "Product_importance",
+            "Gender",
+            "Class"
+        ],
+        "other_features": [],
+        "tags": [
+            "business",
+            "beginner",
+            "intermediate",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/ulrikthygepedersen/shipping-ecommerce"
+    },
+    "feature_info": {
+        "Customer_care_calls": {
+            "description": "Number of calls made from enquiry for enquiry of the shipment",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Customer_rating": {
+            "description": "Customer rating for the shipment",
+            "type": "categorical",
+            "value_dict": {
+                "4": "Customer gave a rating of 4",
+                "3": "Customer gave a rating of 3",
+                "1": "Customer gave a rating of 1",
+                "5": "Customer gave a rating of 5",
+                "2": "Customer gave a rating of 2"
+            }
+        },
+        "Prior_purchases": {
+            "description": "Number of prior purchases made by the customer",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Discount_offered": {
+            "description": "Discount offered on that specific shipment",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Weight_in_gms": {
+            "description": "Weight of the shipment in grams",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Warehouse_block": {
+            "description": "The block of the warehouse where the shipment is stored",
+            "type": "categorical",
+            "value_dict": {
+                "A": "Shipment is stored in block A",
+                "F": "Shipment is stored in block F",
+                "D": "Shipment is stored in block D",
+                "B": "Shipment is stored in block B",
+                "C": "Shipment is stored in block C"
+            }
+        },
+        "Mode_of_Shipment": {
+            "description": "The mode of shipment like ship, flight and road",
+            "type": "categorical",
+            "value_dict": {
+                "Ship": "Shipment is made by ship",
+                "Road": "Shipment is made by road",
+                "Flight": "Shipment is made by flight"
+            }
+        },
+        "Product_importance": {
+            "description": "The importance of the product in the shipment",
+            "type": "categorical",
+            "value_dict": {
+                "medium": "The product in the shipment is of medium importance",
+                "low": "The product in the shipment is of low importance",
+                "high": "The product in the shipment is of high importance"
+            }
+        },
+        "Gender": {
+            "description": "Gender of the customer",
+            "type": "categorical",
+            "value_dict": {
+                "M": "The customer is male",
+                "F": "The customer is female"
+            }
+        },
+        "Class": {
+            "description": "Whether the shipment reached on time or not",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The shipment reached on time",
+                "0": "The shipment did not reach on time"
+            }
+        }
+    },
+    "task_info": {
+        "Class": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in e-commerce shipment predictions.",
+                "task_prompt": "Based on the characteristics of the shipment, please predict whether the shipment reached on time or not.",
+                "answer_prompt": "The shipment reached on time[1] or The shipment did not reach on time[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "The shipment reached on time",
+                "0": "The shipment did not reach on time"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        },
+        "Customer_care_calls": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in customer service analysis.",
+                "task_prompt": "Based on the characteristics of the shipment, please predict the number of customer care calls made."
+            }
+        },
+        "Customer_rating": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in customer satisfaction assessment.",
+                "task_prompt": "Based on the characteristics of the shipment, please predict the rating given by the customer.",
+                "answer_prompt": "Customer gave a rating of 1[0], 2[1], 3[2], 4[3] or 5[4]?"
+            },
+            "class_num": 5,
+            "class_value_dict": {
+                "4": "Customer gave a rating of 4",
+                "3": "Customer gave a rating of 3",
+                "1": "Customer gave a rating of 1",
+                "5": "Customer gave a rating of 5",
+                "2": "Customer gave a rating of 2"
+            },
+            "class_index_dict": {
+                "1": 0,
+                "2": 1,
+                "3": 2,
+                "4": 3,
+                "5": 4
+            }
+        },
+        "Prior_purchases": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in customer purchasing behavior analysis.",
+                "task_prompt": "Based on the characteristics of the shipment, please predict the number of prior purchases made by the customer."
+            }
+        },
+        "Product_importance": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in product importance classification.",
+                "task_prompt": "Based on the characteristics of the shipment, please predict the importance of the product in the shipment.",
+                "answer_prompt": "The product in the shipment is of low importance[0], medium importance[1], or high importance[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "medium": "The product in the shipment is of medium importance",
+                "low": "The product in the shipment is of low importance",
+                "high": "The product in the shipment is of high importance"
+            },
+            "class_index_dict": {
+                "low": 0,
+                "medium": 1,
+                "high": 2
+            }
+        }
+    }
+}

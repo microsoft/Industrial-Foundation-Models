@@ -1,0 +1,238 @@
+{
+    "basic_info": {
+        "row_num": 412,
+        "col_num": 20,
+        "label_candidates": [
+            "Stage",
+            "Status",
+            "Prothrombin",
+            "Bilirubin",
+            "Albumin"
+        ],
+        "valid_feature_num": 19,
+        "num_features": [
+            "N_Days",
+            "Age",
+            "Bilirubin",
+            "Cholesterol",
+            "Albumin",
+            "Copper",
+            "Alk_Phos",
+            "SGOT",
+            "Tryglicerides",
+            "Platelets",
+            "Prothrombin"
+        ],
+        "cat_features": [
+            "Status",
+            "Drug",
+            "Sex",
+            "Ascites",
+            "Hepatomegaly",
+            "Spiders",
+            "Edema",
+            "Stage"
+        ],
+        "other_features": [],
+        "tags": [
+            "healthcare",
+            "public health",
+            "health",
+            "multiclass classification",
+            "health conditions"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/fedesoriano/cirrhosis-prediction-dataset"
+    },
+    "feature_info": {
+        "ID": {
+            "description": "Unique identifier for each patient",
+            "type": "useless"
+        },
+        "N_Days": {
+            "description": "Number of days from the first visit to the hospital",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Status": {
+            "description": "Status of the patient (D: Dead, C: Censored, CL: Censored late)",
+            "type": "categorical",
+            "value_dict": {
+                "D": "Patient is dead",
+                "C": "Patient is censored",
+                "CL": "Patient is censored late"
+            }
+        },
+        "Drug": {
+            "description": "Type of drug used for the treatment",
+            "type": "categorical",
+            "value_dict": {
+                "D-penicillamine": "Patient was treated with D-penicillamine",
+                "Placebo": "Patient was treated with placebo"
+            }
+        },
+        "Age": {
+            "description": "Age of the patient at the time of the first visit",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Sex": {
+            "description": "Gender of the patient",
+            "type": "categorical",
+            "value_dict": {
+                "F": "Female",
+                "M": "Male"
+            }
+        },
+        "Ascites": {
+            "description": "Presence of ascites in the patient (1: Yes, 0: No)",
+            "type": "categorical",
+            "value_dict": {
+                "Y": "Patient has ascites",
+                "N": "Patient does not have ascites"
+            }
+        },
+        "Hepatomegaly": {
+            "description": "Presence of an enlarged liver in the patient (1: Yes, 0: No)",
+            "type": "categorical",
+            "value_dict": {
+                "Y": "Patient has an enlarged liver",
+                "N": "Patient does not have an enlarged liver"
+            }
+        },
+        "Spiders": {
+            "description": "Presence of spider nevi in the patient (1: Yes, 0: No)",
+            "type": "categorical",
+            "value_dict": {
+                "Y": "Patient has spider nevi",
+                "N": "Patient does not have spider nevi"
+            }
+        },
+        "Edema": {
+            "description": "Presence of edema in the patient (1: Yes, 0: No)",
+            "type": "categorical",
+            "value_dict": {
+                "Y": "Patient has edema",
+                "N": "Patient does not have edema",
+                "S": "Patient has severe edema"
+            }
+        },
+        "Bilirubin": {
+            "description": "Bilirubin level in the patient's blood (mg/dL)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Cholesterol": {
+            "description": "Cholesterol level in the patient's blood (mg/dL)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Albumin": {
+            "description": "Albumin level in the patient's blood (g/dL)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Copper": {
+            "description": "Copper level in the patient's blood (\u00b5g/dL)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Alk_Phos": {
+            "description": "Alkaline phosphatase level in the patient's blood (IU/L)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "SGOT": {
+            "description": "Serum glutamic-oxaloacetic transaminase level in the patient's blood (IU/L)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Tryglicerides": {
+            "description": "Triglycerides level in the patient's blood (mg/dL)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Platelets": {
+            "description": "Platelet count in the patient's blood (thousands/\u00b5L)",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Prothrombin": {
+            "description": "Prothrombin time in the patient (seconds)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Stage": {
+            "description": "Stage of the disease (from 1 to 4)",
+            "type": "categorical",
+            "value_dict": {
+                "4.0": "Stage 4 of the disease",
+                "3.0": "Stage 3 of the disease",
+                "2.0": "Stage 2 of the disease",
+                "1.0": "Stage 1 of the disease"
+            }
+        }
+    },
+    "task_info": {
+        "Stage": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnosis.",
+                "task_prompt": "Based on the features of the patient, please predict the stage of the disease.",
+                "answer_prompt": "Stage 1 of the disease[0], Stage 2 of the disease[1], Stage 3 of the disease[2], Stage 4 of the disease[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "4.0": "Stage 4 of the disease",
+                "3.0": "Stage 3 of the disease",
+                "2.0": "Stage 2 of the disease",
+                "1.0": "Stage 1 of the disease"
+            },
+            "class_index_dict": {
+                "4.0": 3,
+                "3.0": 2,
+                "2.0": 1,
+                "1.0": 0
+            }
+        },
+        "Status": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnosis.",
+                "task_prompt": "Based on the features of the patient, please predict the status of the patient.",
+                "answer_prompt": "Patient is dead[0], Patient is censored[1], Patient is censored late[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "D": "Patient is dead",
+                "C": "Patient is censored",
+                "CL": "Patient is censored late"
+            },
+            "class_index_dict": {
+                "D": 0,
+                "C": 1,
+                "CL": 2
+            }
+        },
+        "Prothrombin": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnosis.",
+                "task_prompt": "Based on the features of the patient, please predict the Prothrombin level."
+            }
+        },
+        "Bilirubin": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnosis.",
+                "task_prompt": "Based on the features of the patient, please predict the Bilirubin level."
+            }
+        },
+        "Albumin": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnosis.",
+                "task_prompt": "Based on the features of the patient, please predict the Albumin level."
+            }
+        }
+    }
+}

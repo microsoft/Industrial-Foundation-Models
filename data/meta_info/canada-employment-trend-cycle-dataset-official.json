@@ -1,0 +1,181 @@
+{
+    "basic_info": {
+        "row_num": 409089,
+        "col_num": 17,
+        "label_candidates": [
+            "VALUE",
+            "Statistics",
+            "Data type"
+        ],
+        "valid_feature_num": 12,
+        "num_features": [
+            "DECIMALS",
+            "VALUE"
+        ],
+        "cat_features": [
+            "REF_DATE",
+            "North American Industry Classification System (NAICS)",
+            "Statistics",
+            "Data type",
+            "UOM",
+            "SCALAR_FACTOR",
+            "STATUS",
+            "TERMINATED"
+        ],
+        "other_features": [
+            "VECTOR",
+            "COORDINATE"
+        ],
+        "tags": [
+            "employment",
+            "business",
+            "data analytics",
+            "news",
+            "canada"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/rohithmahadevan/canada-employment-trend-cycle-dataset-official"
+    },
+    "feature_info": {
+        "REF_DATE": {
+            "description": "Reference date in the format YYYY-MM",
+            "type": "categorical"
+        },
+        "GEO": {
+            "description": "Geographical location, in this case, Canada",
+            "type": "useless"
+        },
+        "DGUID": {
+            "description": "Geographical ID of Canada",
+            "type": "useless"
+        },
+        "North American Industry Classification System (NAICS)": {
+            "description": "Classification system for industries in North America",
+            "type": "categorical"
+        },
+        "Statistics": {
+            "description": "Type of statistics collected",
+            "type": "categorical",
+            "value_dict": {
+                "Estimate": "The estimated value",
+                "Standard error of estimate": "The standard error of the estimated value",
+                "Standard error of month-to-month change": "The standard error of the change from month to month",
+                "Standard error of year-over-year change": "The standard error of the change from year to year"
+            }
+        },
+        "Data type": {
+            "description": "Type of the data",
+            "type": "categorical",
+            "value_dict": {
+                "Seasonally adjusted": "The data has been adjusted for seasonal effects",
+                "Trend-cycle": "The data represents a trend-cycle",
+                "Unadjusted": "The data has not been adjusted"
+            }
+        },
+        "UOM": {
+            "description": "Unit of measurement for the data",
+            "type": "categorical",
+            "value_dict": {
+                "Persons": "The unit of measurement is individuals"
+            }
+        },
+        "UOM_ID": {
+            "description": "ID for the unit of measurement",
+            "type": "useless"
+        },
+        "SCALAR_FACTOR": {
+            "description": "Factor by which the data is scaled",
+            "type": "categorical",
+            "value_dict": {
+                "thousands": "The data is scaled by a factor of thousands"
+            }
+        },
+        "SCALAR_ID": {
+            "description": "ID for the scalar factor",
+            "type": "useless"
+        },
+        "VECTOR": {
+            "description": "Vector representation of the data",
+            "type": "other"
+        },
+        "COORDINATE": {
+            "description": "Coordinate of the data",
+            "type": "other"
+        },
+        "VALUE": {
+            "description": "Value of the data",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "STATUS": {
+            "description": "Status of the data",
+            "type": "categorical",
+            "value_dict": {
+                "..": "Data is not available for a specific reference period",
+                "x": "Data is suppressed to meet the confidentiality requirements of the Statistics Act"
+            }
+        },
+        "SYMBOL": {
+            "description": "Symbol representing the data",
+            "type": "useless"
+        },
+        "TERMINATED": {
+            "description": "Indicates if the data collection has been terminated",
+            "type": "categorical"
+        },
+        "DECIMALS": {
+            "description": "Number of decimal places in the value",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "VALUE": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in statistical analysis.",
+                "task_prompt": "Based on the features of the employment trend in Canada, please predict the value.",
+                "answer_prompt": "The predicted value is: ."
+            }
+        },
+        "Statistics": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in statistical analysis.",
+                "task_prompt": "Based on the features of the employment trend in Canada, please classify the type of statistics.",
+                "answer_prompt": "Estimate[0], Standard error of estimate[1], Standard error of month-to-month change[2], Standard error of year-over-year change[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "Estimate": "The estimated value",
+                "Standard error of estimate": "The standard error of the estimated value",
+                "Standard error of month-to-month change": "The standard error of the change from month to month",
+                "Standard error of year-over-year change": "The standard error of the change from year to year"
+            },
+            "class_index_dict": {
+                "Estimate": 0,
+                "Standard error of estimate": 1,
+                "Standard error of month-to-month change": 2,
+                "Standard error of year-over-year change": 3
+            }
+        },
+        "Data type": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in statistical analysis.",
+                "task_prompt": "Based on the features of the employment trend in Canada, please classify the type of data.",
+                "answer_prompt": "Seasonally adjusted[0], Trend-cycle[1], Unadjusted[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "Seasonally adjusted": "The data has been adjusted for seasonal effects",
+                "Trend-cycle": "The data represents a trend-cycle",
+                "Unadjusted": "The data has not been adjusted"
+            },
+            "class_index_dict": {
+                "Seasonally adjusted": 0,
+                "Trend-cycle": 1,
+                "Unadjusted": 2
+            }
+        }
+    }
+}

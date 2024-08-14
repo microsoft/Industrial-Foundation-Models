@@ -1,0 +1,76 @@
+{
+    "basic_info": {
+        "row_num": 22000,
+        "col_num": 4,
+        "label_candidates": [
+            "Price",
+            "Year",
+            "Miles"
+        ],
+        "valid_feature_num": 4,
+        "num_features": [
+            "Year",
+            "Miles",
+            "Price"
+        ],
+        "cat_features": [
+            "Name"
+        ],
+        "other_features": [],
+        "tags": [
+            "automobiles and vehicles",
+            "nlp",
+            "tabular",
+            "regression",
+            "ratings and reviews"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/ravishah1/carvana-predict-car-prices"
+    },
+    "feature_info": {
+        "Name": {
+            "description": "The model name of the car",
+            "type": "categorical"
+        },
+        "Year": {
+            "description": "The manufacturing year of the car",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Miles": {
+            "description": "The number of miles the car has been driven",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Price": {
+            "description": "The price of the car in USD",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "Price": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in car price prediction.",
+                "task_prompt": "Based on the name, year, and miles of the car, please predict the price.",
+                "answer_prompt": "The predicted price is ______."
+            }
+        },
+        "Year": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in car year prediction.",
+                "task_prompt": "Based on the name, miles, and price of the car, please predict the year.",
+                "answer_prompt": "The predicted year is ______."
+            }
+        },
+        "Miles": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in car mileage prediction.",
+                "task_prompt": "Based on the name, year, and price of the car, please predict the miles.",
+                "answer_prompt": "The predicted miles are ______."
+            }
+        }
+    }
+}

@@ -1,0 +1,159 @@
+{
+    "basic_info": {
+        "row_num": 7689,
+        "col_num": 12,
+        "label_candidates": [
+            "count",
+            "temp",
+            "atemp",
+            "humidity",
+            "windspeed"
+        ],
+        "valid_feature_num": 11,
+        "num_features": [
+            "temp",
+            "atemp",
+            "humidity",
+            "windspeed",
+            "count"
+        ],
+        "cat_features": [
+            "year",
+            "hour",
+            "season",
+            "holiday",
+            "workingday",
+            "weather"
+        ],
+        "other_features": [],
+        "tags": [
+            "categorical",
+            "cycling",
+            "data visualization",
+            "pca",
+            "regression",
+            "retail and shopping"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/aguado/bike-rental-data-set-uci"
+    },
+    "feature_info": {
+        "id": {
+            "description": "Unique identifier for each record",
+            "type": "useless"
+        },
+        "year": {
+            "description": "The year of the record. The dataset includes records from 2011 and 2012",
+            "type": "categorical",
+            "value_dict": {
+                "2012": "The record is from the year 2012",
+                "2011": "The record is from the year 2011"
+            }
+        },
+        "hour": {
+            "description": "The hour of the day when the record was made. It ranges from 0 (midnight) to 23 (11 PM)",
+            "type": "categorical"
+        },
+        "season": {
+            "description": "The season of the year. It is represented as a number from 1 to 4",
+            "type": "categorical",
+            "value_dict": {
+                "3": "The season is autumn",
+                "1": "The season is spring",
+                "2": "The season is summer",
+                "4": "The season is winter"
+            }
+        },
+        "holiday": {
+            "description": "Whether the day is a holiday or not. It is represented as a binary value where 0 means it is not a holiday and 1 means it is a holiday",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The day is not a holiday",
+                "1": "The day is a holiday"
+            }
+        },
+        "workingday": {
+            "description": "Whether the day is a working day or not. It is represented as a binary value where 0 means it is not a working day and 1 means it is a working day",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The day is not a working day",
+                "1": "The day is a working day"
+            }
+        },
+        "weather": {
+            "description": "The weather condition. It is represented as a number from 1 to 4",
+            "type": "categorical",
+            "value_dict": {
+                "2": "The weather condition is misty",
+                "1": "The weather condition is clear",
+                "3": "The weather condition is light rain or snow"
+            }
+        },
+        "temp": {
+            "description": "The temperature in Celsius",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "atemp": {
+            "description": "The feeling temperature in Celsius",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "humidity": {
+            "description": "The humidity level. It is represented as a percentage",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "windspeed": {
+            "description": "The wind speed in km/h",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "count": {
+            "description": "The number of bike rentals",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "count": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in bike rental prediction.",
+                "task_prompt": "Based on the features of the bike rental data, please predict the count of bike rentals.",
+                "answer_prompt": "The predicted count of bike rentals is {count}."
+            }
+        },
+        "temp": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in weather forecasting.",
+                "task_prompt": "Based on the features of the bike rental data, please predict the temperature.",
+                "answer_prompt": "The predicted temperature is {temp} degree Celsius."
+            }
+        },
+        "atemp": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in weather forecasting.",
+                "task_prompt": "Based on the features of the bike rental data, please predict the feeling temperature.",
+                "answer_prompt": "The predicted feeling temperature is {atemp} degree Celsius."
+            }
+        },
+        "humidity": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in weather forecasting.",
+                "task_prompt": "Based on the features of the bike rental data, please predict the humidity.",
+                "answer_prompt": "The predicted humidity is {humidity} percent."
+            }
+        },
+        "windspeed": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in weather forecasting.",
+                "task_prompt": "Based on the features of the bike rental data, please predict the wind speed.",
+                "answer_prompt": "The predicted wind speed is {windspeed} km/h."
+            }
+        }
+    }
+}

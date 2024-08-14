@@ -1,0 +1,164 @@
+{
+    "basic_info": {
+        "row_num": 1000,
+        "col_num": 10,
+        "label_candidates": [
+            "Risk",
+            "isDiabetic",
+            "isHypertensive",
+            "isSmoker"
+        ],
+        "valid_feature_num": 10,
+        "num_features": [
+            "Age",
+            "Systolic",
+            "Cholesterol",
+            "HDL",
+            "Risk"
+        ],
+        "cat_features": [
+            "isMale",
+            "isBlack",
+            "isSmoker",
+            "isDiabetic",
+            "isHypertensive"
+        ],
+        "other_features": [],
+        "tags": [
+            "health",
+            "intermediate",
+            "linear regression",
+            "tabular",
+            "heart conditions"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/mokar2001/ascvd-heart-risk"
+    },
+    "feature_info": {
+        "isMale": {
+            "description": "Binary feature indicating if the individual is male (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The individual is male",
+                "0": "The individual is not male"
+            }
+        },
+        "isBlack": {
+            "description": "Binary feature indicating if the individual is black (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The individual is black",
+                "0": "The individual is not black"
+            }
+        },
+        "isSmoker": {
+            "description": "Binary feature indicating if the individual is a smoker (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The individual is not a smoker",
+                "1": "The individual is a smoker"
+            }
+        },
+        "isDiabetic": {
+            "description": "Binary feature indicating if the individual has diabetes (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The individual has diabetes",
+                "0": "The individual does not have diabetes"
+            }
+        },
+        "isHypertensive": {
+            "description": "Binary feature indicating if the individual has hypertension (1) or not (0)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The individual has hypertension",
+                "0": "The individual does not have hypertension"
+            }
+        },
+        "Age": {
+            "description": "Age of the individual in years",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Systolic": {
+            "description": "Systolic blood pressure of the individual in mmHg",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Cholesterol": {
+            "description": "Cholesterol level of the individual in mg/dL",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "HDL": {
+            "description": "High-density lipoprotein level of the individual in mg/dL",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Risk": {
+            "description": "Risk of atherosclerotic cardiovascular disease (ASCVD) in percentage",
+            "type": "numerical",
+            "decimal": 1
+        }
+    },
+    "task_info": {
+        "Risk": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in medical data analysis.",
+                "task_prompt": "Based on the health indicators of the individual, please predict the heart disease risk.",
+                "answer_prompt": "The heart disease risk is."
+            }
+        },
+        "isDiabetic": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical data analysis.",
+                "task_prompt": "Based on the health indicators of the individual, please predict if the individual has diabetes.",
+                "answer_prompt": "The individual has diabetes[1] or does not have diabetes[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "The individual has diabetes",
+                "0": "The individual does not have diabetes"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        },
+        "isHypertensive": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical data analysis.",
+                "task_prompt": "Based on the health indicators of the individual, please predict if the individual has hypertension.",
+                "answer_prompt": "The individual has hypertension[1] or does not have hypertension[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "The individual has hypertension",
+                "0": "The individual does not have hypertension"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        },
+        "isSmoker": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical data analysis.",
+                "task_prompt": "Based on the health indicators of the individual, please predict if the individual is a smoker.",
+                "answer_prompt": "The individual is a smoker[1] or not a smoker[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "The individual is not a smoker",
+                "1": "The individual is a smoker"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        }
+    }
+}

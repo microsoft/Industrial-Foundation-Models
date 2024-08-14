@@ -1,0 +1,110 @@
+{
+    "basic_info": {
+        "row_num": 237,
+        "col_num": 4,
+        "label_candidates": [
+            "Brain Weight(grams)",
+            "Head Size(cm^3)",
+            "Gender",
+            "Age Range"
+        ],
+        "valid_feature_num": 4,
+        "num_features": [
+            "Head Size(cm^3)",
+            "Brain Weight(grams)"
+        ],
+        "cat_features": [
+            "Gender",
+            "Age Range"
+        ],
+        "other_features": [],
+        "tags": [
+            "biology",
+            "linear regression",
+            "matplotlib",
+            "pandas",
+            "sklearn"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/anubhabswain/brain-weight-in-humans"
+    },
+    "feature_info": {
+        "Gender": {
+            "description": "The gender of the individual, represented as 1 or 2",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Gender is male",
+                "2": "Gender is female"
+            }
+        },
+        "Age Range": {
+            "description": "The age range of the individual, represented as 1 or 2",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Age is in the lower range",
+                "2": "Age is in the higher range"
+            }
+        },
+        "Head Size(cm^3)": {
+            "description": "The size of the individual's head in cubic centimeters",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Brain Weight(grams)": {
+            "description": "The weight of the individual's brain in grams",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "Brain Weight(grams)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in human anatomy.",
+                "task_prompt": "Based on the gender, age range, and head size of an individual, please predict the brain weight in grams.",
+                "answer_prompt": "The predicted brain weight is _ grams."
+            }
+        },
+        "Head Size(cm^3)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in human anatomy.",
+                "task_prompt": "Based on the gender, age range, and brain weight of an individual, please predict the head size in cubic centimeters.",
+                "answer_prompt": "The predicted head size is _ cubic centimeters."
+            }
+        },
+        "Gender": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in human anatomy.",
+                "task_prompt": "Based on the age range, head size, and brain weight of an individual, please predict the gender.",
+                "answer_prompt": "The gender is male[0] or female[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "Gender is male",
+                "2": "Gender is female"
+            },
+            "class_index_dict": {
+                "1": 0,
+                "2": 1
+            }
+        },
+        "Age Range": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in human anatomy.",
+                "task_prompt": "Based on the gender, head size, and brain weight of an individual, please predict the age range.",
+                "answer_prompt": "The age is in the lower range[0] or in the higher range[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "Age is in the lower range",
+                "2": "Age is in the higher range"
+            },
+            "class_index_dict": {
+                "1": 0,
+                "2": 1
+            }
+        }
+    }
+}

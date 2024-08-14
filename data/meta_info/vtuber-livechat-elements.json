@@ -1,0 +1,124 @@
+{
+    "basic_info": {
+        "row_num": 10942,
+        "col_num": 10,
+        "label_candidates": [
+            "totalSC",
+            "averageSC",
+            "totalMessageLength",
+            "averageMessageLength"
+        ],
+        "valid_feature_num": 10,
+        "num_features": [
+            "superChats",
+            "uniqueSuperChatters",
+            "totalSC",
+            "averageSC",
+            "totalMessageLength",
+            "averageMessageLength"
+        ],
+        "cat_features": [
+            "channelId",
+            "period",
+            "mostFrequentCurrency",
+            "mostFrequentColor"
+        ],
+        "other_features": [],
+        "tags": [
+            "arts and entertainment",
+            "computer science"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/uetchy/vtuber-livechat-elements"
+    },
+    "feature_info": {
+        "channelId": {
+            "description": "The unique identifier of the YouTube channel",
+            "type": "categorical"
+        },
+        "period": {
+            "description": "The time period when the data was collected, formatted as YYYY-MM",
+            "type": "categorical"
+        },
+        "superChats": {
+            "description": "The number of super chats received during the period",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "uniqueSuperChatters": {
+            "description": "The number of unique users who sent super chats during the period",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "totalSC": {
+            "description": "The total amount of super chats received during the period, presumably in the most frequent currency",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "averageSC": {
+            "description": "The average amount of each super chat during the period, presumably in the most frequent currency",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "totalMessageLength": {
+            "description": "The total length of all chat messages received during the period, measured in characters",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "averageMessageLength": {
+            "description": "The average length of each chat message during the period, measured in characters",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "mostFrequentCurrency": {
+            "description": "The most frequently used currency for super chats during the period",
+            "type": "categorical"
+        },
+        "mostFrequentColor": {
+            "description": "The most frequently used color for super chats during the period",
+            "type": "categorical",
+            "value_dict": {
+                "green": "Green color was used most frequently for super chats",
+                "yellow": "Yellow color was used most frequently for super chats",
+                "lightblue": "Light blue color was used most frequently for super chats",
+                "blue": "Blue color was used most frequently for super chats",
+                "orange": "Orange color was used most frequently for super chats",
+                "magenta": "Magenta color was used most frequently for super chats",
+                "red": "Red color was used most frequently for super chats"
+            }
+        }
+    },
+    "task_info": {
+        "totalSC": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing live chat data.",
+                "task_prompt": "Based on the features of the Vtuber live chats, please predict the total super chat amount.",
+                "answer_prompt": "The total super chat amount is."
+            }
+        },
+        "averageSC": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing live chat data.",
+                "task_prompt": "Based on the features of the Vtuber live chats, please predict the average super chat amount.",
+                "answer_prompt": "The average super chat amount is."
+            }
+        },
+        "totalMessageLength": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing live chat data.",
+                "task_prompt": "Based on the features of the Vtuber live chats, please predict the total message length.",
+                "answer_prompt": "The total message length is."
+            }
+        },
+        "averageMessageLength": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing live chat data.",
+                "task_prompt": "Based on the features of the Vtuber live chats, please predict the average message length.",
+                "answer_prompt": "The average message length is."
+            }
+        }
+    }
+}

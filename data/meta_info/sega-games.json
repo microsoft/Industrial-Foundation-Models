@@ -1,0 +1,128 @@
+{
+    "basic_info": {
+        "row_num": 1120,
+        "col_num": 9,
+        "label_candidates": [
+            "meta_score",
+            "user_score",
+            "esrb_rating"
+        ],
+        "valid_feature_num": 8,
+        "num_features": [
+            "meta_score",
+            "user_score"
+        ],
+        "cat_features": [
+            "title",
+            "platform",
+            "developers",
+            "genres",
+            "esrb_rating"
+        ],
+        "other_features": [
+            "date"
+        ],
+        "tags": [
+            "games",
+            "video games",
+            "software",
+            "classification",
+            "ratings and reviews"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/joebeachcapital/sega-games"
+    },
+    "feature_info": {
+        "meta_score": {
+            "description": "The metascore of the game, which is a weighted average of critic reviews on a scale of 0-100",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "title": {
+            "description": "The title of the game",
+            "type": "categorical"
+        },
+        "platform": {
+            "description": "The platform on which the game is available",
+            "type": "categorical"
+        },
+        "date": {
+            "description": "The release date of the game",
+            "type": "other"
+        },
+        "user_score": {
+            "description": "The user score of the game on a scale of 0-10",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "link": {
+            "description": "The link to the game page",
+            "type": "useless"
+        },
+        "esrb_rating": {
+            "description": "The Entertainment Software Rating Board rating of the game, which indicates age appropriateness",
+            "type": "categorical",
+            "value_dict": {
+                "RP": "Rating Pending - Not yet assigned a final ESRB rating.",
+                "T": "Teen - Content is generally suitable for ages 13 and up.",
+                "E": "Everyone - Content is generally suitable for all ages.",
+                "M": "Mature - Content is generally suitable for ages 17 and up.",
+                "E10+": "Everyone 10 and older - Content is generally suitable for ages 10 and up.",
+                "K-A": "Kids to Adults - This is a deprecated rating that was used between 1994 and 1997.",
+                "EC": "Early Childhood - Content is intended for young children."
+            }
+        },
+        "developers": {
+            "description": "The developers of the game",
+            "type": "categorical"
+        },
+        "genres": {
+            "description": "The genres of the game",
+            "type": "categorical"
+        }
+    },
+    "task_info": {
+        "meta_score": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in video game analysis.",
+                "task_prompt": "Based on the features of the SEGA game, please predict the Metacritic score.",
+                "answer_prompt": "The Metacritic score is {meta_score}."
+            }
+        },
+        "user_score": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in video game analysis.",
+                "task_prompt": "Based on the features of the SEGA game, please predict the user score.",
+                "answer_prompt": "The user score is {user_score}."
+            }
+        },
+        "esrb_rating": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in video game analysis.",
+                "task_prompt": "Based on the features of the SEGA game, please predict the ESRB rating.",
+                "answer_prompt": "The ESRB rating is RP[0], T[1], E[2], M[3], E10+[4], K-A[5], or EC[6]?"
+            },
+            "class_num": 7,
+            "class_value_dict": {
+                "RP": "Rating Pending - Not yet assigned a final ESRB rating.",
+                "T": "Teen - Content is generally suitable for ages 13 and up.",
+                "E": "Everyone - Content is generally suitable for all ages.",
+                "M": "Mature - Content is generally suitable for ages 17 and up.",
+                "E10+": "Everyone 10 and older - Content is generally suitable for ages 10 and up.",
+                "K-A": "Kids to Adults - This is a deprecated rating that was used between 1994 and 1997.",
+                "EC": "Early Childhood - Content is intended for young children."
+            },
+            "class_index_dict": {
+                "RP": 0,
+                "T": 1,
+                "E": 2,
+                "M": 3,
+                "E10+": 4,
+                "K-A": 5,
+                "EC": 6
+            }
+        }
+    }
+}

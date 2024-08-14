@@ -1,0 +1,80 @@
+{
+    "basic_info": {
+        "row_num": 2424,
+        "col_num": 5,
+        "label_candidates": [
+            "emissions_tons",
+            "year"
+        ],
+        "valid_feature_num": 5,
+        "num_features": [
+            "year",
+            "emissions_tons"
+        ],
+        "cat_features": [
+            "month",
+            "source",
+            "fuel_type"
+        ],
+        "other_features": [],
+        "tags": [
+            "environment",
+            "time series analysis",
+            "tabular",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/thaweewatboy/thailand-carbon-emission-statistics"
+    },
+    "feature_info": {
+        "year": {
+            "description": "The year when the emission was recorded",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "month": {
+            "description": "The month when the emission was recorded",
+            "type": "categorical"
+        },
+        "source": {
+            "description": "The source of the emission, in this case, transport",
+            "type": "categorical",
+            "value_dict": {
+                "transport": "Emissions generated from the transport sector",
+                "industry": "Emissions generated from the industrial sector",
+                "other": "Emissions generated from other sectors"
+            }
+        },
+        "fuel_type": {
+            "description": "The type of fuel causing the emission, in this case, oil",
+            "type": "categorical",
+            "value_dict": {
+                "oil": "Emissions generated from burning oil",
+                "coal": "Emissions generated from burning coal",
+                "natural_gas": "Emissions generated from burning natural gas"
+            }
+        },
+        "emissions_tons": {
+            "description": "The amount of emission in tons",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "emissions_tons": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in environmental science.",
+                "task_prompt": "Based on the year, month, source and fuel type, please predict the carbon emissions in tons.",
+                "answer_prompt": "The predicted carbon emissions in tons is: ."
+            }
+        },
+        "year": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in environmental science.",
+                "task_prompt": "Based on the month, source, fuel type and carbon emissions, please predict the year.",
+                "answer_prompt": "The predicted year is: ."
+            }
+        }
+    }
+}

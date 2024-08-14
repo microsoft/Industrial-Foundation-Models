@@ -1,0 +1,131 @@
+{
+    "basic_info": {
+        "row_num": 3735,
+        "col_num": 11,
+        "label_candidates": [
+            "classification",
+            "attention",
+            "meditation"
+        ],
+        "valid_feature_num": 11,
+        "num_features": [
+            "attention",
+            "meditation",
+            "delta",
+            "theta",
+            "lowAlpha",
+            "highAlpha",
+            "lowBeta",
+            "highBeta",
+            "lowGamma",
+            "highGamma"
+        ],
+        "cat_features": [
+            "classification"
+        ],
+        "other_features": [],
+        "tags": [
+            "biology",
+            "neuroscience",
+            "health",
+            "mortality",
+            "public safety"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/naddamuhhamed/sleepy-driver-eeg-brainwave-data"
+    },
+    "feature_info": {
+        "attention": {
+            "description": "The attention level of the driver, measured by EEG brainwave. It has no specific unit.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "meditation": {
+            "description": "The meditation level of the driver, measured by EEG brainwave. It has no specific unit.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "delta": {
+            "description": "Delta wave activity of the driver, measured by EEG brainwave. It has no specific unit.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "theta": {
+            "description": "Theta wave activity of the driver, measured by EEG brainwave. It has no specific unit.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "lowAlpha": {
+            "description": "Low alpha wave activity of the driver, measured by EEG brainwave. It has no specific unit.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "highAlpha": {
+            "description": "High alpha wave activity of the driver, measured by EEG brainwave. It has no specific unit.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "lowBeta": {
+            "description": "Low beta wave activity of the driver, measured by EEG brainwave. It has no specific unit.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "highBeta": {
+            "description": "High beta wave activity of the driver, measured by EEG brainwave. It has no specific unit.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "lowGamma": {
+            "description": "Low gamma wave activity of the driver, measured by EEG brainwave. It has no specific unit.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "highGamma": {
+            "description": "High gamma wave activity of the driver, measured by EEG brainwave. It has no specific unit.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "classification": {
+            "description": "The classification result of whether the driver is sleepy or not. 0 indicates not sleepy, 1 indicates sleepy.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The driver is not sleepy.",
+                "1": "The driver is sleepy."
+            }
+        }
+    },
+    "task_info": {
+        "classification": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing EEG brainwave data.",
+                "task_prompt": "Based on the EEG brainwave data of the driver, please predict whether the driver is sleepy or not.",
+                "answer_prompt": "The driver is not sleepy[0] or the driver is sleepy[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "The driver is not sleepy.",
+                "1": "The driver is sleepy."
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "attention": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing EEG brainwave data.",
+                "task_prompt": "Based on the EEG brainwave data of the driver, please predict the attention level.",
+                "answer_prompt": "What is the attention level?"
+            }
+        },
+        "meditation": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing EEG brainwave data.",
+                "task_prompt": "Based on the EEG brainwave data of the driver, please predict the meditation level.",
+                "answer_prompt": "What is the meditation level?"
+            }
+        }
+    }
+}

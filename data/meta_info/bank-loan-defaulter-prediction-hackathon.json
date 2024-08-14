@@ -1,0 +1,330 @@
+{
+    "basic_info": {
+        "row_num": 67463,
+        "col_num": 35,
+        "label_candidates": [
+            "Loan Status",
+            "Interest Rate",
+            "Grade",
+            "Total Received Interest",
+            "Total Current Balance"
+        ],
+        "valid_feature_num": 33,
+        "num_features": [
+            "Loan Amount",
+            "Funded Amount",
+            "Funded Amount Investor",
+            "Interest Rate",
+            "Debit to Income",
+            "Delinquency - two years",
+            "Inquires - six months",
+            "Open Account",
+            "Public Record",
+            "Revolving Balance",
+            "Revolving Utilities",
+            "Total Accounts",
+            "Total Received Interest",
+            "Total Received Late Fee",
+            "Recoveries",
+            "Collection Recovery Fee",
+            "Collection 12 months Medical",
+            "Last week Pay",
+            "Accounts Delinquent",
+            "Total Collection Amount",
+            "Total Current Balance",
+            "Total Revolving Credit Limit"
+        ],
+        "cat_features": [
+            "Term",
+            "Batch Enrolled",
+            "Grade",
+            "Sub Grade",
+            "Employment Duration",
+            "Home Ownership",
+            "Verification Status",
+            "Loan Title",
+            "Initial List Status",
+            "Application Type",
+            "Loan Status"
+        ],
+        "other_features": [],
+        "tags": [
+            "finance",
+            "banking",
+            "exploratory data analysis",
+            "classification",
+            "clustering"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/ankitkalauni/bank-loan-defaulter-prediction-hackathon"
+    },
+    "feature_info": {
+        "ID": {
+            "description": "Unique identifier for each loan",
+            "type": "useless"
+        },
+        "Loan Amount": {
+            "description": "The loan amount applied by the borrower.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Funded Amount": {
+            "description": "The loan amount funded.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Funded Amount Investor": {
+            "description": "The loan amount approved by the investors.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Term": {
+            "description": "The term of loan (in months).",
+            "type": "categorical",
+            "value_dict": {
+                "36": "Loan term is 36 months",
+                "60": "Loan term is 60 months"
+            }
+        },
+        "Batch Enrolled": {
+            "description": "Batch numbers allotted to the loans. It indicates the sequence in which the loans were listed on the platform for funding.",
+            "type": "useless"
+        },
+        "Interest Rate": {
+            "description": "Interest Rate on the loan (in percents)",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Grade": {
+            "description": "The grade by the bank",
+            "type": "categorical",
+            "value_dict": {
+                "A": "Loan grade A",
+                "B": "Loan grade B",
+                "C": "Loan grade C",
+                "D": "Loan grade D",
+                "E": "Loan grade E",
+                "F": "Loan grade F",
+                "G": "Loan grade G"
+            }
+        },
+        "Sub Grade": {
+            "description": "The sub-grade by the bank",
+            "type": "categorical"
+        },
+        "Employment Duration": {
+            "description": "Employment duration.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Home Ownership": {
+            "description": "Home ownership status.",
+            "type": "categorical",
+            "value_dict": {
+                "RENT": "The borrower rents their home",
+                "MORTGAGE": "The borrower has a mortgage on their home",
+                "OWN": "The borrower owns their home"
+            }
+        },
+        "Verification Status": {
+            "description": "Income verification by the bank",
+            "type": "categorical",
+            "value_dict": {
+                "Source Verified": "Income source was verified by the lender",
+                "Verified": "Income was verified by the lender",
+                "Not Verified": "Income was not verified by the lender"
+            }
+        },
+        "Payment Plan": {
+            "description": "Indicates if a payment plan has been put in place for the loan",
+            "type": "useless",
+            "value_dict": {
+                "n": "No payment plan has been put in place for the loan"
+            }
+        },
+        "Loan Title": {
+            "description": "The loan title provided by the borrower",
+            "type": "categorical"
+        },
+        "Debit to Income": {
+            "description": "Ratio of representative's total monthly debt repayment divided by self reported monthly income excluding mortgage.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Delinquency - two years": {
+            "description": "The number of 30+ days delinquency in past 2 years.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Inquires - six months": {
+            "description": "The number of inquiries in past 6 months.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Open Account": {
+            "description": "The number of open credit lines in the borrower's credit file.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Public Record": {
+            "description": "Number of derogatory public records",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Revolving Balance": {
+            "description": "Total credit revolving balance",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Revolving Utilities": {
+            "description": "Amount of credit a representative is using relative to revolving balance.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Total Accounts": {
+            "description": "Total number of credit lines available in the borrowers' credit line",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Initial List Status": {
+            "description": "The unique listing status of the loan.",
+            "type": "categorical",
+            "value_dict": {
+                "f": "Forwarded",
+                "w": "Waiting"
+            }
+        },
+        "Total Received Interest": {
+            "description": "Total interest received till date",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Total Received Late Fee": {
+            "description": "Total late fees received till date",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Recoveries": {
+            "description": "post charge off gross recovery",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Collection Recovery Fee": {
+            "description": "post charge off collection fee",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Collection 12 months Medical": {
+            "description": "Number of collections in 12 months excluding medical collections",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Application Type": {
+            "description": "Indicates whether the loan is an individual application or a joint",
+            "type": "categorical",
+            "value_dict": {
+                "INDIVIDUAL": "individual",
+                "JOINT": "joint"
+            }
+        },
+        "Last week Pay": {
+            "description": "How long (in weeks) a representative has paid EMI after batch enrolled",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Accounts Delinquent": {
+            "description": "Number of accounts on which the borrower is now delinquent.",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Total Collection Amount": {
+            "description": "Total current balance from all accounts",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Total Current Balance": {
+            "description": "Total current balance from all accounts",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Total Revolving Credit Limit": {
+            "description": "Total credit revolving limit",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Loan Status": {
+            "description": "If the person will be a loan defaulter or not (1: defaulter, 0: not defaulter)",
+            "type": "categorical",
+            "value_dict": {
+                "0.0": "Not defaulter",
+                "1.0": "Defaulter"
+            }
+        }
+    },
+    "task_info": {
+        "Loan Status": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in financial risk analysis.",
+                "task_prompt": "Based on the features of the loan, please predict if the person will be a loan defaulter.",
+                "answer_prompt": "Defaulter[1] or not[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0.0": "Non defaulter",
+                "1.0": "Defaulter"
+            },
+            "class_index_dict": {
+                "0.0": 0,
+                "1.0": 1
+            }
+        },
+        "Interest Rate": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in financial risk analysis.",
+                "task_prompt": "Based on the features of the loan, please predict the interest rate."
+            }
+        },
+        "Grade": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in financial risk analysis.",
+                "task_prompt": "Based on the features of the loan, please predict the loan grade.",
+                "answer_prompt": "Loan grade A[0], Loan grade B[1], Loan grade C[2], Loan grade D[3], Loan grade E[4], Loan grade F[5], or Loan grade G[6]?"
+            },
+            "class_num": 7,
+            "class_value_dict": {
+                "A": "Loan grade A",
+                "B": "Loan grade B",
+                "C": "Loan grade C",
+                "D": "Loan grade D",
+                "E": "Loan grade E",
+                "F": "Loan grade F",
+                "G": "Loan grade G"
+            },
+            "class_index_dict": {
+                "A": 0,
+                "B": 1,
+                "C": 2,
+                "D": 3,
+                "E": 4,
+                "F": 5,
+                "G": 6
+            }
+        },
+        "Total Received Interest": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in financial risk analysis.",
+                "task_prompt": "Based on the features of the loan, please predict the total received interest."
+            }
+        },
+        "Total Current Balance": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in financial risk analysis.",
+                "task_prompt": "Based on the features of the loan, please predict the total current balance."
+            }
+        }
+    }
+}

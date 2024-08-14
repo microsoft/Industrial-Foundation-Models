@@ -1,0 +1,123 @@
+{
+    "basic_info": {
+        "row_num": 575721,
+        "col_num": 8,
+        "label_candidates": [
+            "cantidad",
+            "grupo_etario",
+            "genero"
+        ],
+        "valid_feature_num": 7,
+        "num_features": [
+            "cantidad"
+        ],
+        "cat_features": [
+            "departamento",
+            "municipio",
+            "armas_medios",
+            "grupo_etario",
+            "genero"
+        ],
+        "other_features": [
+            "fecha_hecho"
+        ],
+        "tags": [
+            "categorical",
+            "social science",
+            "exploratory data analysis",
+            "data cleaning",
+            "data analytics"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/estiven0507/domestic-violence-in-colombia"
+    },
+    "feature_info": {
+        "departamento": {
+            "description": "The department in Colombia where the incident occurred",
+            "type": "categorical"
+        },
+        "municipio": {
+            "description": "The municipality in Colombia where the incident occurred",
+            "type": "categorical"
+        },
+        "codigo_dane": {
+            "description": "The DANE code, a unique identifier for each municipality in Colombia",
+            "type": "useless"
+        },
+        "armas_medios": {
+            "description": "The type of weapon or means used in the domestic violence incident",
+            "type": "categorical"
+        },
+        "fecha_hecho": {
+            "description": "The date when the incident occurred",
+            "type": "other"
+        },
+        "genero": {
+            "description": "The gender of the victim",
+            "type": "categorical",
+            "value_dict": {
+                "MASCULINO": "The victim is male",
+                "FEMENINO": "The victim is female"
+            }
+        },
+        "grupo_etario": {
+            "description": "The age group of the victim",
+            "type": "categorical",
+            "value_dict": {
+                "ADULTOS": "The victim is an adult",
+                "ADOLESCENTES": "The victim is an adolescent",
+                "MENORES": "The victim is a minor"
+            }
+        },
+        "cantidad": {
+            "description": "The number of incidents reported",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "cantidad": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing domestic violence data.",
+                "task_prompt": "Based on the features of the domestic violence incident, please predict the number of incidents.",
+                "answer_prompt": "The number of incidents is."
+            }
+        },
+        "grupo_etario": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing domestic violence data.",
+                "task_prompt": "Based on the features of the domestic violence incident, please predict the age group of the victim.",
+                "answer_prompt": "Adult[0], adolescent[1], minor[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "ADULTOS": "The victim is an adult",
+                "ADOLESCENTES": "The victim is an adolescent",
+                "MENORES": "The victim is a minor"
+            },
+            "class_index_dict": {
+                "ADULTOS": 0,
+                "ADOLESCENTES": 1,
+                "MENORES": 2
+            }
+        },
+        "genero": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing domestic violence data.",
+                "task_prompt": "Based on the features of the domestic violence incident, please predict the gender of the victim.",
+                "answer_prompt": "Male[0] or female[1]."
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "MASCULINO": "The victim is male",
+                "FEMENINO": "The victim is female"
+            },
+            "class_index_dict": {
+                "MASCULINO": 0,
+                "FEMENINO": 1
+            }
+        }
+    }
+}

@@ -1,0 +1,194 @@
+{
+    "basic_info": {
+        "row_num": 25000,
+        "col_num": 11,
+        "label_candidates": [
+            "MonkeyPox",
+            "Systemic Illness",
+            "HIV Infection",
+            "Sexually Transmitted Infection"
+        ],
+        "valid_feature_num": 10,
+        "num_features": [],
+        "cat_features": [
+            "Systemic Illness",
+            "Rectal Pain",
+            "Sore Throat",
+            "Penile Oedema",
+            "Oral Lesions",
+            "Solitary Lesion",
+            "Swollen Tonsils",
+            "HIV Infection",
+            "Sexually Transmitted Infection",
+            "MonkeyPox"
+        ],
+        "other_features": [],
+        "tags": [
+            "diseases",
+            "public health",
+            "health",
+            "classification",
+            "tabular"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/muhammad4hmed/monkeypox-patients-dataset"
+    },
+    "feature_info": {
+        "Patient_ID": {
+            "description": "Unique identifier for each patient",
+            "type": "useless"
+        },
+        "Systemic Illness": {
+            "description": "Type of systemic illness the patient has",
+            "type": "categorical",
+            "value_dict": {
+                "Fever": "The patient has a fever",
+                "Swollen Lymph Nodes": "The patient has swollen lymph nodes",
+                "Muscle Aches and Pain": "The patient is experiencing muscle aches and pain"
+            }
+        },
+        "Rectal Pain": {
+            "description": "Whether the patient experiences rectal pain or not",
+            "type": "categorical",
+            "value_dict": {
+                "False": "The patient does not have rectal pain",
+                "True": "The patient has rectal pain"
+            }
+        },
+        "Sore Throat": {
+            "description": "Whether the patient has a sore throat or not",
+            "type": "categorical",
+            "value_dict": {
+                "True": "The patient has a sore throat",
+                "False": "The patient does not have a sore throat"
+            }
+        },
+        "Penile Oedema": {
+            "description": "Whether the patient has penile oedema or not",
+            "type": "categorical",
+            "value_dict": {
+                "True": "The patient has penile oedema",
+                "False": "The patient does not have penile oedema"
+            }
+        },
+        "Oral Lesions": {
+            "description": "Whether the patient has oral lesions or not",
+            "type": "categorical",
+            "value_dict": {
+                "True": "The patient has oral lesions",
+                "False": "The patient does not have oral lesions"
+            }
+        },
+        "Solitary Lesion": {
+            "description": "Whether the patient has a solitary lesion or not",
+            "type": "categorical",
+            "value_dict": {
+                "False": "The patient does not have a solitary lesion",
+                "True": "The patient has a solitary lesion"
+            }
+        },
+        "Swollen Tonsils": {
+            "description": "Whether the patient has swollen tonsils or not",
+            "type": "categorical",
+            "value_dict": {
+                "True": "The patient has swollen tonsils",
+                "False": "The patient does not have swollen tonsils"
+            }
+        },
+        "HIV Infection": {
+            "description": "Whether the patient is infected with HIV or not",
+            "type": "categorical",
+            "value_dict": {
+                "False": "The patient is not infected with HIV",
+                "True": "The patient is infected with HIV"
+            }
+        },
+        "Sexually Transmitted Infection": {
+            "description": "Whether the patient has a sexually transmitted infection or not",
+            "type": "categorical",
+            "value_dict": {
+                "False": "The patient does not have a sexually transmitted infection",
+                "True": "The patient has a sexually transmitted infection"
+            }
+        },
+        "MonkeyPox": {
+            "description": "Whether the patient is diagnosed with Monkeypox or not",
+            "type": "categorical",
+            "value_dict": {
+                "Negative": "The patient is not diagnosed with Monkeypox",
+                "Positive": "The patient is diagnosed with Monkeypox"
+            }
+        }
+    },
+    "task_info": {
+        "MonkeyPox": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnostics.",
+                "task_prompt": "Based on the patient's symptoms and medical history, please predict if the patient has MonkeyPox.",
+                "answer_prompt": "Negative[0] or Positive[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "Negative": "The patient is not diagnosed with Monkeypox",
+                "Positive": "The patient is diagnosed with Monkeypox"
+            },
+            "class_index_dict": {
+                "Negative": 0,
+                "Positive": 1
+            }
+        },
+        "Systemic Illness": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnostics.",
+                "task_prompt": "Based on the patient's symptoms and medical history, please identify the systemic illness.",
+                "answer_prompt": "Fever[0], Swollen Lymph Nodes[1], or Muscle Aches and Pain[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "Fever": "The patient has a fever",
+                "Swollen Lymph Nodes": "The patient has swollen lymph nodes",
+                "Muscle Aches and Pain": "The patient is experiencing muscle aches and pain"
+            },
+            "class_index_dict": {
+                "Fever": 0,
+                "Swollen Lymph Nodes": 1,
+                "Muscle Aches and Pain": 2
+            }
+        },
+        "HIV Infection": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnostics.",
+                "task_prompt": "Based on the patient's symptoms and medical history, please predict if the patient is infected with HIV.",
+                "answer_prompt": "False[0] or True[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "False": "The patient is not infected with HIV",
+                "True": "The patient is infected with HIV"
+            },
+            "class_index_dict": {
+                "False": 0,
+                "True": 1
+            }
+        },
+        "Sexually Transmitted Infection": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnostics.",
+                "task_prompt": "Based on the patient's symptoms and medical history, please predict if the patient has a sexually transmitted infection.",
+                "answer_prompt": "False[0] or True[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "False": "The patient does not have a sexually transmitted infection",
+                "True": "The patient has a sexually transmitted infection"
+            },
+            "class_index_dict": {
+                "False": 0,
+                "True": 1
+            }
+        }
+    }
+}

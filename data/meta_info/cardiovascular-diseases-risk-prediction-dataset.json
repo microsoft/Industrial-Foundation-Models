@@ -1,0 +1,289 @@
+{
+    "basic_info": {
+        "row_num": 308854,
+        "col_num": 19,
+        "label_candidates": [
+            "Heart_Disease",
+            "Diabetes",
+            "Skin_Cancer",
+            "Other_Cancer",
+            "Depression",
+            "Arthritis"
+        ],
+        "valid_feature_num": 19,
+        "num_features": [
+            "Height_(cm)",
+            "Weight_(kg)",
+            "BMI"
+        ],
+        "cat_features": [
+            "General_Health",
+            "Checkup",
+            "Exercise",
+            "Skin_Cancer",
+            "Other_Cancer",
+            "Depression",
+            "Diabetes",
+            "Arthritis",
+            "Sex",
+            "Age_Category",
+            "Smoking_History",
+            "Alcohol_Consumption",
+            "Fruit_Consumption",
+            "Green_Vegetables_Consumption",
+            "FriedPotato_Consumption",
+            "Heart_Disease"
+        ],
+        "other_features": [],
+        "tags": [
+            "healthcare",
+            "exploratory data analysis",
+            "data visualization",
+            "binary classification",
+            "health conditions",
+            "heart conditions"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/alphiree/cardiovascular-diseases-risk-prediction-dataset"
+    },
+    "feature_info": {
+        "General_Health": {
+            "description": "The general health condition of the individual, e.g., Poor, Good, Very Good.",
+            "type": "categorical",
+            "value_dict": {
+                "Poor": "The individual has a poor general health condition.",
+                "Very Good": "The individual has a very good general health condition.",
+                "Good": "The individual has a good general health condition.",
+                "Fair": "The individual has a fair general health condition.",
+                "Excellent": "The individual has an excellent general health condition."
+            }
+        },
+        "Checkup": {
+            "description": "The frequency of medical checkups.",
+            "type": "categorical",
+            "value_dict": {
+                "Within the past 2 years": "The individual had a medical checkup within the past 2 years.",
+                "Within the past year": "The individual had a medical checkup within the past year.",
+                "5 or more years ago": "The individual had a medical checkup 5 or more years ago.",
+                "Within the past 5 years": "The individual had a medical checkup within the past 5 years.",
+                "Never": "The individual never had a medical checkup."
+            }
+        },
+        "Exercise": {
+            "description": "The frequency of exercise.",
+            "type": "categorical",
+            "value_dict": {
+                "No": "The individual does not exercise.",
+                "Yes": "The individual exercises."
+            }
+        },
+        "Heart_Disease": {
+            "description": "Whether the individual has heart disease or not.",
+            "type": "categorical",
+            "value_dict": {
+                "No": "The individual does not have heart disease.",
+                "Yes": "The individual has heart disease."
+            }
+        },
+        "Skin_Cancer": {
+            "description": "Whether the individual has skin cancer or not.",
+            "type": "categorical",
+            "value_dict": {
+                "No": "The individual does not have skin cancer.",
+                "Yes": "The individual has skin cancer."
+            }
+        },
+        "Other_Cancer": {
+            "description": "Whether the individual has any other type of cancer or not.",
+            "type": "categorical",
+            "value_dict": {
+                "No": "The individual does not have any other type of cancer.",
+                "Yes": "The individual has another type of cancer."
+            }
+        },
+        "Depression": {
+            "description": "Whether the individual has depression or not.",
+            "type": "categorical",
+            "value_dict": {
+                "No": "The individual does not have depression.",
+                "Yes": "The individual has depression."
+            }
+        },
+        "Diabetes": {
+            "description": "Whether the individual has diabetes or not.",
+            "type": "categorical",
+            "value_dict": {
+                "No": "The individual does not have diabetes.",
+                "Yes": "The individual has diabetes.",
+                "No, pre-diabetes or borderline diabetes": "The individual does not have diabetes, but has pre-diabetes or borderline diabetes.",
+                "Yes, but female told only during pregnancy": "The individual has diabetes, but was only told during pregnancy (female)."
+            }
+        },
+        "Arthritis": {
+            "description": "Whether the individual has arthritis or not.",
+            "type": "categorical",
+            "value_dict": {
+                "Yes": "The individual has arthritis.",
+                "No": "The individual does not have arthritis."
+            }
+        },
+        "Sex": {
+            "description": "The sex of the individual.",
+            "type": "categorical",
+            "value_dict": {
+                "Female": "The individual is female.",
+                "Male": "The individual is male."
+            }
+        },
+        "Age_Category": {
+            "description": "The age category of the individual.",
+            "type": "categorical"
+        },
+        "Height_(cm)": {
+            "description": "The height of the individual in centimeters.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Weight_(kg)": {
+            "description": "The weight of the individual in kilograms.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "BMI": {
+            "description": "The Body Mass Index of the individual.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Smoking_History": {
+            "description": "The smoking history of the individual.",
+            "type": "categorical",
+            "value_dict": {
+                "Yes": "The individual has a history of smoking.",
+                "No": "The individual does not have a history of smoking."
+            }
+        },
+        "Alcohol_Consumption": {
+            "description": "The frequency of alcohol consumption.",
+            "type": "categorical"
+        },
+        "Fruit_Consumption": {
+            "description": "The frequency of fruit consumption.",
+            "type": "categorical"
+        },
+        "Green_Vegetables_Consumption": {
+            "description": "The frequency of green vegetables consumption.",
+            "type": "categorical"
+        },
+        "FriedPotato_Consumption": {
+            "description": "The frequency of fried potato consumption.",
+            "type": "categorical"
+        }
+    },
+    "task_info": {
+        "Heart_Disease": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in health risk prediction.",
+                "task_prompt": "Based on the features of the individual, please predict if the individual has heart disease.",
+                "answer_prompt": "No[0] or Yes[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "No": "The individual does not have heart disease.",
+                "Yes": "The individual has heart disease."
+            },
+            "class_index_dict": {
+                "No": 0,
+                "Yes": 1
+            }
+        },
+        "Diabetes": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in health risk prediction.",
+                "task_prompt": "Based on the features of the individual, please predict the diabetes status of the individual.",
+                "answer_prompt": "No[0], Yes[1], No, pre-diabetes or borderline diabetes[2], Yes, but female told only during pregnancy[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "No": "The individual does not have diabetes.",
+                "Yes": "The individual has diabetes.",
+                "No, pre-diabetes or borderline diabetes": "The individual does not have diabetes, but has pre-diabetes or borderline diabetes.",
+                "Yes, but female told only during pregnancy": "The individual has diabetes, but was only told during pregnancy (female)."
+            },
+            "class_index_dict": {
+                "No": 0,
+                "Yes": 1,
+                "No, pre-diabetes or borderline diabetes": 2,
+                "Yes, but female told only during pregnancy": 3
+            }
+        },
+        "Skin_Cancer": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in health risk prediction.",
+                "task_prompt": "Based on the features of the individual, please predict if the individual has skin cancer.",
+                "answer_prompt": "No[0] or Yes[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "No": "The individual does not have skin cancer.",
+                "Yes": "The individual has skin cancer."
+            },
+            "class_index_dict": {
+                "No": 0,
+                "Yes": 1
+            }
+        },
+        "Other_Cancer": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in health risk prediction.",
+                "task_prompt": "Based on the features of the individual, please predict if the individual has other types of cancer.",
+                "answer_prompt": "No[0] or Yes[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "No": "The individual does not have any other type of cancer.",
+                "Yes": "The individual has another type of cancer."
+            },
+            "class_index_dict": {
+                "No": 0,
+                "Yes": 1
+            }
+        },
+        "Depression": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in health risk prediction.",
+                "task_prompt": "Based on the features of the individual, please predict if the individual has depression.",
+                "answer_prompt": "No[0] or Yes[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "No": "The individual does not have depression.",
+                "Yes": "The individual has depression."
+            },
+            "class_index_dict": {
+                "No": 0,
+                "Yes": 1
+            }
+        },
+        "Arthritis": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in health risk prediction.",
+                "task_prompt": "Based on the features of the individual, please predict if the individual has arthritis.",
+                "answer_prompt": "No[0] or Yes[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "Yes": "The individual has arthritis.",
+                "No": "The individual does not have arthritis."
+            },
+            "class_index_dict": {
+                "No": 0,
+                "Yes": 1
+            }
+        }
+    }
+}

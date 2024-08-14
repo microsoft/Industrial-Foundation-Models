@@ -1,0 +1,173 @@
+{
+    "basic_info": {
+        "row_num": 730,
+        "col_num": 16,
+        "label_candidates": [
+            "cnt",
+            "casual",
+            "registered"
+        ],
+        "valid_feature_num": 15,
+        "num_features": [
+            "temp",
+            "atemp",
+            "hum",
+            "windspeed",
+            "casual",
+            "registered",
+            "cnt"
+        ],
+        "cat_features": [
+            "season",
+            "yr",
+            "mnth",
+            "holiday",
+            "weekday",
+            "workingday",
+            "weathersit"
+        ],
+        "other_features": [
+            "dteday"
+        ],
+        "tags": [
+            "transportation",
+            "automobiles and vehicles",
+            "beginner",
+            "linear regression",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/yasserh/bike-sharing-dataset"
+    },
+    "feature_info": {
+        "instant": {
+            "description": "Record index",
+            "type": "useless"
+        },
+        "dteday": {
+            "description": "Date of the observation",
+            "type": "other"
+        },
+        "season": {
+            "description": "Season of the year (1: spring, 2: summer, 3: fall, 4: winter)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Spring",
+                "2": "Summer",
+                "3": "Fall",
+                "4": "Winter"
+            }
+        },
+        "yr": {
+            "description": "Year (0: 2018, 1: 2019)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "2018",
+                "1": "2019"
+            }
+        },
+        "mnth": {
+            "description": "Month of the year",
+            "type": "categorical"
+        },
+        "holiday": {
+            "description": "Whether the day is a holiday or not (0: No, 1: Yes)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Not a holiday",
+                "1": "Holiday"
+            }
+        },
+        "weekday": {
+            "description": "Day of the week",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Sunday",
+                "1": "Monday",
+                "2": "Tuesday",
+                "3": "Wednesday",
+                "4": "Thursday",
+                "5": "Friday",
+                "6": "Saturday"
+            }
+        },
+        "workingday": {
+            "description": "Whether the day is a working day or not (0: No, 1: Yes)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Not a working day",
+                "1": "Working day"
+            }
+        },
+        "weathersit": {
+            "description": "Weather situation (1: Clear, 2: Mist, 3: Light Snow/Rain, 4: Heavy Rain)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Clear",
+                "2": "Mist",
+                "3": "Light Snow/Rain",
+                "4": "Heavy Rain"
+            }
+        },
+        "temp": {
+            "description": "Normalized temperature in Celsius",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "atemp": {
+            "description": "Normalized feeling temperature in Celsius",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "hum": {
+            "description": "Normalized humidity",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "windspeed": {
+            "description": "Normalized wind speed",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "casual": {
+            "description": "Count of casual users",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "registered": {
+            "description": "Count of registered users",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "cnt": {
+            "description": "Count of total rental bikes including both casual and registered",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "cnt": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in bike sharing analysis.",
+                "task_prompt": "Based on the features of the bike sharing data, such as season, weather, temperature, humidity, windspeed, etc., please predict the total count of bike rentals.",
+                "answer_prompt": "The predicted count of bike rentals is: ."
+            }
+        },
+        "casual": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in bike sharing analysis.",
+                "task_prompt": "Based on the features of the bike sharing data, such as season, weather, temperature, humidity, windspeed, etc., please predict the count of casual bike rentals.",
+                "answer_prompt": "The predicted count of casual bike rentals is: ."
+            }
+        },
+        "registered": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in bike sharing analysis.",
+                "task_prompt": "Based on the features of the bike sharing data, such as season, weather, temperature, humidity, windspeed, etc., please predict the count of registered bike rentals.",
+                "answer_prompt": "The predicted count of registered bike rentals is: ."
+            }
+        }
+    }
+}

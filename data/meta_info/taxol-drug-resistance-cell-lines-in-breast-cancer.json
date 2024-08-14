@@ -1,0 +1,95 @@
+{
+    "basic_info": {
+        "row_num": 21312,
+        "col_num": 4,
+        "label_candidates": [
+            "logFC",
+            "P.Value",
+            "Cell Line"
+        ],
+        "valid_feature_num": 4,
+        "num_features": [
+            "P.Value",
+            "logFC"
+        ],
+        "cat_features": [
+            "Gene.symbol",
+            "Cell Line"
+        ],
+        "other_features": [],
+        "tags": [
+            "biology",
+            "health",
+            "biotechnology",
+            "classification",
+            "bigquery",
+            "cancer"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/aliabedimadiseh/taxol-drug-resistance-cell-lines-in-breast-cancer"
+    },
+    "feature_info": {
+        "Gene.symbol": {
+            "description": "The symbol of the gene.",
+            "type": "categorical"
+        },
+        "P.Value": {
+            "description": "The p-value from the statistical test, indicating the significance of the gene expression difference.",
+            "type": "numerical",
+            "decimal": "sci"
+        },
+        "logFC": {
+            "description": "The log fold change of the gene expression, indicating the extent of the gene expression difference.",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Cell Line": {
+            "description": "The cell line in which the gene expression was measured.",
+            "type": "categorical",
+            "value_dict": {
+                "BAS": "The BAS cell line of breast cancer.",
+                "HS578T": "The HS578T cell line of breast cancer.",
+                "MCF7": "The MCF7 cell line of breast cancer.",
+                "MDA": "The MDA cell line of breast cancer."
+            }
+        }
+    },
+    "task_info": {
+        "logFC": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in genomics and drug resistance.",
+                "task_prompt": "Based on the gene symbol and P.Value, please predict the logFC value.",
+                "answer_prompt": "The logFC value is ______."
+            }
+        },
+        "P.Value": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in genomics and drug resistance.",
+                "task_prompt": "Based on the gene symbol and logFC, please predict the P.Value.",
+                "answer_prompt": "The P.Value is ______."
+            }
+        },
+        "Cell Line": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in genomics and drug resistance.",
+                "task_prompt": "Based on the gene symbol, P.Value and logFC, please predict the cell line of breast cancer.",
+                "answer_prompt": "Is it the BAS[0], HS578T[1], MCF7[2], or MDA[3] cell line?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "BAS": "The BAS cell line of breast cancer.",
+                "HS578T": "The HS578T cell line of breast cancer.",
+                "MCF7": "The MCF7 cell line of breast cancer.",
+                "MDA": "The MDA cell line of breast cancer."
+            },
+            "class_index_dict": {
+                "BAS": 0,
+                "HS578T": 1,
+                "MCF7": 2,
+                "MDA": 3
+            }
+        }
+    }
+}

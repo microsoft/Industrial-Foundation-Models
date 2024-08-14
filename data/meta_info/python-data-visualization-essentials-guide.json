@@ -1,0 +1,174 @@
+{
+    "basic_info": {
+        "row_num": 4287,
+        "col_num": 15,
+        "label_candidates": [
+            "party_simplified",
+            "candidatevotes",
+            "totalvotes",
+            "writein"
+        ],
+        "valid_feature_num": 14,
+        "num_features": [
+            "year",
+            "candidatevotes",
+            "totalvotes"
+        ],
+        "cat_features": [
+            "state",
+            "state_po",
+            "state_fips",
+            "state_cen",
+            "state_ic",
+            "office",
+            "candidate",
+            "party_detailed",
+            "writein",
+            "party_simplified"
+        ],
+        "other_features": [
+            "notes"
+        ],
+        "tags": [
+            "computer science",
+            "programming",
+            "data visualization",
+            "classification",
+            "regression",
+            "python"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/kalilurrahman/python-data-visualization-essentials-guide"
+    },
+    "feature_info": {
+        "year": {
+            "description": "The year of the election",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "state": {
+            "description": "The state where the election took place",
+            "type": "categorical"
+        },
+        "state_po": {
+            "description": "The postal code abbreviation of the state",
+            "type": "categorical"
+        },
+        "state_fips": {
+            "description": "Federal Information Processing Standard state code",
+            "type": "categorical"
+        },
+        "state_cen": {
+            "description": "The U.S. Census Bureau\u2019s regional code for the state",
+            "type": "categorical"
+        },
+        "state_ic": {
+            "description": "An internal census code for the state",
+            "type": "categorical"
+        },
+        "office": {
+            "description": "The office that the candidate is running for",
+            "type": "categorical",
+            "value_dict": {
+                "US PRESIDENT": "The office of the President of the United States"
+            }
+        },
+        "candidate": {
+            "description": "The name of the candidate",
+            "type": "categorical"
+        },
+        "party_detailed": {
+            "description": "The detailed party that the candidate belongs to",
+            "type": "categorical"
+        },
+        "writein": {
+            "description": "Indicates whether the candidate was a write-in",
+            "type": "categorical",
+            "value_dict": {
+                "False": "The candidate was not a write-in",
+                "True": "The candidate was a write-in"
+            }
+        },
+        "candidatevotes": {
+            "description": "The number of votes for the candidate",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "totalvotes": {
+            "description": "The total number of votes in the election",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "version": {
+            "description": "The version of the data",
+            "type": "useless"
+        },
+        "notes": {
+            "description": "Any notes on the data",
+            "type": "other"
+        },
+        "party_simplified": {
+            "description": "The simplified party that the candidate belongs to",
+            "type": "categorical",
+            "value_dict": {
+                "DEMOCRAT": "The candidate belongs to the Democratic Party",
+                "REPUBLICAN": "The candidate belongs to the Republican Party",
+                "OTHER": "The candidate belongs to a party other than the Democratic and Republican parties",
+                "LIBERTARIAN": "The candidate belongs to the Libertarian Party"
+            }
+        }
+    },
+    "task_info": {
+        "party_simplified": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in political data analysis.",
+                "task_prompt": "Based on the features of the election candidate, please predict the party affiliation.",
+                "answer_prompt": "DEMOCRAT[0], REPUBLICAN[1], OTHER[2], LIBERTARIAN[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "DEMOCRAT": "The candidate belongs to the Democratic Party",
+                "REPUBLICAN": "The candidate belongs to the Republican Party",
+                "OTHER": "The candidate belongs to a party other than the Democratic and Republican parties",
+                "LIBERTARIAN": "The candidate belongs to the Libertarian Party"
+            },
+            "class_index_dict": {
+                "DEMOCRAT": 0,
+                "REPUBLICAN": 1,
+                "OTHER": 2,
+                "LIBERTARIAN": 3
+            }
+        },
+        "candidatevotes": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in election data analysis.",
+                "task_prompt": "Based on the features of the election candidate, please predict the number of votes the candidate will receive."
+            }
+        },
+        "totalvotes": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in election data analysis.",
+                "task_prompt": "Based on the features of the election, please predict the total number of votes."
+            }
+        },
+        "writein": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in election data analysis.",
+                "task_prompt": "Based on the features of the election candidate, please predict whether the candidate is a write-in or not.",
+                "answer_prompt": "False[0] or True[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "False": "The candidate was not a write-in",
+                "True": "The candidate was a write-in"
+            },
+            "class_index_dict": {
+                "False": 0,
+                "True": 1
+            }
+        }
+    }
+}

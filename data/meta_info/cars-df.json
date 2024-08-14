@@ -1,0 +1,204 @@
+{
+    "basic_info": {
+        "row_num": 428,
+        "col_num": 19,
+        "label_candidates": [
+            "msrp",
+            "dealer_cost",
+            "city_mpg",
+            "hwy_mpg",
+            "horsepwr"
+        ],
+        "valid_feature_num": 19,
+        "num_features": [
+            "msrp",
+            "dealer_cost",
+            "eng_size",
+            "ncyl",
+            "horsepwr",
+            "city_mpg",
+            "hwy_mpg",
+            "weight",
+            "wheel_base",
+            "length",
+            "width"
+        ],
+        "cat_features": [
+            "name",
+            "sports_car",
+            "wagon",
+            "minivan",
+            "pickup",
+            "all_wheel",
+            "rear_wheel",
+            "suv"
+        ],
+        "other_features": [],
+        "tags": [
+            "categorical",
+            "automobiles and vehicles",
+            "text",
+            "feature extraction"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/joanpau/cars-df"
+    },
+    "feature_info": {
+        "name": {
+            "description": "The name of the car model",
+            "type": "categorical"
+        },
+        "sports_car": {
+            "description": "If the car is a sports car",
+            "type": "categorical",
+            "value_dict": {
+                "False": "The car is not a sports car",
+                "True": "The car is a sports car"
+            }
+        },
+        "suv": {
+            "description": "If the car is a SUV",
+            "type": "categorical",
+            "value_dict": {
+                "False": "The car is not a SUV",
+                "True": "The car is a SUV"
+            }
+        },
+        "wagon": {
+            "description": "If the car is a wagon",
+            "type": "categorical",
+            "value_dict": {
+                "False": "The car is not a wagon",
+                "True": "The car is a wagon"
+            }
+        },
+        "minivan": {
+            "description": "If the car is a minivan",
+            "type": "categorical",
+            "value_dict": {
+                "False": "The car is not a minivan",
+                "True": "The car is a minivan"
+            }
+        },
+        "pickup": {
+            "description": "If the car is a pickup",
+            "type": "categorical",
+            "value_dict": {
+                "False": "The car is not a pickup",
+                "True": "The car is a pickup"
+            }
+        },
+        "all_wheel": {
+            "description": "If the car is all wheel drive",
+            "type": "categorical",
+            "value_dict": {
+                "False": "The car is not all wheel drive",
+                "True": "The car is all wheel drive"
+            }
+        },
+        "rear_wheel": {
+            "description": "If the car is rear wheel drive",
+            "type": "categorical",
+            "value_dict": {
+                "False": "The car is not rear wheel drive",
+                "True": "The car is rear wheel drive"
+            }
+        },
+        "msrp": {
+            "description": "The manufacturer suggested retail price of the car in dollars",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "dealer_cost": {
+            "description": "The cost of the car for the dealer in dollars",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "eng_size": {
+            "description": "The size of the engine in liters",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "ncyl": {
+            "description": "The number of cylinders in the engine",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "horsepwr": {
+            "description": "The horsepower of the car",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "city_mpg": {
+            "description": "The fuel economy in the city in miles per gallon",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "hwy_mpg": {
+            "description": "The fuel economy on the highway in miles per gallon",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "weight": {
+            "description": "The weight of the car in pounds",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "wheel_base": {
+            "description": "The wheel base of the car in inches",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "length": {
+            "description": "The length of the car in inches",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "width": {
+            "description": "The width of the car in inches",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "msrp": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in automobile pricing.",
+                "task_prompt": "Based on the features of the car, please predict the Manufacturer\u2019s Suggested Retail Price (MSRP).",
+                "answer_prompt": "The predicted MSRP is."
+            }
+        },
+        "dealer_cost": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in automobile pricing.",
+                "task_prompt": "Based on the features of the car, please predict the dealer cost.",
+                "answer_prompt": "The predicted dealer cost is."
+            }
+        },
+        "city_mpg": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in automobile fuel efficiency.",
+                "task_prompt": "Based on the features of the car, please predict the city miles per gallon (MPG).",
+                "answer_prompt": "The predicted city MPG is."
+            }
+        },
+        "hwy_mpg": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in automobile fuel efficiency.",
+                "task_prompt": "Based on the features of the car, please predict the highway miles per gallon (MPG).",
+                "answer_prompt": "The predicted highway MPG is."
+            }
+        },
+        "horsepwr": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in automobile specifications.",
+                "task_prompt": "Based on the features of the car, please predict the horsepower.",
+                "answer_prompt": "The predicted horsepower is."
+            }
+        }
+    }
+}

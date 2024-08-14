@@ -1,0 +1,180 @@
+{
+    "basic_info": {
+        "row_num": 13611,
+        "col_num": 17,
+        "label_candidates": [
+            "Class",
+            "Area",
+            "Perimeter"
+        ],
+        "valid_feature_num": 17,
+        "num_features": [
+            "Area",
+            "Perimeter",
+            "MajorAxisLength",
+            "MinorAxisLength",
+            "AspectRation",
+            "Eccentricity",
+            "ConvexArea",
+            "EquivDiameter",
+            "Extent",
+            "Solidity",
+            "roundness",
+            "Compactness",
+            "ShapeFactor1",
+            "ShapeFactor2",
+            "ShapeFactor3",
+            "ShapeFactor4"
+        ],
+        "cat_features": [
+            "Class"
+        ],
+        "other_features": [],
+        "tags": [
+            "exploratory data analysis",
+            "classification",
+            "clustering",
+            "pandas",
+            "seaborn"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/sansuthi/dry-bean-dataset"
+    },
+    "feature_info": {
+        "Area": {
+            "description": "The area of the dry bean",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Perimeter": {
+            "description": "The perimeter of the dry bean",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "MajorAxisLength": {
+            "description": "The length of the major axis of the dry bean",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "MinorAxisLength": {
+            "description": "The length of the minor axis of the dry bean",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "AspectRation": {
+            "description": "The aspect ratio of the dry bean",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Eccentricity": {
+            "description": "The eccentricity of the dry bean",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "ConvexArea": {
+            "description": "The convex area of the dry bean",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "EquivDiameter": {
+            "description": "The equivalent diameter of the dry bean",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Extent": {
+            "description": "The extent of the dry bean",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Solidity": {
+            "description": "The solidity of the dry bean",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "roundness": {
+            "description": "The roundness of the dry bean",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "Compactness": {
+            "description": "The compactness of the dry bean",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "ShapeFactor1": {
+            "description": "Shape factor 1 of the dry bean",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "ShapeFactor2": {
+            "description": "Shape factor 2 of the dry bean",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "ShapeFactor3": {
+            "description": "Shape factor 3 of the dry bean",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "ShapeFactor4": {
+            "description": "Shape factor 4 of the dry bean",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Class": {
+            "description": "The class of the dry bean",
+            "type": "categorical",
+            "value_dict": {
+                "SEKER": "Seker is a class of dry bean.",
+                "BARBUNYA": "Barbunya is a class of dry bean.",
+                "BOMBAY": "Bombay is a class of dry bean.",
+                "CALI": "Cali is a class of dry bean.",
+                "HOROZ": "Horoz is a class of dry bean.",
+                "SIRA": "Sira is a class of dry bean.",
+                "DERMASON": "Dermason is a class of dry bean."
+            }
+        }
+    },
+    "task_info": {
+        "Class": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in agricultural data analysis.",
+                "task_prompt": "Based on the features of the dry bean, please predict the class of the bean.",
+                "answer_prompt": "SEKER[0], BARBUNYA[1], BOMBAY[2], CALI[3], HOROZ[4], SIRA[5], DERMASON[6]?"
+            },
+            "class_num": 7,
+            "class_value_dict": {
+                "SEKER": "Seker is a class of dry bean.",
+                "BARBUNYA": "Barbunya is a class of dry bean.",
+                "BOMBAY": "Bombay is a class of dry bean.",
+                "CALI": "Cali is a class of dry bean.",
+                "HOROZ": "Horoz is a class of dry bean.",
+                "SIRA": "Sira is a class of dry bean.",
+                "DERMASON": "Dermason is a class of dry bean."
+            },
+            "class_index_dict": {
+                "SEKER": 0,
+                "BARBUNYA": 1,
+                "BOMBAY": 2,
+                "CALI": 3,
+                "HOROZ": 4,
+                "SIRA": 5,
+                "DERMASON": 6
+            }
+        },
+        "Area": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in agricultural data analysis.",
+                "task_prompt": "Based on the features of the dry bean, please predict the area of the bean."
+            }
+        },
+        "Perimeter": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in agricultural data analysis.",
+                "task_prompt": "Based on the features of the dry bean, please predict the perimeter of the bean."
+            }
+        }
+    }
+}

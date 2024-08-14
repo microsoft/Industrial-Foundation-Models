@@ -1,0 +1,115 @@
+{
+    "basic_info": {
+        "row_num": 3457,
+        "col_num": 6,
+        "label_candidates": [
+            "Temperature",
+            "Sensor1",
+            "Sensor2",
+            "Sensor3",
+            "Sensor4",
+            "Sensor5"
+        ],
+        "valid_feature_num": 6,
+        "num_features": [
+            "Sensor1",
+            "Sensor2",
+            "Sensor3",
+            "Sensor4",
+            "Sensor5",
+            "Temperature"
+        ],
+        "cat_features": [],
+        "other_features": [],
+        "tags": [
+            "cities and urban areas",
+            "beginner",
+            "data visualization",
+            "linear regression",
+            "data storytelling"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/aakashjoshi123/tempsense-temperature-and-sensor-data"
+    },
+    "feature_info": {
+        "Temperature": {
+            "description": "The temperature reading from the environment in degrees Celsius.",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Sensor1": {
+            "description": "The reading from Sensor 1, unitless as it is likely normalized or abstract.",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Sensor2": {
+            "description": "The reading from Sensor 2, unitless as it is likely normalized or abstract.",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Sensor3": {
+            "description": "The reading from Sensor 3, unitless as it is likely normalized or abstract.",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Sensor4": {
+            "description": "The reading from Sensor 4, unitless as it is likely normalized or abstract.",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Sensor5": {
+            "description": "The reading from Sensor 5, unitless as it is likely normalized or abstract.",
+            "type": "numerical",
+            "decimal": 6
+        }
+    },
+    "task_info": {
+        "Temperature": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing temperature and sensor data.",
+                "task_prompt": "Based on the sensor readings, please predict the temperature.",
+                "answer_prompt": "The predicted temperature is ____."
+            }
+        },
+        "Sensor1": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing temperature and sensor data.",
+                "task_prompt": "Based on the temperature and readings from other sensors, please predict the reading of Sensor1.",
+                "answer_prompt": "The predicted reading for Sensor1 is ____."
+            }
+        },
+        "Sensor2": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing temperature and sensor data.",
+                "task_prompt": "Based on the temperature and readings from other sensors, please predict the reading of Sensor2.",
+                "answer_prompt": "The predicted reading for Sensor2 is ____."
+            }
+        },
+        "Sensor3": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing temperature and sensor data.",
+                "task_prompt": "Based on the temperature and readings from other sensors, please predict the reading of Sensor3.",
+                "answer_prompt": "The predicted reading for Sensor3 is ____."
+            }
+        },
+        "Sensor4": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing temperature and sensor data.",
+                "task_prompt": "Based on the temperature and readings from other sensors, please predict the reading of Sensor4.",
+                "answer_prompt": "The predicted reading for Sensor4 is ____."
+            }
+        },
+        "Sensor5": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in analyzing temperature and sensor data.",
+                "task_prompt": "Based on the temperature and readings from other sensors, please predict the reading of Sensor5.",
+                "answer_prompt": "The predicted reading for Sensor5 is ____."
+            }
+        }
+    }
+}

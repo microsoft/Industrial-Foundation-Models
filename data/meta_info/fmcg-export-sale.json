@@ -1,0 +1,103 @@
+{
+    "basic_info": {
+        "row_num": 7811,
+        "col_num": 9,
+        "label_candidates": [
+            "Total Price",
+            "QTY"
+        ],
+        "valid_feature_num": 8,
+        "num_features": [
+            "QTY",
+            "Total Price"
+        ],
+        "cat_features": [
+            "Category",
+            "Product Code",
+            "Customer Code",
+            "Destenation"
+        ],
+        "other_features": [
+            "Date",
+            "Invoice Number"
+        ],
+        "tags": [
+            "geography",
+            "transportation",
+            "data analytics",
+            "linear regression",
+            "forcats"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/hamidrezabakhtaki/fmcg-export-sale"
+    },
+    "feature_info": {
+        "ID": {
+            "description": "Unique identifier for each record",
+            "type": "useless"
+        },
+        "Date": {
+            "description": "Date of the transaction",
+            "type": "other"
+        },
+        "Category": {
+            "description": "Category of the product sold",
+            "type": "categorical",
+            "value_dict": {
+                "Category5": "This represents the product category 5",
+                "Category6": "This represents the product category 6",
+                "Category4": "This represents the product category 4",
+                "Category3": "This represents the product category 3",
+                "Category8": "This represents the product category 8",
+                "Category7": "This represents the product category 7",
+                "Category2": "This represents the product category 2",
+                "Category1": "This represents the product category 1",
+                "Category9": "This represents the product category 9",
+                "Category10": "This represents the product category 10"
+            }
+        },
+        "Invoice Number": {
+            "description": "Unique number assigned to each invoice",
+            "type": "other"
+        },
+        "Product Code": {
+            "description": "Unique code assigned to each product",
+            "type": "categorical"
+        },
+        "Customer Code": {
+            "description": "Unique code assigned to each customer",
+            "type": "categorical"
+        },
+        "Destenation": {
+            "description": "Destination country where the product is sold",
+            "type": "categorical"
+        },
+        "QTY": {
+            "description": "Quantity of the product sold",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Total Price": {
+            "description": "Total price of the product sold, possibly in USD",
+            "type": "numerical",
+            "decimal": 4
+        }
+    },
+    "task_info": {
+        "Total Price": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sales forecasting.",
+                "task_prompt": "Based on the features of the FMCG export sale, please predict the total price.",
+                "answer_prompt": "The predicted total price is _."
+            }
+        },
+        "QTY": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in sales forecasting.",
+                "task_prompt": "Based on the features of the FMCG export sale, please predict the quantity.",
+                "answer_prompt": "The predicted quantity is _."
+            }
+        }
+    }
+}

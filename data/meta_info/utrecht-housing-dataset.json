@@ -1,0 +1,220 @@
+{
+    "basic_info": {
+        "row_num": 100,
+        "col_num": 17,
+        "label_candidates": [
+            "retailvalue",
+            "taxvalue",
+            "house-area",
+            "garden-size",
+            "bathrooms",
+            "energy-eff",
+            "buildyear",
+            "lot-area"
+        ],
+        "valid_feature_num": 16,
+        "num_features": [
+            "lot-len",
+            "lot-width",
+            "lot-area",
+            "house-area",
+            "garden-size",
+            "x-coor",
+            "y-coor",
+            "buildyear",
+            "bathrooms",
+            "taxvalue",
+            "retailvalue"
+        ],
+        "cat_features": [
+            "zipcode",
+            "balcony",
+            "monument",
+            "energy-eff"
+        ],
+        "other_features": [
+            "select"
+        ],
+        "tags": [
+            "housing",
+            "real estate",
+            "linear regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/ictinstitute/utrecht-housing-dataset"
+    },
+    "feature_info": {
+        "id": {
+            "description": "Unique identifier for each property",
+            "type": "useless"
+        },
+        "zipcode": {
+            "description": "Postal code of the property",
+            "type": "categorical",
+            "value_dict": {
+                "3528": "Property located in postal code area 3528",
+                "3800": "Property located in postal code area 3800",
+                "3525": "Property located in postal code area 3525",
+                "3500": "Property located in postal code area 3500"
+            }
+        },
+        "lot-len": {
+            "description": "Length of the lot in meters",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "lot-width": {
+            "description": "Width of the lot in meters",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "lot-area": {
+            "description": "Area of the lot in square meters",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "house-area": {
+            "description": "Area of the house in square meters",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "garden-size": {
+            "description": "Size of the garden in square meters",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "balcony": {
+            "description": "Presence of a balcony (1 if yes, 0 if no)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Property does not have a balcony",
+                "1": "Property has a balcony",
+                "2": "Property has multiple balconies"
+            }
+        },
+        "x-coor": {
+            "description": "X-coordinate of the property",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "y-coor": {
+            "description": "Y-coordinate of the property",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "buildyear": {
+            "description": "Year the house was built",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "bathrooms": {
+            "description": "Number of bathrooms in the house",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "taxvalue": {
+            "description": "Tax value of the property",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "retailvalue": {
+            "description": "Retail value of the property",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "energy-eff": {
+            "description": "Energy efficiency of the house (1 if efficient, 0 if not)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Property is not energy efficient",
+                "1": "Property is energy efficient"
+            }
+        },
+        "monument": {
+            "description": "Whether the property is a monument (1 if yes, 0 if no)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Property is not a monument",
+                "1": "Property is a monument"
+            }
+        },
+        "select": {
+            "description": "Unknown feature",
+            "type": "other"
+        }
+    },
+    "task_info": {
+        "retailvalue": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate valuation.",
+                "task_prompt": "Based on the features of the property, please predict the retail value.",
+                "answer_prompt": "The retail value of the property is."
+            }
+        },
+        "taxvalue": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in property taxation.",
+                "task_prompt": "Based on the features of the property, please predict the tax value.",
+                "answer_prompt": "The tax value of the property is."
+            }
+        },
+        "house-area": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate.",
+                "task_prompt": "Based on the features of the property, please predict the house area.",
+                "answer_prompt": "The house area of the property is."
+            }
+        },
+        "garden-size": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate.",
+                "task_prompt": "Based on the features of the property, please predict the garden size.",
+                "answer_prompt": "The garden size of the property is."
+            }
+        },
+        "bathrooms": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate.",
+                "task_prompt": "Based on the features of the property, please predict the number of bathrooms.",
+                "answer_prompt": "The number of bathrooms in the property is."
+            }
+        },
+        "energy-eff": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in energy efficiency.",
+                "task_prompt": "Based on the features of the property, please predict if the property is energy efficient.",
+                "answer_prompt": "Is the property energy efficient? Yes[1] or No[0]."
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "0": "Property is not energy efficient",
+                "1": "Property is energy efficient"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1
+            }
+        },
+        "buildyear": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate.",
+                "task_prompt": "Based on the features of the property, please predict the build year of the property.",
+                "answer_prompt": "The build year of the property is."
+            }
+        },
+        "lot-area": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in real estate.",
+                "task_prompt": "Based on the features of the property, please predict the lot area.",
+                "answer_prompt": "The lot area of the property is."
+            }
+        }
+    }
+}

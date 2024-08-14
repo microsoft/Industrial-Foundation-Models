@@ -1,0 +1,230 @@
+{
+    "basic_info": {
+        "row_num": 303,
+        "col_num": 14,
+        "label_candidates": [
+            "target",
+            "thal",
+            "ca",
+            "slope"
+        ],
+        "valid_feature_num": 14,
+        "num_features": [
+            "age",
+            "trestbps",
+            "chol",
+            "thalach",
+            "oldpeak"
+        ],
+        "cat_features": [
+            "sex",
+            "cp",
+            "fbs",
+            "restecg",
+            "exang",
+            "slope",
+            "ca",
+            "thal",
+            "target"
+        ],
+        "other_features": [],
+        "tags": [
+            "diseases",
+            "artificial intelligence",
+            "advanced",
+            "logistic regression",
+            "heart conditions"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/jillanisofttech/heart-disease-prediction-using-differenttechniques"
+    },
+    "feature_info": {
+        "age": {
+            "description": "Age of the patient in years",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "sex": {
+            "description": "Sex of the patient (1 = male; 0 = female)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Male",
+                "0": "Female"
+            }
+        },
+        "cp": {
+            "description": "Chest pain type (0 = typical angina; 1 = atypical angina; 2 = non-anginal pain; 3 = asymptomatic)",
+            "type": "categorical",
+            "value_dict": {
+                "3": "asymptomatic",
+                "2": "non-anginal pain",
+                "1": "atypical angina",
+                "0": "typical angina"
+            }
+        },
+        "trestbps": {
+            "description": "Resting blood pressure in mm Hg on admission to the hospital",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "chol": {
+            "description": "Serum cholestoral in mg/dl",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "fbs": {
+            "description": "Fasting blood sugar > 120 mg/dl (1 = true; 0 = false)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Fasting blood sugar > 120 mg/dl",
+                "0": "Fasting blood sugar <= 120 mg/dl"
+            }
+        },
+        "restecg": {
+            "description": "Resting electrocardiographic results (0 = normal; 1 = having ST-T wave abnormality; 2 = showing probable or definite left ventricular hypertrophy)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Normal",
+                "1": "Having ST-T wave abnormality",
+                "2": "Showing probable or definite left ventricular hypertrophy"
+            }
+        },
+        "thalach": {
+            "description": "Maximum heart rate achieved",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "exang": {
+            "description": "Exercise induced angina (1 = yes; 0 = no)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "No exercise induced angina",
+                "1": "Exercise induced angina"
+            }
+        },
+        "oldpeak": {
+            "description": "ST depression induced by exercise relative to rest",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "slope": {
+            "description": "The slope of the peak exercise ST segment (0 = upsloping; 1 = flat; 2 = downsloping)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Upsloping",
+                "1": "Flat",
+                "2": "Downsloping"
+            }
+        },
+        "ca": {
+            "description": "Number of major vessels (0-3) colored by flourosopy",
+            "type": "categorical",
+            "value_dict": {
+                "0": "No major vessels colored by flourosopy",
+                "1": "One major vessel colored by flourosopy",
+                "2": "Two major vessels colored by flourosopy",
+                "3": "Three major vessels colored by flourosopy",
+                "4": "Four major vessels colored by flourosopy"
+            }
+        },
+        "thal": {
+            "description": "Thalassemia (1 = normal; 2 = fixed defect; 3 = reversable defect)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Normal",
+                "2": "Fixed defect",
+                "3": "Reversable defect",
+                "0": "Unknown"
+            }
+        },
+        "target": {
+            "description": "Heart disease (0 = no, 1 = yes)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Presence of heart disease",
+                "0": "Absence of heart disease"
+            }
+        }
+    },
+    "task_info": {
+        "target": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnosis.",
+                "task_prompt": "Based on the features of the patient, please predict the presence of heart disease.",
+                "answer_prompt": "Presence of heart disease[1] or Absence of heart disease[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "Presence of heart disease",
+                "0": "Absence of heart disease"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        },
+        "thal": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnosis.",
+                "task_prompt": "Based on the features of the patient, please predict the thalassemia condition.",
+                "answer_prompt": "Normal[1], Fixed defect[2], Reversable defect[3] or Unknown[0]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "1": "Normal",
+                "2": "Fixed defect",
+                "3": "Reversable defect",
+                "0": "Unknown"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "2": 2,
+                "3": 3,
+                "0": 0
+            }
+        },
+        "ca": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnosis.",
+                "task_prompt": "Based on the features of the patient, please predict the number of major vessels colored by flourosopy.",
+                "answer_prompt": "No major vessels colored by flourosopy[0], One major vessel colored by flourosopy[1], Two major vessels colored by flourosopy[2], Three major vessels colored by flourosopy[3] or Four major vessels colored by flourosopy[4]?"
+            },
+            "class_num": 5,
+            "class_value_dict": {
+                "0": "No major vessels colored by flourosopy",
+                "1": "One major vessel colored by flourosopy",
+                "2": "Two major vessels colored by flourosopy",
+                "3": "Three major vessels colored by flourosopy",
+                "4": "Four major vessels colored by flourosopy"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1,
+                "2": 2,
+                "3": 3,
+                "4": 4
+            }
+        },
+        "slope": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in medical diagnosis.",
+                "task_prompt": "Based on the features of the patient, please predict the slope of the peak exercise ST segment.",
+                "answer_prompt": "Upsloping[0], Flat[1] or Downsloping[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "0": "Upsloping",
+                "1": "Flat",
+                "2": "Downsloping"
+            },
+            "class_index_dict": {
+                "0": 0,
+                "1": 1,
+                "2": 2
+            }
+        }
+    }
+}

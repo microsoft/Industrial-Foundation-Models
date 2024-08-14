@@ -1,0 +1,71 @@
+{
+    "basic_info": {
+        "row_num": 8388,
+        "col_num": 3,
+        "label_candidates": [
+            "BMI(kg/m**2)",
+            "Weight (kg)",
+            "Standing Height (cm)"
+        ],
+        "valid_feature_num": 3,
+        "num_features": [
+            "Weight (kg)",
+            "Standing Height (cm)",
+            "BMI(kg/m**2)"
+        ],
+        "cat_features": [],
+        "other_features": [],
+        "tags": [
+            "health",
+            "beginner",
+            "data analytics",
+            "linear regression",
+            "tabular",
+            "health conditions"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/galserge/weight-and-height-from-nhanes"
+    },
+    "feature_info": {
+        "Weight (kg)": {
+            "description": "The weight of the individual in kilograms",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "Standing Height (cm)": {
+            "description": "The standing height of the individual in centimeters",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "BMI(kg/m**2)": {
+            "description": "The Body Mass Index of the individual calculated as weight in kilograms divided by height in meters squared",
+            "type": "numerical",
+            "decimal": 1
+        }
+    },
+    "task_info": {
+        "BMI(kg/m**2)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health and fitness.",
+                "task_prompt": "Based on the weight and height of the individuals, please predict the BMI.",
+                "answer_prompt": "The predicted BMI is."
+            }
+        },
+        "Weight (kg)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health and fitness.",
+                "task_prompt": "Based on the height and BMI of the individuals, please predict the weight.",
+                "answer_prompt": "The predicted weight in kg is."
+            }
+        },
+        "Standing Height (cm)": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in health and fitness.",
+                "task_prompt": "Based on the weight and BMI of the individuals, please predict the standing height.",
+                "answer_prompt": "The predicted standing height in cm is."
+            }
+        }
+    }
+}

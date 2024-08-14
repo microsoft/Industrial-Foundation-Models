@@ -1,0 +1,117 @@
+{
+    "basic_info": {
+        "row_num": 117927,
+        "col_num": 10,
+        "label_candidates": [
+            "price",
+            "year",
+            "mileage"
+        ],
+        "valid_feature_num": 10,
+        "num_features": [
+            "year",
+            "mileage",
+            "vol_engine",
+            "price"
+        ],
+        "cat_features": [
+            "mark",
+            "model",
+            "generation_name",
+            "fuel",
+            "city",
+            "province"
+        ],
+        "other_features": [],
+        "tags": [
+            "europe",
+            "computer science",
+            "programming",
+            "automobiles and vehicles",
+            "deep learning",
+            "tabular",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/aleksandrglotov/car-prices-poland"
+    },
+    "feature_info": {
+        "mark": {
+            "description": "The brand of the car",
+            "type": "categorical"
+        },
+        "model": {
+            "description": "The model of the car",
+            "type": "categorical"
+        },
+        "generation_name": {
+            "description": "The generation name of the car model",
+            "type": "categorical"
+        },
+        "year": {
+            "description": "The year the car was manufactured",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "mileage": {
+            "description": "The total distance the car has travelled in km",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "vol_engine": {
+            "description": "The volume of the car engine in cm\u00b3",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "fuel": {
+            "description": "The type of fuel the car uses",
+            "type": "categorical",
+            "value_dict": {
+                "Diesel": "The car runs on diesel fuel",
+                "CNG": "The car runs on compressed natural gas",
+                "Gasoline": "The car runs on gasoline",
+                "LPG": "The car runs on liquefied petroleum gas",
+                "Hybrid": "The car is a hybrid, running on a combination of fuel types",
+                "Electric": "The car runs on electricity"
+            }
+        },
+        "city": {
+            "description": "The city where the car is located",
+            "type": "categorical"
+        },
+        "province": {
+            "description": "The province where the car is located",
+            "type": "categorical"
+        },
+        "price": {
+            "description": "The price of the car in local currency",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "price": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in automobile market analysis.",
+                "task_prompt": "Based on the features of the car, such as the make, model, generation, year, mileage, engine volume, fuel type, city, and province, please predict the price.",
+                "answer_prompt": "The predicted price of the car is [price]."
+            }
+        },
+        "year": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in automobile market analysis.",
+                "task_prompt": "Based on the features of the car, including the make, model, generation, price, mileage, engine volume, fuel type, city, and province, please predict the year of manufacture.",
+                "answer_prompt": "The predicted year of manufacture is [year]."
+            }
+        },
+        "mileage": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in automobile market analysis.",
+                "task_prompt": "Based on the features of the car, such as the make, model, generation, year, price, engine volume, fuel type, city, and province, please predict the mileage.",
+                "answer_prompt": "The predicted mileage of the car is [mileage]."
+            }
+        }
+    }
+}

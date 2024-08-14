@@ -1,0 +1,87 @@
+{
+    "basic_info": {
+        "row_num": 2287,
+        "col_num": 6,
+        "label_candidates": [
+            "car_price",
+            "car_model_year",
+            "car_driven"
+        ],
+        "valid_feature_num": 6,
+        "num_features": [
+            "car_driven",
+            "car_model_year",
+            "car_price"
+        ],
+        "cat_features": [
+            "car_brand",
+            "car_model",
+            "car_transmission"
+        ],
+        "other_features": [],
+        "tags": [
+            "automobiles and vehicles"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/reemalruqi/used-cars-in-saudi-arabia"
+    },
+    "feature_info": {
+        "car_brand": {
+            "description": "The brand of the used car",
+            "type": "categorical"
+        },
+        "car_model": {
+            "description": "The model of the used car",
+            "type": "categorical"
+        },
+        "car_driven": {
+            "description": "The total distance that the car has been driven, in kilometers",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "car_transmission": {
+            "description": "The type of transmission the car uses",
+            "type": "categorical",
+            "value_dict": {
+                "Automatic": "The car uses automatic transmission",
+                "CVT": "The car uses continuously variable transmission",
+                "Manual": "The car uses manual transmission"
+            }
+        },
+        "car_model_year": {
+            "description": "The year the car model was released",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "car_price": {
+            "description": "The price of the used car in Saudi Arabian Riyal",
+            "type": "numerical",
+            "decimal": 2
+        }
+    },
+    "task_info": {
+        "car_price": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in used car sales.",
+                "task_prompt": "Based on the brand, model, mileage driven, transmission type, and model year of the car, please predict the selling price.",
+                "answer_prompt": "The predicted selling price of the car is."
+            }
+        },
+        "car_model_year": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in used car sales.",
+                "task_prompt": "Based on the brand, model, mileage driven, transmission type, and selling price of the car, please predict the model year.",
+                "answer_prompt": "The predicted model year of the car is."
+            }
+        },
+        "car_driven": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in used car sales.",
+                "task_prompt": "Based on the brand, model, model year, transmission type, and selling price of the car, please predict the mileage driven.",
+                "answer_prompt": "The predicted mileage driven of the car is."
+            }
+        }
+    }
+}

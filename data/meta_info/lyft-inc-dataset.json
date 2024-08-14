@@ -1,0 +1,178 @@
+{
+    "basic_info": {
+        "row_num": 17379,
+        "col_num": 17,
+        "label_candidates": [
+            "cnt",
+            "registered",
+            "casual"
+        ],
+        "valid_feature_num": 16,
+        "num_features": [
+            "temp",
+            "atemp",
+            "hum",
+            "windspeed",
+            "casual",
+            "registered",
+            "cnt"
+        ],
+        "cat_features": [
+            "season",
+            "yr",
+            "mnth",
+            "hr",
+            "holiday",
+            "weekday",
+            "workingday",
+            "weathersit"
+        ],
+        "other_features": [
+            "dteday"
+        ],
+        "tags": [
+            "beginner",
+            "statistical analysis",
+            "tabular",
+            "regression",
+            "travel"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/dermisfit/lyft-inc-dataset"
+    },
+    "feature_info": {
+        "instant": {
+            "description": "Record index",
+            "type": "useless"
+        },
+        "dteday": {
+            "description": "Date",
+            "type": "other"
+        },
+        "season": {
+            "description": "Season (1:spring, 2:summer, 3:fall, 4:winter)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Spring",
+                "2": "Summer",
+                "3": "Fall",
+                "4": "Winter"
+            }
+        },
+        "yr": {
+            "description": "Year (0: 2011, 1:2012)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "2011",
+                "1": "2012"
+            }
+        },
+        "mnth": {
+            "description": "Month (1 to 12)",
+            "type": "categorical"
+        },
+        "hr": {
+            "description": "Hour (0 to 23)",
+            "type": "categorical"
+        },
+        "holiday": {
+            "description": "Whether day is holiday or not (extracted from http://dchr.dc.gov/page/holiday-schedule)",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Not a holiday",
+                "1": "Holiday"
+            }
+        },
+        "weekday": {
+            "description": "Day of the week",
+            "type": "categorical",
+            "value_dict": {
+                "6": "Sunday",
+                "0": "Monday",
+                "1": "Tuesday",
+                "2": "Wednesday",
+                "3": "Thursday",
+                "4": "Friday",
+                "5": "Saturday"
+            }
+        },
+        "workingday": {
+            "description": "If day is neither weekend nor holiday is 1, otherwise is 0.",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Weekend or holiday",
+                "1": "Working day"
+            }
+        },
+        "weathersit": {
+            "description": "Weather situation (1: Clear, Few clouds, Partly cloudy, Partly cloudy, 2: Mist + Cloudy, Mist + Broken clouds, Mist + Few clouds, Mist, 3: Light Snow, Light Rain + Thunderstorm + Scattered clouds, Light Rain + Scattered clouds, 4: Heavy Rain + Ice Pallets + Thunderstorm + Mist, Snow + Fog)",
+            "type": "categorical",
+            "value_dict": {
+                "1": "Clear, Few clouds, Partly cloudy, Partly cloudy",
+                "2": "Mist + Cloudy, Mist + Broken clouds, Mist + Few clouds, Mist",
+                "3": "Light Snow, Light Rain + Thunderstorm + Scattered clouds, Light Rain + Scattered clouds",
+                "4": "Heavy Rain + Ice Pallets + Thunderstorm + Mist, Snow + Fog"
+            }
+        },
+        "temp": {
+            "description": "Normalized temperature in Celsius",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "atemp": {
+            "description": "Normalized feeling temperature in Celsius",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "hum": {
+            "description": "Normalized humidity",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "windspeed": {
+            "description": "Normalized wind speed",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "casual": {
+            "description": "Count of casual users",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "registered": {
+            "description": "Count of registered users",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "cnt": {
+            "description": "Count of total rental bikes including both casual and registered",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "cnt": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in data analysis and prediction.",
+                "task_prompt": "Based on the features of the bike sharing data, please predict the total count of bike rentals.",
+                "answer_prompt": "The predicted count is {cnt}."
+            }
+        },
+        "registered": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in data analysis and prediction.",
+                "task_prompt": "Based on the features of the bike sharing data, please predict the count of registered bike rentals.",
+                "answer_prompt": "The predicted count of registered rentals is {registered}."
+            }
+        },
+        "casual": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in data analysis and prediction.",
+                "task_prompt": "Based on the features of the bike sharing data, please predict the count of casual bike rentals.",
+                "answer_prompt": "The predicted count of casual rentals is {casual}."
+            }
+        }
+    }
+}

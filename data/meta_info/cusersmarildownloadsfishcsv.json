@@ -1,0 +1,341 @@
+{
+    "basic_info": {
+        "row_num": 13069,
+        "col_num": 41,
+        "label_candidates": [
+            "Major_Group_En",
+            "Yearbook_Group_En",
+            "CPC_Group_En"
+        ],
+        "valid_feature_num": 40,
+        "num_features": [],
+        "cat_features": [
+            "3A_Code",
+            "Taxonomic_Code",
+            "Name_En",
+            "Name_Fr",
+            "Name_Es",
+            "Name_Ar",
+            "Name_Cn",
+            "Name_Ru",
+            "Scientific_Name",
+            "Author",
+            "Major_Group_Fr",
+            "Major_Group_Es",
+            "Major_Group_Ar",
+            "Major_Group_Cn",
+            "Major_Group_Ru",
+            "Yearbook_Group_En",
+            "Yearbook_Group_Fr",
+            "Yearbook_Group_Es",
+            "Yearbook_Group_Ar",
+            "Yearbook_Group_Cn",
+            "Yearbook_Group_Ru",
+            "ISSCAAP_Group_En",
+            "ISSCAAP_Group_Fr",
+            "ISSCAAP_Group_Es",
+            "ISSCAAP_Group_Ar",
+            "ISSCAAP_Group_Cn",
+            "ISSCAAP_Group_Ru",
+            "CPC_Class_En",
+            "CPC_Class_Fr",
+            "CPC_Class_Es",
+            "CPC_Class_Ar",
+            "CPC_Class_Cn",
+            "CPC_Class_Ru",
+            "CPC_Group_En",
+            "CPC_Group_Fr",
+            "CPC_Group_Es",
+            "CPC_Group_Ar",
+            "CPC_Group_Cn",
+            "CPC_Group_Ru",
+            "Major_Group_En"
+        ],
+        "other_features": [],
+        "tags": [
+            "fish and aquaria"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/mpwolke/cusersmarildownloadsfishcsv"
+    },
+    "feature_info": {
+        "3A_Code": {
+            "description": "A unique code representing a specific fish or fish group",
+            "type": "categorical"
+        },
+        "Taxonomic_Code": {
+            "description": "The taxonomic classification code for the fish",
+            "type": "categorical"
+        },
+        "Identifier": {
+            "description": "Unique identifier for each row",
+            "type": "useless"
+        },
+        "Name_En": {
+            "description": "Name of the fish in English",
+            "type": "categorical"
+        },
+        "Name_Fr": {
+            "description": "Name of the fish in French",
+            "type": "categorical"
+        },
+        "Name_Es": {
+            "description": "Name of the fish in Spanish",
+            "type": "categorical"
+        },
+        "Name_Ar": {
+            "description": "Name of the fish in Arabic",
+            "type": "categorical"
+        },
+        "Name_Cn": {
+            "description": "Name of the fish in Chinese",
+            "type": "categorical"
+        },
+        "Name_Ru": {
+            "description": "Name of the fish in Russian",
+            "type": "categorical"
+        },
+        "Scientific_Name": {
+            "description": "Scientific name of the fish",
+            "type": "categorical"
+        },
+        "Author": {
+            "description": "Author who identified or classified the fish",
+            "type": "categorical"
+        },
+        "Major_Group_En": {
+            "description": "Major group of the fish in English",
+            "type": "categorical",
+            "value_dict": {
+                "PISCES": "Fish species",
+                "CRUSTACEA": "Crustaceans species",
+                "MOLLUSCA": "Molluscs species",
+                "MAMMALIA": "Mammals species",
+                "AMPHIBIA, REPTILIA": "Amphibians and Reptiles species",
+                "INVERTEBRATA AQUATICA": "Aquatic invertebrates species",
+                "PLANTAE AQUATICAE": "Aquatic plants species"
+            }
+        },
+        "Major_Group_Fr": {
+            "description": "Major group of the fish in French",
+            "type": "categorical",
+            "value_dict": {
+                "PISCES": "Esp\u00e8ces de poissons",
+                "CRUSTACEA": "Esp\u00e8ces de crustac\u00e9s",
+                "MOLLUSCA": "Esp\u00e8ces de mollusques",
+                "MAMMALIA": "Esp\u00e8ces de mammif\u00e8res",
+                "AMPHIBIA, REPTILIA": "Esp\u00e8ces d'amphibiens et de reptiles",
+                "INVERTEBRATA AQUATICA": "Esp\u00e8ces d'invert\u00e9br\u00e9s aquatiques",
+                "PLANTAE AQUATICAE": "Esp\u00e8ces de plantes aquatiques"
+            }
+        },
+        "Major_Group_Es": {
+            "description": "Major group of the fish in Spanish",
+            "type": "categorical",
+            "value_dict": {
+                "PISCES": "Especies de peces",
+                "CRUSTACEA": "Especies de crust\u00e1ceos",
+                "MOLLUSCA": "Especies de moluscos",
+                "MAMMALIA": "Especies de mam\u00edferos",
+                "AMPHIBIA, REPTILIA": "Especies de anfibios y reptiles",
+                "INVERTEBRATA AQUATICA": "Especies de invertebrados acu\u00e1ticos",
+                "PLANTAE AQUATICAE": "Especies de plantas acu\u00e1ticas"
+            }
+        },
+        "Major_Group_Ar": {
+            "description": "Major group of the fish in Arabic",
+            "type": "categorical"
+        },
+        "Major_Group_Cn": {
+            "description": "Major group of the fish in Chinese",
+            "type": "categorical"
+        },
+        "Major_Group_Ru": {
+            "description": "Major group of the fish in Russian",
+            "type": "categorical"
+        },
+        "Yearbook_Group_En": {
+            "description": "Yearbook group of the fish in English",
+            "type": "categorical",
+            "value_dict": {
+                "Fish, crustaceans and molluscs, etc.": "Includes fish, crustaceans, molluscs and other similar species",
+                "All aquatic organisms": "Includes all types of aquatic organisms"
+            }
+        },
+        "Yearbook_Group_Fr": {
+            "description": "Yearbook group of the fish in French",
+            "type": "categorical",
+            "value_dict": {
+                "Poissons, crustac\u00e9s, mollusques, etc.": "Comprend les poissons, crustac\u00e9s, mollusques et autres esp\u00e8ces similaires",
+                "Tous organ. aquat.": "Comprend tous types d'organismes aquatiques"
+            }
+        },
+        "Yearbook_Group_Es": {
+            "description": "Yearbook group of the fish in Spanish",
+            "type": "categorical",
+            "value_dict": {
+                "Peces, crust\u00e1ceos, moluscos, etc.": "Incluye peces, crust\u00e1ceos, moluscos y otras especies similares",
+                "Todos organ. acuat.": "Incluye todos tipos de organismos acu\u00e1ticos"
+            }
+        },
+        "Yearbook_Group_Ar": {
+            "description": "Yearbook group of the fish in Arabic",
+            "type": "categorical"
+        },
+        "Yearbook_Group_Cn": {
+            "description": "Yearbook group of the fish in Chinese",
+            "type": "categorical"
+        },
+        "Yearbook_Group_Ru": {
+            "description": "Yearbook group of the fish in Russian",
+            "type": "categorical"
+        },
+        "ISSCAAP_Group_En": {
+            "description": "ISSCAAP group of the fish in English",
+            "type": "categorical"
+        },
+        "ISSCAAP_Group_Fr": {
+            "description": "ISSCAAP group of the fish in French",
+            "type": "categorical"
+        },
+        "ISSCAAP_Group_Es": {
+            "description": "ISSCAAP group of the fish in Spanish",
+            "type": "categorical"
+        },
+        "ISSCAAP_Group_Ar": {
+            "description": "ISSCAAP group of the fish in Arabic",
+            "type": "categorical"
+        },
+        "ISSCAAP_Group_Cn": {
+            "description": "ISSCAAP group of the fish in Chinese",
+            "type": "categorical"
+        },
+        "ISSCAAP_Group_Ru": {
+            "description": "ISSCAAP group of the fish in Russian",
+            "type": "categorical"
+        },
+        "CPC_Class_En": {
+            "description": "CPC class of the fish in English",
+            "type": "categorical"
+        },
+        "CPC_Class_Fr": {
+            "description": "CPC class of the fish in French",
+            "type": "categorical"
+        },
+        "CPC_Class_Es": {
+            "description": "CPC class of the fish in Spanish",
+            "type": "categorical"
+        },
+        "CPC_Class_Ar": {
+            "description": "CPC class of the fish in Arabic",
+            "type": "categorical"
+        },
+        "CPC_Class_Cn": {
+            "description": "CPC class of the fish in Chinese",
+            "type": "categorical"
+        },
+        "CPC_Class_Ru": {
+            "description": "CPC class of the fish in Russian",
+            "type": "categorical"
+        },
+        "CPC_Group_En": {
+            "description": "CPC group of the fish in English",
+            "type": "categorical",
+            "value_dict": {
+                "Fish live, fresh or chilled for human consumption": "Includes live, fresh or chilled fish for human consumption",
+                "Crustaceans, live, fresh or chilled": "Includes live, fresh or chilled crustaceans",
+                "Molluscs live, fresh or chilled": "Includes live, fresh or chilled molluscs",
+                "Other aquatic plants and animals": "Includes other types of aquatic plants and animals",
+                "Other aquatic invertebrates, live, fresh or chilled": "Includes other types of live, fresh or chilled aquatic invertebrates"
+            }
+        },
+        "CPC_Group_Fr": {
+            "description": "CPC group of the fish in French",
+            "type": "categorical"
+        },
+        "CPC_Group_Es": {
+            "description": "CPC group of the fish in Spanish",
+            "type": "categorical"
+        },
+        "CPC_Group_Ar": {
+            "description": "CPC group of the fish in Arabic",
+            "type": "categorical"
+        },
+        "CPC_Group_Cn": {
+            "description": "CPC group of the fish in Chinese",
+            "type": "categorical"
+        },
+        "CPC_Group_Ru": {
+            "description": "CPC group of the fish in Russian",
+            "type": "categorical"
+        }
+    },
+    "task_info": {
+        "Major_Group_En": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in marine biology.",
+                "task_prompt": "Based on the characteristics of the aquatic organism, please predict the major group it belongs to.",
+                "answer_prompt": "Fish species[0], Crustaceans species[1], Molluscs species[2], Mammals species[3], Amphibians and Reptiles species[4], Aquatic invertebrates species[5], or Aquatic plants species[6]?"
+            },
+            "class_num": 7,
+            "class_value_dict": {
+                "PISCES": "Fish species",
+                "CRUSTACEA": "Crustaceans species",
+                "MOLLUSCA": "Molluscs species",
+                "MAMMALIA": "Mammals species",
+                "AMPHIBIA, REPTILIA": "Amphibians and Reptiles species",
+                "INVERTEBRATA AQUATICA": "Aquatic invertebrates species",
+                "PLANTAE AQUATICAE": "Aquatic plants species"
+            },
+            "class_index_dict": {
+                "PISCES": 0,
+                "CRUSTACEA": 1,
+                "MOLLUSCA": 2,
+                "MAMMALIA": 3,
+                "AMPHIBIA, REPTILIA": 4,
+                "INVERTEBRATA AQUATICA": 5,
+                "PLANTAE AQUATICAE": 6
+            }
+        },
+        "Yearbook_Group_En": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in marine biology.",
+                "task_prompt": "Based on the characteristics of the aquatic organism, please predict its yearbook group.",
+                "answer_prompt": "Includes fish, crustaceans, molluscs and other similar species[0], or Includes all types of aquatic organisms[1]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "Fish, crustaceans and molluscs, etc.": "Includes fish, crustaceans, molluscs and other similar species",
+                "All aquatic organisms": "Includes all types of aquatic organisms"
+            },
+            "class_index_dict": {
+                "Fish, crustaceans and molluscs, etc.": 0,
+                "All aquatic organisms": 1
+            }
+        },
+        "CPC_Group_En": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in marine biology.",
+                "task_prompt": "Based on the characteristics of the aquatic organism, please predict its CPC group.",
+                "answer_prompt": "Includes live, fresh or chilled fish for human consumption[0], Includes live, fresh or chilled crustaceans[1], Includes live, fresh or chilled molluscs[2], Includes other types of aquatic plants and animals[3], or Includes other types of live, fresh or chilled aquatic invertebrates[4]?"
+            },
+            "class_num": 5,
+            "class_value_dict": {
+                "Fish live, fresh or chilled for human consumption": "Includes live, fresh or chilled fish for human consumption",
+                "Crustaceans, live, fresh or chilled": "Includes live, fresh or chilled crustaceans",
+                "Molluscs live, fresh or chilled": "Includes live, fresh or chilled molluscs",
+                "Other aquatic plants and animals": "Includes other types of aquatic plants and animals",
+                "Other aquatic invertebrates, live, fresh or chilled": "Includes other types of live, fresh or chilled aquatic invertebrates"
+            },
+            "class_index_dict": {
+                "Fish live, fresh or chilled for human consumption": 0,
+                "Crustaceans, live, fresh or chilled": 1,
+                "Molluscs live, fresh or chilled": 2,
+                "Other aquatic plants and animals": 3,
+                "Other aquatic invertebrates, live, fresh or chilled": 4
+            }
+        }
+    }
+}

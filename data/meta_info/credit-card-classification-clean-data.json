@@ -1,0 +1,231 @@
+{
+    "basic_info": {
+        "row_num": 9709,
+        "col_num": 20,
+        "label_candidates": [
+            "Target",
+            "Total_income",
+            "Years_employed",
+            "Age"
+        ],
+        "valid_feature_num": 19,
+        "num_features": [
+            "Num_children",
+            "Num_family",
+            "Account_length",
+            "Total_income",
+            "Age",
+            "Years_employed"
+        ],
+        "cat_features": [
+            "Gender",
+            "Own_car",
+            "Own_property",
+            "Work_phone",
+            "Phone",
+            "Email",
+            "Unemployed",
+            "Income_type",
+            "Education_type",
+            "Family_status",
+            "Housing_type",
+            "Occupation_type",
+            "Target"
+        ],
+        "other_features": [],
+        "tags": [
+            "banking",
+            "tabular"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/samuelcortinhas/credit-card-classification-clean-data"
+    },
+    "feature_info": {
+        "ID": {
+            "description": "Unique identifier for each customer",
+            "type": "useless"
+        },
+        "Gender": {
+            "description": "Gender of the customer, represented as 1 for male and 0 for female",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The customer is male",
+                "0": "The customer is female"
+            }
+        },
+        "Own_car": {
+            "description": "Whether the customer owns a car, represented as 1 for yes and 0 for no",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The customer owns a car",
+                "0": "The customer does not own a car"
+            }
+        },
+        "Own_property": {
+            "description": "Whether the customer owns property, represented as 1 for yes and 0 for no",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The customer owns property",
+                "0": "The customer does not own property"
+            }
+        },
+        "Work_phone": {
+            "description": "Whether the customer has a work phone, represented as 1 for yes and 0 for no",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The customer has a work phone",
+                "0": "The customer does not have a work phone"
+            }
+        },
+        "Phone": {
+            "description": "Whether the customer has a phone, represented as 1 for yes and 0 for no",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The customer does not have a phone",
+                "1": "The customer has a phone"
+            }
+        },
+        "Email": {
+            "description": "Whether the customer has an email, represented as 1 for yes and 0 for no",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The customer does not have an email",
+                "1": "The customer has an email"
+            }
+        },
+        "Unemployed": {
+            "description": "Whether the customer is unemployed, represented as 1 for yes and 0 for no",
+            "type": "categorical",
+            "value_dict": {
+                "0": "The customer is not unemployed",
+                "1": "The customer is unemployed"
+            }
+        },
+        "Num_children": {
+            "description": "Number of children the customer has",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Num_family": {
+            "description": "Number of family members the customer has",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Account_length": {
+            "description": "Length of the customer account in months",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Total_income": {
+            "description": "Total income of the customer",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "Age": {
+            "description": "Age of the customer",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Years_employed": {
+            "description": "Number of years the customer has been employed",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "Income_type": {
+            "description": "Type of income the customer has",
+            "type": "categorical",
+            "value_dict": {
+                "Working": "The customer is working",
+                "Commercial associate": "The customer is a commercial associate",
+                "Pensioner": "The customer is a pensioner",
+                "State servant": "The customer is a state servant",
+                "Student": "The customer is a student"
+            }
+        },
+        "Education_type": {
+            "description": "Education level of the customer",
+            "type": "categorical",
+            "value_dict": {
+                "Higher education": "The customer has a higher education",
+                "Secondary / secondary special": "The customer has a secondary special education",
+                "Incomplete higher": "The customer has an incomplete higher education",
+                "Lower secondary": "The customer has a lower secondary education",
+                "Academic degree": "The customer has an academic degree"
+            }
+        },
+        "Family_status": {
+            "description": "Family status of the customer",
+            "type": "categorical",
+            "value_dict": {
+                "Civil marriage": "The customer is in a civil marriage",
+                "Married": "The customer is married",
+                "Single / not married": "The customer is single or not married",
+                "Separated": "The customer is separated",
+                "Widow": "The customer is a widow"
+            }
+        },
+        "Housing_type": {
+            "description": "Type of housing the customer lives in",
+            "type": "categorical",
+            "value_dict": {
+                "Rented apartment": "The customer lives in a rented apartment",
+                "House / apartment": "The customer lives in a house or apartment",
+                "Municipal apartment": "The customer lives in a municipal apartment",
+                "With parents": "The customer lives with parents",
+                "Co-op apartment": "The customer lives in a co-op apartment",
+                "Office apartment": "The customer lives in an office apartment"
+            }
+        },
+        "Occupation_type": {
+            "description": "Occupation of the customer",
+            "type": "categorical"
+        },
+        "Target": {
+            "description": "Whether the customer is classified as 1 for risky and 0 for non-risky",
+            "type": "categorical",
+            "value_dict": {
+                "1": "The customer is classified as risky",
+                "0": "The customer is classified as non-risky"
+            }
+        }
+    },
+    "task_info": {
+        "Target": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in financial risk assessment.",
+                "task_prompt": "Based on the features of the customer, please predict the credit risk.",
+                "answer_prompt": "The customer is classified as risky[1] or non-risky[0]?"
+            },
+            "class_num": 2,
+            "class_value_dict": {
+                "1": "The customer is classified as risky",
+                "0": "The customer is classified as non-risky"
+            },
+            "class_index_dict": {
+                "1": 1,
+                "0": 0
+            }
+        },
+        "Total_income": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in personal finance.",
+                "task_prompt": "Based on the features of the customer, please predict the total income."
+            }
+        },
+        "Years_employed": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in employment analysis.",
+                "task_prompt": "Based on the features of the customer, please predict the years employed."
+            }
+        },
+        "Age": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in demographic analysis.",
+                "task_prompt": "Based on the features of the customer, please predict the age."
+            }
+        }
+    }
+}

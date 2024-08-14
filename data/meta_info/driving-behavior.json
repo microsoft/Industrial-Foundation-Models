@@ -1,0 +1,147 @@
+{
+    "basic_info": {
+        "row_num": 6728,
+        "col_num": 8,
+        "label_candidates": [
+            "Class",
+            "AccX",
+            "AccY",
+            "AccZ",
+            "GyroX",
+            "GyroY",
+            "GyroZ"
+        ],
+        "valid_feature_num": 8,
+        "num_features": [
+            "AccX",
+            "AccY",
+            "AccZ",
+            "GyroX",
+            "GyroY",
+            "GyroZ"
+        ],
+        "cat_features": [
+            "Class"
+        ],
+        "other_features": [
+            "Timestamp"
+        ],
+        "tags": [
+            "categorical",
+            "education",
+            "law",
+            "automobiles and vehicles",
+            "classification",
+            "keras"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/outofskills/driving-behavior"
+    },
+    "feature_info": {
+        "AccX": {
+            "description": "Acceleration reading along the X axis in m/s\u00b2",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "AccY": {
+            "description": "Acceleration reading along the Y axis in m/s\u00b2",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "AccZ": {
+            "description": "Acceleration reading along the Z axis in m/s\u00b2",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "GyroX": {
+            "description": "Gyroscope reading along the X axis in degrees per second",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "GyroY": {
+            "description": "Gyroscope reading along the Y axis in degrees per second",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "GyroZ": {
+            "description": "Gyroscope reading along the Z axis in degrees per second",
+            "type": "numerical",
+            "decimal": 6
+        },
+        "Class": {
+            "description": "Driving behavior class (e.g., AGGRESSIVE)",
+            "type": "categorical",
+            "value_dict": {
+                "AGGRESSIVE": "The driving behavior is aggressive",
+                "NORMAL": "The driving behavior is normal",
+                "SLOW": "The driving behavior is slow"
+            }
+        },
+        "Timestamp": {
+            "description": "Timestamp of the sensor reading",
+            "type": "other"
+        }
+    },
+    "task_info": {
+        "Class": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in driving behavior analysis.",
+                "task_prompt": "Based on the accelerometer and gyroscope data, please predict the driving behavior.",
+                "answer_prompt": "Aggressive[0], Normal[1], or Slow[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "AGGRESSIVE": "The driving behavior is aggressive",
+                "NORMAL": "The driving behavior is normal",
+                "SLOW": "The driving behavior is slow"
+            },
+            "class_index_dict": {
+                "AGGRESSIVE": 0,
+                "NORMAL": 1,
+                "SLOW": 2
+            }
+        },
+        "AccX": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in accelerometer data analysis.",
+                "task_prompt": "Based on the driving behavior and gyroscope data, please predict the X-axis acceleration."
+            }
+        },
+        "AccY": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in accelerometer data analysis.",
+                "task_prompt": "Based on the driving behavior and gyroscope data, please predict the Y-axis acceleration."
+            }
+        },
+        "AccZ": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in accelerometer data analysis.",
+                "task_prompt": "Based on the driving behavior and gyroscope data, please predict the Z-axis acceleration."
+            }
+        },
+        "GyroX": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in gyroscope data analysis.",
+                "task_prompt": "Based on the driving behavior and accelerometer data, please predict the X-axis gyroscope reading."
+            }
+        },
+        "GyroY": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in gyroscope data analysis.",
+                "task_prompt": "Based on the driving behavior and accelerometer data, please predict the Y-axis gyroscope reading."
+            }
+        },
+        "GyroZ": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in gyroscope data analysis.",
+                "task_prompt": "Based on the driving behavior and accelerometer data, please predict the Z-axis gyroscope reading."
+            }
+        }
+    }
+}

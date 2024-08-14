@@ -1,0 +1,544 @@
+{
+    "basic_info": {
+        "row_num": 898,
+        "col_num": 35,
+        "label_candidates": [
+            "Class",
+            "AREA",
+            "PERIMETER",
+            "MAJOR_AXIS",
+            "MINOR_AXIS",
+            "ECCENTRICITY",
+            "EQDIASQ",
+            "SOLIDITY",
+            "CONVEX_AREA",
+            "EXTENT",
+            "ASPECT_RATIO",
+            "ROUNDNESS",
+            "COMPACTNESS",
+            "SHAPEFACTOR_1",
+            "SHAPEFACTOR_2",
+            "SHAPEFACTOR_3",
+            "SHAPEFACTOR_4",
+            "MeanRR",
+            "MeanRG",
+            "MeanRB",
+            "StdDevRR",
+            "StdDevRG",
+            "StdDevRB",
+            "SkewRR",
+            "SkewRG",
+            "SkewRB",
+            "KurtosisRR",
+            "KurtosisRG",
+            "KurtosisRB",
+            "EntropyRR",
+            "EntropyRG",
+            "EntropyRB",
+            "ALLdaub4RR",
+            "ALLdaub4RG",
+            "ALLdaub4RB"
+        ],
+        "valid_feature_num": 35,
+        "num_features": [
+            "AREA",
+            "PERIMETER",
+            "MAJOR_AXIS",
+            "MINOR_AXIS",
+            "ECCENTRICITY",
+            "EQDIASQ",
+            "SOLIDITY",
+            "CONVEX_AREA",
+            "EXTENT",
+            "ASPECT_RATIO",
+            "ROUNDNESS",
+            "COMPACTNESS",
+            "SHAPEFACTOR_1",
+            "SHAPEFACTOR_2",
+            "SHAPEFACTOR_3",
+            "SHAPEFACTOR_4",
+            "MeanRR",
+            "MeanRG",
+            "MeanRB",
+            "StdDevRR",
+            "StdDevRG",
+            "StdDevRB",
+            "SkewRR",
+            "SkewRG",
+            "SkewRB",
+            "KurtosisRR",
+            "KurtosisRG",
+            "KurtosisRB",
+            "EntropyRR",
+            "EntropyRG",
+            "EntropyRB",
+            "ALLdaub4RR",
+            "ALLdaub4RG",
+            "ALLdaub4RB"
+        ],
+        "cat_features": [
+            "Class"
+        ],
+        "other_features": [],
+        "tags": [
+            "earth and nature",
+            "computer vision",
+            "deep learning",
+            "image",
+            "food"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/whenamancodes/date-fruit-datasets"
+    },
+    "feature_info": {
+        "AREA": {
+            "description": "The area of the date fruit in the image, in pixel units",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "PERIMETER": {
+            "description": "The perimeter of the date fruit in the image, in pixel units",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "MAJOR_AXIS": {
+            "description": "The length of the major axis of the date fruit in the image, in pixel units",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "MINOR_AXIS": {
+            "description": "The length of the minor axis of the date fruit in the image, in pixel units",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "ECCENTRICITY": {
+            "description": "The eccentricity of the date fruit shape",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "EQDIASQ": {
+            "description": "The equivalent diameter of a circle with the same area as the date fruit",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "SOLIDITY": {
+            "description": "The solidity of the date fruit shape",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "CONVEX_AREA": {
+            "description": "The area of the date fruit including the convex hull",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "EXTENT": {
+            "description": "The extent of the date fruit shape",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "ASPECT_RATIO": {
+            "description": "The aspect ratio of the date fruit shape",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "ROUNDNESS": {
+            "description": "The roundness of the date fruit shape",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "COMPACTNESS": {
+            "description": "The compactness of the date fruit shape",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "SHAPEFACTOR_1": {
+            "description": "Shape factor 1 of the date fruit shape",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "SHAPEFACTOR_2": {
+            "description": "Shape factor 2 of the date fruit shape",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "SHAPEFACTOR_3": {
+            "description": "Shape factor 3 of the date fruit shape",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "SHAPEFACTOR_4": {
+            "description": "Shape factor 4 of the date fruit shape",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "MeanRR": {
+            "description": "Mean of Red-Red color channel",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "MeanRG": {
+            "description": "Mean of Red-Green color channel",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "MeanRB": {
+            "description": "Mean of Red-Blue color channel",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "StdDevRR": {
+            "description": "Standard deviation of Red-Red color channel",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "StdDevRG": {
+            "description": "Standard deviation of Red-Green color channel",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "StdDevRB": {
+            "description": "Standard deviation of Red-Blue color channel",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "SkewRR": {
+            "description": "Skewness of Red-Red color channel",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "SkewRG": {
+            "description": "Skewness of Red-Green color channel",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "SkewRB": {
+            "description": "Skewness of Red-Blue color channel",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "KurtosisRR": {
+            "description": "Kurtosis of Red-Red color channel",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "KurtosisRG": {
+            "description": "Kurtosis of Red-Green color channel",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "KurtosisRB": {
+            "description": "Kurtosis of Red-Blue color channel",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "EntropyRR": {
+            "description": "Entropy of Red-Red color channel",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "EntropyRG": {
+            "description": "Entropy of Red-Green color channel",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "EntropyRB": {
+            "description": "Entropy of Red-Blue color channel",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "ALLdaub4RR": {
+            "description": "Wavelet transform of Red-Red color channel",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "ALLdaub4RG": {
+            "description": "Wavelet transform of Red-Green color channel",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "ALLdaub4RB": {
+            "description": "Wavelet transform of Red-Blue color channel",
+            "type": "numerical",
+            "decimal": 4
+        },
+        "Class": {
+            "description": "The class of the date fruit",
+            "type": "categorical",
+            "value_dict": {
+                "BERHI": "A type of date fruit",
+                "DEGLET": "A type of date fruit",
+                "DOKOL": "A type of date fruit",
+                "IRAQI": "A type of date fruit",
+                "ROTANA": "A type of date fruit",
+                "SAFAVI": "A type of date fruit",
+                "SOGAY": "A type of date fruit"
+            }
+        }
+    },
+    "task_info": {
+        "Class": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in date fruit classification.",
+                "task_prompt": "Based on the features of the date fruit, please predict the type of date fruit.",
+                "answer_prompt": "BERHI[0], DEGLET[1], DOKOL[2], IRAQI[3], ROTANA[4], SAFAVI[5], SOGAY[6]?"
+            },
+            "class_num": 7,
+            "class_value_dict": {
+                "BERHI": "A type of date fruit",
+                "DEGLET": "A type of date fruit",
+                "DOKOL": "A type of date fruit",
+                "IRAQI": "A type of date fruit",
+                "ROTANA": "A type of date fruit",
+                "SAFAVI": "A type of date fruit",
+                "SOGAY": "A type of date fruit"
+            },
+            "class_index_dict": {
+                "BERHI": 0,
+                "DEGLET": 1,
+                "DOKOL": 2,
+                "IRAQI": 3,
+                "ROTANA": 4,
+                "SAFAVI": 5,
+                "SOGAY": 6
+            }
+        },
+        "AREA": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in date fruit analysis.",
+                "task_prompt": "Based on the features of the date fruit, please predict the area."
+            }
+        },
+        "PERIMETER": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in date fruit analysis.",
+                "task_prompt": "Based on the features of the date fruit, please predict the perimeter."
+            }
+        },
+        "MAJOR_AXIS": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in date fruit analysis.",
+                "task_prompt": "Based on the features of the date fruit, please predict the length of the major axis."
+            }
+        },
+        "MINOR_AXIS": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in date fruit analysis.",
+                "task_prompt": "Based on the features of the date fruit, please predict the length of the minor axis."
+            }
+        },
+        "ECCENTRICITY": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in date fruit analysis.",
+                "task_prompt": "Based on the features of the date fruit, please predict the eccentricity."
+            }
+        },
+        "EQDIASQ": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in date fruit analysis.",
+                "task_prompt": "Based on the features of the date fruit, please predict the equivalent diameter square."
+            }
+        },
+        "SOLIDITY": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in date fruit analysis.",
+                "task_prompt": "Based on the features of the date fruit, please predict the solidity."
+            }
+        },
+        "CONVEX_AREA": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in date fruit analysis.",
+                "task_prompt": "Based on the features of the date fruit, please predict the convex area."
+            }
+        },
+        "EXTENT": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in date fruit analysis.",
+                "task_prompt": "Based on the features of the date fruit, please predict the extent."
+            }
+        },
+        "ASPECT_RATIO": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in date fruit analysis.",
+                "task_prompt": "Based on the features of the date fruit, please predict the aspect ratio."
+            }
+        },
+        "ROUNDNESS": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in date fruit analysis.",
+                "task_prompt": "Based on the features of the date fruit, please predict the roundness."
+            }
+        },
+        "COMPACTNESS": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in date fruit analysis.",
+                "task_prompt": "Based on the features of the date fruit, please predict the compactness."
+            }
+        },
+        "SHAPEFACTOR_1": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in date fruit analysis.",
+                "task_prompt": "Based on the features of the date fruit, please predict the first shape factor."
+            }
+        },
+        "SHAPEFACTOR_2": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in date fruit analysis.",
+                "task_prompt": "Based on the features of the date fruit, please predict the second shape factor."
+            }
+        },
+        "SHAPEFACTOR_3": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in date fruit analysis.",
+                "task_prompt": "Based on the features of the date fruit, please predict the third shape factor."
+            }
+        },
+        "SHAPEFACTOR_4": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in date fruit analysis.",
+                "task_prompt": "Based on the features of the date fruit, please predict the fourth shape factor."
+            }
+        },
+        "MeanRR": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in date fruit analysis.",
+                "task_prompt": "Based on the features of the date fruit, please predict the mean of red color component."
+            }
+        },
+        "MeanRG": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in date fruit analysis.",
+                "task_prompt": "Based on the features of the date fruit, please predict the mean of green color component."
+            }
+        },
+        "MeanRB": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in date fruit analysis.",
+                "task_prompt": "Based on the features of the date fruit, please predict the mean of blue color component."
+            }
+        },
+        "StdDevRR": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in date fruit analysis.",
+                "task_prompt": "Based on the features of the date fruit, please predict the standard deviation of red color component."
+            }
+        },
+        "StdDevRG": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in date fruit analysis.",
+                "task_prompt": "Based on the features of the date fruit, please predict the standard deviation of green color component."
+            }
+        },
+        "StdDevRB": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in date fruit analysis.",
+                "task_prompt": "Based on the features of the date fruit, please predict the standard deviation of blue color component."
+            }
+        },
+        "SkewRR": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in date fruit analysis.",
+                "task_prompt": "Based on the features of the date fruit, please predict the skewness of red color component."
+            }
+        },
+        "SkewRG": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in date fruit analysis.",
+                "task_prompt": "Based on the features of the date fruit, please predict the skewness of green color component."
+            }
+        },
+        "SkewRB": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in date fruit analysis.",
+                "task_prompt": "Based on the features of the date fruit, please predict the skewness of blue color component."
+            }
+        },
+        "KurtosisRR": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in date fruit analysis.",
+                "task_prompt": "Based on the features of the date fruit, please predict the kurtosis of red color component."
+            }
+        },
+        "KurtosisRG": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in date fruit analysis.",
+                "task_prompt": "Based on the features of the date fruit, please predict the kurtosis of green color component."
+            }
+        },
+        "KurtosisRB": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in date fruit analysis.",
+                "task_prompt": "Based on the features of the date fruit, please predict the kurtosis of blue color component."
+            }
+        },
+        "EntropyRR": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in date fruit analysis.",
+                "task_prompt": "Based on the features of the date fruit, please predict the entropy of red color component."
+            }
+        },
+        "EntropyRG": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in date fruit analysis.",
+                "task_prompt": "Based on the features of the date fruit, please predict the entropy of green color component."
+            }
+        },
+        "EntropyRB": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in date fruit analysis.",
+                "task_prompt": "Based on the features of the date fruit, please predict the entropy of blue color component."
+            }
+        },
+        "ALLdaub4RR": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in date fruit analysis.",
+                "task_prompt": "Based on the features of the date fruit, please predict the Daubechies 4 wavelet transform of red color component."
+            }
+        },
+        "ALLdaub4RG": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in date fruit analysis.",
+                "task_prompt": "Based on the features of the date fruit, please predict the Daubechies 4 wavelet transform of green color component."
+            }
+        },
+        "ALLdaub4RB": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in date fruit analysis.",
+                "task_prompt": "Based on the features of the date fruit, please predict the Daubechies 4 wavelet transform of blue color component."
+            }
+        }
+    }
+}

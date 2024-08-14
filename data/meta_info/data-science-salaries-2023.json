@@ -1,0 +1,160 @@
+{
+    "basic_info": {
+        "row_num": 3755,
+        "col_num": 11,
+        "label_candidates": [
+            "salary_in_usd",
+            "salary",
+            "experience_level",
+            "company_size"
+        ],
+        "valid_feature_num": 10,
+        "num_features": [
+            "salary",
+            "remote_ratio",
+            "salary_in_usd"
+        ],
+        "cat_features": [
+            "experience_level",
+            "employment_type",
+            "job_title",
+            "salary_currency",
+            "employee_residence",
+            "company_location",
+            "company_size"
+        ],
+        "other_features": [],
+        "tags": [
+            "business",
+            "computer science",
+            "data visualization",
+            "classification",
+            "jobs and career"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/arnabchaki/data-science-salaries-2023"
+    },
+    "feature_info": {
+        "work_year": {
+            "description": "The year of work, which is 2023 for all entries in this dataset.",
+            "type": "useless"
+        },
+        "experience_level": {
+            "description": "The level of experience of the employee. It is likely that SE stands for Senior Engineer and MI for Middle-level engineer.",
+            "type": "categorical",
+            "value_dict": {
+                "SE": "Senior Engineer",
+                "MI": "Middle-level engineer",
+                "EN": "Entry-level engineer",
+                "EX": "Expert-level engineer"
+            }
+        },
+        "employment_type": {
+            "description": "The type of employment (e.g., full-time, part-time, contract, etc.).",
+            "type": "categorical",
+            "value_dict": {
+                "FT": "Full-time employment",
+                "CT": "Contract-based employment",
+                "FL": "Freelance employment",
+                "PT": "Part-time employment"
+            }
+        },
+        "job_title": {
+            "description": "The job title of the employee.",
+            "type": "categorical"
+        },
+        "salary": {
+            "description": "The salary of the employee in the currency specified by the salary_currency column.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "salary_currency": {
+            "description": "The currency in which the salary is paid.",
+            "type": "categorical"
+        },
+        "salary_in_usd": {
+            "description": "The salary of the employee converted to US dollars.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "employee_residence": {
+            "description": "The country of residence of the employee.",
+            "type": "categorical"
+        },
+        "remote_ratio": {
+            "description": "The ratio of remote work. It is not clear what the unit of this feature is.",
+            "type": "numerical",
+            "decimal": 2
+        },
+        "company_location": {
+            "description": "The location of the company.",
+            "type": "categorical"
+        },
+        "company_size": {
+            "description": "The size of the company. It appears that L stands for Large, M for Medium, and S for Small.",
+            "type": "categorical",
+            "value_dict": {
+                "L": "Large company",
+                "S": "Small company",
+                "M": "Medium-sized company"
+            }
+        }
+    },
+    "task_info": {
+        "salary_in_usd": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in data science salary prediction.",
+                "task_prompt": "Based on the features of the data science job, please predict the salary in USD.",
+                "answer_prompt": "The predicted salary in USD is."
+            }
+        },
+        "salary": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in data science salary prediction.",
+                "task_prompt": "Based on the features of the data science job, please predict the salary.",
+                "answer_prompt": "The predicted salary is."
+            }
+        },
+        "experience_level": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in data science job classification.",
+                "task_prompt": "Based on the features of the data science job, please predict the experience level.",
+                "answer_prompt": "Senior Engineer[0], Middle-level engineer[1], Entry-level engineer[2], Expert-level engineer[3]?"
+            },
+            "class_num": 4,
+            "class_value_dict": {
+                "SE": "Senior Engineer",
+                "MI": "Middle-level engineer",
+                "EN": "Entry-level engineer",
+                "EX": "Expert-level engineer"
+            },
+            "class_index_dict": {
+                "SE": 0,
+                "MI": 1,
+                "EN": 2,
+                "EX": 3
+            }
+        },
+        "company_size": {
+            "task_type": "classification",
+            "prompt": {
+                "role_prompt": "You are an expert in company size classification.",
+                "task_prompt": "Based on the features of the data science job, please predict the company size.",
+                "answer_prompt": "Large company[0], Small company[1], Medium-sized company[2]?"
+            },
+            "class_num": 3,
+            "class_value_dict": {
+                "L": "Large company",
+                "S": "Small company",
+                "M": "Medium-sized company"
+            },
+            "class_index_dict": {
+                "L": 0,
+                "S": 1,
+                "M": 2
+            }
+        }
+    }
+}

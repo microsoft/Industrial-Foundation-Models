@@ -1,0 +1,129 @@
+{
+    "basic_info": {
+        "row_num": 500000,
+        "col_num": 11,
+        "label_candidates": [
+            "num10",
+            "num9",
+            "num8"
+        ],
+        "valid_feature_num": 11,
+        "num_features": [
+            "num1",
+            "num2",
+            "num3",
+            "num4",
+            "num5",
+            "num6",
+            "num7",
+            "num8",
+            "num9",
+            "num10"
+        ],
+        "cat_features": [
+            "source"
+        ],
+        "other_features": [],
+        "tags": [
+            "science and technology",
+            "robotics",
+            "computer science",
+            "programming",
+            "classification",
+            "deep learning",
+            "lstm",
+            "rnn",
+            "multiclass classification"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/msk1097/classification-of-robots-from-their-conversation"
+    },
+    "feature_info": {
+        "source": {
+            "description": "The origin source or identifier of the robot",
+            "type": "categorical",
+            "value_dict": {
+                "0": "Data from the first robot source",
+                "1": "Data from the second robot source",
+                "2": "Data from the third robot source",
+                "3": "Data from the fourth robot source",
+                "4": "Data from the fifth robot source"
+            }
+        },
+        "num1": {
+            "description": "First numerical feature extracted from the robot conversation",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "num2": {
+            "description": "Second numerical feature extracted from the robot conversation",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "num3": {
+            "description": "Third numerical feature extracted from the robot conversation",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "num4": {
+            "description": "Fourth numerical feature extracted from the robot conversation",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "num5": {
+            "description": "Fifth numerical feature extracted from the robot conversation",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "num6": {
+            "description": "Sixth numerical feature extracted from the robot conversation",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "num7": {
+            "description": "Seventh numerical feature extracted from the robot conversation",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "num8": {
+            "description": "Eighth numerical feature extracted from the robot conversation",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "num9": {
+            "description": "Ninth numerical feature extracted from the robot conversation",
+            "type": "numerical",
+            "decimal": 0
+        },
+        "num10": {
+            "description": "Tenth numerical feature extracted from the robot conversation",
+            "type": "numerical",
+            "decimal": 0
+        }
+    },
+    "task_info": {
+        "num10": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in numerical data analysis.",
+                "task_prompt": "Based on the features of the robot conversation, please predict the value of num10.",
+                "answer_prompt": "The predicted value of num10 is _______."
+            }
+        },
+        "num9": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in numerical data analysis.",
+                "task_prompt": "Based on the features of the robot conversation, please predict the value of num9.",
+                "answer_prompt": "The predicted value of num9 is _______."
+            }
+        },
+        "num8": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in numerical data analysis.",
+                "task_prompt": "Based on the features of the robot conversation, please predict the value of num8.",
+                "answer_prompt": "The predicted value of num8 is _______."
+            }
+        }
+    }
+}

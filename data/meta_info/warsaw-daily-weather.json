@@ -1,0 +1,141 @@
+{
+    "basic_info": {
+        "row_num": 7463,
+        "col_num": 11,
+        "label_candidates": [
+            "TAVG",
+            "TMAX",
+            "TMIN",
+            "PRCP",
+            "SNWD"
+        ],
+        "valid_feature_num": 11,
+        "num_features": [
+            "LATITUDE",
+            "LONGITUDE",
+            "ELEVATION",
+            "PRCP",
+            "SNWD",
+            "TAVG",
+            "TMIN",
+            "TMAX"
+        ],
+        "cat_features": [
+            "STATION",
+            "NAME"
+        ],
+        "other_features": [
+            "DATE"
+        ],
+        "tags": [
+            "earth and nature",
+            "weather and climate",
+            "time series analysis",
+            "tabular",
+            "regression"
+        ],
+        "source_url": "https://www.kaggle.com/datasets/mateuszk013/warsaw-daily-weather"
+    },
+    "feature_info": {
+        "STATION": {
+            "description": "Unique identifier for each weather station",
+            "type": "categorical",
+            "value_dict": {
+                "PLM00012375": "Identifier for the OKECIE, PL weather station"
+            }
+        },
+        "NAME": {
+            "description": "Name of the weather station",
+            "type": "categorical",
+            "value_dict": {
+                "OKECIE, PL": "Name of the weather station located in Okecie, Poland"
+            }
+        },
+        "LATITUDE": {
+            "description": "Geographical latitude of the weather station",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "LONGITUDE": {
+            "description": "Geographical longitude of the weather station",
+            "type": "numerical",
+            "decimal": 3
+        },
+        "ELEVATION": {
+            "description": "Height of the weather station above sea level (in meters)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "DATE": {
+            "description": "Date of the weather observation",
+            "type": "other"
+        },
+        "PRCP": {
+            "description": "Amount of precipitation (in mm)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "SNWD": {
+            "description": "Snow depth (in mm)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "TAVG": {
+            "description": "Average temperature (in Celsius)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "TMAX": {
+            "description": "Maximum temperature (in Celsius)",
+            "type": "numerical",
+            "decimal": 1
+        },
+        "TMIN": {
+            "description": "Minimum temperature (in Celsius)",
+            "type": "numerical",
+            "decimal": 1
+        }
+    },
+    "task_info": {
+        "TAVG": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in weather forecasting.",
+                "task_prompt": "Based on the features of the weather data, please predict the average temperature.",
+                "answer_prompt": "The predicted average temperature is ___. (Please fill in the blank with a numerical value representing the temperature in Celsius.)."
+            }
+        },
+        "TMAX": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in weather forecasting.",
+                "task_prompt": "Based on the features of the weather data, please predict the maximum temperature.",
+                "answer_prompt": "The predicted maximum temperature is ___. (Please fill in the blank with a numerical value representing the temperature in Celsius.)."
+            }
+        },
+        "TMIN": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in weather forecasting.",
+                "task_prompt": "Based on the features of the weather data, please predict the minimum temperature.",
+                "answer_prompt": "The predicted minimum temperature is ___. (Please fill in the blank with a numerical value representing the temperature in Celsius.)."
+            }
+        },
+        "PRCP": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in weather forecasting.",
+                "task_prompt": "Based on the features of the weather data, please predict the precipitation.",
+                "answer_prompt": "The predicted precipitation is ___. (Please fill in the blank with a numerical value representing the precipitation in millimeters.)."
+            }
+        },
+        "SNWD": {
+            "task_type": "regression",
+            "prompt": {
+                "role_prompt": "You are an expert in weather forecasting.",
+                "task_prompt": "Based on the features of the weather data, please predict the snow depth.",
+                "answer_prompt": "The predicted snow depth is ___. (Please fill in the blank with a numerical value representing the snow depth in millimeters.)."
+            }
+        }
+    }
+}
