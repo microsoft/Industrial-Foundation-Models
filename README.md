@@ -39,12 +39,13 @@ Ensure you have Python 3.8 and CUDA 11.6 or above.
 ## Prepare the Model Checkpoint
 - Download the **LLaMA-2** model weights from [LLaMA-2](https://llama.meta.com/llama-downloads)
 
-- Download the **LLaMA-2-GTL** model weights delta and recover the checkpoint using the following commands
+- Download the GTL-enhanced model weight differences and recover the **LLaMA-2-GTL** checkpoint using the following commands
 ```
 LLAMA_MODEL_PATH=<YOUR_LLAMA_MODEL_PATH>  # llama-2-hf/7B
 CKPT_SAVE_DIR=<YOUR_CKPT_SAVE_DIR>        # ./ckpts
 MODEL_SIZE=7B                             # or 13B
 
+# after this process, you will obtain the full checkpoint for GTL-enhanced LLaMA under <YOUR_CKPT_SAVE_DIR>
 bash scripts/manage_ckpt/recover_model.sh $LLAMA_MODEL_PATH $CKPT_SAVE_DIR $MODEL_SIZE
 ```
 
