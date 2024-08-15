@@ -1,3 +1,6 @@
+# Copyright (c) Microsoft Corporation. All rights reserved.
+# Licensed under the MIT License. See LICENSE file in the project root for license information.
+
 from jinja2 import Template 
 from typing import List, Dict, Union
 

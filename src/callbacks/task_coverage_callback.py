@@ -1,5 +1,7 @@
+# Copyright (c) Microsoft Corporation. All rights reserved.
+# Licensed under the MIT License. See LICENSE file in the project root for license information.
+
 from .callback import *
-import os
 from src.utils import dump_pickle, load_pickle
 
 
