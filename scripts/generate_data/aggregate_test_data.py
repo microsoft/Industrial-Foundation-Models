@@ -1,3 +1,6 @@
+# Copyright (c) Microsoft Corporation. All rights reserved.
+# Licensed under the MIT License. See LICENSE file in the project root for license information.
+
 import os
 import json
 import argparse
@@ -7,10 +10,10 @@ import traceback
 from datasets import load_from_disk, concatenate_datasets, DatasetDict
 datasets.disable_caching()
 
+
 def save_json(data, path):
     with open(path, 'w') as f:
         json.dump(data, f, indent=4)
-
 
 def load_json(path):
     with open(path, 'r') as f:

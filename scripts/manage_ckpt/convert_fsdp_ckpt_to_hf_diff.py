@@ -1,3 +1,6 @@
+# Copyright (c) Microsoft Corporation. All rights reserved.
+# Licensed under the MIT License. See LICENSE file in the project root for license information.
+
 from copy import deepcopy
 import argparse
 from transformers import AutoTokenizer, AutoModelForCausalLM
@@ -5,6 +8,7 @@ from torch.distributed._shard.checkpoint import (
     FileSystemReader,
     load_state_dict
 )
+
 
 def load_auto_model(path):
     model = AutoModelForCausalLM.from_pretrained(path)

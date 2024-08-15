@@ -1,3 +1,6 @@
+# Copyright (c) Microsoft Corporation. All rights reserved.
+# Licensed under the MIT License. See LICENSE file in the project root for license information.
+
 import os
 import time
 import shlex
@@ -52,7 +55,6 @@ def run(cmds, cuda_id):
     while any([v is not None for v in cuda_id.values()]):
         recycle_devices()
         time.sleep(1)
-
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Generate Tabular Data')

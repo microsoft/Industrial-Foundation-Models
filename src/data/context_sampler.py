@@ -1,3 +1,6 @@
+# Copyright (c) Microsoft Corporation. All rights reserved.
+# Licensed under the MIT License. See LICENSE file in the project root for license information.
+
 import numpy as np
 from typing import List, Tuple
 from datasets import Dataset, DatasetDict
