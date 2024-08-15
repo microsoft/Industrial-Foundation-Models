@@ -2,7 +2,7 @@
 # Licensed under the MIT License. See LICENSE file in the project root for license information.
 
 # ---------------------------------------------------------------------------------
-# Portions of this file are derived from llama-recipes
+# This file contains some parts inspired by the llama-recipes library.
 # - Source: https://github.com/meta-llama/llama-recipes
 
 # We thank the authors for their contributions.

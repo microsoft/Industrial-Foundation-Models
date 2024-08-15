@@ -2,7 +2,7 @@
 # Licensed under the MIT License. See LICENSE file in the project root for license information.
 
 # ---------------------------------------------------------------------------------
-# Portions of this file are derived from huggingface transformers library
+# This file contains some parts inspired by the huggingface transformers library.
 # - Source: https://github.com/huggingface/transformers
 
 # We thank the authors for their contributions.
