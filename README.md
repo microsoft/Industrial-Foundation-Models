@@ -1,4 +1,4 @@
-# Towards Industrial Foundation Models: Integrating Large Language Models with Industrial Data Knowledge
+# Towards Industrial Foundation Models: Integrating Large Language Models with Industrial Data Intelligence
 
 Industrial data and the intelligence behind it lay the foundation for crucial applications across multiple domains.
 - In healthcare, insights from patient information, physiological signals, and treatment histories can lead to precise diagnostics and prognostics.
@@ -7,10 +7,10 @@ Industrial data and the intelligence behind it lay the foundation for crucial ap
 - In transportation, sensor data from vehicles can enhance fleet management, route optimization, and predictive maintenance.
 - In agriculture, soil data and weather patterns can assist farmers with crop management, yield optimization, and resource allocation.
 
-These data intelligence applications leverage not only numerical and structured data information but also domain-specific knowledge.
+These data intelligence applications leverage not only numerical and structured data information but also domain-specific knowledge and task-solving capabilities.
 However, the potential of Large Language Models (LLMs) to unlock the value of industrial data remains largely untapped. Industrial data is often stored in unique formats such as tabular data, time-series data, and graph data, which are not easily captured in human language.
 
-To address this, we propose integrating industrial data knowledge into LLMs to create Industrial Foundation Models (IFMs). We anticipate that IFMs will have enhanced capabilities to solve instruction-centric tasks across various sectors, extract cross-task and cross-sector industrial knowledge, and perform industrial predictive and logical reasoning. This approach could revolutionize data science applications across industries, democratizing access to advanced analytics and driving innovation.
+To address this, we propose integrating industrial data intelligence into LLMs to create Industrial Foundation Models (IFMs). We anticipate that IFMs will have enhanced capabilities to solve instruction-centric tasks across various sectors, extract cross-task and cross-sector industrial knowledge, and perform industrial predictive and logical reasoning. This approach could revolutionize data science applications across industries, democratizing access to advanced analytics and driving innovation.
 
 <div align=center> <img src="docs/figures/IFM.png" width = 95%/> </div>
 
